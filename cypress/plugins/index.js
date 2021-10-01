@@ -123,19 +123,6 @@ module.exports = (on, config) => {
                 console.log(testData[0])
               }
 
-              try {
-                // Delete Test Data Json Save File
-                fs.unlinkSync('cypress/fixtures/testdata.json');
-              }
-              catch (err) {
-                // Delete Test Data Json Dump File Error Routine
-                console.log("testdata.json DELETION FAILED: " + err);
-              }
-
-              // Save Queried Test Data on a JSON File
-              fs.appendFile('cypress/fixtures/testdata.json', JSON.stringify(testData), 'utf8',
-                function (err) {if (err) throw err;});
-
               // Return Promise Resolution: Collections Items Queried as TestData
               resolve(testData[0])
             })
