@@ -1,0 +1,19 @@
+{
+    "projectId": "o5x4ng",
+    "env": {
+        "QA_ENVIRONMENT": "https://qa-smcms-fe.azurewebsites.net/memberstatusreasoncodedetail",
+        "DB_HOST": "mongodb://qadatabase:XznOelx9Mu8zlcnKRnSvcCHeUfOorBP0LVosGmPLrrJ0HrCmPTr0xxNAqmAKwQrliTnZJgYyr06Euc3kGtT0OA==@qadatabase.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@qadatabase@",
+        "DB_UI_CHROME": "SAFRA-SMCMS-UI-CHROME",
+        "DB_UI_EDGE": "SAFRA-SMCMS-UI-CHROME",
+        "DB_UI_FIREFOX": "SAFRA-SMCMS-UI-CHROME",
+        "data": {
+          "test": "gg",
+          "test1": "g1"
+        }
+      },
+    "integrationFolder": "cypress/SMCMS-UI-TestSuite/00_TestTemplates",
+    "reporter": "junit",
+    "reporterOptions": {
+      "mochaFile": "results/my-test-output-[hash].xml"
+    }
+}
