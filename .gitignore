@@ -4,3 +4,4 @@ allure-results
 results
 cypress/videos
 cypress/screenshots
+cypress/fixtures/testdata.json

@@ -14,7 +14,9 @@
   "license": "ISC",
   "devDependencies": {
     "allure-commandline": "^2.13.8",
-    "cypress": "^8.2.0"
+    "cypress": "^8.2.0",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-xpath": "^1.6.2"
   },
   "dependencies": {
     "@shelex/cypress-allure-plugin": "^2.19.0",

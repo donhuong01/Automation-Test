@@ -103,7 +103,7 @@ module.exports = (on, config) => {
 
             // Collection Query
             db.collection(collection).find(query).toArray().then(collectionItems => {
-              console.log('MONGODB QUERY IN-PROGRESS: DB=' + database + ', COLLECTION=' + collection)
+              console.log('MONGODB QUERY IN-PROGRESS: DB=' + database + ', COLLECTION=' + collection + ', OBJECTLABEL=' + objectLabel)
               return collectionItems
             }).then(testData => {
               // Query Completion Routine
