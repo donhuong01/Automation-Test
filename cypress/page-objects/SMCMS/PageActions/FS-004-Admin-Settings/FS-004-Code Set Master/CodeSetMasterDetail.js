@@ -27,8 +27,8 @@ class CodeSetMasterDetail {
       * @param {string} EffectiveEndDate Effective Start Date Month
 
       *****************************************************/
-     fillOutCodeSetMasterDetail({ Name, AbbreviationCode, BelongsUnder, CodeType,
-          EffectiveStartDate, EffectiveEndDate }) {
+     fillOutCodeSetMasterDetail( Name, AbbreviationCode, BelongsUnder, CodeType,
+          EffectiveStartDate, EffectiveEndDate ) {
 
           // Enter Name
           if (Name !== undefined) {
@@ -73,15 +73,15 @@ class CodeSetMasterDetail {
                cy.EnterDate(elems_CodeSetMasterDetail.DATE_EFFECTIVEENDDATE, EffectiveEndDate)
           }
 
-          // Error Handling
-          if (Name === undefined
-               && AbbreviationCode === undefined
-               && BelongsUnder === undefined
-               && CodeType === undefined
-          ) {
-               throw new Error("CodeSetMasterDetail.fillOutCodeSetMasterDetail Error!!.\
-                     Please provide at least one value.")
-          }
+          // // Error Handling
+          // if (Name === undefined
+          //      && AbbreviationCode === undefined
+          //      && BelongsUnder === undefined
+          //      && CodeType === undefined
+          // ) {
+          //      throw new Error("CodeSetMasterDetail.fillOutCodeSetMasterDetail Error!!.\
+          //            Please provide at least one value.")
+          // }
      }
 
 

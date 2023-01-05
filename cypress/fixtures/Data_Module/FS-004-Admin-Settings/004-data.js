@@ -1,14 +1,14 @@
 const data = {
     CustomerCategoryDetail: {
         CustomerCategoryNumber: 'CTC-2010-00001',
-        Name: 'IG A2',
+        Name: 'IG A2 ' + Math.floor(Math.random() * 1000),
         BelongsUnder: 'All Customer Category',
         CustomerCategoryType: 'Root Category',
         D365ID: '67890123-2222-2222-2345-678901234567'
     },
     UpdateDetail: {
 
-        Name: 'IG A2',
+        Name: 'IG A2 ' + Math.floor(Math.random() * 1000),
         BelongsUnder: 'Adventurers',
         CustomerCategoryType: 'Sub Category',
         D365ID: '67890123-2222-2222-2345-678901234567'
@@ -31,7 +31,7 @@ const data = {
     //Customer Category Type 
     CustomerCategoryTypeDetail: {
 
-        Name: 'Code Type2',
+        Name: 'Code Type2 ' + Math.floor(Math.random() * 1000),
         BelongUnder: 'Sub Category',
         UpdatedName: 'Code Type2',
         UpdatedBelongsUnder: 'Root Category'

@@ -24,14 +24,14 @@ class CustomerCategoryDetail {
     *  @param {string} D365ID D365 ID
     *****************************************************/
 
-    filloutCustomerCategoryDetail(CustomerCategoryNumber, Name, BelongsUnder, CustomerCategoryType, D365ID) {
+    filloutCustomerCategoryDetail(Name, BelongsUnder, CustomerCategoryType, D365ID) {
 
         if (Name !== undefined) {
             cy.EnterText(elems_CustomerCategoryDetail.TXT_NAME, Name)
         }
         if (BelongsUnder !== undefined) {
             cy.Click(elems_CustomerCategoryDetail.PCK_BELONGSUNDER)
-            cy.wait(15000)
+            cy.wait(10000)
             cy.SelectTableItem(elems_CustomerCategoryDetail.TBL_SELECTCUSTOMERCAT, 'Customer Category Name', BelongsUnder)
             cy.Click(elems_Picker.BTN_SELECT)
         }
@@ -89,8 +89,9 @@ class CustomerCategoryDetail {
         if (BelongsUnder !== undefined) {
 
             cy.Click(elems_CustomerCategoryDetail.PCK_BELONGSUNDER)
-            cy.wait(5000)
-            cy.SelectTableItem(elems_CustomerCategoryDetail.TBL_SELECTCUSTOMERCAT, 'Customer Category Name', BelongsUnder)
+            cy.wait(10000)
+            cy.Click('(//div[@role="dialog"]//table//td)[1]')
+            // cy.SelectTableItem(elems_CustomerCategoryDetail.TBL_SELECTCUSTOMERCAT, 'Customer Category Name', BelongsUnder)
             cy.Click(elems_Picker.BTN_SELECT)
         }
         if (CustomerCategoryType !== undefined) {

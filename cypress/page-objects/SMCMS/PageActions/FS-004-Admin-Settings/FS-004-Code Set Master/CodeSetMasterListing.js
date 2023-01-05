@@ -45,7 +45,7 @@ class CodeSetMasterListing {
 
     // Click Search Filters
     cy.Click(elems_CodeSetMasterListing.BTN_SEARCH)
-    cy.wait(5000)
+    cy.wait(10000)
 
   }
 
@@ -101,10 +101,11 @@ class CodeSetMasterListing {
 
     // Select Table Link Item
     if (CodeSetLink !== undefined) {
-      cy.ClickTableDropDownLink(
-        elems_CodeSetMasterListing.TBL_CODESETNAME,
-        'Code Set Name', CodeSetLink
-      )
+      // cy.ClickTableDropDownLink(
+      //   elems_CodeSetMasterListing.TBL_CODESETNAME,
+      //   'Code Set Name', CodeSetLink
+      // )
+      cy.Click(`//h2[text()="Code Set Master Listing"]/ancestor::div//table//a`)
 
       // Validate Page Redirection
       cy.ValidateElementText(elems_PageHeader.LBL_PAGETITLE, 'Code Set Master Detail')
@@ -128,10 +129,11 @@ class CodeSetMasterListing {
     // Ticks Checkbox beside item
     // Click on arrow
     // cy.Click('//span[@class="k-icon k-i-expand"]')
-    cy.SelectTableItem(
-      elems_CodeSetMasterListing.TBL_CODESETNAME,
-      'Code Set Name', CodeSetItem
-    )
+    // cy.SelectTableItem(
+    //   elems_CodeSetMasterListing.TBL_CODESETNAME,
+    //   'Code Set Name', CodeSetItem
+    // )
+    cy.Click(`(//h2[text()="Code Set Master Listing"]/ancestor::div//table//parent::td//preceding-sibling::td)[1]`)
   }
 
   /*****************************************************

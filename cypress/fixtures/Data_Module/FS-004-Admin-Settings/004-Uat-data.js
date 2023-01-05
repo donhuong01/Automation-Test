@@ -120,10 +120,10 @@ const data={
 
      // Code Set Master Listing
      CodeSetMasterListing : {
-        codeSetName : 'Testing 123',
+        UpdatedCodeSetName : 'Testing ' + Math.floor(Math.random() * 1000),
         abbreviationCode :'SAD',
         codeType : 'AccessMode',
-        codeSetLink : 'Testing 123',
+        codeSetLink : 'Testing ' + Math.floor(Math.random() * 1000),
         codeSetButton : 'FABS Category',
         codeSetItem : 'Trial Sample',
         CodeSetMasterList : [
@@ -137,7 +137,7 @@ const data={
     
     // Code Set Master Detail
     CodeSetMasterDetail : {
-        name:"Testing 123",
+        name:"Testing" + Math.floor(Math.random() * 1000),
         abbreviationCode:"SAD",
         belongsUnder:".1 Year",
         codeType:"AccessMode",

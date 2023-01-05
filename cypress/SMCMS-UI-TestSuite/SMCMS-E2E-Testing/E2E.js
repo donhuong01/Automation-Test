@@ -13,14 +13,14 @@
 // import VIPAppointmentType from '../E2E-Scripts/FS-025/E2E-VIPAppointmentType'
 // import FacilityOperatingPeriod from '../E2E-Scripts/FS-010/E2E-FacilitySettingOperatingPeriod'
 // import VolunteerAppointmentTermRegistration from '../E2E-Scripts/FS-025/E2E-VolunteerAppointmentTermRegistration'
-// import CustomerCategoryType from '../E2E-Scripts/FS-004/E2E-CustomerCategoryType'
-// import CustomerCategory from '../E2E-Scripts/FS-004/E2E-CustomerCatergory'
-// import CodeType from '../E2E-Scripts/FS-004/E2E-CodeType'
+import CustomerCategoryType from '../Sub-Phase-1/FS-004-Admin-Settings/E2E-CustomerCategoryType'
+import CustomerCategory from '../Sub-Phase-1/FS-004-Admin-Settings/E2E-CustomerCatergory'
+import CodeType from '../Sub-Phase-1/FS-004-Admin-Settings/E2E-CodeType'
 // import SourceChannel from '../E2E-Scripts/FS-014/E2E-SourceChannel'
 // import ApplicationSetting from '../E2E-Scripts/FS-004/E2E-ApplicationSettings'
 // import NotificationMessageTemplate from '../E2E-Scripts/FS-004/E2E-NotficationMessageTemplate'
 // import MassUpdateForMemberData from '../E2E-Scripts/FS-014/E2E-MassUpdateForMemberData'
-// import CodeSetMaster from '../E2E-Scripts/FS-004/E2E-CodeSetMaster'
+import CodeSetMaster from '../Sub-Phase-1/FS-004-Admin-Settings/E2E-CodeSetMaster'
 // import MembershipModuleSettings from '../E2E-Scripts/FS-014/E2E-MembershipModuleSetting'
 // import AnnouncementPortalNotification from '../E2E-Scripts/FS-004/E2E-AnnoucementPortalNotification'
 // import CustomerCheckIn from  '../E2E-Scripts/FS-014/E2E-CustomerCheckin'
@@ -45,7 +45,7 @@ import login from '../../fixtures/login'
 // import BatchMembershipTermination from '../E2E-Scripts/FS-028/E2E-BatchMembershipTermination'
 // // import MemberStatusReasonCode from '../E2E-Scripts/FS-014/E2E-MemberStatusReasonCode'
 // import WithdrawalOfConsent from '../E2E-Scripts/FS-014/E2E-WithdrawalOfConsentForm'
-// import DocumentTemplate from '../E2E-Scripts/FS-004/E2E-DocumentTemplate'
+import DocumentTemplate from '../Sub-Phase-1/FS-004-Admin-Settings/E2E-DocumentTemplate'
 // import ReinstatementConfirmation from '../E2E-Scripts/FS-028/E2E-ReinstatementConformation'
 // import BatchMembershipWaiver from '../E2E-Scripts/FS-028/E2E-BatchMembershipWaiverRequest'
 // import ReceiptManagement from '../E2E-Scripts/FS-040/E2E-Receipt-Management'
@@ -70,24 +70,24 @@ beforeEach(() => {
     // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
 })
  
-describe('E2E Auto Testing:FS-001', () => {
+// describe('E2E Auto Testing:FS-001', () => {
 
-    OnlineAccountAccess() 
-    SMCMSPostion()
-    SMCMSRole()
-    SMCMSUser() 
-})
-// describe('E2E Auto Testing:FS-004', () => {
+//     OnlineAccountAccess() 
+//     SMCMSPostion()
+//     SMCMSRole()
+//     SMCMSUser() 
+// })
+describe('E2E Auto Testing:FS-004', () => {
 
     // CustomerCategoryType()
     // CustomerCategory()
     // CodeType()
     // CodeSetMaster()
-    // DocumentTemplate()
+    DocumentTemplate()
     // ApplicationSetting() //Not Required
     // NotificationMessageTemplate() //Not Required
     // AnnouncementPortalNotification() //Not Required
-// })
+})
 // describe('E2E Auto Testing:FS-010', ()=> {
     // FacilityGeneralSettingDtl()
     // FacilitySettingsCalendar()

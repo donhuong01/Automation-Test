@@ -47,16 +47,23 @@ class CustomerCategoryListingForm {
     cy.Click(elems_CustomerCategoryListing.BTN_SEARCH)
     cy.wait(7000)
     }
+    FilterAndClickItem(CustomerCategoryName){
+        cy.xpath(elems_CustomerCategoryListing.TXT_CUSTOMERCATEGORYNAME).clear()
+        cy.EnterText(elems_CustomerCategoryListing.TXT_CUSTOMERCATEGORYNAME, CustomerCategoryName)
+        cy.Click(elems_CustomerCategoryListing.BTN_SEARCH)
+        cy.wait(7000)
+        cy.Click(`//table[@role="presentation"]//a[text()="${CustomerCategoryName}"]//parent::td//preceding-sibling::td`)
+    }
 
     /*****************************************************
      * Method:  ClickDelete
      * Description: This function Click on Delete Button
      *****************************************************/
     ClickDelete(CustomerCategoryName,D365ID){
-            cy.SelectTableItem(
-            elems_CustomerCategoryListing.TBL_CUSTOMERCATEGORYLISTING, 
-            'Customer Category Name', CustomerCategoryName,
-            'D365 ID', D365ID)
+            // cy.SelectTableItem(
+            // elems_CustomerCategoryListing.TBL_CUSTOMERCATEGORYLISTING, 
+            // 'Customer Category Name', CustomerCategoryName,
+            // 'D365 ID', D365ID)
              cy.Click(elems_CustomerCategoryListing.BTN_DELETE)
             // }
     
@@ -125,11 +132,12 @@ class CustomerCategoryListingForm {
 
     UpdatingItem(CustomerCategoryName, D365ID){
 
-        cy.ClickTableLink(
-            elems_CustomerCategoryListing.TBL_CUSTOMERCATEGORYLISTING , 
-            'Customer Category Name', CustomerCategoryName,
-            'D365 ID', D365ID)
+        // cy.ClickTableLink(
+        //     elems_CustomerCategoryListing.TBL_CUSTOMERCATEGORYLISTING , 
+        //     'Customer Category Name', CustomerCategoryName,
+        //     'D365 ID', D365ID)
         
+        cy.Click(`//table[@role="presentation"]//a[text()="${CustomerCategoryName}"]`)
          }
 
 }

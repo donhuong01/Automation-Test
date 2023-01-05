@@ -97,8 +97,10 @@ class CustomerCategoryTypeListing{
     *****************************************************/
       ClickTableItem(item)
      {
-        cy.ClickTableLink(elems_CustomerCategoryTypeListing.TBL_CUSTOMERCATEGORYTYPE,
-          'Customer Category Type Name', item)
+     //    cy.ClickTableLink(elems_CustomerCategoryTypeListing.TBL_CUSTOMERCATEGORYTYPE + '//a',
+     //      'Customer Category Type Name', item)
+
+     cy.Click(`//span[text()="Customer Category Type Name"]//ancestor::div//table//tr//a[text()="${item}"]`)
 
           // cy.EnterText(elems_CustomerCategoryTypeListing.TXT_CUSTOMERCATEGORYTYPE, item)
           // cy.Click(elems_CustomerCategoryTypeListing.BTN_SEARCH)
