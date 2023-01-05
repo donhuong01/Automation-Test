@@ -1,3 +1,28 @@
+
+//FS - 001
+import OnlineAccountAccess from '../Sub-Phase-1/FS-001-Admin-SystemLogin/E2E-OnlineAccountAccess'
+import SMCMSPostion from '../Sub-Phase-1/FS-001-Admin-SystemLogin/E2E-SMCMSPosition'
+import SMCMSRole from '../Sub-Phase-1/FS-001-Admin-SystemLogin/E2E-SMCMSRole'
+import SMCMSUser from '../Sub-Phase-1/FS-001-Admin-SystemLogin/E2E-SMCMSUser'
+//FS - 004
+import ApplicationSetting from '../Sub-Phase-1/FS-004-Admin-Settings/E2E-ApplicationSettings'
+import NotificationMessageTemplate from '../Sub-Phase-1/FS-004-Admin-Settings/E2E-NotficationMessageTemplate'
+import AnnouncementPortalNotification from '../Sub-Phase-1/FS-004-Admin-Settings/E2E-AnnoucementPortalNotification'
+import CodeSetMaster from '../Sub-Phase-1/FS-004-Admin-Settings/E2E-CodeSetMaster'
+import CustomerCategoryType from '../Sub-Phase-1/FS-004-Admin-Settings/E2E-CustomerCategoryType'
+import CustomerCategory from '../Sub-Phase-1/FS-004-Admin-Settings/E2E-CustomerCatergory'
+import CodeType from '../Sub-Phase-1/FS-004-Admin-Settings/E2E-CodeType'
+import DocumentTemplate from '../Sub-Phase-1/FS-004-Admin-Settings/E2E-DocumentTemplate'
+
+//FS - 025
+import VolunteerCommittee from '../Sub-Phase-1/FS-025-Membership-VIP-Volunteer-Veteran-League/E2E-VolunteerCommitte'
+import VolunteerAppointment from '../Sub-Phase-1/FS-025-Membership-VIP-Volunteer-Veteran-League/E2E-VolunteerAppointment'
+import VolunteerAppointmentType from '../Sub-Phase-1/FS-025-Membership-VIP-Volunteer-Veteran-League/E2E-VolunteerAppointmentType'
+import VIPAppointmentType from '../Sub-Phase-1/FS-025-Membership-VIP-Volunteer-Veteran-League/E2E-VIPAppointmentType'
+import VolunteerAppointmentTermRegistration from '../Sub-Phase-1/FS-025-Membership-VIP-Volunteer-Veteran-League/E2E-VolunteerAppointmentTermRegistration'
+import VIPAppointmentTermRegistration from '../Sub-Phase-1/FS-025-Membership-VIP-Volunteer-Veteran-League/E2E-VIPAppointmentTermRegistration'
+
+
 // import BadAddressUpdate from '../E2E-Scripts/FS-014/E2E-BadAddressUpdate'
 // import MemberType from '../E2E-Scripts/FS-014/E2E-MemberType'
 // import FacilitySettingsCalendar from '../E2E-Scripts/FS-010/E2E-FacilitySettingCalendar'
@@ -7,31 +32,16 @@
 // // import MembershipRegistrantion from '../E2E-MembershipRegistration'
 // // import MemshipTenureSelection from '../E2E-MemberTenureSelection'
 // // import CusLandingPage from '../E2E-CustomerLandingPage' 
-// import VolunteerCommittee from '../E2E-Scripts/FS-025/E2E-VolunteerCommitte'
-// import VolunteerAppointment from '../E2E-Scripts/FS-025/E2E-VolunteerAppointment'
-// import VolunteerAppointmentType from '../E2E-Scripts/FS-025/E2E-VolunteerAppointmentType'
-// import VIPAppointmentType from '../E2E-Scripts/FS-025/E2E-VIPAppointmentType'
+
 // import FacilityOperatingPeriod from '../E2E-Scripts/FS-010/E2E-FacilitySettingOperatingPeriod'
-// import VolunteerAppointmentTermRegistration from '../E2E-Scripts/FS-025/E2E-VolunteerAppointmentTermRegistration'
-import CustomerCategoryType from '../Sub-Phase-1/FS-004-Admin-Settings/E2E-CustomerCategoryType'
-import CustomerCategory from '../Sub-Phase-1/FS-004-Admin-Settings/E2E-CustomerCatergory'
-import CodeType from '../Sub-Phase-1/FS-004-Admin-Settings/E2E-CodeType'
 // import SourceChannel from '../E2E-Scripts/FS-014/E2E-SourceChannel'
-// import ApplicationSetting from '../E2E-Scripts/FS-004/E2E-ApplicationSettings'
-// import NotificationMessageTemplate from '../E2E-Scripts/FS-004/E2E-NotficationMessageTemplate'
+
 // import MassUpdateForMemberData from '../E2E-Scripts/FS-014/E2E-MassUpdateForMemberData'
-import CodeSetMaster from '../Sub-Phase-1/FS-004-Admin-Settings/E2E-CodeSetMaster'
 // import MembershipModuleSettings from '../E2E-Scripts/FS-014/E2E-MembershipModuleSetting'
-// import AnnouncementPortalNotification from '../E2E-Scripts/FS-004/E2E-AnnoucementPortalNotification'
 // import CustomerCheckIn from  '../E2E-Scripts/FS-014/E2E-CustomerCheckin'
 // import E2EMemberShipRenewal from '../E2E-Scripts/FS-014/E2E-MembershipRenewal'
 
-// import VIPAppointmentTermRegistration from '../E2E-Scripts/FS-025/E2E-VIPAppointmentTermRegistration'
 
-import OnlineAccountAccess from '../Sub-Phase-1/FS-001-Admin-SystemLogin/E2E-OnlineAccountAccess'
-import SMCMSPostion from '../Sub-Phase-1/FS-001-Admin-SystemLogin/E2E-SMCMSPosition'
-import SMCMSRole from '../Sub-Phase-1/FS-001-Admin-SystemLogin/E2E-SMCMSRole'
-import SMCMSUser from '../Sub-Phase-1/FS-001-Admin-SystemLogin/E2E-SMCMSUser'
 // import MembershipRegistration from '../E2E-Scripts/FS-014/E2E-MembershipRegistrationPrincipal'
 // import BatchMembershipRegistration from '../E2E-Scripts/FS-014/E2E-BatchMembershipRegistration' 
 // import MembershipChargeRate from '../E2E-Scripts/FS-029/E2E-Membership-Charge-Rate'
@@ -45,7 +55,6 @@ import login from '../../fixtures/login'
 // import BatchMembershipTermination from '../E2E-Scripts/FS-028/E2E-BatchMembershipTermination'
 // // import MemberStatusReasonCode from '../E2E-Scripts/FS-014/E2E-MemberStatusReasonCode'
 // import WithdrawalOfConsent from '../E2E-Scripts/FS-014/E2E-WithdrawalOfConsentForm'
-import DocumentTemplate from '../Sub-Phase-1/FS-004-Admin-Settings/E2E-DocumentTemplate'
 // import ReinstatementConfirmation from '../E2E-Scripts/FS-028/E2E-ReinstatementConformation'
 // import BatchMembershipWaiver from '../E2E-Scripts/FS-028/E2E-BatchMembershipWaiverRequest'
 // import ReceiptManagement from '../E2E-Scripts/FS-040/E2E-Receipt-Management'
@@ -77,17 +86,17 @@ beforeEach(() => {
 //     SMCMSRole()
 //     SMCMSUser() 
 // })
-describe('E2E Auto Testing:FS-004', () => {
+// describe('E2E Auto Testing:FS-004', () => {
 
     // CustomerCategoryType()
     // CustomerCategory()
     // CodeType()
     // CodeSetMaster()
-    DocumentTemplate()
+    // DocumentTemplate()
     // ApplicationSetting() //Not Required
-    // NotificationMessageTemplate() //Not Required
-    // AnnouncementPortalNotification() //Not Required
-})
+//     NotificationMessageTemplate() //Not Required
+//     AnnouncementPortalNotification() //Not Required
+// })
 // describe('E2E Auto Testing:FS-010', ()=> {
     // FacilityGeneralSettingDtl()
     // FacilitySettingsCalendar()
@@ -119,14 +128,14 @@ describe('E2E Auto Testing:FS-004', () => {
 
 // })
 
-//  describe('E2E Auto Testing:FS-025', ()=> {
-//     VolunteerCommittee()
-//     VolunteerAppointment()
-//     VolunteerAppointmentType()
-//     VIPAppointmentType()
-//     VolunteerAppointmentTermRegistration()
-//     VIPAppointmentTermRegistration()
-// })
+ describe('E2E Auto Testing:FS-025', ()=> {
+    // VolunteerCommittee()
+    // VolunteerAppointment()
+    // VolunteerAppointmentType()
+    // VIPAppointmentType()
+    // VolunteerAppointmentTermRegistration()
+    VIPAppointmentTermRegistration()
+})
 
 // describe('E2E Auto Testing:FS-028', ()=> {
 //     MembershipDeceased()
