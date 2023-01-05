@@ -1,6 +1,12 @@
-class elems_Misc {
+const Misc = {
 
-    static TABLE_LOADING = '//div[@class="k-loading-image"]'
+    TABLE_LOADING: '//div[@class="k-loading-image"]',
+    TABLE_PAGE_BUTTONS: {
+        NEXT: '/ancestor::div//a[@class="k-link k-pager-nav"]',
+        PREVIOUS: '/ancestor::div//a[@title="Go to the previous page"]',
+        LAST_PAGE: '/ancestor::div//a[@title="Go to the last page"]',
+        FIRST_PAGE: '/ancestor::div//a[@title="Go to the first page"]'
+    }
 }
 
-export default elems_Misc
+export default Misc

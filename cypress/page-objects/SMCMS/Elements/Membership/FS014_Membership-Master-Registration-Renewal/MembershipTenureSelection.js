@@ -10,6 +10,9 @@ class elems_MembershipTenureSelection {
 
     static BTN_ADDTOCART = '//button[text()="Add to Cart"]'
     static BTN_CANCEL = '//button[text()="Cancel"]'
+    static BTN_SAVEANDNEXT = '//button[text()=" Save & Next"]'
+    static BTN_SUBMIT = '//button[text()="Submit"]'
+    
 }
 
 export default elems_MembershipTenureSelection

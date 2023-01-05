@@ -6,7 +6,7 @@ class elems_AnnouncementPortalNotificationDetail {
     static DATE_EXPIRYDATE = '//input[@id="dtiExpiryDate"]'
     static TXTAREA_REMARK = '//textarea[@id="areaRemark"]'
     static CHK_ALLOW3RDPARTY = '//input[@id="checkAllow3rdParty"]'
-    static RICHTXT_CONTENT = ''
+    static RICHTXT_CONTENT = '//span[@class="k-textbox-container k-state-empty"]'
     static BTN_SAVE = '//button[text()="Save"]'
     static BTN_CANCEL = '//button[text()="Cancel"]'
 }

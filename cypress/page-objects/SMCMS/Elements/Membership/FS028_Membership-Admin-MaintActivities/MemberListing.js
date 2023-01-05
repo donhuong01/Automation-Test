@@ -2,7 +2,8 @@ class elems_MemberListing {
 
     static TXT_NAME = '//input[@id="txtName"]'
     static PCK_MEMBERID = '//label[@for="txtMemberId"]/parent::div//button'
-    static TXT_NRIC = '//input[@id="txtNRIC"]'
+    static TXT_MEMBERID = '//input[@id="txtMemberId"]'
+    static TXT_NRIC = '//input[@id="txtNric"]'
     static DRP_MEMBERCATEGORY = '//span[@id="drpMemberCategory"]'
     static DRP_DEPENDENTTYPE = '//span[@id="drpDependent"]'
     static TXT_PRINCIPALMEMBERID = '//input[@id="txtPrincipal"]'
@@ -19,7 +20,10 @@ class elems_MemberListing {
     static BTNDRP_MAINTENANCE = '//button[text()="Maintenance"]/parent::div//button[@class="k-button k-button-icon"]'
     static BTNDRP_PAYMENT = '//button[text()="Payment"]/parent::div//button[@class="k-button k-button-icon"]'
     static BTN_SEARCHFILTERS = '//div[text()="Search Filters"]/parent::button'
+    static BTN_SEARCHFILTER = '//button[text()="Search Filters"]'
     static TBL_MEMBERLISTING = '//h2[text()="Member Listing"]/ancestor::div//table'
-} 
+    static LBL_MEMBERID = '//label[@for="lblMemberId"]'
+    static LINK_MEMBERID = '//table//a'
+}
 
 export default elems_MemberListing

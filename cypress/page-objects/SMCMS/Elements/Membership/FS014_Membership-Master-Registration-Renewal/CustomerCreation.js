@@ -29,17 +29,17 @@ class elems_CustomerCreation {
         TXT_HOMENUMBER : '//input[@id="txtHomeNumber"]',
 
         PreferredContactMode : {
-            CHK_SELECTALL : '//input[@id="chk-selectall"]',
-            CHK_EMAIL : '//input[@id="checkEmail"]',
-            CHK_MAIL : '//input[@id="checkMail"]',
-            CHK_SMS : '//input[@id="checkSms"]',
-            CHK_VOICECALL : '//input[@id="checkVoice"]',
-            CHK_PUSHNOTIFICATION : '//input[@id="checkPushnotification"]',
-            CHK_WHATSAPP : '//input[@id="chkWhatsApp"]'
+            CHK_SELECTALL : '//input[@id="chkContactModeSelectAll"]',
+            CHK_EMAIL : '//input[@id="checkPreferEmail"]',
+            CHK_MAIL : '//input[@id="checkPreferMail"]',
+            CHK_SMS : '//input[@id="checkPreferSms"]',
+            CHK_VOICECALL : '//input[@id="checkPreferVoiceCall"]',
+            CHK_PUSHNOTIFICATION : '//input[@id="checkPreferPushnotification"]',
+            CHK_WHATSAPP : '//input[@id="chkPreferWhatsApp"]'
         },
 
         ConsentInformation : {
-            CHK_MARKETINGCONSENT : '//input[@id="checkMarketing"]',
+            CHK_MARKETINGCONSENT : '//input[@id="checkMarketingConsent"]',
             CHK_SERVICENOTIFICATIONCONSENT : '//input[@id="checkServiceNotifConsent"]',
             CHK_TRANSACTIONALCONSENT : '//input[@id="checkTransactionalConsent"]'
         }
@@ -49,16 +49,16 @@ class elems_CustomerCreation {
         PreferredSafraClubs : {
             CHK_SAFRAJURONG : '//input[@id="checkSafraJurong"]',
             CHK_SAFRAPUNGGOL : '//input[@id="checkSafraPunggol"]',
-            CHK_SAFRATOAPAYOH : '//input[@id="checkSafraTaopoyah"]',
-            CHK_SAFRAMTFABER : '//input[@id="checkkSafraMtfaber"]',
+            CHK_SAFRATOAPAYOH : '//input[@id="checkSafraToaPayoh"]',
+            CHK_SAFRAMTFABER : '//input[@id="checkSafraMtFaber"]',
             CHK_SAFRATAMPINES: '//input[@id="checkSafraTampines"]',
             CHK_SAFRAYISHUN : '//input[@id="checkSafraYishun"]'
         },
 
         SafraBrands : {
             CHK_ENERGYONEGYM : '//input[@id="checkSafraEnergyOne"]',
-            CHK_KIDZAMAZE_SPLSHINDOORPLAYG : '//input[@id="checksafraKidzamaze"]',
-            CHK_FINSSWIMSCHOOL : '//input[@id="check-SafraFins"]'
+            CHK_KIDZAMAZE_SPLSHINDOORPLAYG : '//input[@id="checkSafraKidzAmaze"]',
+            CHK_FINSSWIMSCHOOL : '//input[@id="checkSafraFins"]'
         },
 
         IAmInterestedIn : {
@@ -90,7 +90,7 @@ class elems_CustomerCreation {
             CHK_FUSE : '//input[@id="checkFuse"]',
             CHK_SAFRAGOLFINGSECTION : '//input[@id="checkGolfing"]',
             CHK_SAFRAMOVIEMAX : '//input[@id="checkMovieMax"]',
-            CHK_SAFRAPHOTOGRAPHICCLUB : '//input[@id="checkPhotograpic"]',
+            CHK_SAFRAPHOTOGRAPHICCLUB : '//input[@id="checkPhotographic"]',
             CHK_SAFRARUNNINGCLUB : '//input[@id="checkRunningClub"]',
             CHK_SAFRASHOOTINGCLUB : '//input[@id="checkShootingClub"]',
             CHK_SAFRASOCIALBDMNTONCLUB : '//input[@id="checkBadmintonClub"]',
@@ -98,7 +98,6 @@ class elems_CustomerCreation {
             CHK_SAFRATRAVELCLUB : '//input[@id="checkTravelClub"]'
         }
     }
-
     static BTN_CREATENEW = '//button[text()="Create New"]'
     static BTN_CANCEL = '//button[text()="Cancel"]'
 }

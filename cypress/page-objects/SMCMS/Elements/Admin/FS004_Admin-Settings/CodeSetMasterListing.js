@@ -1,5 +1,5 @@
 class  elems_CodeSetMasterListing {
-
+    
     static TXT_CODESETNAME = '//input[@id="txtCodeName"]'
     static TXT_ABBREVIATIONCODE = '//input[@id="txtAbbreviation"]'
     static TXT_CODETYPE = '//input[@id="txtCodeType"]'
@@ -8,5 +8,4 @@ class  elems_CodeSetMasterListing {
     static BTN_CREATENEW = '//button[text()="Create New"]'
     static BTN_DELETE = '//button[text()="Delete"]'
 }
-
 export default elems_CodeSetMasterListing

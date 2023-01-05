@@ -6,7 +6,7 @@ class elems_MemberTypeListing{
     static TXT_CODE = '//input[@id="txtCode"]'
     static TXT_MEMBERSHIPTYPE = '//input[@id="txtMembershipType"]'
     static BTN_SEARCHFILTERS = '//button[text()="Search Filters"]'
-    static TBL_MEMBERTYPELIST = '//h2[text()="Member Type List"]/ancestor::div//table'
+    static TBL_MEMBERTYPELIST = '//h2[text()="Member Type Listing"]/ancestor::div//table'
 
 }
 export default  elems_MemberTypeListing

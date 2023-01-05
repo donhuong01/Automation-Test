@@ -6,18 +6,21 @@ class elems_MembershipChargeRateDetails {
         TXTAREA_DESCRIPTION : '//textarea[@id="areaDescription"]',
         TXT_NOOFPERIOD : '//input[@id="txtNumberOfPeriod"]',
         CHK_DISPLAYINFRONTEND : '//input[@id="checkDisplayInFrontend"]',
-        DRP_SFSITEM : '//span[@id="drpSFSIitem"]',
+        DRP_SFSITEM : '//span[@id="drpSfsItem"]',
         DRP_STATUS : '//span[@id="drpStatus"]'
     }
 
     static ChargeTypeList = {
-        BTN_ADDCHARGETYPE : '//h3[text()="Charge Type List"]/parent::div//button[text()="Add Charge Type"]',
+        BTN_ADDCHARGETYPE : '//button[text()="Add Charge Type"]',
         TBL_CHARGETYPELIST : '//h3[text()="Charge Type List"]/parent::div//table'
     }
 
     static ChargeRateList = {
         BTN_ADDCUSTOMERCATEGORY : '//h3[text()="Charge Rate List"]/parent::div//button[text()=" Add Customer Category"]',
-        TBL_CHARGERATELIST : '//h3[text()="Charge Rate List"]/parent::div//table'
+        TBL_CHARGERATELIST : '//h3[text()="Charge Rate List"]/parent::div//table',
+        TXT_CUSTOMERCATEGORYNAME : '//input[@id="txtCustomerCategoryName"]',
+        BTN_SEARCHFILTERS : '//button[@form="formCustomerCategoryDialog" and @type="submit"]',
+        BTN_SELECT : '//button[text()="Select"]',
     }
 
     static ProductMasterInformation = {
@@ -27,7 +30,9 @@ class elems_MembershipChargeRateDetails {
 
     static AccessModeList = {
         BTN_ADDACCESSMODE : '//h3[text()="Access Mode List"]/parent::div//button[text()="Add Access Mode"]',
-        TBL_ACCESSMODELIST : '//h3[text()="Access Mode List"]/parent::div//table'
+        TXT_ACCESSMODENAME : '//input[@id="txtAccessModeName"]',
+        TBL_ACCESSMODELIST : '//h3[text()="Access Mode List"]/parent::div//table',
+        BTN_SEARCHFILTERS : '//button[@form="formAccessModeDialog"]'
     }
 
     static CustomerCategoryAccessModeList = {

@@ -12,6 +12,10 @@ const fs = require('fs')
 // const dotenvPlugin = require('cypress-dotenv');
 const allureWriter = require('@shelex/cypress-allure-plugin/writer');
 module.exports = (on, config) => {
+  require('cypress-mochawesome-reporter/plugin')(on);
+};
+module.exports = (on, config) => {
+  
   on('task', {
     /*****************************************************
      * Plugin: GetDbCollectionData
@@ -23,6 +27,7 @@ module.exports = (on, config) => {
      * @param {string} database Database Name
      * @param {string} collection Collection Name
      *****************************************************/
+    
     GetDbCollectionData({ url, database, collection }) {
       return new Promise((resolve) => {
         MongoClient.connect(url, (err, client) => {
@@ -207,4 +212,6 @@ module.exports = (on, config) => {
   allureWriter(on, config);
   // config = dotenvPlugin(config)
   return config
+
+  
 };
