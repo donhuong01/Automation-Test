@@ -29,7 +29,7 @@ describe('CustomerCheckin', function () {
 
             checkin.checkIn({type,value1,value2,expectedPage})
             cy.wait(5000)    
-                //Click cancel
+            //Click cancel
             memberinfo.cancel(checkin_expectedPg)
         })
 

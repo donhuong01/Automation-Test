@@ -1,6 +1,6 @@
-import MemberTypeDetail from "../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Member Type/MemberTypeDetail"
-import MemberTypeListingForm from '../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Member Type/MemberTypeListing'
-import data from '../../../../../fixtures/Data_Module/FS-014-Membership-Registration-Renewal/014-data'
+import MemberTypeDetail from "../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Member Type/MemberTypeDetail"
+import MemberTypeListingForm from '../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Member Type/MemberTypeListing'
+import data from '../../../../fixtures/Data_Module/FS-014-Membership-Registration-Renewal/014-data'
 
 const MemberType = ()=> {
 

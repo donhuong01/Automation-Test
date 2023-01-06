@@ -7,29 +7,29 @@ const data = {
 
     checkin_memberID: {
         type: 'MEMBERID',
-        value1: 'A300000512'
+        value1: 'A300002030'
     },
     checkin_NRIC: {
         type: 'NRIC',
-        value1: '635Z',
-        value2: '01-Jan-1980',
+        value1: '096C',
+        value2: '04-Oct-1978',
     },
     checkin_email: {
         type: 'EMAIL',
-        value1: 'testuser6059@synergyonline.com',
+        value1: 'testuser2935002@synergyonline.com',
     },
     checkin_mobile: {
         type: 'MOBILENUMBER',
-        value1: '56585896',
-        value2: 'A300000512'
+        value1: '223232111',
+        value2: 'A300001997'
     },
     checkin_scancard: {
         type: 'SCANECARD',
-        value1: 'A300000158_3DA4F788839DE16D26F7865886038183AECEF073A605371439FCA067A95E8F15',
+        value1: 'A300002030_3DA4F788839DE16D26F7865886038183AECEF073A605371439FCA067A95E8F15',
     },
     checkin_swipecard: {
         type: 'SWIPECARD',
-        value1: '%A8008980001869402^LEE CHOON CHIEH ^2508^A300000158^019801221000000?;8008980001869402=2508201000005500011?',
+        value1: '%A8008980001869402^LEE CHOON CHIEH ^2508^A300002030^019801221000000?;8008980001869402=2508201000005500011?',
     },
 
     //Membership Tenure Selection

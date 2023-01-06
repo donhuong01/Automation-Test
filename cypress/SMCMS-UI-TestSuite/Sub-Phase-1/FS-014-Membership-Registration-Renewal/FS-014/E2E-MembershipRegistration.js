@@ -22,7 +22,7 @@ const MemModuleSettings = new MembershipModuleSetting()
 
 
 
-const UserID = Math.floor(Math.random() * 100000 * 3 )
+const UserID = Math.floor(Math.random() * 100000)
 
 const PrincipalName = Customerdata.CustomerCreationPrincipal.RegistrationInformation.name + UserID
 const PrincipalEmail = Customerdata.CustomerCreationPrincipal.ContactInformation.emailAddress
@@ -32,7 +32,7 @@ const PrincipalEmail = Customerdata.CustomerCreationPrincipal.ContactInformation
 const MembershipRegistration = (CustomerNRICFull) => {
 
 
-describe('[TS01] Membership Renewal Management',function(){
+describe('[TS01] Membership Registration Management',function(){
 
 
     const LAST4NRIC = CustomerNRICFull.substr(CustomerNRICFull.length - 4);
@@ -96,7 +96,7 @@ describe('[TS01] Membership Renewal Management',function(){
             CustomerCreation.save();
         
         ///////////////////////////////PRINCIPAL REGISTRATION////////////////////////////////////////
-            
+            cy.wait(5000)
             cy.Click(elems_Landing.SAFRA_Member)
             cy.Click(elems_Landing.Membership_Registration)
             cy.wait(5000)
@@ -126,7 +126,7 @@ describe('[TS01] Membership Renewal Management',function(){
             // MemRegPrincipal.VerifyPageTitle('Membership Registration - Principal')
             
             MemRegPrincipal.SaveAndNextPrincipal()
-            cy.wait(5000)
+            cy.wait(10000)
         
             ///////////////////////////////////TENURE SELECTION////////////////////////////////////////////////////////////
         
@@ -138,10 +138,10 @@ describe('[TS01] Membership Renewal Management',function(){
             MemTenureSelect.addToCart()
         
             // Shopping cart and Payments
-            ShoppingCart.fillOutandApplyPayment('CHEQUE')
+            ShoppingCart.fillOutandApplyPayment('CASH')
             
             // Wait for 3 minites
-            cy.wait(250000)
+            cy.wait(20000)
             
             //Verify New Created Member Reason Code
             MembershipRenewal.VerifyMemberStatus(PrincipalName, LAST4NRIC, 'New')

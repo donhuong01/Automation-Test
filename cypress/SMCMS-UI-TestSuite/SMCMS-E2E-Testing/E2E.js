@@ -27,7 +27,7 @@ import MembershipRegistration from '../Sub-Phase-1/FS-014-Membership-Registratio
 // import LifeMembershipManagment from '../E2E-Scripts/FS-014/E2E-LifeMembership'
 // import WithdrawalOfConsent from '../E2E-Scripts/FS-014/E2E-WithdrawalOfConsentForm'
 // import BadAddressUpdate from '../E2E-Scripts/FS-014/E2E-BadAddressUpdate'
-// import MemberType from '../E2E-Scripts/FS-014/E2E-MemberType'
+import MemberType from '../Sub-Phase-1/FS-014-Membership-Registration-Renewal/FS-014/E2E-MemberType'
 // import MembershipRenewalAdvise from '../E2E-Scripts/FS-014/E2E-MembershipRenewalAdvise'
 
 //FS - 025
@@ -116,10 +116,10 @@ beforeEach(() => {
 
 describe('E2E Auto Testing:FS-014', ()=> {
 
-       MembershipRegistration("S2722297H") // Enter FulL NRIC
-    // CustomerCheckIn()
+    //    MembershipRegistration("S9706300A") // Enter FulL NRIC
+    //    CustomerCheckIn()
 //     BadAddressUpdate()//
-//     MemberType()
+    MemberType()
 //     MembershipRenewalAdvise()
 //     WithdrawalOfConsent()
 //     SourceChannel() //
