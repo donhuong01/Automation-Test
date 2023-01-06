@@ -4,6 +4,7 @@ import OnlineAccountAccess from '../Sub-Phase-1/FS-001-Admin-SystemLogin/E2E-Onl
 import SMCMSPostion from '../Sub-Phase-1/FS-001-Admin-SystemLogin/E2E-SMCMSPosition'
 import SMCMSRole from '../Sub-Phase-1/FS-001-Admin-SystemLogin/E2E-SMCMSRole'
 import SMCMSUser from '../Sub-Phase-1/FS-001-Admin-SystemLogin/E2E-SMCMSUser'
+
 //FS - 004
 import ApplicationSetting from '../Sub-Phase-1/FS-004-Admin-Settings/E2E-ApplicationSettings'
 import NotificationMessageTemplate from '../Sub-Phase-1/FS-004-Admin-Settings/E2E-NotficationMessageTemplate'
@@ -14,6 +15,21 @@ import CustomerCategory from '../Sub-Phase-1/FS-004-Admin-Settings/E2E-CustomerC
 import CodeType from '../Sub-Phase-1/FS-004-Admin-Settings/E2E-CodeType'
 import DocumentTemplate from '../Sub-Phase-1/FS-004-Admin-Settings/E2E-DocumentTemplate'
 
+//FS - 014
+import CustomerCheckIn from  '../Sub-Phase-1/FS-014-Membership-Registration-Renewal/FS-014/E2E-CustomerCheckin'
+import MembershipRegistration from '../Sub-Phase-1/FS-014-Membership-Registration-Renewal/FS-014/E2E-MembershipRegistration'
+// import SourceChannel from '../E2E-Scripts/FS-014/E2E-SourceChannel'
+// import MassUpdateForMemberData from '../E2E-Scripts/FS-014/E2E-MassUpdateForMemberData'
+// import MembershipModuleSettings from '../E2E-Scripts/FS-014/E2E-MembershipModuleSetting'
+// import E2EMemberShipRenewal from '../E2E-Scripts/FS-014/E2E-MembershipRenewal'
+// import BatchMembershipRegistration from '../E2E-Scripts/FS-014/E2E-BatchMembershipRegistration' 
+// // import MemberStatusReasonCode from '../E2E-Scripts/FS-014/E2E-MemberStatusReasonCode'
+// import LifeMembershipManagment from '../E2E-Scripts/FS-014/E2E-LifeMembership'
+// import WithdrawalOfConsent from '../E2E-Scripts/FS-014/E2E-WithdrawalOfConsentForm'
+// import BadAddressUpdate from '../E2E-Scripts/FS-014/E2E-BadAddressUpdate'
+// import MemberType from '../E2E-Scripts/FS-014/E2E-MemberType'
+// import MembershipRenewalAdvise from '../E2E-Scripts/FS-014/E2E-MembershipRenewalAdvise'
+
 //FS - 025
 import VolunteerCommittee from '../Sub-Phase-1/FS-025-Membership-VIP-Volunteer-Veteran-League/E2E-VolunteerCommitte'
 import VolunteerAppointment from '../Sub-Phase-1/FS-025-Membership-VIP-Volunteer-Veteran-League/E2E-VolunteerAppointment'
@@ -23,27 +39,19 @@ import VolunteerAppointmentTermRegistration from '../Sub-Phase-1/FS-025-Membersh
 import VIPAppointmentTermRegistration from '../Sub-Phase-1/FS-025-Membership-VIP-Volunteer-Veteran-League/E2E-VIPAppointmentTermRegistration'
 
 
-// import BadAddressUpdate from '../E2E-Scripts/FS-014/E2E-BadAddressUpdate'
-// import MemberType from '../E2E-Scripts/FS-014/E2E-MemberType'
+
 // import FacilitySettingsCalendar from '../E2E-Scripts/FS-010/E2E-FacilitySettingCalendar'
 // import FacilitySettingCalendarSettings from '../E2E-Scripts/FS-010/E2E-FacilitySettingCalendarSetting'
 // import FacilityGeneralSettingDtl from '../E2E-Scripts/FS-010/E2E-FacilitySettingsGeneralSettings'
-// import MembershipRenewalAdvise from '../E2E-Scripts/FS-014/E2E-MembershipRenewalAdvise'
 // // import MembershipRegistrantion from '../E2E-MembershipRegistration'
 // // import MemshipTenureSelection from '../E2E-MemberTenureSelection'
 // // import CusLandingPage from '../E2E-CustomerLandingPage' 
 
 // import FacilityOperatingPeriod from '../E2E-Scripts/FS-010/E2E-FacilitySettingOperatingPeriod'
-// import SourceChannel from '../E2E-Scripts/FS-014/E2E-SourceChannel'
-
-// import MassUpdateForMemberData from '../E2E-Scripts/FS-014/E2E-MassUpdateForMemberData'
-// import MembershipModuleSettings from '../E2E-Scripts/FS-014/E2E-MembershipModuleSetting'
-// import CustomerCheckIn from  '../E2E-Scripts/FS-014/E2E-CustomerCheckin'
-// import E2EMemberShipRenewal from '../E2E-Scripts/FS-014/E2E-MembershipRenewal'
 
 
-// import MembershipRegistration from '../E2E-Scripts/FS-014/E2E-MembershipRegistrationPrincipal'
-// import BatchMembershipRegistration from '../E2E-Scripts/FS-014/E2E-BatchMembershipRegistration' 
+
+
 // import MembershipChargeRate from '../E2E-Scripts/FS-029/E2E-Membership-Charge-Rate'
 import login from '../../fixtures/login'
 // import SFSMemberRegistion from '../E2E-Scripts/FS-014/E2E-SFSMemberRegistration'
@@ -53,8 +61,6 @@ import login from '../../fixtures/login'
 // import MemSuspentionReleaseRequest from '../E2E-Scripts/FS-028/E2E-MembershipSuspentionReleaseRequest'
 // import MembershipDeceased from '../E2E-Scripts/FS-028/E2E-MembershipDeceased.js'
 // import BatchMembershipTermination from '../E2E-Scripts/FS-028/E2E-BatchMembershipTermination'
-// // import MemberStatusReasonCode from '../E2E-Scripts/FS-014/E2E-MemberStatusReasonCode'
-// import WithdrawalOfConsent from '../E2E-Scripts/FS-014/E2E-WithdrawalOfConsentForm'
 // import ReinstatementConfirmation from '../E2E-Scripts/FS-028/E2E-ReinstatementConformation'
 // import BatchMembershipWaiver from '../E2E-Scripts/FS-028/E2E-BatchMembershipWaiverRequest'
 // import ReceiptManagement from '../E2E-Scripts/FS-040/E2E-Receipt-Management'
@@ -62,7 +68,6 @@ import login from '../../fixtures/login'
 // import SAFRACardManagement from '../E2E-Scripts/FS-030/E2E-SAFRACardMangement'
 // import VIPCardManagement from '../E2E-Scripts/FS-030/E2E-VIPCardMangement'
 // import VolunteerCardManagement from '../E2E-Scripts/FS-030/E2E-VolunteerCardMangement'
-// import LifeMembershipManagment from '../E2E-Scripts/FS-014/E2E-LifeMembership'
 // import MembershipResignationManagement from '../E2E-Scripts/FS-028/E2E-MembershipResignationRequest'
 // import MembershipExpulsionAndReinstatment from '../E2E-Scripts/FS-028/E2E-MembershipExpulsionAndReinstatement'
 // import FacilityTypeDetailFormManagement from '../E2E-Scripts/FS-010/E2E-FacilityTypeDetailForm'
@@ -109,16 +114,16 @@ beforeEach(() => {
 
 // })
 
-// describe('E2E Auto Testing:FS-014', ()=> {
+describe('E2E Auto Testing:FS-014', ()=> {
 
-//     CustomerCheckIn()
+       MembershipRegistration("S2722297H") // Enter FulL NRIC
+    // CustomerCheckIn()
 //     BadAddressUpdate()//
 //     MemberType()
 //     MembershipRenewalAdvise()
 //     WithdrawalOfConsent()
 //     SourceChannel() //
 //     //////MemberStatusReasonCode()
-//     MembershipRegistration()
 //     BatchMembershipRegistration()
 //     MassUpdateForMemberData()
 //     MembershipModuleSettings()
@@ -126,16 +131,16 @@ beforeEach(() => {
 //     E2EMemberShipRenewal()
 //     LifeMembershipManagment()
 
-// })
+})
 
- describe('E2E Auto Testing:FS-025', ()=> {
+//  describe('E2E Auto Testing:FS-025', ()=> {
     // VolunteerCommittee()
     // VolunteerAppointment()
     // VolunteerAppointmentType()
     // VIPAppointmentType()
     // VolunteerAppointmentTermRegistration()
-    VIPAppointmentTermRegistration()
-})
+    // VIPAppointmentTermRegistration()
+// })
 
 // describe('E2E Auto Testing:FS-028', ()=> {
 //     MembershipDeceased()
