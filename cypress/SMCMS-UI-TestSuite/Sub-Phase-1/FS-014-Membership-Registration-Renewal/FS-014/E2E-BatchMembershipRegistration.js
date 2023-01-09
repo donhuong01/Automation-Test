@@ -304,12 +304,12 @@ describe('[TS13] Batch Membership Registration Details form', function () {
 
             //Click Save And Next Button
             BatchMembershipRegistrationDetail.SaveAndNext()
-            cy.wait(10000)
+            cy.wait(15000)
             //Verify Page Title
             BatchMembershipRegistrationListing.verifyPageTitle('Member Tenure Selection - In Batch Registration')
              cy.wait(5000)
             //Select Pricipal Tenure
-            BatchMembershipRegistrationListing.principalTenureSelection('5 Years')
+            BatchMembershipRegistrationListing.principalTenureSelection('5 Years', NonMemberName)
 
             //Click Save And Next button
             BatchMembershipRegistrationDetail.SaveAndNextTenure()
