@@ -5,12 +5,12 @@
  *****************************************************/
 
 // Import Pages
-import WithdrawalOfConsentForm from "../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-WithdrawalOfConsentForm/WithdrawalOfConsentForm"
-import data from '../../../../../fixtures/Data_Module/FS-014-Membership-Registration-Renewal/014-data'
-import elems_MemberListing from '../../../../../page-objects/SMCMS/Elements/Membership/FS028_Membership-Admin-MaintActivities/MemberListing'
+import WithdrawalOfConsentForm from "../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-WithdrawalOfConsentForm/WithdrawalOfConsentForm"
+import data from '../../../../fixtures/Data_Module/FS-014-Membership-Registration-Renewal/014-data'
+import elems_MemberListing from '../../../../page-objects/SMCMS/Elements/Membership/FS028_Membership-Admin-MaintActivities/MemberListing'
 
 //Personal Information
-const ActiveMemberID = 'A30000829'
+const ActiveMemberID = 'A300002019'
 const Nationality = data.PersonalInformation.Nationality
 const FullName = data.PersonalInformation.FullName
 const Gender = data.PersonalInformation.Gender
@@ -25,12 +25,12 @@ const EmergencyContact = data.ContactInformation.EmergencyContact
 const EmailAddress = data.ContactInformation.EmergencyContact
 const MailingAddress = data.ContactInformation.MailingAddress
 
-const WithdrawalOfConsent = () => {
+const WithdrawalOfConsent = (ActiveMemberID) => {
 
 describe('[TS-014] Withdrawal of Consent Form ', function () {
 
 
-    it('[TC01] To be able to test withdrawing a member', function () {
+    it('[TC01] To be able to test generating the withdrawal of consent form and cancel', function () {
 
         cy.visit('/membership/memberList')
 
@@ -62,7 +62,7 @@ describe('[TS-014] Withdrawal of Consent Form ', function () {
         
     })
 
-    it('[TC02] To be able to test generating the withdrawal of consent form and cancel', function () {
+    it('[TC02] To be able to test withdrawing a member ', function () {
 
         cy.visit('/membership/memberList')
 
@@ -91,6 +91,20 @@ describe('[TS-014] Withdrawal of Consent Form ', function () {
         )
 
         WithdrawalOfConsentForm.Withdraw()
+
+        // Filter Member Listing for Active Members
+        WithdrawalOfConsentForm.fillOutFilters({
+            memberID : ActiveMemberID
+        })
+
+        // Select MemberID from the listing form
+        cy.SelectTableItem(elems_MemberListing.TBL_MEMBERLISTING,'Member ID', ActiveMemberID)
+            
+        // Select Terminate Option
+        cy.SelectBtnDropdownItem(elems_MemberListing.BTNDRP_MAINTENANCE,'Withdraw')
+
+        //Verify Member name
+        WithdrawalOfConsentForm.verifyPageText("XXXXX")
         
     })
 })

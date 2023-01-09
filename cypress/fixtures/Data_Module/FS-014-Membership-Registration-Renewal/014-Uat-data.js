@@ -454,7 +454,7 @@ sourceChannelDetail:{
         location: 'Tokyo, Japan',
         description: 'Safra Jurong Item',
         roadshowCode: 'ABC123',
-        status: 'Inactive'
+        status: 'InActive'
     },
 
     addEligiblePaymentMethod: "Credit Card",

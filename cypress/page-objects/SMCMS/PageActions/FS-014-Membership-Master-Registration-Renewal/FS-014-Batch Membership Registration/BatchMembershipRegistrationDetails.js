@@ -31,13 +31,13 @@ class BatchMembershipRegistrationDetail {
          * @param {string} PaymentMode
     *****************************************************/
     FillOutBatchMembershipRegistrationDetailForm(
-        BatchName, BatchType, RecTalkSessionID, MemRegTenure,
+        BatchName, BatchType, MemRegTenure,
         PromationReg, MemRenewalTenure, PromationTenure, PaymentMode
     ) {
         cy.EnterText(elems_BatchMembershipRegistrationDetail.BatchInformation.TXT_BATCHNAME, BatchName)
         if (BatchType === "Membership") {
             cy.SelectDropDownItem(elems_BatchMembershipRegistrationDetail.BatchInformation.DRP_BATCHTYPE, BatchType)
-            cy.EnterText(elems_BatchMembershipRegistrationDetail.BatchInformation.TXT_RECTALKSESSIONID, RecTalkSessionID)
+            // cy.EnterText(elems_BatchMembershipRegistrationDetail.BatchInformation.TXT_RECTALKSESSIONID, RecTalkSessionID)
             cy.SelectDropDownItem(elems_BatchMembershipRegistrationDetail.BatchInformation.DRP_MEMSHIPREGTENURE, MemRegTenure)
             cy.EnterText(elems_BatchMembershipRegistrationDetail.BatchInformation.TXT_PROMOTIONREGISTRATION, PromationReg)
             cy.SelectDropDownItem(elems_BatchMembershipRegistrationDetail.BatchInformation.DRP_MEMSHIPRENEWALTENURE, MemRenewalTenure)

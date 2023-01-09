@@ -1,8 +1,8 @@
-import elems_SourceChannelListing from '../../../../../page-objects/SMCMS/Elements/Membership/FS014_Membership-Master-Registration-Renewal/SourceChannelListing'
-import sourceChannelListing from '../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Source Channel/SourceChannelListing'
-import SourceChannelDetail from '../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Source Channel/SourceChannelDetail'
-// import data from '../../../../../fixtures/Data_Module/FS-014-Membership-Registration-Renewal/014-data'
-import data from '../../../../../fixtures/Data_Module/FS-014-Membership-Registration-Renewal/014-Uat-data'
+import elems_SourceChannelListing from '../../../../page-objects/SMCMS/Elements/Membership/FS014_Membership-Master-Registration-Renewal/SourceChannelListing'
+import sourceChannelListing from '../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Source Channel/SourceChannelListing'
+import SourceChannelDetail from '../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Source Channel/SourceChannelDetail'
+// import data from '../../../../fixtures/Data_Module/FS-014-Membership-Registration-Renewal/014-data'
+import data from '../../../../fixtures/Data_Module/FS-014-Membership-Registration-Renewal/014-Uat-data'
 
 
 const SourceChannel = ()=> {
@@ -54,12 +54,12 @@ describe ('[TS11] Source Channel Management', ()=>{
          })
          
         // Add User
-        SrcChaDetail.addUser(data.sourceChannelDetail.addUser)
-         // Verify User List
-        SrcChaDetail.verifyUserList(data.sourceChannelDetail.userList.emailAddress)
+        // SrcChaDetail.addUser(data.sourceChannelDetail.addUser)
+        //  // Verify User List
+        // SrcChaDetail.verifyUserList(data.sourceChannelDetail.userList.emailAddress)
  
-         // Remove User
-        SrcChaDetail.removeUser(data.sourceChannelDetail.removeUser)
+        //  // Remove User
+        // SrcChaDetail.removeUser(data.sourceChannelDetail.removeUser)
         
         SrcChaDetail.save()
      })

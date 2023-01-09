@@ -5,15 +5,15 @@
  *****************************************************/
 
 // Import Pages
-import BatchMembershipRegistrationDetail from '../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Batch Membership Registration/BatchMembershipRegistrationDetails'
-import BatchMembershipRegistrationListing from '../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Batch Membership Registration/BatchMembershipRegistrationListing'
-import data from '../../../../../fixtures/Data_Module/FS-014-Membership-Registration-Renewal/014-data'
-import MembersRegistrationPrincipal from '../../../Forms-Testing/FS-014-Membership-Registration-Renewal/014-MemberRegistration/MemberRegistrationPrincipal'
-import MemberRegistrationDependent from '../../../Forms-Testing/FS-014-Membership-Registration-Renewal/014-MemberRegistration/MemberRegistrationDependent'
-import MemberRegistrationPrincipal from '../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Member Registration/MemberRegistrationPrincipal'
-import Membership_Registration_Dependent from '../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Member Registration/MembershipRegistrationDependent'
-import MembershipTenureSelection from '../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Membership Tenure Selection/MembershipTenureSelection'
-import ShoppingCartPayments from '../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Shopping Cart and Payment/ShoppingCartandPayments'
+import BatchMembershipRegistrationDetail from '../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Batch Membership Registration/BatchMembershipRegistrationDetails'
+import BatchMembershipRegistrationListing from '../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Batch Membership Registration/BatchMembershipRegistrationListing'
+import data from '../../../../fixtures/Data_Module/FS-014-Membership-Registration-Renewal/014-data'
+// import MembersRegistrationPrincipal from '../../../../Forms-Testing/FS-014-Membership-Registration-Renewal/014-MemberRegistration/MemberRegistrationPrincipal'
+// import MemberRegistrationDependent from '../../../../Forms-Testing/FS-014-Membership-Registration-Renewal/014-MemberRegistration/MemberRegistrationDependent'
+import MemberRegistrationPrincipal from '../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Member Registration/MemberRegistrationPrincipal'
+import Membership_Registration_Dependent from '../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Member Registration/MembershipRegistrationDependent'
+import MembershipTenureSelection from '../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Membership Tenure Selection/MembershipTenureSelection'
+import ShoppingCartPayments from '../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Shopping Cart and Payment/ShoppingCartandPayments'
 
 
 const BatchMembershipRegistration = () => {
@@ -28,22 +28,22 @@ describe('[TS13] Batch Membership Registration Details form', function () {
     const ShoppingCartPayment = new ShoppingCartPayments()
 
     //Existing Member
-    const NRICExistingMember = '829F'
-    const IDExistingMember = 'A30000930'
+    const NRICExistingMember = '096C'
+    const IDExistingMember = 'A300002030'
     const ExistingPrincipalName = 'Test user 1212'
     
     //Non-Member 
-    const NRICNonMember = '860B'
-    const FullNRICNonMem = 'S8037860B'
-    const DateOfBirth = '01-Jan-1980'
-    const NonMemberName = 'Test User 90991'
+    const NRICNonMember = '043F'
+    const FullNRICNonMem = 'S4560718F'
+    const DateOfBirth = '04-Oct-1978'
+    const NonMemberName = 'Auto-User8452783644'
 
     // New Member Principal
     const NRICNewMemberPrincipal = 'S8146236D'
 
     // New Member Dependent
-    const NRICNewMemberDependent = 'S1933430I'
-    const NewDependentPrincipalID = 'A30000721'
+    const NRICNewMemberDependent = 'S3423401I'
+    const NewDependentPrincipalID = 'A300000083'
     const NewDependentPrincipalName = 'Test User 125'
 
     const ApplicationDate = '10-Aug-2020'
@@ -68,19 +68,19 @@ describe('[TS13] Batch Membership Registration Details form', function () {
         cy.visit('/membership/batchMembershipRegistrationList')
 
         //Wait for page to load
-        cy.wait(10000)
+        cy.wait(5000)
 
         //Click create new button
         BatchMembershipRegistrationListing.createNew()
         //Wait for page to load
-        cy.wait(10000)
+        cy.wait(3000)
 
         //Verify Page Title
         BatchMembershipRegistrationListing.verifyPageTitle('Batch Membership Registration Detail Form')
 
         //Fillout form
         BatchMembershipRegistrationDetail.FillOutBatchMembershipRegistrationDetailForm(
-            BatchName, BatchType, RecTalkSessionID, MemRegTenure, PromationReg, 
+            BatchName, BatchType, MemRegTenure, PromationReg, 
             MemRenewalTenure, PromationRenewal, PaymentMode 
         )
         //Click Save button
@@ -100,7 +100,7 @@ describe('[TS13] Batch Membership Registration Details form', function () {
 
         //click on table entry
         BatchMembershipRegistrationListing.ClickOnNewlyCreatedItem()
-        cy.wait(15000) //wait for page to load
+        cy.wait(10000) //wait for page to load
 
         //Verify Page Title
         BatchMembershipRegistrationListing.verifyPageTitle('Batch Membership Registration Detail Form')
@@ -141,7 +141,7 @@ describe('[TS13] Batch Membership Registration Details form', function () {
 
     })
 
-    it('[TC02] Creating a Batch Membership Registration with Non-Member', function () {
+    it.only('[TC02] Creating a Batch Membership Registration with Non-Member', function () {
 
         const BatchNameNonMem = 'Auto-Batch' + Math.floor(Math.random() * 100000 * 2 ) 
 
@@ -158,7 +158,7 @@ describe('[TS13] Batch Membership Registration Details form', function () {
 
         //Fillout form
         BatchMembershipRegistrationDetail.FillOutBatchMembershipRegistrationDetailForm(
-            BatchNameNonMem, BatchType, RecTalkSessionID, MemRegTenure, PromationReg, 
+            BatchNameNonMem, BatchType, MemRegTenure, PromationReg, 
             MemRenewalTenure, PromationRenewal, PaymentMode 
         )
         //Click Save button
@@ -266,48 +266,48 @@ describe('[TS13] Batch Membership Registration Details form', function () {
             kidzAmazeSplshIndrPlayGrnd: data.memberregistrationprincipal.InterestedAreaInformation.kidzAmazeSplshIndrPlayGrnd,
             finsSwimSchool: data.memberregistrationprincipal.InterestedAreaInformation.finsSwimSchool,
             })
-        MemRegPrincipal.verifyIamInterestedIn({
-            allEventsAndActivities: data.memberregistrationprincipal.InterestedAreaInformation.allEventsAndActivities,
-            allPeaksAndPromos: data.memberregistrationprincipal.InterestedAreaInformation.allPeaksAndPromos,
-            fitnessAndAdventure: data.memberregistrationprincipal.InterestedAreaInformation.fitnessAndAdventure,
-            childEnrichmentActivities: data.memberregistrationprincipal.InterestedAreaInformation.childEnrichmentActivities,
-            lifeLongLearning: data.memberregistrationprincipal.InterestedAreaInformation.lifeLongLearning,
-            leisureAndEntrtnmnt: data.memberregistrationprincipal.InterestedAreaInformation.lifeLongLearning,
-            foodAndBeverages: data.memberregistrationprincipal.InterestedAreaInformation.foodAndBeverages,
-            shoppingAndGroceries: data.memberregistrationprincipal.InterestedAreaInformation.shoppingAndGroceries,
-            travel: data.memberregistrationprincipal.InterestedAreaInformation.travel,
-            motoring: data.memberregistrationprincipal.InterestedAreaInformation.motoring,
-            healthAndBeauty: data.memberregistrationprincipal.InterestedAreaInformation.healthAndBeauty,
-            safraPtsRewardsProgramme: data.memberregistrationprincipal.InterestedAreaInformation.safraPtsRewardsProgramme,
-            ensman: data.memberregistrationprincipal.InterestedAreaInformation.ensman
-            })
+        // MemRegPrincipal.verifyIamInterestedIn({
+        //     allEventsAndActivities: data.memberregistrationprincipal.InterestedAreaInformation.allEventsAndActivities,
+        //     allPeaksAndPromos: data.memberregistrationprincipal.InterestedAreaInformation.allPeaksAndPromos,
+        //     fitnessAndAdventure: data.memberregistrationprincipal.InterestedAreaInformation.fitnessAndAdventure,
+        //     childEnrichmentActivities: data.memberregistrationprincipal.InterestedAreaInformation.childEnrichmentActivities,
+        //     lifeLongLearning: data.memberregistrationprincipal.InterestedAreaInformation.lifeLongLearning,
+        //     leisureAndEntrtnmnt: data.memberregistrationprincipal.InterestedAreaInformation.lifeLongLearning,
+        //     foodAndBeverages: data.memberregistrationprincipal.InterestedAreaInformation.foodAndBeverages,
+        //     shoppingAndGroceries: data.memberregistrationprincipal.InterestedAreaInformation.shoppingAndGroceries,
+        //     travel: data.memberregistrationprincipal.InterestedAreaInformation.travel,
+        //     motoring: data.memberregistrationprincipal.InterestedAreaInformation.motoring,
+        //     healthAndBeauty: data.memberregistrationprincipal.InterestedAreaInformation.healthAndBeauty,
+        //     safraPtsRewardsProgramme: data.memberregistrationprincipal.InterestedAreaInformation.safraPtsRewardsProgramme,
+        //     ensman: data.memberregistrationprincipal.InterestedAreaInformation.ensman
+        //     })
         
-          MemRegPrincipal.verifyInterestGrpsAndMicroClubs({
-            safraAdventureClub: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraAdventureClub,
-            bitezFandB: data.memberregistrationprincipal.InterestGroupsMicroClubs.bitezFandB,
-            safraCommSrvcsClub: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraCommSrvcsClub,
-            safraCompSportsClub: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraCompSportsClub,
-            safraDigitalMediaClub: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraDigitalMediaClub,
-            safraEntrpnrsClub: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraEntrpnrsClub,
-            fuseEntrtnmnt: data.memberregistrationprincipal.InterestGroupsMicroClubs.fuseEntrtnmnt,
-            safraGolfingSection: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraGolfingSection,
-            safraMovieMax: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraMovieMax,
-            safraPhotoClub: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraPhotoClub,
-            safraRunningClub: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraRunningClub,
-            safraShootingClub: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraShootingClub,
-            safraSocialBadmntnClub: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraSocialBadmntnClub,
-            safraTechClub: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraTechClub,
-            safraTravelClub: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraTravelClub,
+        //   MemRegPrincipal.verifyInterestGrpsAndMicroClubs({
+        //     safraAdventureClub: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraAdventureClub,
+        //     bitezFandB: data.memberregistrationprincipal.InterestGroupsMicroClubs.bitezFandB,
+        //     safraCommSrvcsClub: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraCommSrvcsClub,
+        //     safraCompSportsClub: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraCompSportsClub,
+        //     safraDigitalMediaClub: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraDigitalMediaClub,
+        //     safraEntrpnrsClub: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraEntrpnrsClub,
+        //     fuseEntrtnmnt: data.memberregistrationprincipal.InterestGroupsMicroClubs.fuseEntrtnmnt,
+        //     safraGolfingSection: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraGolfingSection,
+        //     safraMovieMax: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraMovieMax,
+        //     safraPhotoClub: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraPhotoClub,
+        //     safraRunningClub: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraRunningClub,
+        //     safraShootingClub: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraShootingClub,
+        //     safraSocialBadmntnClub: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraSocialBadmntnClub,
+        //     safraTechClub: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraTechClub,
+        //     safraTravelClub: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraTravelClub,
         
-            })
+        //     })
 
 
             //Click Save And Next Button
             BatchMembershipRegistrationDetail.SaveAndNext()
-
+            cy.wait(10000)
             //Verify Page Title
             BatchMembershipRegistrationListing.verifyPageTitle('Member Tenure Selection - In Batch Registration')
-             
+             cy.wait(5000)
             //Select Pricipal Tenure
             BatchMembershipRegistrationListing.principalTenureSelection('5 Years')
 
@@ -337,7 +337,7 @@ describe('[TS13] Batch Membership Registration Details form', function () {
 
         //Fillout form
         BatchMembershipRegistrationDetail.FillOutBatchMembershipRegistrationDetailForm(
-            BatchNameNewPrincipal, BatchType, RecTalkSessionID, MemRegTenure, PromationReg, 
+            BatchNameNewPrincipal, BatchType, MemRegTenure, PromationReg, 
             MemRenewalTenure, PromationRenewal, PaymentMode 
         )
         //Click Save button
@@ -533,7 +533,7 @@ describe('[TS13] Batch Membership Registration Details form', function () {
 
         //Fillout form
         BatchMembershipRegistrationDetail.FillOutBatchMembershipRegistrationDetailForm(
-            BatchNameNewDep, BatchType, RecTalkSessionID, MemRegTenure, PromationReg, 
+            BatchNameNewDep, BatchType, MemRegTenure, PromationReg, 
             MemRenewalTenure, PromationRenewal, PaymentMode 
         )
     

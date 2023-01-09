@@ -17,6 +17,19 @@ class WithdrawalOfConsentForm{
       cy.ValidateElementText(elems_PageHeader.LBL_PAGETITLE, ExpectedPg)
 
     }
+    /*****************************************************
+    * Method: Verify page element
+    * Description: This function verifies the member name
+    * @param {string} name
+    *****************************************************/
+
+     verifyPageText(name)
+
+    {
+
+      cy.ValidateElementText('//label[@for="lblMemberName"]', name)
+
+    }
 
     /************************************************** 
          * Method:fillOutPersonalInfoSection

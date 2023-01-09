@@ -18,17 +18,17 @@ import DocumentTemplate from '../Sub-Phase-1/FS-004-Admin-Settings/E2E-DocumentT
 //FS - 014
 import CustomerCheckIn from  '../Sub-Phase-1/FS-014-Membership-Registration-Renewal/FS-014/E2E-CustomerCheckin'
 import MembershipRegistration from '../Sub-Phase-1/FS-014-Membership-Registration-Renewal/FS-014/E2E-MembershipRegistration'
-// import SourceChannel from '../E2E-Scripts/FS-014/E2E-SourceChannel'
+import SourceChannel from '../Sub-Phase-1/FS-014-Membership-Registration-Renewal/FS-014/E2E-SourceChannel'
 // import MassUpdateForMemberData from '../E2E-Scripts/FS-014/E2E-MassUpdateForMemberData'
 // import MembershipModuleSettings from '../E2E-Scripts/FS-014/E2E-MembershipModuleSetting'
 // import E2EMemberShipRenewal from '../E2E-Scripts/FS-014/E2E-MembershipRenewal'
-// import BatchMembershipRegistration from '../E2E-Scripts/FS-014/E2E-BatchMembershipRegistration' 
-// // import MemberStatusReasonCode from '../E2E-Scripts/FS-014/E2E-MemberStatusReasonCode'
+import BatchMembershipRegistration from '../Sub-Phase-1/FS-014-Membership-Registration-Renewal/FS-014/E2E-BatchMembershipRegistration' 
+import MemberStatusReasonCode from '../Sub-Phase-1/FS-014-Membership-Registration-Renewal/FS-014/E2E-MemberStatusReasonCode'
 // import LifeMembershipManagment from '../E2E-Scripts/FS-014/E2E-LifeMembership'
-// import WithdrawalOfConsent from '../E2E-Scripts/FS-014/E2E-WithdrawalOfConsentForm'
+import WithdrawalOfConsent from '../Sub-Phase-1/FS-014-Membership-Registration-Renewal/FS-014/E2E-WithdrawalOfConsentForm'
 import BadAddressUpdate from '../Sub-Phase-1/FS-014-Membership-Registration-Renewal/FS-014/E2E-BadAddressUpdate'
 import MemberType from '../Sub-Phase-1/FS-014-Membership-Registration-Renewal/FS-014/E2E-MemberType'
-// import MembershipRenewalAdvise from '../E2E-Scripts/FS-014/E2E-MembershipRenewalAdvise'
+import MembershipRenewalAdvise from '../Sub-Phase-1/FS-014-Membership-Registration-Renewal/FS-014/E2E-MembershipRenewalAdvise'
 
 //FS - 025
 import VolunteerCommittee from '../Sub-Phase-1/FS-025-Membership-VIP-Volunteer-Veteran-League/E2E-VolunteerCommitte'
@@ -119,12 +119,12 @@ describe('E2E Auto Testing:FS-014', ()=> {
     //    MembershipRegistration("S9706300A") // Enter FulL NRIC
     //    CustomerCheckIn()
     // MemberType()
-       BadAddressUpdate()//
-//     MembershipRenewalAdvise()
-//     WithdrawalOfConsent()
-//     SourceChannel() //
-//     //////MemberStatusReasonCode()
-//     BatchMembershipRegistration()
+    //    BadAddressUpdate()// Fail Need code updates
+    // MembershipRenewalAdvise()
+    // WithdrawalOfConsent("A300002019") //Enter Member ID 
+    // SourceChannel() 
+    // //MemberStatusReasonCode() // Not Required
+    BatchMembershipRegistration()
 //     MassUpdateForMemberData()
 //     MembershipModuleSettings()
 //     SFSMemberRegistion()

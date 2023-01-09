@@ -6,10 +6,10 @@
  *****************************************************/
 
 //Importing related Pages
-import MembershipRenewAdviseSettingDetail from "../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Membership Renewal Advise Setting/MembershipRenewAdviseSettingDetail"
-import elems_MembershipRenewalAdviceSettingDetail from '../../../../../page-objects/SMCMS/Elements/Membership/FS014_Membership-Master-Registration-Renewal/MembershipRenewalAdviceSettingDetail'
-import MembershipRenewAdviseSettingListing from '../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Membership Renewal Advise Setting/MembershipRenewAdviseSettingList'
-import data from '../../../../../fixtures/Data_Module/FS-014-Membership-Registration-Renewal/014-data'
+import MembershipRenewAdviseSettingDetail from "../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Membership Renewal Advise Setting/MembershipRenewAdviseSettingDetail"
+import elems_MembershipRenewalAdviceSettingDetail from '../../../../page-objects/SMCMS/Elements/Membership/FS014_Membership-Master-Registration-Renewal/MembershipRenewalAdviceSettingDetail'
+import MembershipRenewAdviseSettingListing from '../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Membership Renewal Advise Setting/MembershipRenewAdviseSettingList'
+import data from '../../../../fixtures/Data_Module/FS-014-Membership-Registration-Renewal/014-data'
 
 const MembershipRenewalAdvise = ()=> {
 

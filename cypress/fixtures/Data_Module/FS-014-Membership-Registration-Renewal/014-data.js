@@ -1131,7 +1131,7 @@ const data = {
     //Membership Renewal Advice 
     memberRenewlAdvice: {
 
-        Name: 'JohnDoe',
+        Name: 'Auto-Test ' + Math.floor(Math.random() * 1000),
         Description: 'Test User Description',
         MemberCategory: 'Principal',
         Gender: 'Male',
@@ -1175,7 +1175,7 @@ const data = {
     PersonalInformation: {
 
         Nationality: 'check',
-        FullName: 'uncheck',
+        FullName: 'check',
         Gender: 'check',
         MartailStatus: 'check',
         DOB: 'check',
