@@ -136,12 +136,12 @@ describe('[TS13] Batch Membership Registration Details form', function () {
         BatchMembershipRegistrationDetail.SaveAndNextTenure()
 
         // Shopping cart and Payments
-        ShoppingCartPayment.fillOutandApplyPayment('CHEQUE') 
+        ShoppingCartPayment.fillOutandApplyPayment('CASH') 
 
 
     })
 
-    it.only('[TC02] Creating a Batch Membership Registration with Non-Member', function () {
+    it('[TC02] Creating a Batch Membership Registration with Non-Member', function () {
 
         const BatchNameNonMem = 'Auto-Batch' + Math.floor(Math.random() * 100000 * 2 ) 
 
@@ -315,11 +315,11 @@ describe('[TS13] Batch Membership Registration Details form', function () {
             BatchMembershipRegistrationDetail.SaveAndNextTenure()
 
             // Shopping cart and Payments
-            ShoppingCartPayment.fillOutandApplyPayment('CHEQUE')
+            ShoppingCartPayment.fillOutandApplyPayment('CASH')
 
     })
 
-    it('[TC03] Creating a Batch Membership Registration with New Member(Principal)', function () {
+    it.only('[TC03] Creating a Batch Membership Registration with New Member(Principal)', function () {
 
         cy.visit('/membership/batchMembershipRegistrationList')
 
@@ -490,7 +490,7 @@ describe('[TS13] Batch Membership Registration Details form', function () {
             BatchMembershipRegistrationDetail.SaveAndNextTenure()
 
             // Shopping cart and Payments
-            ShoppingCartPayment.fillOutandApplyPayment('CHEQUE')
+            ShoppingCartPayment.fillOutandApplyPayment('CASH')
         
             
     })
@@ -704,7 +704,7 @@ describe('[TS13] Batch Membership Registration Details form', function () {
         BatchMembershipRegistrationDetail.SaveAndNextTenure()
 
         // Shopping cart and Payments
-        ShoppingCartPayment.fillOutandApplyPayment('CHEQUE')
+        ShoppingCartPayment.fillOutandApplyPayment('CASH')
     
          
     })

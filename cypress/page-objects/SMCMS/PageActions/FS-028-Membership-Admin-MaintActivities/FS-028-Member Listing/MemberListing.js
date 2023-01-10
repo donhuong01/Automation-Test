@@ -1,5 +1,6 @@
 import elems_MemberListing from "../../../Elements/Membership/FS028_Membership-Admin-MaintActivities/MemberListing";
-import data from "../../../../../fixtures/data.js"
+// import data from "../../../fixtures/data.js"
+import data from "../../../../../fixtures/Data_Module/FS-014-Membership-Registration-Renewal/014-data"
 import elems_PageHeader from "../../../Elements/Common/PageHeader";
 import elems_Alerts from "../../../Elements/Common/Alerts";
 class MemberListingPage {

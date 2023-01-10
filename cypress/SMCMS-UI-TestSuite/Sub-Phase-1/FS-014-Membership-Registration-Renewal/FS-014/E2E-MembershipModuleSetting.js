@@ -1,5 +1,5 @@
-import MembershipModuleSetting from '../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-14-Membership Module Setting/MembershipModuleSetting'
-import data from '../../../../../fixtures/Data_Module/FS-014-Membership-Registration-Renewal/014-data'
+import MembershipModuleSetting from '../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-14-Membership Module Setting/MembershipModuleSetting'
+import data from '../../../../fixtures/Data_Module/FS-014-Membership-Registration-Renewal/014-data'
 
 const MembershipModuleSettings = () => {
 

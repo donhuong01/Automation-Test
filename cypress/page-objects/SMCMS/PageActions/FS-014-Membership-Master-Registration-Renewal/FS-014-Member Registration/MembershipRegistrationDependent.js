@@ -63,7 +63,7 @@ class Membership_Registration_Dependent{
              }
             // Enter Date of Birth
             if(DateofBirth !== undefined){
-              cy.EnterDate(elems_MembershipRegistrationDependent.PersonalInformation.DATE_DATEOFBIRTH, DateofBirth)
+              cy.SelectDate(elems_MembershipRegistrationDependent.PersonalInformation.DATE_DATEOFBIRTH, DateofBirth)
              }
              // Verify Age
             // if(Age !== undefined){

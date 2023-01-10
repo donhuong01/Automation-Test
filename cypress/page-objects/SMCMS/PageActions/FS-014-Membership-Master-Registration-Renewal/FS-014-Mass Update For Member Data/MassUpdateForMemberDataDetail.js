@@ -104,7 +104,7 @@ class MassUpdateForMemberDataDetail {
           //Verify Page title
           cy.ValidateElementText(elems_PageHeader.LBL_PAGETITLE, 'Pending Task Listing')
 
-          cy.wait(300000)
+          cy.wait(20000)
           //Refresh the Page
           cy.visit('/admin/pendingTaskList')
 
@@ -136,7 +136,7 @@ class MassUpdateForMemberDataDetail {
           cy.EnterText(elems_PendingTaskDetail.TXTAREA_REMARK, Remark)
 
           //Click on Save button
-          cy.Click(elems_PendingTaskDetail.BTN_SAVE)
+          cy.Click(elems_PendingTaskDetail.BTN_SUBMIT)
           cy.wait(1000)
           cy.ValidateElementText(elems_Picker.MSG_NOTIFICATION, 'Record has been saved successfully.')
 

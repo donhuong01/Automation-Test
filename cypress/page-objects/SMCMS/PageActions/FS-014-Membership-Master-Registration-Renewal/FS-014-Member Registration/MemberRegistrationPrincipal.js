@@ -627,7 +627,9 @@ class MemberRegistrationPrincipal {
      * @param {string} InterestinDBSCard InterestinDBSCard
      * @param {string} ProfilePicture ProfilePicture
      *****************************************************/
-    verifyPersonalInformation({ MemberCategory, NameOnNRIC, NameOnCard, Nric, Gender, DateofBirth, Age, NSStatus, NSRank, MemberType, Nationality, MaritalStatus, CardType, InterestinDBSCard, ProfilePicture
+    verifyPersonalInformation({ MemberCategory, NameOnNRIC, NameOnCard, Nric, Gender, 
+        DateofBirth, Age, NSStatus, NSRank, MemberType, Nationality, MaritalStatus, 
+        CardType, InterestinDBSCard, ProfilePicture
     }) {
         // Verify Member Catergory
         if (MemberCategory !== undefined && MemberCategory === 'Principal') {

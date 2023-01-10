@@ -5,13 +5,13 @@
  *****************************************************/
 
 // Import Pages
-import MassUpdateForMemberDataListing from '../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Mass Update For Member Data/MassUpdateForMemberDataListing'
-import MassUpdateForMemberDataDetail from '../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Mass Update For Member Data/MassUpdateForMemberDataDetail'
-import data from '../../../../../fixtures/Data_Module/FS-014-Membership-Registration-Renewal/014-data'
-import elems_Alerts from '../../../../../page-objects/SMCMS/Elements/Common/Alerts'
-import elems_Picker from '../../../../../page-objects/SMCMS/Elements/Common/Picker'
-import elems_MassUpdateForMemberDataDetail from '../../../../../page-objects/SMCMS/Elements/Membership/FS014_Membership-Master-Registration-Renewal/MassUpdateForMemberDataDetail'
-import login from '../../../../../fixtures/login'
+import MassUpdateForMemberDataListing from '../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Mass Update For Member Data/MassUpdateForMemberDataListing'
+import MassUpdateForMemberDataDetail from '../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Mass Update For Member Data/MassUpdateForMemberDataDetail'
+import data from '../../../../fixtures/Data_Module/FS-014-Membership-Registration-Renewal/014-data'
+import elems_Alerts from '../../../../page-objects/SMCMS/Elements/Common/Alerts'
+import elems_Picker from '../../../../page-objects/SMCMS/Elements/Common/Picker'
+import elems_MassUpdateForMemberDataDetail from '../../../../page-objects/SMCMS/Elements/Membership/FS014_Membership-Master-Registration-Renewal/MassUpdateForMemberDataDetail'
+import login from '../../../../fixtures/login'
 
 
 beforeEach(() => {
@@ -93,7 +93,7 @@ const MassUpdateForMemberData = ()=> {
             
             // Navigate to form
             cy.visit('/membership/massUpdateMemberDataList')
-            cy.wait(5000)
+            cy.wait(8000)
 
             // Click Create New button
             MassUpdForMemDataList.createNew()
@@ -150,7 +150,7 @@ const MassUpdateForMemberData = ()=> {
 
             // Navigate to form
             cy.visit('/membership/massUpdateMemberDataList')
-            cy.wait(5000)
+            cy.wait(8000)
 
             // Click Create New button
             MassUpdForMemDataList.createNew()

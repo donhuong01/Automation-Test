@@ -19,8 +19,8 @@ import DocumentTemplate from '../Sub-Phase-1/FS-004-Admin-Settings/E2E-DocumentT
 import CustomerCheckIn from  '../Sub-Phase-1/FS-014-Membership-Registration-Renewal/FS-014/E2E-CustomerCheckin'
 import MembershipRegistration from '../Sub-Phase-1/FS-014-Membership-Registration-Renewal/FS-014/E2E-MembershipRegistration'
 import SourceChannel from '../Sub-Phase-1/FS-014-Membership-Registration-Renewal/FS-014/E2E-SourceChannel'
-// import MassUpdateForMemberData from '../E2E-Scripts/FS-014/E2E-MassUpdateForMemberData'
-// import MembershipModuleSettings from '../E2E-Scripts/FS-014/E2E-MembershipModuleSetting'
+import MassUpdateForMemberData from '../Sub-Phase-1/FS-014-Membership-Registration-Renewal/FS-014/E2E-MassUpdateForMemberData'
+import MembershipModuleSettings from '../Sub-Phase-1/FS-014-Membership-Registration-Renewal/FS-014/E2E-MembershipModuleSetting'
 // import E2EMemberShipRenewal from '../E2E-Scripts/FS-014/E2E-MembershipRenewal'
 import BatchMembershipRegistration from '../Sub-Phase-1/FS-014-Membership-Registration-Renewal/FS-014/E2E-BatchMembershipRegistration' 
 import MemberStatusReasonCode from '../Sub-Phase-1/FS-014-Membership-Registration-Renewal/FS-014/E2E-MemberStatusReasonCode'
@@ -29,6 +29,8 @@ import WithdrawalOfConsent from '../Sub-Phase-1/FS-014-Membership-Registration-R
 import BadAddressUpdate from '../Sub-Phase-1/FS-014-Membership-Registration-Renewal/FS-014/E2E-BadAddressUpdate'
 import MemberType from '../Sub-Phase-1/FS-014-Membership-Registration-Renewal/FS-014/E2E-MemberType'
 import MembershipRenewalAdvise from '../Sub-Phase-1/FS-014-Membership-Registration-Renewal/FS-014/E2E-MembershipRenewalAdvise'
+import SFSMemberRegistion from '../Sub-Phase-1/FS-014-Membership-Registration-Renewal/FS-014/E2E-SFSMemberRegistration'
+
 
 //FS - 025
 import VolunteerCommittee from '../Sub-Phase-1/FS-025-Membership-VIP-Volunteer-Veteran-League/E2E-VolunteerCommitte'
@@ -54,7 +56,6 @@ import VIPAppointmentTermRegistration from '../Sub-Phase-1/FS-025-Membership-VIP
 
 // import MembershipChargeRate from '../E2E-Scripts/FS-029/E2E-Membership-Charge-Rate'
 import login from '../../fixtures/login'
-// import SFSMemberRegistion from '../E2E-Scripts/FS-014/E2E-SFSMemberRegistration'
 
 // import FacilitySetupDetail from '../E2E-Scripts/FS-010/E2E-FacilitySetupDetail'
 // import BatchMemDefermentRequest from '../E2E-Scripts/FS-028/E2E-BatchMembershipDefermentRequest'
@@ -124,10 +125,10 @@ describe('E2E Auto Testing:FS-014', ()=> {
     // WithdrawalOfConsent("A300002019") //Enter Member ID 
     // SourceChannel() 
     // //MemberStatusReasonCode() // Not Required
-    BatchMembershipRegistration()
-//     MassUpdateForMemberData()
-//     MembershipModuleSettings()
-//     SFSMemberRegistion()
+    // BatchMembershipRegistration() ///
+    // MassUpdateForMemberData()
+    // MembershipModuleSettings()
+    SFSMemberRegistion()
 //     E2EMemberShipRenewal()
 //     LifeMembershipManagment()
 

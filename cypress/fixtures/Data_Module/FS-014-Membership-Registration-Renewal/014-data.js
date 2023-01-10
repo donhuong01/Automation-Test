@@ -875,7 +875,7 @@ const data = {
             gender: 'Male'
         },
         AddressInformation: {
-            postalCode: '569933',
+            postalCode: '117606',
             address: undefined,
             unitNumber: "200A",
             POBOx: "102A",
@@ -885,7 +885,7 @@ const data = {
             handPhone: '+65 658 5896',
             emailAddress: 'testuser',
             emergencyContact: "+65 658 5893",
-            homeNumber: "NA",
+            homeNumber: "102",
 
             preferredContactModeSelectAll: 'check',
             preferredContactModeEmail: 'uncheck',
