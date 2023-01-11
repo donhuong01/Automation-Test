@@ -104,8 +104,8 @@ beforeEach(() => {
 //     AnnouncementPortalNotification() //Not Required
 // })
 
-// describe('E2E Auto Testing:FS-010', ()=> {
-    // FacilityGeneralSettingDtl()
+describe('E2E Auto Testing:FS-010', ()=> {
+    FacilityGeneralSettingDtl()
     // FacilitySettingsCalendar()
     // FacilitySettingCalendarSettings()
     // FacilityOperatingPeriod()
@@ -114,9 +114,9 @@ beforeEach(() => {
     // FacilityBookingAmendmentManagment()
     // FacilityBookingExtentionManagment()
 
-// })
+})
 
-describe('E2E Auto Testing:FS-014', ()=> {
+// describe('E2E Auto Testing:FS-014', ()=> {
 
     //    MembershipRegistration("S9706300A") // Enter FulL NRIC
     //    CustomerCheckIn()
@@ -130,10 +130,10 @@ describe('E2E Auto Testing:FS-014', ()=> {
     // MassUpdateForMemberData()
     // MembershipModuleSettings()
     // SFSMemberRegistion("S9172340I", "S7639915H", "S8258316E") //Add three NRIC's for Principal, Dependent Child, Dependent Spouse
-    // E2EMemberShipRenewal("S4367083B") //Add NRIC For Principal
-    LifeMembershipManagment("S9623002H") //Add NRIC For Principal
+    // E2EMemberShipRenewal("S4367083B") //Add NRIC For Principal Registration
+    // LifeMembershipManagment("S5934306H") //Add NRIC For Principal Registration
 
-})
+// })
 
 //  describe('E2E Auto Testing:FS-025', ()=> {
     // VolunteerCommittee()

@@ -20,7 +20,7 @@ const ShoppingCart = new ShoppingCartPayments()
 const CustomerCreation = new CustomerCreationPage()
 const MemModuleSettings = new MembershipModuleSetting()
 
-const UserID = Math.floor(Math.random() * 100002 * 2  )
+const UserID = Math.floor(Math.random() * 100002 )
 
 const PrincipalName = Customerdata.CustomerCreationPrincipal.RegistrationInformation.name + UserID
 const PrincipalEmail = Customerdata.CustomerCreationPrincipal.ContactInformation.emailAddress + UserID+ "A" + "@synergyonline.com"
@@ -143,10 +143,10 @@ describe('[TS06] Life Membership Management',function(){
             // cy.wait(200000)
 
             // Verify Member Reason code
-            LifeMembership.VerifyMemberReasonCode(PrincipalName, CustomerNRIC)
+            LifeMembership.VerifyMemberReasonCode(PrincipalName, CustomerNRIC, "LF")
 
             //Logout
-            cy.LogoutOfSmcms()
+            // cy.LogoutOfSmcms()
         
    
         })

@@ -77,7 +77,7 @@ class LifeMembership {
         cy.Click(elems_PageHeader.BTN_SHOPPINGCART)
         cy.wait(5000)
         cy.xpath(elems_PageHeader.DRP_USERLINKS).click()
-        cy.wait(2000)
+        cy.wait(5000)
         cy.xpath('//ul//li').contains('A-').click()
 
       //   .should('contain.text', 'Standard').select('Standard')
@@ -146,8 +146,10 @@ class LifeMembership {
             cy.VerifyTableEntry(elems_MemberListing.TBL_MEMBERLISTING,
                "NRIC (Last 4 digits)", NRIC, "Name", Name)
 
-            cy.ClickTableLinkItem(elems_MemberListing.TBL_MEMBERLISTING,
-               "NRIC (Last 4 digits)", NRIC, "Name", Name)
+            // cy.ClickTableLinkItem(elems_MemberListing.TBL_MEMBERLISTING,
+            //    "NRIC (Last 4 digits)", NRIC, "Name", Name)
+            cy.Click('(//h2[text()="Member Listing"]/ancestor::div//table//a)[1]')
+            cy.wait(5000)
 
             cy.xpath('//label[@for="lblMemberType"]').should('have.text' , ReasonCode)
             
