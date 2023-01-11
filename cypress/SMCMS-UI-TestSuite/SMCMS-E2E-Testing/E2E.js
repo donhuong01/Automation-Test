@@ -21,10 +21,10 @@ import MembershipRegistration from '../Sub-Phase-1/FS-014-Membership-Registratio
 import SourceChannel from '../Sub-Phase-1/FS-014-Membership-Registration-Renewal/FS-014/E2E-SourceChannel'
 import MassUpdateForMemberData from '../Sub-Phase-1/FS-014-Membership-Registration-Renewal/FS-014/E2E-MassUpdateForMemberData'
 import MembershipModuleSettings from '../Sub-Phase-1/FS-014-Membership-Registration-Renewal/FS-014/E2E-MembershipModuleSetting'
-// import E2EMemberShipRenewal from '../E2E-Scripts/FS-014/E2E-MembershipRenewal'
+import E2EMemberShipRenewal from '../Sub-Phase-1/FS-014-Membership-Registration-Renewal/FS-014/E2E-MembershipRenewal'
 import BatchMembershipRegistration from '../Sub-Phase-1/FS-014-Membership-Registration-Renewal/FS-014/E2E-BatchMembershipRegistration' 
 import MemberStatusReasonCode from '../Sub-Phase-1/FS-014-Membership-Registration-Renewal/FS-014/E2E-MemberStatusReasonCode'
-// import LifeMembershipManagment from '../E2E-Scripts/FS-014/E2E-LifeMembership'
+import LifeMembershipManagment from '../Sub-Phase-1/FS-014-Membership-Registration-Renewal/FS-014/E2E-LifeMembership'
 import WithdrawalOfConsent from '../Sub-Phase-1/FS-014-Membership-Registration-Renewal/FS-014/E2E-WithdrawalOfConsentForm'
 import BadAddressUpdate from '../Sub-Phase-1/FS-014-Membership-Registration-Renewal/FS-014/E2E-BadAddressUpdate'
 import MemberType from '../Sub-Phase-1/FS-014-Membership-Registration-Renewal/FS-014/E2E-MemberType'
@@ -129,9 +129,9 @@ describe('E2E Auto Testing:FS-014', ()=> {
     // BatchMembershipRegistration() ///
     // MassUpdateForMemberData()
     // MembershipModuleSettings()
-    SFSMemberRegistion()
-//     E2EMemberShipRenewal()
-//     LifeMembershipManagment()
+    // SFSMemberRegistion("S9172340I", "S7639915H", "S8258316E") //Add three NRIC's for Principal, Dependent Child, Dependent Spouse
+    // E2EMemberShipRenewal("S4367083B") //Add NRIC For Principal
+    LifeMembershipManagment("S9623002H") //Add NRIC For Principal
 
 })
 

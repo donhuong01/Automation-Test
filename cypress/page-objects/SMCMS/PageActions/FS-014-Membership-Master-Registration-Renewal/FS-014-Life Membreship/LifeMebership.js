@@ -28,7 +28,7 @@ class LifeMembership {
      *****************************************************/
      Submit() {
         cy.Click(elems_MembershipTenureSelection.BTN_SUBMIT)
-        cy.wait(300000)
+        cy.wait(20000)
      }
 
     /*****************************************************
@@ -61,7 +61,7 @@ class LifeMembership {
         cy.EnterText(elems_PendingTaskDetail.TXTAREA_REMARK, Remark)
 
         // Click on Save button
-        cy.Click(elems_PendingTaskDetail.BTN_SAVE)
+        cy.Click(elems_PendingTaskDetail.BTN_SUBMIT)
         cy.wait(2000)
 
 

@@ -160,7 +160,7 @@ class ShoppingCartPayments {
         cy.Click(elems_SMCMSShoppingCartAndPayment.Payments.BTN_APPLYPAYMENT)
         cy.wait(3000)
 
-        cy.Click(elems_SMCMSShoppingCartAndPayment.Payments.BTN_COMPLETE)
+        cy.Click(elems_SMCMSShoppingCartAndPayment.Payments.BTN_PAYNOW)
         cy.wait(3000)
 
 

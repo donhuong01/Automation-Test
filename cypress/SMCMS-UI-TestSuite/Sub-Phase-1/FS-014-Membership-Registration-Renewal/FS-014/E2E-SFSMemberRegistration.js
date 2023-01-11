@@ -20,7 +20,7 @@ import elems_PageHeader from '../../../../page-objects/SMCMS/Elements/Common/Pag
 import elems_CustomerCheckInPage from '../../../../page-objects/SMCMS/Elements/Membership/FS014_Membership-Master-Registration-Renewal/CustomerCheckInPage'
 import Commons from '../../../../page-objects/SMCMS/PageActions/Common/Common'
 
-const SFSMemberRegistion = () => {
+const SFSMemberRegistion = (CustomerNRICFull, DepChildNRICFull, DepSouseNRICFull) => {
 
 describe('[TS07] SFS Member Registration]', function (){
     
@@ -42,24 +42,26 @@ describe('[TS07] SFS Member Registration]', function (){
     // const PrincipalName = data.CustomerCreationPrincipal.RegistrationInformation.name + UserID
     const PrincipalName = 'SFS User ' + UserID
     const PrincipalEmail = data.CustomerCreationPrincipal.ContactInformation.emailAddress + UserID + "@test.com"
-    const CustomerNRIC = '212A'           //To be changed Each time 
-    const CustomerNRICFull = 'S3559212A'  //To be changed Each time 
-    
+    // const CustomerNRIC = '691J'           //To be changed Each time 
+
+    // const CustomerNRICFull = 'S0419691J'  //To be changed Each time 
+    const CustomerNRIC = CustomerNRICFull.substr(CustomerNRICFull.length - 4);
+
     //For Dependent Child 
     const UserIDDep = Math.floor(Math.random() * 10000 )
     // const DepChildName = data.CustomerCreationDependentChild.RegistrationInformation.name + UserIDDep
     const DepChildName = 'SFS User ' + UserIDDep
     const DepChildEmail = data.CustomerCreationDependentChild.ContactInformation.emailAddress + UserIDDep + "@test.com"
-    const DepChildNRIC = '086E'            //To be changed Each time 
-    const DepChildNRICFull = 'S0328181G'   //To be changed Each time 
+    // const DepChildNRIC = '167D'            //To be changed Each time 
+    // const DepChildNRICFull = 'S7296807G'   //To be changed Each time 
     
     //For Dependent Spouse
     const UserIDSpouse = Math.floor(Math.random() * 10000 )
     // const DepSouseName = data.CustomerCreationDependentSpouse.RegistrationInformation.name + UserIDSpouse
     const DepSouseName = 'SFS User ' + UserIDSpouse
     const DepSouseEmail = data.CustomerCreationDependentSpouse.ContactInformation.emailAddress + UserIDSpouse + "@synergyonline.com"
-    const DepSouseNRIC = '319Z'             //To be changed Each time 
-    const DepSouseNRICFull = 'S6865087I'    //To be changed Each time 
+    // const DepSouseNRIC = '319Z'             //To be changed Each time 
+    // const DepSouseNRICFull = 'S3170144I'    //To be changed Each time 
 
         
     it('[TC01] Customer Creation and SFS Principal Registration with Child and Spouse', function () {

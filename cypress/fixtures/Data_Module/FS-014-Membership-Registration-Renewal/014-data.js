@@ -971,7 +971,7 @@ const data = {
             handPhone: '+65 658 5896',
             emailAddress: 'testuser',
             emergencyContact: "+65 658 5893",
-            homeNumber: "NA",
+            homeNumber: "122",
 
             preferredContactModeSelectAll: 'check',
             preferredContactModeEmail: 'uncheck',
@@ -1064,7 +1064,7 @@ const data = {
             emailAddress: 'testuser',
             emergencyContact: "+65 658 5893",
             conentInformationServiceNotification: 'check',
-            homeNumber: "NA",
+            homeNumber: "123",
 
             preferredContactModeSelectAll: 'check',
             preferredContactModeEmail: 'uncheck',
