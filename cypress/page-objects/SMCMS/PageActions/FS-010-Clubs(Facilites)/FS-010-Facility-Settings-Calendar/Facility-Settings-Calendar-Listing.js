@@ -47,7 +47,7 @@ class FacilitySettingsCalendarListingForm {
      *****************************************************/
     ClickOnTableItem(CalendarName, RecordStatus){
         cy.ClickTableLink(
-            elems_SettingsCalendarListing.TBL_LIST,
+            elems_SettingsCalendarListing.TBL_LIST + "//a",
             'Calendar Name', CalendarName,
             'Record Status', RecordStatus
             )

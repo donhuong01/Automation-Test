@@ -42,9 +42,9 @@ import VIPAppointmentTermRegistration from '../Sub-Phase-1/FS-025-Membership-VIP
 
 
 
-// import FacilitySettingsCalendar from '../E2E-Scripts/FS-010/E2E-FacilitySettingCalendar'
+import FacilitySettingsCalendar from '../Sub-Phase-1/FS-010-Clubs(Facilites)/E2E-FacilitySettingCalendar'
 // import FacilitySettingCalendarSettings from '../E2E-Scripts/FS-010/E2E-FacilitySettingCalendarSetting'
-// import FacilityGeneralSettingDtl from '../E2E-Scripts/FS-010/E2E-FacilitySettingsGeneralSettings'
+import FacilityGeneralSettingDtl from '../Sub-Phase-1/FS-010-Clubs(Facilites)/E2E-FacilitySettingCalendarSetting'
 // // import MembershipRegistrantion from '../E2E-MembershipRegistration'
 // // import MemshipTenureSelection from '../E2E-MemberTenureSelection'
 // // import CusLandingPage from '../E2E-CustomerLandingPage' 
@@ -105,8 +105,8 @@ beforeEach(() => {
 // })
 
 describe('E2E Auto Testing:FS-010', ()=> {
-    FacilityGeneralSettingDtl()
-    // FacilitySettingsCalendar()
+    // FacilityGeneralSettingDtl()
+    FacilitySettingsCalendar()
     // FacilitySettingCalendarSettings()
     // FacilityOperatingPeriod()
     // FacilitySetupDetail() 
@@ -118,12 +118,12 @@ describe('E2E Auto Testing:FS-010', ()=> {
 
 // describe('E2E Auto Testing:FS-014', ()=> {
 
-    //    MembershipRegistration("S9706300A") // Enter FulL NRIC
-    //    CustomerCheckIn()
+    // MembershipRegistration("S9706300A") // Enter FulL NRIC
+    // CustomerCheckIn()
     // MemberType()
-    //    BadAddressUpdate()// Fail Need code updates
+    // BadAddressUpdate()// Fail Need code updates
     // MembershipRenewalAdvise()
-    // WithdrawalOfConsent("A300002019") //Enter Member ID 
+    // WithdrawalOfConsent("A300002019") //Enter Member ID for Withdrawal Of Consent
     // SourceChannel() 
     // //MemberStatusReasonCode() // Not Required
     // BatchMembershipRegistration() ///
