@@ -110,6 +110,20 @@ class BatchMembershipDefermentRequest{
     cy.ValidateElementText(elems_PageHeader.LBL_PAGETITLE, 'Member Listing')
 
     }
+    ApproveBatchMembershipDeferment(ApproveOutCome){
+
+        cy.EnterText('//input[@id="txtTaskId"]', 'M-BDF')
+        cy.EnterText('//input[@id="txtWorkflowname"]', 'Batch Membership Deferment Approval Workflow')
+        cy.Click('//button[text()="Search Filters"]')
+        cy.wait(3000)
+        cy.Click('(//table//a)[1]')
+        cy.wait(3000)
+        cy.SelectDropDownItem('//span[@id="drpApprovalOutcome"]', ApproveOutCome)
+        cy.Click("//button[text()='Submit']")
+
+
+
+    }
 
 
 }

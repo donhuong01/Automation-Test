@@ -88,7 +88,7 @@ Cancel(ExpectedPg)
 *****************************************************/
 ClickOnRightEndArrowInMemListing()
 {
-    cy.xpath('//span[@class="k-icon k-i-arrow-end-right"]').click()
+    cy.xpath('//span[@class="k-icon k-i-arrow-end-right"]').Click('//span[@class="k-icon k-i-arrow-end-right"]')
     cy.wait(3000)
 }
 
@@ -115,8 +115,15 @@ FilterbyNameAndNRIC(Name,NRIC)
     cy.Click(elems_MemberListing.BTN_SEARCHFILTER)
 }
 
+/***************************************************
+ * Method: SelectTableLinkItem
+ * Description: Select the declared table item Name
+ ***************************************************/
 
-
+SelectTableLinkItem(CustomerName) 
+{
+        cy.SelectTableItem(elems_MemberListing.TBL_MEMBERLISTING, 'Name', CustomerName)
+}
 
 
 

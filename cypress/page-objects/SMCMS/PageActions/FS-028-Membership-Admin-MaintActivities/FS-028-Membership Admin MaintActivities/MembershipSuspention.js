@@ -32,20 +32,21 @@ class MembershipSuspention{
                                 Please provide one argument.")
             }
         }
-/*****************************************************
-         * Method: fill Out Suspention Release Form
-         * Description:This function fill Out Suspention Release Form
-         * @param {string} EarlyReleaseDate
-         * @param {string} ReasonCode
-         * @param {string} Remarks
-*****************************************************/
+            /*****************************************************
+             * Method: fill Out Suspention Release Form
+             * Description:This function fill Out Suspention Release Form
+             * @param {string} EarlyReleaseDate
+             * @param {string} ReasonCode
+             * @param {string} Remarks
+            *****************************************************/
     
-fillOutSuspentionReleaseForm(EarlyReleaseDate , ReasonCode , Remarks)
+    fillOutSuspentionReleaseForm(EarlyReleaseDate , ReasonCode , Remarks)
         {
             if(EarlyReleaseDate !== undefined && ReasonCode !== undefined && Remarks !== undefined)
             {
             
-                cy.EnterDate(elems_MembershipSuspensionRequest.DATE_EARLYRELEASEDATE,EarlyReleaseDate)
+                cy.EnterDateSuspension(elems_MembershipSuspensionRequest.DATE_EARLYRELEASEDATE,EarlyReleaseDate)
+                cy.xpath(elems_MembershipSuspensionRequest.DRP_REASONCODE)
                 cy.SelectDropDownItem(elems_MembershipSuspensionRequest.DRP_REASONCODE,ReasonCode)
                 cy.EnterText(elems_MembershipSuspensionRequest.TXTAREA_REMARK,Remarks) 
 
@@ -63,8 +64,8 @@ fillOutSuspentionReleaseForm(EarlyReleaseDate , ReasonCode , Remarks)
          * @param {string} MemberName
          * @param {string} NRIC
          * @param {string} ReasonCode
-    
     *****************************************************/
+    
     VerifySuspentionForm(MemberName, NRIC , ReasonCode)
         {
             cy.EnterText(elems_MemberListing.TXT_NAME,MemberName)
@@ -188,7 +189,7 @@ FillOutPendingTaskDetail(TaskName, WorkflowName, ApprovalOutcome, Remark)
  }
  Save()
     {
-        cy.Click(elems_PendingTaskDetail.BTN_SAVE)
+        cy.Click(elems_PendingTaskDetail.BTN_SUBMIT)
     }
 
 

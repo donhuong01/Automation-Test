@@ -54,7 +54,7 @@ Cypress.Commands.add('SelectDropDownItem', (locator, item) => {
     cy.log('------ Select Drop Down Item : ' + locator + ' ------')
     cy.xpath(locator).scrollIntoView()
     cy.xpath(locator + '//span[@class="k-icon k-i-arrow-s"]').click()
-    cy.wait(2000)
+    // cy.wait(2000)
     // cy.xpath(locator).invoke('attr', 'aria-owns').then(value => {
     //     cy.xpath('//ul[@id="' + value + '"]/li[text()="' + item + '"]').click()
     // })

@@ -46,11 +46,10 @@ class MembershipResignationRequest{
                 cy.Click(elems_MemberListing.BTN_SEARCHFILTER)
                 cy.wait(3000)
        
-                cy.VerifyTableEntry(elems_MemberListing.TBL_MEMBERLISTING,
-                'Reason Code', ReasonCode)
+                cy.VerifyTableEntry(elems_MemberListing.TBL_MEMBERLISTING, "Reason Code", ReasonCode)
                 cy.wait(2000)
 
-                // cy.SelectTableItem(elems_MemberListing.TBL_MEMBERLISTING, "Name", Name)
+                // cy.VerifyTableEntry(elems_MemberListing.TBL_MEMBERLISTING, "Name", Name)
             
             }
 
@@ -96,7 +95,7 @@ class MembershipResignationRequest{
     
     Save()
     {
-        cy.Click(elems_PendingTaskDetail.BTN_SAVE)
+        cy.Click(elems_PendingTaskDetail.BTN_SUBMIT)
     }
     /*****************************************************
         * Method: Request Resignation Request form
@@ -105,7 +104,7 @@ class MembershipResignationRequest{
     Request()
     {
         cy.Click(elems_MembershipResignationRequest.BTN_REQUEST)
-        cy.wait(250000)
+        // cy.wait(250000)
     }
 
     /*****************************************************
@@ -133,8 +132,9 @@ class MembershipResignationRequest{
 
     cy.visit('/admin/pendingTaskList')
     cy.EnterText(elems_PendingTaskListing.TXT_WORKFLOWNAME, WorkflowName)
+    cy.wait(5000)
     cy.Click(elems_PendingTaskListing.BTN_SEARCH)
-    cy.wait(2000)
+   
 
     cy.Click('(//h2[text()="Pending Task Listing"]/ancestor::div//table//a)[1]')
     cy.wait(4000)
