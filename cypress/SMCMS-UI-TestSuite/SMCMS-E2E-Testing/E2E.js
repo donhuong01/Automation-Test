@@ -83,9 +83,9 @@ import MembershipExpulsionAndReinstatment from '../Sub-Phase-1/FS-028-Membership
 import MembershipChargeRate from '../Sub-Phase-2/FS-029-Member-Charge-Rate/E2E-Membership-Charge-Rate'
 
 //FS - 030 Membership Card Management
-// import SAFRACardManagement from '../E2E-Scripts/FS-030/E2E-SAFRACardMangement'
-// import VIPCardManagement from '../E2E-Scripts/FS-030/E2E-VIPCardMangement'
-// import VolunteerCardManagement from '../E2E-Scripts/FS-030/E2E-VolunteerCardMangement'
+import SAFRACardManagement from '../Sub-Phase-2/FS-030-Membership-Card-Management/E2E-SAFRACardMangement'
+import VIPCardManagement from '../Sub-Phase-2/FS-030-Membership-Card-Management/E2E-VIPCardMangement'
+import VolunteerCardManagement from '../Sub-Phase-2/FS-030-Membership-Card-Management/E2E-VolunteerCardMangement'
 
 //FS - 040 Club Sales
 // import ReceiptManagement from '../E2E-Scripts/FS-040/E2E-Receipt-Management'
@@ -195,18 +195,18 @@ beforeEach(() => {
 
 // })
 
-describe('E2E Auto Testing:FS-029', ()=> {
+// describe('E2E Auto Testing:FS-029', ()=> {
 
-    MembershipChargeRate()
-
-})
-// describe('E2E Auto Testing:FS-030', ()=> {
-    
-//     VolunteerCardManagement()
-//     SAFRACardManagement()
-//     VIPCardManagement()
+//     MembershipChargeRate()
 
 // })
+describe('E2E Auto Testing:FS-030', ()=> {
+    
+    VolunteerCardManagement()
+    // SAFRACardManagement()
+    // VIPCardManagement()
+
+})
 
 // describe('E2E Auto Testing:FS-040', ()=> {
 
