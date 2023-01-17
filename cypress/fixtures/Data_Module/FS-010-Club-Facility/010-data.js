@@ -1,17 +1,18 @@
 const data = {
-    CalendarName: 'Test Draft',
+    CalendarName: 'Auto Test ',
     Status: 'Draft',
     StatusPendingApproval: 'Pending Approval',
+    Approved: 'Approved',
     RecordStatus: 'Inactive',
 
     StartDate: "5-Jun-1996",
     EndDate: "23-Jun-2008",
 
     HolidayDates: {
-        HolidayName1: 'Test Holiday',
-        HolidayName2: 'Test2 Holiday',
-        HoildayDate1: '5-Jun-1977',
-        HoildayDate2: '23-Jun-2003',
+        HolidayName1: 'Chinese New Year Day 1',
+        HolidayName2: 'Chrismis Day',
+        HoildayDate1: '18-Feb-2022',
+        HoildayDate2: '24-Dec-2023',
 
 
     },
@@ -21,17 +22,17 @@ const data = {
         ChargeType: 'Rate 111',
         Amount: '25',
         Reason: 'Testing',
-        FacilityName: 'Testing-Facility' + Math.floor(Math.random() * 1000),
+        FacilityName: 'Testing-Facility ' + Math.floor(Math.random() * 1000),
         Location: 'SAFRA Jurong',
     },
 
     Period: {
-        PeriodName1: 'Test Period',
-        PeriodStartDate1: '5-Jun-1977',
-        PeriodEndDate1: '23-Jun-2003',
-        PeriodName2: 'Test2 Period',
-        PeriodStartDate2: '5-Jun-1977',
-        PeriodEndDate2: '23-Jun-2003',
+        PeriodName1: '2022 Term 1 Sch Day',
+        PeriodStartDate1: '31-Dec-2022',
+        PeriodEndDate1: '12-Mar-2023',
+        PeriodName2: '2022 Term 2 Sch Day',
+        PeriodStartDate2: '22-Mar-2022',
+        PeriodEndDate2: '28-May-2023',
 
         Description: 'Test Period Description'
     },

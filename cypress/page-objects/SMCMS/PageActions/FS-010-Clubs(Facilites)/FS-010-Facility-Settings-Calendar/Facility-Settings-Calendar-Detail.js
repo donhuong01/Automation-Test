@@ -1,7 +1,8 @@
-import elems_Landing from '../../../Elements/Common/Customer_LandingPage'
+import elems_PageHeader from '../../../Elements/Common/PageHeader'
 import elems_SettingsCalendarDetail from '../../../Elements/Facilities/FS-010-CLUBS(FACILITIES)/Settings-CalendarDetail'
 import elems_SettingsCalendarListing from '../../../Elements/Facilities/FS-010-CLUBS(FACILITIES)/Settings-CalendarListing'
-
+import elems_PendingTaskListing from '../../../Elements/Admin/FS004_Admin-Settings/PendingTaskListing'
+import elems_PendingTaskDetail from '../../../Elements/Admin/FS004_Admin-Settings/PendingTaskDetail'
 
 class FacilitySettingsCalendarDetailForm {
     /*****************************************************
@@ -259,7 +260,35 @@ CopySelectedPeriodToCurrentYear(PeriodName1, PeriodName2){
             'Status', Status,
             'Calendar Name', CalendarName,
         )
+        cy.VerifyTableEntry(
+            elems_SettingsCalendarListing.TBL_LIST,
+            
+            'Calendar Name', CalendarName,
+            'Status', Status,
+            
+        )
     }
+
+    /*****************************************************
+     * Method: FacilityCalendarWorkFlow
+     * Description: This function perform Facility Calendar Approval Workflow
+     * @param {string} TaskID
+     * @param {string} WorkFlowName
+     *****************************************************/
+        FacilityCalendarWorkFlow(TaskID, WorkFlowName, ApprovalOutCome, Remark){
+
+            cy.VerifyElementText(elems_PageHeader.LBL_PAGETITLE, "Pending Task Listing")
+            cy.EnterText(elems_PendingTaskListing.TXT_TASKID, TaskID)
+            cy.EnterText(elems_PendingTaskListing.TXT_WORKFLOWNAME, WorkFlowName)
+            cy.Click(elems_PendingTaskListing.BTN_SEARCH)
+            cy.wait(3000)
+            cy.Click('(//h2[text()="Pending Task Listing"]/ancestor::div//table//a)[1]')
+            cy.wait(5000)
+            cy.VerifyElementText(elems_PageHeader.LBL_PAGETITLE, "Pending Task Detail")
+            cy.SelectDropDownItem(elems_PendingTaskDetail.DRP_APPROVALOUTCOME, ApprovalOutCome)
+            cy.EnterText(elems_PendingTaskDetail.TXTAREA_REMARK, Remark)
+            cy.Click(elems_PendingTaskDetail.BTN_SUBMIT)
+        }
 
 }
 

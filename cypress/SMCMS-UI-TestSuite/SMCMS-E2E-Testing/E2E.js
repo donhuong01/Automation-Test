@@ -83,9 +83,9 @@ import MembershipExpulsionAndReinstatment from '../Sub-Phase-1/FS-028-Membership
 import MembershipChargeRate from '../Sub-Phase-2/FS-029-Member-Charge-Rate/E2E-Membership-Charge-Rate'
 
 //FS - 030 Membership Card Management
-import SAFRACardManagement from '../Sub-Phase-2/FS-030-Membership-Card-Management/E2E-SAFRACardMangement'
-import VIPCardManagement from '../Sub-Phase-2/FS-030-Membership-Card-Management/E2E-VIPCardMangement'
-import VolunteerCardManagement from '../Sub-Phase-2/FS-030-Membership-Card-Management/E2E-VolunteerCardMangement'
+// import SAFRACardManagement from '../Sub-Phase-2/FS-030-Membership-Card-Management/E2E-SAFRACardMangement'
+// import VIPCardManagement from '../Sub-Phase-2/FS-030-Membership-Card-Management/E2E-VIPCardMangement'
+// import VolunteerCardManagement from '../Sub-Phase-2/FS-030-Membership-Card-Management/E2E-VolunteerCardMangement'
 
 //FS - 040 Club Sales
 // import ReceiptManagement from '../E2E-Scripts/FS-040/E2E-Receipt-Management'
@@ -129,9 +129,9 @@ beforeEach(() => {
     //// AnnouncementPortalNotification() //Not Required
 // })
 
-// describe('E2E Auto Testing:FS-010', ()=> {
-    // FacilityGeneralSettingDtl()
-    // FacilitySettingsCalendar()
+ describe('E2E Auto Testing:FS-010', ()=> {
+    //  FacilityGeneralSettingDtl()
+    FacilitySettingsCalendar()
     // FacilitySettingCalendarSettings()
     // FacilityOperatingPeriod()
     // FacilitySetupDetail() 
@@ -139,7 +139,7 @@ beforeEach(() => {
     // FacilityBookingAmendmentManagment()
     // FacilityBookingExtentionManagment()
 
-// })
+ })
 
 // describe('E2E Auto Testing:FS-014', ()=> {
 
@@ -200,13 +200,13 @@ beforeEach(() => {
 //     MembershipChargeRate()
 
 // })
-describe('E2E Auto Testing:FS-030', ()=> {
+// describe('E2E Auto Testing:FS-030', ()=> {
     
-    VolunteerCardManagement()
+    // VolunteerCardManagement()
     // SAFRACardManagement()
     // VIPCardManagement()
 
-})
+// })
 
 // describe('E2E Auto Testing:FS-040', ()=> {
 

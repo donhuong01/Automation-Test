@@ -921,11 +921,11 @@ Cypress.Commands.add("EnterDate", (locator, Date) => {
     // cy.log(Year)
 
     cy.xpath(locator).eq(0).clear({ force: true })
-        .type(DD).wait(2000)
+        .type(DD).wait(500)
         .type('{rightArrow}').wait(2000)
         .type(MMM).wait(2000)
-        .type('{rightArrow}').wait(2000)
-        .type(YYYY).wait(2000)
+        .type('{rightArrow}').wait(1000)
+        .type(YYYY)
 })
 
 /*****************************************************

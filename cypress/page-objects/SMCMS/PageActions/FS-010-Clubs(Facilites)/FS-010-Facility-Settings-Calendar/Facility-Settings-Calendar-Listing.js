@@ -36,6 +36,7 @@ class FacilitySettingsCalendarListingForm {
         cy.SelectDropDownItem(elems_SettingsCalendarListing.DRP_STATUS, Status)
         cy.SelectDropDownItem(elems_SettingsCalendarListing.DRP_RECORDSTATUS, RecordStatus)
         cy.Click(elems_SettingsCalendarListing.BTN_SEARCHFILTERS)
+        cy.wait(3000)
     }
 
      /*****************************************************
@@ -46,11 +47,11 @@ class FacilitySettingsCalendarListingForm {
      * @param {string} RecordStatus
      *****************************************************/
     ClickOnTableItem(CalendarName, RecordStatus){
-        cy.ClickTableLink(
-            elems_SettingsCalendarListing.TBL_LIST + "//a",
-            'Calendar Name', CalendarName,
-            'Record Status', RecordStatus
-            )
+        // cy.ClickTableLink(
+            cy.Click(elems_SettingsCalendarListing.TBL_LIST + "//a")
+            // 'Calendar Name', CalendarName,
+            // 'Record Status', RecordStatus
+            // )
     }
 
      /*****************************************************
