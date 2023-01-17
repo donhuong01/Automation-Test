@@ -80,6 +80,7 @@ class FacilityGeneralSettingDetail {
     *****************************************************/
     TransferAllFromAllowedSelected(FormatAllowedSelection, TransferButton) {
         cy.SelectListBoxItem(GeneralSetting.BOX_FORMARTALLOWEDSELECTED, FormatAllowedSelection, TransferButton)
+        cy.wait(2000)
 
     }
 

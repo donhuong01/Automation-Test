@@ -109,20 +109,20 @@ const data = {
     },
 
     // Facility General Settings
-    FacilityBookingReminder: 5,
+    FacilityBookingReminder: 0,
     BookingEarn: 'check',
-    GroupBooking: 'check',
+    GroupBooking: 'uncheck',
     ReservationEarn: 'check',
 
-    NumOfPhotoGraphs: '3',
-    MaximumFileSize: '5',
+    NumOfPhotoGraphs: '1',
+    MaximumFileSize: '1000',
 
     FormatAllowed: 'png',
     TransferButton: 'Transfer To',
 
-    CancellationNotAllowedMonths: '2',
-    CancellationNotAllowedDays: '7',
-    DataBackUp: '3',
+    CancellationNotAllowedMonths: '1',
+    CancellationNotAllowedDays: '30',
+    DataBackUp: '0',
 
     ProductMappingTab: {
 
@@ -215,13 +215,13 @@ const data = {
 
         }
     },
+
+    //Facility Type
     FacilityTypeDetail: {
-        FacilityName: 'Auto-Test' + Math.floor(Math.random() * 1000),
+        FacilityName: 'Auto-Test ' + Math.floor(Math.random() * 1000),
         CalenderName: 'BBQ PIT - 2022 (Eric)',
         ChargeRateName: 'Testing CR',
-        StartDate: '01-Sep-2022',
         Location: 'SAFRA Jurong',
-        EndDate: '01-Oct-2022',
         ChargeTypeName: 'Charge Type Name',
         Transaction: 'Booking',
         Calculation: 'Per Booking',
@@ -229,9 +229,18 @@ const data = {
         CategoryName: 'TP - SAFRA PHOTO CLUB (TERM) Member',
         CategoryNumber: '3',
         ProductName: 'Facility Booking Fee',
-        AccessMode: 'Third Party Store',
-        CustomerCategory: 'E1MF SILVER LITE MEMBERSHIP Member',
-        Status: 'Pending Approval'
+        AccessMode: 'Online',
+        CustomerCategory: 'All Customer Category',
+        Status: 'Pending Approval',
+
+    },
+    CategorySection: {
+
+        Category:"SWIMMING POOL",
+        LifestyleGroup:"Entertainment",
+        FABSGroup:"IG Activities",
+        ClubClassification:"Family & Enrichment",
+        SMCClassification:"Family & Enrichment-SMC"
     }
 
 }

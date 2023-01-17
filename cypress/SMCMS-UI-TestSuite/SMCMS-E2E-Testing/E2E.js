@@ -15,18 +15,19 @@ import CustomerCategory from '../Sub-Phase-1/FS-004-Admin-Settings/E2E-CustomerC
 import CodeType from '../Sub-Phase-1/FS-004-Admin-Settings/E2E-CodeType'
 import DocumentTemplate from '../Sub-Phase-1/FS-004-Admin-Settings/E2E-DocumentTemplate'
 
-//FS - 010 Clubs - Facilities
-import FacilitySettingsCalendar from '../Sub-Phase-1/FS-010-Clubs(Facilites)/E2E-FacilitySettingCalendar'
-// import FacilitySettingCalendarSettings from '../E2E-Scripts/FS-010/E2E-FacilitySettingCalendarSetting'
-import FacilityGeneralSettingDtl from '../Sub-Phase-1/FS-010-Clubs(Facilites)/E2E-FacilitySettingCalendarSetting'
+//FS - 010 Clubs - Facilities 
+import FacilitySettingsCalendar from '../Sub-Phase-2/FS-010-Clubs(Facilites)/E2E-FacilitySettingCalendar'
+import FacilityGeneralSettingDtl from '../Sub-Phase-2/FS-010-Clubs(Facilites)/E2E-FacilitySettingCalendarSetting'
+import FacilitySettingCalendarSettings from '../Sub-Phase-2/FS-010-Clubs(Facilites)/E2E-FacilitySettingsGeneralSettings'
+import FacilityOperatingPeriod from '../Sub-Phase-2/FS-010-Clubs(Facilites)/E2E-FacilitySettingOperatingPeriod'
+import FacilitySetupDetail from '../Sub-Phase-2/FS-010-Clubs(Facilites)/E2E-FacilitySetupDetail'
+import FacilityTypeDetailFormManagement from '../Sub-Phase-2/FS-010-Clubs(Facilites)/E2E-FacilityTypeDetailForm'
+import FacilityBookingAmendmentManagment from '../Sub-Phase-2/FS-010-Clubs(Facilites)/E2E-FacilityBookingAmendment'
+import FacilityBookingExtentionManagment from '../Sub-Phase-2/FS-010-Clubs(Facilites)/E2E-FacilityBookingExtention'
+
 // import MembershipRegistrantion from '../E2E-MembershipRegistration'
 // import MemshipTenureSelection from '../E2E-MemberTenureSelection'
-// import CusLandingPage from '../E2E-CustomerLandingPage' 
-// import FacilityOperatingPeriod from '../E2E-Scripts/FS-010/E2E-FacilitySettingOperatingPeriod'
-// import FacilityTypeDetailFormManagement from '../E2E-Scripts/FS-010/E2E-FacilityTypeDetailForm'
-// import FacilityBookingAmendmentManagment from '../E2E-Scripts/FS-010/E2E-FacilityBookingAmendment'
-// import FacilityBookingExtentionManagment from '../E2E-Scripts/FS-010/E2E-FacilityBookingExtention'
-// import FacilitySetupDetail from '../E2E-Scripts/FS-010/E2E-FacilitySetupDetail'
+
 
 //FS - 014 Membership Registration & Renewal
 import CustomerCheckIn from  '../Sub-Phase-1/FS-014-Membership-Registration-Renewal/FS-014/E2E-CustomerCheckin'
@@ -130,10 +131,11 @@ beforeEach(() => {
 // })
 
  describe('E2E Auto Testing:FS-010', ()=> {
-    //  FacilityGeneralSettingDtl()
-    FacilitySettingsCalendar()
+    // FacilityGeneralSettingDtl()
+    // FacilitySettingsCalendar()
     // FacilitySettingCalendarSettings()
-    // FacilityOperatingPeriod()
+    // FacilityOperatingPeriod() //Failing
+    FacilityTypeDetailFormManagement()
     // FacilitySetupDetail() 
     // FacilityTypeDetailFormManagement()
     // FacilityBookingAmendmentManagment()

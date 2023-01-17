@@ -204,13 +204,35 @@ class FacilityTypeDetailForm {
 
 
         cy.Click(elems_FacilityTypeSetupDetailForm.DETAILSTAB.BTN_EDITACCESSMODES)
-        cy.SelectPickerDifferentItemsSeachBTN(
-            elems_FacilityTypeSetupDetailForm.DETAILSTAB.BTN_ADDACCESSMODE,
-            elems_FacilityTypeSetupDetailForm.DETAILSTAB.TXT_ACCESSMODE,
-            AccessMode,
-            elems_FacilityTypeSetupDetailForm.DETAILSTAB.BTN_SEARCHFILTERSACCESSMODE,
+        cy.wait(5000)
+        cy.Click(elems_FacilityTypeSetupDetailForm.DETAILSTAB.BTN_ADDACCESSMODE)
 
-        )
+        cy.SelectTableItem(
+            elems_Picker.TBL_PICKERITEMS,
+            'Access Mode', 'Kiosk',
+            )
+        cy.SelectTableItem(
+            elems_Picker.TBL_PICKERITEMS,
+            'Access Mode', 'Mobile',
+            )
+        cy.SelectTableItem(
+            elems_Picker.TBL_PICKERITEMS,
+            'Access Mode', AccessMode,
+            )
+        cy.SelectTableItem(
+            elems_Picker.TBL_PICKERITEMS,
+            'Access Mode', 'Roadshow',
+            )
+        cy.Click('//button[text()="Select"]')
+
+        // cy.SelectPickerDifferentItemsSeachBTN(
+        //     elems_FacilityTypeSetupDetailForm.DETAILSTAB.BTN_ADDACCESSMODE,
+        //     elems_FacilityTypeSetupDetailForm.DETAILSTAB.TXT_ACCESSMODE,
+        //     AccessMode,
+        //     elems_FacilityTypeSetupDetailForm.DETAILSTAB.BTN_SEARCHFILTERSACCESSMODE,
+
+        // )
+
 
         cy.Click(elems_FacilityTypeSetupDetailForm.DETAILSTAB.BTN_EDITCUSTOMERCATEGORIES)
         cy.SelectPickerDifferentItemsSeachBTN(
@@ -221,10 +243,6 @@ class FacilityTypeDetailForm {
 
         )
 
-        // cy.SelectTableItem(
-        //     elems_FacilityTypeSetupDetailForm.DETAILSTAB.TBL_AddCUSTOMERCATEGORY,
-        //     'Access Mode Type','Club houses',
-        // )
 
         if (BookingQuote === 'check') {
             cy.TickCheckBox(elems_FacilityTypeSetupDetailForm.DETAILSTAB.CHK_BOOKINGQUOTE, 'check')
@@ -573,6 +591,33 @@ class FacilityTypeDetailForm {
      SubmitForApproval() {
         cy.xpath('//button[text()="Submit for Approval"]').click()
             cy.wait(2000)
+    }
+    /*****************************************************
+     * Method: BookingCheckboxes
+     * Description: This function will checked all the checkboxes
+     * Author fshahzada
+     *****************************************************/
+     BookingCheckboxes() {
+        const BookingTable = '(//h3[text()="Booking"]//following-sibling::div//table//td)'
+
+        cy.Click(BookingTable +'[3]')
+        cy.Click(BookingTable +'[4]')
+        cy.Click(BookingTable +'[5]')
+        cy.Click(BookingTable +'[6]')
+        cy.Click(BookingTable +'[9]')
+        cy.Click(BookingTable +'[10]')
+        cy.Click(BookingTable +'[11]')
+        cy.Click(BookingTable +'[12]')
+        cy.Click(BookingTable +'[15]')
+        cy.Click(BookingTable +'[16]')
+        cy.Click(BookingTable +'[17]')
+        cy.Click(BookingTable +'[18]')
+        cy.Click(BookingTable +'[21]')
+        cy.Click(BookingTable +'[22]')
+        cy.Click(BookingTable +'[23]')
+        cy.Click(BookingTable +'[24]')
+
+        
     }
 
 
