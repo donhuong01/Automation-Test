@@ -2,7 +2,8 @@ import elems_FacilityTypeSetupDetailForm from '../../../Elements/Facilities/FS-0
 import elems_Picker from '../../../Elements/Common/Picker'
 import elems_Header from '../../../Elements/Common/PageHeader'
 import elems_FacilityTypeListingForm from '../../../Elements/Facilities/FS-010-CLUBS(FACILITIES)/FacilityTypeListingForm'
-
+import elems_PendingTaskListing from '../../../Elements/Admin/FS004_Admin-Settings/PendingTaskListing'
+import elems_PendingTaskDetail from '../../../Elements/Admin/FS004_Admin-Settings/PendingTaskDetail'
 //Remove Location
 //Type of Invoicing for Booking Drop Down
 //Booking Section Remove Access Mode Type
@@ -204,34 +205,15 @@ class FacilityTypeDetailForm {
 
 
         cy.Click(elems_FacilityTypeSetupDetailForm.DETAILSTAB.BTN_EDITACCESSMODES)
-        cy.wait(5000)
-        cy.Click(elems_FacilityTypeSetupDetailForm.DETAILSTAB.BTN_ADDACCESSMODE)
+        cy.wait(3000)
 
-        cy.SelectTableItem(
-            elems_Picker.TBL_PICKERITEMS,
-            'Access Mode', 'Kiosk',
-            )
-        cy.SelectTableItem(
-            elems_Picker.TBL_PICKERITEMS,
-            'Access Mode', 'Mobile',
-            )
-        cy.SelectTableItem(
-            elems_Picker.TBL_PICKERITEMS,
-            'Access Mode', AccessMode,
-            )
-        cy.SelectTableItem(
-            elems_Picker.TBL_PICKERITEMS,
-            'Access Mode', 'Roadshow',
-            )
-        cy.Click('//button[text()="Select"]')
+        cy.SelectPickerDifferentItemsSeachBTN(
+            elems_FacilityTypeSetupDetailForm.DETAILSTAB.BTN_ADDACCESSMODE,
+            elems_FacilityTypeSetupDetailForm.DETAILSTAB.TXT_ACCESSMODE,
+            AccessMode,
+            elems_FacilityTypeSetupDetailForm.DETAILSTAB.BTN_SEARCHFILTERSACCESSMODE,
 
-        // cy.SelectPickerDifferentItemsSeachBTN(
-        //     elems_FacilityTypeSetupDetailForm.DETAILSTAB.BTN_ADDACCESSMODE,
-        //     elems_FacilityTypeSetupDetailForm.DETAILSTAB.TXT_ACCESSMODE,
-        //     AccessMode,
-        //     elems_FacilityTypeSetupDetailForm.DETAILSTAB.BTN_SEARCHFILTERSACCESSMODE,
-
-        // )
+        )
 
 
         cy.Click(elems_FacilityTypeSetupDetailForm.DETAILSTAB.BTN_EDITCUSTOMERCATEGORIES)
@@ -285,19 +267,30 @@ class FacilityTypeDetailForm {
         const General = 'check'
 
         cy.EnterText(elems_FacilityTypeSetupDetailForm.DETAILSTAB.NUM_NONPEAKMINSLOT, "5")
-        cy.EnterText(elems_FacilityTypeSetupDetailForm.DETAILSTAB.NUM_NONPEAKMAXSLOT, "3")
+        cy.EnterText(elems_FacilityTypeSetupDetailForm.DETAILSTAB.NUM_NONPEAKMAXSLOT, "15")
         if (NonPeak === 'check') {
             cy.TickCheckBox(elems_FacilityTypeSetupDetailForm.DETAILSTAB.CHK_NONPEAKENABLE, 'check')
         }
 
-        cy.EnterText(elems_FacilityTypeSetupDetailForm.DETAILSTAB.NUM_SUPERPEAKMINSLOT, "1")
-        cy.EnterText(elems_FacilityTypeSetupDetailForm.DETAILSTAB.NUM_SUPERPEAKMAXSLOT, "5")
+        cy.EnterText(elems_FacilityTypeSetupDetailForm.DETAILSTAB.NUM_PEAKMINSLOT, "5")
+        cy.EnterText(elems_FacilityTypeSetupDetailForm.DETAILSTAB.NUM_PEAKMAXSLOT, "15")
+        if (NonPeak === 'check') {
+            cy.TickCheckBox(elems_FacilityTypeSetupDetailForm.DETAILSTAB.CHK_PEAKENABLE, 'check')
+        }
+
+        cy.EnterText(elems_FacilityTypeSetupDetailForm.DETAILSTAB.NUM_SUPERPEAKMINSLOT, "5")
+        cy.EnterText(elems_FacilityTypeSetupDetailForm.DETAILSTAB.NUM_SUPERPEAKMAXSLOT, "15")
         if (SuperPeak === 'check') {
             cy.TickCheckBox(elems_FacilityTypeSetupDetailForm.DETAILSTAB.CHK_SUPERPEAKENABLE, 'check')
         }
+        cy.EnterText(elems_FacilityTypeSetupDetailForm.DETAILSTAB.NUM_SUPERPEAKMINSLOT, "5")
+        cy.EnterText(elems_FacilityTypeSetupDetailForm.DETAILSTAB.NUM_SUPERPEAKMAXSLOT, "15")
+        if (SuperPeak === 'check') {
+            cy.TickCheckBox(elems_FacilityTypeSetupDetailForm.DETAILSTAB.CHK_SUPERPEAKHOLIDAYENABLE, 'check')
+        }
 
-        cy.EnterText(elems_FacilityTypeSetupDetailForm.DETAILSTAB.NUM_GENERALMINSLOT, "2")
-        cy.EnterText(elems_FacilityTypeSetupDetailForm.DETAILSTAB.NUM_GENERALMAXSLOT, "3")
+        cy.EnterText(elems_FacilityTypeSetupDetailForm.DETAILSTAB.NUM_GENERALMINSLOT, "5")
+        cy.EnterText(elems_FacilityTypeSetupDetailForm.DETAILSTAB.NUM_GENERALMAXSLOT, "15")
         if (General === 'check') {
             cy.TickCheckBox(elems_FacilityTypeSetupDetailForm.DETAILSTAB.NUM_GENERALENABLE, 'check')
         }
@@ -314,11 +307,11 @@ class FacilityTypeDetailForm {
 
         if (AllowReservation === 'check') {
             cy.Click(elems_FacilityTypeSetupDetailForm.DETAILSTAB.CHK_ALLOWRESERVATION)
-            cy.IncreaseFieldValue(elems_FacilityTypeSetupDetailForm.DETAILSTAB.NUM_DATETOHOLDRESERVATION, "1")
-            cy.IncreaseFieldValue(elems_FacilityTypeSetupDetailForm.DETAILSTAB.NUM_NEWRESERVATIONMAX, "3")
-            cy.IncreaseFieldValue(elems_FacilityTypeSetupDetailForm.DETAILSTAB.NUM_NEWRESERVATIONMIN, "4")
-            cy.IncreaseFieldValue(elems_FacilityTypeSetupDetailForm.DETAILSTAB.NUM_ONERESERVATIONISALLOWED, "7")
-            cy.IncreaseFieldValue(elems_FacilityTypeSetupDetailForm.DETAILSTAB.NUM_NOOFRESERVATION, "2")
+            cy.EnterText(elems_FacilityTypeSetupDetailForm.DETAILSTAB.NUM_DATETOHOLDRESERVATION, "30")
+            cy.EnterText(elems_FacilityTypeSetupDetailForm.DETAILSTAB.NUM_NEWRESERVATIONMAX, "30")
+            cy.EnterText(elems_FacilityTypeSetupDetailForm.DETAILSTAB.NUM_NEWRESERVATIONMIN, "5")
+            cy.EnterText(elems_FacilityTypeSetupDetailForm.DETAILSTAB.NUM_ONERESERVATIONISALLOWED, "5")
+            cy.EnterText(elems_FacilityTypeSetupDetailForm.DETAILSTAB.NUM_NOOFRESERVATION, "5")
 
         }
     }
@@ -332,9 +325,9 @@ class FacilityTypeDetailForm {
         const AllowExtension = 'check'
         if (AllowExtension === 'check') {
             cy.Click(elems_FacilityTypeSetupDetailForm.DETAILSTAB.CHK_ALLOWEXTENSION)
-            cy.EnterText(elems_FacilityTypeSetupDetailForm.DETAILSTAB.NUM_NEWEXTENSIONMAXAFTERBOOKING, "6")
-            cy.EnterText(elems_FacilityTypeSetupDetailForm.DETAILSTAB.NUM_NEWEXTENSIONMAXBEFOREBOOKING, "3")
-            cy.EnterText(elems_FacilityTypeSetupDetailForm.DETAILSTAB.NUM_MAXSLOTFOREACHBOOKING, "1")
+            cy.EnterText(elems_FacilityTypeSetupDetailForm.DETAILSTAB.NUM_NEWEXTENSIONMAXAFTERBOOKING, "30")
+            cy.EnterText(elems_FacilityTypeSetupDetailForm.DETAILSTAB.NUM_NEWEXTENSIONMAXBEFOREBOOKING, "10")
+            cy.EnterText(elems_FacilityTypeSetupDetailForm.DETAILSTAB.NUM_MAXSLOTFOREACHBOOKING, "10")
 
         }
     }
@@ -346,6 +339,15 @@ class FacilityTypeDetailForm {
      *****************************************************/
     Save() {
         cy.Click(elems_FacilityTypeSetupDetailForm.BTN_SAVE)
+        cy.wait(2000)
+    }
+    /*****************************************************
+     * Method: SaveAsDraft
+     * Description: This function Click on SaveAsDraft Button
+     * Author fshahzada
+     *****************************************************/
+    SaveAsDraft() {
+        cy.Click(elems_FacilityTypeSetupDetailForm.BTN_SAVEASDRAFT)
         cy.wait(2000)
     }
 
@@ -387,6 +389,7 @@ class FacilityTypeDetailForm {
      * Author fshahzada
      *****************************************************/
      VerifyFacility(FacilityName , Status) {
+
         cy.EnterText(elems_FacilityTypeListingForm.TXT_FACILITYTYPENAME,FacilityName)
         cy.wait(1000)
         cy.Click(elems_FacilityTypeListingForm.BTN_SEARCHFILTERS)
@@ -458,6 +461,22 @@ class FacilityTypeDetailForm {
         cy.SelectPickerDifferentItemsSeachBTN(elems_FacilityTypeSetupDetailForm.OPERATINGPERIOD.TBL_PERIODSCALENDARLINK,
             elems_FacilityTypeSetupDetailForm.OPERATINGPERIOD.TXT_OPERATINGPERIODNAME,PeriodName,
             elems_FacilityTypeSetupDetailForm.OPERATINGPERIOD.BTN_SEARCHFILTERS)
+    }
+
+    /*****************************************************
+     * Method: SelectOperatingPeriod
+     * Description: This function Apply to all calendar Period
+     * @param {string} PeriodName
+     * Author fshahzada
+     *****************************************************/
+     SelectOperatingPeriod(PeriodName) {
+        cy.Click('//a[text()="Period 1"]')
+        cy.EnterText('//input[@id="txtOperatingPeriodName"]', PeriodName)
+        cy.Click('(//button[text()="Search Filters"])[2]')
+        cy.Click('//button[text()="Apply to all Calendar Period"]')
+
+
+        
     }
 
     /*****************************************************
@@ -599,23 +618,33 @@ class FacilityTypeDetailForm {
      *****************************************************/
      BookingCheckboxes() {
         const BookingTable = '(//h3[text()="Booking"]//following-sibling::div//table//td)'
+        const AddCustomerCategory = '(//td[text()="All Customer Category"]//following-sibling::td//input)'
 
-        cy.Click(BookingTable +'[3]')
-        cy.Click(BookingTable +'[4]')
-        cy.Click(BookingTable +'[5]')
-        cy.Click(BookingTable +'[6]')
-        cy.Click(BookingTable +'[9]')
-        cy.Click(BookingTable +'[10]')
-        cy.Click(BookingTable +'[11]')
-        cy.Click(BookingTable +'[12]')
-        cy.Click(BookingTable +'[15]')
-        cy.Click(BookingTable +'[16]')
-        cy.Click(BookingTable +'[17]')
-        cy.Click(BookingTable +'[18]')
-        cy.Click(BookingTable +'[21]')
-        cy.Click(BookingTable +'[22]')
-        cy.Click(BookingTable +'[23]')
-        cy.Click(BookingTable +'[24]')
+        cy.Click(AddCustomerCategory +'[1]')
+        cy.Click(AddCustomerCategory +'[2]')
+        cy.Click(AddCustomerCategory +'[3]')
+        cy.Click(AddCustomerCategory +'[4]')
+
+
+        
+    }
+    /*****************************************************
+     * Method: ApprovalWorkFlow
+     * Description: ApprovalWorkFlow
+     * Author fshahzada
+     *****************************************************/
+     ApprovalWorkFlow(TaskID, WorkflowName, ApprovalOutcome, Remarks) {
+        
+        cy.EnterText(elems_PendingTaskListing.TXT_TASKID, TaskID)
+        cy.EnterText(elems_PendingTaskListing.TXT_WORKFLOWNAME, WorkflowName)
+        cy.Click(elems_PendingTaskListing.BTN_SEARCH)
+        cy.wait(3000)
+        cy.Click('(//h2[text()="Pending Task Listing"]/ancestor::div//table//a)[1]')
+
+        cy.SelectDropDownItem(elems_PendingTaskDetail.DRP_APPROVALOUTCOME, ApprovalOutcome)
+        cy.EnterText(elems_PendingTaskDetail.TXTAREA_REMARK, Remarks)
+
+        cy.Click(elems_PendingTaskDetail.BTN_SUBMIT)
 
         
     }

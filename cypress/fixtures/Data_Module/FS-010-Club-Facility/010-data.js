@@ -136,9 +136,9 @@ const data = {
         DetailsTab: {
             FacilityInfo: {
                 FacilityName: 'Auto-Test' + Math.floor(Math.random() * 1000),
-                ActivationDate: '23-Nov-2023',
+                ActivationDate: '18-Jan-2023',
                 UploadPhotos: 'Sample_Images.jpeg',
-                FacilityType: 'Test Type 2022',
+                FacilityType: 'Facility  Type 2023',
                 Location: 'SAFRA Jurong',
                 FormatsAllowed: 'check',
                 ResourceName: 'Auto-Test-Resource' + Math.floor(Math.random() * 1000),
@@ -164,13 +164,13 @@ const data = {
         GroupBookingTab: {
             EnableGroupBooking: 'check',
             BallotType: 'Manual Ballot',
-            BallotBefore: '9',
+            BallotBefore: '0',
             GroupBookingIsAllowed: '5',
             GroupBookingIsConslidated: '9',
             BallotType: 'Manual Ballot',
-            BallotBefore: '9',
-            AccessMode: 'Mobile',
-            CustomerCategoryName: 'Kickass',
+            BallotBefore: '0',
+            AccessMode: 'Online',
+            CustomerCategoryName: 'All Customer Category',
         },
 
         ChargeRateTab: {
@@ -195,9 +195,9 @@ const data = {
 
         ProductMappingTab: {
 
-            ProductNumber: 'FAL-1000001',
-            ProductName: 'Facility Booking Fee',
-            SearchName: 'Facility Booking Fee',
+            ProductNumber: 'PROD113',
+            ProductName: 'Product 3',
+            SearchName: 'Product 3',
         },
 
         AdditionalInfoTab: {
@@ -219,19 +219,24 @@ const data = {
     //Facility Type
     FacilityTypeDetail: {
         FacilityName: 'Auto-Test ' + Math.floor(Math.random() * 1000),
-        CalenderName: 'BBQ PIT - 2022 (Eric)',
+        CalenderName: 'Calendar 2023',
         ChargeRateName: 'Testing CR',
         Location: 'SAFRA Jurong',
-        ChargeTypeName: 'Charge Type Name',
-        Transaction: 'Booking',
-        Calculation: 'Per Booking',
-        Amount: 'Fixed Value',
-        CategoryName: 'TP - SAFRA PHOTO CLUB (TERM) Member',
-        CategoryNumber: '3',
-        ProductName: 'Facility Booking Fee',
         AccessMode: 'Online',
         CustomerCategory: 'All Customer Category',
         Status: 'Pending Approval',
+        
+        //Charge Rate Tab
+        StartDate:'09-Jan-2023',
+        EndDate:'30-Jun-2023',
+        ChargeRateLocation:'All Locations',
+        ChargeTypeName: 'Booking Fee',
+        Transaction: 'Booking',
+        Calculation: 'Per Booking',
+        Amount: 'Fixed Value',
+        CategoryName: 'All Customer Category',
+        CategoryNumber: '10',
+        ProductName: 'Product 3',
 
     },
     CategorySection: {

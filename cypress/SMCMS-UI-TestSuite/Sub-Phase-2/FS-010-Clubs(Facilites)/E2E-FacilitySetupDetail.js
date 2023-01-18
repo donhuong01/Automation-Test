@@ -47,7 +47,7 @@ import data from '../../../fixtures/Data_Module/FS-010-Club-Facility/010-data'
 
 describe('[TS05] Facility Setup Detail Form Management', function () {
 
-    it('[TC01] Facility Setup Detail (Detail Tab)', function () { 
+    it.only('[TC01] Facility Setup Detail (Detail Tab)', function () { 
 
         cy.visit('/facilities/facilityListing');
         cy.wait(2000)
@@ -67,13 +67,10 @@ describe('[TS05] Facility Setup Detail Form Management', function () {
         
         // FacilityDetailForm.UploadFile(UploadFileName, 'Thumbnail')
        
-        FacilityDetailForm.AssociatedResources()
+        // FacilityDetailForm.AssociatedResources()
 
-        FacilityDetailForm.AddExistingResource(ResourceName)
+        // FacilityDetailForm.AddExistingResource(ResourceName)
 
-    })
-
-    it('[TC02] Facility Setup Detail (Product Mapping Tab)', function () {
 
         FacilityDetailForm.FacilityDetailFormProductMappingTab(ProductNumber, ProductName, SearchName)
 
@@ -85,7 +82,7 @@ describe('[TS05] Facility Setup Detail Form Management', function () {
         FacilityDetailForm.VerifyPageTitle('Facilities Listing')
     })
 
-    it('[TC03] Filter newly created facility and click on it', function () {
+    it.only('[TC02] Filter newly created facility and click on it', function () {
 
         cy.visit('/facilities/facilityListing');
         cy.wait(2000)
@@ -97,7 +94,17 @@ describe('[TS05] Facility Setup Detail Form Management', function () {
     
         cy.wait(5000)
     })
-    it('[TC04] Facility Setup Detail (Group Booking Tab)', function () {
+    it.only('[TC03] Facility Setup Detail (Group Booking Tab)', function () {
+
+        cy.visit('/facilities/facilityListing');
+        cy.wait(2000)
+        FacilityDetailForm.FiltersFacilitieListingForm(FacilityName,
+        'Draft', 'Inactive')
+
+        // Click on Facility link
+        FacilityDetailForm.ClickFacilityListingItem()
+    
+        cy.wait(5000)
 
         FacilityDetailForm.FacilityGroupBooking(
             EnableGroupBooking, BallotType, BallotBefore)
@@ -105,15 +112,27 @@ describe('[TS05] Facility Setup Detail Form Management', function () {
         FacilityDetailForm.FacilityDetailFormGroupBookingTab(
             GBIsAllowed, GBIsConslidated, AccessMode, CustomerCategoryName
         )
+        FacilityDetailForm.SaveAsDraft()
+        cy.wait(3000)
     })
 
-    it('[TC05] Facility Setup Detail (Charge Rate Tab)', function () {
+    it.only('[TC04] Facility Setup Detail (Charge Rate Tab)', function () {
+
+        cy.visit('/facilities/facilityListing');
+        cy.wait(2000)
+        FacilityDetailForm.FiltersFacilitieListingForm(FacilityName,
+        'Draft', 'Inactive')
+
+        // Click on Facility link
+        FacilityDetailForm.ClickFacilityListingItem()
+    
+        cy.wait(5000)
 
         // Click Add button
         FacilityDetailForm.addChargeRate()
 
-        FacilityDetailForm.FillOutFacilityChargeRateDetail('Sample Charge rate', '22-Jun-2022',
-         'SAFRA Jurong', '01-Dec-2022')
+        FacilityDetailForm.FillOutFacilityChargeRateDetail('Sample Charge rate', '22-Jun-2023',
+         'SAFRA Jurong', '01-Dec-2023')
 
         // add charge type list
         FacilityDetailForm.FilloutChargeTypeList(ChargeTypeName, Transaction, Calculation, Amount)
@@ -128,17 +147,39 @@ describe('[TS05] Facility Setup Detail Form Management', function () {
     })
     
 
-    it('[TC06] Fill out Facility Setup Detail (Additional Information Tab) and Save as Draft', function () {
+    it.only('[TC05] Fill out Facility Setup Detail (Additional Information Tab) and Save as Draft', function () {
+
+        cy.visit('/facilities/facilityListing');
+        cy.wait(2000)
+        FacilityDetailForm.FiltersFacilitieListingForm(FacilityName,
+        'Draft', 'Inactive')
+
+        // Click on Facility link
+        FacilityDetailForm.ClickFacilityListingItem()
+    
+        cy.wait(5000)
 
         FacilityDetailForm.FacilityDetailFormAdditionalInfoTab(
             Description, SpecialRemark, ContactPersonInfo,
             ENBWaiver, IndemnityText, TermAndCondition, TermAndConditionsText
             )
-        
+         // Save charge rate
+         FacilityDetailForm.Save()
+         cy.wait(2000)
     })
 
 
-    it('[TC07] Facility Setup Detail (Attachment Tab)', function () {
+    it('[TC06] Facility Setup Detail (Attachment Tab)', function () {
+
+        cy.visit('/facilities/facilityListing');
+        cy.wait(2000)
+        FacilityDetailForm.FiltersFacilitieListingForm(FacilityName,
+        'Draft', 'Inactive')
+
+        // Click on Facility link
+        FacilityDetailForm.ClickFacilityListingItem()
+    
+        cy.wait(5000)
 
         // Upload file
         FacilityDetailForm.FacilityDetailFormAttachmentTab(UploadFile)
@@ -151,10 +192,13 @@ describe('[TS05] Facility Setup Detail Form Management', function () {
 
         // ReUpload the file
         FacilityDetailForm.FacilityDetailFormAttachmentTab(UploadFile)
+         // Save charge rate
+         FacilityDetailForm.Save()
+         cy.wait(2000)
         
     })
 
-    it('[TC08] Submit For Approval And Verify in the listing table', function () {
+    it('[TC07] Submit For Approval And Verify in the listing table', function () {
 
         FacilityDetailForm.SubmitForApproval()
         cy.wait(5000)

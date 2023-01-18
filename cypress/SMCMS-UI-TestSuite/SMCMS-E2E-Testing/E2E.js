@@ -135,9 +135,8 @@ beforeEach(() => {
     // FacilitySettingsCalendar()
     // FacilitySettingCalendarSettings()
     // FacilityOperatingPeriod() //Failing
-    FacilityTypeDetailFormManagement()
-    // FacilitySetupDetail() 
-    // FacilityTypeDetailFormManagement()
+    // FacilityTypeDetailFormManagement() //Operating Tab
+    FacilitySetupDetail() 
     // FacilityBookingAmendmentManagment()
     // FacilityBookingExtentionManagment()
 

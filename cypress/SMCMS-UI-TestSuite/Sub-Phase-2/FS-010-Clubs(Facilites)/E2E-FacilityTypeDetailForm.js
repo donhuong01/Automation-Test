@@ -15,9 +15,9 @@ const FacilityTypeDetailFormManagement = () => {
 
 describe('Facility Type Detail Form', function () {
 
-    const {FacilityName , CalenderName ,ChargeRateName  , Location, 
+    const {FacilityName , CalenderName ,ChargeRateName  , Location, StartDate, EndDate,
      ChargeTypeName ,Transaction ,Calculation ,Amount ,CategoryName ,CategoryNumber,
-     ProductName ,AccessMode ,CustomerCategory, Status } = data.FacilityTypeDetail
+     ProductName ,AccessMode ,CustomerCategory, Status, ChargeRateLocation } = data.FacilityTypeDetail
 
     const {Category, LifestyleGroup, FABSGroup,
          ClubClassification, SMCClassification} = data.CategorySection
@@ -46,6 +46,8 @@ describe('Facility Type Detail Form', function () {
         
         //Booking Section
         FacilityTypeDetailForm.BookingSection('uncheck', 'Online', 'All Customer Category', 'Fixed time slots booking', '2');
+        
+        FacilityTypeDetailForm.BookingCheckboxes();
 
         //Add Horizon
         FacilityTypeDetailForm.AddHorizon( AccessMode, CustomerCategory )
@@ -65,7 +67,7 @@ describe('Facility Type Detail Form', function () {
     });
 
 
-    it.only('[TC02] FillOut Facility Type Detail form and click save button', function () {
+    it('[TC02] FillOut Facility Type Detail form and click save button', function () {
 
         //Must login as an admin first
         cy.visit('/facilities/facilityTypeDetail');
@@ -81,24 +83,24 @@ describe('Facility Type Detail Form', function () {
         FacilityTypeDetailForm.FillOutCategorySection(Category, LifestyleGroup, FABSGroup,
                                          ClubClassification, SMCClassification);
         //Booking Restriction
-        FacilityTypeDetailForm.BookingRestrictions('check', 'check', 'check', 'check','All Customer Category' ,'2', '1');
+        // FacilityTypeDetailForm.BookingRestrictions('check', 'check', 'check', 'check','All Customer Category' ,'2', '1');
         
         //Booking Section
         FacilityTypeDetailForm.BookingSection('uncheck', 'Online', 'All Customer Category', 'Fixed time slots booking', '2');
         
-        FacilityTypeDetailForm.BookingCheckboxes();
+        // FacilityTypeDetailForm.BookingCheckboxes();
 
         //Add Horizon
-        FacilityTypeDetailForm.AddHorizon( AccessMode, CustomerCategory )
+        // FacilityTypeDetailForm.AddHorizon( AccessMode, CustomerCategory )
 
         //Booking Timing Restriction
-        FacilityTypeDetailForm.BookingTimingRestriction();
+        // FacilityTypeDetailForm.BookingTimingRestriction();
 
         //Reservation
-        FacilityTypeDetailForm.Reservation();
+        // FacilityTypeDetailForm.Reservation();
 
         //Allow Extension
-        FacilityTypeDetailForm.Extension();
+        // FacilityTypeDetailForm.Extension();
   
         //Submit Form For Approval
         FacilityTypeDetailForm.Save()
@@ -119,12 +121,10 @@ describe('Facility Type Detail Form', function () {
 
         // verify facility 
         FacilityTypeDetailForm.VerifyFacility(FacilityName)
-        cy.wait(2000)
 
         // Click on Facility table link
         FacilityTypeDetailForm.ClickTableItem(FacilityName)
-        cy.wait(2000)
-
+        cy.wait(4000)
         //verify page title 
         FacilityTypeDetailForm.VerifyPageTitle('Facility Type Detail')
 
@@ -133,6 +133,20 @@ describe('Facility Type Detail Form', function () {
     });
 
     it('[TC04] Adding Operating Period ', function () {
+
+         //Must login as an admin first
+         cy.visit('/facilities/facilityTypeListing');
+         cy.wait(5000)
+          
+         //verify page title 
+         FacilityTypeDetailForm.VerifyPageTitle('Facility Type Listing')
+ 
+         // verify facility 
+         FacilityTypeDetailForm.VerifyFacility(FacilityName)
+ 
+         // Click on Facility table link
+         FacilityTypeDetailForm.ClickTableItem(FacilityName)
+         cy.wait(4000)
 
         //click Operating Period Tabe
         FacilityTypeDetailForm.OperatingPeriodTab()
@@ -150,12 +164,33 @@ describe('Facility Type Detail Form', function () {
         FacilityTypeDetailForm.AddCalendar(CalenderName)
 
         //periods of calendar
-        FacilityTypeDetailForm.PeriodsOfCalendar('JR - BBQ Sch Day')
+        FacilityTypeDetailForm.PeriodsOfCalendar('Calendar 2023')
         cy.wait(2000)
+
+        // FacilityTypeDetailForm.SelectOperatingPeriod('Operating--Period 2023')
+
+        
+        //Click Form For Save As Draft
+        FacilityTypeDetailForm.SaveAsDraft
+
 
     });
 
     it('[TC05] Adding Charge Rate ', function () {
+
+        //Must login as an admin first
+        cy.visit('/facilities/facilityTypeListing');
+        cy.wait(5000)
+         
+        //verify page title 
+        FacilityTypeDetailForm.VerifyPageTitle('Facility Type Listing')
+
+        // verify facility 
+        FacilityTypeDetailForm.VerifyFacility(FacilityName)
+
+        // Click on Facility table link
+        FacilityTypeDetailForm.ClickTableItem(FacilityName)
+        cy.wait(4000)
 
         //click Operating Period Tabe
         FacilityTypeDetailForm.ChargeRateTabe()
@@ -164,7 +199,7 @@ describe('Facility Type Detail Form', function () {
         FacilityTypeDetailForm.AddChargeRateButton()
 
         //fiilout Charge Rate Information
-        FacilityTypeDetailForm.FilloutChargeRateInfo(ChargeRateName, StartDate, Location, EndDate)
+        FacilityTypeDetailForm.FilloutChargeRateInfo(ChargeRateName, StartDate, ChargeRateLocation, EndDate)
 
         //Add charge type list
         FacilityTypeDetailForm.FilloutChargeTypeList(ChargeTypeName, Transaction, Calculation, Amount)
@@ -181,6 +216,20 @@ describe('Facility Type Detail Form', function () {
     });
 
     it('[TC06] Adding Product Mapping ', function () {
+
+        //Must login as an admin first
+        cy.visit('/facilities/facilityTypeListing');
+        cy.wait(5000)
+         
+        //verify page title 
+        FacilityTypeDetailForm.VerifyPageTitle('Facility Type Listing')
+
+        // verify facility 
+        FacilityTypeDetailForm.VerifyFacility(FacilityName)
+
+        // Click on Facility table link
+        FacilityTypeDetailForm.ClickTableItem(FacilityName)
+        cy.wait(4000)
 
         //click Operating Period Tabe
         FacilityTypeDetailForm.ProductMappingTab()
@@ -201,9 +250,6 @@ describe('Facility Type Detail Form', function () {
         FacilityTypeDetailForm.ReservationAdminFeeProduct(ProductName)
         
         cy.wait(2000)
-    });
-
-    it('[TC07] Submit Facility For A pproval Add Verify in Facility Listing Table', function () {
 
         // Click Submit For Approval
         FacilityTypeDetailForm.SubmitForApproval()
@@ -221,6 +267,24 @@ describe('Facility Type Detail Form', function () {
 
     });
 
+    it('[TC06] Adding Product MappingApproval Workflow for Facility Type detail ', function () {
+
+        //Must login as an admin first
+        cy.visit('/admin/pendingTaskList');
+        cy.wait(50000)
+
+        FacilityTypeDetailForm.ApprovalWorkFlow("F-FLT","Facility Type Approval Workflow","Approve","Testing")
+        
+        //Must login as an admin first
+        cy.visit('/facilities/facilityTypeListing');
+        cy.wait(5000)
+         
+        //verify page title 
+        FacilityTypeDetailForm.VerifyPageTitle('Facility Type Listing')
+
+        // verify facility 
+        FacilityTypeDetailForm.VerifyFacility(FacilityName,	"Approved")
+    })
 
 });
 

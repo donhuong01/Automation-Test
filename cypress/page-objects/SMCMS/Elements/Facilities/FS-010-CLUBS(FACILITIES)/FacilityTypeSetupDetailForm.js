@@ -65,9 +65,17 @@ class elems_FacilityTypeSetupDetailForm {
         NUM_NONPEAKMAXSLOT: '//td[text()="Non Peak"]//following-sibling::td[2]',
         CHK_NONPEAKENABLE: '//td[text()="Non Peak"]//following-sibling::td[3]//input',
 
+        NUM_PEAKMINSLOT: '//td[text()="Peak"]//following-sibling::td[1]',
+        NUM_PEAKMAXSLOT: '//td[text()="Peak"]//following-sibling::td[2]',
+        CHK_PEAKENABLE: '//td[text()="Peak"]//following-sibling::td[3]//input',
+
         NUM_SUPERPEAKMINSLOT: '//td[text()="Super Peak"]//following-sibling::td[1]',
         NUM_SUPERPEAKMAXSLOT: '//td[text()="Super Peak"]//following-sibling::td[2]',
         CHK_SUPERPEAKENABLE: '//td[text()="Super Peak"]//following-sibling::td[3]//input',
+
+        NUM_SUPERHOLIDAYMINSLOT: '//td[text()="Super Peak"]//following-sibling::td[1]',
+        NUM_SUPERPEAKHOLIDAYMAXSLOT: '//td[text()="Super Peak"]//following-sibling::td[2]',
+        CHK_SUPERPEAKHOLIDAYENABLE: '//td[text()="Super Peak"]//following-sibling::td[3]//input',
 
         NUM_GENERALMINSLOT: '//td[text()="General"]//following-sibling::td[1]',
         NUM_GENERALMAXSLOT: '//td[text()="General"]//following-sibling::td[2]',

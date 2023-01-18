@@ -1227,7 +1227,7 @@ Cypress.Commands.add("SelectPickerDifferentItemsSeachBTN", (locator, textField, 
     cy.log('------ SelectPickerDifferentItemsSeachBTN : ' + locator + ' ------')
     cy.xpath(locator).scrollIntoView()
     cy.xpath(locator).click()
-    cy.wait(5000)
+    cy.wait(2000)
     cy.xpath(textField).type(item)
     cy.Click(SearchFilter);
 

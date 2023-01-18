@@ -465,6 +465,19 @@ class FacilityDetailForm {
         cy.Click(elems_FacilityDetailFormDetailTab.BTN_SAVE)
 
     }
+
+    /*****************************************************
+     * Method: SaveAsDraft
+     * Description: This function Click on Save As Draft Button
+     * Author fshahzada
+
+     *****************************************************/
+    SaveAsDraft() {
+
+        cy.Click(elems_FacilityDetailFormDetailTab.BTN_SAVEASDRAFT)
+
+    }
+
     /*****************************************************
      * Method: Save
      * Description: This function Click on Save Button
@@ -529,12 +542,13 @@ class FacilityDetailForm {
 
         }
         if (RecordStatus !== undefined) {
+            cy.wait(5000)
 
             cy.SelectDropDownItem(elems_FacilityListing.DRP_RECORDSTATUS, RecordStatus)
         }
 
         cy.Click(elems_FacilityListing.BTN_SEARCHFILTERS)
-        cy.wait(2000)
+        cy.wait(3000)
 
     }
     /*****************************************************

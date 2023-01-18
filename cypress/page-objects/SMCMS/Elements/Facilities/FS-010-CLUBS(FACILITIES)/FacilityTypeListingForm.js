@@ -12,7 +12,7 @@ class elems_FacilityTypeListingForm{
     
     static BTN_SEARCHFILTERS = '//button[text()="Search Filters"]'
     static BTN_CREATENEW = '//button[text()="Create New"]'
-    static TBL_FACILITYTYPELISTING = '//div[@class="container-fluid"]//table'
+    static TBL_FACILITYTYPELISTING = '//h2[text()="Facility Type Listing"]//ancestor::div//table'
 
 }
 export default elems_FacilityTypeListingForm
