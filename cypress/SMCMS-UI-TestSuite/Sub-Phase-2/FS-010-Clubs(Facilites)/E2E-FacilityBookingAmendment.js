@@ -10,10 +10,10 @@ const FacilityBookingAmendmentManagment = () => {
     describe('Facility Booking Extention Management', function () {
 
         const type = 'MEMBERID'
-        const value1 = 'A300000620'
-        const value2 = '079H'
+        const value1 = 'A300002262'
+        const value2 = '867F'
         const expectedPage = 'Member Information'
-        const CustomerName = 'Test User 838452';
+        const CustomerName = 'Auto-User 8609315';
         const AmendmentType = 'Replacement Slot';
         const Reason = 'Amend Slot 2022'
         const check = 'check'

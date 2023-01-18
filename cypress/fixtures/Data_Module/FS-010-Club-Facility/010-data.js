@@ -135,13 +135,13 @@ const data = {
 
         DetailsTab: {
             FacilityInfo: {
-                FacilityName: 'Auto-Test' + Math.floor(Math.random() * 1000),
+                FacilityName: 'Auto-Test ' + Math.floor(Math.random() * 10000),
                 ActivationDate: '18-Jan-2023',
                 UploadPhotos: 'Sample_Images.jpeg',
                 FacilityType: 'Facility  Type 2023',
                 Location: 'SAFRA Jurong',
                 FormatsAllowed: 'check',
-                ResourceName: 'Auto-Test-Resource' + Math.floor(Math.random() * 1000),
+                ResourceName: 'Auto-Test-Resource ' + Math.floor(Math.random() * 1000),
                 ChargeName: 'Auto-Test-Charge-Name',
                 TransactionType: 'Booking',
                 CalculationType: 'Per Booking',

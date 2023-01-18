@@ -41,13 +41,17 @@ import data from '../../../fixtures/Data_Module/FS-010-Club-Facility/010-data'
   //Attachment Tab
   const UploadFile = data.FacilityDetail.AttachmentTab.UploadFile
 
+  //Approval Outcome
+  const ApprovalOutcome = 'Approve'
+  const Remarks = 'Testing'
+
   //charge type list
   const {ChargeTypeName, Transaction, Calculation, Amount , CategoryName }=data.FacilityTypeDetail
 
 
 describe('[TS05] Facility Setup Detail Form Management', function () {
 
-    it.only('[TC01] Facility Setup Detail (Detail Tab)', function () { 
+    it('[TC01] Facility Setup Detail (Detail Tab)', function () { 
 
         cy.visit('/facilities/facilityListing');
         cy.wait(2000)
@@ -82,24 +86,24 @@ describe('[TS05] Facility Setup Detail Form Management', function () {
         FacilityDetailForm.VerifyPageTitle('Facilities Listing')
     })
 
-    it.only('[TC02] Filter newly created facility and click on it', function () {
+    it('[TC02] Filter newly created facility and click on it', function () {
 
         cy.visit('/facilities/facilityListing');
         cy.wait(2000)
         FacilityDetailForm.FiltersFacilitieListingForm(FacilityName,
-        'Draft', 'Inactive')
+        'Draft')
 
         // Click on Facility link
         FacilityDetailForm.ClickFacilityListingItem()
     
         cy.wait(5000)
     })
-    it.only('[TC03] Facility Setup Detail (Group Booking Tab)', function () {
+    it('[TC03] Facility Setup Detail (Group Booking Tab)', function () {
 
         cy.visit('/facilities/facilityListing');
         cy.wait(2000)
         FacilityDetailForm.FiltersFacilitieListingForm(FacilityName,
-        'Draft', 'Inactive')
+        'Draft')
 
         // Click on Facility link
         FacilityDetailForm.ClickFacilityListingItem()
@@ -116,12 +120,12 @@ describe('[TS05] Facility Setup Detail Form Management', function () {
         cy.wait(3000)
     })
 
-    it.only('[TC04] Facility Setup Detail (Charge Rate Tab)', function () {
+    it('[TC04] Facility Setup Detail (Charge Rate Tab)', function () {
 
         cy.visit('/facilities/facilityListing');
         cy.wait(2000)
         FacilityDetailForm.FiltersFacilitieListingForm(FacilityName,
-        'Draft', 'Inactive')
+        'Draft')
 
         // Click on Facility link
         FacilityDetailForm.ClickFacilityListingItem()
@@ -142,17 +146,21 @@ describe('[TS05] Facility Setup Detail Form Management', function () {
 
         // Save charge rate
         FacilityDetailForm.Save()
-        cy.wait(2000)
+        cy.wait(4000)
+
+        //Save As Draft
+        FacilityDetailForm.SaveAsDraft()
+        cy.wait(3000)
 
     })
     
 
-    it.only('[TC05] Fill out Facility Setup Detail (Additional Information Tab) and Save as Draft', function () {
+    it('[TC05] Fill out Facility Setup Detail (Additional Information Tab) and Save as Draft', function () {
 
         cy.visit('/facilities/facilityListing');
         cy.wait(2000)
         FacilityDetailForm.FiltersFacilitieListingForm(FacilityName,
-        'Draft', 'Inactive')
+        'Draft')
 
         // Click on Facility link
         FacilityDetailForm.ClickFacilityListingItem()
@@ -163,9 +171,10 @@ describe('[TS05] Facility Setup Detail Form Management', function () {
             Description, SpecialRemark, ContactPersonInfo,
             ENBWaiver, IndemnityText, TermAndCondition, TermAndConditionsText
             )
-         // Save charge rate
-         FacilityDetailForm.Save()
-         cy.wait(2000)
+
+         //Save As Draft
+        FacilityDetailForm.SaveAsDraft()
+        cy.wait(3000)
     })
 
 
@@ -174,7 +183,7 @@ describe('[TS05] Facility Setup Detail Form Management', function () {
         cy.visit('/facilities/facilityListing');
         cy.wait(2000)
         FacilityDetailForm.FiltersFacilitieListingForm(FacilityName,
-        'Draft', 'Inactive')
+        'Draft')
 
         // Click on Facility link
         FacilityDetailForm.ClickFacilityListingItem()
@@ -192,13 +201,7 @@ describe('[TS05] Facility Setup Detail Form Management', function () {
 
         // ReUpload the file
         FacilityDetailForm.FacilityDetailFormAttachmentTab(UploadFile)
-         // Save charge rate
-         FacilityDetailForm.Save()
-         cy.wait(2000)
-        
-    })
 
-    it('[TC07] Submit For Approval And Verify in the listing table', function () {
 
         FacilityDetailForm.SubmitForApproval()
         cy.wait(5000)
@@ -213,6 +216,16 @@ describe('[TS05] Facility Setup Detail Form Management', function () {
         
     })
     
+    it('[TC07] Facility Setup Approval workflow', function () {
+
+        cy.visit('/admin/pendingTaskList');
+        cy.wait(8000)
+        FacilityDetailForm.FacilityApprovalWorkFlow("F-FLY","Facility Approval Workflow",ApprovalOutcome,Remarks)
+        cy.visit('/facilities/facilityListing');
+        cy.wait(5000)
+        FacilityDetailForm.FiltersFacilitieListingForm(FacilityName,
+        'Approved')
+    })
 })
 
 }

@@ -163,7 +163,7 @@ class elems_FacilityDetailFormDetailTab {
   static BTN_SAVEASDRAFT = '//button[text()="Save as Draft"]'
   static BTN_CANCEL = '//button[@class="k-button" and contains(.,"Cancel")]'
   static BTN_SAVE = '//button[text()="Save"]'
-  static TBL_FACILITYLISTING = '//h2[text()="Facilities Listing"]//parent::div//following::div[@class="ScrollContainer_scroll__1oKgf"]//table'
+  static TBL_FACILITYLISTING = '//h2[text()="Facilities Listing"]/parent::div/following-sibling::div//table'
 
 }
 export default elems_FacilityDetailFormDetailTab

@@ -381,7 +381,7 @@ class FacilityDetailForm {
     //     cy.ClickTableLink(elems_FacilityDetailFormDetailTab.TBL_FACILITYLISTING,
     //         'Facility Name', targetItem)
     ClickFacilityListingItem() {
-        cy.Click(elems_FacilityDetailFormDetailTab.TBL_FACILITYLISTING + '//a')
+        cy.Click('(//h2[text()="Facilities Listing"]/parent::div/following-sibling::div//table//a)[1]')
     }
 
 
@@ -547,8 +547,9 @@ class FacilityDetailForm {
             cy.SelectDropDownItem(elems_FacilityListing.DRP_RECORDSTATUS, RecordStatus)
         }
 
+        cy.wait(1000)
         cy.Click(elems_FacilityListing.BTN_SEARCHFILTERS)
-        cy.wait(3000)
+        cy.wait(5000)
 
     }
     /*****************************************************
@@ -721,6 +722,35 @@ class FacilityDetailForm {
         // Click on Save button
         cy.Click('//button[@form="formPendingTaskDetail"]')
         cy.wait(2000)
+
+
+    }
+
+    /*****************************************************
+     * Method: FacilityApprovalWorkFlow
+     * Description: This function perform the Approval Workflow
+     * @param {string} TaskID
+     * @param {string} WorkflowName
+     * @param {string} ApprovalOutcome
+     * @param {string} Remarks
+     *****************************************************/
+    FacilityApprovalWorkFlow(TaskID, WorkflowName, ApprovalOutcome, Remarks) {
+
+        cy.visit('/facilities/facilityListing');
+        cy.wait(5000)
+        cy.VerifyElementText(elems_PageHeader.LBL_PAGETITLE, 'Pending Task Listing')
+        cy.EnterText(elems_PendingTaskListing.TXT_TASKID, TaskID)
+        cy.EnterText(elems_PendingTaskListing.TXT_WORKFLOWNAME, WorkflowName)
+        cy.Click(elems_PendingTaskListing.BTN_SEARCH)
+        cy.wait(5000)
+        cy.Click('(//h2[text()="Pending Task Listing"]/ancestor::div//table//a)[1]')
+        cy.wait(5000)
+
+        cy.VerifyElementText(elems_PageHeader.LBL_PAGETITLE, 'Pending Task Detail')
+        cy.SelectDropDownItem(elems_PendingTaskDetail.DRP_APPROVALOUTCOME, ApprovalOutcome)
+        cy.EnterText(elems_PendingTaskDetail.TXTAREA_REMARK, Remarks)
+        cy.Click(elems_PendingTaskDetail.BTN_SUBMIT)
+        cy.wait(5000)
 
 
     }
