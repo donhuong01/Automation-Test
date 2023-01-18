@@ -1,5 +1,5 @@
 import elems_FacilityBookingDetails from '../../../Elements/Facilities/FS-010-CLUBS(FACILITIES)/FacilityBookingDetails'
-import elems_FacilityBookingListing from '../../../Elements/Facilities/FS-010-CLUBS(FACILITIES)/'
+import elems_FacilityBookingListing from '../../../Elements/Facilities/FS-010-CLUBS(FACILITIES)/FacilityBookingListing'
 import elems_PageHeader from "../../../Elements/Common/PageHeader"
 import elems_Picker from "../../../Elements/Common/Picker"
 import elems_SMCMSShoppingCartAndPayment from '../../../Elements/Club-Sales/FS040_ShoppingCart-Payment/SMCMSShoppingCartAndPayment'
@@ -25,17 +25,27 @@ class FacilityBookingDetail {
      * @param {string} FacilityType
      *****************************************************/
 
-    CreateNewFaciltyBooking(LocationName, FacilityType) {
+    CreateNewFaciltyBooking(FacilityType, LocationName, Facilites) {
 
         // Select Location
-        cy.SelectPickerFilter(elems_FacilityBookingDetails.PCK_LOCATION,
-            elems_FacilityBookingDetails.TXT_NAME, LocationName,
-            elems_FacilityBookingDetails.BTN_SEARCHFILTER)
-
-        // Select Facility Type
         cy.SelectPickerFilter(elems_FacilityBookingDetails.PCK_FACILITYTYPE,
             elems_FacilityBookingDetails.TXT_NAME, FacilityType,
             elems_FacilityBookingDetails.BTN_SEARCHFILTER)
+            cy.wait(2000)
+
+        // Select Facility Type
+        cy.Click(elems_FacilityBookingDetails.PCK_LOCATION)
+        cy.wait(3000)
+        cy.Click(`//table//td[text()="${LocationName}"]//preceding-sibling::td`)
+        cy.Click(elems_FacilityBookingDetails.BTN_SELECT)
+        cy.wait(4000)
+
+        // Select Facilities
+        // cy.Click(elems_FacilityBookingDetails.PCK_LOCATION)
+        cy.wait(3000)
+        cy.Click(`//table//td[text()="${Facilites}"]//preceding-sibling::td`)
+        cy.Click(elems_FacilityBookingDetails.BTN_SELECT)
+        cy.wait(4000)
 
     }
     /*****************************************************
@@ -57,7 +67,7 @@ class FacilityBookingDetail {
      * @param {string} FacilityType
      *****************************************************/
 
-    VerifyBookingInfo(Location, FacilityType) {
+    VerifyBookingInfo(FacilityType, Location) {
 
         cy.ValidateElementText(elems_FacilityBookingDetails.LBL_LOCATION, Location)
         cy.ValidateElementText(elems_FacilityBookingDetails.LBL_FACILITYTYPE, FacilityType)
@@ -92,7 +102,7 @@ class FacilityBookingDetail {
 
     SelectSlot(SlotName) {
 
-        cy.xpath(elems_FacilityBookingDetails.TBL_SLOT).should('have.text', SlotName).click()
+        cy.Click(`//div[text()="${SlotName}"]`)
         cy.wait(3000)
     }
 
@@ -169,12 +179,12 @@ class FacilityBookingDetail {
     /*****************************************************
      * Method: VerifyFacilityBooking
      * Description: This function will Verify Facility Booking
-     * @param {string} MemberId 
+     * @param {string} NRIC 
      * @param {string} status 
      * @param {string} RecordStatus 
      *****************************************************/
-    VerifyFacilityBooking(MemberId, status, RecordStatus) {
-        cy.VerifyTableEntry(elems_FacilityBookingListing.TBL_FACILTYBOOKINGLIST, "Member ID", MemberId)
+    VerifyFacilityBooking(NRIC, status, RecordStatus) {
+        cy.VerifyTableEntry(elems_FacilityBookingListing.TBL_FACILTYBOOKINGLIST, "NRIC", NRIC)
         cy.VerifyTableEntry(elems_FacilityBookingListing.TBL_FACILTYBOOKINGLIST, "Status", status)
         cy.VerifyTableEntry(elems_FacilityBookingListing.TBL_FACILTYBOOKINGLIST, "Record Status", RecordStatus)
 

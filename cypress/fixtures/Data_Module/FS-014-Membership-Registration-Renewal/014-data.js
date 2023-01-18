@@ -159,8 +159,8 @@ const data = {
     memberregistrationprincipal: {
         Personal_Info: {
             MemberCategory: 'Principal',
-            NameOnNRIC: 'Andrew Fuller',
-            NameOnCard: 'Andrew Fuller',
+            NameOnNRIC: 'Auto Test',
+            NameOnCard: 'Auto Test',
             Nric: 'S8433696C',
             Gender: 'Male',
             DateofBirth: '01-Jan-1982',

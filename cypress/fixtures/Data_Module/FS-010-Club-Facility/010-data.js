@@ -17,12 +17,12 @@ const data = {
 
     },
     FacilityBookingDetails: {
-        FacilityType: 'Booking Test 111',
-        slot: '',
-        ChargeType: 'Rate 111',
-        Amount: '25',
+        FacilityType: '2023 FA',
+        slot: 'Available (06:00 am - 07:00 am)',
+        ChargeType: 'Charge Rate 2023',
+        Amount: '2',
         Reason: 'Testing',
-        FacilityName: 'Testing-Facility ' + Math.floor(Math.random() * 1000),
+        FacilityName: 'FA-2023',
         Location: 'SAFRA Jurong',
     },
 

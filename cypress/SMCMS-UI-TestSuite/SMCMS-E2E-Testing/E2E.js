@@ -24,9 +24,7 @@ import FacilitySetupDetail from '../Sub-Phase-2/FS-010-Clubs(Facilites)/E2E-Faci
 import FacilityTypeDetailFormManagement from '../Sub-Phase-2/FS-010-Clubs(Facilites)/E2E-FacilityTypeDetailForm'
 import FacilityBookingAmendmentManagment from '../Sub-Phase-2/FS-010-Clubs(Facilites)/E2E-FacilityBookingAmendment'
 import FacilityBookingExtentionManagment from '../Sub-Phase-2/FS-010-Clubs(Facilites)/E2E-FacilityBookingExtention'
-
-// import MembershipRegistrantion from '../E2E-MembershipRegistration'
-// import MemshipTenureSelection from '../E2E-MemberTenureSelection'
+import FacilityBookingManagement from '../Sub-Phase-2/FS-010-Clubs(Facilites)/E2E-FacilityBooking'
 
 
 //FS - 014 Membership Registration & Renewal
@@ -137,7 +135,8 @@ beforeEach(() => {
     // FacilityOperatingPeriod() //Failing
     // FacilityTypeDetailFormManagement() //Operating Tab
     // FacilitySetupDetail() //Check Agian
-    FacilityBookingAmendmentManagment()
+    FacilityBookingManagement("S5194103I")
+    // FacilityBookingAmendmentManagment()
     // FacilityBookingExtentionManagment()
 
  })
