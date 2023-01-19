@@ -8,7 +8,7 @@ const data={
         SFSItem : 'Not Applicable',
         Status : 'Inactive',
         ChargeTypeName : 'Test',
-        AccessMode : 'Mobile',
+        AccessMode : 'Online',
         AddCatAccessmode : 'Junior',
         TransectionType : 'Renewal',
         CalculationType : 'Per Registration',

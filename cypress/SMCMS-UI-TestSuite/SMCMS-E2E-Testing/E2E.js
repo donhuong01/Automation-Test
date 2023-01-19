@@ -109,41 +109,41 @@ beforeEach(() => {
     // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
 })
  
-// describe('E2E Auto Testing:FS-001', () => {
+describe('E2E Auto Testing:FS-001', () => {
 
-//     OnlineAccountAccess() 
-//     SMCMSPostion()
-//     SMCMSRole()
-//     SMCMSUser() 
-// })
-// describe('E2E Auto Testing:FS-004', () => {
+    OnlineAccountAccess() 
+    SMCMSPostion()
+    SMCMSRole()
+    SMCMSUser() 
+})
+describe('E2E Auto Testing:FS-004', () => {
 
-    // CustomerCategoryType()
-    // CustomerCategory()
-    // CodeType()
-    // CodeSetMaster()
-    // DocumentTemplate()
-    // ApplicationSetting() //Not Required
-    //// NotificationMessageTemplate() //Not Required
-    //// AnnouncementPortalNotification() //Not Required
-// })
+    CustomerCategoryType()
+    CustomerCategory()
+    CodeType()
+    CodeSetMaster()
+    DocumentTemplate()
+    ApplicationSetting() //Not Required
+    // NotificationMessageTemplate() //Not Required
+    // AnnouncementPortalNotification() //Not Required
+})
 
  describe('E2E Auto Testing:FS-010', ()=> {
-    // FacilityGeneralSettingDtl()
-    // FacilitySettingsCalendar()
-    // FacilitySettingCalendarSettings()
-    // FacilityOperatingPeriod() //Failing
-    // FacilityTypeDetailFormManagement() //Operating Tab
-    // FacilitySetupDetail() //Check Agian
-    FacilityBookingManagement("S5194103I")
-    // FacilityBookingAmendmentManagment()
-    // FacilityBookingExtentionManagment()
+    FacilityGeneralSettingDtl()
+    FacilitySettingsCalendar()
+    FacilitySettingCalendarSettings()
+    FacilityOperatingPeriod() //Failing
+    FacilityTypeDetailFormManagement() //Operating Tab
+    FacilitySetupDetail() //Check Agian
+    FacilityBookingManagement("S1935582I")
+    FacilityBookingAmendmentManagment()
+    FacilityBookingExtentionManagment()
 
  })
 
 // describe('E2E Auto Testing:FS-014', ()=> {
 
-    // MembershipRegistration("S3996999H") // Enter FulL NRIC
+    // MembershipRegistration("S8074610E") // Enter FulL NRIC
     // CustomerCheckIn()
     // MemberType()
     // BadAddressUpdate()// Fail Need code updates

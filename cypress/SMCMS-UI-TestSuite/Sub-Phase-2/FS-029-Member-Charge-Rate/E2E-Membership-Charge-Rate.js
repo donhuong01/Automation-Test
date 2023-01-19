@@ -50,7 +50,7 @@ describe('FS-029] Membership Charge Rate Management', () =>{
         MembershipChargeRate.filloutGeneralInfo(Name,CardType,Description,NumberofPeriod,DisplayInFrontEnd,SFSItem,Status)
         MembershipChargeRate.fillOutChargeTypeList(ChargeTypeName,TransectionType,CalculationType,AmountType)
         MembershipChargeRate.fillOutChargeRateList(CustomerCategoryName)
-        // MembershipChargeRate.filterProductMasterInfoAndSelectPCode(ProductNumber,ProductName,SearchName,ProductType)
+        MembershipChargeRate.filterProductMasterInfoAndSelectPCode(ProductNumber,ProductName,SearchName,ProductType)
         MembershipChargeRate.AddAccessMode(AccessMode)
         MembershipChargeRate.AddCustomerCategoryAccessMode(AddCatAccessmode)
         MembershipChargeRate.Save()
@@ -61,7 +61,7 @@ describe('FS-029] Membership Charge Rate Management', () =>{
     it('[TC02]Filter value by Name and card Type', function () {
 
         // Navigate to Form
-        cy.visit('/membership/chargeRateList').wait(3000)
+        cy.visit('/membership/chargeRateList').wait(7000)
 
         // Verify Page title
         MemChargeRateList.VerifyPageTitle('Membership Charge Rate Listing')
@@ -80,7 +80,7 @@ describe('FS-029] Membership Charge Rate Management', () =>{
     it('[TC03] Verify Membership Charge Rate Listing Filters', function () {
 
         // Navigate to Form
-        cy.visit('/membership/chargeRateList').wait(5000)
+        cy.visit('/membership/chargeRateList').wait(7000)
 
         // Verify Page title
         MemChargeRateList.VerifyPageTitle('Membership Charge Rate Listing')
@@ -99,7 +99,7 @@ describe('FS-029] Membership Charge Rate Management', () =>{
     it('[TC04] Access Charge Rate Item', function () {
 
         // Navigate to Form
-        cy.visit('/membership/chargeRateList').wait(5000)
+        cy.visit('/membership/chargeRateList').wait(7000)
 
 
         //Filter by Name and CardType
@@ -128,7 +128,7 @@ describe('FS-029] Membership Charge Rate Management', () =>{
     it('[TC05] Verify Membership Charge Rate Listing Form Table Entries and delete entry', function () {
 
         // Navigate to Form
-        cy.visit('/membership/chargeRateList').wait(5000)
+        cy.visit('/membership/chargeRateList').wait(7000)
 
         
         //Filter by Name and CardType
