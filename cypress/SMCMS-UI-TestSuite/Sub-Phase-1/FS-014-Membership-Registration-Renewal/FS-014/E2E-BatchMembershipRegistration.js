@@ -319,7 +319,7 @@ describe('[TS13] Batch Membership Registration Details form', function () {
 
     })
 
-    it.only('[TC03] Creating a Batch Membership Registration with New Member(Principal)', function () {
+    it('[TC03] Creating a Batch Membership Registration with New Member(Principal)', function () {
 
         cy.visit('/membership/batchMembershipRegistrationList')
 

@@ -22,7 +22,7 @@ const FacilityBookingAmendmentManagment = () => {
 
 
 
-        it.only('[TC01] Createing New Booking Amendment - Replacement Slot', function () {
+        it('[TC01] Createing New Booking Amendment - Replacement Slot', function () {
 
             // checkin customer first
             cy.visit('/membership/customerCheckin')
