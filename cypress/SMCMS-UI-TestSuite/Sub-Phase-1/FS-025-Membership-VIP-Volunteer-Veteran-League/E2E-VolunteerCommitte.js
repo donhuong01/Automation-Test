@@ -29,6 +29,7 @@ it('[TC02] Verify and Fillout the Volunteer Committee Detail form', function () 
     const committeeDescription = data.VolunteerCommitteeDetails.CommitteeDescription
 
     cy.visit('/membership/volunteerCommitteeDetail') //Visit Detail Form
+    cy.wait(5000)
 
     VolunteerDetail.verifyPageTitle('Volunteer Committee Details')
 
@@ -46,6 +47,7 @@ it('[TC03] Verify Newly created item in the listing form', function () {
     const committeeCode = data.VolunteerCommitteeDetails.CommitteeCode
 
     cy.visit('/membership/volunteerCommitteeListing') //Visit Listing Form
+    cy.wait(5000)
 
     VolunteerDetail.verifyPageTitle('Volunteer Committee Listing')
 
@@ -60,7 +62,7 @@ it('[TC03] Verify Newly created item in the listing form', function () {
         const committeeCode = data.VolunteerCommitteeDetails.CommitteeCode
 
         cy.visit('/membership/volunteerCommitteeListing') //Visit Listing Form
-
+        cy.wait(5000)
 
         VolunteerListing.verifyPageTitle('Volunteer Committee Listing')
 

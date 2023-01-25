@@ -14,13 +14,13 @@ const MemberStatusReasonCode = () => {
 
 describe('[SP1-FS014_TS07] Member Status Reason Code Detail', function (){
 
-    beforeEach(() => {
+    // beforeEach(() => {
 
-        // cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client) 
-         // Set local storage for UAT Enviroment
-    cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
+    //     // cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client) 
+    //      // Set local storage for UAT Enviroment
+    // // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
     
-    });
+    // });
     //page definition
     const Memstatreasoncodedetail = new MemberStatusReasonCodeDetail()
     const ReasonCode = data.memstatcodedetail.ReasonCode

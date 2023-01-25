@@ -22,7 +22,7 @@ class CustomerCategoryListingForm {
      * @param {string} CustomerCatergoryType customer category type  
      *****************************************************/
     
-    FillOutFilters({CustomerCategoryName,CustomerCategoryNumber,CustomerCategoryType,D365ID})
+    FillOutFilters(CustomerCategoryName,CustomerCategoryNumber,CustomerCategoryType,D365ID)
     {
         if(CustomerCategoryName !== undefined){
             cy.xpath(elems_CustomerCategoryListing.TXT_CUSTOMERCATEGORYNAME).clear()
@@ -36,14 +36,14 @@ class CustomerCategoryListingForm {
             cy.xpath(elems_CustomerCategoryListing.TXT_CUSTOMERCATEGORYTYPE).clear()
         cy.EnterText(elems_CustomerCategoryListing.TXT_CUSTOMERCATEGORYTYPE, CustomerCategoryType)
         }
-       if(CustomerCategoryName === undefined
-        && CustomerCategoryNumber ===undefined
-        && CustomerCategoryType === undefined
-        && D365ID)
-        {
-            throw new Error("SourceChannelListing.Fillout Error!!./n\
-                            Please provide at least one argument.")
-        }
+    //    if(CustomerCategoryName === undefined
+    //     && CustomerCategoryNumber ===undefined
+    //     && CustomerCategoryType === undefined
+    //     && D365ID)
+    //     {
+    //         throw new Error("SourceChannelListing.Fillout Error!!./n\
+    //                         Please provide at least one argument.")
+    //     }
     cy.Click(elems_CustomerCategoryListing.BTN_SEARCH)
     cy.wait(7000)
     }

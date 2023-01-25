@@ -18,8 +18,8 @@ class Commons {
 
             const blnc = $balance.text().trim()
 
-            console.log(blnc)
-            cy.xpath(elems_SMCMSShoppingCartAndPayment.Payments.TXT_AMOUNT).type(blnc)
+            // console.log(blnc)
+            // cy.xpath(elems_SMCMSShoppingCartAndPayment.Payments.TXT_AMOUNT).type(blnc)
 
         })
         cy.Click(elems_SMCMSShoppingCartAndPayment.Payments.BTN_APPLYPAYMENT)

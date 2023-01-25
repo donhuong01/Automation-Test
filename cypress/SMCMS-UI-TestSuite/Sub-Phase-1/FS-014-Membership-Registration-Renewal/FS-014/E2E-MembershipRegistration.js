@@ -141,7 +141,7 @@ describe('[TS01] Membership Registration Management',function(){
             ShoppingCart.fillOutandApplyPayment('CASH')
             
             // Wait for 3 minites
-            cy.wait(20000)
+            cy.wait(25000)
             
             //Verify New Created Member Reason Code
             MembershipRenewal.VerifyMemberStatus(PrincipalName, LAST4NRIC, 'New')

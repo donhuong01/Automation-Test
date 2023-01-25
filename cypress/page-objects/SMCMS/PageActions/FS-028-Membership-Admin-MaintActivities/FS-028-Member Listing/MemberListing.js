@@ -4,15 +4,29 @@ import elems_PageHeader from "../../../Elements/Common/PageHeader";
 import elems_Alerts from "../../../Elements/Common/Alerts";
 class MemberListingPage {
 
-    fillOutFilters({ name, memberID, NRIC }) {
-        if (memberID !== undefined) {
-            cy.EnterText(elems_MemberListing.TXT_MEMBERID, memberID)
+    fillOutFilters(Name, NRIC, ReasonCode) {
+        if (Name !== undefined || NRIC !== undefined || ReasonCode !== undefined ) {
+            cy.EnterText(elems_MemberListing.TXT_NAME, Name)
+            cy.EnterText(elems_MemberListing.TXT_NRIC, NRIC)
+            cy.SelectDropDownItem(elems_MemberListing.DRP_STATUSREASONCODE, ReasonCode)
         }
 
         cy.Click(elems_MemberListing.BTN_SEARCHFILTER);
+        cy.wait(4000)
+        cy.VerifyTableEntry(elems_MemberListing.TBL_MEMBERLISTING, "Name", Name)
+        cy.VerifyTableEntry(elems_MemberListing.TBL_MEMBERLISTING, "NRIC (Last 4 digits)", NRIC)
+        cy.VerifyTableEntry(elems_MemberListing.TBL_MEMBERLISTING, "Reason Code", ReasonCode)
+
     }
 
-    verifyMemberListingEntry() {
+    FilterByMemberID(MemberID) {
+        if (MemberID !== undefined) {
+            cy.EnterText(elems_MemberListing.TXT_MEMBERID, MemberID)
+        }
+
+        cy.Click(elems_MemberListing.BTN_SEARCHFILTER);
+        cy.wait(4000)
+        cy.VerifyTableEntry(elems_MemberListing.TBL_MEMBERLISTING, "Member ID", MemberID)
     }
 
     /********************************* 

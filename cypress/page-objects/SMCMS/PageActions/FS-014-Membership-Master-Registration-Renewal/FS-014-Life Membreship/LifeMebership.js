@@ -42,13 +42,13 @@ class LifeMembership {
      ApprovalWorkFlow(TaskID, WorkFlowName, Approval, Remark) {
 
         cy.visit('/admin/pendingTaskList')
-
+        cy.wait(5000)
         cy.EnterText(elems_PendingTaskListing.TXT_TASKID, TaskID)
         cy.EnterText(elems_PendingTaskListing.TXT_WORKFLOWNAME, WorkFlowName)
 
         //Click on Filter button
         cy.Click(elems_PendingTaskListing.BTN_SEARCH)
-        cy.wait(2000)
+        cy.wait(5000)
 
         //Click on Table item
         cy.xpath('(//h2[text()="Pending Task Listing"]/ancestor::div//table//tr["Task ID"]//td//a)[1]').click()

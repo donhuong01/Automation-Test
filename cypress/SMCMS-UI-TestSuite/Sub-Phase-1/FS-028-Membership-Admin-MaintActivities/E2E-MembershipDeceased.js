@@ -25,9 +25,7 @@ describe('[TS03] Membership Deceased Confirmation Popup', function () {
         cy.wait(3000)
 
         // Filter Member Listing for Active Members
-        MemList.fillOutFilters({
-            memberID : MemberID
-        })
+        MemList.FilterByMemberID(MemberID)
 
         // Select Active Member item and Decease
         MemList.selectMaintenanceDRP({
@@ -53,9 +51,7 @@ describe('[TS03] Membership Deceased Confirmation Popup', function () {
         cy.wait(3000)
 
         // Filter Member Listing for Active Members
-        MemList.fillOutFilters({
-            memberID : MemberID
-        })
+        MemList.FilterByMemberID(MemberID)
 
         // Select Active Member item and Decease
         MemList.selectMaintenanceDRP({
@@ -84,9 +80,7 @@ describe('[TS03] Membership Deceased Confirmation Popup', function () {
         cy.wait(3000)
 
         // Filter Member Listing for Active Members
-        MemList.fillOutFilters({
-            memberID : MemberID
-        })
+        MemList.FilterByMemberID(MemberID)
 
         // Select Active Member item and Decease
         MemList.selectMaintenanceDRP({

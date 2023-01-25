@@ -26,14 +26,14 @@ const CustomerNRIC = Customerdata.CustomerCreationPrincipal.RegistrationInformat
 const CustomerNRICFull = Customerdata.CustomerCreationPrincipal.RegistrationInformation.NRICFULL
 
 
-beforeEach(() => {
+// beforeEach(() => {
 
-    // Set local storage for QA Enviroment
-    // cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
+//     // Set local storage for QA Enviroment
+//     // cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
 
-    // Set local storage for UAT Enviroment
-    cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
-})
+//     // Set local storage for UAT Enviroment
+//     cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
+// })
 
 
 describe('FS-015 E1 GYM Membership Registration', function () {

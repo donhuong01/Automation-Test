@@ -31,14 +31,14 @@ const CustomerCategory = () => {
             CustomerCatDetail.filloutCustomerCategoryDetail(Name, BelongsUnder, CustomerCategoryType, D365ID)
             CustomerCatDetail.Save()
             cy.wait(5000)
-            CustomerCatListing.FillOutFilters({Name})
+            CustomerCatListing.FillOutFilters(Name)
 
         })
 
         it('[TC02] Update and save Customer Category Detail form  ', () => {
             cy.visit('/admin/customerCategoryListing')
             cy.wait(5000)
-            CustomerCatListing.FillOutFilters({Name})
+            CustomerCatListing.FillOutFilters(Name)
 
             CustomerCatListing.UpdatingItem(Name, data.CustomerCategoryListing.D365ID)
             // cy.wait(5000)

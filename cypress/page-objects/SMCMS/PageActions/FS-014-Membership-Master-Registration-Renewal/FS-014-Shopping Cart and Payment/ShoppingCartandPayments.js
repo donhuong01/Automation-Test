@@ -161,7 +161,7 @@ class ShoppingCartPayments {
         cy.wait(3000)
 
         cy.Click(elems_SMCMSShoppingCartAndPayment.Payments.BTN_PAYNOW)
-        cy.wait(3000)
+        cy.wait(8000)
 
 
     }

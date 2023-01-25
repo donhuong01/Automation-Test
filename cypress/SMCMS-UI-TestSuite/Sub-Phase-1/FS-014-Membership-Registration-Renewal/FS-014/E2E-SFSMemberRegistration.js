@@ -367,40 +367,24 @@ describe('[TS07] SFS Member Registration]', function (){
         MemTenureSelect.addToCart()
         
          // Shopping cart and Payments
-         Common.fillOutandApplyPayment('CHEQUE') 
-
-        //  MemTenureSelect.addToCart()
-       
-        // const Mode = data.PrincipalPayment.PAYMENT_MODE
-        // const Amount = data.PrincipalPayment.AMOUNT
-    
-        // ShoppingCart.fillOutandApplyPayments(Mode,Amount)
-        // cy.wait(2000)
-        // ShoppingCart.Paynow()
-        // cy.wait(5000)
+         Common.fillOutandApplyPayment('CASH')
         
         //Logout
-        cy.LogoutOfSmcms()
-    
+        // cy.LogoutOfSmcms()
         // cy.wait(2000)
     
-        // // CANNOT VERIFY IN THE LISTING TABLE 
+        // VERIFY IN THE LISTING TABLE 
     
-        // cy.visit('/membership/memberList')
+        cy.visit('/membership/memberList')
     
-        // cy.wait(2000)
+        cy.wait(5000)
     
     
         //MEMBER LISTING FORM FILTERS ARE NOT WORKING
-        // MemberList.fillOutFilters({ 
-        //     name:PrincipalName
-        //     //memberID: PrincipalID,
-            //NRIC: 
-        // }) 
+        MemberList.fillOutFilters(PrincipalName, CustomerNRIC, 'New') 
     
-        // cy.wait(2000)
+        cy.wait(2000)
     
-        // MemberList.VerifyListingItem(PrincipalName,'New')    
     })
     
 })

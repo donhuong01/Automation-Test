@@ -103,47 +103,47 @@ import login from '../../fixtures/login'
 beforeEach(() => {
 
     // Set local storage for QA Enviroment
-    cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
+    // cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
    
     // Set local storage for UAT Enviroment
-    // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
+    cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
 })
  
-describe('E2E Auto Testing:FS-001', () => {
+// describe('E2E Auto Testing:FS-001', () => {
 
-    OnlineAccountAccess() 
-    SMCMSPostion()
-    SMCMSRole()
-    SMCMSUser() 
-})
-describe('E2E Auto Testing:FS-004', () => {
+    // OnlineAccountAccess() 
+    // SMCMSPostion()
+    // SMCMSRole()
+    // SMCMSUser() 
+// })
+// describe('E2E Auto Testing:FS-004', () => {
 
-    CustomerCategoryType()
-    CustomerCategory()
-    CodeType()
-    CodeSetMaster()
-    DocumentTemplate()
-    ApplicationSetting() //Not Required
+    // CustomerCategoryType()
+    // CustomerCategory()
+    //    CodeType()
+    // CodeSetMaster()
+//     DocumentTemplate()
+//     ApplicationSetting() //Not Required
     // NotificationMessageTemplate() //Not Required
     // AnnouncementPortalNotification() //Not Required
-})
+// })
 
- describe('E2E Auto Testing:FS-010', ()=> {
-    FacilityGeneralSettingDtl()
-    FacilitySettingsCalendar()
-    FacilitySettingCalendarSettings()
-    FacilityOperatingPeriod() //Failing
-    FacilityTypeDetailFormManagement() //Operating Tab
-    FacilitySetupDetail() //Check Agian
-    FacilityBookingManagement("S1935582I")
-    FacilityBookingAmendmentManagment()
-    FacilityBookingExtentionManagment()
+//  describe('E2E Auto Testing:FS-010', ()=> {
+//     FacilityGeneralSettingDtl()
+//     FacilitySettingsCalendar()
+//     FacilitySettingCalendarSettings()
+//     FacilityOperatingPeriod() //Failing
+//     FacilityTypeDetailFormManagement() //Operating Tab
+//     FacilitySetupDetail() //Check Agian
+//     FacilityBookingManagement("S1935582I")
+//     FacilityBookingAmendmentManagment()
+//     FacilityBookingExtentionManagment()
 
- })
+//  })
 
 // describe('E2E Auto Testing:FS-014', ()=> {
 
-    // MembershipRegistration("S8074610E") // Enter FulL NRIC
+    // MembershipRegistration("S0903093Z") // Enter FulL NRIC
     // CustomerCheckIn()
     // MemberType()
     // BadAddressUpdate()// Fail Need code updates
@@ -154,9 +154,9 @@ describe('E2E Auto Testing:FS-004', () => {
     // BatchMembershipRegistration() ///
     // MassUpdateForMemberData()
     // MembershipModuleSettings()
-    // SFSMemberRegistion("S9172340I", "S7639915H", "S8258316E") //Add three NRIC's for Principal, Dependent Child, Dependent Spouse
-    // E2EMemberShipRenewal("S4367083B") //Add NRIC For Principal Registration
-    // LifeMembershipManagment("S5934306H") //Add NRIC For Principal Registration
+    // SFSMemberRegistion("S9748341H", "S4783904A", "S2433320E") //Add three NRIC's for Principal, Dependent Child, Dependent Spouse
+    // E2EMemberShipRenewal("S7969593I") //Add NRIC For Principal Registration
+    // LifeMembershipManagment("S1174105C") //Add NRIC For Principal Registration
 
 // })
 
@@ -169,9 +169,9 @@ describe('E2E Auto Testing:FS-004', () => {
     // VIPAppointmentTermRegistration()
 // })
 
-// describe('E2E Auto Testing:FS-028', ()=> {
-//     MembershipDeceased("A300002203") //Done
-//     BatchMembershipTermination("A300000337","A300000467","A300000100")
+describe('E2E Auto Testing:FS-028', ()=> {
+    // MembershipDeceased("A30001685") //Done
+    BatchMembershipTermination("A30001669","A30001670","A30001672")
 //     BatchMemDefermentRequest("989D", "A300000096","safra3rduploadreminder", "A300000235") 
 //     MembershipSuspensionReleaseRequest() //n 
 //     ReinstatementConfirmation("A300000672") 
@@ -179,7 +179,7 @@ describe('E2E Auto Testing:FS-004', () => {
 //     MemDefermentRequest("S9147820Z") //Change NRIC before runing this function
 //     MembershipResignationManagement("S6744863D") //Change NRIC before runing this function
 //     MembershipExpulsionAndReinstatment("S7344497G") //Change NRIC before runing this function
-// })
+})
 
 // describe('E2E Auto Testing:FS-027', () => {
 

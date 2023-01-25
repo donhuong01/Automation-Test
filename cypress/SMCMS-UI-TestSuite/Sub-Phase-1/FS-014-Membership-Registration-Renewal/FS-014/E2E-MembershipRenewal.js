@@ -25,10 +25,10 @@ const MemModuleSettings = new MembershipModuleSetting()
 
 
 
-const UserID = Math.floor(Math.random() * 100000 * 1.2 )
+const UserID = Math.floor(Math.random() * 100000 )
 
 const PrincipalName = Customerdata.CustomerCreationPrincipal.RegistrationInformation.name + UserID
-const PrincipalEmail = Customerdata.CustomerCreationPrincipal.ContactInformation.emailAddress + UserID + "@test.com"
+const PrincipalEmail = Customerdata.CustomerCreationPrincipal.ContactInformation.emailAddress
 
 
 const E2EMemberShipRenewal = (CustomerNRICFull) => {
@@ -172,13 +172,13 @@ describe('[TS01] Membership Renewal Management',function(){
             // cy.visit('/membership/memberList')
 
             // Wait for 3 minites
-            cy.wait(20000)
+            cy.wait(10000)
 
             //Verify New Created Member Reason Code
             MembershipRenewal.VerifyMemberStatus(PrincipalName, CustomerNRIC, 'Renewal')
         
             //Logout
-            cy.LogoutOfSmcms()
+            // cy.LogoutOfSmcms()
    
         })
 

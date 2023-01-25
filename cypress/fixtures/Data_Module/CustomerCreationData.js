@@ -17,7 +17,7 @@ const data = {
         },
         ContactInformation: {
             handPhone: '+65 658 5896',
-            emailAddress: 'testuser ',
+            emailAddress: 'Auto-Test' +  Math.floor(Math.random() * 100000) + '@test.com',
             emergencyContact: "+65 658 5893",
             homeNumber: "12378565",
 

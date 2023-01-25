@@ -23,7 +23,7 @@ const MemModuleSettings = new MembershipModuleSetting()
 const UserID = Math.floor(Math.random() * 100002 )
 
 const PrincipalName = Customerdata.CustomerCreationPrincipal.RegistrationInformation.name + UserID
-const PrincipalEmail = Customerdata.CustomerCreationPrincipal.ContactInformation.emailAddress + UserID+ "A" + "@synergyonline.com"
+const PrincipalEmail = Customerdata.CustomerCreationPrincipal.ContactInformation.emailAddress
 // const CustomerNRIC = '318C'
 // const CustomerNRICFull = 'S9910318C' // to be change each time
 
