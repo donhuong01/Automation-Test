@@ -1,6 +1,6 @@
-import E1GymMembershipDefermentRequest from '../../../page-objects/SMCMS/PageActions/FS-015-E1-Gym-MemberShip/E1GymMembershipDefermentRequest'
-import E1GymMembershipListing from '../../../page-objects/SMCMS/PageActions/FS-015-E1-Gym-MemberShip/E1 Gym Membership Listing'
-import login from '../../../fixtures/login'
+import E1GymMembershipDefermentRequest from '../../../page-objects/SMCMS/PageActions/FS-015-E1-Gym-MemberShip/E1-Gym-Membership-Deferment-Request'
+import E1GymMembershipListing from '../../../page-objects/SMCMS/PageActions/FS-015-E1-Gym-MemberShip/E1-Gym-Membership-Listing'
+// import login from '../../../fixtures/login'
 import data from '../../../fixtures/Data_Module/FS-015-E1-Gym-Membership/FS-015-E1-Gym-Membership'
 import Commons from '../../../page-objects/SMCMS/PageActions/Common/Common'
 
@@ -16,14 +16,17 @@ const common = new Commons
 //     // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
 // })
 
-const { MemberID, E1GymMembershipID, Maintenace, DefermentStartMonth, DefermentEndMonth, DefermentReason } = data.E1GymMembershipDeferment
+const { MemberID, Maintenace, DefermentStartMonth, DefermentEndMonth, DefermentReason } = data.E1GymMembershipDeferment
 
-describe('[TS01]  FS-015 E1 GYM Membership Waiver', function () {
+const E1GYMMembershipDeferment = (E1GymMembershipID)=> {
+
+describe('[TS01]  FS-015 E1 GYM Membership Deferment', function () {
 
 
-    it('[TC01] Converting Dependent E1 GYM Membership to Main E1 GYM Membership ', function () {
+    it('[TC01] Creating E1 Gym Membership Deferment ', function () {
 
         cy.visit('/membership/e1GymMembershipList')
+        cy.wait(3000)
 
         E1GymMembershipListing.FilterE1GymMembershipID(E1GymMembershipID)
 
@@ -39,7 +42,6 @@ describe('[TS01]  FS-015 E1 GYM Membership Waiver', function () {
         cy.wait(5000)
 
         cy.visit('/membership/e1GymMembershipList')
-        cy.wait(5000)
 
         E1GymMembershipListing.VerifyItemStatus(E1GymMembershipID, 'InActive')
 
@@ -58,3 +60,7 @@ describe('[TS01]  FS-015 E1 GYM Membership Waiver', function () {
     })
 
 });
+
+}
+
+export default E1GYMMembershipDeferment

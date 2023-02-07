@@ -37,10 +37,10 @@ class BatchIGRegistration {
         * @param {string} EffectiveDate
         * @param {string} IGLocation
        *****************************************************/
-    FilloutAdditionalFields(IG, EffectiveDate, IGLocation) {
+    FilloutAdditionalFields(IG, EffectiveDate, Term, IGLocation) {
         cy.SelectPickerWithoutFields(elems_BatchMembershipRegistrationDetail.BatchInformation.PCK_IG, IG)
         cy.EnterDate(elems_BatchMembershipRegistrationDetail.BatchInformation.DATE_IGEFFECTIVEDATE, EffectiveDate)
-        cy.Click(elems_BatchMembershipRegistrationDetail.BatchInformation.TXT_IGTERM)
+        cy.EnterText(elems_BatchMembershipRegistrationDetail.BatchInformation.TXT_IGTERM, Term)
         cy.Click(elems_BatchMembershipRegistrationDetail.BatchInformation.PCK_IGLOCATION)
         cy.wait(2000)
         cy.Click('(//div[@role="dialog"]//table//input)[1]')
@@ -55,6 +55,17 @@ class BatchIGRegistration {
     FilterWithBatchName(BatchName) {
         cy.EnterText(elems_BatchMembershipRegistrationListing.TXT_BATCHNAME, BatchName)
         cy.Click(elems_BatchMembershipRegistrationListing.BTN_SEARCHFILTERS)
+    }
+    /*****************************************************
+        * Method: VerifyBatchIGStatus
+        * Description: This function Verify Batch IG Status
+        * @param {string} BatchName
+      
+       *****************************************************/
+    VerifyBatchIGStatus(Status) {
+        cy.wait(7000)
+        cy.VerifyTableEntry(elems_BatchMembershipRegistrationListing.TBL_BATCHMEMSHIPREGLISTING, "Status", Status)
+
     }
     /*****************************************************
         * Method: SelectItemInTable
@@ -79,6 +90,7 @@ class BatchIGRegistration {
        *****************************************************/
     AddMemRegToMemListingDefIG() {
         cy.Click(elems_BatchMembershipRegistrationDetail.BatchInformation.BTN_IGREGDEFAULTIG)
+        cy.wait(3000)
 
     }
     /*****************************************************

@@ -2,23 +2,26 @@ const Data = {
 
     IGMembershipListing: {
         IGMian: 'Badminton Social Group',
-        InterestGroup: 'CORTEX',
-        IGMembershipID: 'G1000000011',
-        SAFRAMembershipID: 'A30000487',
+        InterestGroup: 'BITEZ',
+        IGMembershipID: 'G1000000004',
+        SAFRAMembershipID: 'A300001793',
         Status: 'Active',
-        CustomerName: 'Chris Ng',
+        CustomerName: 'DBS1028',
         ExpiryDateFrom: '18-Nov-2022',
         ExpiryDateTo: '17-Dec-2022',
-        InitialJoinDate: '18-Nov-2022',
-        ExpiryDate: '17-Dec-2022',
-        MembershipStatusReason: 'Renewal'
+        InitialJoinDate: '28-Oct-2022',
+        ExpiryDate: '27-Jan-2025',
+        MembershipStatusReason: 'New'
 
     },
     IGMembershipRegistration: {
-        PrincipalName: '',
-        PrincipalEmail: '',
-        CustomerNRICFull: '',
-        CustomerNRIC: '',
+        IGMainSelectionBox: "MOVIEMAX",
+        IGSelection: "MOVIEMAX",
+        IGLocationSelection: "SAFRA Jurong",
+        MembershipTenure: "5",
+        EffectiveDate: "30-Nov-2023",
+        AgreeWithTermAndCondition: "CHECK",
+        AgreeWithIndemnityWaiver: "CHECK",
 
 
     },
@@ -36,11 +39,11 @@ const Data = {
         CalculatePayment: 'CHECK',
         Maintenace: 'Terminate',
         TerminatedBy: 'Customer',
-        TerminationDate: '30-Nov-2022',
+        TerminationDate: '28-Feb-2023',  //Must be the last day of the current month
         TerminationReason: 'Termination',
-        CustomerName: 'Auto-User9973792',
+        CustomerName: 'Test User 46',
         Status: 'InActive',
-        MemID: 'A30001188'
+        MemID: 'A300000431'
 
 
 
@@ -64,11 +67,14 @@ const Data = {
     },
     IGMmebershipReinstatement: {
         TermStartDate: '06-Dec-2022',
-        MembershipTerm: '3'
+        MembershipTerm: '3',
+        MemID: 'A300001854',  // Must be InActive ( Terminated )
+        CustomerName: 'Test User 8310150',
+        Status: 'InActive'
     },
 
     IGMembershipDeactivation: {
-        IGName: 'Auto-Test',
+        IGName: 'QA Testing',
         DeactivationDate: '07-Dec-2022',
         DReason: 'Deactivate',
         Status: 'Deactivated'

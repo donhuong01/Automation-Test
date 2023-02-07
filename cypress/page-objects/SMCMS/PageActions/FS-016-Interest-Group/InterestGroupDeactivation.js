@@ -9,6 +9,7 @@ class IGDeactivation {
     Submit() {
 
         cy.Click(elems_IGDeactivation.BTN_SUBMIT)
+        cy.wait(10000)
     }
 
     /*****************************************************

@@ -1,6 +1,3 @@
-
-import login from '../../../fixtures/login'
-
 import MemberRegistrationPrincipal from '../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Member Registration/MemberRegistrationPrincipal'
 import elems_Landing from '../../../page-objects/SMCMS/Elements/Common/Customer_LandingPage'
 import MembershipTenureSelection from '../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Membership Tenure Selection/MembershipTenureSelection'
@@ -9,9 +6,9 @@ import ShoppingCartPayments from '../../../page-objects/SMCMS/PageActions/FS-014
 import CustomerCreationPage from '../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-CustomerCreation/CustomerCreation'
 import Customerdata from '../../../fixtures/Data_Module/CustomerCreationData'
 import elems_CustomerCheckInPage from '../../../page-objects/SMCMS/Elements/Membership/FS014_Membership-Master-Registration-Renewal/CustomerCheckInPage'
-import E1GymMembershipRegistration from '../../../page-objects/SMCMS/PageActions/FS-015-E1-Gym-MemberShip/E1 Gym Membership Registration'
+import E1GymMembershipRegistration from '../../../page-objects/SMCMS/PageActions/FS-015-E1-Gym-MemberShip/E1-Gym-Membership-Registration'
 import Data from '../../../fixtures/Data_Module/FS-015-E1-Gym-Membership/E1GymMembershipRegistrationNonMember'
-
+// import login from '../../../fixtures/login'
 
 //Page definition
 const MemRegPrincipal = new MemberRegistrationPrincipal()
@@ -20,7 +17,7 @@ const ShoppingCart = new ShoppingCartPayments()
 const CustomerCreation = new CustomerCreationPage()
 
 
-const { DOB, NRICLast4Digit, NRICFull, CustomerName, Gender, E1GymMemMainSelection, E1GymMembershipSelection, LocationSelection, EffectiveDate, DependencyType } = Data
+const { DOB, CustomerName, Gender, E1GymMemMainSelection, E1GymMembershipSelection, LocationSelection, EffectiveDate, DependencyType } = Data
 
 
 // beforeEach(() => {
@@ -31,6 +28,9 @@ const { DOB, NRICLast4Digit, NRICFull, CustomerName, Gender, E1GymMemMainSelecti
 //     // Set local storage for UAT Enviroment
 //     // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
 // })
+const E1GYMMembershipRegistrationWithNonMember = (NRICFull)=> {
+
+const NRICLast4Digit = NRICFull.substr(NRICFull.length - 4);
 
 describe('FS-015 E1 GYM Membership Registration', function () {
 
@@ -132,3 +132,6 @@ describe('FS-015 E1 GYM Membership Registration', function () {
 
     })
 })
+
+}
+export default E1GYMMembershipRegistrationWithNonMember

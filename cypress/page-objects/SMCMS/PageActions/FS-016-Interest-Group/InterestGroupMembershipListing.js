@@ -192,7 +192,7 @@ class InterestGroupListing {
         * @param {string} ExpiryDateFrom
         * @param {string} ExpiryDateTo
        *****************************************************/
-    CheckFilterFunctionality(IGMian, IG, IGMembershipID, SAFRAMembershipID, Status, CustomerName, ExpiryDateFrom, ExpiryDateTo) {
+    CheckFilterFunctionality(IGMian, IG, IGMembershipID, SAFRAMembershipID, Status, CustomerName) {
 
         cy.SelectPickerWithoutFields(elems_IGMemberListing.PCK_IGMAIN, IGMian)
         cy.SelectPickerWithoutFields(elems_IGMemberListing.PCK_INTERESTGROUP, IG)
@@ -200,10 +200,10 @@ class InterestGroupListing {
         cy.EnterText(elems_IGMemberListing.TXT_SAFRAMEMBERSHIPID, SAFRAMembershipID)
         cy.SelectDropDownItem(elems_IGMemberListing.DRP_STATUS, Status)
         cy.EnterText(elems_IGMemberListing.TXT_CUSTOMERNAME, CustomerName)
-        // cy.EnterDate(elems_IGMemberListing.DATE_EXPIRYDATEFROM, ExpiryDateFrom)
-        // cy.EnterDate(elems_IGMemberListing.DATE_EXPIRYDATETO, ExpiryDateTo)
         cy.Click(elems_IGMemberListing.BTN_SEARCHFILTER)
+        cy.wait(3000)
         cy.VerifyTableEntry(elems_IGMemberListing.TBL_IGGROUPMEMBERLIST, 'Interest Group Membership ID', IGMembershipID)
+        cy.VerifyTableEntry(elems_IGMemberListing.TBL_IGGROUPMEMBERLIST, 'SAFRA Membership ID', SAFRAMembershipID)
 
 
     }

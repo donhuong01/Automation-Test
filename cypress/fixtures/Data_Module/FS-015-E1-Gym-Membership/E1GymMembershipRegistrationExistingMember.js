@@ -1,8 +1,8 @@
 const data = {
 
-    MemberID: 'A300001898',
+    MemberID: 'A300002327',
 
-    CustomerName: 'QA Cust Test 1',
+    CustomerName: 'Auto-Name 366H',
 
     DependencyType: 'Principal', // principle or dependent
 
@@ -12,7 +12,7 @@ const data = {
 
     LocationSelection: 'SAFRA Jurong',
 
-    EffectiveDate: '23-Nov-2022', // e1 gym membership start date
+    EffectiveDate: '04-Jan-2023', // e1 gym membership start date
 
 }
 

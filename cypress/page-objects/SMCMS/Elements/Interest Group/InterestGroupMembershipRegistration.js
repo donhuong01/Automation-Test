@@ -12,7 +12,7 @@ class elems_IGMembershipRegistration {
     static BTN_DOWNLOADTERMCONDITION = '//button[text()="Download Terms and Conditions"]'
     static CHK_AGRETERMCONDITION = '//input[@id="chkAgreeWithTerms"]'
     static BTN_DOWNLOADIDENTITYWIAVER = '//button[text()="Download Indemnity Waiver"]'
-    static CHK_AGREIDENTITYWIAVER = '//input[@id="chkAgreewithIndemnity"]'
+    static CHK_AGREIDENTITYWIAVER = '//input[@id="chkAgreewithIndemnity"]' 
     static TXT_CUSTOMERCATEGNAME = '//input[@id="txtCustomerName"]'
     static BTN_SEARCHFILTER = '//button[@form="formFilter"]'
     static DATE_DEFENDMONTH = '//input[@id="dtpDefermentEndMonth"]'

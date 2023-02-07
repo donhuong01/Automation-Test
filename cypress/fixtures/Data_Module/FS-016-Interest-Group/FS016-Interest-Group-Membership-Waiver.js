@@ -5,7 +5,7 @@ const data = {
     Status: 'Active',
 
     // Defer existing member 
-    CustomerName: 'TestUser07252022',    //Please Provide Active Member
+    CustomerName: 'Test User 61718',    //Please Provide Active Member
 
 
 }

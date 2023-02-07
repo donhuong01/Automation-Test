@@ -27,10 +27,10 @@ class InterestGroupMembershipConversion {
     ConversionInformation(DestinationIG, ConversionReason) {
         cy.wait(2000)
         cy.Click(elems_IGMembershipConversion.PCK_DESTINATIONIG)
-        cy.wait(3000)
+        cy.wait(2000)
         {
             if (DestinationIG === 'BITEZ') {
-                cy.SelectTableItem(elems_IGMembershipConversion.TBL_SELECTDESTINATIONIG, 'Name', "BITEX")
+                cy.SelectTableItem(elems_IGMembershipConversion.TBL_SELECTDESTINATIONIG, 'Name', "BITEZ")
             } else {
                 cy.SelectTableItem(elems_IGMembershipConversion.TBL_SELECTDESTINATIONIG, 'Name', "BITEZ")
             }

@@ -21,6 +21,7 @@ class InterestGroupDetail {
     *****************************************************/
     Submit() {
         cy.Click(elems_InterestGroupDetail.BTN_SUBMIT)
+        cy.wait(15000)
 
     }
     /*****************************************************

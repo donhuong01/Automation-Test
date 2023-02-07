@@ -12,8 +12,18 @@ class IGMembershipRegistration {
     *****************************************************/
     ClickOnBox(BoxText) {
 
-        cy.Click(`//div[@class="Tiles_tile__3Ogq5"]//p[text()= "${BoxText}"]`)
-        cy.wait(3000)
+        if(BoxText === "SAFRA Jurong"){
+
+            cy.Click(`(//p[text()= "${BoxText}"])[2]`)
+            cy.wait(6000)
+        }
+        else{
+
+            cy.Click(`//p[text()= "${BoxText}"]`)
+            cy.wait(6000)
+        }
+
+        
 
     }
 
@@ -21,10 +31,10 @@ class IGMembershipRegistration {
      * Method: SelectMembershipTerm
      * Description: This function Select Membership Term
     *****************************************************/
-    SelectMembershipTerm() {
+    SelectMembershipTerm(Tenure) {
 
         // cy.Enter(elems_IGMembershipRegistration.DRP_MEMBERSHIPTERM, MTerm)
-        cy.Click('//span[@title="Increase value"]')
+        cy.EnterText(elems_IGMembershipRegistration.DRP_MEMBERSHIPTERM, Tenure)
 
     }
 
@@ -41,7 +51,7 @@ class IGMembershipRegistration {
      * Method: AgreeWithTermCondition
      * Description: This function Check on agree with Term and Conditions checkbox
     *****************************************************/
-    AgreeWithTermCondition(CHECK) {
+    AgreeWithTermCondition() {
 
         cy.TickCheckBox(elems_IGMembershipRegistration.CHK_AGRETERMCONDITION, "CHECK")
 
@@ -51,7 +61,7 @@ class IGMembershipRegistration {
      * Method: Agree with Indemnity Waiver
      * Description: This function Check on indenmity wiaver checkbox
     *****************************************************/
-    AgreewithIndemnityWaiver(CHECK) {
+    AgreewithIndemnityWaiver() {
 
         cy.TickCheckBox(elems_IGMembershipRegistration.CHK_AGREIDENTITYWIAVER, "CHECK")
 
@@ -144,6 +154,16 @@ class IGMembershipRegistration {
     }
 
     /*****************************************************
+     * Method: Complete
+     * Description: This function Click On Complete Button
+    *****************************************************/
+    Complete() {
+
+        cy.Click(elems_InterestGroupMembershipRenewal.BTN_COMPLETE)
+
+    }
+
+    /*****************************************************
      * Method: ViewTransactionHistory
      * Description: This function Select Table Item and click on ViewTransactionHistory Button
     *****************************************************/
@@ -163,6 +183,7 @@ class IGMembershipRegistration {
         cy.VerifyTableEntry(elems_IGMembershipTransactionHistory.TBL_IGMEMBERSHIPTRANSACTIONHISTORY, 'Reason Code', ReasonCode)
 
     }
+
 
     /*****************************************************
      * Method: AddWaiver

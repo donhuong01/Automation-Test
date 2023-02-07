@@ -29,6 +29,7 @@ class E1GymMembershipRegistration {
     AddToCart() {
 
         cy.Click(elems_E1GymMembershipRegistaration.BTN_ADDTOCART)
+        cy.wait(5000)
 
     }
     /*****************************************************
@@ -104,8 +105,7 @@ class E1GymMembershipRegistration {
         *****************************************************/
     MembershipInfo(EffectiveDate) {
         cy.wait(1000)
-        cy.Click('//span[@title="Increase value"]')
-        cy.wait(1000)
+        cy.EnterText('//span[@title="Increase value"]', '10')
         cy.EnterDate(elems_E1GymMembershipRegistaration.DATE_EFFECTIVEDATE, EffectiveDate)
         cy.wait(500)
         cy.xpath('//label[@for="membershipPeriod"]').should('be.visible')

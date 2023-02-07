@@ -43,6 +43,36 @@ import MemberType from '../Sub-Phase-1/FS-014-Membership-Registration-Renewal/FS
 import MembershipRenewalAdvise from '../Sub-Phase-1/FS-014-Membership-Registration-Renewal/FS-014/E2E-MembershipRenewalAdvise'
 import SFSMemberRegistion from '../Sub-Phase-1/FS-014-Membership-Registration-Renewal/FS-014/E2E-SFSMemberRegistration'
 
+// FS-15 E1 Gym Membership
+import E1GYMMembershipConversion from '../Sub-Phase-3/FS-015-E1-Gym-Membership/E1GymMembershipConversion'
+import E1GYMMembershipDeferment from '../Sub-Phase-3/FS-015-E1-Gym-Membership/E1GymMembershipDeferment'
+import E1GYMMembershipModuleSettings from '../Sub-Phase-3/FS-015-E1-Gym-Membership/E1GymMembershipModuleSettings'
+import E1GYMMembershipRegistrationWithExistingMember from '../Sub-Phase-3/FS-015-E1-Gym-Membership/E1GymMembershipRegistrationWithExistingMember'
+import E1GYMMembershipRegistrationWithNonMember from '../Sub-Phase-3/FS-015-E1-Gym-Membership/E1GymMembershipRegistrationWithNonMember'
+import E1GYMMembershipReinstatement from '../Sub-Phase-3/FS-015-E1-Gym-Membership/E1GymMembershipReinstatement'
+import E1GYMMembershipRenewal from '../Sub-Phase-3/FS-015-E1-Gym-Membership/E1GymMembershipRenewal'
+import E1GYMMembershipTermination from '../Sub-Phase-3/FS-015-E1-Gym-Membership/E1GymMembershipTermination'
+import E1GYMMembershipWaiver from '../Sub-Phase-3/FS-015-E1-Gym-Membership/E1GymMembershipWaiver'
+import E1GYMMembershipAndChargeRateSetup from '../Sub-Phase-3/FS-015-E1-Gym-Membership/FS-015-E1GYMMembershipAndChargeRateSetup'
+import E1GYMMembershipDataManagement from '../Sub-Phase-3/FS-015-E1-Gym-Membership/FS-015-E1GYMMembershipDataManagement'
+import E1GYMMembershipRenewalAdvise from '../Sub-Phase-3/FS-015-E1-Gym-Membership/FS-015-E1GYMMembershipRenewalAdvice'
+import E1GYMSetupManagement from '../Sub-Phase-3/FS-015-E1-Gym-Membership/FS-015-E1GymSetupManagement'
+
+
+// FS-16 Interest Group
+import BatchMemRegWithExistingMemUsingDefaultIG from '../Sub-Phase-3/FS-016-Interest-Group/BatchIGMemRegWithExistingMemUsing(defaultIG)'
+import BatchMemRegWithExistingMemUsingNonDefaultIG from '../Sub-Phase-3/FS-016-Interest-Group/BatchIGMemRegWithExistingMemUsing(NondefaultIG)'
+import InterestGroupDeactivation from '../Sub-Phase-3/FS-016-Interest-Group/InterestGroupDeactivation'
+import InterestGroupManagement from '../Sub-Phase-3/FS-016-Interest-Group/InterestGroupManagement'
+import InterestGroupConversion from '../Sub-Phase-3/FS-016-Interest-Group/InterestGroupMembershipConversion'
+import InterestGroupDeferment from '../Sub-Phase-3/FS-016-Interest-Group/InterestGroupMembershipDeferment'
+import InterestGroupMembershipManagment from '../Sub-Phase-3/FS-016-Interest-Group/InterestGroupMembershipManagement'
+import InterestGroupMembershipRegistration from '../Sub-Phase-3/FS-016-Interest-Group/InterestGroupMembershipRegistration'
+import IGMembershipReinstatement from '../Sub-Phase-3/FS-016-Interest-Group/InterestGroupMembershipReinstatement'
+import InterestGMembershipRenewal from '../Sub-Phase-3/FS-016-Interest-Group/InterestGroupMembershipRenewal'
+import InterestGMembershipReverse from '../Sub-Phase-3/FS-016-Interest-Group/InterestGroupMembershipReverse'
+import InterestGMembershipTermination from '../Sub-Phase-3/FS-016-Interest-Group/InterestGroupMembershipTermination'
+import InterestGMembershipwaiver from '../Sub-Phase-3/FS-016-Interest-Group/InterestGroupMembershipWaiver'
 
 //FS - 025 Membership VIP Volunteer Veteran League
 import VolunteerCommittee from '../Sub-Phase-1/FS-025-Membership-VIP-Volunteer-Veteran-League/E2E-VolunteerCommitte'
@@ -169,9 +199,9 @@ beforeEach(() => {
     // VIPAppointmentTermRegistration()
 // })
 
-describe('E2E Auto Testing:FS-028', ()=> {
+// describe('E2E Auto Testing:FS-028', ()=> {
     // MembershipDeceased("A30001685") //Done
-    BatchMembershipTermination("A30001669","A30001670","A30001672")
+    // BatchMembershipTermination("A30001669","A30001670","A30001672")
 //     BatchMemDefermentRequest("989D", "A300000096","safra3rduploadreminder", "A300000235") 
 //     MembershipSuspensionReleaseRequest() //n 
 //     ReinstatementConfirmation("A300000672") 
@@ -179,7 +209,7 @@ describe('E2E Auto Testing:FS-028', ()=> {
 //     MemDefermentRequest("S9147820Z") //Change NRIC before runing this function
 //     MembershipResignationManagement("S6744863D") //Change NRIC before runing this function
 //     MembershipExpulsionAndReinstatment("S7344497G") //Change NRIC before runing this function
-})
+// })
 
 // describe('E2E Auto Testing:FS-027', () => {
 
@@ -213,6 +243,46 @@ describe('E2E Auto Testing:FS-028', ()=> {
 //     ReceiptManagement()
 
 // })
+
+
+describe('E2E Auto Testing:FS-015', ()=> {
+
+    E1GYMMembershipConversion("A300001845") // Enter Member ID
+    E1GYMMembershipDeferment("G1000000032") // Enter E1 Gym Membership ID
+    E1GYMMembershipModuleSettings()
+    // Enter SAFRA MemberID and Member Name
+    E1GYMMembershipRegistrationWithExistingMember("A300002327", "Auto-Name 366H")
+    E1GYMMembershipRegistrationWithNonMember("S3716755Z") //Change NRIC each time after runing this code
+    E1GYMMembershipReinstatement("A300001847") //Enter Member ID
+    E1GYMMembershipRenewal("S6103054I") //Change NRIC each time after runing this code
+    E1GYMMembershipTermination("A300001847") //Provide Active member ID
+    E1GYMMembershipWaiver("A300001815") //Provide Active member ID
+    E1GYMMembershipAndChargeRateSetup()
+    E1GYMMembershipDataManagement("A300001798","G1000000017") //Provide MemberID and E1GymMemberhipID
+    E1GYMMembershipRenewalAdvise()
+    E1GYMSetupManagement()
+
+
+})
+
+
+describe('E2E Auto Testing:FS-016', ()=> {
+
+    BatchMemRegWithExistingMemUsingDefaultIG("A300002301") //Provide Active member ID
+    BatchMemRegWithExistingMemUsingNonDefaultIG("A300002305") //Provide Active member ID
+    InterestGroupDeactivation()
+    InterestGroupManagement()
+    InterestGroupConversion("John Lee") //Please Provide Active Member Name
+    InterestGroupDeferment("Test User 13448") //Please Provide Active Member Name
+    InterestGroupMembershipManagment()
+    InterestGroupMembershipRegistration("S4914013D") //Change NRIC each time after runing this code
+    IGMembershipReinstatement("A300001854", "Test User 8310150")
+    InterestGMembershipRenewal("S0038535B") //Change NRIC each time after runing this code
+    InterestGMembershipReverse("Test User 13448") //Provide Member Name
+    InterestGMembershipTermination("A300000431","Test User 46") // Provide MemberId and Member Name
+    InterestGMembershipwaiver("Test User 61718")  //Provide Member Name
+
+})
 
 
 

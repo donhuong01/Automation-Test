@@ -1,12 +1,12 @@
 const data = {
 
     E1GymMembershipDeferment: {
-        MemberID: 'A30000022',
+        MemberID: 'A300001847',
         Maintenace: 'Defer',
-        DefermentStartMonth: '14-Jan-2023',
-        DefermentEndMonth: '14-Mar-2022',
-        DefermentReason: 'Deferment Please',
-        E1GymMembershipID: 'G1000000026',
+        DefermentStartMonth: '01-Jan-2023',
+        DefermentEndMonth: '01-Mar-2023',
+        DefermentReason: 'Deferment',
+        E1GymMembershipID: 'G1000000032',
 
 
     }

@@ -1,6 +1,3 @@
-
-import login from '../../../fixtures/login'
-
 import MemberRegistrationPrincipal from '../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Member Registration/MemberRegistrationPrincipal'
 import elems_Landing from '../../../page-objects/SMCMS/Elements/Common/Customer_LandingPage'
 import MembershipTenureSelection from '../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Membership Tenure Selection/MembershipTenureSelection'
@@ -10,8 +7,9 @@ import CustomerCreationPage from '../../../page-objects/SMCMS/PageActions/FS-014
 import Customerdata from '../../../fixtures/Data_Module/CustomerCreationData'
 import elems_CustomerCheckInPage from '../../../page-objects/SMCMS/Elements/Membership/FS014_Membership-Master-Registration-Renewal/CustomerCheckInPage'
 import MembershipModuleSetting from '../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-14-Membership Module Setting/MembershipModuleSetting'
-import E1GymMembershipRegistration from '../../../page-objects/SMCMS/PageActions/FS-015-E1-Gym-MemberShip/E1 Gym Membership Registration'
-import E1GymMembershipRenewal from '../../../page-objects/SMCMS/PageActions/FS-015-E1-Gym-MemberShip/E1 Gym Membership Renewal'
+import E1GymMembershipRegistration from '../../../page-objects/SMCMS/PageActions/FS-015-E1-Gym-MemberShip/E1-Gym-Membership-Registration'
+import E1GymMembershipRenewal from '../../../page-objects/SMCMS/PageActions/FS-015-E1-Gym-MemberShip/E1-Gym-Membership-Renewal'
+import login from '../../../fixtures/login'
 
 //Page definition
 const MemRegPrincipal = new MemberRegistrationPrincipal()
@@ -25,8 +23,7 @@ const UserID = Math.floor(Math.random() * 100000 * 100)
 
 const PrincipalName = Customerdata.CustomerCreationPrincipal.RegistrationInformation.name + UserID
 const PrincipalEmail = Customerdata.CustomerCreationPrincipal.ContactInformation.emailAddress + UserID + "@test.com"
-const CustomerNRIC = '961I'
-const CustomerNRICFull = 'S6765961I'
+
 
 
 // beforeEach(() => {
@@ -38,6 +35,9 @@ const CustomerNRICFull = 'S6765961I'
 //     // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
 // })
 
+const E1GYMMembershipRenewal = (CustomerNRICFull)=> {
+
+const CustomerNRIC = CustomerNRICFull.substr(CustomerNRICFull.length - 4);
 
 describe('[TS01] E1 Gym Membership Renewal Management', function () {
 
@@ -128,16 +128,12 @@ describe('[TS01] E1 Gym Membership Renewal Management', function () {
 
         E1GymMembershipRegistration.RegistrationInfo('10-Nov-2022')
 
-        // E1GymMembershipRegistration.OtherInfoCheckboxes('CHECK', 'CHECK')
-
-        E1GymMembershipRegistration.AddWiaver('Registration', 50, 'Waive')
-
         MemTenureSelect.addToCart()
         cy.wait(3000)
         // Shopping cart and Payments
-        ShoppingCart.fillOutandApplyPayment('CHEQUE')
+        ShoppingCart.fillOutandApplyPayment('CASH')
 
-        cy.wait(50000)
+        cy.wait(20000)
 
         E1GymMembershipRegistration.VerifyItemInIGMemListingTBL(PrincipalName)
 
@@ -171,3 +167,6 @@ describe('[TS01] E1 Gym Membership Renewal Management', function () {
 
 })
 
+}
+
+export default E1GYMMembershipRenewal

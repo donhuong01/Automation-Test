@@ -1,8 +1,7 @@
-
-import E1GymMembershipRegistration from '../../../page-objects/SMCMS/PageActions/FS-015-E1-Gym-MemberShip/E1 Gym Membership Registration'
+import E1GymMembershipRegistration from '../../../page-objects/SMCMS/PageActions/FS-015-E1-Gym-MemberShip/E1-Gym-Membership-Registration'
 import Data from '../../../fixtures/Data_Module/FS-015-E1-Gym-Membership/E1GymMembershipRegistrationExistingMember'
 import Commons from '../../../page-objects/SMCMS/PageActions/Common/Common'
-import login from '../../../fixtures/login'
+// import login from '../../../fixtures/login'
 
 //Page definition
 const common = new Commons()
@@ -20,7 +19,9 @@ const common = new Commons()
 // })
 
 
-const { MemberID, CustomerName, E1GymMemMainSelection, E1GymMembershipSelection, LocationSelection, DependencyType, EffectiveDate } = Data
+const { E1GymMemMainSelection, E1GymMembershipSelection, LocationSelection, DependencyType, EffectiveDate } = Data
+
+const E1GYMMembershipRegistrationWithExistingMember = (MemberID, CustomerName) => {
 
 describe('FS-015 E1 Gym Membership Registration', function () {
 
@@ -44,7 +45,7 @@ describe('FS-015 E1 Gym Membership Registration', function () {
         E1GymMembershipRegistration.MembershipInfo(EffectiveDate)
 
         // E1GymMembershipRegistration.OtherInfoCheckboxes()
-        E1GymMembershipRegistration.Submit()
+        E1GymMembershipRegistration.AddToCart()
 
         common.fillOutandApplyPayment('Cash')
         cy.wait(5000)
@@ -56,3 +57,6 @@ describe('FS-015 E1 Gym Membership Registration', function () {
     })
 })
 
+}
+
+export default E1GYMMembershipRegistrationWithExistingMember

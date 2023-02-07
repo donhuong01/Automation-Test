@@ -15,47 +15,47 @@ class elems_SRPPromationDetails {
 
     //Source Channel
     static SOURCECHANNEL = {
-        BTN_ADD : '(//h3[text()="Source Channel"]//following::div//button)[1]',
-        TXT_NAME : '(//input[@id="txtName"])[2]',
-        DRP_TYPE : '//span[@id="drpType"]',
+        BTN_ADD: '(//h3[text()="Source Channel"]//following::div//button)[1]',
+        TXT_NAME: '(//input[@id="txtName"])[2]',
+        DRP_TYPE: '//span[@id="drpType"]',
 
-        BTN_SEARCHFILTERS : '//button[text()="Search Filters"]',
-        BTN_SELECT : '//button[text()="Select"]',
-        BTN_CANCEL : '(//button[text()="Cancel"])[2]'
+        BTN_SEARCHFILTERS: '//button[text()="Search Filters"]',
+        BTN_SELECT: '//button[text()="Select"]',
+        BTN_CANCEL: '(//button[text()="Cancel"])[2]'
     }
 
     //EDC Terminal
     static EDCTERMINAL = {
-        BTN_ADD : '(//h3[text()="EDC Terminal"]//following::div//button)[1]',
-        TXT_TERMINALID : '//input[@id="txtTerminalId"]',
-        TXT_NAME : '//input[@id="txtName"]',
-        TXT_STORENAME : '//input[@id="txtStoreName"]',
+        BTN_ADD: '(//h3[text()="EDC Terminal"]//following::div//button)[1]',
+        TXT_TERMINALID: '//input[@id="txtTerminalID"]',
+        TXT_NAME: '//input[@id="txtName"]',
+        TXT_STORENAME: '//input[@id="txtStoreName"]',
 
-        BTN_SEARCHFILTERS : '//button[text()="Search Filters"]',
-        BTN_SELECT : '//button[text()="Select"]',
-        BTN_CANCEL : '(//button[text()="Cancel"])[2]'
+        BTN_SEARCHFILTERS: '//button[text()="Search Filters"]',
+        BTN_SELECT: '//button[text()="Select"]',
+        BTN_CANCEL: '(//button[text()="Cancel"])[2]'
     }
 
     //Members
     static Members = {
-        BTN_ADD : '(//h3[text()="Members"]//following::div//button)[1]',
-        TXT_MEMBERID : '//input[@id="txtMemberId"]',
-        TXT_NAME : '(//input[@id="txtName"])[1]',
+        BTN_ADD: '(//h3[text()="Members"]//following::div//button)[1]',
+        TXT_MEMBERID: '//input[@id="txtMemberId"]',
+        TXT_NAME: '(//input[@id="txtName"])[1]',
 
-        BTN_SEARCHFILTERS : '//button[text()="Search Filters"]',
-        BTN_SELECT : '//button[text()="Select"]',
-        BTN_CANCEL : '(//button[text()="Cancel"])[2]'
+        BTN_SEARCHFILTERS: '//button[text()="Search Filters"]',
+        BTN_SELECT: '//button[text()="Select"]',
+        BTN_CANCEL: '(//button[text()="Cancel"])[2]'
     }
 
     //Members
     static MEMBERTYPES = {
 
-        BTN_ADD : '(//h3[text()="Member Types"]//following::div//button)[1]',
-        TXT_MEMBERTYPENAME : '//input[@id="txtMemberId"]',
+        BTN_ADD: '(//h3[text()="Member Types"]//following::div//button)[1]',
+        TXT_MEMBERTYPENAME: '//label[text()="Member Type Name"]/following-sibling::div/input[@id="txtName"]',
 
-        BTN_SEARCHFILTERS : '//button[text()="Search Filters"]',
-        BTN_SELECT : '//button[text()="Select"]',
-        BTN_CANCEL : '(//button[text()="Cancel"])[2]'
+        BTN_SEARCHFILTERS: '//button[text()="Search Filters"]',
+        BTN_SELECT: '//button[text()="Select"]',
+        BTN_CANCEL: '(//button[text()="Cancel"])[2]'
 
     }
 
