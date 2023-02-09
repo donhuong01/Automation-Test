@@ -89,13 +89,13 @@ describe('[TS06] Facility Booking Form Management', function () {
         
         
             CustomerCreation.save();
-            cy.wait(5000)
+            cy.wait(8000)
         
         ///////////////////////////////PRINCIPAL REGISTRATION////////////////////////////////////////
             
             cy.Click(elems_Landing.SAFRA_Member)
             cy.Click(elems_Landing.Membership_Registration)
-            cy.wait(7000)
+            cy.wait(9000)
         
             MemRegPrincipal.verifyPersonalInformation({
                 MemberCategory: Customerdata.memberregistrationprincipal.Personal_Info.MemberCategory,
@@ -122,18 +122,18 @@ describe('[TS06] Facility Booking Form Management', function () {
             // MemRegPrincipal.VerifyPageTitle('Membership Registration - Principal')
             
             MemRegPrincipal.SaveAndNextPrincipal()
-            cy.wait(7000)
+            cy.wait(8000)
         
             ///////////////////////////////////TENURE SELECTION////////////////////////////////////////////////////////////
         
         
             // Membership Tenure Selection
             MemTenureSelect.principalTenureSelection(PrincipalName,'10 Years')
-            cy.wait(5000)
+            cy.wait(8000)
             
             // Click on add to cart
             MemTenureSelect.addToCart()
-            cy.wait(5000)
+            cy.wait(8000)
         
             // Shopping cart and Payments
             ShoppingCart.fillOutandApplyPayment('CASH')

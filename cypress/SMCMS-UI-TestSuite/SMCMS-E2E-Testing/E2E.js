@@ -159,26 +159,26 @@ beforeEach(() => {
     // //AnnouncementPortalNotification() //Not Required
 // })
 
- describe('E2E Auto Testing:FS-010', ()=> {
+//  describe('E2E Auto Testing:FS-010', ()=> {
     // FacilityGeneralSettingDtl()
-    FacilitySettingsCalendar()
+    // FacilitySettingsCalendar()
     // FacilitySettingCalendarSettings()
-    // FacilityOperatingPeriod() //Failing
-    // FacilityTypeDetailFormManagement() //Operating Tab
+    // FacilityOperatingPeriod()
+    // FacilityTypeDetailFormManagement() 
     // FacilitySetupDetail() //Check Agian
-    // FacilityBookingManagement("S1935582I") //Change NRIC before runing this function
+    // FacilityBookingManagement("S2416856E") //Change NRIC before runing this function
     // FacilityBookingAmendmentManagment()
     // FacilityBookingExtentionManagment()
 
- })
+//  })
 
-// describe('E2E Auto Testing:FS-014', ()=> {
+describe('E2E Auto Testing:FS-014', ()=> {
 
-    // MembershipRegistration("S0903093Z") // Enter FulL NRIC
+    // MembershipRegistration("S4079930C") // Enter Full NRIC
     // CustomerCheckIn()
     // MemberType()
     // BadAddressUpdate()// Fail Need code updates
-    // MembershipRenewalAdvise()
+    MembershipRenewalAdvise()
     // WithdrawalOfConsent("A300002019") //Enter Member ID for Withdrawal Of Consent
     // SourceChannel() 
     // //MemberStatusReasonCode() // Not Required
@@ -189,7 +189,7 @@ beforeEach(() => {
     // E2EMemberShipRenewal("S7969593I") //Add NRIC For Principal Registration
     // LifeMembershipManagment("S1174105C") //Add NRIC For Principal Registration
 
-// })
+})
 
 //  describe('E2E Auto Testing:FS-025', ()=> {
     // VolunteerCommittee()

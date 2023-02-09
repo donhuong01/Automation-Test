@@ -124,7 +124,7 @@ describe('Facility Type Detail Form', function () {
 
         // Click on Facility table link
         FacilityTypeDetailForm.ClickTableItem(FacilityName)
-        cy.wait(4000)
+        cy.wait(10000)
         //verify page title 
         FacilityTypeDetailForm.VerifyPageTitle('Facility Type Detail')
 
@@ -146,7 +146,7 @@ describe('Facility Type Detail Form', function () {
  
          // Click on Facility table link
          FacilityTypeDetailForm.ClickTableItem(FacilityName)
-         cy.wait(4000)
+         cy.wait(8000)
 
         //click Operating Period Tabe
         FacilityTypeDetailForm.OperatingPeriodTab()
@@ -190,7 +190,7 @@ describe('Facility Type Detail Form', function () {
 
         // Click on Facility table link
         FacilityTypeDetailForm.ClickTableItem(FacilityName)
-        cy.wait(4000)
+        cy.wait(8000)
 
         //click Operating Period Tabe
         FacilityTypeDetailForm.ChargeRateTabe()

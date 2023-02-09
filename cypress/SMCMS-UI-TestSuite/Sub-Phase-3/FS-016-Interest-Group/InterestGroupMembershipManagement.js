@@ -6,18 +6,18 @@ import Common from '../../../page-objects/SMCMS/PageActions/Common/Common'
 
 const common = new Common
 
-beforeEach(() => {
+// beforeEach(() => {
 
-    // Set local storage for QA Enviroment
-    // cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
+//     // Set local storage for QA Enviroment
+//     // cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
 
-    // Set local storage for UAT Enviroment
-    // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
+//     // Set local storage for UAT Enviroment
+//     // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
 
 
-    cy.visit('/membership/interestGroupMembershipListing')
+//     cy.visit('/membership/interestGroupMembershipListing')
 
-})
+// })
 
 const InterestGroupMembershipManagment = () => {
 
@@ -27,10 +27,14 @@ describe('FS-016 Interest Group Membership Management', function () {
 
     it('Checking Interest Group Member listing filters functionality', function () {
 
+        cy.visit('/membership/interestGroupMembershipListing')
+
         InterestGroupListing.CheckFilterFunctionality(IGMian, InterestGroup, IGMembershipID, SAFRAMembershipID, Status, CustomerName, ExpiryDateFrom, ExpiryDateTo)
     })
 
     it('Accessing Interest Group detail on Interest Group Member listing.', function () {
+
+        cy.visit('/membership/interestGroupMembershipListing')
 
         InterestGroupListing.CheckFilterFunctionality(IGMian, InterestGroup, IGMembershipID, SAFRAMembershipID, Status, CustomerName, ExpiryDateFrom, ExpiryDateTo)
 
@@ -48,6 +52,8 @@ describe('FS-016 Interest Group Membership Management', function () {
 
     it('Accessing Interest Group Transaction History', function () {
 
+        cy.visit('/membership/interestGroupMembershipListing')
+        
         InterestGroupListing.CheckFilterFunctionality(IGMian, InterestGroup, IGMembershipID, SAFRAMembershipID, Status, CustomerName, ExpiryDateFrom, ExpiryDateTo)
 
         InterestGroupListing.SlectTableLinkItem(CustomerName)
