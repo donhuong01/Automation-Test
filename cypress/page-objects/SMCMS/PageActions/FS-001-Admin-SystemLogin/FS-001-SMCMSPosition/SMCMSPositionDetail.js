@@ -55,7 +55,7 @@ class PositionDetailForm {
 
 
         cy.SelectPickerDifferentItemsWait(
-            elems_SMCMSRoleDetail.BTN_ADDUSERS, 30000,
+            elems_SMCMSRoleDetail.BTN_ADDUSERS, 5000,
             elems_Picker.TXT_LOGINEMAIL,
             targetUserEmail,
             elems_SMCMSRoleDetail.BTN_SEARCHFILTERS

@@ -133,43 +133,44 @@ import login from '../../fixtures/login'
 beforeEach(() => {
 
     // Set local storage for QA Enviroment
-    // cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
+    cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
    
     // Set local storage for UAT Enviroment
-    cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
+    // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
 })
  
 // describe('E2E Auto Testing:FS-001', () => {
 
     // OnlineAccountAccess() 
     // SMCMSPostion()
-    // SMCMSRole()
+    // SMCMSRole() //Reports are missing
     // SMCMSUser() 
 // })
+
 // describe('E2E Auto Testing:FS-004', () => {
 
     // CustomerCategoryType()
     // CustomerCategory()
-    //    CodeType()
+    // CodeType()
     // CodeSetMaster()
-//     DocumentTemplate()
-//     ApplicationSetting() //Not Required
-    // NotificationMessageTemplate() //Not Required
-    // AnnouncementPortalNotification() //Not Required
+    // DocumentTemplate()
+    // //ApplicationSetting() //Not Required
+    // //NotificationMessageTemplate() //Not Required
+    // //AnnouncementPortalNotification() //Not Required
 // })
 
-//  describe('E2E Auto Testing:FS-010', ()=> {
-//     FacilityGeneralSettingDtl()
-//     FacilitySettingsCalendar()
-//     FacilitySettingCalendarSettings()
-//     FacilityOperatingPeriod() //Failing
-//     FacilityTypeDetailFormManagement() //Operating Tab
-//     FacilitySetupDetail() //Check Agian
-//     FacilityBookingManagement("S1935582I")
-//     FacilityBookingAmendmentManagment()
-//     FacilityBookingExtentionManagment()
+ describe('E2E Auto Testing:FS-010', ()=> {
+    // FacilityGeneralSettingDtl()
+    FacilitySettingsCalendar()
+    // FacilitySettingCalendarSettings()
+    // FacilityOperatingPeriod() //Failing
+    // FacilityTypeDetailFormManagement() //Operating Tab
+    // FacilitySetupDetail() //Check Agian
+    // FacilityBookingManagement("S1935582I") //Change NRIC before runing this function
+    // FacilityBookingAmendmentManagment()
+    // FacilityBookingExtentionManagment()
 
-//  })
+ })
 
 // describe('E2E Auto Testing:FS-014', ()=> {
 
@@ -245,44 +246,44 @@ beforeEach(() => {
 // })
 
 
-describe('E2E Auto Testing:FS-015', ()=> {
+// describe('E2E Auto Testing:FS-015', ()=> {
 
-    E1GYMMembershipConversion("A300001845") // Enter Member ID
-    E1GYMMembershipDeferment("G1000000032") // Enter E1 Gym Membership ID
-    E1GYMMembershipModuleSettings()
-    // Enter SAFRA MemberID and Member Name
-    E1GYMMembershipRegistrationWithExistingMember("A300002327", "Auto-Name 366H")
-    E1GYMMembershipRegistrationWithNonMember("S3716755Z") //Change NRIC each time after runing this code
-    E1GYMMembershipReinstatement("A300001847") //Enter Member ID
-    E1GYMMembershipRenewal("S6103054I") //Change NRIC each time after runing this code
-    E1GYMMembershipTermination("A300001847") //Provide Active member ID
-    E1GYMMembershipWaiver("A300001815") //Provide Active member ID
-    E1GYMMembershipAndChargeRateSetup()
-    E1GYMMembershipDataManagement("A300001798","G1000000017") //Provide MemberID and E1GymMemberhipID
-    E1GYMMembershipRenewalAdvise()
-    E1GYMSetupManagement()
-
-
-})
+//     E1GYMMembershipConversion("A300001845") // Enter Member ID
+//     E1GYMMembershipDeferment("G1000000032") // Enter E1 Gym Membership ID
+//     E1GYMMembershipModuleSettings()
+//     // Enter SAFRA MemberID and Member Name
+//     E1GYMMembershipRegistrationWithExistingMember("A300002327", "Auto-Name 366H")
+//     E1GYMMembershipRegistrationWithNonMember("S3716755Z") //Change NRIC each time after runing this code
+//     E1GYMMembershipReinstatement("A300001847") //Enter Member ID
+//     E1GYMMembershipRenewal("S6103054I") //Change NRIC each time after runing this code
+//     E1GYMMembershipTermination("A300001847") //Provide Active member ID
+//     E1GYMMembershipWaiver("A300001815") //Provide Active member ID
+//     E1GYMMembershipAndChargeRateSetup()
+//     E1GYMMembershipDataManagement("A300001798","G1000000017") //Provide MemberID and E1GymMemberhipID
+//     E1GYMMembershipRenewalAdvise()
+//     E1GYMSetupManagement()
 
 
-describe('E2E Auto Testing:FS-016', ()=> {
+// })
 
-    BatchMemRegWithExistingMemUsingDefaultIG("A300002301") //Provide Active member ID
-    BatchMemRegWithExistingMemUsingNonDefaultIG("A300002305") //Provide Active member ID
-    InterestGroupDeactivation()
-    InterestGroupManagement()
-    InterestGroupConversion("John Lee") //Please Provide Active Member Name
-    InterestGroupDeferment("Test User 13448") //Please Provide Active Member Name
-    InterestGroupMembershipManagment()
-    InterestGroupMembershipRegistration("S4914013D") //Change NRIC each time after runing this code
-    IGMembershipReinstatement("A300001854", "Test User 8310150")
-    InterestGMembershipRenewal("S0038535B") //Change NRIC each time after runing this code
-    InterestGMembershipReverse("Test User 13448") //Provide Member Name
-    InterestGMembershipTermination("A300000431","Test User 46") // Provide MemberId and Member Name
-    InterestGMembershipwaiver("Test User 61718")  //Provide Member Name
 
-})
+// describe('E2E Auto Testing:FS-016', ()=> {
+
+//     BatchMemRegWithExistingMemUsingDefaultIG("A300002301") //Provide Active member ID
+//     BatchMemRegWithExistingMemUsingNonDefaultIG("A300002305") //Provide Active member ID
+//     InterestGroupDeactivation()
+//     InterestGroupManagement()
+//     InterestGroupConversion("John Lee") //Please Provide Active Member Name
+//     InterestGroupDeferment("Test User 13448") //Please Provide Active Member Name
+//     InterestGroupMembershipManagment()
+//     InterestGroupMembershipRegistration("S4914013D") //Change NRIC each time after runing this code
+//     IGMembershipReinstatement("A300001854", "Test User 8310150")
+//     InterestGMembershipRenewal("S0038535B") //Change NRIC each time after runing this code
+//     InterestGMembershipReverse("Test User 13448") //Provide Member Name
+//     InterestGMembershipTermination("A300000431","Test User 46") // Provide MemberId and Member Name
+//     InterestGMembershipwaiver("Test User 61718")  //Provide Member Name
+
+// })
 
 
 

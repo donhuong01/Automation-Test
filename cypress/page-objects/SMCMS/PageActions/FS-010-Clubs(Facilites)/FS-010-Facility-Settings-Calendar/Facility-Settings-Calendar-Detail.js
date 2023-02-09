@@ -281,7 +281,7 @@ CopySelectedPeriodToCurrentYear(PeriodName1, PeriodName2){
             cy.EnterText(elems_PendingTaskListing.TXT_TASKID, TaskID)
             cy.EnterText(elems_PendingTaskListing.TXT_WORKFLOWNAME, WorkFlowName)
             cy.Click(elems_PendingTaskListing.BTN_SEARCH)
-            cy.wait(3000)
+            cy.wait(5000)
             cy.Click('(//h2[text()="Pending Task Listing"]/ancestor::div//table//a)[1]')
             cy.wait(5000)
             cy.VerifyElementText(elems_PageHeader.LBL_PAGETITLE, "Pending Task Detail")

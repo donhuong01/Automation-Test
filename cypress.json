@@ -19,7 +19,7 @@
       "inlineAssets": true
     },
     "video": false,
-    "baseUrl":"https://uat-smcms.safra.sg",
+    "baseUrl":"https://qa-smcms.safra.sg",
     "viewportWidth": 1280,
     "viewportHeight": 1280
     

@@ -48,6 +48,7 @@ describe('[TS01] Facility Settings Calendar', function () {
 
 
         cy.visit('/facilities/calendarListing')
+        cy.wait(5000)
 
         FacilitySettingsCalendarListingForm.VerifyFormTitle()
 
@@ -94,6 +95,7 @@ describe('[TS01] Facility Settings Calendar', function () {
 
 
         cy.visit('/admin/pendingTaskList')
+        cy.wait(5000)
 
         FacilitySettingsCalendarDetailForm.FacilityCalendarWorkFlow("F-CAL","Facility Calendar Approval Workflow","Approve","Testing")
         cy.wait(5000)
@@ -103,6 +105,7 @@ describe('[TS01] Facility Settings Calendar', function () {
     it('[TC04] Verify newly created item in the list and delete', function () {
 
         cy.visit('/facilities/calendarListing')
+        cy.wait(5000)
         FacilitySettingsCalendarListingForm.FillOutSettingCalendarForm(CalendarName, Approved, RecordStatusActive)
         FacilitySettingsCalendarListingForm.DeleteItem(CalendarName, Approved)
         FacilitySettingsCalendarListingForm.DeleteItemYes()
