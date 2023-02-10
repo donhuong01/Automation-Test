@@ -28,8 +28,8 @@ describe('[TS13] Batch Membership Registration Details form', function () {
     const ShoppingCartPayment = new ShoppingCartPayments()
 
     //Existing Member
-    const NRICExistingMember = '096C'
-    const IDExistingMember = 'A300002030'
+    const NRICExistingMember = '774Z'
+    const IDExistingMember = 'A30000007'
     const ExistingPrincipalName = 'Test user 1212'
     
     //Non-Member 
@@ -118,7 +118,7 @@ describe('[TS13] Batch Membership Registration Details form', function () {
         BatchMembershipRegistrationDetail.Next()
 
         // Swlct Member Category
-        BatchMembershipRegistrationDetail.SelectMemberCategory('Principal')
+        // BatchMembershipRegistrationDetail.SelectMemberCategory('Principal')
 
         //Enter Applicatioin Date
         BatchMembershipRegistrationDetail.AddApplicationDate(ApplicationDate)
@@ -130,7 +130,7 @@ describe('[TS13] Batch Membership Registration Details form', function () {
         BatchMembershipRegistrationListing.verifyPageTitle('Member Tenure Selection - In Batch Registration')
          
         //Select Pricipal Tenure
-        BatchMembershipRegistrationListing.principalTenureSelection('5 Years')
+        BatchMembershipRegistrationListing.MembershipPrincipalTenureSelection('5 Years')
 
         //Click Save And Next button
         BatchMembershipRegistrationDetail.SaveAndNextTenure()

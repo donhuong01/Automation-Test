@@ -1,15 +1,15 @@
-import EDCTerminalListing from '../../../../page-objects/SMCMS/PageActions/FS-036-SRP/EDC_TerminalListing'
-import EDCTerminalDetail from '../../../../page-objects/SMCMS/PageActions/FS-036-SRP/EDC_TerminalDetail'
-import data from '../../../../fixtures/Data_Module/FS-036-SRP/SRP_Sample_Data'
-import login from '../../../../fixtures/login'
+import EDCTerminalListing from '../../../page-objects/SMCMS/PageActions/FS-036-SRP/EDC_TerminalListing'
+import EDCTerminalDetail from '../../../page-objects/SMCMS/PageActions/FS-036-SRP/EDC_TerminalDetail'
+import data from '../../../fixtures/Data_Module/FS-036-SRP/SRP_Sample_Data'
+import login from '../../../fixtures/login'
 
 beforeEach(() => {
 
     // Set local storage for QA Enviroment
-    cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
+    // cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
 
     // Set local storage for UAT Enviroment
-    // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
+    cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
 
 })
 

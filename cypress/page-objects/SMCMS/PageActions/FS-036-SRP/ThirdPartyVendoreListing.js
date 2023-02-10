@@ -61,7 +61,7 @@ class ThirdPartyVendoreListing {
         *****************************************************/
     ClickVendoreIDLink(VendoreID) {
 
-        cy.ClickTableLinkItem(elems_ThirdPartyVendoreListing.TBL_THIRDOARTYVENDORLSITING, 'Vendore ID', VendoreID)
+        cy.ClickTableLinkItem(elems_ThirdPartyVendoreListing.TBL_THIRDOARTYVENDORLSITING, 'Vendor ID', VendoreID)
 
     }
 

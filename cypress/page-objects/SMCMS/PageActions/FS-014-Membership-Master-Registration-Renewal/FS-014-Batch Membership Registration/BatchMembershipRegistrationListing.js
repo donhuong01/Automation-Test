@@ -190,6 +190,57 @@ class BatchMembershipRegistrationListing {
 
      }
 
+     
+    /*****************************************************
+     * Method: dependentTenureSelection
+     * Description: Add Tenure Selection to Dependent Member
+     *
+     * @param {string} memberId Dependent Member ID
+     * @param {string} tenureSelection Tenure Selection
+     * @param {string} ColumnValue target column 
+     *****************************************************/
+    dependentTenureSelection(ColumnValue, tenureSelection){
+        
+     cy.TenureSelection(elems_MembershipTenureSelection.Dependent.TBL_DEPENDENT,
+         ColumnValue,  tenureSelection)
+ }
+
+ /*****************************************************
+  * Method: selectDependent
+  * Description: Select Dependent Member
+  *
+  * @param {string} name   Dependent Member Name
+  *****************************************************/
+  selectDependent( name){
+
+     // Tick Checkbox of Member ID
+     if( name !== undefined ){
+         cy.SelectTableItem(
+             elems_MembershipTenureSelection.Dependent.TBL_DEPENDENT,
+             // 'Member ID', memberId,
+             'Name', name, 
+            
+         )
+     }
+  }
+    /*****************************************************
+  * Method: SelectPrincipal
+  * Description: Select Principal Member
+  * @param {string} name Principal Member Name
+  *****************************************************/
+     SelectPrincipal( name){
+
+         // Tick Checkbox of Member ID
+         if( name !== undefined ){
+             cy.SelectTableItem(
+                 elems_MembershipTenureSelection.Principal.TBL_PRINCIPAL,
+                 // 'Member ID', memberId,
+                 'Name', name, 
+                
+             )
+         }
+      }
+
 }
 
 export default new BatchMembershipRegistrationListing

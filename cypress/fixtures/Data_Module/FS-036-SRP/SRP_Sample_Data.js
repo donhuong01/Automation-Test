@@ -34,7 +34,7 @@ const data = {
     },
 
     Third_Party_Vendore_Management: {
-        VendorID: 'VD002',
+        VendorID: 'VD003',
         Name: 'Auto-Name ' + Math.floor(Math.random() * 10000),
         MerchandiseID: "MI" + Math.floor(Math.random() * 10000),
         Status: "Open",
@@ -46,9 +46,9 @@ const data = {
         UpdatedContactNO: Math.floor(Math.random() * 10056300),
     },
     SAFRA_Points_Adjustment: {
-        MemberID: "A300002296",
+        MemberID: "A30000400",
         SourceChannel: "SAFRA HQ",
-        VendorID: "V00003",
+        VendorID: "VD002",
         EDCTerminal: "TID00002",
         Remarks: "Testing",
         SAFRAPoints: "500",
@@ -56,11 +56,11 @@ const data = {
         Deduction: "Deduction",
     },
     SAFRA_Points_Transaction: {
-        MemberID: "A300002296",
+        MemberID: "A30000400",
         TransactionType: "Awarding",
         SRPOperationItem: 'Manual Points Adjustment',
         SourceChannel: "SAFRA HQ",
-        VendoreID: "V00003",
+        VendoreID: "VD002",
         EDCTerminalID: "TID00002",
         Type: "Awarding",
         Remark: "Testing",

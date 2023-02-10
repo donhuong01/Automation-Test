@@ -49,7 +49,8 @@ class SRP_PromotionListing {
         cy.EnterText(elems_MemberListing.TXT_MEMBERID, MemberID)
         cy.Click(elems_MemberListing.BTN_SEARCHFILTER)
         cy.wait(3000)
-        cy.SelectTableItem(elems_MemberListing.TBL_MEMBERLISTING, 'Member ID', MemberID)
+        cy.Click('(//h2[text()="Member Listing"]/ancestor::div//table//td)[1]')
+        // cy.SelectTableItem(elems_MemberListing.TBL_MEMBERLISTING, 'Member ID', MemberID)
 
     }
     /*****************************************************

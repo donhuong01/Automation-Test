@@ -187,9 +187,6 @@ beforeEach(() => {
     // SFSMemberRegistion("S2553318F", "S1057999F", "S4632722E") //Add three NRIC's for Principal, Dependent Child, Dependent Spouse
     // E2EMemberShipRenewal("S5886263J") //Add NRIC For Principal Registration
     // LifeMembershipManagment("S9506118D") //Add NRIC For Principal Registration
-
-    /* Enter NRIC(1) and MemberID(2) for existing member, Enter NRIC(3) and Date of Birth(4) for non-member
-     Enter NRIC for New Principal(5) and Dependent(6), Enter Dependent PrincipalID(7)*/
     // BatchMembershipRegistration() //
 
 
@@ -205,15 +202,15 @@ beforeEach(() => {
 // })
 
 // describe('E2E Auto Testing:FS-028', ()=> {
-    // MembershipDeceased("A30001685") //Done
-    // BatchMembershipTermination("A30001669","A30001670","A30001672")
-//     BatchMemDefermentRequest("989D", "A300000096","safra3rduploadreminder", "A300000235") 
-//     MembershipSuspensionReleaseRequest() //n 
-//     ReinstatementConfirmation("A300000672") 
-//     BatchMembershipWaiver("S2666615E","S7603500H") // Enter 2 NRIC's for Member Registration 
-//     MemDefermentRequest("S9147820Z") //Change NRIC before runing this function
-//     MembershipResignationManagement("S6744863D") //Change NRIC before runing this function
-//     MembershipExpulsionAndReinstatment("S7344497G") //Change NRIC before runing this function
+    // MembershipDeceased("A30001685") //Provide Active member ID
+    // BatchMembershipTermination("A30000397","A30000367","A30000284") //Provide Active member ID's
+    // BatchMemDefermentRequest("989D", "A300000096","safra3rduploadreminder", "A300000235") 
+    // MembershipSuspensionReleaseRequest() //n 
+    // ReinstatementConfirmation("A300000672") 
+    // BatchMembershipWaiver("S2666615E","S7603500H") // Enter 2 NRIC's for Member Registration 
+    // MemDefermentRequest("S9147820Z") //Change NRIC before runing this function
+    // MembershipResignationManagement("S6744863D") //Change NRIC before runing this function
+    // MembershipExpulsionAndReinstatment("S7344497G") //Change NRIC before runing this function
 // })
 
 // describe('E2E Auto Testing:FS-027', () => {
@@ -289,5 +286,18 @@ beforeEach(() => {
 
 // })
 
+// describe('E2E Auto Testing:FS-036', ()=> {
+
+    // SRPModuleSetting()
+    // // EDCTerminalManagement()
+    // SAFRAPointsAdjustment("A300002280") // Pass Member ID
+    // SAFRAPointsTransaction("A300002316") // Pass Member ID
+    // SRPPromotionManagement() // not completed
+    // SRPRedemptionCatalogueManagement()
+    // SRPRedemptionCollection("A300002316") // Pass Member ID
+    // SRPRedemptionManagement("A300002316") // Pass Member ID
+    // ThirdPartyVendorManagement()
+
+// })
 
 

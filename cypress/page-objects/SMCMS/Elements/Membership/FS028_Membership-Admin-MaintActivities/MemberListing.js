@@ -17,6 +17,7 @@ class elems_MemberListing {
     static DATE_EXPIRYDATE_FROM = '//input[@id="dtpExpiryDateFrom"]'
     static DATE_EXPIRYDATE_TO = '//input[@id="dtpExpiryDateTo"]'
     static BTNDRP_MEMBERSHIP = '//button[text()="Membership"]/parent::div//button[@class="k-button k-button-icon"]'
+    static BTNDRP_SRP = '//button[text()="SRP"]/parent::div//button[@class="k-button k-button-icon"]'
     static BTNDRP_MAINTENANCE = '//button[text()="Maintenance"]/parent::div//button[@class="k-button k-button-icon"]'
     static BTNDRP_PAYMENT = '//button[text()="Payment"]/parent::div//button[@class="k-button k-button-icon"]'
     static BTN_SEARCHFILTERS = '//div[text()="Search Filters"]/parent::button'
