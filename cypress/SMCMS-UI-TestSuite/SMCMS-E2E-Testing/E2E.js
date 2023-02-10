@@ -133,10 +133,10 @@ import login from '../../fixtures/login'
 beforeEach(() => {
 
     // Set local storage for QA Enviroment
-    cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
+    // cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
    
     // Set local storage for UAT Enviroment
-    // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
+    cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
 })
  
 // describe('E2E Auto Testing:FS-001', () => {
@@ -172,24 +172,28 @@ beforeEach(() => {
 
 //  })
 
-describe('E2E Auto Testing:FS-014', ()=> {
+// describe('E2E Auto Testing:FS-014', ()=> {
 
     // MembershipRegistration("S4079930C") // Enter Full NRIC
     // CustomerCheckIn()
     // MemberType()
     // BadAddressUpdate()// Fail Need code updates
-    MembershipRenewalAdvise()
-    // WithdrawalOfConsent("A300002019") //Enter Member ID for Withdrawal Of Consent
+    // MembershipRenewalAdvise()
+    // WithdrawalOfConsent("A30000681") //Enter Member ID for Withdrawal Of Consent
     // SourceChannel() 
     // //MemberStatusReasonCode() // Not Required
-    // BatchMembershipRegistration() ///
     // MassUpdateForMemberData()
     // MembershipModuleSettings()
-    // SFSMemberRegistion("S9748341H", "S4783904A", "S2433320E") //Add three NRIC's for Principal, Dependent Child, Dependent Spouse
-    // E2EMemberShipRenewal("S7969593I") //Add NRIC For Principal Registration
-    // LifeMembershipManagment("S1174105C") //Add NRIC For Principal Registration
+    // SFSMemberRegistion("S2553318F", "S1057999F", "S4632722E") //Add three NRIC's for Principal, Dependent Child, Dependent Spouse
+    // E2EMemberShipRenewal("S5886263J") //Add NRIC For Principal Registration
+    // LifeMembershipManagment("S9506118D") //Add NRIC For Principal Registration
 
-})
+    /* Enter NRIC(1) and MemberID(2) for existing member, Enter NRIC(3) and Date of Birth(4) for non-member
+     Enter NRIC for New Principal(5) and Dependent(6), Enter Dependent PrincipalID(7)*/
+    // BatchMembershipRegistration() //
+
+
+// })
 
 //  describe('E2E Auto Testing:FS-025', ()=> {
     // VolunteerCommittee()

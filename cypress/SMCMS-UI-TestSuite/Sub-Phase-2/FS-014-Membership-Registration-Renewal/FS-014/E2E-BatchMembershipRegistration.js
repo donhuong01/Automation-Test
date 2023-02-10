@@ -118,7 +118,7 @@ describe('[TS13] Batch Membership Registration Details form', function () {
         BatchMembershipRegistrationDetail.Next()
 
         // Swlct Member Category
-        // BatchMembershipRegistrationDetail.SelectMemberCategory('Defendent')
+        BatchMembershipRegistrationDetail.SelectMemberCategory('Principal')
 
         //Enter Applicatioin Date
         BatchMembershipRegistrationDetail.AddApplicationDate(ApplicationDate)

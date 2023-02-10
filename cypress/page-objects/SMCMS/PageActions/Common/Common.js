@@ -23,10 +23,10 @@ class Commons {
 
         })
         cy.Click(elems_SMCMSShoppingCartAndPayment.Payments.BTN_APPLYPAYMENT)
-        cy.wait(3000)
+        cy.wait(8000)
 
         cy.Click(elems_SMCMSShoppingCartAndPayment.Payments.BTN_PAYNOW)
-        cy.wait(3000)
+        cy.wait(5000)
 
 
     }
