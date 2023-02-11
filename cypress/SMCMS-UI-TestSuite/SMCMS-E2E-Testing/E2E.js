@@ -116,17 +116,29 @@ import MembershipChargeRate from '../Sub-Phase-2/FS-029-Member-Charge-Rate/E2E-M
 // import VIPCardManagement from '../Sub-Phase-2/FS-030-Membership-Card-Management/E2E-VIPCardMangement'
 // import VolunteerCardManagement from '../Sub-Phase-2/FS-030-Membership-Card-Management/E2E-VolunteerCardMangement'
 
+// FS-036 SRP 
+import EDCTerminalManagement from '../Sub-Phase-3/FS-036-SRP/E2E-EDCTerminalManagement'
+import SAFRAPointsAdjustment from '../Sub-Phase-3/FS-036-SRP/E2E-SAFRAPointsAdjustment'
+import SAFRAPointsTransaction from '../Sub-Phase-3/FS-036-SRP/E2E-SAFRAPointsTransaction'
+import SRPModuleSetting from '../Sub-Phase-3/FS-036-SRP/E2E-SRPModuleSetting'
+import SRPPromotionManagement from '../Sub-Phase-3/FS-036-SRP/E2E-SRPPromotionManagement'
+import SRPRedemptionCatalogueManagement from '../Sub-Phase-3/FS-036-SRP/E2E-SRPRedemptionCatalogueManagement'
+import SRPRedemptionCollection from '../Sub-Phase-3/FS-036-SRP/E2E-SRPRedemptionCollection'
+import SRPRedemptionManagement from '../Sub-Phase-3/FS-036-SRP/E2E-SRPRedemptionManagement'
+import ThirdPartyVendorManagement from '../Sub-Phase-3/FS-036-SRP/E2E-ThirdPartyVendorManagement'
+
+// FS-013 and FS-039 Merchandise and In-HouseSale 
+import InHouseSaleAndMerchandiseItemManagement from '../Sub-Phase-3/FS-039&FS-013-InHouseSaleAndMerchandise/InHouseSaleAndMerchandiseItemManagement'
+import InHouseSaleAndMerchandisePurchase from '../Sub-Phase-3/FS-039&FS-013-InHouseSaleAndMerchandise/InHouseSaleAndMerchandisePurchase'
+import InHouseSaleAndMerchandiseTransactionAdjustment from '../Sub-Phase-3/FS-039&FS-013-InHouseSaleAndMerchandise/InHouseSaleAndMerchandiseTransactionAdjustment'
+import InHouseSaleAndMerchandiseTransactionConcellation from '../Sub-Phase-3/FS-039&FS-013-InHouseSaleAndMerchandise/InHouseSaleAndMerchandiseTransactionCancellation'
+import InHouseSaleAndMerchandiseTransactionRefund from '../Sub-Phase-3/FS-039&FS-013-InHouseSaleAndMerchandise/InHouseSaleAndMerchandiseTransactionRefund'
+
+
 //FS - 040 Club Sales
 // import ReceiptManagement from '../E2E-Scripts/FS-040/E2E-Receipt-Management'
 
 import login from '../../fixtures/login'
-
-
-
-
-
-
-
 
 
 
@@ -288,16 +300,28 @@ beforeEach(() => {
 
 // describe('E2E Auto Testing:FS-036', ()=> {
 
-    // SRPModuleSetting()
-    // // EDCTerminalManagement()
-    // SAFRAPointsAdjustment("A300002280") // Pass Member ID
-    // SAFRAPointsTransaction("A300002316") // Pass Member ID
-    // SRPPromotionManagement() // not completed
-    // SRPRedemptionCatalogueManagement()
-    // SRPRedemptionCollection("A300002316") // Pass Member ID
-    // SRPRedemptionManagement("A300002316") // Pass Member ID
-    // ThirdPartyVendorManagement()
+//     SRPModuleSetting()
+//     EDCTerminalManagement()
+//     SAFRAPointsAdjustment("A300002280") //Provide Active member ID
+//     SAFRAPointsTransaction("A300002316") //Provide Active member ID
+//     SRPPromotionManagement() // not completed
+//     SRPRedemptionCatalogueManagement()
+//     SRPRedemptionCollection("A300002316") //Provide Active member ID
+//     SRPRedemptionManagement("A300002316") //Provide Active member ID
+//     ThirdPartyVendorManagement()
 
 // })
+
+
+
+describe('E2E Auto Testing:FS-013 & 039', ()=> {
+
+    InHouseSaleAndMerchandiseItemManagement()
+    InHouseSaleAndMerchandisePurchase()
+    InHouseSaleAndMerchandiseTransactionAdjustment()
+    InHouseSaleAndMerchandiseTransactionConcellation()
+    InHouseSaleAndMerchandiseTransactionRefund()
+
+})
 
 
