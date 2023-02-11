@@ -1,6 +1,6 @@
-import InterestGroupMembershipCoversion from '../../../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupMembershipCoversion'
-import InterestGroupMembershipListing from '../../../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupMembershipListing'
-import login from '../../../../../fixtures/login'
+import InterestGroupMembershipCoversion from '../../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupMembershipCoversion'
+import InterestGroupMembershipListing from '../../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupMembershipListing'
+import login from '../../../../fixtures/login'
 
 
 

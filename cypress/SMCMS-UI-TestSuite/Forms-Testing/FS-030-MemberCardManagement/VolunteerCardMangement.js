@@ -3,7 +3,7 @@ import VolunteerAppointmentTermRegistrationDetail from '../../../../page-objects
 import AppointmentTermRegistrationListingForm from '../../../../page-objects/SMCMS/PageActions/FS-025-Membership-VIP-Volunteer-Veteran-League/FS-025-Volunteer Appointment Term Registration/VolunteerAppointmentTermRegistrationListing'
 import data from '../../../../fixtures/Data_Module/FS-030-Membership-Card-Management/030-data'
 import VolunteerCard from '../../../../page-objects/SMCMS/PageActions/FS-030-Membership Card Management/FS-030-Volunteer-Card/VolunteerCard'
-import login from '../../../../fixtures/login'
+import login from '../../../fixtures/login'
 
 beforeEach(() => {
 

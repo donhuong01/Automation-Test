@@ -5,10 +5,10 @@
  * @author: fshahzada
  *****************************************************/
 // Import Pages
-import FacilityTypeDetailForm from '../../../../../page-objects/SMCMS/PageActions/FS-010-Clubs(Facilites)/FS-010-Facility-Type-Detail-Form/FacilityTypeDetailForms'
-import login from '../../../../../fixtures/login'
-import data from '../../../../../fixtures/Data_Module/FS-010-Club-Facility/010-data'
-import FacilityDetailForm from '../../../../../page-objects/SMCMS/PageActions/FS-010-Clubs(Facilites)/FS-010-Facilty-Detail-Form/FacilityDetailForm'
+import FacilityTypeDetailForm from '../../../../page-objects/SMCMS/PageActions/FS-010-Clubs(Facilites)/FS-010-Facility-Type-Detail-Form/FacilityTypeDetailForms'
+import login from '../../../../fixtures/login'
+import data from '../../../../fixtures/Data_Module/FS-010-Club-Facility/010-data'
+import FacilityDetailForm from '../../../../page-objects/SMCMS/PageActions/FS-010-Clubs(Facilites)/FS-010-Facilty-Detail-Form/FacilityDetailForm'
 
 
 beforeEach(() => {

@@ -5,10 +5,10 @@
  *****************************************************/
 
 // Import Pages
-import WithdrawalOfConsentForm from "../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-WithdrawalOfConsentForm/WithdrawalOfConsentForm"
-import data from '../../../../../fixtures/Data_Module/FS-014-Membership-Registration-Renewal/014-data'
-import login from '../../../../../fixtures/login'
-import elems_MemberListing from '../../../../../page-objects/SMCMS/Elements/Membership/FS028_Membership-Admin-MaintActivities/MemberListing'
+import WithdrawalOfConsentForm from "../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-WithdrawalOfConsentForm/WithdrawalOfConsentForm"
+import data from '../../../../fixtures/Data_Module/FS-014-Membership-Registration-Renewal/014-data'
+import login from '../../../../fixtures/login'
+import elems_MemberListing from '../../../../page-objects/SMCMS/Elements/Membership/FS028_Membership-Admin-MaintActivities/MemberListing'
 
 //Personal Information
 const ActiveMemberID = 'A30000829'

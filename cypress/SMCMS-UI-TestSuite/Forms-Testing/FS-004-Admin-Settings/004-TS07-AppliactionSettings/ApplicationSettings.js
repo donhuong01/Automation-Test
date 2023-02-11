@@ -5,8 +5,8 @@
  *****************************************************/
 
 // Import Pages
-import ApplicationSettings from '../../../../../page-objects/SMCMS/PageActions/FS-004-Admin-Settings/FS-004-Application Settings/ApplicationSettings'
-import data from '../../../../../fixtures/Data_Module/FS-004-Admin-Settings/004-data'
+import ApplicationSettings from '../../../../page-objects/SMCMS/PageActions/FS-004-Admin-Settings/FS-004-Application Settings/ApplicationSettings'
+import data from '../../../../fixtures/Data_Module/FS-004-Admin-Settings/004-data'
 
 describe('[TS19] Application Settings Management', function () {
 

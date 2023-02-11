@@ -1,8 +1,8 @@
-import login from '../../../../../fixtures/login'
-import InterestGroupListing from '../../../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupMembershipListing'
-import WaiverData from '../../../../../fixtures/Data_Module/FS-016-Interest-Group/FS016-Interest-Group-Membership-Waiver'
-import IGMembershipWaiver from '../../../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupMembershipWaiver'
-import InterestGroupMembershipReversalRequest from '../../../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupMembershipReversalRequest'
+import login from '../../../../fixtures/login'
+import InterestGroupListing from '../../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupMembershipListing'
+import WaiverData from '../../../../fixtures/Data_Module/FS-016-Interest-Group/FS016-Interest-Group-Membership-Waiver'
+import IGMembershipWaiver from '../../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupMembershipWaiver'
+import InterestGroupMembershipReversalRequest from '../../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupMembershipReversalRequest'
 
 
 beforeEach(() => {

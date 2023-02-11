@@ -1,6 +1,6 @@
 
-import PositionDetailForm from '../../../../../page-objects/SMCMS/PageActions/FS-001-Admin-SystemLogin/FS-001-SMCMSPosition/SMCMSPositionDetail'
-import data from '../../../../../fixtures/Data_Module/FS-004-Admin-Settings/001-data'
+import PositionDetailForm from '../../../../page-objects/SMCMS/PageActions/FS-001-Admin-SystemLogin/FS-001-SMCMSPosition/SMCMSPositionDetail'
+import data from '../../../../fixtures/Data_Module/FS-004-Admin-Settings/001-data'
 
 describe('[TS01] SMCMS Position Detail Form', function () {
 

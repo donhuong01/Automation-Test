@@ -1,9 +1,9 @@
 
-import login from '../../../../../fixtures/login'
+import login from '../../../../fixtures/login'
 
-import E1GymMembershipRegistration from '../../../../../page-objects/SMCMS/PageActions/FS-015-E1-Gym-MemberShip/E1 Gym Membership Registration'
-import Data from '../../../../../fixtures/Data_Module/FS-015-E1-Gym-Membership/E1GymMembershipRegistrationExistingMember'
-import Commons from '../../../../../page-objects/SMCMS/PageActions/Common/Common'
+import E1GymMembershipRegistration from '../../../../page-objects/SMCMS/PageActions/FS-015-E1-Gym-MemberShip/E1-Gym-Membership-Registration'
+import Data from '../../../../fixtures/Data_Module/FS-015-E1-Gym-Membership/E1GymMembershipRegistrationExistingMember'
+import Commons from '../../../../page-objects/SMCMS/PageActions/Common/Common'
 
 //Page definition
 const common = new Commons()

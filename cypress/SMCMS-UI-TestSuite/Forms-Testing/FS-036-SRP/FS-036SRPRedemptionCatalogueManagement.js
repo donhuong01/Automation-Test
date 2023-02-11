@@ -1,7 +1,7 @@
-import SRPRedemptionCatalogueListing from '../../../../page-objects/SMCMS/PageActions/FS-036-SRP/SRP_RedemptionCatalogueListing'
-import SRPRedemptionCatalogueDetail from '../../../../page-objects/SMCMS/PageActions/FS-036-SRP/SRP_RedemptionCatalogueDetails'
-import login from '../../../../fixtures/login'
-import data from '../../../../fixtures/Data_Module/FS-036-SRP/SRP_Sample_Data'
+import SRPRedemptionCatalogueListing from '../../../page-objects/SMCMS/PageActions/FS-036-SRP/SRP_RedemptionCatalogueListing'
+import SRPRedemptionCatalogueDetail from '../../../page-objects/SMCMS/PageActions/FS-036-SRP/SRP_RedemptionCatalogueDetails'
+import login from '../../../fixtures/login'
+import data from '../../../fixtures/Data_Module/FS-036-SRP/SRP_Sample_Data'
 
 
 beforeEach(() => {

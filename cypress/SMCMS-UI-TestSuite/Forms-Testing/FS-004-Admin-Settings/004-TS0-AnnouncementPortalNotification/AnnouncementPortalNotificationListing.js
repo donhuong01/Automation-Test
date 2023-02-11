@@ -5,9 +5,9 @@
  *****************************************************/
 
 // Import Pages
-import AnnouncementPortalNotificationListing from '../../../../../page-objects/SMCMS/PageActions/FS-004-Admin-Settings/FS-004-Announcement Portal Notification/AnnouncementPortalNotificationListing'
-import data from '../../../../../fixtures/Data_Module/FS-004-Admin-Settings/004-data'
-import login from '../../../../../fixtures/login'
+import AnnouncementPortalNotificationListing from '../../../../page-objects/SMCMS/PageActions/FS-004-Admin-Settings/FS-004-Announcement Portal Notification/AnnouncementPortalNotificationListing'
+import data from '../../../../fixtures/Data_Module/FS-004-Admin-Settings/004-data'
+import login from '../../../../fixtures/login'
 beforeEach(() => {
 
     // Set local storage for QA Enviroment

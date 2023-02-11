@@ -1,6 +1,6 @@
-import FacilityBookingExtention from '../../../../../page-objects/SMCMS/PageActions/FS-010-Clubs(Facilites)/FS-010-Facility-Booking-Extension/FacilityBookingExtension'
-import CustomerCheckInPage from '../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Customer CheckIn/CustomerCheckInPage'
-import login from '../../../../../fixtures/login'
+import FacilityBookingExtention from '../../../../page-objects/SMCMS/PageActions/FS-010-Clubs(Facilites)/FS-010-Facility-Booking-Extension/FacilityBookingExtension'
+import CustomerCheckInPage from '../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Customer CheckIn/CustomerCheckInPage'
+import login from '../../../../fixtures/login'
 
 beforeEach(() => {
     // cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)

@@ -6,10 +6,10 @@
 
 // Import Pages
 
-import VIPAppointmentDetail from '../../../../../page-objects/SMCMS/PageActions/FS-025-Membership-VIP-Volunteer-Veteran-League/FS-025-VIP Appointment Type/VIPAppointmentTypeDetail'
-import VIPAppointmentTypeListing from '../../../../../page-objects/SMCMS/PageActions/FS-025-Membership-VIP-Volunteer-Veteran-League/FS-025-VIP Appointment Type/VIPAppointmentTypeListing'
-import data from '../../../../../fixtures/Data_Module/FS-025-Membership-VIP-Volunteer-Veteran-League/025-data'
-import login from '../../../../../fixtures/login.js'
+import VIPAppointmentDetail from '../../../../page-objects/SMCMS/PageActions/FS-025-Membership-VIP-Volunteer-Veteran-League/FS-025-VIP Appointment Type/VIPAppointmentTypeDetail'
+import VIPAppointmentTypeListing from '../../../../page-objects/SMCMS/PageActions/FS-025-Membership-VIP-Volunteer-Veteran-League/FS-025-VIP Appointment Type/VIPAppointmentTypeListing'
+import data from '../../../../fixtures/Data_Module/FS-025-Membership-VIP-Volunteer-Veteran-League/025-data'
+import login from '../../../../fixtures/login.js'
 
 
 

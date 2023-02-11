@@ -1,10 +1,10 @@
-import data from '../../../../../fixtures/Data_Module/FS-014-Membership-Registration-Renewal/014-data'
+import data from '../../../../fixtures/Data_Module/FS-014-Membership-Registration-Renewal/014-data'
 
-import CustomerLandingPage from '../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Customer Landing Page/CustomerLandingPage'
-import elems_MemberInformation from '../../../../../page-objects/SMCMS/Elements/Membership/FS014_Membership-Master-Registration-Renewal/MemberInformation'
-import elems_CustomerCheckInPage from '../../../../../page-objects/SMCMS/Elements/Membership/FS014_Membership-Master-Registration-Renewal/CustomerCheckInPage'
-import elems_Landing from '../../../../../page-objects/SMCMS/Elements/Common/Customer_LandingPage'
-import login from '../../../../../fixtures/login'
+import CustomerLandingPage from '../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Customer Landing Page/CustomerLandingPage'
+import elems_MemberInformation from '../../../../page-objects/SMCMS/Elements/Membership/FS014_Membership-Master-Registration-Renewal/MemberInformation'
+import elems_CustomerCheckInPage from '../../../../page-objects/SMCMS/Elements/Membership/FS014_Membership-Master-Registration-Renewal/CustomerCheckInPage'
+import elems_Landing from '../../../../page-objects/SMCMS/Elements/Common/Customer_LandingPage'
+import login from '../../../../fixtures/login'
 
 const CustomerLanding = data.pageTitle.CustomerLanding
 const BackBTN = data.customerLandingPageContent.Back

@@ -1,6 +1,6 @@
-import E1GYMMembershipRenewalAdvice from '../../../../../page-objects/SMCMS/PageActions/FS-015-E1-Gym-MemberShip/FS-015 E1 GYM Membership Renewal Advice'
-import login from '../../../../../fixtures/login';
-import data from '../../../../../fixtures/Data_Module/FS-015-E1-Gym-Membership/E1 Gym Renewal Adwice '
+import E1GYMMembershipRenewalAdvice from '../../../../page-objects/SMCMS/PageActions/FS-015-E1-Gym-MemberShip/FS-015-E1-GYM-Membership-Renewal-Advice'
+import login from '../../../../fixtures/login';
+import data from '../../../../fixtures/Data_Module/FS-015-E1-Gym-Membership/E1 Gym Renewal Adwice '
 
 beforeEach(() => {
 

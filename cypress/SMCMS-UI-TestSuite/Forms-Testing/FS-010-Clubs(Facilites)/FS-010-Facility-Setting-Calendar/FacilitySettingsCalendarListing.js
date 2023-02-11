@@ -1,6 +1,6 @@
-import data from '../../../../../fixtures/Data_Module/FS-010-Club-Facility/010-data'
-import FacilitySettingsCalendarListingForm from '../../../../../page-objects/SMCMS/PageActions/FS-010-Clubs(Facilites)/FS-010-Facility-Settings-Calendar/Facility-Settings-Calendar-Listing'
-import login from '../../../../../fixtures/login'
+import data from '../../../../fixtures/Data_Module/FS-010-Club-Facility/010-data'
+import FacilitySettingsCalendarListingForm from '../../../../page-objects/SMCMS/PageActions/FS-010-Clubs(Facilites)/FS-010-Facility-Settings-Calendar/Facility-Settings-Calendar-Listing'
+import login from '../../../../fixtures/login'
 beforeEach(() => {
 
     // Set local storage for QA Enviroment

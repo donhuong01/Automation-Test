@@ -5,11 +5,11 @@
  *****************************************************/
 
 // Import Pages
-import BatchMembershipTerminationConfirmation from '../../../../page-objects/SMCMS/PageActions/FS-028-Membership-Admin-MaintActivities/FS-028-Membership Admin MaintActivities/BatchMembershipTerminationConfirmation'
+import BatchMembershipTerminationConfirmation from '../../../page-objects/SMCMS/PageActions/FS-028-Membership-Admin-MaintActivities/FS-028-Membership Admin MaintActivities/BatchMembershipTerminationConfirmation'
 
 // UPDATE WITH MEMBER LISTING PAGE ACTIONS FOR ACTUAL TESTING
-import elems_MemberListing from '../../../../page-objects/SMCMS/Elements/Membership/FS028_Membership-Admin-MaintActivities/MemberListing'
-import data from '../../../../fixtures/Data_Module/FS-028-Membership-Admin-MainActivities/028-data'
+import elems_MemberListing from '../../../page-objects/SMCMS/Elements/Membership/FS028_Membership-Admin-MaintActivities/MemberListing'
+import data from '../../../fixtures/Data_Module/FS-028-Membership-Admin-MainActivities/028-data'
 
 describe('[TS03] Batch Membership Termination Management', function () {
 

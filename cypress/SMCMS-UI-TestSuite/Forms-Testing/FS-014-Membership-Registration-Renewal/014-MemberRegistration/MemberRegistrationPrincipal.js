@@ -5,8 +5,8 @@
  *****************************************************/
 
 // Import Pages
-import MemberRegistrationPrincipal from '../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Member Registration/MemberRegistrationPrincipal'
-import data from '../../../../../fixtures/Data_Module/FS-014-Membership-Registration-Renewal/014-data'
+import MemberRegistrationPrincipal from '../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Member Registration/MemberRegistrationPrincipal'
+import data from '../../../../fixtures/Data_Module/FS-014-Membership-Registration-Renewal/014-data'
 
 const MembersRegistrationPrincipal = () => {
 
@@ -16,7 +16,7 @@ const MemRegPrincipal = new MemberRegistrationPrincipal()
 
 
 it('[TC01] Adding a Principal with Proof of data', function () {
-    cy.visit('https://qa-smcms.safra.sg/membership/registrationFormPrincipal')
+    cy.visit('/membership/registrationFormPrincipal')
     cy.wait(10000)
 
 

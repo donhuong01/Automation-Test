@@ -1,6 +1,6 @@
-import InterestGroupMainListing from '../../../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupMainListing'
-import login from '../../../../../fixtures/login'
-import data from '../../../../../fixtures/Data_Module/FS-016-Interest-Group/016-Interest-Group-Main-Mangement'
+import InterestGroupMainListing from '../../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupMainListing'
+import login from '../../../../fixtures/login'
+import data from '../../../../fixtures/Data_Module/FS-016-Interest-Group/016-Interest-Group-Main-Mangement'
 
 beforeEach(() => {
 

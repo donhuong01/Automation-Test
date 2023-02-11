@@ -5,9 +5,9 @@
  *****************************************************/
 
 // Import Page
-import FacilitySettingCalendarSetting from '../../../../../page-objects/SMCMS/PageActions/FS-010-Clubs(Facilites)/FS-010-Facility-Settings-Calendar-Settings/Facility-Setting-Calendar-Setting'
-import data from '../../../../../fixtures/Data_Module/FS-010-Club-Facility/010-data'
-import login from '../../../../../fixtures/login'
+import FacilitySettingCalendarSetting from '../../../../page-objects/SMCMS/PageActions/FS-010-Clubs(Facilites)/FS-010-Facility-Settings-Calendar-Settings/Facility-Setting-Calendar-Setting'
+import data from '../../../../fixtures/Data_Module/FS-010-Club-Facility/010-data'
+import login from '../../../../fixtures/login'
 //Page Definitions
 const FacilitySettingCalendarSet = new FacilitySettingCalendarSetting
 const RowrefMonth = 1

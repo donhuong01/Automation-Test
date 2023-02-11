@@ -1,8 +1,8 @@
-import login from '../../../../../fixtures/login';
-import InterestGroupListing from '../../../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupListing'
-import InterestGroupDetail from '../../../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupDetail'
-import Common from '../../../../../page-objects/SMCMS/PageActions/Common/Common'
-import data from '../../../../../fixtures/Data_Module/FS-015-E1-Gym-Membership/E1 Gym Setup Management'
+import login from '../../../../fixtures/login';
+import InterestGroupListing from '../../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupListing'
+import InterestGroupDetail from '../../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupDetail'
+import Common from '../../../../page-objects/SMCMS/PageActions/Common/Common'
+import data from '../../../../fixtures/Data_Module/FS-015-E1-Gym-Membership/E1 Gym Setup Management'
 
 
 beforeEach(() => {

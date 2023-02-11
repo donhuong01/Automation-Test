@@ -1,12 +1,12 @@
 
-import login from '../../../../../fixtures/login'
+import login from '../../../../fixtures/login'
 
 
-import IGMembershipRegistration from '../../../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/Interest Group Membership Registarion'
-import InterestGroupListing from '../../../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupMembershipListing'
-import IGMembershipDeferment from '../../../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupMembershipDeferment'
-import IGDEFDATA from '../../../../../fixtures/Data_Module/FS-016-Interest-Group/FS016-Interest-Group-Membership-Defer'
-import InterestGroupMembershipReversalRequest from '../../../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupMembershipReversalRequest'
+import IGMembershipRegistration from '../../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupMembershipRegistarion'
+import InterestGroupListing from '../../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupMembershipListing'
+import IGMembershipDeferment from '../../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupMembershipDeferment'
+import IGDEFDATA from '../../../../fixtures/Data_Module/FS-016-Interest-Group/FS016-Interest-Group-Membership-Defer'
+import InterestGroupMembershipReversalRequest from '../../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupMembershipReversalRequest'
 
 
 

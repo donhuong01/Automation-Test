@@ -1,7 +1,7 @@
-import E1GymMembershipModuleSetting from "../../../../../page-objects/SMCMS/PageActions/FS-015-E1-Gym-MemberShip/E1 Gym Membership Module Setting"
-import data from '../../../../../fixtures/Data_Module/FS-015-E1-Gym-Membership/E1 Gym Membership Module Setting'
+import E1GymMembershipModuleSetting from "../../../../page-objects/SMCMS/PageActions/FS-015-E1-Gym-MemberShip/E1 Gym Membership Module Setting"
+import data from '../../../../fixtures/Data_Module/FS-015-E1-Gym-Membership/E1 Gym Membership Module Setting'
 
-import login from '../../../../../fixtures/login'
+import login from '../../../../fixtures/login'
 beforeEach(() => {
 
     // Set local storage for QA Enviroment

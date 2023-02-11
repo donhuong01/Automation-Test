@@ -4,9 +4,9 @@
  *****************************************************/
 
 //Import Pages
-import VolunteerAppointmentTypeListing from '../../../../../page-objects/SMCMS/PageActions/FS-025-Membership-VIP-Volunteer-Veteran-League/Fs-025-Volunteer Appointment Type/VolunteerAppointmentTypeListing'
-import data from '../../../../../fixtures/Data_Module/FS-025-Membership-VIP-Volunteer-Veteran-League/025-data'
-import login from '../../../../../fixtures/login'
+import VolunteerAppointmentTypeListing from '../../../../page-objects/SMCMS/PageActions/FS-025-Membership-VIP-Volunteer-Veteran-League/Fs-025-Volunteer Appointment Type/VolunteerAppointmentTypeListing'
+import data from '../../../../fixtures/Data_Module/FS-025-Membership-VIP-Volunteer-Veteran-League/025-data'
+import login from '../../../../fixtures/login'
 
 
 beforeEach(() => {

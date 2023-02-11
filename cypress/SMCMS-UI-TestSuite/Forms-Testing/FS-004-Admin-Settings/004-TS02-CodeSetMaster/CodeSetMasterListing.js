@@ -1,5 +1,5 @@
-import CodeSetMasterListing from '../../../../../page-objects/SMCMS/PageActions/FS-004-Admin-Settings/FS-004-Code Set Master/CodeSetMasterListing.js'
-import data from '../../../../../fixtures/Data_Module/FS-004-Admin-Settings/004-data.js'
+import CodeSetMasterListing from '../../../../page-objects/SMCMS/PageActions/FS-004-Admin-Settings/FS-004-Code Set Master/CodeSetMasterListing.js'
+import data from '../../../../fixtures/Data_Module/FS-004-Admin-Settings/004-data.js'
 
 describe('[TS02] Code Set Master Listing form', function () {
 

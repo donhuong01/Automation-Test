@@ -5,10 +5,10 @@
  *****************************************************/
 
 // Import Pages
-import MembershipDeceasedConfirmation from '../../../../page-objects/SMCMS/PageActions/FS-028-Membership-Admin-MaintActivities/FS-028-Membership Admin MaintActivities/MembershipDeceasedConfirmation'
-import MemberListing from '../../../../page-objects/SMCMS/PageActions/FS-028-Membership-Admin-MaintActivities/FS-028-Member Listing/MemberListing'
-import data from '../../../../fixtures/Data_Module/FS-028-Membership-Admin-MainActivities/028-data'
-import elems_MemberListing from '../../../../page-objects/SMCMS/Elements/Membership/FS028_Membership-Admin-MaintActivities/MemberListing'
+import MembershipDeceasedConfirmation from '../../../page-objects/SMCMS/PageActions/FS-028-Membership-Admin-MaintActivities/FS-028-Membership Admin MaintActivities/MembershipDeceasedConfirmation'
+import MemberListing from '../../../page-objects/SMCMS/PageActions/FS-028-Membership-Admin-MaintActivities/FS-028-Member Listing/MemberListing'
+import data from '../../../fixtures/Data_Module/FS-028-Membership-Admin-MainActivities/028-data'
+import elems_MemberListing from '../../../page-objects/SMCMS/Elements/Membership/FS028_Membership-Admin-MaintActivities/MemberListing'
 
 describe('[TS03] Membership Deceased Confirmation Popup', function () {
 

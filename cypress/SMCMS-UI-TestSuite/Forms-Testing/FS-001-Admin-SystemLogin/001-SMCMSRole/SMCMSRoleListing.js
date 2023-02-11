@@ -5,8 +5,9 @@
  *****************************************************/
 
 // Import Pages
-import SMCMSRoleListing from '../../../page-objects/SMCMS/PageActions/Admin/FS001_Admin-SystemLogin/SMCMSRoleListing.js'
-import data from '../../../fixtures/data.js'
+import SMCMSRoleListing from '../../../../page-objects/SMCMS/PageActions/Admin/FS001_Admin-SystemLogin/SMCMSRoleListing.js'
+import data from '../../../../fixtures/data.js'
+import data from '../../../../'
 
 describe('[TS04] SMCMS Role Listing', function () {
 

@@ -6,7 +6,7 @@
 
 // Import Pages
 import MemberTypeDetail from "../../../page-objects/SMCMS/PageActions/Membership/FS014_Membership-Master-Registration-Renewal/MemberTypeDetail.js"
-import data from '../../../../fixtures/data.js'
+import data from '../../../fixtures/data.js'
 
 describe('[TS05] Member Type Detail Form', function () {
 

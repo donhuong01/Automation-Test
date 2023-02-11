@@ -5,11 +5,11 @@
  *****************************************************/
 
 // Import Pages
-import OperatingPeriodDetail from '../../../../../page-objects/SMCMS/PageActions/FS-010-Clubs(Facilites)/FS-010-Settings-Operating-Period/OperatingPeriodDetail'
-import data from '../../../../../fixtures/Data_Module/FS-010-Club-Facility/010-data'
-import login from '../../../../../fixtures/login'
+import OperatingPeriodDetail from '../../../../page-objects/SMCMS/PageActions/FS-010-Clubs(Facilites)/FS-010-Settings-Operating-Period/OperatingPeriodDetail'
+import data from '../../../../fixtures/Data_Module/FS-010-Club-Facility/010-data'
+import login from '../../../../fixtures/login'
 
-import Common from '../../../../../page-objects/SMCMS/PageActions/Common/Common'
+import Common from '../../../../page-objects/SMCMS/PageActions/Common/Common'
 
 
 const common = new Common()

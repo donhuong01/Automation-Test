@@ -5,8 +5,8 @@
  * @author: mfaisal
  *****************************************************/
 // Import Pages
-import OnlineAccountAccessListing from '../../../../../page-objects/SMCMS/PageActions/FS-001-Admin-SystemLogin/FS-001-OnlineAccountAccess/OnlineAccountAccessListing'
-import data from '../../../../../fixtures/Data_Module/FS-004-Admin-Settings/001-data'
+import OnlineAccountAccessListing from '../../../../page-objects/SMCMS/PageActions/FS-001-Admin-SystemLogin/FS-001-OnlineAccountAccess/OnlineAccountAccessListing'
+import data from '../../../../fixtures/Data_Module/FS-004-Admin-Settings/001-data'
 const OnlineAccountAccessLst = new OnlineAccountAccessListing()
 
 describe('[FS001] Online Account Access Listing form', function () {

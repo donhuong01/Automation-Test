@@ -1,6 +1,6 @@
-import login from '../../../../fixtures/login'
-import AccommodationSettingsGeneral from '../../../../page-objects/SMCMS/PageActions/FS-012-Accomodation/AccommodatiomSettingGeneral/AccommodationSettingGeneral'
-import data from '../../../../fixtures/Data_Module/FS-012-Accommodation/data'
+import login from '../../../fixtures/login'
+import AccommodationSettingsGeneral from '../../../page-objects/SMCMS/PageActions/FS-012-Accomodation/AccommodatiomSettingGeneral/AccommodationSettingGeneral'
+import data from '../../../fixtures/Data_Module/FS-012-Accommodation/data'
 
 
 beforeEach(() => {

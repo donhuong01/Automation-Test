@@ -1,7 +1,7 @@
-import FacilityDetailForm from '../../../../../page-objects/SMCMS/PageActions/FS-010-Clubs(Facilites)/FS-010-Facilty-Detail-Form/FacilityDetailForm'
-import elems_FacilityDetailFormDetailTab from '../../../../../page-objects/SMCMS/Elements/Facilities/FS-010-CLUBS(FACILITIES)/FacilityDetailForm'
-import data from '../../../../../fixtures/Data_Module/FS-010-Club-Facility/010-data'
-import login from '../../../../../fixtures/login'
+import FacilityDetailForm from '../../../../page-objects/SMCMS/PageActions/FS-010-Clubs(Facilites)/FS-010-Facilty-Detail-Form/FacilityDetailForm'
+import elems_FacilityDetailFormDetailTab from '../../../../page-objects/SMCMS/Elements/Facilities/FS-010-CLUBS(FACILITIES)/FacilityDetailForm'
+import data from '../../../../fixtures/Data_Module/FS-010-Club-Facility/010-data'
+import login from '../../../../fixtures/login'
 
 beforeEach(() => {
 

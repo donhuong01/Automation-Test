@@ -5,8 +5,8 @@
  *****************************************************/
 
 // Import Pages
-import NotificationMessageTemplateListing from '../../../../../page-objects/SMCMS/PageActions/FS-004-Admin-Settings/FS-004-Notification Message Template/NotificationMessageTemplateListing'
-import data from '../../../../../fixtures/Data_Module/FS-004-Admin-Settings/004-data'
+import NotificationMessageTemplateListing from '../../../../page-objects/SMCMS/PageActions/FS-004-Admin-Settings/FS-004-Notification Message Template/NotificationMessageTemplateListing'
+import data from '../../../../fixtures/Data_Module/FS-004-Admin-Settings/004-data'
 
 describe('[TS21] Notification Message Template Listing', function () {
 

@@ -1,6 +1,6 @@
-import data from '../../../../fixtures/Data_Module/FS-028-Membership-Admin-MainActivities/028-data'
-import elems_MemberListing from '../../../../page-objects/SMCMS/Elements/Membership/FS028_Membership-Admin-MaintActivities/MemberListing'
-import BatchMembershipDefermentRequest from '../../../../page-objects/SMCMS/PageActions/FS-028-Membership-Admin-MaintActivities/FS-028-Membership Admin MaintActivities/BatchMembershipDeferement'
+import data from '../../../fixtures/Data_Module/FS-028-Membership-Admin-MainActivities/028-data'
+import elems_MemberListing from '../../../page-objects/SMCMS/Elements/Membership/FS028_Membership-Admin-MaintActivities/MemberListing'
+import BatchMembershipDefermentRequest from '../../../page-objects/SMCMS/PageActions/FS-028-Membership-Admin-MaintActivities/FS-028-Membership Admin MaintActivities/BatchMembershipDeferement'
 
 describe('[TS01] Batch Membership Deferment Request Management', function () {
 
@@ -8,7 +8,7 @@ describe('[TS01] Batch Membership Deferment Request Management', function () {
 
     it('[TC01] Batch Membership Deferment Form', function () {
 
-        cy.visit('https://qa-smcms.safra.sg/membership/memberList')  //Visit web page for member listing 
+        cy.visit('/membership/memberList')  //Visit web page for member listing 
         cy.wait(2000)
         cy.SelectDropDownItem(elems_MemberListing.DRP_STATUSREASONCODE, 'Deferred')
         cy.wait(1000)

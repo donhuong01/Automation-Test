@@ -5,11 +5,11 @@
  *****************************************************/
 
  //Import Pages
- import MembershipChargeRateDetail from '../../../../page-objects/SMCMS/PageActions/FS-029-Membership-Charge-Rate/MembershipChargeRateDetails'
- import MembershipChargeRateListing from '../../../../page-objects/SMCMS/PageActions/FS-029-Membership-Charge-Rate/MembershipChargeRateListing'
+ import MembershipChargeRateDetail from '../../../page-objects/SMCMS/PageActions/FS-029-Membership-Charge-Rate/MembershipChargeRateDetails'
+ import MembershipChargeRateListing from '../../../page-objects/SMCMS/PageActions/FS-029-Membership-Charge-Rate/MembershipChargeRateListing'
 
- import data from '../../../../fixtures/Data_Module/FS-029-Member-Charge-Rate/029-data'
- import login from '../../../../fixtures/login'
+ import data from '../../../fixtures/Data_Module/FS-029-Member-Charge-Rate/029-data'
+ import login from '../../../fixtures/login'
  beforeEach(() => {
 
    // Set local storage for QA Enviroment

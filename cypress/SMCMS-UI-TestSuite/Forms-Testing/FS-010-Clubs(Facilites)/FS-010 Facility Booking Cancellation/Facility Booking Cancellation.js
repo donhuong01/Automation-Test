@@ -1,6 +1,6 @@
-import login from '../../../../../fixtures/login'
-import Common from '../../../../../page-objects/SMCMS/PageActions/Common/Common'
-import FacilityBookingListing from '../../../../../page-objects/SMCMS/PageActions/FS-010-Clubs(Facilites)/FS-010-Facility-Booking/Facility-Booking-Listing'
+import login from '../../../../fixtures/login'
+import Common from '../../../../page-objects/SMCMS/PageActions/Common/Common'
+import FacilityBookingListing from '../../../../page-objects/SMCMS/PageActions/FS-010-Clubs(Facilites)/FS-010-Facility-Booking/Facility-Booking-Listing'
 
 beforeEach(() => {
 

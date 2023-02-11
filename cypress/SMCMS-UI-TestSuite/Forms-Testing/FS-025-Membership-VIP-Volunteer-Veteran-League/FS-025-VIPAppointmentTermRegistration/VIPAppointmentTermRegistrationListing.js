@@ -1,6 +1,6 @@
-import VIPAppointmentTermRegistrationListingForm from '../../../../../page-objects/SMCMS/PageActions/FS-025-Membership-VIP-Volunteer-Veteran-League/FS-025-VIP Appointment Term Registration/VIPAppointmentTermRegistrationListingForm'
-import data from '../../../../../fixtures/Data_Module/FS-025-Membership-VIP-Volunteer-Veteran-League/025-data'
-import login from '../../../../../fixtures/login';
+import VIPAppointmentTermRegistrationListingForm from '../../../../page-objects/SMCMS/PageActions/FS-025-Membership-VIP-Volunteer-Veteran-League/FS-025-VIP Appointment Term Registration/VIPAppointmentTermRegistrationListingForm'
+import data from '../../../../fixtures/Data_Module/FS-025-Membership-VIP-Volunteer-Veteran-League/025-data'
+import login from '../../../../fixtures/login';
 
 
 

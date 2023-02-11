@@ -1,6 +1,6 @@
 
-import CodeTypeListingForm from '../../../../../page-objects/SMCMS/PageActions/FS-004-Admin-Settings/FS-004-Code Type/CodeTypeListing'
-import data from '../../../../../fixtures/Data_Module/FS-004-Admin-Settings/004-data'
+import CodeTypeListingForm from '../../../../page-objects/SMCMS/PageActions/FS-004-Admin-Settings/FS-004-Code Type/CodeTypeListing'
+import data from '../../../../fixtures/Data_Module/FS-004-Admin-Settings/004-data'
 
 describe('[TS03] Page Action Code Type Listing form',function(){
 

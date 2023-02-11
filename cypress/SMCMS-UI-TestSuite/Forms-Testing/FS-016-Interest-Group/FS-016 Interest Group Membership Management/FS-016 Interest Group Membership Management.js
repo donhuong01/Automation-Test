@@ -1,8 +1,8 @@
-import InterestGroupListing from "../../../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupMembershipListing";
+import InterestGroupListing from "../../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupMembershipListing";
 
-import login from '../../../../../fixtures/login'
-import Data from '../../../../../fixtures/Data_Module/FS-016-Interest-Group/FS-016-Interest-Group-Management'
-import Common from '../../../../../page-objects/SMCMS/PageActions/Common/Common'
+import login from '../../../../fixtures/login'
+import Data from '../../../../fixtures/Data_Module/FS-016-Interest-Group/FS-016-Interest-Group-Management'
+import Common from '../../../../page-objects/SMCMS/PageActions/Common/Common'
 
 const common = new Common
 

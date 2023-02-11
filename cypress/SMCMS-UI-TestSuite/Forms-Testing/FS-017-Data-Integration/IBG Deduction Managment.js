@@ -1,7 +1,7 @@
-import IBG_Deduction from '../../../../page-objects/SMCMS/PageActions/FS-017 Data Integration Management/IBG Deduction Management'
-import Common from '../../../../page-objects/SMCMS/PageActions/Common/Common'
-import login from '../../../../fixtures/login'
-import data from '../../../../fixtures/Data_Module/FS-017-Data-Integration/Data_Integration'
+import IBG_Deduction from '../../../page-objects/SMCMS/PageActions/FS-017-Data-Integration-Management/IBG Deduction Management'
+import Common from '../../../page-objects/SMCMS/PageActions/Common/Common'
+import login from '../../../fixtures/login'
+import data from '../../../fixtures/Data_Module/FS-017-Data-Integration/Data_Integration'
 
 const common = new Common()
 

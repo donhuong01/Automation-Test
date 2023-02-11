@@ -5,8 +5,8 @@
  *****************************************************/
 
 // Import Pages
-import Membership_Registration_Dependent from '../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Member Registration/MembershipRegistrationDependent'
-import data from '../../../../../fixtures/Data_Module/FS-014-Membership-Registration-Renewal/014-data'
+import Membership_Registration_Dependent from '../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Member Registration/MembershipRegistrationDependent'
+import data from '../../../../fixtures/Data_Module/FS-014-Membership-Registration-Renewal/014-data'
  
 const MemberRegistrationDependent = () => {
 
@@ -17,7 +17,7 @@ describe('[TS07] Member Registration Dependent]', () => {
 
         it('[TC01] Adding a dependent with Proof of data', () =>
     {
-        cy.visit('https://qa-smcms.safra.sg/membership/registrationFormDependent')
+        cy.visit('/membership/registrationFormDependent')
         cy.wait(10000)
 
         //filloutPersonalInformation

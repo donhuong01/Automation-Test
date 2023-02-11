@@ -5,9 +5,9 @@
  *****************************************************/
 
 // Import Pages
-import FacilityGeneralSettingDetail from '../../../../../page-objects/SMCMS/PageActions/FS-010-Clubs(Facilites)/FS-010-FacilitySettings-GeneralSettings/GeneralSettingsDetail'
-import data from '../../../../../fixtures/Data_Module/FS-010-Club-Facility/010-data'
-import login from '../../../../../fixtures/login'
+import FacilityGeneralSettingDetail from '../../../../page-objects/SMCMS/PageActions/FS-010-Clubs(Facilites)/FS-010-FacilitySettings-GeneralSettings/GeneralSettingsDetail'
+import data from '../../../../fixtures/Data_Module/FS-010-Club-Facility/010-data'
+import login from '../../../../fixtures/login'
 
 
 

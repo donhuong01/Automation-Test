@@ -5,8 +5,8 @@
  *****************************************************/
 
 // Import Pages
-import BatchMembershipRegistrationListing from '../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Batch Membership Registration/BatchMembershipRegistrationListing'
-import data from '../../../../../fixtures/Data_Module/FS-014-Membership-Registration-Renewal/014-data'
+import BatchMembershipRegistrationListing from '../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Batch Membership Registration/BatchMembershipRegistrationListing'
+import data from '../../../../fixtures/Data_Module/FS-014-Membership-Registration-Renewal/014-data'
 
 describe('[TS13] Batch Membership Registration Listing form', function () {
 
@@ -14,7 +14,7 @@ describe('[TS13] Batch Membership Registration Listing form', function () {
 
     it('[TC01] Batch Membership Registration Listing form Filter by Batch ID ', function () {
 
-        cy.visit('https://qa-smcms.safra.sg/membership/batchMembershipRegistrationList')
+        cy.visit('/membership/batchMembershipRegistrationList')
 
         BatchMembershipRegistrationListing.verifyPageTitle('Batch Membership Registration Listing')
         
@@ -27,7 +27,7 @@ describe('[TS13] Batch Membership Registration Listing form', function () {
 
     it('[TC02] Batch Membership Registration Listing form Filter by Batch Type', function () {
 
-        cy.visit('https://qa-smcms.safra.sg/membership/batchMembershipRegistrationList')
+        cy.visit('/membership/batchMembershipRegistrationList')
 
         BatchMembershipRegistrationListing.verifyPageTitle('Batch Membership Registration Listing')
         
@@ -40,7 +40,7 @@ describe('[TS13] Batch Membership Registration Listing form', function () {
 
     it('[TC03] Batch Membership Registration Listing form Filter by Batch ID and Batch Type ', function () {
 
-        cy.visit('https://qa-smcms.safra.sg/membership/batchMembershipRegistrationList')
+        cy.visit('/membership/batchMembershipRegistrationList')
 
         BatchMembershipRegistrationListing.verifyPageTitle('Batch Membership Registration Listing')
 
@@ -55,7 +55,7 @@ describe('[TS13] Batch Membership Registration Listing form', function () {
 
     it('[TC04] Batch Membership Registration Listing form Click Create New ', function () {
 
-        cy.visit('https://qa-smcms.safra.sg/membership/batchMembershipRegistrationList')
+        cy.visit('/membership/batchMembershipRegistrationList')
 
         BatchMembershipRegistrationListing.verifyPageTitle('Batch Membership Registration Listing')
         
@@ -68,7 +68,7 @@ describe('[TS13] Batch Membership Registration Listing form', function () {
     })
     it('[TC05] Batch Membership Registration Listing form Delete Record ', function () {
 
-        cy.visit('https://qa-smcms.safra.sg/membership/batchMembershipRegistrationList')
+        cy.visit('/membership/batchMembershipRegistrationList')
 
         BatchMembershipRegistrationListing.verifyPageTitle('Batch Membership Registration Listing')
 

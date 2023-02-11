@@ -1,7 +1,7 @@
-import data from '../../../../fixtures/Data_Module/FS-030-Membership-Card-Management/030-data'
-import VIPMemberCardGeneration from '../../../../page-objects/SMCMS/PageActions/FS-030-Membership Card Management/FS-030-VIP-Card/VIPMemberCardGeneration'
-import SafraCardGeneration from '../../../../page-objects/SMCMS/PageActions/FS-030-Membership Card Management/FS-030-SAFRA-Card-Generation/SAFRACardGeneration'
-import login from '../../../../fixtures/login'
+import data from '../../../fixtures/Data_Module/FS-030-Membership-Card-Management/030-data'
+import VIPMemberCardGeneration from '../../../page-objects/SMCMS/PageActions/FS-030-Membership Card Management/FS-030-VIP-Card/VIPMemberCardGeneration'
+import SafraCardGeneration from '../../../page-objects/SMCMS/PageActions/FS-030-Membership Card Management/FS-030-SAFRA-Card-Generation/SAFRACardGeneration'
+import login from '../../../fixtures/login'
 
 beforeEach(() => {
 

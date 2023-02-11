@@ -5,9 +5,9 @@
  *****************************************************/
 
 // Import Pages
-import MembershipChargeRateListing from '../../../../page-objects/SMCMS/PageActions/FS-029-Membership-Charge-Rate/MembershipChargeRateListing'
-import login from '../../../../fixtures/login'
-import data from '../../../../fixtures/Data_Module/FS-029-Member-Charge-Rate/029-data'
+import MembershipChargeRateListing from '../../../page-objects/SMCMS/PageActions/FS-029-Membership-Charge-Rate/MembershipChargeRateListing'
+import login from '../../../fixtures/login'
+import data from '../../../fixtures/Data_Module/FS-029-Member-Charge-Rate/029-data'
 
 beforeEach(() => {
 

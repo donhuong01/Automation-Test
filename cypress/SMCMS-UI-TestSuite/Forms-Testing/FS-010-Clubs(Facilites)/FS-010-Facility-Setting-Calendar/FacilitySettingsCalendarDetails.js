@@ -5,11 +5,11 @@
  *****************************************************/
 
 // Import Pages
-import FacilitySettingsCalendarDetailForm from '../../../../../page-objects/SMCMS/PageActions/FS-010-Clubs(Facilites)/FS-010-Facility-Settings-Calendar/Facility-Settings-Calendar-Detail'
-import FacilitySettingsCalendarListingForm from '../../../../../page-objects/SMCMS/PageActions/FS-010-Clubs(Facilites)/FS-010-Facility-Settings-Calendar/Facility-Settings-Calendar-Listing'
-import data from '../../../../../fixtures/Data_Module/FS-010-Club-Facility/010-data'
-import login from '../../../../../fixtures/login'
-import Common from '../../../../../page-objects/SMCMS/PageActions/Common/Common'
+import FacilitySettingsCalendarDetailForm from '../../../../page-objects/SMCMS/PageActions/FS-010-Clubs(Facilites)/FS-010-Facility-Settings-Calendar/Facility-Settings-Calendar-Detail'
+import FacilitySettingsCalendarListingForm from '../../../../page-objects/SMCMS/PageActions/FS-010-Clubs(Facilites)/FS-010-Facility-Settings-Calendar/Facility-Settings-Calendar-Listing'
+import data from '../../../../fixtures/Data_Module/FS-010-Club-Facility/010-data'
+import login from '../../../../fixtures/login'
+import Common from '../../../../page-objects/SMCMS/PageActions/Common/Common'
 
 beforeEach(() => {
 

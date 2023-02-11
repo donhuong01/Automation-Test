@@ -1,6 +1,6 @@
-import SRP_ModuleSetting from '../../../../page-objects/SMCMS/PageActions/FS-036-SRP/SRP_ModuleSetting'
-import login from '../../../../fixtures/login'
-import data from '../../../../fixtures/Data_Module/FS-036-SRP/SRP_Sample_Data'
+import SRP_ModuleSetting from '../../../page-objects/SMCMS/PageActions/FS-036-SRP/SRP_ModuleSetting'
+import login from '../../../fixtures/login'
+import data from '../../../fixtures/Data_Module/FS-036-SRP/SRP_Sample_Data'
 beforeEach(() => {
 
     // Set local storage for QA Enviroment

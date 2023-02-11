@@ -1,8 +1,8 @@
-import login from '../../../../../fixtures/login';
-import InterestGroupMainListing from '../../../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupMainListing'
-import InterestGroupMain from '../../../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupMainManagement'
-import Common from '../../../../../page-objects/SMCMS/PageActions/Common/Common'
-import data from '../../../../../fixtures/Data_Module/FS-015-E1-Gym-Membership/E1 GYM Membership And Charge Rate Setup'
+import login from '../../../../fixtures/login';
+import InterestGroupMainListing from '../../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupMainListing'
+import InterestGroupMain from '../../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupMainManagement'
+import Common from '../../../../page-objects/SMCMS/PageActions/Common/Common'
+import data from '../../../../fixtures/Data_Module/FS-015-E1-Gym-Membership/E1 GYM Membership And Charge Rate Setup'
 
 const common = new Common()
 

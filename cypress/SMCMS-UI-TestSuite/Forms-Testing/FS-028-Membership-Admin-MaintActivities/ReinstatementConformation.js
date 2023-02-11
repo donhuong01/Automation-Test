@@ -1,6 +1,6 @@
-import MembershipReinstatementConfirmation from '../../../../page-objects/SMCMS/PageActions/FS-028-Membership-Admin-MaintActivities/FS-028-Membership Admin MaintActivities/ReinstatementConfirmation'
-import elems_MemberListing from '../../../../page-objects/SMCMS/Elements/Membership/FS028_Membership-Admin-MaintActivities/MemberListing'
-import data from '../../../../fixtures/Data_Module/FS-028-Membership-Admin-MainActivities/028-data'
+import MembershipReinstatementConfirmation from '../../../page-objects/SMCMS/PageActions/FS-028-Membership-Admin-MaintActivities/FS-028-Membership Admin MaintActivities/ReinstatementConfirmation'
+import elems_MemberListing from '../../../page-objects/SMCMS/Elements/Membership/FS028_Membership-Admin-MaintActivities/MemberListing'
+import data from '../../../fixtures/Data_Module/FS-028-Membership-Admin-MainActivities/028-data'
 
 /*****************************************************
  * Page Function: Sample Script to Test Membership Reinstatement Confirmation Page Actions
@@ -17,7 +17,7 @@ describe('Membership Reinstatement Confirmation', function () {
 
     it('Test Membership Reinstatement Confirmation Popup', function () {
 
-        cy.visit('https://qa-smcms.safra.sg/membership/memberList')
+        cy.visit('/membership/memberList')
 
         //Select a member from memberlisting that has Status Terminated/Resigned/Expelled/Deceased
 

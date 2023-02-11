@@ -1,5 +1,5 @@
-import CodeTypeDetail from '../../../../../page-objects/SMCMS/PageActions/FS-004-Admin-Settings/FS-004-Code Type/CodeTypeDetails'
-import data from '../../../../../fixtures/Data_Module/FS-004-Admin-Settings/004-data'
+import CodeTypeDetail from '../../../../page-objects/SMCMS/PageActions/FS-004-Admin-Settings/FS-004-Code Type/CodeTypeDetails'
+import data from '../../../../fixtures/Data_Module/FS-004-Admin-Settings/004-data'
 
 describe('[TS03] Page Action Code Type Detail form',function(){
 

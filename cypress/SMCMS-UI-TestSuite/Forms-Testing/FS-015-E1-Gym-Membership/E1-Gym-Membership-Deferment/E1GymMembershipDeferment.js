@@ -1,8 +1,8 @@
-import E1GymMembershipDefermentRequest from '../../../../../page-objects/SMCMS/PageActions/FS-015-E1-Gym-MemberShip/E1GymMembershipDefermentRequest'
-import E1GymMembershipListing from '../../../../../page-objects/SMCMS/PageActions/FS-015-E1-Gym-MemberShip/E1 Gym Membership Listing'
-import login from '../../../../../fixtures/login'
-import data from '../../../../../fixtures/Data_Module/FS-015-E1-Gym-Membership/FS-015-E1-Gym-Membership'
-import Commons from '../../../../../page-objects/SMCMS/PageActions/Common/Common'
+import E1GymMembershipDefermentRequest from '../../../../page-objects/SMCMS/PageActions/FS-015-E1-Gym-MemberShip/E1GymMembershipDefermentRequest'
+import E1GymMembershipListing from '../../../../page-objects/SMCMS/PageActions/FS-015-E1-Gym-MemberShip/E1 Gym Membership Listing'
+import login from '../../../../fixtures/login'
+import data from '../../../../fixtures/Data_Module/FS-015-E1-Gym-Membership/FS-015-E1-Gym-Membership'
+import Commons from '../../../../page-objects/SMCMS/PageActions/Common/Common'
 
 //page Definition 
 const common = new Commons

@@ -1,7 +1,7 @@
-import FacilityBookingDetail from '../../../../../page-objects/SMCMS/PageActions/FS-010-Clubs(Facilites)/FS-010-Facility-Booking/Facility-Booking-Detail'
-import CustomerCheckInPage from '../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Customer CheckIn/CustomerCheckInPage'
-import login from '../../../../../fixtures/login'
-import data from '../../../../../fixtures/Data_Module/FS-010-Club-Facility/010-data'
+import FacilityBookingDetail from '../../../../page-objects/SMCMS/PageActions/FS-010-Clubs(Facilites)/FS-010-Facility-Booking/Facility-Booking-Detail'
+import CustomerCheckInPage from '../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Customer CheckIn/CustomerCheckInPage'
+import login from '../../../../fixtures/login'
+import data from '../../../../fixtures/Data_Module/FS-010-Club-Facility/010-data'
 
 
 const { Location, FacilityType, FacilityName, slot, ChargeType, Amount, Reason } = data.FacilityBookingDetail

@@ -4,8 +4,8 @@
  *****************************************************/
 
  //Import Pages
- import CustomerCategoryTypeDetail from '../../../../../page-objects/SMCMS/PageActions/FS-004-Admin-Settings/FS-004-Customer Category Type/CustomerCategoryTypeDetail'
- import data from '../../../../../fixtures/Data_Module/FS-004-Admin-Settings/004-data'
+ import CustomerCategoryTypeDetail from '../../../../page-objects/SMCMS/PageActions/FS-004-Admin-Settings/FS-004-Customer Category Type/CustomerCategoryTypeDetail'
+ import data from '../../../../fixtures/Data_Module/FS-004-Admin-Settings/004-data'
 
 describe('[TS19] Customer Category Type Detail ', () =>{
 

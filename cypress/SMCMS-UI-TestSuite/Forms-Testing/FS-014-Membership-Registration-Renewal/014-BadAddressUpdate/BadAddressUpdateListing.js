@@ -5,9 +5,9 @@
  *****************************************************/
 
 // Import Pages
-import BadAddressUpdateListing from '../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Bad Address Update/BadAddressUpdateListing'
-import data from '../../../../../fixtures/Data_Module/FS-014-Membership-Registration-Renewal/014-data'
-import login from '../../../../../fixtures/login'
+import BadAddressUpdateListing from '../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Bad Address Update/BadAddressUpdateListing'
+import data from '../../../../fixtures/Data_Module/FS-014-Membership-Registration-Renewal/014-data'
+import login from '../../../../fixtures/login'
 
 // beforeEach(() => {
 

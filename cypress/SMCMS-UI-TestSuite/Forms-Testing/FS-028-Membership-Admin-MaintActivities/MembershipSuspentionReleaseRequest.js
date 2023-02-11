@@ -1,6 +1,6 @@
-import MembershipSuspensionReleaseRequest from "../../../../page-objects/SMCMS/PageActions/FS-028-Membership-Admin-MaintActivities/FS-028-Membership Admin MaintActivities/MembershipSuspensionReleaseRequest"
-import elems_MemberListing from '../../../../page-objects/SMCMS/Elements/Membership/FS028_Membership-Admin-MaintActivities/MemberListing'
-import data from '../../../../fixtures/Data_Module/FS-028-Membership-Admin-MainActivities/028-data'
+import MembershipSuspensionReleaseRequest from "../../../page-objects/SMCMS/PageActions/FS-028-Membership-Admin-MaintActivities/FS-028-Membership Admin MaintActivities/MembershipSuspensionReleaseRequest"
+import elems_MemberListing from '../../../page-objects/SMCMS/Elements/Membership/FS028_Membership-Admin-MaintActivities/MemberListing'
+import data from '../../../fixtures/Data_Module/FS-028-Membership-Admin-MainActivities/028-data'
 
 describe('[TS010] Membership Suspension Release Form',function(){
 
@@ -8,7 +8,7 @@ describe('[TS010] Membership Suspension Release Form',function(){
 
     it('[TC01] Cancel Creation of Suspension Release Request', function(){
 
-        cy.visit('https://qa-smcms.safra.sg/membership/memberList')  //Visit web page for member listing 
+        cy.visit('/membership/memberList')  //Visit web page for member listing 
 
         // cy.NavigateTablePage(elems_MemberListing.TBL_MEMBERLISTING, 'NEXT')  //Table Next page doesnt work
     
@@ -49,7 +49,7 @@ describe('[TS010] Membership Suspension Release Form',function(){
     })
     it('[TC02] Create Suspension Release Request using Membership MA Staff (Admin Officer)', function(){
 
-        cy.visit('https://qa-smcms.safra.sg/membership/memberList')  //Visit web page for member listing 
+        cy.visit('/membership/memberList')  //Visit web page for member listing 
 
         // cy.NavigateTablePage(elems_MemberListing.TBL_MEMBERLISTING, 'NEXT')  //Table Next page doesnt work
     

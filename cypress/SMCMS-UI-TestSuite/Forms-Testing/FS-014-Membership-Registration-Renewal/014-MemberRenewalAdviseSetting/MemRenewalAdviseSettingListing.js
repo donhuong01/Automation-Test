@@ -1,7 +1,7 @@
 import elems_MembershipRenewalAdviceSettingDetail from '../../../../page-objects/SMCMS/Elements/Membership/FS014_Membership-Master-Registration-Renewal/MembershipRenewalAdviceSettingDetail'
-import data from '../../../../../fixtures/Data_Module/FS-014-Membership-Registration-Renewal/014-data'
+import data from '../../../../fixtures/Data_Module/FS-014-Membership-Registration-Renewal/014-data'
 import MembershipRenewAdviseSettingListing from '../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-MembershipRenewalAdviseSetting/MembershipRenewAdviseSettingList'
-import login from '../../../../../fixtures/login'
+import login from '../../../../fixtures/login'
 
 beforeEach(() => {
 

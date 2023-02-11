@@ -1,7 +1,7 @@
-import login from '../../../../../fixtures/login'
-import FacilityClosure from '../../../../../page-objects/SMCMS/PageActions/FS-010-Clubs(Facilites)/FS-010 Facility Closure/Facility Closure'
-import Common from '../../../../../page-objects/SMCMS/PageActions/Common/Common'
-import date from '../../../../../fixtures/Data_Module/FS-010-Club-Facility/010-data'
+import login from '../../../../fixtures/login'
+import FacilityClosure from '../../../../page-objects/SMCMS/PageActions/FS-010-Clubs(Facilites)/FS-010 Facility Closure/Facility Closure'
+import Common from '../../../../page-objects/SMCMS/PageActions/Common/Common'
+import date from '../../../../fixtures/Data_Module/FS-010-Club-Facility/010-data'
 
 beforeEach(() => {
 

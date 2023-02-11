@@ -1,5 +1,5 @@
-import E1GymMembershipListing from '../../../../../page-objects/SMCMS/PageActions/FS-015-E1-Gym-MemberShip/E1 Gym Membership Listing'
-import login from '../../../../../fixtures/login';
+import E1GymMembershipListing from '../../../../page-objects/SMCMS/PageActions/FS-015-E1-Gym-MemberShip/E1-Gym-Membership-Listing'
+import login from '../../../../fixtures/login';
 
 beforeEach(() => {
 

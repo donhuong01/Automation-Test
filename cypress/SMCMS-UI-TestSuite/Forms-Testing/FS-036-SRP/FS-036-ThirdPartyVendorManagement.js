@@ -1,8 +1,8 @@
-import login from '../../../../fixtures/login'
+import login from '../../../fixtures/login'
 
-import ThirdPartyVendoreListing from '../../../../page-objects/SMCMS/PageActions/FS-036-SRP/ThirdPartyVendoreListing'
-import ThirdPartyVendoreDetail from '../../../../page-objects/SMCMS/PageActions/FS-036-SRP/ThirdPartyVendoreDetail'
-import data from '../../../../fixtures/Data_Module/FS-036-SRP/SRP_Sample_Data'
+import ThirdPartyVendoreListing from '../../../page-objects/SMCMS/PageActions/FS-036-SRP/ThirdPartyVendoreListing'
+import ThirdPartyVendoreDetail from '../../../page-objects/SMCMS/PageActions/FS-036-SRP/ThirdPartyVendoreDetail'
+import data from '../../../fixtures/Data_Module/FS-036-SRP/SRP_Sample_Data'
 
 beforeEach(() => {
 

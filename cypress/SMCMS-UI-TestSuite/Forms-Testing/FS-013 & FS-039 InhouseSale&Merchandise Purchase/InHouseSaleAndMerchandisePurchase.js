@@ -1,8 +1,8 @@
-import InHouseSaleAndMerchandiseItemPurchase from '../../../../page-objects/SMCMS/PageActions/FS-039 & FS-013 - InHouseSaleAndMerchandise/In-HouseSaleAndMerchandiseItemPurchase'
-import login from '../../../../fixtures/login'
-import Common from '../../../../page-objects/SMCMS/PageActions/Common/Common'
-import data from '../../../../fixtures/Data_Module/FS-013 & FS-039 InHouseSale & Merchandise/DataManagement'
-import InHouseSaleAndMerchandisePurchaseTransaction from '../../../../page-objects/SMCMS/PageActions/FS-039 & FS-013 - InHouseSaleAndMerchandise/InHouseSaleAndMerchandisePurchaseTransaction'
+import InHouseSaleAndMerchandiseItemPurchase from '../../../page-objects/SMCMS/PageActions/FS-039 & FS-013 - InHouseSaleAndMerchandise/In-HouseSaleAndMerchandiseItemPurchase'
+import login from '../../../fixtures/login'
+import Common from '../../../page-objects/SMCMS/PageActions/Common/Common'
+import data from '../../../fixtures/Data_Module/FS-013 & FS-039 InHouseSale & Merchandise/DataManagement'
+import InHouseSaleAndMerchandisePurchaseTransaction from '../../../page-objects/SMCMS/PageActions/FS-039 & FS-013 - InHouseSaleAndMerchandise/InHouseSaleAndMerchandisePurchaseTransaction'
 
 const common = new Common()
 

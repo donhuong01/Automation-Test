@@ -1,8 +1,8 @@
-import IGDeactivation from '../../../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/FS-016 Interest Group Deactivation'
-import InterestGroupListing from '../../../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupListing'
-import login from '../../../../../fixtures/login'
-import Data from '../../../../../fixtures/Data_Module/FS-016-Interest-Group/FS-016-Interest-Group-Management'
-import Common from '../../../../../page-objects/SMCMS/PageActions/Common/Common'
+import IGDeactivation from '../../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupDeactivation'
+import InterestGroupListing from '../../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupListing'
+import login from '../../../../fixtures/login'
+import Data from '../../../../fixtures/Data_Module/FS-016-Interest-Group/FS-016-Interest-Group-Management'
+import Common from '../../../../page-objects/SMCMS/PageActions/Common/Common'
 
 const common = new Common
 

@@ -1,8 +1,8 @@
-import data from '../../../../fixtures/Data_Module/FS-030-Membership-Card-Management/030-data'
-import VIPAppointmentTermRegistrationListingForm from '../../../../page-objects/SMCMS/PageActions/FS-025-Membership-VIP-Volunteer-Veteran-League/FS-025-VIP Appointment Term Registration/VIPAppointmentTermRegistrationListingForm'
-import VIPAppointmentTermRegistrationDetailForm from '../../../../page-objects/SMCMS/PageActions/FS-025-Membership-VIP-Volunteer-Veteran-League/FS-025-VIP Appointment Term Registration/VIPAppointmentTermRegistrationDetailForm'
-import VIPMemberCardGeneration from '../../../../page-objects/SMCMS/PageActions/FS-030-Membership Card Management/FS-030-VIP-Card/VIPMemberCardGeneration'
-import login from '../../../../fixtures/login'
+import data from '../../../fixtures/Data_Module/FS-030-Membership-Card-Management/030-data'
+import VIPAppointmentTermRegistrationListingForm from '../../../page-objects/SMCMS/PageActions/FS-025-Membership-VIP-Volunteer-Veteran-League/FS-025-VIP Appointment Term Registration/VIPAppointmentTermRegistrationListingForm'
+import VIPAppointmentTermRegistrationDetailForm from '../../../page-objects/SMCMS/PageActions/FS-025-Membership-VIP-Volunteer-Veteran-League/FS-025-VIP Appointment Term Registration/VIPAppointmentTermRegistrationDetailForm'
+import VIPMemberCardGeneration from '../../../page-objects/SMCMS/PageActions/FS-030-Membership Card Management/FS-030-VIP-Card/VIPMemberCardGeneration'
+import login from '../../../fixtures/login'
 
 beforeEach(() => {
 

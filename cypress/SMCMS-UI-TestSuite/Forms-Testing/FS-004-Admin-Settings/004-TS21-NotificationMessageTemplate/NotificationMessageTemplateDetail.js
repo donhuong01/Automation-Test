@@ -5,8 +5,8 @@
  *****************************************************/
 
 // Import Pages
-import NotificationMessageTemplateDetail from "../../../../../page-objects/SMCMS/PageActions/FS-004-Admin-Settings/FS-004-Notification Message Template/NotificationMessageTemplateDetails";
-import data from "../../../../../page-objects/SMCMS/PageActions/FS-004-Admin-Settings/FS-004-Notification Message Template/NotificationMessageTemplateDetails";
+import NotificationMessageTemplateDetail from "../../../../page-objects/SMCMS/PageActions/FS-004-Admin-Settings/FS-004-Notification Message Template/NotificationMessageTemplateDetails";
+import data from "../../../../page-objects/SMCMS/PageActions/FS-004-Admin-Settings/FS-004-Notification Message Template/NotificationMessageTemplateDetails";
 
 describe('[TS21] Notification Message Template Details Update', function () {
     const NotifMsgTempDetail = new NotificationMessageTemplateDetail();

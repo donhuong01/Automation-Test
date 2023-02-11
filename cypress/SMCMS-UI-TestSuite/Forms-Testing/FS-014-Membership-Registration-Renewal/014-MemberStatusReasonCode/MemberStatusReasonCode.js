@@ -5,10 +5,10 @@
  *****************************************************/
 
 // Import Pages
-import MemberStatusReasonCodeDetail from "../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Member Status Reason Code/MemberStatusReasonCodeDetail"
-import data from '../../../../../fixtures/Data_Module/FS-014-Membership-Registration-Renewal/014-Uat-data'
-import elems_MemberStatusReasonCodeListing from "../../../../../page-objects/SMCMS/Elements/Membership/FS014_Membership-Master-Registration-Renewal/MemberStatusReasonCodeListing"
-import login from '../../../../../fixtures/login'
+import MemberStatusReasonCodeDetail from "../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Member Status Reason Code/MemberStatusReasonCodeDetail"
+import data from '../../../../fixtures/Data_Module/FS-014-Membership-Registration-Renewal/014-Uat-data'
+import elems_MemberStatusReasonCodeListing from "../../../../page-objects/SMCMS/Elements/Membership/FS014_Membership-Master-Registration-Renewal/MemberStatusReasonCodeListing"
+import login from '../../../../fixtures/login'
 
 
 

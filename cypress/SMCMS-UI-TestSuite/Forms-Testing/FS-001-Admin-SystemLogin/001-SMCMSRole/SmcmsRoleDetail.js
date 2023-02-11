@@ -5,9 +5,9 @@
  *****************************************************/
 
 // Import Pages
-import SMCMSRoleDetail from '../../../../../page-objects/SMCMS/PageActions/FS-004-Admin-Settings/FS-001-SMCMSRole/SMCMSRoleDetail'
-import SMCMSRoleListing from '../../../../../page-objects/SMCMS/PageActions/FS-004-Admin-Settings/FS-001-SMCMSRole/SMCMSRoleListing.js'
-import data from '../../../../../fixtures/Data_Module/FS-004-Admin-Settings/001-data.js'
+import SMCMSRoleDetail from '../../../../page-objects/SMCMS/PageActions/FS-004-Admin-Settings/FS-001-SMCMSRole/SMCMSRoleDetail'
+import SMCMSRoleListing from '../../../../page-objects/SMCMS/PageActions/FS-004-Admin-Settings/FS-001-SMCMSRole/SMCMSRoleListing.js'
+import data from '../../../../fixtures/Data_Module/FS-004-Admin-Settings/001-data.js'
 
     // Page Definitions
     const SmcmsRoleDtl = new SMCMSRoleDetail()

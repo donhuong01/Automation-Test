@@ -1,7 +1,7 @@
-import data from '../../../../../fixtures/Data_Module/FS-040-Club-Sales/040-data'
-import ReceiptListingForm from '../../../../../page-objects/SMCMS/PageActions/FS-040-Clubs Sales/FS-040-Receipt Manegement/ReceiptListingForm'
+import data from '../../../../fixtures/Data_Module/FS-040-Club-Sales/040-data'
+import ReceiptListingForm from '../../../../page-objects/SMCMS/PageActions/FS-040-Clubs Sales/FS-040-Receipt Manegement/ReceiptListingForm'
 
-import login from '../../../../../fixtures/login'
+import login from '../../../../fixtures/login'
 
 const ReceiptListing = new ReceiptListingForm()
 

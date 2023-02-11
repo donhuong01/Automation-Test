@@ -1,5 +1,5 @@
-import CustomerCategoryTypeListing from '../../../../../page-objects/SMCMS/PageActions/FS-004-Admin-Settings/FS-004-Customer Category Type/CustomerCategoryTypeListing'
-import data from '../../../../../fixtures/Data_Module/FS-004-Admin-Settings/'
+import CustomerCategoryTypeListing from '../../../../page-objects/SMCMS/PageActions/FS-004-Admin-Settings/FS-004-Customer Category Type/CustomerCategoryTypeListing'
+import data from '../../../../fixtures/Data_Module/FS-004-Admin-Settings/'
 
 
 describe('[TS19] Customer Category Type Listing', function () {

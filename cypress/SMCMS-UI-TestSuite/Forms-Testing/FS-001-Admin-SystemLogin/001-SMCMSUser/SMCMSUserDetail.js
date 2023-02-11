@@ -5,8 +5,8 @@
  * @author: fshahzada
  *****************************************************/
 // Import Pages
-import SMCMSUserDetail from '../../../../../page-objects/SMCMS/PageActions/FS-001-Admin-SystemLogin/FS-001-SMCMSUser/SMCMSUserDetails'
-import data from '../../../../../fixtures/Data_Module/FS-001-Admin-System-login/001-data'
+import SMCMSUserDetail from '../../../../page-objects/SMCMS/PageActions/FS-001-Admin-SystemLogin/FS-001-SMCMSUser/SMCMSUserDetails'
+import data from '../../../../fixtures/Data_Module/FS-001-Admin-System-login/001-data'
 
 describe('SMCMS User', function (){
     

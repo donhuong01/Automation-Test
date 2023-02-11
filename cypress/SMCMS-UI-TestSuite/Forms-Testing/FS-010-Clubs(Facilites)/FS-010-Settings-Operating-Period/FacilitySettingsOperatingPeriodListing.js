@@ -5,9 +5,9 @@
  *****************************************************/
 
 // Import Pages
-import FacilitySettingsOperatingPeriodListing from '../../../../../page-objects/SMCMS/PageActions/FS-010-Clubs(Facilites)/FS-010-Settings-Operating-Period/FacilitySettingsOperatingPeriodListing'
-import data from '../../../../../fixtures/Data_Module/FS-010-Club-Facility/010-data'
-import login from '../../../../../fixtures/login'
+import FacilitySettingsOperatingPeriodListing from '../../../../page-objects/SMCMS/PageActions/FS-010-Clubs(Facilites)/FS-010-Settings-Operating-Period/FacilitySettingsOperatingPeriodListing'
+import data from '../../../../fixtures/Data_Module/FS-010-Club-Facility/010-data'
+import login from '../../../../fixtures/login'
 
 //Page Definition
 const FacilitySettingsOperatingPeriodList = new FacilitySettingsOperatingPeriodListing

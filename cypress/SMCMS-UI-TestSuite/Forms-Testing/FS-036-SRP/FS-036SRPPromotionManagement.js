@@ -1,7 +1,7 @@
-import SRP_PromotionListing from '../../../../page-objects/SMCMS/PageActions/FS-036-SRP/SRP_PromotionListing'
-import SRP_PromotionDetail from '../../../../page-objects/SMCMS/PageActions/FS-036-SRP/SRP_PromotionDetail'
-import data from '../../../../fixtures/Data_Module/FS-036-SRP/SRP_Sample_Data'
-import login from '../../../../fixtures/login'
+import SRP_PromotionListing from '../../../page-objects/SMCMS/PageActions/FS-036-SRP/SRP_PromotionListing'
+import SRP_PromotionDetail from '../../../page-objects/SMCMS/PageActions/FS-036-SRP/SRP_PromotionDetail'
+import data from '../../../fixtures/Data_Module/FS-036-SRP/SRP_Sample_Data'
+import login from '../../../fixtures/login'
 
 beforeEach(() => {
 

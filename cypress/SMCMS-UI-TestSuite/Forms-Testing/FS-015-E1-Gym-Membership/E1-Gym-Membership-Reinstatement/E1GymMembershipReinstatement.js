@@ -1,8 +1,8 @@
-import E1GymMembershipListing from '../../../../../page-objects/SMCMS/PageActions/FS-015-E1-Gym-MemberShip/E1 Gym Membership Listing'
-import E1GymMembershipReinstatement from '../../../../../page-objects/SMCMS/PageActions/FS-015-E1-Gym-MemberShip/E1 Gym Membership Reinstatement'
-import login from '../../../../../fixtures/login'
-import data from '../../../../../fixtures/Data_Module/FS-015-E1-Gym-Membership/FS-015-E1-Gym-Membership-Reinstatement'
-import Common from '../../../../../page-objects/SMCMS/PageActions/Common/Common'
+import E1GymMembershipListing from '../../../../page-objects/SMCMS/PageActions/FS-015-E1-Gym-MemberShip/E1-Gym-Membership-Listing'
+import E1GymMembershipReinstatement from '../../../../page-objects/SMCMS/PageActions/FS-015-E1-Gym-MemberShip/E1-Gym-Membership-Reinstatement'
+import login from '../../../../fixtures/login'
+import data from '../../../../fixtures/Data_Module/FS-015-E1-Gym-Membership/FS-015-E1-Gym-Membership-Reinstatement'
+import Common from '../../../../page-objects/SMCMS/PageActions/Common/Common'
 beforeEach(() => {
 
     // Set local storage for QA Enviroment

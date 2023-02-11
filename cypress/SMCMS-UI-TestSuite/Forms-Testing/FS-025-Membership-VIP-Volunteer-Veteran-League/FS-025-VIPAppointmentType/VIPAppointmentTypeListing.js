@@ -4,10 +4,10 @@
 *****************************************************/
 
 //Import Pages
-import VIPAppointmentTypeListing from '../../../../../page-objects/SMCMS/PageActions/FS-025-Membership-VIP-Volunteer-Veteran-League/FS-025-VIP Appointment Type/VIPAppointmentTypeListing'
-import VIPAppointmentDetail from '../../../../../page-objects/SMCMS/PageActions/FS-025-Membership-VIP-Volunteer-Veteran-League/FS-025-VIP Appointment Type/VIPAppointmentTypeDetail'
-import data from '../../../../../fixtures/Data_Module/FS-025-Membership-VIP-Volunteer-Veteran-League/025-data'
-import login from '../../../../../fixtures/login'
+import VIPAppointmentTypeListing from '../../../../page-objects/SMCMS/PageActions/FS-025-Membership-VIP-Volunteer-Veteran-League/FS-025-VIP Appointment Type/VIPAppointmentTypeListing'
+import VIPAppointmentDetail from '../../../../page-objects/SMCMS/PageActions/FS-025-Membership-VIP-Volunteer-Veteran-League/FS-025-VIP Appointment Type/VIPAppointmentTypeDetail'
+import data from '../../../../fixtures/Data_Module/FS-025-Membership-VIP-Volunteer-Veteran-League/025-data'
+import login from '../../../../fixtures/login'
 
 describe('[TS05] VIP Appointment Type Listing ', () => {
 

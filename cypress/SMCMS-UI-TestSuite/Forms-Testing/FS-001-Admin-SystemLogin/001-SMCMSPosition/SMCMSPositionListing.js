@@ -1,6 +1,6 @@
-import PositionListing from '../../../../../page-objects/SMCMS/PageActions/FS-001-Admin-SystemLogin/FS-001-SMCMSPosition/SMCMSPositionListing'
-import elems_SMCMSPoitionDetail from '../../../../../page-objects/SMCMS/Elements/Admin/FS001_Admin-SystemLogin/SMCMSPositionDetail'
-import data from '../../../../../fixtures/Data_Module/FS-004-Admin-Settings/001-data'
+import PositionListing from '../../../../page-objects/SMCMS/PageActions/FS-001-Admin-SystemLogin/FS-001-SMCMSPosition/SMCMSPositionListing'
+import elems_SMCMSPoitionDetail from '../../../../page-objects/SMCMS/Elements/Admin/FS001_Admin-SystemLogin/SMCMSPositionDetail'
+import data from '../../../../fixtures/Data_Module/FS-004-Admin-Settings/001-data'
 
 describe('[TS01] SMCMS Position Listing Form', function () {
 

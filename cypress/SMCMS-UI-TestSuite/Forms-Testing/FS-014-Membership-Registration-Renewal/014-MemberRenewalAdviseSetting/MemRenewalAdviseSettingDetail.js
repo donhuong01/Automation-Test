@@ -7,8 +7,8 @@
 
 //Importing related Pages
 import MembershipRenewAdviseSettingDetail from "../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-MembershipRenewalAdviseSetting/MembershipRenewAdviseSettingDetail"
-import data from '../../../../../fixtures/Data_Module/FS-014-Membership-Registration-Renewal/014-data'
-import login from '../../../../../fixtures/login'
+import data from '../../../../fixtures/Data_Module/FS-014-Membership-Registration-Renewal/014-data'
+import login from '../../../../fixtures/login'
 
 beforeEach(() => {
 

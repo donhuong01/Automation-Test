@@ -1,12 +1,12 @@
 
-import login from '../../../../../fixtures/login'
+import login from '../../../../fixtures/login'
 
-import ShoppingCartPayments from '../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Shopping Cart and Payment/ShoppingCartandPayments'
-import TerminationData from '../../../../../fixtures/Data_Module/FS-016-Interest-Group/FS-016-Interest-Group-Management'
-import InterestGroupListing from '../../../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupMembershipListing'
+import ShoppingCartPayments from '../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Shopping Cart and Payment/ShoppingCartandPayments'
+import TerminationData from '../../../../fixtures/Data_Module/FS-016-Interest-Group/FS-016-Interest-Group-Management'
+import InterestGroupListing from '../../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupMembershipListing'
 
-import Common from '../../../../../page-objects/SMCMS/PageActions/Common/Common'
-import InterestGroupMembershipReinstatement from '../../../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupMembershipReinstatement'
+import Common from '../../../../page-objects/SMCMS/PageActions/Common/Common'
+import InterestGroupMembershipReinstatement from '../../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupMembershipReinstatement'
 
 const ShoppingCart = new ShoppingCartPayments()
 const common = new Common

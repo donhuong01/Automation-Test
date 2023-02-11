@@ -1,7 +1,7 @@
-import EDCTerminalListing from '../../../../page-objects/SMCMS/PageActions/FS-036-SRP/EDC_TerminalListing'
-import EDCTerminalDetail from '../../../../page-objects/SMCMS/PageActions/FS-036-SRP/EDC_TerminalDetail'
-import data from '../../../../fixtures/Data_Module/FS-036-SRP/SRP_Sample_Data'
-import login from '../../../../fixtures/login'
+import EDCTerminalListing from '../../../page-objects/SMCMS/PageActions/FS-036-SRP/EDC_TerminalListing'
+import EDCTerminalDetail from '../../../page-objects/SMCMS/PageActions/FS-036-SRP/EDC_TerminalDetail'
+import data from '../../../fixtures/Data_Module/FS-036-SRP/SRP_Sample_Data'
+import login from '../../../fixtures/login'
 
 beforeEach(() => {
 
