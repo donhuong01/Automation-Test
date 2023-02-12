@@ -1,0 +1,258 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 6,
+    "passes": 2,
+    "pending": 0,
+    "failures": 4,
+    "start": "2023-02-12T11:17:52.009Z",
+    "end": "2023-02-12T11:20:21.504Z",
+    "duration": 149495,
+    "testsRegistered": 6,
+    "passPercent": 33.33333333333333,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "184c7930-bad6-4bc4-a6f1-9c7d434f42c1",
+      "title": "",
+      "fullFile": "cypress/SMCMS-UI-TestSuite/SMCMS-E2E-Testing/E2E.js",
+      "file": "cypress/SMCMS-UI-TestSuite/SMCMS-E2E-Testing/E2E.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "29c7144b-a1e6-466b-9cbe-84102525c16b",
+          "title": "E2E Auto Testing:FS-001",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "bb356b37-b229-4800-bb3c-b4791a68e7d0",
+              "title": "[TS01] Online Account Access Management",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "[TC01] Updating an Online Account Access and checking filter functionality",
+                  "fullTitle": "E2E Auto Testing:FS-001 [TS01] Online Account Access Management [TC01] Updating an Online Account Access and checking filter functionality",
+                  "timedOut": null,
+                  "duration": 55210,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit('/admin/onlineAccountAccessList');\ncy.wait(5000);\nOnlineAccountAccessDtl.VerifyPageTitle('Online Account Access Listing'); //OnlineAccountAccessLst.VerifyUpdatedDate() //Data needs to be changed each time the item is updated\nOnlineAccountAccessLst.VerifyTableLink(_data.default.OnlineAccountAccessListing.MmebershipType);\nOnlineAccountAccessDtl.FillOutFormRemarks(_data.default.OnlineAccountAccessDetail.Remarks);\nOnlineAccountAccessDtl.AddFunction(_data.default.OnlineAccountAccessDetail.FunctionName);\nOnlineAccountAccessDtl.RemoveFunction(_data.default.OnlineAccountAccessDetail.FunctionName);\nOnlineAccountAccessDtl.AddFunction(_data.default.OnlineAccountAccessDetail.FunctionName);\nOnlineAccountAccessDtl.save();\nOnlineAccountAccessDtl.VerifySaveNotification();",
+                  "err": {},
+                  "uuid": "76088de4-7bf5-4421-8d07-eaba19de2679",
+                  "parentUUID": "bb356b37-b229-4800-bb3c-b4791a68e7d0",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "[TC02] Updating an Online Account Access and cancelling",
+                  "fullTitle": "E2E Auto Testing:FS-001 [TS01] Online Account Access Management [TC02] Updating an Online Account Access and cancelling",
+                  "timedOut": null,
+                  "duration": 26926,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.visit('/admin/onlineAccountAccessList');\ncy.wait(5000);\nOnlineAccountAccessDtl.VerifyPageTitle('Online Account Access Listing');\nOnlineAccountAccessLst.VerifyTableLink(_data.default.OnlineAccountAccessListing.MmebershipType);\nOnlineAccountAccessDtl.FillOutFormRemarks(_data.default.OnlineAccountAccessDetail.Remarks);\nOnlineAccountAccessDtl.AddFunction(_data.default.OnlineAccountAccessDetail.FunctionName);\nOnlineAccountAccessDtl.RemoveFunction(_data.default.OnlineAccountAccessDetail.FunctionName);\nOnlineAccountAccessDtl.AddFunction(_data.default.OnlineAccountAccessDetail.FunctionName);\nOnlineAccountAccessDtl.cancel();",
+                  "err": {},
+                  "uuid": "1cf6f69a-cf23-4181-87e0-162361ae33fe",
+                  "parentUUID": "bb356b37-b229-4800-bb3c-b4791a68e7d0",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "76088de4-7bf5-4421-8d07-eaba19de2679",
+                "1cf6f69a-cf23-4181-87e0-162361ae33fe"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 82136,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "04da2c19-553b-4dfc-8f61-315712e17e47",
+              "title": "[TS01] SMCMS Position Management",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "[TC01] Fillout Position Detail Form and click Save button",
+                  "fullTitle": "E2E Auto Testing:FS-001 [TS01] SMCMS Position Management [TC01] Fillout Position Detail Form and click Save button",
+                  "timedOut": null,
+                  "duration": 28560,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Failed screenshot\",\n        \"value\": \"\\\\SMCMS-E2E-Testing\\\\E2E.js\\\\E2E Auto TestingFS-001 -- [TS01] SMCMS Position Management -- [TC01] Fillout Position Detail Form and click Save button (failed).png\"\n      }\n    ]\n  ]\n}",
+                  "code": "//Navigate to SMCMS Position Listing\ncy.visit('/admin/smcmsPositionList'); // cy.wait(5000)\n//Verify create new button functionality\nposList.createNew(); //Verify page title\nPositionDetail.verifyPageTitle('SMCMS Position Detail'); //Fill out position details form\nPositionDetail.fillOutPositionDetailForm(PositionName, Role, Location, Remark); //Select user from the userlist\nPositionDetail.addUsersAndVerifyTableEntry(TargetUserEmail, TargetUserName); //Verify page title\nPositionDetail.verifyPageTitle('SMCMS Position Detail'); //Search and delete User\nPositionDetail.searchAndDeleteUser(TargetUserEmail); //Select user from the userlist\nPositionDetail.addUsersAndVerifyTableEntry(TargetUserEmail, TargetUserName); //Cancel the form\nPositionDetail.Save(); //Verify Success message\nPositionDetail.VerifyNotificationMsg('Record has been saved successfully.'); //verify page title\nposList.verifyPageTitle(); //Verify newly created entry in the table\nposList.VerifySearchFilter(PositionName);",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//input[@id=\"txtLoginName\"]`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//input[@id=\"txtLoginName\"]`, but never found it.\n    at Context.eval (https://uat-smcms.safra.sg/__cypress/tests?p=cypress\\support\\index.js:2067:6)",
+                    "diff": null
+                  },
+                  "uuid": "be25c216-59f3-41cb-ba5a-a1b444f2e3ac",
+                  "parentUUID": "04da2c19-553b-4dfc-8f61-315712e17e47",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "[TC02] Update newly created postion",
+                  "fullTitle": "E2E Auto Testing:FS-001 [TS01] SMCMS Position Management [TC02] Update newly created postion",
+                  "timedOut": null,
+                  "duration": 14292,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Failed screenshot\",\n        \"value\": \"\\\\SMCMS-E2E-Testing\\\\E2E.js\\\\E2E Auto TestingFS-001 -- [TS01] SMCMS Position Management -- [TC02] Update newly created postion (failed).png\"\n      }\n    ]\n  ]\n}",
+                  "code": "//Navigate to SMCMS Position Listing\ncy.visit('/admin/smcmsPositionList');\ncy.wait(3000); //Verify Search filter functionality\nposList.VerifySearchFilter(PositionName); //Click table entry\nposList.UpdatePosition(PositionName); //Fill out position details form\nPositionDetail.fillOutPositionDetailForm(UpdatedPositionName, UpdatedRole, UpdatedLocation, UpdatedRemark); //Select user from the userlist\nPositionDetail.addUsersAndVerifyTableEntry(TargetUserEmail, TargetUserName); //Cancel the form\nPositionDetail.Save(); //Verify Success message\nPositionDetail.VerifyNotificationMsg('Record has been saved successfully.'); //Verify Page title\nposList.verifyPageTitle(); //Verify newly created entry in the table\nposList.VerifySearchFilter(UpdatedPositionName);",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//h2[text()=\"SMCMS Position Listing\"]/ancestor::div//table//tbody//td[2]`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//h2[text()=\"SMCMS Position Listing\"]/ancestor::div//table//tbody//td[2]`, but never found it.\n    at Context.eval (https://uat-smcms.safra.sg/__cypress/tests?p=cypress\\support\\index.js:2401:70)",
+                    "diff": null
+                  },
+                  "uuid": "efc446d5-99a9-465c-962d-6831de1d6011",
+                  "parentUUID": "04da2c19-553b-4dfc-8f61-315712e17e47",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "[TC03] Updating  and cancelling a Position Name",
+                  "fullTitle": "E2E Auto Testing:FS-001 [TS01] SMCMS Position Management [TC03] Updating  and cancelling a Position Name",
+                  "timedOut": null,
+                  "duration": 12338,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Failed screenshot\",\n        \"value\": \"\\\\SMCMS-E2E-Testing\\\\E2E.js\\\\E2E Auto TestingFS-001 -- [TS01] SMCMS Position Management -- [TC03] Updating  and cancelling a Position Name (failed).png\"\n      }\n    ]\n  ]\n}",
+                  "code": "//Navigate to SMCMS Position Listing\ncy.visit('/admin/smcmsPositionList');\ncy.wait(3000); //Verify Search filter functionality\nposList.VerifySearchFilter(UpdatedPositionName); //Click table entry\nposList.UpdatePosition(UpdatedPositionName); //Fill out position details form\nPositionDetail.fillOutPositionDetailForm(UpdatedPositionName, UpdatedRole, UpdatedLocation, UpdatedRemark); //Select user from the userlist\nPositionDetail.addUsersAndVerifyTableEntry(TargetUserEmail, TargetUserName); //Cancel the form\nPositionDetail.Cancel(); //Verify Page title\nposList.verifyPageTitle();",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//h2[text()=\"SMCMS Position Listing\"]/ancestor::div//table//tbody//td[2]`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//h2[text()=\"SMCMS Position Listing\"]/ancestor::div//table//tbody//td[2]`, but never found it.\n    at Context.eval (https://uat-smcms.safra.sg/__cypress/tests?p=cypress\\support\\index.js:2401:70)",
+                    "diff": null
+                  },
+                  "uuid": "317074d2-b38b-41c7-9c84-6397090e4334",
+                  "parentUUID": "04da2c19-553b-4dfc-8f61-315712e17e47",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "[TC04] Delete newly created Psition Name in the table",
+                  "fullTitle": "E2E Auto Testing:FS-001 [TS01] SMCMS Position Management [TC04] Delete newly created Psition Name in the table",
+                  "timedOut": null,
+                  "duration": 11945,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Failed screenshot\",\n        \"value\": \"\\\\SMCMS-E2E-Testing\\\\E2E.js\\\\E2E Auto TestingFS-001 -- [TS01] SMCMS Position Management -- [TC04] Delete newly created Psition Name in the table (failed).png\"\n      }\n    ]\n  ]\n}",
+                  "code": "//Navigate to SMCMS Position Listing\ncy.visit('/admin/smcmsPositionList');\ncy.wait(3000); //Verify Search filter functionality\nposList.VerifySearchFilter(UpdatedPositionName); //Select and Delete Table entry\nposList.Delete(UpdatedPositionName); //Click Yes button\nposList.DeleteConfirmYes(); //Verify Success message\nPositionDetail.VerifyNotificationMsg('Record has been deleted successfully.');",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//h2[text()=\"SMCMS Position Listing\"]/ancestor::div//table//tbody//td[2]`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//h2[text()=\"SMCMS Position Listing\"]/ancestor::div//table//tbody//td[2]`, but never found it.\n    at Context.eval (https://uat-smcms.safra.sg/__cypress/tests?p=cypress\\support\\index.js:2401:70)",
+                    "diff": null
+                  },
+                  "uuid": "2e3c9461-9b74-4ab0-bffc-29ef1226211b",
+                  "parentUUID": "04da2c19-553b-4dfc-8f61-315712e17e47",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "be25c216-59f3-41cb-ba5a-a1b444f2e3ac",
+                "efc446d5-99a9-465c-962d-6831de1d6011",
+                "317074d2-b38b-41c7-9c84-6397090e4334",
+                "2e3c9461-9b74-4ab0-bffc-29ef1226211b"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 67135,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "charts": true,
+        "reportPageTitle": "My Test Suite",
+        "embeddedScreenshots": true,
+        "html": true,
+        "overwrite": true,
+        "inlineAssets": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

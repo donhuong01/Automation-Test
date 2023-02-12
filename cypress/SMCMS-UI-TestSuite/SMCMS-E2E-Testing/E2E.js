@@ -140,8 +140,6 @@ import InHouseSaleAndMerchandiseTransactionRefund from '../Sub-Phase-3/FS-039&FS
 
 import login from '../../fixtures/login'
 
-
-
 beforeEach(() => {
 
     // Set local storage for QA Enviroment
@@ -151,13 +149,13 @@ beforeEach(() => {
     cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
 })
  
-// describe('E2E Auto Testing:FS-001', () => {
+describe('E2E Auto Testing:FS-001', () => {
 
-    // OnlineAccountAccess() 
-    // SMCMSPostion()
+    OnlineAccountAccess() 
+    SMCMSPostion()
     // SMCMSRole() //Reports are missing
     // SMCMSUser() 
-// })
+})
 
 // describe('E2E Auto Testing:FS-004', () => {
 
@@ -314,14 +312,14 @@ beforeEach(() => {
 
 
 
-describe('E2E Auto Testing:FS-013 & 039', ()=> {
+// describe('E2E Auto Testing:FS-013 & 039', ()=> {
 
-    InHouseSaleAndMerchandiseItemManagement()
-    InHouseSaleAndMerchandisePurchase()
-    InHouseSaleAndMerchandiseTransactionAdjustment()
-    InHouseSaleAndMerchandiseTransactionConcellation()
-    InHouseSaleAndMerchandiseTransactionRefund()
+//     InHouseSaleAndMerchandiseItemManagement()
+//     InHouseSaleAndMerchandisePurchase()
+//     InHouseSaleAndMerchandiseTransactionAdjustment()
+//     InHouseSaleAndMerchandiseTransactionConcellation()
+//     InHouseSaleAndMerchandiseTransactionRefund()
 
-})
+// })
 
 

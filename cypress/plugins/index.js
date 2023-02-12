@@ -11,9 +11,11 @@ const ObjectId = require('mongodb').ObjectId;
 const fs = require('fs')
 // const dotenvPlugin = require('cypress-dotenv');
 const allureWriter = require('@shelex/cypress-allure-plugin/writer');
+
 module.exports = (on, config) => {
   require('cypress-mochawesome-reporter/plugin')(on);
 };
+
 module.exports = (on, config) => {
   
   on('task', {
