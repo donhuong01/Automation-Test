@@ -62,7 +62,7 @@ class LifeMembership {
 
         // Click on Save button
         cy.Click(elems_PendingTaskDetail.BTN_SUBMIT)
-        cy.wait(2000)
+        cy.wait(6000)
 
 
      }
@@ -75,7 +75,7 @@ class LifeMembership {
       ShoppinCart() {
       
         cy.Click(elems_PageHeader.BTN_SHOPPINGCART)
-        cy.wait(5000)
+        cy.wait(8000)
         cy.xpath(elems_PageHeader.DRP_USERLINKS).click()
         cy.wait(5000)
         cy.xpath('//ul//li').contains('A-').click()

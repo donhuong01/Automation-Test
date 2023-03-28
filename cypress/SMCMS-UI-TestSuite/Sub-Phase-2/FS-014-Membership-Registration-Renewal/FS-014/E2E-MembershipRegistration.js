@@ -126,16 +126,18 @@ describe('[TS01] Membership Registration Management',function(){
             // MemRegPrincipal.VerifyPageTitle('Membership Registration - Principal')
             
             MemRegPrincipal.SaveAndNextPrincipal()
-            cy.wait(10000)
+            cy.wait(20000)
         
             ///////////////////////////////////TENURE SELECTION////////////////////////////////////////////////////////////
         
         
             // Membership Tenure Selection
             MemTenureSelect.principalTenureSelection(PrincipalName,'10 Years')
-            
+            // cy.wait(30000)
+
             // Click on add to cart
             MemTenureSelect.addToCart()
+            
         
             // Shopping cart and Payments
             ShoppingCart.fillOutandApplyPayment('CASH')

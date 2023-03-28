@@ -149,7 +149,7 @@ class ShoppingCartPayments {
 
         cy.xpath(elems_SMCMSShoppingCartAndPayment.Payments.LBL_REMAININGBALANCE).then($balance => {
 
-            const blnc = $balance.text().trim()
+            const blnc = $balance.text().trim() // 437.400
 
             // const Amount = Math.floor(blnc)
             // console.log(Amount)
@@ -161,6 +161,30 @@ class ShoppingCartPayments {
         cy.wait(3000)
 
         cy.Click(elems_SMCMSShoppingCartAndPayment.Payments.BTN_PAYNOW)
+        cy.wait(8000)
+
+
+    }
+
+    fillOutandApplyPaymentCompleteButton(PaymentMode) {
+
+        cy.wait(2000)
+        cy.SelectDropDownItem(elems_SMCMSShoppingCartAndPayment.Payments.DRP_PAYMENTMODE, PaymentMode)
+
+        cy.xpath(elems_SMCMSShoppingCartAndPayment.Payments.LBL_REMAININGBALANCE).then($balance => {
+
+            const blnc = $balance.text().trim() // 437.400
+
+            // const Amount = Math.floor(blnc)
+            // console.log(Amount)
+            cy.xpath(elems_SMCMSShoppingCartAndPayment.Payments.TXT_AMOUNT).clear()
+            cy.xpath(elems_SMCMSShoppingCartAndPayment.Payments.TXT_AMOUNT).type(blnc)
+
+        })
+        cy.Click(elems_SMCMSShoppingCartAndPayment.Payments.BTN_APPLYPAYMENT)
+        cy.wait(3000)
+
+        cy.Click(elems_SMCMSShoppingCartAndPayment.Payments.BTN_COMPLETE)
         cy.wait(8000)
 
 

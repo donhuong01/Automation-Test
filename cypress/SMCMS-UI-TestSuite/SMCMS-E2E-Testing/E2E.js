@@ -143,19 +143,19 @@ import login from '../../fixtures/login'
 beforeEach(() => {
 
     // Set local storage for QA Enviroment
-    // cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
+    cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
    
     // Set local storage for UAT Enviroment
-    cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
+    // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
 })
  
-describe('E2E Auto Testing:FS-001', () => {
+// describe('E2E Auto Testing:FS-001', () => {
 
-    OnlineAccountAccess() 
-    SMCMSPostion()
+    // OnlineAccountAccess() 
+    // SMCMSPostion()
     // SMCMSRole() //Reports are missing
     // SMCMSUser() 
-})
+// })
 
 // describe('E2E Auto Testing:FS-004', () => {
 
@@ -164,9 +164,9 @@ describe('E2E Auto Testing:FS-001', () => {
     // CodeType()
     // CodeSetMaster()
     // DocumentTemplate()
-    // //ApplicationSetting() //Not Required
-    // //NotificationMessageTemplate() //Not Required
-    // //AnnouncementPortalNotification() //Not Required
+    // ApplicationSetting() //Not Required
+    // NotificationMessageTemplate() //Not Required
+    // AnnouncementPortalNotification() //Not Required
 // })
 
 //  describe('E2E Auto Testing:FS-010', ()=> {
@@ -184,20 +184,37 @@ describe('E2E Auto Testing:FS-001', () => {
 
 // describe('E2E Auto Testing:FS-014', ()=> {
 
-    // MembershipRegistration("S4079930C") // Enter Full NRIC
+    // MembershipRegistration("S0768637D") // Enter Full NRIC
     // CustomerCheckIn()
     // MemberType()
     // BadAddressUpdate()// Fail Need code updates
     // MembershipRenewalAdvise()
-    // WithdrawalOfConsent("A30000681") //Enter Member ID for Withdrawal Of Consent
+    // WithdrawalOfConsent("A300000533") //Enter Member ID for Withdrawal Of Consent
     // SourceChannel() 
     // //MemberStatusReasonCode() // Not Required
     // MassUpdateForMemberData()
     // MembershipModuleSettings()
-    // SFSMemberRegistion("S2553318F", "S1057999F", "S4632722E") //Add three NRIC's for Principal, Dependent Child, Dependent Spouse
-    // E2EMemberShipRenewal("S5886263J") //Add NRIC For Principal Registration
-    // LifeMembershipManagment("S9506118D") //Add NRIC For Principal Registration
-    // BatchMembershipRegistration() //
+    // SFSMemberRegistion("S2985728H", "S0020519B", "S1421614F") //Add three NRIC's for Principal, Dependent Child, Dependent Spouse
+    // E2EMemberShipRenewal("S6270302D") //Add NRIC For Principal Registration
+    // LifeMembershipManagment("S9750882H") //Add NRIC For Principal Registration
+    BatchMembershipRegistration(
+
+        //Pass Info for Existing Member MemberID and LAST4DigitsNRIC
+        "A300002503",
+        "648J",
+        
+        //Pass informstion for Non-Member Name, DOB, LAST4DigitsNRIC and Full NRIC
+        "Test User 253",
+        "24-Jan-1980",
+        "560D",
+        "S8866872C",
+
+        //NRIC for New Principal
+        "S5216439G",
+
+        //NRIC for New Dependent and Dependent PrincipalID
+        "S2542998B",
+        "A300002516") 
 
 
 // })

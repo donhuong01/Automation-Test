@@ -15,6 +15,14 @@ describe('[TS19] Customer Category Type Management', () =>{
 //Page definition
 const CustomCatTypeDetail = new CustomerCategoryTypeDetail()
 const CustomCatTypeListing = new CustomerCategoryTypeListing()
+// afterEach(() => {
+
+   
+//     // Set local storage for UAT Enviroment
+//     cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
+
+    
+// })
 
 const Name = data.CustomerCategoryTypeDetail.Name
 const BelongsUnder = data.CustomerCategoryTypeDetail.BelongUnder

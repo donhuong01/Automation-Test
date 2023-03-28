@@ -16,9 +16,13 @@ import MembershipTenureSelection from '../../../../page-objects/SMCMS/PageAction
 import ShoppingCartPayments from '../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Shopping Cart and Payment/ShoppingCartandPayments'
 
 
-const BatchMembershipRegistration = () => {
+const BatchMembershipRegistration = (IDExistingMember, NRICExistingMember, 
+    NonMemberName, DateOfBirth, FullNRICNonMem, FUllNRIC,
+     NRICNewMemberPrincipal, NRICNewMemberDependent, NewDependentPrincipalID) => {
 
 describe('[TS13] Batch Membership Registration Details form', function () {
+
+    // const NRICNonMember = FullNRICNonMem.substr(FullNRICNonMem.length - 4);
 
     //Page definition
     const MemRegPrincipal = new MemberRegistrationPrincipal()
@@ -27,26 +31,12 @@ describe('[TS13] Batch Membership Registration Details form', function () {
 
     const ShoppingCartPayment = new ShoppingCartPayments()
 
-    //Existing Member
-    const NRICExistingMember = '774Z'
-    const IDExistingMember = 'A30000007'
-    const ExistingPrincipalName = 'Test user 1212'
-    
-    //Non-Member 
-    const NRICNonMember = '043F'
-    const FullNRICNonMem = 'S4560718F'
-    const DateOfBirth = '04-Oct-1978'
-    const NonMemberName = 'Auto-User8452783644'
-
-    // New Member Principal
-    const NRICNewMemberPrincipal = 'S8146236D'
-
     // New Member Dependent
-    const NRICNewMemberDependent = 'S3423401I'
-    const NewDependentPrincipalID = 'A300000083'
-    const NewDependentPrincipalName = 'Test User 125'
+    // const NRICNewMemberDependent = 'S3423401I'
+    // const NewDependentPrincipalID = 'A300000083'
+    // const NewDependentPrincipalName = 'Test User 125'
 
-    const ApplicationDate = '10-Aug-2020'
+    const ApplicationDate = '10-Aug-2022'
 
 
     const BatchName = 'Auto-' + Math.floor(Math.random() * 100000 * 2 ) + data.BatchMemRegDetail.BatchName
@@ -117,7 +107,7 @@ describe('[TS13] Batch Membership Registration Details form', function () {
         //Click Next button
         BatchMembershipRegistrationDetail.Next()
 
-        // Swlct Member Category
+        // Select Member Category
         // BatchMembershipRegistrationDetail.SelectMemberCategory('Principal')
 
         //Enter Applicatioin Date
@@ -151,7 +141,7 @@ describe('[TS13] Batch Membership Registration Details form', function () {
         BatchMembershipRegistrationListing.createNew()
 
         //Wait for page to load
-        cy.wait(20000)
+        cy.wait(10000)
 
         //Verify Page Title
         BatchMembershipRegistrationListing.verifyPageTitle('Batch Membership Registration Detail Form')
@@ -163,13 +153,6 @@ describe('[TS13] Batch Membership Registration Details form', function () {
         )
         //Click Save button
         BatchMembershipRegistrationDetail.Save()
-
-
-        //Verify Page Title
-        // BatchMembershipRegistrationListing.verifyPageTitle('Batch Membership Registration Detail Listing')
-
-        //Verify Batch Name is displayed in the listing
-        // BatchMembershipRegistrationListing.VerifyNewlyCreatedItem(BatchName, PaymentMode)
 
         //Filter by Batch Name
         BatchMembershipRegistrationListing.FilterByBatchName(BatchNameNonMem)
@@ -191,7 +174,7 @@ describe('[TS13] Batch Membership Registration Details form', function () {
         BatchMembershipRegistrationListing.verifyPageTitle('Membership Registration Form - In Batch Registration')
 
         //Add Existing Member to the batch
-        BatchMembershipRegistrationDetail.FillOutFormForNonMember(NRICNonMember, DateOfBirth)
+        BatchMembershipRegistrationDetail.FillOutFormForNonMember(FullNRICNonMem, DateOfBirth)
 
         //Click Save And Next button
         BatchMembershipRegistrationDetail.Next()
@@ -211,7 +194,7 @@ describe('[TS13] Batch Membership Registration Details form', function () {
             MemberCategory: data.memberregistrationprincipal.Personal_Info.MemberCategory,
             NameOnNRIC: NameOnNRIC,
             NameOnCard: NameOnNRIC,
-            Nric: FullNRICNonMem,
+            Nric: FUllNRIC,
             Gender: data.memberregistrationprincipal.Personal_Info.Gender,
             DateofBirth: data.memberregistrationprincipal.Personal_Info.DateofBirth,
             Age: data.memberregistrationprincipal.Personal_Info.Age,
@@ -253,53 +236,11 @@ describe('[TS13] Batch Membership Registration Details form', function () {
             TransactionalConsent: data.memberregistrationprincipal.ContactInfo.TransactionalConsent,
             })
         
-        // MemRegPrincipal.verifyPreferredSafraClubs({
-        //     safraJurong: data.memberregistrationprincipal.InterestedAreaInformation.safraJurong,
-        //     safraPunggol: data.memberregistrationprincipal.InterestedAreaInformation.safraPunggol,
-        //     safraToaPayoh: data.memberregistrationprincipal.InterestedAreaInformation.safraToaPayoh,
-        //     safraMtFaber: data.memberregistrationprincipal.InterestedAreaInformation.safraMtFaber,
-        //     safraTampines: data.memberregistrationprincipal.InterestedAreaInformation.safraTampines,
-        //     safraYishun: data.memberregistrationprincipal.InterestedAreaInformation.safraYishun,
-        //     })
         MemRegPrincipal.verifySafraBrands({
             energyOneGym: data.memberregistrationprincipal.InterestedAreaInformation.energyOneGym,
             kidzAmazeSplshIndrPlayGrnd: data.memberregistrationprincipal.InterestedAreaInformation.kidzAmazeSplshIndrPlayGrnd,
             finsSwimSchool: data.memberregistrationprincipal.InterestedAreaInformation.finsSwimSchool,
             })
-        // MemRegPrincipal.verifyIamInterestedIn({
-        //     allEventsAndActivities: data.memberregistrationprincipal.InterestedAreaInformation.allEventsAndActivities,
-        //     allPeaksAndPromos: data.memberregistrationprincipal.InterestedAreaInformation.allPeaksAndPromos,
-        //     fitnessAndAdventure: data.memberregistrationprincipal.InterestedAreaInformation.fitnessAndAdventure,
-        //     childEnrichmentActivities: data.memberregistrationprincipal.InterestedAreaInformation.childEnrichmentActivities,
-        //     lifeLongLearning: data.memberregistrationprincipal.InterestedAreaInformation.lifeLongLearning,
-        //     leisureAndEntrtnmnt: data.memberregistrationprincipal.InterestedAreaInformation.lifeLongLearning,
-        //     foodAndBeverages: data.memberregistrationprincipal.InterestedAreaInformation.foodAndBeverages,
-        //     shoppingAndGroceries: data.memberregistrationprincipal.InterestedAreaInformation.shoppingAndGroceries,
-        //     travel: data.memberregistrationprincipal.InterestedAreaInformation.travel,
-        //     motoring: data.memberregistrationprincipal.InterestedAreaInformation.motoring,
-        //     healthAndBeauty: data.memberregistrationprincipal.InterestedAreaInformation.healthAndBeauty,
-        //     safraPtsRewardsProgramme: data.memberregistrationprincipal.InterestedAreaInformation.safraPtsRewardsProgramme,
-        //     ensman: data.memberregistrationprincipal.InterestedAreaInformation.ensman
-        //     })
-        
-        //   MemRegPrincipal.verifyInterestGrpsAndMicroClubs({
-        //     safraAdventureClub: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraAdventureClub,
-        //     bitezFandB: data.memberregistrationprincipal.InterestGroupsMicroClubs.bitezFandB,
-        //     safraCommSrvcsClub: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraCommSrvcsClub,
-        //     safraCompSportsClub: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraCompSportsClub,
-        //     safraDigitalMediaClub: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraDigitalMediaClub,
-        //     safraEntrpnrsClub: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraEntrpnrsClub,
-        //     fuseEntrtnmnt: data.memberregistrationprincipal.InterestGroupsMicroClubs.fuseEntrtnmnt,
-        //     safraGolfingSection: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraGolfingSection,
-        //     safraMovieMax: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraMovieMax,
-        //     safraPhotoClub: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraPhotoClub,
-        //     safraRunningClub: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraRunningClub,
-        //     safraShootingClub: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraShootingClub,
-        //     safraSocialBadmntnClub: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraSocialBadmntnClub,
-        //     safraTechClub: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraTechClub,
-        //     safraTravelClub: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraTravelClub,
-        
-        //     })
 
 
             //Click Save And Next Button
@@ -315,7 +256,18 @@ describe('[TS13] Batch Membership Registration Details form', function () {
             BatchMembershipRegistrationDetail.SaveAndNextTenure()
 
             // Shopping cart and Payments
-            ShoppingCartPayment.fillOutandApplyPayment('CASH')
+            ShoppingCartPayment.fillOutandApplyPaymentCompleteButton('CASH')
+
+            cy.visit('/membership/batchMembershipRegistrationList').wait(5000)
+            //Filter by Batch Name
+            BatchMembershipRegistrationListing.FilterByBatchName(BatchNameNonMem)
+
+            //Click on Search Filter button
+            BatchMembershipRegistrationListing.ClickSeacrhFilters()
+
+            //click on table entry
+            BatchMembershipRegistrationListing.ClickOnNewlyCreatedItem()
+            cy.wait(10000) //wait for page to load
 
     })
 
@@ -369,7 +321,7 @@ describe('[TS13] Batch Membership Registration Details form', function () {
         
         //Add New member (Principal) to the batch
         BatchMembershipRegistrationDetail.NewMemberPrincipal()
-        cy.wait(5000) //wait for page to load
+        cy.wait(15000) //wait for page to load
 
         //Verify Page Title
         BatchMembershipRegistrationListing.verifyPageTitle('Membership Registration - Principal')
@@ -379,26 +331,24 @@ describe('[TS13] Batch Membership Registration Details form', function () {
 
 
 
+        //Enter Applicatioin Date
         BatchMembershipRegistrationDetail.AddApplicationDate(ApplicationDate)
         
-        MemRegPrincipal.verifyPersonalInformation({
-            MemberCategory: data.memberregistrationprincipal.Personal_Info.MemberCategory,
-            NameOnNRIC: BatchName,
-            NameOnCard: BatchName,
-            Nric: NRICNewMemberPrincipal,
-            Gender: data.memberregistrationprincipal.Personal_Info.Gender,
-            DateofBirth: data.memberregistrationprincipal.Personal_Info.DateofBirth,
-            Age: data.memberregistrationprincipal.Personal_Info.Age,
-            NSStatus: data.memberregistrationprincipal.Personal_Info.NSStatus,
-            NSRank: data.memberregistrationprincipal.Personal_Info.NSRank,
-            MemberType: data.memberregistrationprincipal.Personal_Info.MemberType,
-            Nationality: data.memberregistrationprincipal.Personal_Info.Nationality,
-            MaritalStatus: data.memberregistrationprincipal.Personal_Info.MaritalStatus,
-            CardType: data.memberregistrationprincipal.Personal_Info.CardType,
-            InterestinDBSCard: data.memberregistrationprincipal.Personal_Info.InterestinDBSCard,
-            ProfilePicture: data.memberregistrationprincipal.Personal_Info.ProfilePicture
-            })
-        
+        BatchMembershipRegistrationDetail.verifyPersonalInformation({
+                MemberCategory: data.memberregistrationprincipal.Personal_Info.MemberCategory,
+                NameOnNRIC: BatchName,
+                NameOnCard: BatchName,
+                Nric: NRICNewMemberPrincipal,
+                Gender: data.memberregistrationprincipal.Personal_Info.Gender,
+                DateofBirth: data.memberregistrationprincipal.Personal_Info.DateofBirth,
+                NSStatus: data.memberregistrationprincipal.Personal_Info.NSStatus,
+                NSRank: data.memberregistrationprincipal.Personal_Info.NSRank,
+                Nationality: data.memberregistrationprincipal.Personal_Info.Nationality,
+                MaritalStatus: data.memberregistrationprincipal.Personal_Info.MaritalStatus,
+                CardType: data.memberregistrationprincipal.Personal_Info.CardType,
+                InterestinDBSCard: data.memberregistrationprincipal.Personal_Info.InterestinDBSCard,
+                ProfilePicture: data.memberregistrationprincipal.Personal_Info.ProfilePicture
+                })
 
         MemRegPrincipal.verifyAddressInformation({
             PostalCode: data.memberregistrationprincipal.AddressInfo.PostalCode,
@@ -413,69 +363,7 @@ describe('[TS13] Batch Membership Registration Details form', function () {
             HomeNumber: data.memberregistrationprincipal.ContactInfo.HomeNumber,
             EmergencyContact: data.memberregistrationprincipal.ContactInfo.EmergencyContact,
             })
-        MemRegPrincipal.verifyPreferredContactMode({
-            SelectAll: data.memberregistrationprincipal.ContactInfo.SelectAll,
-            Email: data.memberregistrationprincipal.ContactInfo.Email,
-            Mail: data.memberregistrationprincipal.ContactInfo.Mail,
-            SMS: data.memberregistrationprincipal.ContactInfo.SMS,
-            VoiceCall: data.memberregistrationprincipal.ContactInfo.VoiceCall,
-            PushNotification: data.memberregistrationprincipal.ContactInfo.PushNotification,
-            WhatsApp: data.memberregistrationprincipal.ContactInfo.WhatsApp,
-             })
-        MemRegPrincipal.verifyConsentInformation({
-            MarketingConsent: data.memberregistrationprincipal.ContactInfo.MarketingConsent,
-            ServiceNotificationConsent: data.memberregistrationprincipal.ContactInfo.ServiceNotificationConsent,
-            TransactionalConsent: data.memberregistrationprincipal.ContactInfo.TransactionalConsent,
-            })
-        
-        MemRegPrincipal.verifyPreferredSafraClubs({
-            safraJurong: data.memberregistrationprincipal.InterestedAreaInformation.safraJurong,
-            safraPunggol: data.memberregistrationprincipal.InterestedAreaInformation.safraPunggol,
-            safraToaPayoh: data.memberregistrationprincipal.InterestedAreaInformation.safraToaPayoh,
-            safraMtFaber: data.memberregistrationprincipal.InterestedAreaInformation.safraMtFaber,
-            safraTampines: data.memberregistrationprincipal.InterestedAreaInformation.safraTampines,
-            safraYishun: data.memberregistrationprincipal.InterestedAreaInformation.safraYishun,
-            })
-        MemRegPrincipal.verifySafraBrands({
-            energyOneGym: data.memberregistrationprincipal.InterestedAreaInformation.energyOneGym,
-            kidzAmazeSplshIndrPlayGrnd: data.memberregistrationprincipal.InterestedAreaInformation.kidzAmazeSplshIndrPlayGrnd,
-            finsSwimSchool: data.memberregistrationprincipal.InterestedAreaInformation.finsSwimSchool,
-            })
-        MemRegPrincipal.verifyIamInterestedIn({
-            allEventsAndActivities: data.memberregistrationprincipal.InterestedAreaInformation.allEventsAndActivities,
-            allPeaksAndPromos: data.memberregistrationprincipal.InterestedAreaInformation.allPeaksAndPromos,
-            fitnessAndAdventure: data.memberregistrationprincipal.InterestedAreaInformation.fitnessAndAdventure,
-            childEnrichmentActivities: data.memberregistrationprincipal.InterestedAreaInformation.childEnrichmentActivities,
-            lifeLongLearning: data.memberregistrationprincipal.InterestedAreaInformation.lifeLongLearning,
-            leisureAndEntrtnmnt: data.memberregistrationprincipal.InterestedAreaInformation.lifeLongLearning,
-            foodAndBeverages: data.memberregistrationprincipal.InterestedAreaInformation.foodAndBeverages,
-            shoppingAndGroceries: data.memberregistrationprincipal.InterestedAreaInformation.shoppingAndGroceries,
-            travel: data.memberregistrationprincipal.InterestedAreaInformation.travel,
-            motoring: data.memberregistrationprincipal.InterestedAreaInformation.motoring,
-            healthAndBeauty: data.memberregistrationprincipal.InterestedAreaInformation.healthAndBeauty,
-            safraPtsRewardsProgramme: data.memberregistrationprincipal.InterestedAreaInformation.safraPtsRewardsProgramme,
-            ensman: data.memberregistrationprincipal.InterestedAreaInformation.ensman
-            })
-        
-          MemRegPrincipal.verifyInterestGrpsAndMicroClubs({
-            safraAdventureClub: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraAdventureClub,
-            bitezFandB: data.memberregistrationprincipal.InterestGroupsMicroClubs.bitezFandB,
-            safraCommSrvcsClub: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraCommSrvcsClub,
-            safraCompSportsClub: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraCompSportsClub,
-            safraDigitalMediaClub: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraDigitalMediaClub,
-            safraEntrpnrsClub: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraEntrpnrsClub,
-            fuseEntrtnmnt: data.memberregistrationprincipal.InterestGroupsMicroClubs.fuseEntrtnmnt,
-            safraGolfingSection: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraGolfingSection,
-            safraMovieMax: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraMovieMax,
-            safraPhotoClub: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraPhotoClub,
-            safraRunningClub: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraRunningClub,
-            safraShootingClub: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraShootingClub,
-            safraSocialBadmntnClub: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraSocialBadmntnClub,
-            safraTechClub: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraTechClub,
-            safraTravelClub: data.memberregistrationprincipal.InterestGroupsMicroClubs.safraTravelClub,
-        
-            })
-        
+
 
             //Click Save And Next Button
             BatchMembershipRegistrationDetail.SaveAndNext()
@@ -484,18 +372,30 @@ describe('[TS13] Batch Membership Registration Details form', function () {
             BatchMembershipRegistrationListing.verifyPageTitle('Member Tenure Selection - In Batch Registration')
              
             //Select Pricipal Tenure
-            BatchMembershipRegistrationListing.principalTenureSelection('5 Years')
+            BatchMembershipRegistrationListing.principalTenureSelection('5 Years', BatchName)
 
             //Click Save And Next button
             BatchMembershipRegistrationDetail.SaveAndNextTenure()
 
             // Shopping cart and Payments
-            ShoppingCartPayment.fillOutandApplyPayment('CASH')
-        
+            ShoppingCartPayment.fillOutandApplyPaymentCompleteButton('CASH')
+
+            cy.visit('/membership/batchMembershipRegistrationList').wait
+
+             //Filter by Batch Name
+            BatchMembershipRegistrationListing.FilterByBatchName(BatchNameNewPrincipal)
+
+            //Click on Search Filter button
+            BatchMembershipRegistrationListing.ClickSeacrhFilters()
+
+            //click on table entry
+            BatchMembershipRegistrationListing.ClickOnNewlyCreatedItem()
+            cy.wait(10000) //wait for page to load
+            
             
     })
 
-    it('[TC04] Creating a Batch Membership Registration with New Member(Defendent)', function () {
+    it.only('[TC04] Creating a Batch Membership Registration with New Member(Defendent)', function () {
 
         //filloutPersonalInformation
         const TestUser = 'Test User-' + Math.floor(Math.random() * 100000 * 2 )
@@ -542,12 +442,6 @@ describe('[TS13] Batch Membership Registration Details form', function () {
 
        // Verify Page Title
         BatchMembershipRegistrationListing.verifyPageTitle('Batch Membership Registration Listing')
-
-        //Verify Batch Name is displayed in the listing
-        // BatchMembershipRegistrationListing.VerifyNewlyCreatedItem(BatchName, PaymentMode)
-
-        //Filter by Batch Type
-        // BatchMembershipRegistrationListing.FilterByBatchType(BatchType)
 
         //Filters by Batch Name
         BatchMembershipRegistrationListing.FilterByBatchName(BatchNameNewDep)
@@ -693,7 +587,7 @@ describe('[TS13] Batch Membership Registration Details form', function () {
         BatchMembershipRegistrationListing.verifyPageTitle('Member Tenure Selection - In Batch Registration')
         
         //Select Pricipal Tenure
-        BatchMembershipRegistrationListing.principalTenureSelection('5 Years')
+        BatchMembershipRegistrationListing.principalTenureSelection('5 Years', TestUser)
 
         //Select Dependent
         MemTenureSelection.dependentTenureSelection(TestUser, '5 Years')

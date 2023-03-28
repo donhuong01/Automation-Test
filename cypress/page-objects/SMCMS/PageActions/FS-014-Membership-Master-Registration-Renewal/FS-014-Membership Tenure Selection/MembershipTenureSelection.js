@@ -46,6 +46,7 @@ class MembershipTenureSelection{
             cy.TenureSelection(elems_MembershipTenureSelection.Principal.TBL_PRINCIPAL,
                 ColumnValue,  tenureSelection)
         }
+        
 
     }
 
@@ -134,7 +135,7 @@ class MembershipTenureSelection{
 
         // Click Add to Cart button
         cy.Click(elems_MembershipTenureSelection.BTN_ADDTOCART)
-        cy.wait(10000)
+        cy.wait(35000)
         // Verify Redirection Page
         cy.ValidateElementText(elems_PageHeader.LBL_PAGETITLE, 'Shopping Cart')
     }

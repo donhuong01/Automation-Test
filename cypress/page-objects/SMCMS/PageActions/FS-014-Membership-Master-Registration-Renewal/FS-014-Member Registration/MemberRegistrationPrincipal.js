@@ -662,7 +662,7 @@ class MemberRegistrationPrincipal {
         }
         // VerifyDate of Birth
         if (DateofBirth !== undefined) {
-            //  cy.EnterDate(elems_MemberRegistrationPrincipal.PERSONALINFORMATION.DATE_DATEOFBIRTH, DateofBirth)
+             cy.EnterDate(elems_MemberRegistrationPrincipal.PERSONALINFORMATION.DATE_DATEOFBIRTH, DateofBirth)
         }
         // Verify Age
         if (Age !== undefined) {

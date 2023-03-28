@@ -201,7 +201,7 @@ class BatchMembershipRegistrationDetail {
     *****************************************************/
     Next() {
         cy.Click(elems_BatchMembershipRegistrationDetail.BTN_NEXT)
-        cy.wait(5000)
+        cy.wait(20000)
     }
     /*****************************************************
      * Method: ClickNewMemberPrincipal
@@ -225,7 +225,7 @@ class BatchMembershipRegistrationDetail {
     *****************************************************/
     SaveAndNext() {
         cy.Click(elems_BatchMembershipRegistrationDetail.BTN_SAVEANDNEXT)
-        cy.wait(5000)
+        cy.wait(20000)
     }
     /*****************************************************
      * Method: SaveAndNext
@@ -233,7 +233,7 @@ class BatchMembershipRegistrationDetail {
     *****************************************************/
     SaveAndNextTenure() {
         cy.Click(elems_BatchMembershipRegistrationDetail.BTN_SAVEANDNEXTTENURE)
-        cy.wait(5000)
+        cy.wait(20000)
     }
     /*****************************************************
      * Method: AddApplicationDate
@@ -422,6 +422,111 @@ class BatchMembershipRegistrationDetail {
         }
     }
 
+
+    /*****************************************************
+     * Method: verifyPersonalInformation
+     * Description: verify Personal Infromation
+     *@param {string} MemberCategory Member Category
+     * @param {string} NameOnNRIC Name on NRIC
+     * @param {string} NameOnCard Name on Card
+     * @param {string} Nric NRIC
+     * @param {string} Gender Gender
+     * @param {string} DATE_DATEOFBIRTH Date of Birth
+     * @param {string} NSStatus  NS Status
+     * @param {string} NSRank  NSRank
+     * @param {string} MemberType  MemberType
+     * @param {string} Nationality  Nationality
+     * @param {string} MaritalStatus MaritalStatus
+     * @param {string} CardType CardType
+     * @param {string} InterestinDBSCard InterestinDBSCard
+     * @param {string} ProfilePicture ProfilePicture
+     *****************************************************/
+     verifyPersonalInformation({ MemberCategory, NameOnNRIC, NameOnCard, Nric, Gender, 
+        DateofBirth, NSStatus, NSRank, Nationality, MaritalStatus, 
+        CardType, InterestinDBSCard, ProfilePicture
+    }) {
+        // Verify Member Catergory
+        if (MemberCategory !== undefined && MemberCategory === 'Principal') {
+            cy.ValidateElementText(elems_MemberRegistrationPrincipal.PERSONALINFORMATION.LBL_MEMBERCATEGORY, MemberCategory)
+        }
+
+        // Verify Member Catergory
+        if (MemberCategory !== undefined && MemberCategory !== 'Principal') {
+            cy.ValidateElementText(elems_MemberRegistrationPrincipal.PERSONALINFORMATION.LBL_MEMBERCATEGORY, "Dependent")
+        }
+
+        // Verify Name on NRIC
+        if (NameOnNRIC !== undefined) {
+            cy.xpath(elems_MemberRegistrationPrincipal.PERSONALINFORMATION.TXT_NAMEONNRIC).clear()
+            cy.EnterText(elems_MemberRegistrationPrincipal.PERSONALINFORMATION.TXT_NAMEONNRIC, NameOnNRIC)
+        }
+        // Verify Name onCArd
+        if (NameOnCard !== undefined) {
+            cy.xpath(elems_MemberRegistrationPrincipal.PERSONALINFORMATION.TXT_NAMEONCARD).clear()
+            cy.EnterText(elems_MemberRegistrationPrincipal.PERSONALINFORMATION.TXT_NAMEONCARD, NameOnCard)
+        }
+        // Verify NRIC
+        if (Nric !== undefined) {
+            cy.xpath(elems_MemberRegistrationPrincipal.PERSONALINFORMATION.TXT_NRIC).clear()
+            cy.EnterText(elems_MemberRegistrationPrincipal.PERSONALINFORMATION.TXT_NRIC, Nric)
+        }
+        // Verify Gender
+        if (Gender !== undefined) {
+            cy.SelectDropDownItem(elems_MemberRegistrationPrincipal.PERSONALINFORMATION.DRP_GENDER, Gender)
+        }
+        // VerifyDate of Birth
+        if (DateofBirth !== undefined) {
+             cy.SelectDate(elems_MemberRegistrationPrincipal.PERSONALINFORMATION.DATE_DATEOFBIRTH, DateofBirth)
+        }
+
+        // Verify NS Status
+        if (NSStatus !== undefined) {
+            cy.SelectDropDownItem(elems_MemberRegistrationPrincipal.PERSONALINFORMATION.DRP_NSSTATUS, NSStatus)
+        }
+        // Verify NSRank
+        if (NSRank !== undefined) {
+            cy.SelectDropDownItem(elems_MemberRegistrationPrincipal.PERSONALINFORMATION.DRP_NSRANK, NSRank)
+        }
+        // Verify Nationality
+        if (Nationality !== undefined) {
+            cy.SelectDropDownItem(elems_MemberRegistrationPrincipal.PERSONALINFORMATION.DRP_NATIONALITY, Nationality)
+        }
+        // Verify Marital Status
+        if (MaritalStatus !== undefined) {
+            cy.SelectDropDownItem(elems_MemberRegistrationPrincipal.PERSONALINFORMATION.DRP_MARITALSTATUS, MaritalStatus)
+        }
+        // Verify Card Tyoe
+        if (CardType !== undefined) {
+            cy.ValidateElementText(elems_MemberRegistrationPrincipal.PERSONALINFORMATION.LBL_CARDTYPE, CardType)
+        }
+        // Verify Interest in DBS Card
+        if (InterestinDBSCard !== undefined) {
+            cy.SelectDropDownItem(elems_MemberRegistrationPrincipal.PERSONALINFORMATION.DRP_INTERESTINDBSCARD, InterestinDBSCard)
+        }
+        // Verify in Profile Picture
+        if (ProfilePicture !== undefined) {
+            cy.UploadFile(elems_MemberRegistrationPrincipal.PERSONALINFORMATION.UPL_SELECTFILES, ProfilePicture)
+        }
+
+        // Error Handling
+        if (NameOnNRIC === undefined
+            && NameOnCard === undefined
+            && Nric === undefined
+            && Gender === undefined
+            && DateofBirth === undefined
+            && NSStatus === undefined
+            && NSRank === undefined
+            && Nationality === undefined
+            && MaritalStatus === undefined
+            && InterestinDBSCard === undefined
+            && ProfilePicture === undefined
+
+        ) {
+            throw new Error("MemberRegistrationPrincipal.PersonalInformation Error!!./n\
+                             Please provide at least one argument.")
+        }
+
+    }
 
 }
 

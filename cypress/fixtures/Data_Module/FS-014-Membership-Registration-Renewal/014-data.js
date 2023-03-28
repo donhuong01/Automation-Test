@@ -7,29 +7,29 @@ const data = {
 
     checkin_memberID: {
         type: 'MEMBERID',
-        value1: 'A300002030'
+        value1: 'A300002484'
     },
     checkin_NRIC: {
         type: 'NRIC',
-        value1: '096C',
-        value2: '04-Oct-1978',
+        value1: '637D',
+        value2: '05-Oct-1978',
     },
     checkin_email: {
         type: 'EMAIL',
-        value1: 'testuser2935002@synergyonline.com',
+        value1: 'Auto-Test668604@test.com',
     },
     checkin_mobile: {
         type: 'MOBILENUMBER',
-        value1: '223232111',
-        value2: 'A300001997'
+        value1: '56585896',
+        value2: 'A300002484'
     },
     checkin_scancard: {
         type: 'SCANECARD',
-        value1: 'A300002030_3DA4F788839DE16D26F7865886038183AECEF073A605371439FCA067A95E8F15',
+        value1: 'A300002484_3DA4F788839DE16D26F7865886038183AECEF073A605371439FCA067A95E8F15',
     },
     checkin_swipecard: {
         type: 'SWIPECARD',
-        value1: '%A8008980001869402^LEE CHOON CHIEH ^2508^A300002030^019801221000000?;8008980001869402=2508201000005500011?',
+        value1: '%A8008980001869402^LEE CHOON CHIEH ^2508^A300002484^019801221000000?;8008980001869402=2508201000005500011?',
     },
 
     //Membership Tenure Selection
@@ -176,7 +176,7 @@ const data = {
         },
 
         AddressInfo: {
-            PostalCode: '680608',
+            PostalCode: '117606',
             Address: '608 CHOA CHU KANG STREET 62',
             UnitNumber: '#02-222',
             POBOX: '12345',
@@ -184,7 +184,7 @@ const data = {
         },
         ContactInfo: {
             Handphone: '87126534',
-            EmailAddress: 'auto' + Math.floor(Math.random() * 10000 * 50) + '@synergyonline.com',
+            EmailAddress: 'auto' + Math.floor(Math.random() * 10000 * 50) + '@test.com',
             HomeNumber: '123477',
             EmergencyContact: '+65 658 5894',
             //Preferred COntact Mode
@@ -292,7 +292,7 @@ const data = {
         ContactInfo: {
             Handphone: '87126534',
             EmailAddress: 'Testuser' + Math.floor(Math.random() * 100000 * 2) + '@synergyonline.com',
-            HomeNumber: 'NA',
+            HomeNumber: '2323',
             EmergencyContact: '+65 658 5894',
             //Preferred COntact Mode
             SelectAll: 'uncheck',
