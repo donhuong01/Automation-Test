@@ -126,8 +126,19 @@ describe('[TS13] Batch Membership Registration Details form', function () {
         BatchMembershipRegistrationDetail.SaveAndNextTenure()
 
         // Shopping cart and Payments
-        ShoppingCartPayment.fillOutandApplyPayment('CASH') 
+        ShoppingCartPayment.fillOutandApplyPaymentCompleteButton('CASH') 
 
+
+        cy.visit('/membership/batchMembershipRegistrationList').wait(5000)
+        //Filter by Batch Name
+        BatchMembershipRegistrationListing.FilterByBatchName(BatchName)
+
+        //Click on Search Filter button
+        BatchMembershipRegistrationListing.ClickSeacrhFilters()
+
+        //click on table entry
+        BatchMembershipRegistrationListing.ClickOnNewlyCreatedItem()
+        cy.wait(10000) //wait for page to load
 
     })
 
@@ -190,23 +201,21 @@ describe('[TS13] Batch Membership Registration Details form', function () {
         BatchMembershipRegistrationDetail.AddApplicationDate(ApplicationDate)
 
         const NameOnNRIC = NonMemberName
-        MemRegPrincipal.verifyPersonalInformation({
-            MemberCategory: data.memberregistrationprincipal.Personal_Info.MemberCategory,
-            NameOnNRIC: NameOnNRIC,
-            NameOnCard: NameOnNRIC,
-            Nric: FUllNRIC,
-            Gender: data.memberregistrationprincipal.Personal_Info.Gender,
-            DateofBirth: data.memberregistrationprincipal.Personal_Info.DateofBirth,
-            Age: data.memberregistrationprincipal.Personal_Info.Age,
-            NSStatus: data.memberregistrationprincipal.Personal_Info.NSStatus,
-            NSRank: data.memberregistrationprincipal.Personal_Info.NSRank,
-            MemberType: data.memberregistrationprincipal.Personal_Info.MemberType,
-            Nationality: data.memberregistrationprincipal.Personal_Info.Nationality,
-            MaritalStatus: data.memberregistrationprincipal.Personal_Info.MaritalStatus,
-            CardType: data.memberregistrationprincipal.Personal_Info.CardType,
-            InterestinDBSCard: data.memberregistrationprincipal.Personal_Info.InterestinDBSCard,
-            ProfilePicture: data.memberregistrationprincipal.Personal_Info.ProfilePicture
-            })
+            BatchMembershipRegistrationDetail.verifyPersonalInformation({
+                MemberCategory: data.memberregistrationprincipal.Personal_Info.MemberCategory,
+                NameOnNRIC: NameOnNRIC,
+                NameOnCard: NameOnNRIC,
+                Nric: FUllNRIC,
+                Gender: data.memberregistrationprincipal.Personal_Info.Gender,
+                DateofBirth: data.memberregistrationprincipal.Personal_Info.DateofBirth,
+                NSStatus: data.memberregistrationprincipal.Personal_Info.NSStatus,
+                NSRank: data.memberregistrationprincipal.Personal_Info.NSRank,
+                Nationality: data.memberregistrationprincipal.Personal_Info.Nationality,
+                MaritalStatus: data.memberregistrationprincipal.Personal_Info.MaritalStatus,
+                CardType: data.memberregistrationprincipal.Personal_Info.CardType,
+                InterestinDBSCard: data.memberregistrationprincipal.Personal_Info.InterestinDBSCard,
+                ProfilePicture: data.memberregistrationprincipal.Personal_Info.ProfilePicture
+                })
         
         MemRegPrincipal.verifyAddressInformation({
             PostalCode: data.memberregistrationprincipal.AddressInfo.PostalCode,
