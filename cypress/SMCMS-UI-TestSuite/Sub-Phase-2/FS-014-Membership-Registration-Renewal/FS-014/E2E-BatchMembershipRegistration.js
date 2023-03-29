@@ -36,7 +36,7 @@ describe('[TS13] Batch Membership Registration Details form', function () {
     // const NewDependentPrincipalID = 'A300000083'
     // const NewDependentPrincipalName = 'Test User 125'
 
-    const ApplicationDate = '10-Aug-2022'
+    const ApplicationDate = '10-Aug-2023'
 
 
     const BatchName = 'Auto-' + Math.floor(Math.random() * 100000 * 2 ) + data.BatchMemRegDetail.BatchName
@@ -53,7 +53,7 @@ describe('[TS13] Batch Membership Registration Details form', function () {
     const Last4NIRC = data.BatchMemRegDetail.InBatchRegistration.Last4NRIC
     const DOB = data.BatchMemRegDetail.InBatchRegistration.DateofBirth 
 
-    it('[TC01] Creating a Batch Membership Registration with Existing Membership', function () {
+    it.only('[TC01] Creating a Batch Membership Registration with Existing Membership', function () {
 
         cy.visit('/membership/batchMembershipRegistrationList')
 
@@ -395,7 +395,7 @@ describe('[TS13] Batch Membership Registration Details form', function () {
             
     })
 
-    it.only('[TC04] Creating a Batch Membership Registration with New Member(Defendent)', function () {
+    it('[TC04] Creating a Batch Membership Registration with New Member(Defendent)', function () {
 
         //filloutPersonalInformation
         const TestUser = 'Test User-' + Math.floor(Math.random() * 100000 * 2 )

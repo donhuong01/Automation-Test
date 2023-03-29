@@ -200,14 +200,14 @@ beforeEach(() => {
     BatchMembershipRegistration(
 
         //Pass Info for Existing Member MemberID and LAST4DigitsNRIC
-        "A300002503",
-        "648J",
+        "A300002554",
+        "049E",
         
         //Pass informstion for Non-Member Name, DOB, LAST4DigitsNRIC and Full NRIC
-        "Test User 253",
-        "24-Jan-1980",
-        "560D",
-        "S8866872C",
+        "Auto test393E",
+        "28-Feb-1982",
+        "393E",
+        "S8620117H",
 
         //NRIC for New Principal
         "S5216439G",
