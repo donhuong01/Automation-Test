@@ -9,6 +9,7 @@ class E1GymMembershipListing {
     Submit() {
 
         cy.Click('//button[text()="Submit"]')
+        cy.wait(5000)
 
     }
     /*****************************************************

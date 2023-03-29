@@ -9,7 +9,7 @@ class E1GymMembershipRegistration {
     ClickOnBox(BoxText) {
 
         cy.Click(`//div[@class="k-drawer-content"]//p[text()= "${BoxText}"]`)
-        cy.wait(2000)
+        cy.wait(4000)
 
     }
     /*****************************************************
@@ -66,14 +66,13 @@ class E1GymMembershipRegistration {
         * Description: This function Fillout Payment Detail Fields
         *****************************************************/
 
-    AddWiaver(ChargeType, Amount, Reason) {
+    AddWiaver() {
 
         cy.Click(elems_E1GymMembershipRegistaration.BTN_ADDWAIVEROFF)
-        cy.SelectDropDownItem(elems_E1GymMembershipRegistaration.DRP_CHARGETYPE, ChargeType)
-        cy.EnterText(elems_E1GymMembershipRegistaration.TXT_AMOUNT, Amount)
-        cy.EnterText(elems_E1GymMembershipRegistaration.TXT_REASON, Reason)
+        cy.SelectDropDownItem(elems_E1GymMembershipRegistaration.DRP_CHARGETYPE, 'Admin Fee')
+        cy.EnterText(elems_E1GymMembershipRegistaration.TXT_AMOUNT, 5)
+        cy.EnterText(elems_E1GymMembershipRegistaration.TXT_REASON, 'Test')
         cy.Click(elems_E1GymMembershipRegistaration.BTN_CONFIRM)
-
 
     }
     /*****************************************************
@@ -89,23 +88,55 @@ class E1GymMembershipRegistration {
 
     }
     /*****************************************************
+         * Method: FilterByCustomerName
+         * Description: This function Filter the table by customer name 
+        *****************************************************/
+    FilterByCustomerName(CustomerName) {
+
+        cy.EnterText(elems_E1GymMembershipListing.TXT_CUSTOMERNAME, CustomerName)
+        cy.Click(elems_E1GymMembershipListing.BTN_SEARCHFILTERS)
+
+    }
+    /*****************************************************
+         * Method: VerifyNoRecordMsg
+         * Description: This function verify that the item is not present in the table
+        *****************************************************/
+    VerifyNoRecordMsg() {
+
+        cy.xpath('//td[text()="No records available"]').should('be.visible')
+    }
+    /*****************************************************
          * Method: SelectDepandencyType
          * Description: This function select dependency type
         *****************************************************/
     SelectDepandencyType(DependencyType) {
 
-
         cy.SelectDropDownItem(elems_E1GymMembershipRegistaration.DRP_DEPENDENCYTYPE, DependencyType)
 
     }
     /*****************************************************
+         * Method: RegistrationInformation
+         * Description: This function select Customer Category
+        *****************************************************/
+    RegistrationInformation(category) {
+        {
+            category.length > 0 && cy.SelectPickerDifferentItemsWait(elems_E1GymMembershipRegistaration.PCK_CUSTOMERCATEGORY, 8000,
+                elems_E1GymMembershipRegistaration.TXT_CUSTOMERCATEGORYNAME, category,
+                '//button[@form="formFiltersCustomerCategory"]')
+
+        }
+    }
+    /*****************************************************
          * Method: MembershipInfo
          * Description: This function fillout Membership Information fields
+         * @param {string} PreferredClubHouse
          * @param {string} EffectiveDate
+         * @param {string} Terms
         *****************************************************/
-    MembershipInfo(EffectiveDate) {
+    MembershipInfo(PreferredClubHouse, EffectiveDate, Terms) {
         cy.wait(1000)
-        cy.EnterText('//span[@title="Increase value"]', '10')
+        cy.SelectPickerWithoutFields(elems_E1GymMembershipRegistaration.PCK_PREFERREDCLUBHOUSE, PreferredClubHouse)
+        cy.EnterText(elems_E1GymMembershipRegistaration.TXT_MEMBERSHIPTERM, Terms)
         cy.EnterDate(elems_E1GymMembershipRegistaration.DATE_EFFECTIVEDATE, EffectiveDate)
         cy.wait(500)
         cy.xpath('//label[@for="membershipPeriod"]').should('be.visible')

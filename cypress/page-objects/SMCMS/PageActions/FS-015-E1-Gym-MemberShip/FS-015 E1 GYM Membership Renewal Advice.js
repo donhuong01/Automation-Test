@@ -33,10 +33,15 @@ class E1GYMMembershipRenewalAdvice {
          * Method: RenewalAdviceInfo
          * Description: This function fillout Renewal Advice Info 
         ****************************************************/
-    RenewalAdviceInfo(Description) {
+    RenewalAdviceInfo(Description, GeneratedFor) {
 
         cy.EnterText(elems_E1GymMembershipRenewalAdvise.TXT_DESCRIPTION, Description)
-        cy.Click(elems_E1GymMembershipRenewalAdvise.CHK_VIAEMAIL)
+
+        if (GeneratedFor === 'Via Email') {
+            cy.Click(elems_E1GymMembershipRenewalAdvise.CHK_VIAEMAIL)
+        } else {
+            cy.Click(elems_E1GymMembershipRenewalAdvise.CHK_VIAMAILMERGE)
+        }
 
 
     }
@@ -53,7 +58,7 @@ class E1GYMMembershipRenewalAdvice {
          * Method: SelectItem
          * Description:
         ****************************************************/
-    SelectItem() {
+    SelectItem(Description) {
 
         cy.SelectTableItem(elems_E1GymMembershipRenewalAdvise.TBL_MEMRENADVICELIST, 'Description', Description)
 

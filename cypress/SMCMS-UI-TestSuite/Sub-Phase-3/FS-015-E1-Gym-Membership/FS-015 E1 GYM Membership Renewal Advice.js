@@ -1,17 +1,11 @@
-import E1GYMMembershipRenewalAdvice from '../../../../page-objects/SMCMS/PageActions/FS-015-E1-Gym-MemberShip/FS-015 E1 GYM Membership Renewal Advice'
-import login from '../../../../fixtures/login';
-import data from '../../../../fixtures/Data_Module/FS-015-E1-Gym-Membership/E1 Gym Renewal Adwice '
+import E1GYMMembershipRenewalAdvice from '../../../page-objects/SMCMS/PageActions/FS-015-E1-Gym-MemberShip/FS-015 E1 GYM Membership Renewal Advice'
+import data from '../../../fixtures/Data_Module/FS-015-E1-Gym-Membership/E1 Gym Renewal Adwice '
 
-beforeEach(() => {
-
-    // Set local storage for QA Enviroment
-    cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
-
-    // Set local storage for UAT Enviroment
-    // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
-})
+const E1GYMMembershipRenewalAdvise = () => {
 
 describe('[TS01] FS-015 E1 GYM Membership Renewal Advice', function () {
+
+    
 
     data.forEach(item => {
         const {
@@ -49,3 +43,6 @@ describe('[TS01] FS-015 E1 GYM Membership Renewal Advice', function () {
         })
     })
 })
+
+}
+export default E1GYMMembershipRenewalAdvise

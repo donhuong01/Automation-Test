@@ -38,8 +38,12 @@ class E1GymMembershipRenewal {
         cy.Click(elems_E1GymMembershipRenewal.DRP_E1GYMMEMBERSHIP)
         cy.wait(500)
         cy.Click(`(//*[contains(text(),'${E1GymMembership}')])[1]`)
-        cy.SelectDropDownItem(elems_E1GymMembershipRenewal.DRP_RENEWALTERM, RenewalTerm)
-        cy.wait(1000)
+
+        cy.Click(elems_E1GymMembershipRenewal.TXT_RENEWALTERM)
+        cy.wait(2000)
+        cy.EnterText(elems_E1GymMembershipRenewal.TXT_RENEWALTERM, RenewalTerm)
+        // cy.Click('//span[@title="Increase value"]')
+        cy.wait(2000)
     }
     /*****************************************************
      * Method: SelectTableLink

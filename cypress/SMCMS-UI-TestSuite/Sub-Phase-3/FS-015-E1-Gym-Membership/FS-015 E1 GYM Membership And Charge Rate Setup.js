@@ -1,4 +1,3 @@
-import login from '../../../fixtures/login';
 import InterestGroupMainListing from '../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupMainListing'
 import InterestGroupMain from '../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupMainManagement'
 import Common from '../../../page-objects/SMCMS/PageActions/Common/Common'
@@ -6,16 +5,7 @@ import data from '../../../fixtures/Data_Module/FS-015-E1-Gym-Membership/E1 GYM 
 
 const common = new Common()
 
-// beforeEach(() => {
-
-//     // Set local storage for QA Enviroment
-//     cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
-
-//     // Set local storage for UAT Enviroment
-//     // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
-// })
-
-
+const E1GYMMembershipAndChargeRateSetup = () => {
 const {
 
     Name,
@@ -46,7 +36,7 @@ const {
 
 } = data
 
-const E1GYMMembershipAndChargeRateSetup = () =>{
+
 
 describe('[TS01] FS-015 E1 GYM Membership And Charge Rate Setup ', function () {
 

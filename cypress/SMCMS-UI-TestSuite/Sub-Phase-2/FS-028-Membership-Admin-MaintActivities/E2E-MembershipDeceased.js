@@ -22,7 +22,7 @@ describe('[TS03] Membership Deceased Confirmation Popup', function () {
 
         // Navigate to Member Listing
         cy.visit('/membership/memberList')
-        cy.wait(3000)
+        cy.wait(10000)
 
         // Filter Member Listing for Active Members
         MemList.FilterByMemberID(MemberID)
@@ -48,7 +48,7 @@ describe('[TS03] Membership Deceased Confirmation Popup', function () {
 
         // Navigate to Member Listing
         cy.visit('/membership/memberList')
-        cy.wait(3000)
+        cy.wait(10000)
 
         // Filter Member Listing for Active Members
         MemList.FilterByMemberID(MemberID)
@@ -77,7 +77,7 @@ describe('[TS03] Membership Deceased Confirmation Popup', function () {
 
         // Navigate to Member Listing
         cy.visit('/membership/memberList')
-        cy.wait(3000)
+        cy.wait(10000)
 
         // Filter Member Listing for Active Members
         MemList.FilterByMemberID(MemberID)
@@ -97,6 +97,7 @@ describe('[TS03] Membership Deceased Confirmation Popup', function () {
 
         // Decease Member
         MemDeceaseConfirm.Yes()
+        cy.wait(3000)
 
         // REINSTATE ITEM FOR TC03
         cy.SelectBtnDropdownItem(elems_MemberListing.BTNDRP_MAINTENANCE, 'Reinstate')

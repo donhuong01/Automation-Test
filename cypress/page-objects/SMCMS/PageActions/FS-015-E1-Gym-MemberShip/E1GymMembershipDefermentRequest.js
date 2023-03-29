@@ -9,6 +9,7 @@ class E1GymMembershipDefermentRequest {
     Submit() {
 
         cy.Click(elems_E1GymMembershipDefermentRequest.BTN_SUBMIT)
+        cy.wait(4000)
 
     }
     /*****************************************************

@@ -44,19 +44,21 @@ import MembershipRenewalAdvise from '../Sub-Phase-2/FS-014-Membership-Registrati
 import SFSMemberRegistion from '../Sub-Phase-2/FS-014-Membership-Registration-Renewal/FS-014/E2E-SFSMemberRegistration'
 
 // FS-15 E1 Gym Membership
+import E1GymMembershipCancellationBeforePayment from '../Sub-Phase-3/FS-015-E1-Gym-Membership/CancellationOfE1GymMembershipBeforePayment'
 import E1GYMMembershipConversion from '../Sub-Phase-3/FS-015-E1-Gym-Membership/E1GymMembershipConversion'
 import E1GYMMembershipDeferment from '../Sub-Phase-3/FS-015-E1-Gym-Membership/E1GymMembershipDeferment'
-import E1GYMMembershipModuleSettings from '../Sub-Phase-3/FS-015-E1-Gym-Membership/E1GymMembershipModuleSettings'
-import E1GYMMembershipRegistrationWithExistingMember from '../Sub-Phase-3/FS-015-E1-Gym-Membership/E1GymMembershipRegistrationWithExistingMember'
-import E1GYMMembershipRegistrationWithNonMember from '../Sub-Phase-3/FS-015-E1-Gym-Membership/E1GymMembershipRegistrationWithNonMember'
-import E1GYMMembershipReinstatement from '../Sub-Phase-3/FS-015-E1-Gym-Membership/E1GymMembershipReinstatement'
-import E1GYMMembershipRenewal from '../Sub-Phase-3/FS-015-E1-Gym-Membership/E1GymMembershipRenewal'
 import E1GYMMembershipTermination from '../Sub-Phase-3/FS-015-E1-Gym-Membership/E1GymMembershipTermination'
+import E1GYMMembershipReinstatement from '../Sub-Phase-3/FS-015-E1-Gym-Membership/E1GymMembershipReinstatement'
 import E1GYMMembershipWaiver from '../Sub-Phase-3/FS-015-E1-Gym-Membership/E1GymMembershipWaiver'
-import E1GYMMembershipAndChargeRateSetup from '../Sub-Phase-3/FS-015-E1-Gym-Membership/FS-015-E1GYMMembershipAndChargeRateSetup'
-import E1GYMMembershipDataManagement from '../Sub-Phase-3/FS-015-E1-Gym-Membership/FS-015-E1GYMMembershipDataManagement'
-import E1GYMMembershipRenewalAdvise from '../Sub-Phase-3/FS-015-E1-Gym-Membership/FS-015-E1GYMMembershipRenewalAdvice'
-import E1GYMSetupManagement from '../Sub-Phase-3/FS-015-E1-Gym-Membership/FS-015-E1GymSetupManagement'
+import E1GYMMembershipReversal from '../Sub-Phase-3/FS-015-E1-Gym-Membership/E1GymMembershipReversal'
+import E1GYMMembershipRenewal from '../Sub-Phase-3/FS-015-E1-Gym-Membership/E1GymMembershipRenewal'
+import E1GYMMembershipRegistrationWithExistingMember from '../Sub-Phase-3/FS-015-E1-Gym-Membership/E1GymMembershipRegistrationWithExistingMember'
+import E1GYMMembershipRegistrationWithNonMember from '../Sub-Phase-3/FS-015-E1-Gym-Membership/E1GymMembershipRegistrationWithNonOrNewMember'
+import E1GYMSetupManagement from '../Sub-Phase-3/FS-015-E1-Gym-Membership/E1 Gym Setup Management'
+import E1GYMMembershipAndChargeRateSetup from '../Sub-Phase-3/FS-015-E1-Gym-Membership/FS-015 E1 GYM Membership And Charge Rate Setup'
+import E1GYMMembershipRenewalAdvise from '../Sub-Phase-3/FS-015-E1-Gym-Membership/FS-015 E1 GYM Membership Renewal Advice'
+import E1GYMMembershipDataManagement from '../Sub-Phase-3/FS-015-E1-Gym-Membership/FS-015 E1 GYM Membership Data Management'
+
 
 
 // FS-16 Interest Group
@@ -197,24 +199,24 @@ beforeEach(() => {
     // SFSMemberRegistion("S2985728H", "S0020519B", "S1421614F") //Add three NRIC's for Principal, Dependent Child, Dependent Spouse
     // E2EMemberShipRenewal("S6270302D") //Add NRIC For Principal Registration
     // LifeMembershipManagment("S9750882H") //Add NRIC For Principal Registration
-    BatchMembershipRegistration(
+    // BatchMembershipRegistration(
 
-        //Pass Info for Existing Member MemberID and LAST4DigitsNRIC
-        "A300002571",
-        "755A",
+    //     //Pass Info for Existing Member MemberID and LAST4DigitsNRIC
+    //     "A300002571",
+    //     "755A",
         
-        //Pass informstion for Non-Member Name, DOB, LAST4DigitsNRIC and Full NRIC
-        "Auto test627A",
-        "28-Feb-1982",
-        "627A",
-        "S6683085C",
+    //     //Pass informstion for Non-Member Name, DOB, LAST4DigitsNRIC and Full NRIC
+    //     "Auto test627A",
+    //     "28-Feb-1982",
+    //     "627A",
+    //     "S6683085C",
 
-        //NRIC for New Principal
-        "S5216439G",
+    //     //NRIC for New Principal
+    //     "S5216439G",
 
-        //NRIC for New Dependent and Dependent PrincipalID
-        "S2542998B",
-        "A300002516") 
+    //     //NRIC for New Dependent and Dependent PrincipalID
+    //     "S2542998B",
+    //     "A300002516") 
 
 
 // })
@@ -229,11 +231,11 @@ beforeEach(() => {
 // })
 
 // describe('E2E Auto Testing:FS-028', ()=> {
-    // MembershipDeceased("A30001685") //Provide Active member ID
+    // MembershipDeceased("A300002496") //Provide Active member ID
     // BatchMembershipTermination("A30000397","A30000367","A30000284") //Provide Active member ID's
     // BatchMemDefermentRequest("989D", "A300000096","safra3rduploadreminder", "A300000235") 
     // MembershipSuspensionReleaseRequest() //n 
-    // ReinstatementConfirmation("A300000672") 
+    // ReinstatementConfirmation("A300000672") //Provide Active member ID
     // BatchMembershipWaiver("S2666615E","S7603500H") // Enter 2 NRIC's for Member Registration 
     // MemDefermentRequest("S9147820Z") //Change NRIC before runing this function
     // MembershipResignationManagement("S6744863D") //Change NRIC before runing this function
@@ -276,20 +278,22 @@ beforeEach(() => {
 
 // describe('E2E Auto Testing:FS-015', ()=> {
 
-//     E1GYMMembershipConversion("A300001845") // Enter Member ID
-//     E1GYMMembershipDeferment("G1000000032") // Enter E1 Gym Membership ID
-//     E1GYMMembershipModuleSettings()
-//     // Enter SAFRA MemberID and Member Name
-//     E1GYMMembershipRegistrationWithExistingMember("A300002327", "Auto-Name 366H")
-//     E1GYMMembershipRegistrationWithNonMember("S3716755Z") //Change NRIC each time after runing this code
-//     E1GYMMembershipReinstatement("A300001847") //Enter Member ID
-//     E1GYMMembershipRenewal("S6103054I") //Change NRIC each time after runing this code
-//     E1GYMMembershipTermination("A300001847") //Provide Active member ID
-//     E1GYMMembershipWaiver("A300001815") //Provide Active member ID
-//     E1GYMMembershipAndChargeRateSetup()
-//     E1GYMMembershipDataManagement("A300001798","G1000000017") //Provide MemberID and E1GymMemberhipID
-//     E1GYMMembershipRenewalAdvise()
-//     E1GYMSetupManagement()
+        E1GymMembershipCancellationBeforePayment("A300001845")//Provide Active member ID
+        E1GYMMembershipConversion("A300001845") // Enter Member ID
+        E1GYMMembershipDeferment("G1000000032") // Enter E1 Gym Membership ID
+        E1GYMMembershipTermination("A300001847") //Provide Active member ID
+        E1GYMMembershipReinstatement("A300001847") //Enter Member ID
+        E1GYMMembershipWaiver("A300001815") //Provide Active member ID
+        E1GYMMembershipReversal("") //Enter Member ID
+        E1GYMMembershipRenewal()
+        E1GYMMembershipRegistrationWithExistingMember()
+        E1GYMMembershipRegistrationWithNonMember()
+        E1GYMSetupManagement()
+        E1GYMMembershipModuleSettings()
+        E1GYMMembershipAndChargeRateSetup()
+        E1GYMMembershipRenewalAdvise()
+        E1GYMMembershipDataManagement("A300001798","G1000000017") //Provide MemberID and E1GymMemberhipID
+
 
 
 // })

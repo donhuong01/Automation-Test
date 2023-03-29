@@ -1,21 +1,10 @@
-import E1GymMembershipListing from '../../../page-objects/SMCMS/PageActions/FS-015-E1-Gym-MemberShip/E1-Gym-Membership-Listing'
-import E1GymMembershipTerminantion from '../../../page-objects/SMCMS/PageActions/FS-015-E1-Gym-MemberShip/E1-Gym-Membership-Termination'
+import E1GymMembershipListing from '../../../page-objects/SMCMS/PageActions/FS-015-E1-Gym-MemberShip/E1 Gym Membership Listing'
+import E1GymMembershipTerminantion from '../../../page-objects/SMCMS/PageActions/FS-015-E1-Gym-MemberShip/E1 Gym Membership Termination'
 import data from '../../../fixtures/Data_Module/FS-015-E1-Gym-Membership/FS-015-E1-Gym-Membership-Termination'
 import Commons from '../../../page-objects/SMCMS/PageActions/Common/Common'
-import login from '../../../fixtures/login'
 
 
 const common = new Commons()
-
-// beforeEach(() => {
-
-//     // Set local storage for QA Enviroment
-//     cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
-
-//     // Set local storage for UAT Enviroment
-//     // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
-// })
-
 
 const E1GYMMembershipTermination = (MemberID) => {
 
@@ -34,12 +23,6 @@ describe('[TS01]  FS-015 E1 GYM Membership Termination', function () {
         E1GymMembershipTerminantion.Submit()
 
         common.ApprovalWorkFlow('E1-TMN', 'Energy One Termination Approval WorkFlow', 'Approve', 'Test')
-
-        cy.visit('/membership/e1GymMembershipList')
-
-        cy.wait(5000)
-
-        E1GymMembershipListing.FilterSAFRAMembershipID(MemberID)
 
     })
 

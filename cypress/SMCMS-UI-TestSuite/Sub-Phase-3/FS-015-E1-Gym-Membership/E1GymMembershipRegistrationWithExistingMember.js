@@ -1,61 +1,56 @@
-import E1GymMembershipRegistration from '../../../page-objects/SMCMS/PageActions/FS-015-E1-Gym-MemberShip/E1-Gym-Membership-Registration'
-import Data from '../../../fixtures/Data_Module/FS-015-E1-Gym-Membership/E1GymMembershipRegistrationExistingMember'
+
+import E1GymMembershipRegistration from '../../../page-objects/SMCMS/PageActions/FS-015-E1-Gym-MemberShip/E1 Gym Membership Registration'
+import Data from '../../../fixtures/Data_Module/FS-015-E1-Gym-Membership/E1GymRegistrationExistingSAFRAMember'
 import Commons from '../../../page-objects/SMCMS/PageActions/Common/Common'
-// import login from '../../../fixtures/login'
 
 //Page definition
 const common = new Commons()
 
+const E1GYMMembershipRegistrationWithExistingMember = () => {
 
+Data.forEach(data => {
 
+    const { MemberID, CustomerName, E1GymMemMainSelection, E1GymMembershipSelection, LocationSelection, DependencyType, category, PreferredClubHouse, EffectiveDate, Terms, AddWaiver } = data
 
-// beforeEach(() => {
+    describe('FS-015 E1 Gym Membership Registration', function () {
 
-//     // Set local storage for QA Enviroment
-//     cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
+        it('E1 Gym Member Registration for Existing SAFRA Member', function () {
 
-//     // Set local storage for UAT Enviroment
-//     // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
-// })
+            common.Checkin(MemberID)
 
+            cy.visit('/membership/e1GymMembershipMainSelection').wait(8000)
 
-const { E1GymMemMainSelection, E1GymMembershipSelection, LocationSelection, DependencyType, EffectiveDate } = Data
+            E1GymMembershipRegistration.ClickOnBox(E1GymMemMainSelection)
 
-const E1GYMMembershipRegistrationWithExistingMember = (MemberID, CustomerName) => {
+            E1GymMembershipRegistration.ClickOnBox(E1GymMembershipSelection)
 
-describe('FS-015 E1 Gym Membership Registration', function () {
+            E1GymMembershipRegistration.ClickOnBox(LocationSelection)
 
+            cy.wait(5000)
 
-    it('E1 Gym Member Registration for Existing SAFRA Member', function () {
+            E1GymMembershipRegistration.SelectDepandencyType(DependencyType)
 
-        common.Checkin(MemberID)
+            E1GymMembershipRegistration.RegistrationInformation(category)
 
-        cy.visit('/membership/e1GymMembershipMainSelection')
+            E1GymMembershipRegistration.MembershipInfo(PreferredClubHouse, EffectiveDate, Terms)
 
-        cy.wait(4000)
+            {
+                AddWaiver === 'Yes' && E1GymMembershipRegistration.AddWiaver()
+            }
 
-        E1GymMembershipRegistration.ClickOnBox(E1GymMemMainSelection)
+            E1GymMembershipRegistration.AddToCart()
 
-        E1GymMembershipRegistration.ClickOnBox(E1GymMembershipSelection)
+            common.fillOutandApplyPayment('CASH')
+            cy.wait(5000)
 
-        E1GymMembershipRegistration.ClickOnBox(LocationSelection)
+            E1GymMembershipRegistration.VerifyItemInIGMemListingTBL(CustomerName)
 
-        E1GymMembershipRegistration.SelectDepandencyType(DependencyType)
+            cy.LogoutOfSmcms()
 
-        E1GymMembershipRegistration.MembershipInfo(EffectiveDate)
-
-        // E1GymMembershipRegistration.OtherInfoCheckboxes()
-        E1GymMembershipRegistration.AddToCart()
-
-        common.fillOutandApplyPayment('Cash')
-        cy.wait(5000)
-
-        E1GymMembershipRegistration.VerifyItemInIGMemListingTBL(CustomerName)
-
-        cy.LogoutOfSmcms()
-
+        })
     })
-})
+
+})   
 
 }
 

@@ -1,26 +1,17 @@
-import login from '../../../fixtures/login';
 import InterestGroupListing from '../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupListing'
 import InterestGroupDetail from '../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupDetail'
 import Common from '../../../page-objects/SMCMS/PageActions/Common/Common'
 import data from '../../../fixtures/Data_Module/FS-015-E1-Gym-Membership/E1 Gym Setup Management'
 
 
-// beforeEach(() => {
 
-//     // Set local storage for QA Enviroment
-//     cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
-
-//     // Set local storage for UAT Enviroment
-//     // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
-// })
 
 const common = new Common()
+const E1GYMSetupManagement = () =>{
 
 const { Name, Code, IGMain, SubcategoryType, PublishingDate, EndDate, MembershipTpe, MinAge, MaxAge, IsAgeRequired, IsIGeCardApplicable, IsAllowUserView, IsAllowFloating,
     TermLength, TermLengthType, OnlineDisplay, MinRegTerm, MinRenewalTerm, MinRangeBypass, MaxRangeBypass,
     AccessMode1, CustomerCategName, location, ChargeName, TransactionType, CalculationType, AmountType, ProductName } = data
-
-const E1GYMSetupManagement = () => {
 
 describe('[TS01] FS-015 E1 Gym Setup Management ', function () {
 
@@ -82,4 +73,5 @@ describe('[TS01] FS-015 E1 Gym Setup Management ', function () {
 });
 
 }
+
 export default E1GYMSetupManagement
