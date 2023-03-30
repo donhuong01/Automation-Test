@@ -12,21 +12,20 @@ beforeEach(() => {
     // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
 })
 
-const {IGName, Code, MainCategory, IGCategoryGroup, FABSGroup, ClubClassification, LifeStyleGroup,
-      SMCClassification, OwnerEmail, LocationName, ApproverOption, ApproverEmail, Status, Name,
-      ChargeName, TransactionType, CalculationType, AmmountType,CustomerCategoryName, RegItemCode, RenewalItemCode,
-      DefermentItemCode, ReinstatementItemCode,
-      TerminationItemCode, WaiverItemCode, ReversalItemCode} = data
+const { IGName, Code, MainCategory, IGCategoryGroup, FABSGroup, ClubClassification, LifeStyleGroup,
+    SMCClassification, OwnerEmail, LocationName, ApproverOption, ApproverEmail, Status, Name,
+    ChargeName, TransactionType, CalculationType, AmmountType, CustomerCategoryName, RegItemCode, RenewalItemCode,
+    DefermentItemCode, ReinstatementItemCode,
+    TerminationItemCode, WaiverItemCode, ReversalItemCode } = data
 
 
 describe('[TS02] FS-016 Interest Group Main Management', function () {
 
-    
+
     it('[TC01] Creating New Interest Group Main', function () {
 
         cy.intercept('PUT', 'https://api.qa-smcms.safra.sg/v2/adminapi/interest-group/interest-group-mains/charge-rate').as('ID')
-        cy.visit('/membership/interestGroupMainListing')
-        cy.wait(2000)
+        cy.visit('/membership/interestGroupMainListing').wait(2000)
 
         //click on create new button
         InterestGroupMainManagement.CreateNew()
@@ -92,7 +91,7 @@ describe('[TS02] FS-016 Interest Group Main Management', function () {
         // InterestGroupMainManagement.ClickIGTableLink(IGName)
 
 
-        
+
 
         // Click Submit Button
         // InterestGroupMainManagement.Submit()
@@ -104,8 +103,8 @@ describe('[TS02] FS-016 Interest Group Main Management', function () {
         // InterestGroupDetail.VarifyTableItemStatus(IGName, 'Pending Approval')
 
         //Wait for Approval Email
-        cy.wait(250000) 
-        
+        cy.wait(250000)
+
         cy.wait('@ID')
         cy.get('@ID').then(xhr => {
 
@@ -117,7 +116,7 @@ describe('[TS02] FS-016 Interest Group Main Management', function () {
             cy.wait(2000)
 
         })
-            
+
 
 
 

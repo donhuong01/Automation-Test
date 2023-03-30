@@ -2,8 +2,9 @@ import elems_IGMembershipRegistration from '../../Elements/Interest Group/Intere
 import elems_InterestGroupMembershipRenewal from '../../Elements/Interest Group/Interest Group Membership Renewal'
 import elems_IGMemberListing from '../../Elements/Interest Group/InterestGroupMembershipListing'
 import elems_IGMembershipTransactionHistory from '../../Elements/Interest Group/IGMembershipTransactionHistory'
+import elems_IGMemberDetail from '../../Elements/Interest Group/InterestGroupMembershipDetail'
 
-class IGMembershipRenewal {
+class IGMembershipRegistration {
 
     /*****************************************************
      * Method: ClickOnBox
@@ -11,8 +12,18 @@ class IGMembershipRenewal {
     *****************************************************/
     ClickOnBox(BoxText) {
 
-        cy.Click(`//div[@class="Tiles_tile__3Ogq5"]//p[text()= "${BoxText}"]`)
-        cy.wait(3000)
+        if (BoxText === "SAFRA Jurong") {
+
+            cy.Click(`(//p[text()= "${BoxText}"])[2]`)
+            cy.wait(6000)
+        }
+        else {
+
+            cy.Click(`//p[text()= "${BoxText}"]`)
+            cy.wait(6000)
+        }
+
+
 
     }
 
@@ -20,10 +31,10 @@ class IGMembershipRenewal {
      * Method: SelectMembershipTerm
      * Description: This function Select Membership Term
     *****************************************************/
-    SelectMembershipTerm() {
+    SelectMembershipTerm(Tenure) {
 
-        // cy.SelectDropDownItem(elems_IGMembershipRegistration.DRP_MEMBERSHIPTERM, MTerm)
-        cy.Click('//span[@title="Increase value"]')
+        cy.EnterText(elems_IGMembershipRegistration.TXT_MEMBERSHIPTERM, Tenure)
+
     }
 
     /*****************************************************
@@ -39,9 +50,9 @@ class IGMembershipRenewal {
      * Method: AgreeWithTermCondition
      * Description: This function Check on agree with Term and Conditions checkbox
     *****************************************************/
-    AgreeWithTermCondition(CHECK) {
+    AgreeWithTermCondition() {
 
-        cy.TickCheckBox(elems_IGMembershipRegistration.CHK_AGRETERMCONDITION, CHECK)
+        cy.TickCheckBox(elems_IGMembershipRegistration.CHK_AGRETERMCONDITION, "CHECK")
 
     }
 
@@ -49,9 +60,9 @@ class IGMembershipRenewal {
      * Method: Agree with Indemnity Waiver
      * Description: This function Check on indenmity wiaver checkbox
     *****************************************************/
-    AgreewithIndemnityWaiver(CHECK) {
+    AgreewithIndemnityWaiver() {
 
-        cy.TickCheckBox(elems_IGMembershipRegistration.CHK_AGREIDENTITYWIAVER, CHECK)
+        cy.TickCheckBox(elems_IGMembershipRegistration.CHK_AGREIDENTITYWIAVER, "CHECK")
 
     }
 
@@ -74,7 +85,38 @@ class IGMembershipRenewal {
         cy.visit('/membership/interestGroupMembershipListing')
         cy.EnterText(elems_IGMembershipRegistration.TXT_CUSTOMERCATEGNAME, CustomerName)
         cy.Click(elems_IGMembershipRegistration.BTN_SEARCHFILTER)
+        cy.wait(2000)
         cy.VerifyTableEntry(elems_IGMemberListing.TBL_IGGROUPMEMBERLIST, 'Customer Name', CustomerName)
+
+    }
+    /*****************************************************
+     * Method: SelectItemInTable
+     * Description: This function select item in the table
+    *****************************************************/
+    SelectItemInTable(CustomerName) {
+
+        cy.SelectTableItem(elems_IGMemberListing.TBL_IGGROUPMEMBERLIST, 'Customer Name', CustomerName)
+
+    }
+
+    /*****************************************************
+    * Method: MembershipStatusReason
+    * Description: This function Verify Membership Status Reason 
+    *****************************************************/
+
+    MembershipStatusReason(Reason) {
+        cy.Click(elems_IGMemberListing.TBL_LINKIGMEMBERLIST)
+        cy.ValidateElementText(elems_IGMemberDetail.LBL_MEMBERSTATUSREASON, Reason)
+
+    }
+
+    /*****************************************************
+     * Method: SelectMaintanceOperation
+     * Description: This function select maintenance operation
+    *****************************************************/
+    SelectMaintanceOperation(Operation) {
+
+        cy.SelectDropDownItem(elems_IGMemberListing.DRP_MAINTENANCE, Operation)
 
     }
 
@@ -96,8 +138,8 @@ class IGMembershipRenewal {
     *****************************************************/
     SelectRenewalTerm(RenewalTerm) {
 
-        // cy.SelectDropDownItem(elems_InterestGroupMembershipRenewal.DRP_RENEWALTERM, RenewalTerm)
-        cy.Click('//span[@title="Increase value"]')
+        cy.SelectDropDownItem(elems_InterestGroupMembershipRenewal.DRP_RENEWALTERM, RenewalTerm)
+
     }
 
     /*****************************************************
@@ -111,6 +153,16 @@ class IGMembershipRenewal {
     }
 
     /*****************************************************
+     * Method: Complete
+     * Description: This function Click On Complete Button
+    *****************************************************/
+    Complete() {
+
+        cy.Click(elems_InterestGroupMembershipRenewal.BTN_COMPLETE)
+
+    }
+
+    /*****************************************************
      * Method: ViewTransactionHistory
      * Description: This function Select Table Item and click on ViewTransactionHistory Button
     *****************************************************/
@@ -118,6 +170,7 @@ class IGMembershipRenewal {
 
         cy.SelectTableItem(elems_IGMemberListing.TBL_IGGROUPMEMBERLIST, 'Customer Name', CustomerName)
         cy.Click(elems_IGMemberListing.BTN_VIEWTRANSACTIONHISTORY)
+        cy.wait(2000)
 
     }
 
@@ -131,5 +184,21 @@ class IGMembershipRenewal {
 
     }
 
+
+    /*****************************************************
+     * Method: AddWaiver
+     * Description: This function Fillout Waiver Form
+    *****************************************************/
+    AddWaiver(ChargeType) {
+
+        cy.Click(elems_IGMembershipRegistration.BTN_ADDWIAVER)
+        cy.SelectDropDownItem(elems_IGMembershipRegistration.DRP_CHARGETYPE, ChargeType)
+        cy.EnterText(elems_IGMembershipRegistration.TXT_AMOUNT, '10')
+        cy.EnterText(elems_IGMembershipRegistration.TXT_REASON, 'Waive')
+        cy.Click(elems_IGMembershipRegistration.BTN_CONFIRM)
+    }
+
+
+
 }
-export default new IGMembershipRenewal
+export default new IGMembershipRegistration

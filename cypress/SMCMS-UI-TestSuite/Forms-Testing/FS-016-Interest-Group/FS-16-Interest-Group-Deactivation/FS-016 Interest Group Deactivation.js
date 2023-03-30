@@ -1,4 +1,4 @@
-import IGDeactivation from '../../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupDeactivation'
+import IGDeactivation from '../../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/FS-016 Interest Group Deactivation'
 import InterestGroupListing from '../../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupListing'
 import login from '../../../../fixtures/login'
 import Data from '../../../../fixtures/Data_Module/FS-016-Interest-Group/FS-016-Interest-Group-Management'
@@ -20,8 +20,7 @@ describe('FS-016 Interest Group Deactivation', function () {
 
     it('Deactivating Interest Group', function () {
 
-        cy.visit('/membership/interestGroupListing')
-        cy.wait(2000)
+        cy.visit('/membership/interestGroupListing').wait(2000)
 
         InterestGroupListing.FilterWithName(Data.IGMembershipDeactivation.IGName)
 
@@ -35,8 +34,7 @@ describe('FS-016 Interest Group Deactivation', function () {
 
         common.ApprovalWorkFlow('IGD', 'Interest Group Deactivation Approval Workflow', 'Approve', 'Approved')
 
-        cy.visit('/membership/interestGroupListing')
-        cy.wait(2000)
+        cy.visit('/membership/interestGroupListing').wait(2000)
 
         InterestGroupListing.FilterWithName(Data.IGMembershipDeactivation.IGName)
 

@@ -9,7 +9,7 @@ import ShoppingCartPayments from '../../../../page-objects/SMCMS/PageActions/FS-
 import CustomerCreationPage from '../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-CustomerCreation/CustomerCreation'
 import Customerdata from '../../../../fixtures/Data_Module/CustomerCreationData'
 import elems_CustomerCheckInPage from '../../../../page-objects/SMCMS/Elements/Membership/FS014_Membership-Master-Registration-Renewal/CustomerCheckInPage'
-import IGMembershipRegistration from '../../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupMembershipRegistarion'
+import IGMembershipRegistration from '../../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/Interest Group Membership Registarion'
 import IGRegistration from '../../../../fixtures/Data_Module/FS-016-Interest-Group/FS-016-Interest-Group-Management'
 
 //Page definition
@@ -21,16 +21,14 @@ const CustomerCreation = new CustomerCreationPage()
 
 const PrincipalName = Customerdata.CustomerCreationPrincipal.RegistrationInformation.name
 const PrincipalEmail = Customerdata.CustomerCreationPrincipal.ContactInformation.emailAddress
-const CustomerNRICFull = 'S9191352F'
 
-const CustomerNRIC = "352F"
-const {IGMainSelectionBox, IGSelection, IGLocationSelection, MembershipTenure, EffectiveDate,
-    AgreeWithTermAndCondition, AgreeWithIndemnityWaiver} = IGRegistration.IGMembershipRegistration
+const { CustomerNRICFull, NRICLast4Digit, IGMainSelectionBox, IGSelection, IGLocationSelection, MembershipTenure, EffectiveDate,
+    AgreeWithTermAndCondition, AgreeWithIndemnityWaiver } = IGRegistration.IGMembershipRegistration
 
 beforeEach(() => {
 
     // Set local storage for QA Enviroment
-    // cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
+    cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
 
     // Set local storage for UAT Enviroment
     // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
@@ -46,7 +44,7 @@ describe('[TS01] Interest Group Membership Registration Management', function ()
         cy.wait(5000)
         cy.Click(elems_CustomerCheckInPage.RBTN_NRIC)
         cy.EnterDate(elems_CustomerCheckInPage.DATE_DATEOFBIRTH, Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB)
-        cy.EnterText(elems_CustomerCheckInPage.TXT_LAST4DIGITSNRIC, CustomerNRIC)
+        cy.EnterText(elems_CustomerCheckInPage.TXT_LAST4DIGITSNRIC, NRICLast4Digit)
         cy.Click(elems_CustomerCheckInPage.BTN_CHECKIN)
         cy.wait(2000)
         cy.Click(elems_CustomerCheckInPage.BTN_CREATNEW)
@@ -112,8 +110,7 @@ describe('[TS01] Interest Group Membership Registration Management', function ()
 
         cy.wait(10000)
 
-        cy.visit('/membership/interestGroupMainSelection')
-        cy.wait(4000)
+        cy.visit('/membership/interestGroupMainSelection').wait(4000)
 
         IGMembershipRegistration.ClickOnBox(IGMainSelectionBox)
 
@@ -129,14 +126,9 @@ describe('[TS01] Interest Group Membership Registration Management', function ()
 
         IGMembershipRegistration.AgreewithIndemnityWaiver(AgreeWithIndemnityWaiver)
 
-        // IGMembershipRegistration.AddWaiver('Registration')
-
-        cy.wait(2000)
         MemTenureSelect.addToCart()
 
         ShoppingCart.fillOutandApplyPayment('CASH')
-
-        cy.wait(15000)
 
         IGMembershipRegistration.VerifyItemInIGMemListingTBL(PrincipalName)
         //Logout

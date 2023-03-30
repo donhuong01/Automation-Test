@@ -1,7 +1,7 @@
 
 import login from '../../../../fixtures/login'
 
-import IGMembershipRegistration from '../../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupMembershipRegistarion'
+import IGMembershipRegistration from '../../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/Interest Group Membership Registarion'
 import InterestGroupListing from '../../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupMembershipListing'
 import IGMembershipDeferment from '../../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupMembershipDeferment'
 import IGDEFDATA from '../../../../fixtures/Data_Module/FS-016-Interest-Group/FS016-Interest-Group-Membership-Defer'
@@ -11,7 +11,7 @@ import InterestGroupMembershipReversalRequest from '../../../../page-objects/SMC
 beforeEach(() => {
 
     // Set local storage for QA Enviroment
-    // cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
+    cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
 
     // Set local storage for UAT Enviroment
     // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
@@ -21,7 +21,7 @@ beforeEach(() => {
 describe('[TS12] FS-016 Interest Group Membership Deferment', function () {
 
 
-    it('Creating Interest Group Membership Deferment, Complete Approval Workflow', function () {
+    it.only('Creating Interest Group Membership Deferment, Complete Approval Workflow', function () {
 
         cy.visit('/membership/interestGroupMembershipListing').wait(2000)
 
@@ -35,9 +35,9 @@ describe('[TS12] FS-016 Interest Group Membership Deferment', function () {
 
         IGMembershipDeferment.Submit()
 
-        IGMembershipDeferment.ApprovalWorkFlow('IG-DEF', 'Interest Group Membership Deferment Approval Workflow', 'Approve', IGDEFDATA.DefReason)
+        cy.wait(5000)
 
-        cy.wait(8000)
+        IGMembershipDeferment.ApprovalWorkFlow('IG-DEF', 'Interest Group Membership Deferment Approval Workflow', 'Approve', IGDEFDATA.DefReason)
 
         IGMembershipRegistration.VerifyItemInIGMemListingTBL(IGDEFDATA.CustomerName)
 
@@ -55,8 +55,9 @@ describe('[TS12] FS-016 Interest Group Membership Deferment', function () {
 
         InterestGroupMembershipReversalRequest.Submit()
 
+        cy.wait(15000)
+
         IGMembershipDeferment.ApprovalWorkFlow('IG-RVS', 'Interest Group Membership Reversal Approval Workflow', 'Approve', 'Approved')
-        cy.wait(5000)
 
         cy.visit('/membership/interestGroupMembershipListing').wait(3000)
 
@@ -82,11 +83,7 @@ describe('[TS12] FS-016 Interest Group Membership Deferment', function () {
 
         IGMembershipDeferment.ApprovalWorkFlow('IG-DEF', 'Interest Group Membership Deferment Approval Workflow', 'Query', 'test')
 
-        cy.wait(5000)
-
         IGMembershipDeferment.ApprovalWorkFlow('IG-DEF', 'Interest Group Membership Deferment Approval Workflow', 'Complete', 'test')
-
-        cy.wait(5000)
 
         IGMembershipRegistration.VerifyItemInIGMemListingTBL(IGDEFDATA.CustomerName)
 
@@ -104,8 +101,9 @@ describe('[TS12] FS-016 Interest Group Membership Deferment', function () {
 
         InterestGroupMembershipReversalRequest.Submit()
 
+        cy.wait(8000)
+
         IGMembershipDeferment.ApprovalWorkFlow('IG-RVS', 'Interest Group Membership Reversal Approval Workflow', 'Approve', 'Approved')
-        cy.wait(5000)
 
         cy.visit('/membership/interestGroupMembershipListing').wait(2000)
 

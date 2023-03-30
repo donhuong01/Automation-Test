@@ -15,11 +15,13 @@ const Data = {
 
     },
     IGMembershipRegistration: {
+        CustomerNRICFull: 'S6797328C',
+        NRICLast4Digit: '328C',
         IGMainSelectionBox: "MOVIEMAX",
         IGSelection: "MOVIEMAX",
         IGLocationSelection: "SAFRA Jurong",
         MembershipTenure: "5",
-        EffectiveDate: "30-Nov-2023",
+        EffectiveDate: "20-Feb-2023",
         AgreeWithTermAndCondition: "CHECK",
         AgreeWithIndemnityWaiver: "CHECK",
 

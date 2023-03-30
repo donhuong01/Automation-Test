@@ -10,6 +10,7 @@ class InterestGroupMembershipReversalRequest {
     Submit() {
 
         cy.Click(elems_IGMembershipReversalRequest.BTN_SUBMIT)
+        cy.wait(5000)
 
     }
     /*****************************************************

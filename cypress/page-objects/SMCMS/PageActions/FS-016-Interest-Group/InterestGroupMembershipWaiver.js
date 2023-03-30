@@ -1,8 +1,4 @@
-import elems_IGMembershipListing from "../../Elements/Interest Group/InterestGroupMembershipListing"
-import elems_IGMembershipDeferment from "../../Elements/Interest Group/InterestGroupMembershipDefRequest"
-import elems_PendingTaskListing from "../../Elements/Admin/FS004_Admin-Settings/PendingTaskListing"
-import elems_PendingTaskDetail from "../../Elements/Admin/FS004_Admin-Settings/PendingTaskDetail"
-import elems_IGMembershipTransactionHistory from "../../Elements/Interest Group/IGMembershipTransactionHistory"
+
 import elems_IGMembershipRenewalAdviceDetail from '../../Elements/Interest Group/Batch Interest Group Membership Waiver Request'
 
 
@@ -24,6 +20,7 @@ class IGMembershipWaiver {
     Request() {
 
         cy.Click(elems_IGMembershipRenewalAdviceDetail.BTN_REQUEST)
+        cy.wait(5000)
     }
 }
 

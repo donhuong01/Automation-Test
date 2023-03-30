@@ -18,11 +18,9 @@ const Status = "Approved"
 
 describe('[TS02] FS-016 Interest Group Main Listing', function () {
 
-
     it('[TC01] Verify the functionality of Create New button', function () {
 
-        cy.visit('/membership/interestGroupMainListing')
-        cy.wait(2000)
+        cy.visit('/membership/interestGroupMainListing').wait(2000)
 
         // Verify Page title
         InterestGroupMainListing.VerifyPageTitle('Interest Group Main Listing')
@@ -33,13 +31,11 @@ describe('[TS02] FS-016 Interest Group Main Listing', function () {
         // Verify Page title
         InterestGroupMainListing.VerifyPageTitle('Interest Group Main Detail Form')
 
-
     })
 
     it('[TC02] Filters values by Business Type', function () {
 
-        cy.visit('/membership/interestGroupMainListing')
-        cy.wait(2000)
+        cy.visit('/membership/interestGroupMainListing').wait(2000)
 
         // Verify Page title
         InterestGroupMainListing.VerifyPageTitle('Interest Group Main Listing')
@@ -47,13 +43,10 @@ describe('[TS02] FS-016 Interest Group Main Listing', function () {
         // Filter item by business type
         InterestGroupMainListing.FilterValueByBusinessType(Name, BusinessType, Status)
 
-
-
     })
     it('[TC03] Filters values by Status', function () {
 
-        cy.visit('/membership/interestGroupMainListing')
-        cy.wait(2000)
+        cy.visit('/membership/interestGroupMainListing').wait(2000)
 
         // Verify Page title
         InterestGroupMainListing.VerifyPageTitle('Interest Group Main Listing')
@@ -61,13 +54,10 @@ describe('[TS02] FS-016 Interest Group Main Listing', function () {
         // Filter item by status
         InterestGroupMainListing.FilterValueByStatus(Name, BusinessType, Status)
 
-
-
     })
     it('[TC04] Filters Iem by Busniess Type and Delete Item', function () {
 
-        cy.visit('/membership/interestGroupMainListing')
-        cy.wait(2000)
+        cy.visit('/membership/interestGroupMainListing').wait(2000)
 
         // Verify Page title
         InterestGroupMainListing.VerifyPageTitle('Interest Group Main Listing')
@@ -80,8 +70,6 @@ describe('[TS02] FS-016 Interest Group Main Listing', function () {
 
         // Click Delete button
         InterestGroupMainListing.Delete()
-
-
 
     })
 

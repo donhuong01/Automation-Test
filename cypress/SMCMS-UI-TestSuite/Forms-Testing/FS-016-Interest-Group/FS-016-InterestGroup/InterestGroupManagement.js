@@ -29,8 +29,7 @@ describe('[TS02] FS-016 Interest Group Management', function () {
 
         cy.intercept('POST', 'https://api.qa-smcms.safra.sg/v2/adminapi/interest-group/interest-groups/membership-tag').as('ID')
 
-        cy.visit('/membership/interestGroupListing')
-        cy.wait(2000)
+        cy.visit('/membership/interestGroupListing').wait(2000)
 
         //click on create new button
         InterestGroupListing.CreateNew()
@@ -56,7 +55,6 @@ describe('[TS02] FS-016 Interest Group Management', function () {
         // Add Location
         InterestGroupDetail.AddLocation(location)
 
-
         //Click save as draft button
         InterestGroupDetail.SaveAsDraft()
 
@@ -77,8 +75,6 @@ describe('[TS02] FS-016 Interest Group Management', function () {
 
         // Fillout Product Mater Information
         InterestGroupDetail.ProductMasterInformation(ProductName)
-
-
 
         //Click on Other Information Tab
         InterestGroupDetail.OtherInformationTab()
@@ -123,12 +119,11 @@ describe('[TS02] FS-016 Interest Group Management', function () {
         //Varify Notification Msg
         InterestGroupDetail.VarifyNotificationMsg('Record has been saved successfully.')
 
-
         InterestGroupDetail.VarifyTableItemStatus(IGName, 'Pending Approval')
 
         //Wait for Approval Email
-        cy.wait(250000) 
-        
+        cy.wait(250000)
+
         cy.wait('@ID')
         cy.get('@ID').then(xhr => {
 
@@ -137,14 +132,10 @@ describe('[TS02] FS-016 Interest Group Management', function () {
 
             cy.visit(`/admin/pendingTaskDetails?id=${Id}`).as('MemID')
             cy.wait(2000)
-            
-            
+
+
         })
 
-        
-
     })
-
-
 
 })

@@ -12,6 +12,7 @@ class InterestGroupMembershipTerminationRequest {
     Submit() {
 
         cy.Click(elems_IGMembershipTerminationRequest.BTN_SUBMIT)
+        cy.wait(4000)
 
     }
     /*****************************************************

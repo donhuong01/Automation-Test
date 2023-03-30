@@ -1,11 +1,21 @@
 const data = {
-    WaiverTerm: '3',
-    WaiverReason: 'Waive Please',
-    ReasonCode: 'Waived',
-    Status: 'Active',
+    BatchIGWaiver: {
+        WaiverTerm: '3',
+        WaiverReason: 'test',
+        ReasonCode: 'Waived',
+        Status: 'Active',
 
-    // Defer existing member 
-    CustomerName: 'Test User 61718',    //Please Provide Active Member
+        CustomerName1: 'Peter Pan',    //Please Provide Active Member
+        CustomerName2: 'John Lee',    //Please Provide Active Member
+    },
+    InterestGroupWaiver: {
+        WaiverTerm: '3',
+        WaiverReason: 'test',
+        ReasonCode: 'Waived',
+        Status: 'Active',
+
+        CustomerName: 'Peter Pan',    //Please Provide Active Member
+    }
 
 
 }

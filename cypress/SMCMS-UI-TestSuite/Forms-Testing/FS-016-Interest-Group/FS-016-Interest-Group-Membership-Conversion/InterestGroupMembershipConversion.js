@@ -7,7 +7,7 @@ import login from '../../../../fixtures/login'
 beforeEach(() => {
 
     // Set local storage for QA Enviroment
-    // cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
+    cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
 
     // Set local storage for UAT Enviroment
     // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
@@ -21,7 +21,6 @@ describe('[TS01] FS-016 Interest Group Membership Conversion', function () {
         cy.visit('/membership/interestGroupMembershipListing')
 
         InterestGroupMembershipListing.FiterWithCustomerName("John Lee")
-        cy.wait(2000)
 
         cy.xpath('(//h2[text()="Interest Group Membership Listing"]//ancestor::div//table//tbody//tr//td)[3]').then(IG => {
 

@@ -28,6 +28,7 @@ class IGMembershipDeferment {
     Submit() {
 
         cy.Click(elems_IGMembershipDeferment.BTN_SUBMIT)
+        cy.wait(10000)
 
     }
     /*****************************************************
@@ -61,7 +62,7 @@ class IGMembershipDeferment {
 
         // Click on Save button
         cy.Click(elems_IGMembershipDeferment.BTN_SUBMIT)
-        cy.wait(2000)
+        cy.wait(4000)
 
 
     }

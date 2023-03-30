@@ -37,6 +37,7 @@ class InterestGroupListing {
     Maintenance(Maintenance) {
 
         cy.SelectDropDownItem(elems_IGMembershipListing.DRP_MAINTENANCE, Maintenance)
+        cy.wait(3000)
 
     }
 
@@ -78,6 +79,7 @@ class InterestGroupListing {
      *****************************************************/
     FiterWithCustomerName(CustomerName) {
 
+        cy.xpath(elems_IGMembershipListing.TXT_CUSTOMERNAME).clear()
         cy.EnterText(elems_IGMembershipListing.TXT_CUSTOMERNAME, CustomerName)
         cy.Click(elems_IGMembershipListing.BTN_SEARCHFILTER)
 

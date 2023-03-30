@@ -35,8 +35,6 @@ describe('[TS11] FS-016 Interest Group Membership Waiver', function () {
 
         InterestGroupListing.ApprovalWorkFlow('IG-WAV', 'Interest Group Batch Waiver Approval Workflow', 'Approve', 'test')
 
-        cy.wait(5000)
-
         cy.visit('/membership/interestGroupMembershipListing').wait(2000)
 
         InterestGroupListing.FiterWithCustomerName(CustomerName)
@@ -76,11 +74,7 @@ describe('[TS11] FS-016 Interest Group Membership Waiver', function () {
 
         InterestGroupListing.ApprovalWorkFlow('IG-WAV', 'Interest Group Batch Waiver Approval Workflow', 'Query', 'test')
 
-        cy.wait(5000)
-
         InterestGroupListing.ApprovalWorkFlow('IG-WAV', 'Interest Group Batch Waiver Approval Workflow', 'Complete', 'Action Completed')
-
-        cy.wait(5000)
 
         cy.visit('/membership/interestGroupMembershipListing').wait(2000)
 

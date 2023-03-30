@@ -11,6 +11,7 @@ class BatchIGRegistration {
        *****************************************************/
     CreateNew() {
         cy.Click(elems_BatchMembershipRegistrationListing.BTN_CREATENEW)
+        cy.wait(5000)
     }
     /*****************************************************
         * Method: Save
@@ -18,6 +19,7 @@ class BatchIGRegistration {
        *****************************************************/
     Save() {
         cy.Click(elems_BatchMembershipRegistrationDetail.BTN_SAVE)
+        cy.wait(6000)
     }
 
     /*****************************************************
@@ -35,16 +37,21 @@ class BatchIGRegistration {
         * Description: This function Fillout Additional fields
         * @param {string} IG
         * @param {string} EffectiveDate
+        * @param {string} Term
         * @param {string} IGLocation
        *****************************************************/
     FilloutAdditionalFields(IG, EffectiveDate, Term, IGLocation) {
         cy.SelectPickerWithoutFields(elems_BatchMembershipRegistrationDetail.BatchInformation.PCK_IG, IG)
         cy.EnterDate(elems_BatchMembershipRegistrationDetail.BatchInformation.DATE_IGEFFECTIVEDATE, EffectiveDate)
+        // cy.xpath(elems_BatchMembershipRegistrationDetail.BatchInformation.TXT_IGTERM).clear()
         cy.EnterText(elems_BatchMembershipRegistrationDetail.BatchInformation.TXT_IGTERM, Term)
         cy.Click(elems_BatchMembershipRegistrationDetail.BatchInformation.PCK_IGLOCATION)
+        cy.wait(3000)
+        cy.SelectTableItem('//div[@class="k-window-content k-dialog-content"]//table', 'Location Name', IGLocation)
+        cy.Click('//div[@class="k-widget k-window k-dialog"]//button[text()="Select"]')
+        // cy.SelectPickerWithoutFields(elems_BatchMembershipRegistrationDetail.BatchInformation.PCK_IGLOCATION, IGLocation)
         cy.wait(2000)
-        cy.Click('(//div[@role="dialog"]//table//input)[1]')
-        cy.Click('//div[@role="dialog"]//button[text()="Select"]')
+
     }
     /*****************************************************
         * Method: FilterWithBatchName
@@ -90,7 +97,7 @@ class BatchIGRegistration {
        *****************************************************/
     AddMemRegToMemListingDefIG() {
         cy.Click(elems_BatchMembershipRegistrationDetail.BatchInformation.BTN_IGREGDEFAULTIG)
-        cy.wait(3000)
+        cy.wait(6000)
 
     }
     /*****************************************************
@@ -99,6 +106,7 @@ class BatchIGRegistration {
        *****************************************************/
     AddIGRegistration() {
         cy.Click(elems_BatchMembershipRegistrationDetail.BatchInformation.BTN_ADDIGREGISTRATION)
+        cy.wait(5000)
 
     }
     /*****************************************************
@@ -117,6 +125,18 @@ class BatchIGRegistration {
     ValidateRegistration() {
 
         cy.xpath(elems_BatchMembershipRegistrationDetail.BTN_VALIDATEREGISTRATION).click({ force: true })
+        cy.wait(6000)
+
+    }
+    /*****************************************************
+        * Method: Delete
+        * Description: This function Click on Validate Registration Button
+       *****************************************************/
+    Delete() {
+
+        cy.Click(elems_BatchMembershipRegistrationListing.BTN_DELETE)
+        cy.wait(3000)
+        cy.Click('//button[text()="Yes"]')
 
     }
 

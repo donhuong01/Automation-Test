@@ -13,11 +13,11 @@ beforeEach(() => {
     // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
 })
 
-const {IGName, Code, MainCategory, IGCategoryGroup, FABSGroup, ClubClassification, LifeStyleGroup,
-      SMCClassification, OwnerEmail, LocationName, ApproverOption, ApproverEmail, Status, Name,
-      ChargeName, TransactionType, CalculationType, AmmountType,CustomerCategoryName, RegItemCode, RenewalItemCode,
-      DefermentItemCode, ReinstatementItemCode,
-      TerminationItemCode, WaiverItemCode, ReversalItemCode} = data
+const { IGName, Code, MainCategory, IGCategoryGroup, FABSGroup, ClubClassification, LifeStyleGroup,
+    SMCClassification, OwnerEmail, LocationName, ApproverOption, ApproverEmail, Status, Name,
+    ChargeName, TransactionType, CalculationType, AmmountType, CustomerCategoryName, RegItemCode, RenewalItemCode,
+    DefermentItemCode, ReinstatementItemCode,
+    TerminationItemCode, WaiverItemCode, ReversalItemCode } = data
 
 
 describe('[TS02] FS-016 Interest Group Main Management', function () {
@@ -25,8 +25,7 @@ describe('[TS02] FS-016 Interest Group Main Management', function () {
 
     it('[TC01] Creating New Interest Group Main and click cancel button', function () {
 
-        cy.visit('/membership/interestGroupMainListing')
-        cy.wait(2000)
+        cy.visit('/membership/interestGroupMainListing').wait(2000)
 
         //click on create new button
         InterestGroupMainManagement.CreateNew()
@@ -58,8 +57,7 @@ describe('[TS02] FS-016 Interest Group Main Management', function () {
 
     it('[TC02] Creating New Interest Group Main and click on Save as Draft', function () {
 
-        cy.visit('/membership/interestGroupMainListing')
-        cy.wait(2000)
+        cy.visit('/membership/interestGroupMainListing').wait(2000)
 
         //click on create new button
         InterestGroupMainManagement.CreateNew()
@@ -74,7 +72,6 @@ describe('[TS02] FS-016 Interest Group Main Management', function () {
         //Add location 
         InterestGroupMainManagement.AddLocation(LocationName)
 
-
         //FillOut Approver Option Field
         InterestGroupMainManagement.AddApproverOption(ApproverOption, ApproverEmail)
 
@@ -87,13 +84,10 @@ describe('[TS02] FS-016 Interest Group Main Management', function () {
         // Select Table entry 
         InterestGroupMainListing.SelectTableEntry(IGName)
 
-
-
     })
     it('[TC03] Verify and delete newly created item', function () {
 
-        cy.visit('/membership/interestGroupMainListing')
-        cy.wait(2000)
+        cy.visit('/membership/interestGroupMainListing').wait(2000)
 
         //Filter listing using status and verify table item status
         InterestGroupMainManagement.FilterWithStatus(Status)
