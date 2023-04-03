@@ -99,7 +99,7 @@ describe('[TS01] Membership Registration Management',function(){
             cy.wait(8000)
             cy.Click(elems_Landing.SAFRA_Member)
             cy.Click(elems_Landing.Membership_Registration)
-            cy.wait(8000)
+            cy.wait(15000)
         
             MemRegPrincipal.verifyPersonalInformation({
                 MemberCategory: data.memberregistrationprincipal.Personal_Info.MemberCategory,
@@ -126,7 +126,7 @@ describe('[TS01] Membership Registration Management',function(){
             // MemRegPrincipal.VerifyPageTitle('Membership Registration - Principal')
             
             MemRegPrincipal.SaveAndNextPrincipal()
-            cy.wait(20000)
+            cy.wait(15000)
         
             ///////////////////////////////////TENURE SELECTION////////////////////////////////////////////////////////////
         

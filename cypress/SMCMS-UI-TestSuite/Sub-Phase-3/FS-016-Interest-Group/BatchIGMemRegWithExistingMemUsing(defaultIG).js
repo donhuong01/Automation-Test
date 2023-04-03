@@ -1,7 +1,7 @@
 import login from "../../../fixtures/login"
 import BatchIGRegistration from '../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/Batch-IG-Registration'
 import data from '../../../fixtures/Data_Module/FS-016-Interest-Group/BatchIGMemRegWithExistingMemUsing(defaultIG)'
-import IGMembershipRegistration from '../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupMembershipRegistarion'
+import IGMembershipRegistration from '../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/Interest Group Membership Registarion'
 import MembershipTenureSelection from "../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Membership Tenure Selection/MembershipTenureSelection"
 import Common from '../../../page-objects/SMCMS/PageActions/Common/Common'
 

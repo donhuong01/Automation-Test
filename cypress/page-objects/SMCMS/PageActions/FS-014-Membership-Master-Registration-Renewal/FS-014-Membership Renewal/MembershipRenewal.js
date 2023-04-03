@@ -63,7 +63,7 @@ class MembershipRenewal {
   ClickMemberShipRenewal() {
 
     cy.Click(elems_Landing.Membership_Renewal)
-    cy.wait(1000)
+    cy.wait(5000)
 
   }
 

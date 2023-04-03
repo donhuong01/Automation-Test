@@ -101,7 +101,7 @@ describe('[TS01] Membership Renewal Management',function(){
             
             cy.Click(elems_Landing.SAFRA_Member)
             cy.Click(elems_Landing.Membership_Registration)
-            cy.wait(5000)
+            cy.wait(15000)
         
             MemRegPrincipal.verifyPersonalInformation({
                 MemberCategory: data.memberregistrationprincipal.Personal_Info.MemberCategory,

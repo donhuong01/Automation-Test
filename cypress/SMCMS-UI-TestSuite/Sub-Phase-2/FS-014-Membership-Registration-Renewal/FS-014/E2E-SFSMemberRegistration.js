@@ -171,7 +171,7 @@ describe('[TS07] SFS Member Registration]', function (){
     
         cy.Click(elems_Landing.SAFRA_Member)
         cy.Click(elems_Landing.Membership_Registration)
-        cy.wait(5000)
+        cy.wait(15000)
     
         //Registration 
         MemRegPrincipal.verifyPersonalInformation({
@@ -271,11 +271,11 @@ describe('[TS07] SFS Member Registration]', function (){
         })
 
         MemRegPrincipal.SaveAndNext()
-        cy.wait(5000)
+        cy.wait(15000)
 
         //Adding Dependent spouse 
         MemRegPrincipal.AddDependent()
-        // cy.wait(5000)
+        cy.wait(5000)
         
         //Adding Spouse
         MemberRegDependent.fillsoutPersonalInformation(

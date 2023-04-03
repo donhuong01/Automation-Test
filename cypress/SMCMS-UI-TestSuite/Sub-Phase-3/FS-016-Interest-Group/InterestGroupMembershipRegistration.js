@@ -9,7 +9,7 @@ import ShoppingCartPayments from '../../../page-objects/SMCMS/PageActions/FS-014
 import CustomerCreationPage from '../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-CustomerCreation/CustomerCreation'
 import Customerdata from '../../../fixtures/Data_Module/CustomerCreationData'
 import elems_CustomerCheckInPage from '../../../page-objects/SMCMS/Elements/Membership/FS014_Membership-Master-Registration-Renewal/CustomerCheckInPage'
-import IGMembershipRegistration from '../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupMembershipRegistarion'
+import IGMembershipRegistration from '../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/Interest Group Membership Registarion'
 import IGRegistration from '../../../fixtures/Data_Module/FS-016-Interest-Group/FS-016-Interest-Group-Management'
 
 //Page definition

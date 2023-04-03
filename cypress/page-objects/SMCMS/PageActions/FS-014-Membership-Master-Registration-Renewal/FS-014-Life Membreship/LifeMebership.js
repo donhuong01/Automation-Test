@@ -48,7 +48,7 @@ class LifeMembership {
 
         //Click on Filter button
         cy.Click(elems_PendingTaskListing.BTN_SEARCH)
-        cy.wait(5000)
+        cy.wait(8000)
 
         //Click on Table item
         cy.xpath('(//h2[text()="Pending Task Listing"]/ancestor::div//table//tr["Task ID"]//td//a)[1]').click()

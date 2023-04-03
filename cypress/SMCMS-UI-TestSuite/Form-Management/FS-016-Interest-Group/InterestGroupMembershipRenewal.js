@@ -10,7 +10,7 @@ import CustomerCreationPage from '../../../page-objects/SMCMS/PageActions/FS-014
 import Customerdata from '../../../fixtures/Data_Module/CustomerCreationData'
 import elems_CustomerCheckInPage from '../../../page-objects/SMCMS/Elements/Membership/FS014_Membership-Master-Registration-Renewal/CustomerCheckInPage'
 import IGMembershipRenewal from '../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupMembershipRenewal'
-import IGMembershipRegistration from '../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/InterestGroupMembershipRegistarion'
+import IGMembershipRegistration from '../../../page-objects/SMCMS/PageActions/FS-016-Interest-Group/Interest Group Membership Registarion'
 
 //Page definition
 const MemRegPrincipal = new MemberRegistrationPrincipal()

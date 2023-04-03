@@ -283,8 +283,8 @@ const data = {
 
         AddressInfo: {
             IndependentAddress: 'check',
-            PostalCode: '680608',
-            Address: '608 CHOA CHU KANG STREET 62',
+            PostalCode: '117606',
+            Address: '33 MAR0032',
             UnitNumber: '#02-222',
             PoBox: '12345',
             MyMailbox: '2323'
@@ -1041,7 +1041,7 @@ const data = {
             name: 'Test User',
             MemberCategory: 'Dependent',
             DependentType: 'Spouse',
-            DateofBirth: '24-Jan-1980',
+            DateofBirth: '24-Jan-1990',
             gender: 'Female',
             Age: '42',
             PrincipalType: 'AS',

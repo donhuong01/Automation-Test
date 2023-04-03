@@ -61,7 +61,7 @@ import E1GYMMembershipDataManagement from '../Sub-Phase-3/FS-015-E1-Gym-Membersh
 
 
 
-// FS-16 Interest Group
+// // FS-16 Interest Group
 import BatchMemRegWithExistingMemUsingDefaultIG from '../Sub-Phase-3/FS-016-Interest-Group/BatchIGMemRegWithExistingMemUsing(defaultIG)'
 import BatchMemRegWithExistingMemUsingNonDefaultIG from '../Sub-Phase-3/FS-016-Interest-Group/BatchIGMemRegWithExistingMemUsing(NondefaultIG)'
 import InterestGroupDeactivation from '../Sub-Phase-3/FS-016-Interest-Group/InterestGroupDeactivation'
@@ -186,24 +186,24 @@ beforeEach(() => {
 
 // describe('E2E Auto Testing:FS-014', ()=> {
 
-    // MembershipRegistration("S0768637D") // Enter Full NRIC
+    // MembershipRegistration("S7474796E") // Enter Full NRIC
     // CustomerCheckIn()
     // MemberType()
     // BadAddressUpdate()// Fail Need code updates
     // MembershipRenewalAdvise()
-    // WithdrawalOfConsent("A300000533") //Enter Member ID for Withdrawal Of Consent
+    // WithdrawalOfConsent("A300000295") //Enter Member ID for Withdrawal Of Consent
     // SourceChannel() 
     // //MemberStatusReasonCode() // Not Required
     // MassUpdateForMemberData()
     // MembershipModuleSettings()
-    // SFSMemberRegistion("S2985728H", "S0020519B", "S1421614F") //Add three NRIC's for Principal, Dependent Child, Dependent Spouse
-    // E2EMemberShipRenewal("S6270302D") //Add NRIC For Principal Registration
-    // LifeMembershipManagment("S9750882H") //Add NRIC For Principal Registration
+    // SFSMemberRegistion("S6325183F", "S9849550I", "S7623547C") //Add three NRIC's for Principal, Dependent Child, Dependent Spouse
+    // E2EMemberShipRenewal("S3077982G") //Add NRIC For Principal Registration
+    // LifeMembershipManagment("S6752955C") //Add NRIC For Principal Registration
     // BatchMembershipRegistration(
 
     //     //Pass Info for Existing Member MemberID and LAST4DigitsNRIC
-    //     "A300002571",
-    //     "755A",
+    //     "A300000639",
+    //     "871J",
         
     //     //Pass informstion for Non-Member Name, DOB, LAST4DigitsNRIC and Full NRIC
     //     "Auto test627A",
@@ -212,11 +212,11 @@ beforeEach(() => {
     //     "S6683085C",
 
     //     //NRIC for New Principal
-    //     "S5216439G",
+    //     "S1103815H",
 
     //     //NRIC for New Dependent and Dependent PrincipalID
-    //     "S2542998B",
-    //     "A300002516") 
+    //     "S1851045F",
+    //     "A300002677") 
 
 
 // })
@@ -278,21 +278,21 @@ beforeEach(() => {
 
 // describe('E2E Auto Testing:FS-015', ()=> {
 
-        E1GymMembershipCancellationBeforePayment("A300001845")//Provide Active member ID
-        E1GYMMembershipConversion("A300001845") // Enter Member ID
-        E1GYMMembershipDeferment("G1000000032") // Enter E1 Gym Membership ID
-        E1GYMMembershipTermination("A300001847") //Provide Active member ID
-        E1GYMMembershipReinstatement("A300001847") //Enter Member ID
-        E1GYMMembershipWaiver("A300001815") //Provide Active member ID
-        E1GYMMembershipReversal("") //Enter Member ID
-        E1GYMMembershipRenewal()
-        E1GYMMembershipRegistrationWithExistingMember()
-        E1GYMMembershipRegistrationWithNonMember()
-        E1GYMSetupManagement()
-        E1GYMMembershipModuleSettings()
-        E1GYMMembershipAndChargeRateSetup()
-        E1GYMMembershipRenewalAdvise()
-        E1GYMMembershipDataManagement("A300001798","G1000000017") //Provide MemberID and E1GymMemberhipID
+        // E1GymMembershipCancellationBeforePayment("A300001845")//Provide Active member ID
+        // E1GYMMembershipConversion("A300001845") // Enter Member ID
+        // E1GYMMembershipDeferment("G1000000032") // Enter E1 Gym Membership ID
+        // E1GYMMembershipTermination("A300001847") //Provide Active member ID
+        // E1GYMMembershipReinstatement("A300001847") //Enter Member ID
+        // E1GYMMembershipWaiver("A300001815") //Provide Active member ID
+        // E1GYMMembershipReversal("") //Enter Member ID
+        // E1GYMMembershipRenewal()
+        // E1GYMMembershipRegistrationWithExistingMember()
+        // E1GYMMembershipRegistrationWithNonMember()
+        // E1GYMSetupManagement()
+        // E1GYMMembershipModuleSettings()
+        // E1GYMMembershipAndChargeRateSetup()
+        // E1GYMMembershipRenewalAdvise()
+        // E1GYMMembershipDataManagement("A300001798","G1000000017") //Provide MemberID and E1GymMemberhipID
 
 
 
@@ -301,19 +301,19 @@ beforeEach(() => {
 
 // describe('E2E Auto Testing:FS-016', ()=> {
 
-//     BatchMemRegWithExistingMemUsingDefaultIG("A300002301") //Provide Active member ID
-//     BatchMemRegWithExistingMemUsingNonDefaultIG("A300002305") //Provide Active member ID
-//     InterestGroupDeactivation()
-//     InterestGroupManagement()
-//     InterestGroupConversion("John Lee") //Please Provide Active Member Name
-//     InterestGroupDeferment("Test User 13448") //Please Provide Active Member Name
-//     InterestGroupMembershipManagment()
-//     InterestGroupMembershipRegistration("S4914013D") //Change NRIC each time after runing this code
-//     IGMembershipReinstatement("A300001854", "Test User 8310150")
-//     InterestGMembershipRenewal("S0038535B") //Change NRIC each time after runing this code
-//     InterestGMembershipReverse("Test User 13448") //Provide Member Name
-//     InterestGMembershipTermination("A300000431","Test User 46") // Provide MemberId and Member Name
-//     InterestGMembershipwaiver("Test User 61718")  //Provide Member Name
+    BatchMemRegWithExistingMemUsingDefaultIG("A300002301") //Provide Active member ID
+    BatchMemRegWithExistingMemUsingNonDefaultIG("A300002305") //Provide Active member ID
+    InterestGroupDeactivation()
+    InterestGroupManagement()
+    InterestGroupConversion("John Lee") //Please Provide Active Member Name
+    InterestGroupDeferment("Test User 13448") //Please Provide Active Member Name
+    InterestGroupMembershipManagment()
+    InterestGroupMembershipRegistration("S4914013D") //Change NRIC each time after runing this code
+    IGMembershipReinstatement("A300001854", "Test User 8310150")
+    InterestGMembershipRenewal("S0038535B") //Change NRIC each time after runing this code
+    InterestGMembershipReverse("Test User 13448") //Provide Member Name
+    InterestGMembershipTermination("A300000431","Test User 46") // Provide MemberId and Member Name
+    InterestGMembershipwaiver("Test User 61718")  //Provide Member Name
 
 // })
 

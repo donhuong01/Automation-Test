@@ -662,7 +662,7 @@ class MemberRegistrationPrincipal {
         }
         // VerifyDate of Birth
         if (DateofBirth !== undefined) {
-             cy.EnterDate(elems_MemberRegistrationPrincipal.PERSONALINFORMATION.DATE_DATEOFBIRTH, DateofBirth)
+            //  cy.EnterDate(elems_MemberRegistrationPrincipal.PERSONALINFORMATION.DATE_DATEOFBIRTH, DateofBirth)
         }
         // Verify Age
         if (Age !== undefined) {
@@ -1287,7 +1287,7 @@ class MemberRegistrationPrincipal {
     AddDependent() {
         cy.wait(2000)
         cy.Click(elems_MemberRegistrationPrincipal.DEPENDENTS.BTN_ADDDEPENDENT)
-        cy.wait(7000)
+        cy.wait(15000)
 
         // cy.visit('https://qa-smcms-fe.azurewebsites.net/membershipregistrationdependent')
         cy.ValidateElementText(elems_PageHeader.LBL_PAGETITLE, 'Membership Registration - Dependent')

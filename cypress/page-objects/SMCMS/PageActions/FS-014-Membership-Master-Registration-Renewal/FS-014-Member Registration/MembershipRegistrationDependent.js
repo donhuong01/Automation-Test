@@ -63,6 +63,108 @@ class Membership_Registration_Dependent{
              }
             // Enter Date of Birth
             if(DateofBirth !== undefined){
+              cy.EnterDate(elems_MembershipRegistrationDependent.PersonalInformation.DATE_DATEOFBIRTH, DateofBirth)
+             }
+             // Verify Age
+            // if(Age !== undefined){
+            //   cy.ValidateElementText(elems_MembershipRegistrationDependent.PersonalInformation.LBL_AGE, Age)
+            //  }
+            // Verify PrincipaID
+            // if(PrincipaID!== undefined){
+            //   cy.ValidateElementText(elems_MembershipRegistrationDependent.PersonalInformation.LBL_PRINCIPALID, PrincipaID)
+            //   }
+            //   // Verify PrincipalTypeCode
+            // if(PrincipalTypeCode!== undefined){
+            //     cy.ValidateElementText(elems_MembershipRegistrationDependent.PersonalInformation.LBL_PRINCIPALTYPECODE, PrincipalTypeCode)
+            //     }
+            // Enter Nationality
+            if(Nationality !== undefined){
+              cy.SelectDropDownItem(elems_MembershipRegistrationDependent.PersonalInformation.DRP_NATIONALITY, Nationality)
+            }
+            // Enter Marital Status
+            if(MaritalStatus !== undefined){
+              cy.SelectDropDownItem(elems_MembershipRegistrationDependent.PersonalInformation.DRP_MARITALSTATUS, MaritalStatus)
+            }
+            //Enter Card Tyoe
+            if(CardType !== undefined){
+              cy.ValidateElementText(elems_MembershipRegistrationDependent.PersonalInformation.LBL_CARDTYPE, CardType)
+            }
+            // Enter Interest in DBS Card
+            if(InterestinDBSCard !== undefined){
+              cy.SelectDropDownItem(elems_MembershipRegistrationDependent.PersonalInformation.DRP_INTERESTINDBSCARD, InterestinDBSCard)
+            }
+            // Enter Interest in Profile Picture
+            if(AllowtoRedeemSAFRAPoints !== undefined){
+                cy.TickCheckBox(elems_MembershipRegistrationDependent.PersonalInformation.CHK_ALLOWTOREDEEMSAFRAPOINTS, AllowtoRedeemSAFRAPoints)
+            }
+           // Enter Interest in Profile Picture
+            if(ProfilePicture !== undefined){
+              cy.UploadFile(elems_MembershipRegistrationDependent.PersonalInformation.UPL_SELECTFILES, ProfilePicture)
+            }
+  
+    
+        }
+
+    /*****************************************************
+     * Method: fillOutPersonalInformation
+     * Description: Fill-out Personal Infromation
+     *
+     * @param {string} MemberCategory verify Member Category
+     * @param {string} DependentType Dependent Type
+     * @param {string} NameonNRIC Name on NRIC
+     * @param {string} NameonCard Name on Card
+     * @param {string} NRIC NRIC
+     * @param {string} Gender Gender
+     * @param {string} DateofBirth DateofBirth
+     * @param {string} Age Age
+     * @param {string} PrincipalID Principal ID
+     * @param {string} PrincipalType PrincipalTypeCode
+     * @param {string} MemberType Member Type
+     * @param {string} Nationality Nationality
+     * @param {string} MaritalStatus MaritalStatus
+     * @param {string} CardType Card Type
+     * @param {string} InterestinDBSCard 
+     * @param {string} AllowtoRedeemSAFRAPoints Allow to Redeem SAFRAPoints
+     * @param {string} ProfilePicture ProfilePicture
+     /*****************************************************/
+ 
+    //  fillsoutPersonalInformation(MemberCategory, DependentType, NameOnNRIC, NameOnCard, NRIC, Gender, DateofBirth , PrincipaID, PrincipalTypeCode,
+    //      MemberType, Nationality, MaritalStatus, CardType, InterestinDBSCard , AllowtoRedeemSAFRAPoints, ProfilePicture)
+    fillsoutPersonalInformationDep(
+        MemberCategory, DependentType, NameOnNRIC, NameOnCard,NRIC, Gender,
+        DateofBirth, Age, PrincipalID, PrincipalType, MemberType, Nationality, MaritalStatus,
+        CardType, InterestinDBSCard , AllowtoRedeemSAFRAPoints, ProfilePicture
+         )
+            {
+                // fillsout Member Catergory
+            if(MemberCategory !== undefined){
+              cy.ValidateElementText(elems_MembershipRegistrationDependent.PersonalInformation.LBL_MEMBERCATEGORY, MemberCategory)
+             }
+                // fillsout DependentType
+             if(DependentType !== undefined){
+              cy.SelectDropDownItem(elems_MembershipRegistrationDependent.PersonalInformation.DRP_DEPENDENTTYPE, DependentType)
+            }
+               // Enter Name on NRIC
+            if(NameOnNRIC !== undefined){
+            cy.xpath(elems_MembershipRegistrationDependent.PersonalInformation.TXT_NAMEONNRIC).clear()
+            cy.EnterText(elems_MembershipRegistrationDependent.PersonalInformation.TXT_NAMEONNRIC, NameOnNRIC)
+            }
+             // Enter Name onCArd
+            if(NameOnCard !== undefined){
+              cy.xpath(elems_MembershipRegistrationDependent.PersonalInformation.TXT_NAMEONCARD).clear()
+              cy.EnterText(elems_MembershipRegistrationDependent.PersonalInformation.TXT_NAMEONCARD, NameOnCard)
+            }
+            // Enter NRIC
+            if(NRIC !== undefined){
+                cy.xpath(elems_MembershipRegistrationDependent.PersonalInformation.TXT_NRIC).clear()
+              cy.EnterText(elems_MembershipRegistrationDependent.PersonalInformation.TXT_NRIC, NRIC)
+            }
+            // Enter Gender
+            if(Gender !== undefined){
+              cy.SelectDropDownItem(elems_MembershipRegistrationDependent.PersonalInformation.DRP_GENDER, Gender)
+             }
+            // Enter Date of Birth
+            if(DateofBirth !== undefined){
               cy.SelectDate(elems_MembershipRegistrationDependent.PersonalInformation.DATE_DATEOFBIRTH, DateofBirth)
              }
              // Verify Age
@@ -104,6 +206,9 @@ class Membership_Registration_Dependent{
   
     
         }
+
+
+
     /*****************************************************
      * Method: verifyAddressInformation
      * Description: Verify Personal Infromation

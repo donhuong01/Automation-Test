@@ -147,6 +147,7 @@ class BatchMembershipRegistrationDetail {
     *****************************************************/
     AddMember() {
         cy.Click(elems_BatchMembershipRegistrationDetail.MembershipRegistrationAndRenewalListing.BTN_ADDMEMBER)
+        cy.wait(5000)
     }
 
     /*****************************************************

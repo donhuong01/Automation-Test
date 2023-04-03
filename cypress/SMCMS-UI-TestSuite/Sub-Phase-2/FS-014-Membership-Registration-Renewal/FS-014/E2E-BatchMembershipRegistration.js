@@ -53,7 +53,7 @@ describe('[TS13] Batch Membership Registration Details form', function () {
     const Last4NIRC = data.BatchMemRegDetail.InBatchRegistration.Last4NRIC
     const DOB = data.BatchMemRegDetail.InBatchRegistration.DateofBirth 
 
-    it.only('[TC01] Creating a Batch Membership Registration with Existing Membership', function () {
+    it('[TC01] Creating a Batch Membership Registration with Existing Membership', function () {
 
         cy.visit('/membership/batchMembershipRegistrationList')
 
@@ -404,7 +404,7 @@ describe('[TS13] Batch Membership Registration Details form', function () {
             
     })
 
-    it('[TC04] Creating a Batch Membership Registration with New Member(Defendent)', function () {
+    it.only('[TC04] Creating a Batch Membership Registration with New Member(Defendent)', function () {
 
         //filloutPersonalInformation
         const TestUser = 'Test User-' + Math.floor(Math.random() * 100000 * 2 )
@@ -473,7 +473,7 @@ describe('[TS13] Batch Membership Registration Details form', function () {
         
         //Add New member (Defendent) to the batch
         BatchMembershipRegistrationDetail.NewMemberDependent()
-        cy.wait(5000) //wait for page to load
+        cy.wait(15000) //wait for page to load
 
         //Verify Page Title
         BatchMembershipRegistrationListing.verifyPageTitle('Membership Registration - Dependent')
@@ -482,7 +482,7 @@ describe('[TS13] Batch Membership Registration Details form', function () {
         // MemberRegistrationDependent()
 
 
-         MemRegDependent.fillsoutPersonalInformation(
+         MemRegDependent.fillsoutPersonalInformationDep(
             MemberCategory, DependentType, TestUser,TestUser,NRICNewMemberDependent,
             Gender, DateofBirth, Age, PrincipalID,MemberType,MemberType,Nationality,
             MaritalStatus, CardType, InterestinDBSCard,AllowtoRedeemSAFRAPoints,
@@ -493,7 +493,7 @@ describe('[TS13] Batch Membership Registration Details form', function () {
  
          //verifyAddressInformation
          const IndependentAddress = data.memregdependent.AddressInfo.IndependentAddress
-         const PostalCode = data.memregdependent.AddressInfo. PostalCode
+         const PostalCode = data.memregdependent.AddressInfo.PostalCode
          const UnitNumber = data.memregdependent.AddressInfo.UnitNumber
          const PoBox = data.memregdependent.AddressInfo.PoBox
          const MyMailbox = data.memregdependent.AddressInfo.MyMailbox
