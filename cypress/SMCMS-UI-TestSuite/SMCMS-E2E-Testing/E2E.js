@@ -171,6 +171,81 @@ beforeEach(() => {
     // AnnouncementPortalNotification() //Not Required
 // })
 
+//  describe('E2E Auto Testing:FS-025', ()=> {
+    // VolunteerCommittee()
+    // VolunteerAppointment()
+    // VolunteerAppointmentType()
+    // VIPAppointmentType()
+    // VolunteerAppointmentTermRegistration()
+    // VIPAppointmentTermRegistration()
+// })
+
+// FS-014 MEMBERSHIP REGISTRATION AND RENEWAL
+NRIC_FOR_MEMBERSHIP_REGISTRATION = 'S7474796E'
+ACTIVE_MEMBERID_FOR_WITHDRAWAL_OF_CONSENT = "A300000295"
+MEMBER_REGISTRATION_WITH_SPOUSE_AND_CHILD : {
+    PRINCIPAL_NRIC = 'S6639214G',
+    CHILD_NRIC = 'S7808936I',
+    SPOUSE_NRIC = 'S0422651H'
+}
+NRIC_FOR_MEMBERSHIP_REGISTRATION_AND_RENEWAL = 'S8708445J'
+NRIC_FOR_LIFE_MEMBERSHIP_REGISTRATION = 'S4233433B'
+
+BATCH_REGISTRATION : {
+
+    MEMBERID_FOR_EXISTING_MEMBER = "A300000639",
+    LAST4DIGITSNRIC_FOR_EXISTING_MEMBER = "871J"
+
+    MEMBER_NAME_FOR_NON_MEMBER = "Auto test627A"
+    DOB_FOR_NON_MEMBER = "28-Feb-1982"
+    LAST4DIGITSNRIC_FOR_NON_MEMBER = "627A"
+    FULLNRIC_FOR_NON_MEMBER = "S6683085C"
+
+    NRIC_FOR_NEW_PRINCIPAL = 'S6915929Z'
+
+    NRIC_FOR_ADDING_NEW_DEPENDENT = 'S1131427I'
+    PRINCIPALID_FOR_NEW_DEPENDENT = "A300002677"
+
+}
+
+// describe('E2E Auto Testing:FS-014', ()=> {
+
+    // MembershipRegistration(NRICFORMEMBERSHIPREGISTRATION) // Enter Full NRIC
+    // CustomerCheckIn()
+    // MemberType()
+    // BadAddressUpdate()// Fail Need code updates
+    // MembershipRenewalAdvise()
+    // WithdrawalOfConsent(ACTIVEMEMBERIDFORWITHDRAWALOFCONSENT) //Enter Member ID for Withdrawal Of Consent
+    // SourceChannel() 
+    // //MemberStatusReasonCode() // Not Required
+    // MassUpdateForMemberData()
+    // MembershipModuleSettings()
+    // SFSMemberRegistion(MEMBER_REGISTRATION_WITH_SPOUSE_AND_CHILD.PRINCIPAL_NRICL,
+    //  MEMBER_REGISTRATION_WITH_SPOUSE_AND_CHILD.CHILD_NRIC,MEMBER_REGISTRATION_WITH_SPOUSE_AND_CHILD.SPOUSE_NRIC) //Add three NRIC's for Principal, Dependent Child, Dependent Spouse
+    // E2EMemberShipRenewal(NRIC_FOR_MEMBERSHIP_REGISTRATION_AND_RENEWAL) //Add NRIC For Principal Registration
+    // LifeMembershipManagment(NRIC_FOR_LIFE_MEMBERSHIP_REGISTRATION) //Add NRIC For Principal Registration
+    // BatchMembershipRegistration(
+
+    //     //Pass Info for Existing Member MemberID and LAST4DigitsNRIC
+    //     MEMBERID_FOR_EXISTING_MEMBER,
+    //     LAST4DIGITSNRIC_FOR_EXISTING_MEMBER,
+        
+    //     //Pass informstion for Non-Member Name, DOB, LAST4DigitsNRIC and Full NRIC
+    //     MEMBER_NAME_FOR_NON_MEMBER,
+    //     DOB_FOR_NON_MEMBER,
+    //     LAST4DIGITSNRIC_FOR_NON_MEMBER,
+    //     FULLNRIC_FOR_NON_MEMBER,
+
+    //     //NRIC for New Principal
+    //     "S1103815H",
+
+    //     //NRIC for New Dependent and Dependent PrincipalID
+    //     NRIC_FOR_ADDING_NEW_DEPENDENT,
+    //     PRINCIPALID_FOR_NEW_DEPENDENT) 
+
+
+// })
+
 //  describe('E2E Auto Testing:FS-010', ()=> {
     // FacilityGeneralSettingDtl()
     // FacilitySettingsCalendar()
@@ -184,51 +259,7 @@ beforeEach(() => {
 
 //  })
 
-// describe('E2E Auto Testing:FS-014', ()=> {
 
-    // MembershipRegistration("S7474796E") // Enter Full NRIC
-    // CustomerCheckIn()
-    // MemberType()
-    // BadAddressUpdate()// Fail Need code updates
-    // MembershipRenewalAdvise()
-    // WithdrawalOfConsent("A300000295") //Enter Member ID for Withdrawal Of Consent
-    // SourceChannel() 
-    // //MemberStatusReasonCode() // Not Required
-    // MassUpdateForMemberData()
-    // MembershipModuleSettings()
-    // SFSMemberRegistion("S6325183F", "S9849550I", "S7623547C") //Add three NRIC's for Principal, Dependent Child, Dependent Spouse
-    // E2EMemberShipRenewal("S3077982G") //Add NRIC For Principal Registration
-    // LifeMembershipManagment("S6752955C") //Add NRIC For Principal Registration
-    // BatchMembershipRegistration(
-
-    //     //Pass Info for Existing Member MemberID and LAST4DigitsNRIC
-    //     "A300000639",
-    //     "871J",
-        
-    //     //Pass informstion for Non-Member Name, DOB, LAST4DigitsNRIC and Full NRIC
-    //     "Auto test627A",
-    //     "28-Feb-1982",
-    //     "627A",
-    //     "S6683085C",
-
-    //     //NRIC for New Principal
-    //     "S1103815H",
-
-    //     //NRIC for New Dependent and Dependent PrincipalID
-    //     "S1851045F",
-    //     "A300002677") 
-
-
-// })
-
-//  describe('E2E Auto Testing:FS-025', ()=> {
-    // VolunteerCommittee()
-    // VolunteerAppointment()
-    // VolunteerAppointmentType()
-    // VIPAppointmentType()
-    // VolunteerAppointmentTermRegistration()
-    // VIPAppointmentTermRegistration()
-// })
 
 // describe('E2E Auto Testing:FS-028', ()=> {
     // MembershipDeceased("A300002496") //Provide Active member ID
@@ -301,19 +332,19 @@ beforeEach(() => {
 
 // describe('E2E Auto Testing:FS-016', ()=> {
 
-    BatchMemRegWithExistingMemUsingDefaultIG("A300002301") //Provide Active member ID
-    BatchMemRegWithExistingMemUsingNonDefaultIG("A300002305") //Provide Active member ID
-    InterestGroupDeactivation()
-    InterestGroupManagement()
-    InterestGroupConversion("John Lee") //Please Provide Active Member Name
-    InterestGroupDeferment("Test User 13448") //Please Provide Active Member Name
-    InterestGroupMembershipManagment()
-    InterestGroupMembershipRegistration("S4914013D") //Change NRIC each time after runing this code
-    IGMembershipReinstatement("A300001854", "Test User 8310150")
-    InterestGMembershipRenewal("S0038535B") //Change NRIC each time after runing this code
-    InterestGMembershipReverse("Test User 13448") //Provide Member Name
-    InterestGMembershipTermination("A300000431","Test User 46") // Provide MemberId and Member Name
-    InterestGMembershipwaiver("Test User 61718")  //Provide Member Name
+    // BatchMemRegWithExistingMemUsingDefaultIG("A300002301") //Provide Active member ID
+    // BatchMemRegWithExistingMemUsingNonDefaultIG("A300002305") //Provide Active member ID
+    // InterestGroupDeactivation()
+    // InterestGroupManagement()
+    // InterestGroupConversion("John Lee") //Please Provide Active Member Name
+    // InterestGroupDeferment("Test User 13448") //Please Provide Active Member Name
+    // InterestGroupMembershipManagment()
+    // InterestGroupMembershipRegistration("S4914013D") //Change NRIC each time after runing this code
+    // IGMembershipReinstatement("A300001854", "Test User 8310150")
+    // InterestGMembershipRenewal("S0038535B") //Change NRIC each time after runing this code
+    // InterestGMembershipReverse("Test User 13448") //Provide Member Name
+    // InterestGMembershipTermination("A300000431","Test User 46") // Provide MemberId and Member Name
+    // InterestGMembershipwaiver("Test User 61718")  //Provide Member Name
 
 // })
 
