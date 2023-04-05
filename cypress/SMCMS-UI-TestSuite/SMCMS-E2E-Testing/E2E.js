@@ -136,6 +136,8 @@ import InHouseSaleAndMerchandiseTransactionAdjustment from '../Sub-Phase-3/FS-03
 import InHouseSaleAndMerchandiseTransactionConcellation from '../Sub-Phase-3/FS-039&FS-013-InHouseSaleAndMerchandise/InHouseSaleAndMerchandiseTransactionCancellation'
 import InHouseSaleAndMerchandiseTransactionRefund from '../Sub-Phase-3/FS-039&FS-013-InHouseSaleAndMerchandise/InHouseSaleAndMerchandiseTransactionRefund'
 
+//E2E DATA 
+import E2EData from '../SMCMS-E2E-Testing/E2EDataConfig'
 
 //FS - 040 Club Sales
 // import ReceiptManagement from '../E2E-Scripts/FS-040/E2E-Receipt-Management'
@@ -151,13 +153,13 @@ beforeEach(() => {
     // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
 })
  
-// describe('E2E Auto Testing:FS-001', () => {
+describe('E2E Auto Testing:FS-001', () => {
 
-    // OnlineAccountAccess() 
-    // SMCMSPostion()
-    // SMCMSRole() //Reports are missing
-    // SMCMSUser() 
-// })
+    OnlineAccountAccess() 
+    SMCMSPostion()
+    SMCMSRole() //Reports are missing
+    SMCMSUser() 
+})
 
 // describe('E2E Auto Testing:FS-004', () => {
 
@@ -172,77 +174,83 @@ beforeEach(() => {
 // })
 
 //  describe('E2E Auto Testing:FS-025', ()=> {
-    // VolunteerCommittee()
-    // VolunteerAppointment()
-    // VolunteerAppointmentType()
-    // VIPAppointmentType()
-    // VolunteerAppointmentTermRegistration()
-    // VIPAppointmentTermRegistration()
+//     VolunteerCommittee()
+//     VolunteerAppointment()
+//     VolunteerAppointmentType()
+//     VIPAppointmentType()
+//     VolunteerAppointmentTermRegistration()
+//     VIPAppointmentTermRegistration()
 // })
 
-// FS-014 MEMBERSHIP REGISTRATION AND RENEWAL
-NRIC_FOR_MEMBERSHIP_REGISTRATION = 'S7474796E'
-ACTIVE_MEMBERID_FOR_WITHDRAWAL_OF_CONSENT = "A300000295"
-MEMBER_REGISTRATION_WITH_SPOUSE_AND_CHILD : {
-    PRINCIPAL_NRIC = 'S6639214G',
-    CHILD_NRIC = 'S7808936I',
-    SPOUSE_NRIC = 'S0422651H'
-}
-NRIC_FOR_MEMBERSHIP_REGISTRATION_AND_RENEWAL = 'S8708445J'
-NRIC_FOR_LIFE_MEMBERSHIP_REGISTRATION = 'S4233433B'
-
-BATCH_REGISTRATION : {
-
-    MEMBERID_FOR_EXISTING_MEMBER = "A300000639",
-    LAST4DIGITSNRIC_FOR_EXISTING_MEMBER = "871J"
-
-    MEMBER_NAME_FOR_NON_MEMBER = "Auto test627A"
-    DOB_FOR_NON_MEMBER = "28-Feb-1982"
-    LAST4DIGITSNRIC_FOR_NON_MEMBER = "627A"
-    FULLNRIC_FOR_NON_MEMBER = "S6683085C"
-
-    NRIC_FOR_NEW_PRINCIPAL = 'S6915929Z'
-
-    NRIC_FOR_ADDING_NEW_DEPENDENT = 'S1131427I'
-    PRINCIPALID_FOR_NEW_DEPENDENT = "A300002677"
-
-}
 
 // describe('E2E Auto Testing:FS-014', ()=> {
 
-    // MembershipRegistration(NRICFORMEMBERSHIPREGISTRATION) // Enter Full NRIC
+    // MembershipRegistration(E2EData.NRIC_FOR_MEMBERSHIP_REGISTRATION) // Enter Full NRIC
     // CustomerCheckIn()
     // MemberType()
     // BadAddressUpdate()// Fail Need code updates
     // MembershipRenewalAdvise()
-    // WithdrawalOfConsent(ACTIVEMEMBERIDFORWITHDRAWALOFCONSENT) //Enter Member ID for Withdrawal Of Consent
+    // WithdrawalOfConsent(E2EData.ACTIVE_MEMBERID_FOR_WITHDRAWAL_OF_CONSENT) //Enter Member ID for Withdrawal Of Consent
     // SourceChannel() 
-    // //MemberStatusReasonCode() // Not Required
+    // //////MemberStatusReasonCode() // Not Required
     // MassUpdateForMemberData()
     // MembershipModuleSettings()
-    // SFSMemberRegistion(MEMBER_REGISTRATION_WITH_SPOUSE_AND_CHILD.PRINCIPAL_NRICL,
-    //  MEMBER_REGISTRATION_WITH_SPOUSE_AND_CHILD.CHILD_NRIC,MEMBER_REGISTRATION_WITH_SPOUSE_AND_CHILD.SPOUSE_NRIC) //Add three NRIC's for Principal, Dependent Child, Dependent Spouse
-    // E2EMemberShipRenewal(NRIC_FOR_MEMBERSHIP_REGISTRATION_AND_RENEWAL) //Add NRIC For Principal Registration
-    // LifeMembershipManagment(NRIC_FOR_LIFE_MEMBERSHIP_REGISTRATION) //Add NRIC For Principal Registration
-    // BatchMembershipRegistration(
+    // SFSMemberRegistion(E2EData.MEMBER_REGISTRATION_WITH_SPOUSE_AND_CHILD.PRINCIPAL_NRIC,
+//         E2EData.MEMBER_REGISTRATION_WITH_SPOUSE_AND_CHILD.CHILD_NRIC, E2EData.MEMBER_REGISTRATION_WITH_SPOUSE_AND_CHILD.SPOUSE_NRIC) //Add three NRIC's for Principal, Dependent Child, Dependent Spouse
+//     E2EMemberShipRenewal(E2EData.NRIC_FOR_MEMBERSHIP_REGISTRATION_AND_RENEWAL) //Add NRIC For Principal Registration
+//     LifeMembershipManagment(E2EData.NRIC_FOR_LIFE_MEMBERSHIP_REGISTRATION) //Add NRIC For Principal Registration
+//     BatchMembershipRegistration(
 
-    //     //Pass Info for Existing Member MemberID and LAST4DigitsNRIC
-    //     MEMBERID_FOR_EXISTING_MEMBER,
-    //     LAST4DIGITSNRIC_FOR_EXISTING_MEMBER,
+//         //Pass Info for Existing Member MemberID and LAST4DigitsNRIC
+//         E2EData.BATCH_REGISTRATION.MEMBERID_FOR_EXISTING_MEMBER,
+//         E2EData.BATCH_REGISTRATION.LAST4DIGITSNRIC_FOR_EXISTING_MEMBER,
         
-    //     //Pass informstion for Non-Member Name, DOB, LAST4DigitsNRIC and Full NRIC
-    //     MEMBER_NAME_FOR_NON_MEMBER,
-    //     DOB_FOR_NON_MEMBER,
-    //     LAST4DIGITSNRIC_FOR_NON_MEMBER,
-    //     FULLNRIC_FOR_NON_MEMBER,
+//         //Pass informstion for Non-Member Name, DOB, LAST4DigitsNRIC and Full NRIC
+//         E2EData.BATCH_REGISTRATION.MEMBER_NAME_FOR_NON_MEMBER,
+//         E2EData.BATCH_REGISTRATION.DOB_FOR_NON_MEMBER,
+//         E2EData.BATCH_REGISTRATION.LAST4DIGITSNRIC_FOR_NON_MEMBER,
+//         E2EData.BATCH_REGISTRATION.FULLNRIC_FOR_NON_MEMBER,
 
-    //     //NRIC for New Principal
-    //     "S1103815H",
+//         //NRIC for New Principal
+//         E2EData.BATCH_REGISTRATION.NRIC_FOR_NEW_PRINCIPAL,
 
-    //     //NRIC for New Dependent and Dependent PrincipalID
-    //     NRIC_FOR_ADDING_NEW_DEPENDENT,
-    //     PRINCIPALID_FOR_NEW_DEPENDENT) 
+//         //NRIC for New Dependent and Dependent PrincipalID
+//         E2EData.BATCH_REGISTRATION.NRIC_FOR_ADDING_NEW_DEPENDENT,
+//         E2EData.BATCH_REGISTRATION.PRINCIPALID_FOR_NEW_DEPENDENT) 
 
+
+// })
+
+
+
+// describe('E2E Auto Testing:FS-028', ()=> {
+//     MembershipDeceased(E2EData.ACTIVE_MEMBERID_FOR_DECEASED) //Provide Active member ID
+//     BatchMembershipTermination(E2EData.SFS_BATCH_TERMINATION_IDS.MEMBERID1, E2EData.SFS_BATCH_TERMINATION_IDS.MEMBERID2,
+//         E2EData.SFS_BATCH_TERMINATION_IDS.MEMBERID3) //Provide Active member ID's
+//     BatchMemDefermentRequest(E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERNAME1, E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERID1,
+//         E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERNAME2, E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERID2) 
+//     MembershipSuspensionReleaseRequest() //n 
+//     ReinstatementConfirmation(E2EData.ACTIVE_MEMBERID_FOR_REINSTATEMENT_CONFIRMATION) //Provide Active member ID
+//     BatchMembershipWaiver(E2EData.TWO_NRICS_FOR_BATCH_MEMBERSHIP_WAIVER.NRIC1, E2EData.TWO_NRICS_FOR_BATCH_MEMBERSHIP_WAIVER.NRIC2) // Enter 2 NRIC's for Member Registration 
+//     MemDefermentRequest(E2EData.NRIC_FOR_MEMBERSHIP_DEFERMENT_REQUEST) //Change NRIC before runing this function
+//     MembershipResignationManagement(E2EData.NRIC_FOR_MEMBERSHIP_RESIGNATION_MANAGEMENT) //Change NRIC before runing this function
+//     MembershipExpulsionAndReinstatment(E2EData.NRIC_FOR_MEMBERSHIP_EXPULSION_AND_REINSTATEMENT) //Change NRIC before runing this function
+// })
+
+
+// describe('E2E Auto Testing:FS-027', () => {
+
+//     SFSMembershipDeceased(E2EData.SFS_ACTIVE_MEMBERID_FOR_DECEASED) // Enter MemberID
+//     SFSBatchMembershipTermination(E2EData.SFS_BATCH_TERMINATION_IDS.MEMBERID1, E2EData.SFS_BATCH_TERMINATION_IDS.MEMBERID2,
+//         E2EData.SFS_BATCH_TERMINATION_IDS.MEMBERID3) // Enter 3 Active Member IDs
+//     SFSBatchMemDefermentRequest(E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERNAME1, E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERID1,
+//         E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERNAME2, E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERID2) 
+//     SFSMembershipSuspensionReleaseRequest() //n 
+//     SFSReinstatementConfirmation(E2EData.SFS_ACTIVE_MEMBERID_FOR_REINSTATEMENT_CONFIRMATION)// Enter  MemberID
+//     SFSBatchMembershipWaiver(E2EData.SFS_TWO_NRICS_FOR_BATCH_MEMBERSHIP_WAIVER.NRIC1, E2EData.SFS_TWO_NRICS_FOR_BATCH_MEMBERSHIP_WAIVER.NRIC2) // Enter 2 NRIC's for Member Registration 
+//     SFSMemDefermentRequest(E2EData.SFS_NRIC_FOR_MEMBERSHIP_DEFERMENT_REQUEST) //Change NRIC before runing this function
+//     SFSMembershipResignationManagement(E2EData.SFS_NRIC_FOR_MEMBERSHIP_RESIGNATION_MANAGEMENT) //Change NRIC before runing this function
+//     SFSMembershipExpulsionAndReinstatment(E2EData.SFS_NRIC_FOR_MEMBERSHIP_EXPULSION_AND_REINSTATEMENT) //Change NRIC before runing this function
 
 // })
 
@@ -259,33 +267,6 @@ BATCH_REGISTRATION : {
 
 //  })
 
-
-
-// describe('E2E Auto Testing:FS-028', ()=> {
-    // MembershipDeceased("A300002496") //Provide Active member ID
-    // BatchMembershipTermination("A30000397","A30000367","A30000284") //Provide Active member ID's
-    // BatchMemDefermentRequest("989D", "A300000096","safra3rduploadreminder", "A300000235") 
-    // MembershipSuspensionReleaseRequest() //n 
-    // ReinstatementConfirmation("A300000672") //Provide Active member ID
-    // BatchMembershipWaiver("S2666615E","S7603500H") // Enter 2 NRIC's for Member Registration 
-    // MemDefermentRequest("S9147820Z") //Change NRIC before runing this function
-    // MembershipResignationManagement("S6744863D") //Change NRIC before runing this function
-    // MembershipExpulsionAndReinstatment("S7344497G") //Change NRIC before runing this function
-// })
-
-// describe('E2E Auto Testing:FS-027', () => {
-
-//     SFSMembershipDeceased("Yes","A300002203") // Enter SFS Stutas and MemberID
-//     SFSBatchMembershipTermination("Yes","A300000337","A300000467","A300000100") // Enter SFS Stutas & 3 Active Member IDs
-//     SFSBatchMemDefermentRequest("Yes","989D", "A300000096","safra3rduploadreminder", "A300000235") 
-//     SFSMembershipSuspensionReleaseRequest("Yes") //n 
-//     SFSReinstatementConfirmation("Yes", "S6602928Z")// Enter SFS Stutas & NRIC
-//     SFSBatchMembershipWaiver("Yes","S4282419D","S7721317A") // Enter 2 NRIC's for Member Registration 
-//     SFSMemDefermentRequest("Yes","S2869325G") //Change NRIC before runing this function
-//     SFSMembershipResignationManagement("Yes","S9173029D") //Change NRIC before runing this function
-//     SFSMembershipExpulsionAndReinstatment("Yes","S6640728D") //Change NRIC before runing this function
-
-// })
 
 // describe('E2E Auto Testing:FS-029', ()=> {
 
