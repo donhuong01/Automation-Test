@@ -9,7 +9,7 @@ class elems_PageHeader {
     static LNK_LOGOUTMEMBER = '//p[text()="Checked In As:"]/ancestor::div[contains(@class,"k-appbar-section Header_checked-in")]//div[contains(@class, "Header_checked-in-dropdown-items")]/a[text()="Logout Member"]'
     static LNK_CHANGE = '//div[@class="k-appbar-section Header_app-bar-section__135yf"]//a[text()="Change"]'
     static BTN_SHOPPINGCART = '(//span[@class="k-avatar-image"]//parent::div//parent::div//following-sibling::div//a)[2]'
-    static DRP_USERLINKS = '//div[@class="field-search-button"]'
+    static DRP_USERLINKS = '//div[contains(@class,"k-appbar-section Header_checked-in")]/div[contains(@class, "Header_checked-in-dropdown")]'
     static DRP_SHOPPINCART = '//div[@class="ToolBarContainer_container__S01KG"]//span[@class="k-input"]'
     static LBL_PAGETITLE = '//div[@class="page-title"]/h2'
 }

@@ -1,5 +1,6 @@
 import elems_SourceChannelDetail from '../../../Elements/Membership/FS014_Membership-Master-Registration-Renewal/SourceChannelDetail.js'
 import elems_PageHeader from '../../../Elements/Common/PageHeader'
+import elems_Picker from '../../../Elements/Common/Picker.js'
 
 
 
@@ -70,7 +71,14 @@ class SrcChannelDetail {
 
         // Choose Warehouse
         if(warehouse !== undefined){
-            cy.SelectPickerItem(elems_SourceChannelDetail.PCK_WAREHOUSE, warehouse)
+            // cy.SelectPickerDifferentItemsWait(elems_SourceChannelDetail.PCK_WAREHOUSE, 7000,
+            //     '(//input[@name="name"])[2]', warehouse, elems_SourceChannelDetail.BTN_SEARCHFILTER)
+                cy.xpath(elems_SourceChannelDetail.PCK_WAREHOUSE).click({force:true})
+                cy.wait(5000)
+                cy.EnterText('(//input[@name="name"])[2]', warehouse)
+                cy.Click(elems_SourceChannelDetail.BTN_SEARCHFILTER)
+                cy.SelectTableItem(elems_Picker.TBL_PICKERITEMS, 'Warehouse', warehouse)
+                cy.Click(elems_Picker.BTN_SELECT)
             
         }
 

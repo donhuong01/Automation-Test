@@ -32,6 +32,48 @@ class Commons {
     }
 
 
+        /*****************************************************
+     * Method: ResetCart
+     * Description: Click On Reset Cart button
+    *****************************************************/
+        ResetCart() {
+
+            cy.Click('//button[text()="Reset Cart"]')
+            cy.wait(4000)
+    
+        }
+        /*****************************************************
+         * Method: ApplyPromoCode
+         * Description: This function apply promo code
+        *****************************************************/
+        ApplyPromoCode(PromoCode) {
+            cy.Click('//a[text()="USE PROMO CODE"]')
+            cy.wait(1000)
+            cy.EnterText('//input[@id="txtPromoCode"]', PromoCode)
+            cy.Click('//button[text()="Apply Promotion"]')
+            cy.wait(2000)
+        }
+        /*****************************************************
+         * Method: VerifyPromoNotification
+         * Description: This function Verify Promotion Notification Status
+        *****************************************************/
+        VerifyPromoNotification(text) {
+            cy.ValidateElementText(elems_Alerts.NOTIFICATION_MESSAGE, text)
+        }
+    
+    
+        /*****************************************************
+             * Method: VerifyNoRecordMsg
+             * Description: This function verify that the item is not present in the table
+            *****************************************************/
+        VerifyNoRecordMsg() {
+    
+            cy.xpath('//td[text()="No records available"]').should('be.visible')
+        }
+        /*****************************************************
+             * Method: AddToCart
+             * Description: This function Click on Add To Cart button
+            *****************************************************/
     /*****************************************************
        * Method: ApprovalWorkFlow
        * Description: This function visit pending task list and approve the item
@@ -49,7 +91,7 @@ class Commons {
 
         //Click on Filter button
         cy.Click(elems_PendingTaskListing.BTN_SEARCH)
-        cy.wait(2000)
+        cy.wait(10000)
 
         //Click on Table item
         cy.xpath('(//h2[text()="Pending Task Listing"]/ancestor::div//table//tr["Task ID"]//td//a)[1]').click({ force: true })
@@ -80,6 +122,16 @@ class Commons {
         cy.wait(4000)
 
     }
+
+        /*****************************************************
+         * Method: AddToCart
+         * Description: This function Click on Add To Cart button
+        *****************************************************/
+        AddToCart() {
+
+            cy.Click('//button[text()="Add to Cart"]')
+            cy.wait(15000)
+        }
 
 }
 

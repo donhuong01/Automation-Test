@@ -1,5 +1,6 @@
 import elems_E1GymMembershipRegistaration from '../../Elements/FS-015-E1-Gym-Membership/E1 Gym Membership Registration'
 import elems_E1GymMembershipListing from '../../Elements/FS-015-E1-Gym-Membership/E1 Gym Membership Listing'
+import elems_Picker from '../../Elements/Common/Picker'
 class E1GymMembershipRegistration {
 
     /*****************************************************
@@ -134,9 +135,13 @@ class E1GymMembershipRegistration {
          * @param {string} Terms
         *****************************************************/
     MembershipInfo(PreferredClubHouse, EffectiveDate, Terms) {
-        cy.wait(1000)
-        cy.SelectPickerWithoutFields(elems_E1GymMembershipRegistaration.PCK_PREFERREDCLUBHOUSE, PreferredClubHouse)
-        cy.EnterText(elems_E1GymMembershipRegistaration.TXT_MEMBERSHIPTERM, Terms)
+        cy.wait(2000)
+        // cy.SelectPickerWithoutFields(elems_E1GymMembershipRegistaration.PCK_PREFERREDCLUBHOUSE, PreferredClubHouse)
+        // cy.Click(elems_E1GymMembershipRegistaration.PCK_PREFERREDCLUBHOUSE)
+        // cy.wait(5000)
+        // cy.SelectTableItem(elems_Picker.TBL_PICKERITEMS, PreferredClubHouse)
+        // cy.Click(elems_Picker.BTN_SELECT)
+        cy.EnterText('//input[@id="membershipTerm"]', Terms)
         cy.EnterDate(elems_E1GymMembershipRegistaration.DATE_EFFECTIVEDATE, EffectiveDate)
         cy.wait(500)
         cy.xpath('//label[@for="membershipPeriod"]').should('be.visible')

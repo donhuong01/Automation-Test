@@ -196,7 +196,7 @@ describe('[TS07] SFS Member Registration]', function (){
         MemRegPrincipal.AddDependent()
 
 
-        MemberRegDependent.fillsoutPersonalInformation(
+        MemberRegDependent.fillsoutPersonalInformationDep(
             data.CustomerCreationDependentChild.RegistrationInformation.MemberCategory, 
             data.CustomerCreationDependentChild.RegistrationInformation.DependentType, 
             DepChildName, //Extra
@@ -271,14 +271,14 @@ describe('[TS07] SFS Member Registration]', function (){
         })
 
         MemRegPrincipal.SaveAndNext()
-        cy.wait(15000)
+        cy.wait(25000)
 
         //Adding Dependent spouse 
         MemRegPrincipal.AddDependent()
-        cy.wait(5000)
+        cy.wait(10000)
         
         //Adding Spouse
-        MemberRegDependent.fillsoutPersonalInformation(
+        MemberRegDependent.fillsoutPersonalInformationDep(
             data.CustomerCreationDependentSpouse.RegistrationInformation.MemberCategory, 
             data.CustomerCreationDependentSpouse.RegistrationInformation.DependentType, 
             DepSouseName, //Extra
@@ -354,9 +354,9 @@ describe('[TS07] SFS Member Registration]', function (){
     
 
         MemRegPrincipal.SaveAndNext()
-        cy.wait(5000)
+        cy.wait(15000)
         MemRegPrincipal.SaveAndNext()
-        cy.wait(5000)
+        cy.wait(10000)
         MemTenureSelect.principalTenureSelection(PrincipalName, '10 Years')
         MemTenureSelect.dependentTenureSelection(DepChildName, '5 Years')
         MemTenureSelect.dependentTenureSelection(DepSouseName, '10 Years')

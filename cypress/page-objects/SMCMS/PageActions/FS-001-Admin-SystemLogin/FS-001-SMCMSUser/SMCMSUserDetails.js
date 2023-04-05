@@ -36,7 +36,7 @@ VerifyPageTitle(PageTitle)
  {
     if (Position !== undefined) {
         cy.Click(elems_SMCMSUserDetail.BTN_ADDPOSITION)
-        cy.wait(2000)
+        cy.wait(5000)
         cy.xpath('//input[@name="name"]').last().type(Position)
 
         cy.xpath('//button[@form="formPositionDialog"]').click()

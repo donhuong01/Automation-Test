@@ -1,5 +1,6 @@
 import elems_E1GymMembershipRenewalAdvise from '../../Elements/FS-015-E1-Gym-Membership/E1GymMembershipRenewalAdvice'
 
+import elems_Picker from '../../Elements/Common/Picker'
 class E1GYMMembershipRenewalAdvice {
 
     /*****************************************************
@@ -69,8 +70,20 @@ class E1GYMMembershipRenewalAdvice {
         ****************************************************/
     MembershipMasterData(MainMembership, E1GymMembership, ExpiryDateFrom, ExpiryDateTo, MembershipStatus, ReasonCode, DOBFrom, DOBTo) {
 
-        cy.SelectPickerWithoutFields(elems_E1GymMembershipRenewalAdvise.PCK_E1GYMMAINMEMBERSHIP, MainMembership)
-        cy.SelectPickerWithoutFields(elems_E1GymMembershipRenewalAdvise.PCK_E1GYMMEMBERSHIP, E1GymMembership)
+        cy.Click(elems_E1GymMembershipRenewalAdvise.PCK_E1GYMMAINMEMBERSHIP)
+        cy.EnterText('//input[@name="name"]', MainMembership )
+        cy.Click('//button[text()="Search Filters"]')
+        cy.SelectTableItem(elems_Picker.TBL_PICKERITEMS,"Name", MainMembership)
+        cy.Click(elems_Picker.BTN_SELECT)
+
+        cy.Click(elems_E1GymMembershipRenewalAdvise.PCK_E1GYMMEMBERSHIP)
+        cy.EnterText('//input[@name="name"]', E1GymMembership )
+        cy.Click('//button[text()="Search Filters"]')
+        cy.SelectTableItem(elems_Picker.TBL_PICKERITEMS,"Name", E1GymMembership)
+        cy.Click(elems_Picker.BTN_SELECT)
+
+        // cy.SelectPickerDifferentItems(elems_E1GymMembershipRenewalAdvise.PCK_E1GYMMAINMEMBERSHIP, '//input[@name="name"]', MainMembership)
+        // cy.SelectPickerDifferentItems(elems_E1GymMembershipRenewalAdvise.PCK_E1GYMMEMBERSHIP, '//input[@name="name"]', E1GymMembership)
         cy.EnterDate(elems_E1GymMembershipRenewalAdvise.DATE_EXPIRYDATEFROM, ExpiryDateFrom)
         cy.EnterDate(elems_E1GymMembershipRenewalAdvise.DATE_EXPIRYDATETO, ExpiryDateTo)
         cy.SelectDropDownItem(elems_E1GymMembershipRenewalAdvise.DRP_MEMBERSHIPSTATUS, MembershipStatus)

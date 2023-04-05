@@ -9,6 +9,7 @@ class  elems_OnlineAccountAccessDetail {
     static Functions = {
         TXT_FUNCTIONNAME : '//input[@id="txtFunctionName"]',
         TBL_FUNCTIONS : '//h3[text()="Functions"]/parent::div//table',
+        TBL_FUNCTIONS2 : '//h3[text()="Functions"]/parent::div//table//input',
         BTN_ADD_FUNCTION: '//button[@class="k-button link-button"]',
         BTN_REMOVE_FUNCTION: '//button[@class="k-button danger-button"]',
         BTN_SEARCH_FILTER:'//button[@class="k-button search-button"]' 

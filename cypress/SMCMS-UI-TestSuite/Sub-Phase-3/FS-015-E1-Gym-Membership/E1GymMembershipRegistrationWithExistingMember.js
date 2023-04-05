@@ -6,11 +6,11 @@ import Commons from '../../../page-objects/SMCMS/PageActions/Common/Common'
 //Page definition
 const common = new Commons()
 
-const E1GYMMembershipRegistrationWithExistingMember = () => {
+const E1GYMMembershipRegistrationWithExistingMember = (MemberID, CustomerName) => {
 
 Data.forEach(data => {
 
-    const { MemberID, CustomerName, E1GymMemMainSelection, E1GymMembershipSelection, LocationSelection, DependencyType, category, PreferredClubHouse, EffectiveDate, Terms, AddWaiver } = data
+    const { E1GymMemMainSelection, E1GymMembershipSelection, LocationSelection, DependencyType, category, PreferredClubHouse, EffectiveDate, Terms, AddWaiver } = data
 
     describe('FS-015 E1 Gym Membership Registration', function () {
 
@@ -30,7 +30,7 @@ Data.forEach(data => {
 
             E1GymMembershipRegistration.SelectDepandencyType(DependencyType)
 
-            E1GymMembershipRegistration.RegistrationInformation(category)
+            // E1GymMembershipRegistration.RegistrationInformation(category)
 
             E1GymMembershipRegistration.MembershipInfo(PreferredClubHouse, EffectiveDate, Terms)
 
@@ -46,6 +46,7 @@ Data.forEach(data => {
             E1GymMembershipRegistration.VerifyItemInIGMemListingTBL(CustomerName)
 
             cy.LogoutOfSmcms()
+            cy.wait(2000)
 
         })
     })

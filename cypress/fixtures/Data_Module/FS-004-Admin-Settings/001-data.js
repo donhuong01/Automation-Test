@@ -10,7 +10,7 @@ const data = {
     },
 
     UpdatedSAMFRAPostionDetails: {
-        positionName: "Events Customer",
+        positionName: "Position ",
         Role: "Energy One Viewer",
         Location: 'SAFRA Punggol',
         Remark: "Update",
@@ -28,7 +28,7 @@ const data = {
     // ADDING MULTIPLE FUNCTIONS AND REPORTS + REMOVING MULTIPLE FUINCTIONS AND REPORTS
     SMCMSRoleDetail: {
 
-        roleName: 'Sample Role' + Math.floor(Math.random() * 1000),
+        roleName: 'Role ' + Math.floor(Math.random() * 10000),
         remark: 'Trial',
 
         UpdateRoleName: 'Courses Staff Assistant',
@@ -37,27 +37,27 @@ const data = {
         Functions: {
             filter: 'VIEW',
 
-            addFunction: 'Accommodation.Accommodation.AccommodationBookingCancellations.Create',
+            addFunction: 'Accommodation.AccommodationBookingCancellations.View',
 
 
 
             removeFunction:
             {
-                functionName: 'Accommodation.Accommodation.AccommodationBookingCancellations.Create'
+                functionName: 'Accommodation.AccommodationBookingCancellations.View'
             },
 
-            functionsList: 'Accommodation.Accommodation.AccommodationBookingCancellations.Create',
+            functionsList: 'Accommodation.AccommodationBookingCancellations.View',
 
         },
 
         Reports: {
             filter: 'Print',
 
-            addReport: 'Membership.MembershipListingReport.Export',
+            addReport: 'Report.Receipt.View',
 
-            removeReport: 'Membership.MembershipListingReport.Export',
+            removeReport: 'Report.Receipt.View',
 
-            reportsList: 'Membership.MembershipListingReport.Export'
+            reportsList: 'Report.Receipt.View'
 
         }
     },
@@ -82,7 +82,7 @@ const data = {
     //Online Access Detail
     OnlineAccountAccessDetail: {
         Remarks: 'Test Remarks',
-        FunctionName: 'Accommodation.Accommodation.AccommodationBookings.Create',
+        FunctionName: 'Accommodation.AccommodationBookingCancellations.View',
         pageTitle: 'Online Account Access Detail'
     },
 

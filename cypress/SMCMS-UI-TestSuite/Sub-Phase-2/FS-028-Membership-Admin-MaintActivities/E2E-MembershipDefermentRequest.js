@@ -99,6 +99,7 @@ describe('[TS01] Membership Deferment Request Management',function(){
         
         
             CustomerCreation.save();
+            cy.wait(12000)
         
         ///////////////////////////////PRINCIPAL REGISTRATION////////////////////////////////////////
             
@@ -145,11 +146,11 @@ describe('[TS01] Membership Deferment Request Management',function(){
             // Shopping cart and Payments
             ShoppingCart.fillOutandApplyPayment('CASH') 
             
-            // Wait for 3 minites
-            cy.wait(20000)
+            // // Wait for 3 minites
+            // cy.wait(20000)
             
-            //Logout
-            cy.LogoutOfSmcms()
+            // //Logout
+            // cy.LogoutOfSmcms()
         
    
         })

@@ -19,6 +19,7 @@ class elems_SourceChannelDetail {
     static TXT_DESCRIPTION = '//input[@id="txtDescription"]'
     static TXT_ROADSHOW = '//input[@id="txtRoadShowCode"]'
     static DRP_STATUS = '//span[@id="status"]'
+    static BTN_SEARCHFILTER = '//button[text()="Search Filters"]'
     
     static ELIGIBLEPAYMENTMETHODLIST = {
         PCK_PAYMENTMETHOD : '//label[@for="pckPaymentMethod"]/parent::div//button',

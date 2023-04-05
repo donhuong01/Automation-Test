@@ -8,7 +8,7 @@ const common = new Commons()
 
 const E1GYMMembershipReversal = (MemberID) => {
 
-const { WaiverPeriod, WaiverReason } = data[1]
+const { WaiverPeriod, WaiverReason } = data[0]
 
 describe('[TS01] FS-015  E1 GYM  Membership Reversal', function () {
 
@@ -34,13 +34,13 @@ describe('[TS01] FS-015  E1 GYM  Membership Reversal', function () {
 
         E1GymMembershipListing.Submit()
 
-        common.ApprovalWorkFlow('E1-REV', 'Energy One Reversal Approval Workflow', 'Approve', 'Test')
+        common.ApprovalWorkFlow('E1-RVS', 'Energy One Reversal Approval Workflow', 'Approve', 'Test')
 
         cy.visit('/membership/e1GymMembershipList').wait(5000)
 
         E1GymMembershipListing.FilterSAFRAMembershipID(MemberID)
 
-        E1GymMembershipListing.VerifyItemStatus('Active')
+        E1GymMembershipListing.StatusMemberID(MemberID, 'Active')
 
     })
 

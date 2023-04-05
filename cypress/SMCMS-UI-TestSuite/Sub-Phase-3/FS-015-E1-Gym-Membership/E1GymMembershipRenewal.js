@@ -7,13 +7,13 @@ import data from '../../../fixtures/Data_Module/FS-015-E1-Gym-Membership/E1GymMe
 
 const common = new Common()
 
-const E1GYMMembershipRenewal = () => {
+const E1GYMMembershipRenewal = (MemberId, CustomerName, E1Membership) => {
 
 describe('[TS01] E1 Gym Membership Renewal Management', function () {
 
     data.forEach(item => {
 
-        const { MemberId, CustomerName, E1Membership, RenewalTerm } = item
+        const { RenewalTerm } = item
 
         it('[TC01] E1 Gym Membership Renewal', function () {
 
@@ -37,18 +37,19 @@ describe('[TS01] E1 Gym Membership Renewal Management', function () {
 
             //Logout
             cy.LogoutOfSmcms()
+            cy.wait(5000)
 
         })
     })
     it('Cancellation of E1 Gym Membership Renewal before payment', function () {
 
-        const { MemberId, E1Membership, RenewalTerm } = data[1]
+        // const { RenewalTerm } = data
 
         common.Checkin(MemberId)
 
         cy.visit('/membership/e1GymMembershipRenewal').wait(3000)
 
-        E1GymMembershipRenewal.FilloutMembershipRenewalInfo(E1Membership, RenewalTerm)
+        E1GymMembershipRenewal.FilloutMembershipRenewalInfo(E1Membership, '36')
 
         common.AddToCart()
 
@@ -56,6 +57,7 @@ describe('[TS01] E1 Gym Membership Renewal Management', function () {
 
         //Logout
         cy.LogoutOfSmcms()
+        cy.wait(2000)
 
     })
 })

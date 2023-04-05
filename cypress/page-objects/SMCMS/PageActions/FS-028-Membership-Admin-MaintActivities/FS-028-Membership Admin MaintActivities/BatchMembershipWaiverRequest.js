@@ -58,13 +58,13 @@ VerifyWaiverForm(Name1, NRIC1, Name2, NRIC2)
      * @param {string} NRIC
 
 *****************************************************/
-VerifyMemberInListing(ReasonCode, NRIC)
+VerifyMemberInListing(MemberName)
     {
 
         cy.VerifyTableEntry(
             elems_MemberListing.TBL_MEMBERLISTING,
-            'Reason Code', ReasonCode,
-            'NRIC (Last 4 digits)', NRIC
+            'Name', MemberName,
+            'Reason Code', "New"
             )
         // cy.VerifyTableEntryWaiver(
         //     elems_BatchMembershipWaiverRequest.MemberListing.TBL_MEMBERLISTING,
@@ -108,10 +108,10 @@ Request()
     * @param {string} NRIC
 *****************************************************/
 
-FilterbyNameAndNRIC(Name,NRIC)
+FilterbyName(Name)
 {
     cy.EnterText(elems_MemberListing.TXT_NAME, Name)
-    cy.EnterText(elems_MemberListing.TXT_NRIC, NRIC)
+    // cy.EnterText(elems_MemberListing.TXT_NRIC, NRIC)
     cy.Click(elems_MemberListing.BTN_SEARCHFILTER)
 }
 

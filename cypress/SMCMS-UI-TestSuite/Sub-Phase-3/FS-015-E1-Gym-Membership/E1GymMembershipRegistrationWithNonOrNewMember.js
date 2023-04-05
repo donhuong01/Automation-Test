@@ -26,7 +26,7 @@ Data.forEach(each => {
     describe('FS-015 E1 GYM Membership Registration', function () {
         const Gender = 'Male'
         const CustomerName = 'Customer-' + Math.floor(Math.random() * 124453)
-        const DOB = '12-Jan-1970'
+        const DOB = '12-Jan-1980'
 
         it('E1 GYM Member Registration for Non-Existing or New SAFRA member', function () {
 
@@ -102,7 +102,7 @@ Data.forEach(each => {
 
             E1GymMembershipRegistration.SelectDepandencyType(DependencyType)
 
-            E1GymMembershipRegistration.RegistrationInformation(category)
+            // E1GymMembershipRegistration.RegistrationInformation(category)
 
             E1GymMembershipRegistration.MembershipInfo(PreferredClubHouse, EffectiveDate, Terms)
 
@@ -114,7 +114,7 @@ Data.forEach(each => {
 
             ShoppingCart.fillOutandApplyPayment('CASH')
 
-            cy.wait(30000)
+            cy.wait(8000)
 
             E1GymMembershipRegistration.VerifyItemInIGMemListingTBL(CustomerName)
 

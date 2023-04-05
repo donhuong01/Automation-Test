@@ -7,29 +7,29 @@ const data = {
 
     checkin_memberID: {
         type: 'MEMBERID',
-        value1: 'A300002484'
+        value1: 'A300002657'
     },
     checkin_NRIC: {
         type: 'NRIC',
-        value1: '637D',
-        value2: '05-Oct-1978',
+        value1: '912D',
+        value2: '04-Feb-1980',
     },
     checkin_email: {
         type: 'EMAIL',
-        value1: 'Auto-Test668604@test.com',
+        value1: 'AutotestS1435B@test.com',
     },
     checkin_mobile: {
         type: 'MOBILENUMBER',
-        value1: '56585896',
-        value2: 'A300002484'
+        value1: '5434343',
+        value2: 'A300002657'
     },
     checkin_scancard: {
         type: 'SCANECARD',
-        value1: 'A300002484_3DA4F788839DE16D26F7865886038183AECEF073A605371439FCA067A95E8F15',
+        value1: 'A300002657_3DA4F788839DE16D26F7865886038183AECEF073A605371439FCA067A95E8F15',
     },
     checkin_swipecard: {
         type: 'SWIPECARD',
-        value1: '%A8008980001869402^LEE CHOON CHIEH ^2508^A300002484^019801221000000?;8008980001869402=2508201000005500011?',
+        value1: '%A8008980001869402^LEE CHOON CHIEH ^2508^A300002657^019801221000000?;8008980001869402=2508201000005500011?',
     },
 
     //Membership Tenure Selection

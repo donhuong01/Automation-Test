@@ -101,12 +101,13 @@ describe('[TS01] Membership Resignation Request Management',function(){
         
         
             CustomerCreation.save();
+            cy.wait(12000)
         
         ///////////////////////////////PRINCIPAL REGISTRATION////////////////////////////////////////
             
             cy.Click(elems_Landing.SAFRA_Member)
             cy.Click(elems_Landing.Membership_Registration)
-            cy.wait(5000)
+            cy.wait(15000)
         
             MemRegPrincipal.verifyPersonalInformation({
                 MemberCategory: data.memberregistrationprincipal.Personal_Info.MemberCategory,
@@ -133,7 +134,7 @@ describe('[TS01] Membership Resignation Request Management',function(){
             // MemRegPrincipal.VerifyPageTitle('Membership Registration - Principal')
             
             MemRegPrincipal.SaveAndNextPrincipal()
-            cy.wait(8000)
+            cy.wait(12000)
         
             ///////////////////////////////////TENURE SELECTION////////////////////////////////////////////////////////////
         
@@ -148,10 +149,10 @@ describe('[TS01] Membership Resignation Request Management',function(){
             ShoppingCart.fillOutandApplyPayment('CASH')
             
             // Wait for 4.1 minites
-            cy.wait(20000)
+            // cy.wait(20000)
             
-            //Logout
-            cy.LogoutOfSmcms()
+            // //Logout
+            // cy.LogoutOfSmcms()
         
    
         })
@@ -166,6 +167,7 @@ describe('[TS01] Membership Resignation Request Management',function(){
     
             // Select Resign from Maintenance dropdown
             cy.SelectBtnDropdownItem(elems_MemberListing.BTNDRP_MAINTENANCE,'Resign')
+            cy.wait(5000)
 
             // Fillout Membership Resignation Request form
             MembershipResignationRequests.fillOutDefermentForm(CustomerNRIC, PrincipalName,  ResignType, ReasonCode, Remark, Status)

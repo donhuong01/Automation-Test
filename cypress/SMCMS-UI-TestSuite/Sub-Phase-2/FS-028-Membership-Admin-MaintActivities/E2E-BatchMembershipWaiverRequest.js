@@ -30,12 +30,13 @@ const CustomerCreation = new CustomerCreationPage()
 
 const UserID = Math.floor(Math.random() * 1000 )
 const UserID2 = Math.floor(Math.random() * 1000 )
+const WiverName = "Waiver "
 
-const PrincipalName = Customerdata.CustomerCreationPrincipal.RegistrationInformation.name + UserID
+const PrincipalName = WiverName + UserID
 const PrincipalEmail = /*Customerdata.CustomerCreationPrincipal.ContactInformation.emailAddress + UserID*/ PrincipalName + "@test.com"
 
 
-const PrincipalName2 = Customerdata.CustomerCreationPrincipal.RegistrationInformation.name + UserID2
+const PrincipalName2 = WiverName+ UserID2
 const PrincipalEmail2 = /*Customerdata.CustomerCreationPrincipal.ContactInformation.emailAddress + UserID2 */ PrincipalName2 + "@test.com"
 
 
@@ -112,13 +113,13 @@ describe('Batch Membership Waiver Request management',function(){
         
         
             CustomerCreation.save();
-            cy.wait(5000)
+            cy.wait(10000)
         
         ///////////////////////////////PRINCIPAL REGISTRATION////////////////////////////////////////
             
             cy.Click(elems_Landing.SAFRA_Member)
             cy.Click(elems_Landing.Membership_Registration)
-            cy.wait(7000)
+            cy.wait(12000)
         
             MemRegPrincipal.verifyPersonalInformation({
                 MemberCategory: data.memberregistrationprincipal.Personal_Info.MemberCategory,
@@ -145,7 +146,7 @@ describe('Batch Membership Waiver Request management',function(){
             // MemRegPrincipal.VerifyPageTitle('Membership Registration - Principal')
             
             MemRegPrincipal.SaveAndNextPrincipal()
-            cy.wait(7000)
+            cy.wait(15000)
         
             ///////////////////////////////////TENURE SELECTION////////////////////////////////////////////////////////////
         
@@ -162,10 +163,10 @@ describe('Batch Membership Waiver Request management',function(){
             ShoppingCart.fillOutandApplyPayment('CASH')
             
             // Wait for 3 minites
-            cy.wait(20000) 
+            // cy.wait(20000) 
             
-            //Logout
-            cy.LogoutOfSmcms()
+            // //Logout
+            // cy.LogoutOfSmcms()
         
    
         }) 
@@ -219,13 +220,13 @@ describe('Batch Membership Waiver Request management',function(){
         
         
             CustomerCreation.save();
-            cy.wait(5000)
+            cy.wait(10000)
         
         ///////////////////////////////PRINCIPAL REGISTRATION////////////////////////////////////////
             
             cy.Click(elems_Landing.SAFRA_Member)
             cy.Click(elems_Landing.Membership_Registration)
-            cy.wait(5000)
+            cy.wait(12000)
         
             MemRegPrincipal.verifyPersonalInformation({
                 MemberCategory: data.memberregistrationprincipal.Personal_Info.MemberCategory,
@@ -252,7 +253,7 @@ describe('Batch Membership Waiver Request management',function(){
             // MemRegPrincipal.VerifyPageTitle('Membership Registration - Principal')
             
             MemRegPrincipal.SaveAndNextPrincipal()
-            cy.wait(5000)
+            cy.wait(15000)
         
             ///////////////////////////////////TENURE SELECTION////////////////////////////////////////////////////////////
         
@@ -269,10 +270,10 @@ describe('Batch Membership Waiver Request management',function(){
             ShoppingCart.fillOutandApplyPayment('CASH')
             
             // Wait for 3 minites
-            cy.wait(20000)
+            // cy.wait(20000)
             
-            //Logout
-            cy.LogoutOfSmcms()
+            // //Logout
+            // cy.LogoutOfSmcms()
         
    
         })
@@ -287,27 +288,19 @@ describe('Batch Membership Waiver Request management',function(){
         const EndDate = dataWaiver.Waiver.EndDate   
 
         cy.intercept('POST', 'https://api.qa-smcms.safra.sg/v2/adminapi/membership/batch-membership-waiver-requests').as('ID')
-        cy.wait(10000)
+        
         cy.visit('/membership/memberList?pageNumber=1&pageSize=20')  //Visit web page for member listing 
 
-        // Waiver.FilterbyNameAndNRIC(PrincipalName, CustomerNRIC)
+        Waiver.FilterbyName(WiverName)
         cy.wait(5000)
-        Waiver.ClickOnRightEndArrowInMemListing()
+        // Waiver.ClickOnRightEndArrowInMemListing()
 
-        Waiver.VerifyMemberInListing('New', CustomerNRIC)
-        Waiver.VerifyMemberInListing('New', CustomerNRIC2)
+        Waiver.VerifyMemberInListing(PrincipalName)
+        Waiver.VerifyMemberInListing(PrincipalName2)
         
         Waiver.SelectTableLinkItem(PrincipalName)
         Waiver.SelectTableLinkItem(PrincipalName2)
 
-        /*cy.SelectTableItem(
-            elems_MemberListing.TBL_MEMBERLISTING,
-            'Name', PrincipalName
-            )*/
-        /*cy.SelectTableItem(
-            elems_MemberListing.TBL_MEMBERLISTING,
-            'Name', PrincipalName2
-            )*/
         
         cy.SelectBtnDropdownItem(elems_MemberListing.BTNDRP_MAINTENANCE,'Waiver') 
             

@@ -96,7 +96,7 @@ describe('[TS01] Membership Expulsion Confirmation PopUp and Reinstatement Manag
             
             cy.Click(elems_Landing.SAFRA_Member)
             cy.Click(elems_Landing.Membership_Registration)
-            cy.wait(5000)
+            cy.wait(12000)
         
             MemRegPrincipal.verifyPersonalInformation({
                 MemberCategory: data.memberregistrationprincipal.Personal_Info.MemberCategory,
@@ -123,7 +123,7 @@ describe('[TS01] Membership Expulsion Confirmation PopUp and Reinstatement Manag
             // MemRegPrincipal.VerifyPageTitle('Membership Registration - Principal')
             
             MemRegPrincipal.SaveAndNextPrincipal()
-            cy.wait(5000)
+            cy.wait(15000)
         
             ///////////////////////////////////TENURE SELECTION////////////////////////////////////////////////////////////
         
@@ -133,13 +133,12 @@ describe('[TS01] Membership Expulsion Confirmation PopUp and Reinstatement Manag
             
             // Click on add to cart
             MemTenureSelect.addToCart()
-            cy.wait(5000)
         
             // Shopping cart and Payments
             ShoppingCart.fillOutandApplyPayment('CASH')
             
             // Wait for 3 minites
-            cy.wait(20000)
+            // cy.wait(20000)
             
             //Logout
             // cy.LogoutOfSmcms()

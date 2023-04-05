@@ -18,7 +18,7 @@ class CustomerCheckInPage {
             cy.TickRadioButton(elems_CustomerCheckInPage.RBTN_MEMBERID)
             cy.EnterText(elems_CustomerCheckInPage.TXT_MEMBERID, value1)
             cy.Click(elems_CustomerCheckInPage.BTN_CHECKIN)
-            cy.wait(2000)
+            cy.wait(5000)
             cy.ValidateElementText(elems_PageHeader.LBL_PAGETITLE, expectedPage)
         }
 

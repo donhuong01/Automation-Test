@@ -48,9 +48,30 @@ class OnlineAccountAccessDetail{
       {
          cy.EnterText(elems_OnlineAccountAccessDetail.Functions.TXT_FUNCTIONNAME,Function) 
          cy.Click(elems_OnlineAccountAccessDetail.Functions.BTN_SEARCH_FILTER)
+         cy.wait(3000)
  
          cy.SelectTableItem(elems_OnlineAccountAccessDetail.Functions.TBL_FUNCTIONS,
           'Function Name', Function)
+          
+         cy.Click(elems_OnlineAccountAccessDetail.Functions.BTN_REMOVE_FUNCTION)
+         cy.wait(2000)
+         cy.ValidateElementText(elems_Alerts.NOTIFICATION_MESSAGE,"Item(s) removed")   
+
+
+      }
+     /*****************************************************
+     * Method: DeleteFunction
+     * Description: To Delete Function
+     * @param {String} Function
+    *****************************************************/
+      DeleteFunction(Function) 
+      {
+         cy.EnterText(elems_OnlineAccountAccessDetail.Functions.TXT_FUNCTIONNAME,Function) 
+         cy.Click(elems_OnlineAccountAccessDetail.Functions.BTN_SEARCH_FILTER)
+         cy.wait(3000)
+ 
+         cy.Click(elems_OnlineAccountAccessDetail.Functions.TBL_FUNCTIONS2)
+
          cy.Click(elems_OnlineAccountAccessDetail.Functions.BTN_REMOVE_FUNCTION)
          cy.wait(2000)
          cy.ValidateElementText(elems_Alerts.NOTIFICATION_MESSAGE,"Item(s) removed")   
