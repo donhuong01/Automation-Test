@@ -1,6 +1,6 @@
 const data = [
     // Creating a Batch Interest Group Member Registration to Non-Existing member using default IG for minimum term
-    {
+    BatchReg = {
         MemberId: 'A300000056',          // Provide non-existing member id
         BatchName: 'Sample Batch' + Math.floor(Math.random() * 10000),
         BatchType: 'Interest Group',

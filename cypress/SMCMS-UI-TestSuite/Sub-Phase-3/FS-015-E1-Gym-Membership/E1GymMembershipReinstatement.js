@@ -21,7 +21,7 @@ describe('[TS01] FS-015 E1 GYM Membership Reinsatement', function () {
 
         E1GymMembershipReinstatement.ReinstatementInfo(data.TermStartDate)
 
-        E1GymMembershipReinstatement.AddToCart()
+        E1GymMembershipReinstatement.Submit()
 
         common.fillOutandApplyPayment('CASH')
 

@@ -1,6 +1,7 @@
 class elems_E1GymMembershipReinstatement {
 
      static BTN_ADDTOCART = '//button[@id="btnAddToCart"]'
+     static BTN_SUBMIT = '//button[text()="Submit"]'
      static BTN_CANCEL = '//button[text()="Submit"]/following-sibling::button[text()="Cancel"]'
      static DATE_REQUESTEDDATE = '//label[@id="dtpRequestedDate_label"]/following-sibling::div//input'
      static LBL_REINSTATEID = '//label[@for="lblReinstatementID"]'

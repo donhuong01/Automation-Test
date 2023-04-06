@@ -119,7 +119,7 @@ class Commons {
         cy.wait(3000)
         cy.EnterText('//input[@id="txtMemberId"]', MemberID)
         cy.Click('//button[@form="formCustomerCheckIn"]')
-        cy.wait(4000)
+        cy.wait(5000)
 
     }
 

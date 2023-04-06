@@ -15,12 +15,12 @@ class IGMembershipRegistration {
         if (BoxText === "SAFRA Jurong") {
 
             cy.Click(`(//p[text()= "${BoxText}"])[2]`)
-            cy.wait(6000)
+            cy.wait(8000)
         }
         else {
 
             cy.Click(`//p[text()= "${BoxText}"]`)
-            cy.wait(6000)
+            cy.wait(8000)
         }
 
 

@@ -13,6 +13,16 @@ class E1GymMembershipReinstatement {
 
     }
     /*****************************************************
+     * Method: Submit
+     * Description:This function will click on Submit button
+    ****************************************************/
+    Submit() {
+
+        cy.Click(elems_E1GymMembershipReinstatement.BTN_SUBMIT)
+        cy.wait(5000)
+
+    }
+    /*****************************************************
      * Method: Cancel
      * Description:
     ****************************************************/

@@ -1,7 +1,7 @@
 const data = {
     Name: 'E1-Test-Auto',
     Code: 'ETA',
-    IGMain: 'E1 Silver 1',
+    IGMain: 'MOVIEMAX',
     SubcategoryType: 'E1 Silver',
     PublishingDate: '25-Jan-2023',
     EndDate: '25-Dec-2023',
@@ -16,7 +16,7 @@ const data = {
     TermLengthType: 'Month',
     OnlineDisplay: '1',
     MinRegTerm: '1',
-    MinRenewalTerm: '12',
+    MinRenewalTerm: '2',
     MinRangeBypass: '12',
     MaxRangeBypass: '25',
     AccessMode1: 'Roadshow',
@@ -26,6 +26,6 @@ const data = {
     TransactionType: 'Reinstatement',
     CalculationType: 'Per Term',
     AmountType: 'Fixed Value',
-    ProductName: 'SRP Prod 001',
+    ProductName: 'IG Prod 0001',
 }
 export default data

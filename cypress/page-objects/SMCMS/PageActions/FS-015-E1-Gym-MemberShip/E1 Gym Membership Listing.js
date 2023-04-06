@@ -28,7 +28,7 @@ class E1GymMembershipListing {
     Maintenace(Maintenace) {
 
         cy.SelectDropDownItem(elems_E1GymMembershipListing.DRP_MAINTENANCE, Maintenace)
-        cy.wait(5000)
+        cy.wait(6000)
 
     }
     /*****************************************************
@@ -76,6 +76,7 @@ class E1GymMembershipListing {
         cy.Click(elems_E1GymMembershipListing.BTN_SEARCHFILTERS)
         cy.VerifyTableEntry(elems_E1GymMembershipListing.TBL_E1GYMMEMBERSHIPLISTING, 'SAFRA Membership ID', MembershipId)
         cy.SelectTableItem(elems_E1GymMembershipListing.TBL_E1GYMMEMBERSHIPLISTING, 'SAFRA Membership ID', MembershipId)
+        cy.wait(3000)
     }
     /*****************************************************
      * Method: FilterE1GymMembershipID

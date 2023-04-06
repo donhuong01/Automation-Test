@@ -260,7 +260,7 @@ beforeEach(() => {
 
 
 
-describe('E2E Auto Testing:FS-015', ()=> {
+// describe('E2E Auto Testing:FS-015', ()=> {
 
         // E1GYMMembershipRegistrationWithExistingMember(E2EData.ENTER_MEMBERID_AND_NAME_E1GYM_REG_WITH_EXISTING_MEMBET.MEMBERID,
         //     E2EData.ENTER_MEMBERID_AND_NAME_E1GYM_REG_WITH_EXISTING_MEMBET.MEMBERNAME) // Enter MemberID and Member Name
@@ -269,7 +269,7 @@ describe('E2E Auto Testing:FS-015', ()=> {
         //     E2EData.ENTER_MEMBERID_NAME_AND_E1GYMID_FOR_RENEWAL.MEMBERNAME,
         //     E2EData.ENTER_MEMBERID_NAME_AND_E1GYMID_FOR_RENEWAL.E1GYM_MEMBERSHIP_ID)
 
-        E1GYMMembershipRegistrationWithNonMember()
+        // E1GYMMembershipRegistrationWithNonMember()
         // E1GymMembershipCancellationBeforePayment(E2EData.MEMBERID_FOR_CANCELLATION_BEFORE_PAYMENT)//Provide Active member ID
         // E1GYMMembershipConversion(E2EData.MEMBERID_FOR_E1GYM_CONVERSION) // Enter Member ID
         // E1GYMMembershipDeferment(E2EData.E1_GYMID_FOR_E1GYM_DEFERMENT) // Enter E1 Gym Membership ID ok
@@ -287,29 +287,29 @@ describe('E2E Auto Testing:FS-015', ()=> {
 
 
 
-})
+// })
 
 
-// describe('E2E Auto Testing:FS-016', ()=> {
+describe('E2E Auto Testing:FS-016', ()=> {
 
 
-//     InterestGroupMembershipRegistration("S0544690B") //Change NRIC each time after runing this code
-//     InterestGroupManagement()
-//     InterestGMembershipRenewal("S2221801H") //Change NRIC each time after runing this code
+    // InterestGroupMembershipRegistration("S6448789B") //Change NRIC each time after runing this code
+    // InterestGMembershipRenewal("A300002067", "Auto-User7632") //Change NRIC each time after runing this code
 
-//     BatchMemRegWithExistingMemUsingDefaultIG("A300002301") //Provide Active member ID
-//     BatchMemRegWithExistingMemUsingNonDefaultIG("A300002305") //Provide Active member ID
-//     InterestGroupDeactivation()
+    // BatchMemRegWithExistingMemUsingDefaultIG("A300000511") //Provide Active member ID
+    // BatchMemRegWithExistingMemUsingNonDefaultIG("A300002305") //Provide Active member ID
+    // InterestGroupDeactivation()
     
-//     InterestGroupConversion("John Lee") //Please Provide Active Member Name
+    InterestGroupConversion("John Lee") //Please Provide Active Member Name
 //     InterestGroupDeferment("Test User 13448") //Please Provide Active Member Name
 //     InterestGroupMembershipManagment()
 //     IGMembershipReinstatement("A300001854", "Test User 8310150")
 //     InterestGMembershipReverse("Test User 13448") //Provide Member Name
 //     InterestGMembershipTermination("A300000431","Test User 46") // Provide MemberId and Member Name
 //     InterestGMembershipwaiver("Test User 61718")  //Provide Member Name
+    //    InterestGroupManagement()
 
-// })
+})
 
 // describe('E2E Auto Testing:FS-036', ()=> {
 

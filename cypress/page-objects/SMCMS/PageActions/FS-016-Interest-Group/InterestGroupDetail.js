@@ -149,7 +149,7 @@ class InterestGroupDetail {
         cy.IncreaseFieldValue(elems_InterestGroupDetail.TabInterestGroup.TXT_MAXRANGEBYPASS, 12)
         cy.wait(1000)
         cy.xpath(elems_InterestGroupDetail.TabInterestGroup.TXT_MINRANGEBYPASS).clear()
-        cy.IncreaseFieldValue(elems_InterestGroupDetail.TabInterestGroup.TXT_MINRANGEBYPASS, MinRangeBypass)
+        cy.IncreaseFieldValue(elems_InterestGroupDetail.TabInterestGroup.TXT_MINRANGEBYPASS, '2')
 
     }
 

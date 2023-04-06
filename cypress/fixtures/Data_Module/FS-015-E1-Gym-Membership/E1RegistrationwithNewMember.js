@@ -2,7 +2,7 @@ const data = [
 
     // E1 Gym Membership Registration for Non-member/New Customer for Maximum term
     {
-        NRICFull: 'S1919059E',
+        NRICFull: 'S7851428J',
         E1GymMemMainSelection: 'Energy One Testing Receipt Main',
         E1GymMembershipSelection: 'Energy One Testing Receipt Listing',
         LocationSelection: 'All Locations',

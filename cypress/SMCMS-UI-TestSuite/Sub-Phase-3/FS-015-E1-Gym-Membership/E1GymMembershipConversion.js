@@ -11,7 +11,7 @@ describe('[TS01] FS-015 E1 GYM Membership Conversion', function () {
 
         cy.visit('/membership/e1GymMembershipList').wait(5000)
 
-        E1GymMembershipListing.FilterSAFRAMembershipID(data.MemberID)
+        E1GymMembershipListing.FilterSAFRAMembershipID(MemberID)
 
         E1GymMembershipListing.Maintenace(data.Maintenace)
 

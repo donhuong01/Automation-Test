@@ -8,6 +8,7 @@ class elems_IGMembershipRegistration {
     static LBL_CUSTOMERNAME = '//label[@for="lblCustomerName"]'
     static PCK_PREFERDCLUBHOUSE = '//label[@for="preferredClubhouse"]/following-sibling::div//button'
     static DRP_MEMBERSHIPTERM = '//input[@id="membershipTerm"]'
+    static TXT_MEMBERSHIPTERM = '//input[@id="membershipTerm"]'
     static DATE_MEMBEREFFECTIVEDATE = '//input[@id="membershipEffectiveDate"]'
     static BTN_DOWNLOADTERMCONDITION = '//button[text()="Download Terms and Conditions"]'
     static CHK_AGRETERMCONDITION = '//input[@id="chkAgreeWithTerms"]'

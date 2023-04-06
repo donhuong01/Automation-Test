@@ -30,6 +30,8 @@ describe('FS-015 E1 GYM Membership Registration', function () {
 
         E1GymMembershipRegistration.MembershipInfo(PreferredClubHouse, EffectiveDate, Terms)
 
+        E1GymMembershipRegistration.FillOutOtherInfo()
+        
         E1GymMembershipRegistration.AddToCart()
 
         common.ResetCart()

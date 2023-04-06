@@ -63,7 +63,7 @@ Data.forEach(each => {
             });
 
             CustomerCreation.save();
-            cy.wait(150000)
+            cy.wait(50000)
 
             // cy.Click(elems_Landing.SAFRA_Member)
             // cy.Click(elems_Landing.Membership_Registration)

@@ -84,7 +84,7 @@ class elems_InterestGroupDetail {
     PCK_WAIVERITEMCODE: '//label[@for="pckWaiverItemCode"]//following-sibling::div//button',
     PCK_REVERSALCODE: '//label[@for="pckReversalItemCode"]//following-sibling::div//button',
     TXT_PRODUCTNAME: '//input[@name="productName"]',
-    BTN_SEARCHFILTER: '//button[@class="k-button search-button"]'
+    BTN_SEARCHFILTER: ' (//button[@class="k-button search-button"])[1]'
   }
 
 
