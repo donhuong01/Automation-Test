@@ -3,14 +3,14 @@ const Data = {
     IGMembershipListing: {
         IGMian: 'Badminton Social Group',
         InterestGroup: 'BITEZ',
-        IGMembershipID: 'G1000000004',
-        SAFRAMembershipID: 'A300001793',
+        IGMembershipID: 'G1000000225',
+        SAFRAMembershipID: 'A300001194',
         Status: 'Active',
-        CustomerName: 'DBS1028',
+        CustomerName: 'Rowen Ming',
         ExpiryDateFrom: '18-Nov-2022',
         ExpiryDateTo: '17-Dec-2022',
-        InitialJoinDate: '28-Oct-2022',
-        ExpiryDate: '27-Jan-2025',
+        InitialJoinDate: '05-Jan-2023',
+        ExpiryDate: '05-Jan-2026',
         MembershipStatusReason: 'New'
 
     },
@@ -76,7 +76,7 @@ const Data = {
     },
 
     IGMembershipDeactivation: {
-        IGName: 'QA Testing',
+        IGName: 'QA-IG 2023',
         DeactivationDate: '07-Dec-2022',
         DReason: 'Deactivate',
         Status: 'Deactivated'

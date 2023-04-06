@@ -40,6 +40,8 @@ describe('[TS07] FS-036 Collect Uncollected Redemptions', function () {
 
         SRP_RedemptionTransactionListing.VerifyStatus("Uncollected")
 
+        cy.LogoutOfSmcms()
+
     })
 
 

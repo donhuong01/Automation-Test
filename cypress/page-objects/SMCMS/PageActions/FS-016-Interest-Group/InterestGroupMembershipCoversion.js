@@ -24,19 +24,30 @@ class InterestGroupMembershipConversion {
         * Method: ConversionInformation
         * Description: This function Fillout Conversion Information Fields
        *****************************************************/
-    ConversionInformation(DestinationIG, ConversionReason) {
-        cy.wait(2000)
-        cy.Click(elems_IGMembershipConversion.PCK_DESTINATIONIG)
-        cy.wait(2000)
+    ConversionInformation(ConversionReason) {
 
-        if (DestinationIG === 'BITEZ') {
-            cy.SelectTableItem(elems_IGMembershipConversion.TBL_SELECTDESTINATIONIG, 'Name', "BITEX")
-        } else {
-            cy.SelectTableItem(elems_IGMembershipConversion.TBL_SELECTDESTINATIONIG, 'Name', "BITEZ")
-        }
+        cy.xpath('//label[@for="lblInterestGroup"]').then($IG => {
 
-        cy.Click(elems_IGMembershipConversion.BTN_SELECT)
-        cy.EnterText(elems_IGMembershipConversion.TXT_CONVERSIONREASON, ConversionReason)
+            const Dest = $IG.text().trim()
+
+            cy.wait(2000)
+            cy.Click(elems_IGMembershipConversion.PCK_DESTINATIONIG)
+            cy.wait(2000)
+
+            // if (DestinationIG === 'BITEZ') {
+            //     cy.SelectTableItem(elems_IGMembershipConversion.TBL_SELECTDESTINATIONIG, 'Name', "BITEX")
+            // } else {
+                cy.SelectTableItem(elems_IGMembershipConversion.TBL_SELECTDESTINATIONIG, 'Name', "BITEZ")
+            // }
+    
+            cy.Click(elems_IGMembershipConversion.BTN_SELECT)
+            cy.EnterText(elems_IGMembershipConversion.TXT_CONVERSIONREASON, ConversionReason)
+
+        })
+
+
+
+       
 
     }
 

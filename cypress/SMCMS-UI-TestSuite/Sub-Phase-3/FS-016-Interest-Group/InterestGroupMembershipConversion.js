@@ -33,7 +33,7 @@ describe('[TS01] FS-016 Interest Group Membership Conversion', function () {
 
             InterestGroupMembershipListing.Maintenance('Convert')
 
-            InterestGroupMembershipCoversion.ConversionInformation(DestinationIG, "Conversion")
+            InterestGroupMembershipCoversion.ConversionInformation("Conversion")
 
             InterestGroupMembershipCoversion.Convert()
 

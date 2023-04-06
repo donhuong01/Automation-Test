@@ -35,7 +35,7 @@ const PrincipalEmail = Customerdata.CustomerCreationPrincipal.ContactInformation
 //     // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
 // })
 
-const InterestGMembershipRenewal = (MemberID, PrincipalName) => {
+const InterestGMembershipRenewal = (MemberID) => {
 
 // const CustomerNRIC = CustomerNRICFull.substr(CustomerNRICFull.length - 4);
 
@@ -45,71 +45,71 @@ describe('[TS08] FS-016 Interest Group Membership Renewal', function () {
     it('[TC01] Interest Group Membership Renewal for existing active member', function () {
 
 
-        // cy.visit('/membership/customerCheckin')
-        // cy.wait(5000)
-        // cy.Click(elems_CustomerCheckInPage.RBTN_NRIC)
-        // cy.EnterDate(elems_CustomerCheckInPage.DATE_DATEOFBIRTH, Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB)
-        // cy.EnterText(elems_CustomerCheckInPage.TXT_LAST4DIGITSNRIC, CustomerNRIC)
-        // cy.Click(elems_CustomerCheckInPage.BTN_CHECKIN)
-        // cy.wait(2000)
-        // cy.Click(elems_CustomerCheckInPage.BTN_CREATNEW)
+        cy.visit('/membership/customerCheckin')
+        cy.wait(5000)
+        cy.Click(elems_CustomerCheckInPage.RBTN_NRIC)
+        cy.EnterDate(elems_CustomerCheckInPage.DATE_DATEOFBIRTH, Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB)
+        cy.EnterText(elems_CustomerCheckInPage.TXT_LAST4DIGITSNRIC, CustomerNRIC)
+        cy.Click(elems_CustomerCheckInPage.BTN_CHECKIN)
+        cy.wait(2000)
+        cy.Click(elems_CustomerCheckInPage.BTN_CREATNEW)
 
-        // CustomerCreation.fillOutRegistrationInfo({
-        //     name: PrincipalName,
-        //     DOB: Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB,
-        //     gender: Customerdata.CustomerCreationPrincipal.RegistrationInformation.gender,
-        // });
+        CustomerCreation.fillOutRegistrationInfo({
+            name: PrincipalName,
+            DOB: Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB,
+            gender: Customerdata.CustomerCreationPrincipal.RegistrationInformation.gender,
+        });
 
-        // CustomerCreation.fillOutAddressInformation({
-        //     postalCode: Customerdata.CustomerCreationPrincipal.AddressInformation.postalCode,
-        //     address: Customerdata.CustomerCreationPrincipal.AddressInformation.address,
-        //     unitNumber: Customerdata.CustomerCreationPrincipal.AddressInformation.unitNumber,
-        //     POBOx: Customerdata.CustomerCreationPrincipal.AddressInformation.POBOx,
-        //     myMailbox: Customerdata.CustomerCreationPrincipal.AddressInformation.myMailbox
-        // });
+        CustomerCreation.fillOutAddressInformation({
+            postalCode: Customerdata.CustomerCreationPrincipal.AddressInformation.postalCode,
+            address: Customerdata.CustomerCreationPrincipal.AddressInformation.address,
+            unitNumber: Customerdata.CustomerCreationPrincipal.AddressInformation.unitNumber,
+            POBOx: Customerdata.CustomerCreationPrincipal.AddressInformation.POBOx,
+            myMailbox: Customerdata.CustomerCreationPrincipal.AddressInformation.myMailbox
+        });
 
-        // CustomerCreation.fillOutContactInformation({
-        //     handPhone: '56585896',
-        //     emailAddress: PrincipalEmail,
-        //     emergencyContact: Customerdata.CustomerCreationPrincipal.ContactInformation.emergencyContact,
-        //     homeNumber: '56585896',
+        CustomerCreation.fillOutContactInformation({
+            handPhone: '56585896',
+            emailAddress: PrincipalEmail,
+            emergencyContact: Customerdata.CustomerCreationPrincipal.ContactInformation.emergencyContact,
+            homeNumber: '56585896',
 
-        // });
+        });
 
 
-        // CustomerCreation.save();
+        CustomerCreation.save();
 
-        // cy.Click(elems_Landing.SAFRA_Member)
-        // cy.Click(elems_Landing.Membership_Registration)
-        // cy.wait(5000)
+        cy.Click(elems_Landing.SAFRA_Member)
+        cy.Click(elems_Landing.Membership_Registration)
+        cy.wait(5000)
 
-        // MemRegPrincipal.verifyPersonalInformation({
-        //     MemberCategory: data.memberregistrationprincipal.Personal_Info.MemberCategory,
-        //     NameOnNRIC: PrincipalName,
-        //     NameOnCard: PrincipalName,
-        //     Nric: CustomerNRICFull,
-        //     Gender: data.memberregistrationprincipal.Personal_Info.Gender,
-        //     DateofBirth: data.memberregistrationprincipal.Personal_Info.DateofBirth,
-        //     Age: data.memberregistrationprincipal.Personal_Info.Age,
-        //     NSStatus: data.memberregistrationprincipal.Personal_Info.NSStatus,
-        //     NSRank: data.memberregistrationprincipal.Personal_Info.NSRank,
-        //     MemberType: data.memberregistrationprincipal.Personal_Info.MemberType,
-        //     Nationality: data.memberregistrationprincipal.Personal_Info.Nationality,
-        //     MaritalStatus: data.memberregistrationprincipal.Personal_Info.MaritalStatus,
-        //     CardType: data.memberregistrationprincipal.Personal_Info.CardType,
-        //     InterestinDBSCard: data.memberregistrationprincipal.Personal_Info.InterestinDBSCard,
-        // })
+        MemRegPrincipal.verifyPersonalInformation({
+            MemberCategory: data.memberregistrationprincipal.Personal_Info.MemberCategory,
+            NameOnNRIC: PrincipalName,
+            NameOnCard: PrincipalName,
+            Nric: CustomerNRICFull,
+            Gender: data.memberregistrationprincipal.Personal_Info.Gender,
+            DateofBirth: data.memberregistrationprincipal.Personal_Info.DateofBirth,
+            Age: data.memberregistrationprincipal.Personal_Info.Age,
+            NSStatus: data.memberregistrationprincipal.Personal_Info.NSStatus,
+            NSRank: data.memberregistrationprincipal.Personal_Info.NSRank,
+            MemberType: data.memberregistrationprincipal.Personal_Info.MemberType,
+            Nationality: data.memberregistrationprincipal.Personal_Info.Nationality,
+            MaritalStatus: data.memberregistrationprincipal.Personal_Info.MaritalStatus,
+            CardType: data.memberregistrationprincipal.Personal_Info.CardType,
+            InterestinDBSCard: data.memberregistrationprincipal.Personal_Info.InterestinDBSCard,
+        })
 
-        // MemRegPrincipal.SaveAndNextPrincipal()
-        // cy.wait(5000)
+        MemRegPrincipal.SaveAndNextPrincipal()
+        cy.wait(5000)
 
-        // MemTenureSelect.principalTenureSelection(PrincipalName, '10 Years')
+        MemTenureSelect.principalTenureSelection(PrincipalName, '10 Years')
 
-        // MemTenureSelect.addToCart()
+        MemTenureSelect.addToCart()
 
-        // ShoppingCart.fillOutandApplyPayment('CASH')
+        ShoppingCart.fillOutandApplyPayment('CASH')
 
-        // cy.wait(9000)
+        cy.wait(9000)
 
         cy.visit('/membership/customerCheckin')
         cy.wait(3000)

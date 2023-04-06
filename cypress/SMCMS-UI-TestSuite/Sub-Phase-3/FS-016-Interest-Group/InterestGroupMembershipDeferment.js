@@ -38,7 +38,7 @@ describe('[TS12] FS-016 Interest Group Membership Deferment', function () {
 
         IGMembershipDeferment.Submit()
 
-        cy.wait(10000)
+        cy.wait(5000)
 
         IGMembershipDeferment.ApprovalWorkFlow('IG-DEF', 'Interest Group Membership Deferment Approval Workflow', 'Approve', IGDEFDATA.DefReason)
 

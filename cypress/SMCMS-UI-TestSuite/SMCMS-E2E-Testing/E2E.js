@@ -290,40 +290,41 @@ beforeEach(() => {
 // })
 
 
-describe('E2E Auto Testing:FS-016', ()=> {
+// describe('E2E Auto Testing:FS-016', ()=> {
 
 
-    // InterestGroupMembershipRegistration("S6448789B") //Change NRIC each time after runing this code
-    // InterestGMembershipRenewal("A300002067", "Auto-User7632") //Change NRIC each time after runing this code
+    // InterestGroupMembershipRegistration("S2102786C") //Change NRIC each time after runing this code
+    // InterestGMembershipRenewal("A300001781") //Change NRIC each time after runing this code
 
     // BatchMemRegWithExistingMemUsingDefaultIG("A300000511") //Provide Active member ID
-    // BatchMemRegWithExistingMemUsingNonDefaultIG("A300002305") //Provide Active member ID
-    // InterestGroupDeactivation()
-    
-    InterestGroupConversion("John Lee") //Please Provide Active Member Name
-//     InterestGroupDeferment("Test User 13448") //Please Provide Active Member Name
-//     InterestGroupMembershipManagment()
-//     IGMembershipReinstatement("A300001854", "Test User 8310150")
-//     InterestGMembershipReverse("Test User 13448") //Provide Member Name
-//     InterestGMembershipTermination("A300000431","Test User 46") // Provide MemberId and Member Name
-//     InterestGMembershipwaiver("Test User 61718")  //Provide Member Name
-    //    InterestGroupManagement()
+    // BatchMemRegWithExistingMemUsingNonDefaultIG("A300001194") //Provide Active member ID
+    // InterestGroupDeactivation(
+    // InterestGroupConversion("Testuser007") //Please Provide Active Member Name
+    // InterestGroupDeferment("MemBR 1") //Please Provide Active Member Name
+    //  InterestGMembershipTermination("A300001811","Tong Hui") // Provide MemberId and Member Name
+    // IGMembershipReinstatement("A300001811", "Tong Hui")
+    // InterestGMembershipReverse("Auto-User4345") //Provide Member Name
+    // InterestGMembershipwaiver("Auto-User7632")  //Provide Member Name
+    // InterestGroupManagement()
+    // InterestGroupMembershipManagment()
 
-})
-
-// describe('E2E Auto Testing:FS-036', ()=> {
-
-//     SRPModuleSetting()
-//     EDCTerminalManagement()
-//     SAFRAPointsAdjustment("A300002280") //Provide Active member ID
-//     SAFRAPointsTransaction("A300002316") //Provide Active member ID
-//     SRPPromotionManagement() // not completed
-//     SRPRedemptionCatalogueManagement()
-//     SRPRedemptionCollection("A300002316") //Provide Active member ID
-//     SRPRedemptionManagement("A300002316") //Provide Active member ID
-//     ThirdPartyVendorManagement()
 
 // })
+
+describe('E2E Auto Testing:FS-036', ()=> {
+
+    // SRPModuleSetting()
+    // SAFRAPointsAdjustment("A300001410") //Provide Active member ID
+    // SAFRAPointsTransaction("A300001410") //Provide Active member ID
+    // SRPRedemptionCollection("A300001410") //Provide Active member ID
+    // SRPRedemptionManagement("A300001410") //Provide Active member ID
+     ThirdPartyVendorManagement()
+         // EDCTerminalManagement()
+        // SRPRedemptionCatalogueManagement()// failing
+//     SRPPromotionManagement() // not completed
+
+
+})
 
 
 

@@ -2,8 +2,8 @@ const data = {
 
     SRP_Redemption_Managment: {
         MemberID: "A300001959",
-        ItemCode: "SAFRAPoint007",
-        ItemDescription: "SAFRA 007",
+        ItemCode: "006",
+        ItemDescription: "SRP Voucher 006",
         Category: "Consignment Item",
         RedemptionSourceLoc: "SAFRA Jurong",
         Status: "Pending Payment",
@@ -13,8 +13,8 @@ const data = {
 
     SRP_Redemption_Collection: {
         MemberID: "A300002261",
-        ItemCode: "SRP003",
-        ItemDescription: "SRP Prod 003",
+        ItemCode: "SRP008",
+        ItemDescription: "SRP Voucher 008",
         Category: "Voucher",
         RedemptionSourceLoc: "SAFRA Jurong",
         Status: "Pending Payment",
@@ -26,7 +26,7 @@ const data = {
         Name: "EDC00345",
         Placement: "Trial",
         SourceChannel: "SAFRA Punggol",
-        ThirdPartyVendoreID: "Test001",
+        ThirdPartyVendoreID: "VD003",
         ItemGSTGroup: "FULL",
         FabsGroup: "Golfing Club",
         ClubClassification: "Fitness & Leisure",
@@ -35,12 +35,12 @@ const data = {
 
     Third_Party_Vendore_Management: {
         VendorID: 'VD003',
-        Name: 'Auto-Name ' + Math.floor(Math.random() * 10000),
+        Name: 'Third-Part Vendore ' + Math.floor(Math.random() * 10000),
         MerchandiseID: "MI" + Math.floor(Math.random() * 10000),
         Status: "Open",
         ContactNO: Math.floor(Math.random() * 10056300),
-        UpdatedVendorID: 'VD001',
-        UpdatedName: 'Auto-Name ' + Math.floor(Math.random() * 10000),
+        UpdatedVendorID: 'VD003',
+        UpdatedName: 'Third-Part Vendore ' + Math.floor(Math.random() * 10000),
         UpdatedMerchandiseID: "MI" + Math.floor(Math.random() * 10000),
         UpdatedStatus: "Open",
         UpdatedContactNO: Math.floor(Math.random() * 10056300),
@@ -48,7 +48,7 @@ const data = {
     SAFRA_Points_Adjustment: {
         MemberID: "A30000400",
         SourceChannel: "SAFRA HQ",
-        VendorID: "VD002",
+        VendorID: "VD003",
         EDCTerminal: "TID00002",
         Remarks: "Testing",
         SAFRAPoints: "500",
@@ -93,8 +93,8 @@ const data = {
 
     },
     SRP_Redemption_Catalogue_Management: {
-        ItemCode: "SRP 001",
-        ItemDescription: "SRP Prod 001",
+        ItemCode: "004",
+        ItemDescription: "SAFRA Voucher 004",
         Status: "Active",
         Category: "Consignment Item",
         PublishStartDate: "22-Jan-2023",

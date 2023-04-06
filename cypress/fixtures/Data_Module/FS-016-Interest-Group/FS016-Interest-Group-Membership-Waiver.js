@@ -1,5 +1,5 @@
 const data = {
-    BatchIGWaiver: {
+    BatchIGWaiver : {
         WaiverTerm: '3',
         WaiverReason: 'test',
         ReasonCode: 'Waived',

@@ -8,7 +8,7 @@ import Common from '../../../page-objects/SMCMS/PageActions/Common/Common'
 const MembershiptenureSelection = new MembershipTenureSelection()
 const common = new Common()
 
-const { BatchName, BatchType, InterestGroup, EffectiveDate, IGMembershipTerm, InterestGroupLocation } = data
+const { BatchName, BatchType, InterestGroup, EffectiveDate, IGMembershipTerm, InterestGroupLocation } = data[0]
 
 
 // beforeEach(() => {
@@ -37,7 +37,7 @@ describe('FS-016 Batch Interest Group Membership Registration', function () {
 
         BatchIGRegistration.FilloutBatchFields(BatchName, BatchType)
 
-        BatchIGRegistration.FilloutAdditionalFields(InterestGroup, EffectiveDate, InterestGroupLocation)
+        BatchIGRegistration.FilloutAdditionalFields(InterestGroup, EffectiveDate,IGMembershipTerm, InterestGroupLocation)
 
         BatchIGRegistration.Save()
 
@@ -57,17 +57,18 @@ describe('FS-016 Batch Interest Group Membership Registration', function () {
 
         IGMembershipRegistration.ClickOnBox('All Locations')
 
-        IGMembershipRegistration.SelectMembershipTerm()
+        IGMembershipRegistration.SelectMembershipTerm(IGMembershipTerm)
 
         IGMembershipRegistration.MembershipEffectiveDate(EffectiveDate)
 
         IGMembershipRegistration.AgreeWithTermCondition()
 
-        IGMembershipRegistration.AgreewithIndemnityWaiver()
+        // IGMembershipRegistration.AgreewithIndemnityWaiver()
 
         MembershiptenureSelection.addToCart()
 
         BatchIGRegistration.fillOutandApplyPayment('CASH')
+        cy.wait(6000)
 
         BatchIGRegistration.ValidateRegistration()
         cy.wait(6000)

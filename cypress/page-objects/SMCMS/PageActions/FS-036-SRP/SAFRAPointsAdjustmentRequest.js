@@ -121,14 +121,14 @@ class SRP_PromotionListing {
                 cy.xpath(Picker.BTN_SELECT).first().click();
             }
             if(EDCTerminal !== undefined){
-                cy.Click(elems_SRPPointsAdjustmentRequest.PCK_EDCTERMINALID)
-                cy.EnterText(elems_SRPPointsAdjustmentRequest.TXT_TERMINALID, EDCTerminal)
-                // cy.SelectPickerDifferentItems(elems_SRPPointsAdjustmentRequest.PCK_EDCTERMINALID,
-                //     elems_SRPPointsAdjustmentRequest.TXT_TERMINALID, EDCTerminal)
-                cy.Click(elems_SRPPointsAdjustmentRequest.BTN_SEARCHFILTER);
+                // cy.Click(elems_SRPPointsAdjustmentRequest.PCK_EDCTERMINALID)
+                // cy.EnterText(elems_SRPPointsAdjustmentRequest.TXT_TERMINALID, EDCTerminal)
+                // // cy.SelectPickerDifferentItems(elems_SRPPointsAdjustmentRequest.PCK_EDCTERMINALID,
+                // //     elems_SRPPointsAdjustmentRequest.TXT_TERMINALID, EDCTerminal)
+                // cy.Click(elems_SRPPointsAdjustmentRequest.BTN_SEARCHFILTER);
 
-                new Table().selectTableItem(Picker.TBL_PICKERITEMS, 'FIRST')
-                cy.xpath(Picker.BTN_SELECT).first().click();
+                // new Table().selectTableItem(Picker.TBL_PICKERITEMS, 'FIRST')
+                // cy.xpath(Picker.BTN_SELECT).first().click();
             }
             if(Type !== undefined){
                 cy.SelectDropDownItem(elems_SRPPointsAdjustmentRequest.DRP_TYPE, Type)

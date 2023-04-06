@@ -17,6 +17,7 @@ import InterestGroupMembershipReversalRequest from '../../../page-objects/SMCMS/
 //     // Set local storage for UAT Enviroment
 //     // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
 // })
+const {WaiverTerm, WaiverReason, ReasonCode}= WaiverData.BatchIGWaiver
 
 const InterestGMembershipwaiver = (CustomerName) => {
 
@@ -35,13 +36,13 @@ describe('[TS11] FS-016 Interest Group Membership Waiver', function () {
 
         InterestGroupListing.Maintenance('Waive')
 
-        IGMembershipWaiver.WaiverInfo(WaiverData.WaiverTerm, WaiverData.WaiverReason)
+        IGMembershipWaiver.WaiverInfo(WaiverTerm, WaiverReason)
 
         IGMembershipWaiver.Request()
 
         cy.wait(5000)
 
-        InterestGroupListing.ApprovalWorkFlow('IG-WAV', 'Interest Group Batch Waiver Approval Workflow', 'Approve', WaiverData.WaiverReason)
+        InterestGroupListing.ApprovalWorkFlow('IG-WAV', 'Interest Group Batch Waiver Approval Workflow', 'Approve', WaiverReason)
 
         cy.wait(5000)
 
@@ -54,7 +55,7 @@ describe('[TS11] FS-016 Interest Group Membership Waiver', function () {
 
         InterestGroupListing.ViewTransactionHistory()
 
-        InterestGroupListing.VerifyReasonCode(WaiverData.ReasonCode)
+        InterestGroupListing.VerifyReasonCode(ReasonCode)
 
 
         cy.visit('/membership/interestGroupMembershipListing')

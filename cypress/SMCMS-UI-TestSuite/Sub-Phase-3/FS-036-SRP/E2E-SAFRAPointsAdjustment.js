@@ -51,7 +51,7 @@ describe('[TS02] FS-036 SAFRAPoints Adjustment', function () {
 
         SRP_PromotionListing.VerifyMemberInfoInRequestForm(MemberID)
 
-        SRP_PromotionListing.FillOutSAFRAPointAdjRequestForm(SourceChannel, VendorID, EDCTerminal, Awarding, Remarks, "1")
+        SRP_PromotionListing.FillOutSAFRAPointAdjRequestForm(SourceChannel, VendorID, EDCTerminal, Deduction, Remarks, "1")
 
         SRP_PromotionListing.Request()
 

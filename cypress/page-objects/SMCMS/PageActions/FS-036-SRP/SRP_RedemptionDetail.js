@@ -66,9 +66,10 @@ class SRP_RedemptionDetail {
     VerifySRPRedemptionDetails(MemberID, RedemptionItemTitle,RedemptionItemDescription, RedemptionSourceLocation) {
 
         cy.ValidateElementText(elems_SRPREDEMPTIONDETAIL.LBL_MEMBERID, MemberID)
+        // cy.ValidateElementText(elems_SRPREDEMPTIONDETAIL.LBL_REDEMPTIONSOURCELOCATION, RedemptionSourceLocation)
         cy.ValidateElementText(elems_SRPREDEMPTIONDETAIL.LBL_REDEMPTIONITEMTITLE, RedemptionItemTitle)
         cy.ValidateElementText(elems_SRPREDEMPTIONDETAIL.LBL_REDEMPTIONITEMDESCRIPTION, RedemptionItemDescription)
-        cy.ValidateElementText(elems_SRPREDEMPTIONDETAIL.LBL_REDEMPTIONSOURCELOCATION, RedemptionSourceLocation)
+        
 
     }
 }

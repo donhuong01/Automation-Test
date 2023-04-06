@@ -3,7 +3,7 @@ const data = {
     DefEndMonth: '01-May-2023',
     DefReason: 'Deferred',
     MembershipTerm: '5 Month',
-    AffectiveDate: '14-Nov-2022',
+    AffectiveDate: '30-Nov-2023',
     ReasonCode: 'Deferred',
     Status: 'Active',
 

@@ -1,5 +1,5 @@
 import elems_ThirdPartyVendoreListing from '../../Elements/FS-036-SRP/thirdPartyVendorListing'
-
+import elems_Alerts from '../../Elements/Common/Alerts'
 
 class ThirdPartyVendoreListing {
 
@@ -28,7 +28,7 @@ class ThirdPartyVendoreListing {
         *****************************************************/
     DeletePopupYes() {
 
-        cy.Click(elems_ThirdPartyVendoreListing.BTN_DELETE)
+        cy.Click(elems_Alerts.BTN_YES)
 
     }
     /*****************************************************
@@ -40,10 +40,11 @@ class ThirdPartyVendoreListing {
         cy.SelectPickerDifferentItemsWait(elems_ThirdPartyVendoreListing.VENDORID.PCK_VENDORID, 2000,
             elems_ThirdPartyVendoreListing.VENDORID.TXT_VENDORID, VendoreID,
             elems_ThirdPartyVendoreListing.BTN_SEARCHFILTERS)
+
         cy.EnterText(elems_ThirdPartyVendoreListing.TXT_NAME, Name)
         cy.SelectDropDownItem(elems_ThirdPartyVendoreListing.DRP_STATUS, Status)
         cy.Click(elems_ThirdPartyVendoreListing.BTN_SEARCHFILTERS)
-        cy.wait(5000)
+        cy.wait(8000)
 
     }
     /*****************************************************
@@ -52,7 +53,8 @@ class ThirdPartyVendoreListing {
         *****************************************************/
     SelectItem(VendoreID) {
 
-        cy.SelectTableItem(elems_ThirdPartyVendoreListing.TBL_THIRDOARTYVENDORLSITING, 'Vendore ID', VendoreID)
+        // cy.SelectTableItem(elems_ThirdPartyVendoreListing.TBL_THIRDOARTYVENDORLSITING, 'Vendore ID', VendoreID)
+        cy.Click(`//a[text()="${VendoreID}"]//parent::td//preceding-sibling::td`)
 
     }
     /*****************************************************

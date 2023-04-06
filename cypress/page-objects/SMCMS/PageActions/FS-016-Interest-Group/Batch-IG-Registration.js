@@ -2,7 +2,7 @@
 import elems_BatchMembershipRegistrationDetail from '../../Elements/Membership/FS014_Membership-Master-Registration-Renewal/BatchMembershipRegistrationDetail'
 import elems_BatchMembershipRegistrationListing from '../../Elements/Membership/FS014_Membership-Master-Registration-Renewal/BatchMembershipRegistrationListing'
 import elems_SMCMSShoppingCartAndPayment from '../../../../page-objects/SMCMS/Elements/Club-Sales/FS040_ShoppingCart-Payment/SMCMSShoppingCartAndPayment'
-
+import elems_Picker from '../../Elements/Common/Picker'
 class BatchIGRegistration {
 
     /*****************************************************
@@ -41,7 +41,9 @@ class BatchIGRegistration {
         * @param {string} IGLocation
        *****************************************************/
     FilloutAdditionalFields(IG, EffectiveDate, Term, IGLocation) {
-        cy.SelectPickerWithoutFields(elems_BatchMembershipRegistrationDetail.BatchInformation.PCK_IG, IG)
+        cy.Click(elems_BatchMembershipRegistrationDetail.BatchInformation.PCK_IG)
+        cy.Click(`//td[text()="${IG}"]//preceding-sibling::td`)
+        cy.Click(elems_Picker.BTN_SELECT)
         cy.EnterDate(elems_BatchMembershipRegistrationDetail.BatchInformation.DATE_IGEFFECTIVEDATE, EffectiveDate)
         // cy.xpath(elems_BatchMembershipRegistrationDetail.BatchInformation.TXT_IGTERM).clear()
         cy.EnterText(elems_BatchMembershipRegistrationDetail.BatchInformation.TXT_IGTERM, Term)
@@ -89,7 +91,7 @@ class BatchIGRegistration {
        *****************************************************/
     ClickOnTableLink() {
         cy.xpath('(//h2[text()="Batch Membership Registration Listing"]/ancestor::div//table//a)[1]').click({ force: true })
-        cy.wait(5000)
+        cy.wait(8000)
     }
     /*****************************************************
         * Method: AddMemRegToMemListingDefIG

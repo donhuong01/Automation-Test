@@ -1,10 +1,10 @@
 const data = [
     // Creating a Batch Interest Group Member Registration to Non-Existing member using default IG for minimum term
-    BatchReg = {
+ {
         MemberId: 'A300000056',          // Provide non-existing member id
         BatchName: 'Sample Batch' + Math.floor(Math.random() * 10000),
         BatchType: 'Interest Group',
-        InterestGroup: 'BITEZ',
+        InterestGroup: 'CINIPEX',
         EffectiveDate: '20-Jan-2023',
         IGMembershipTerm: 36,             // minimum term
         InterestGroupLocation: 'All Locations',
@@ -14,7 +14,7 @@ const data = [
         MemberId: 'A300000015',          // Provide Existing member id
         BatchName: 'Sample Batch' + Math.floor(Math.random() * 10000),
         BatchType: 'Interest Group',
-        InterestGroup: 'MOVIEMAX',
+        InterestGroup: 'BITEZ',
         EffectiveDate: '20-Jan-2023',
         IGMembershipTerm: 18,             // Maximum term
         InterestGroupLocation: 'All Locations',

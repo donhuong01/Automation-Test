@@ -227,7 +227,7 @@ class InterestGroupListing {
 
         //Click on Filter button
         cy.Click(elems_PendingTaskListing.BTN_SEARCH)
-        cy.wait(2000)
+        cy.wait(6000)
 
         //Click on Table item
         cy.xpath('(//h2[text()="Pending Task Listing"]/ancestor::div//table//tr["Task ID"]//td//a)[1]').click({ force: true })

@@ -34,7 +34,7 @@ Cypress.Commands.add('Click', (locator) => {
 /*****************************************************
  * Command: EnterText
  * Description: Enters text on an Element
- *
+ *SelectTableItem
  * @param {string} locator Element Locator
  * @param {string} text Text to be entered
  *****************************************************/

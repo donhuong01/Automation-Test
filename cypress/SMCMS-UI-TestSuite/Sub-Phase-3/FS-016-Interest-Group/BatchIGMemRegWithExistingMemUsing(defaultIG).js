@@ -44,11 +44,12 @@ describe('FS-016 Batch Interest Group Membership Registration', function () {
 
         IGMembershipRegistration.AgreeWithTermCondition()
 
-        IGMembershipRegistration.AgreewithIndemnityWaiver()
+        // IGMembershipRegistration.AgreewithIndemnityWaiver()
 
         MembershiptenureSelection.addToCart()
 
         BatchIGRegistration.fillOutandApplyPayment('CASH')
+        cy.wait(8000)
 
         BatchIGRegistration.ValidateRegistration()
         cy.wait(6000)

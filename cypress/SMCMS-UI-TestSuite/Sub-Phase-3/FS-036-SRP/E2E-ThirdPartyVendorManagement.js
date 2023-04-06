@@ -52,13 +52,15 @@ describe('[TS07] FS-036 Third Party Vendor Management', function () {
         cy.wait(3000)
 
         //Verify updated item
-        ThirdPartyVendoreListing.Filters('V00002', 'Test Vendor 001', 'Open')
+        ThirdPartyVendoreListing.Filters(UpdatedVendorID, UpdatedName, UpdatedStatus)
 
         //Select Table item
         ThirdPartyVendoreListing.SelectItem(UpdatedVendorID)
 
         //
         ThirdPartyVendoreListing.Delete()
+
+        ThirdPartyVendoreListing.DeletePopupYes()
 
 
 

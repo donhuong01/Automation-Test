@@ -13,7 +13,7 @@ const data = [
         MemID: 'A30001287',             ///// Defer Member
         CustomerName: 'Auto-User8730391',
         TerminatedBy: 'Customer',
-        TerminationDate: '31-Mar-2023',
+        TerminationDate: '30-Jun-2023',
         TerminationReason: 'Test',
     }
 ]
