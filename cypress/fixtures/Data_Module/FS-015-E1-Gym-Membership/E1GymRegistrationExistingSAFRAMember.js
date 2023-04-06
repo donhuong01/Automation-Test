@@ -2,35 +2,35 @@ const data = [
 
 
     // E1 Gym Membership Registration for Existing SAFRA Member Maximum Terms
-    {
-        MemberID: 'A300002310',           //Existing SAFRA Member
-        CustomerName: 'James Yap',
-        E1GymMemMainSelection: 'Test E1 Main ',
-        E1GymMembershipSelection: 'Test E1 Detail',
-        LocationSelection: 'All Locations',
-        DependencyType: 'Principal',
-        category: 'All Customer Category',
-        PreferredClubHouse: 'All Locations',
-        EffectiveDate: '04-Jan-2023',
-        Terms: 18,
-        AddWaiver: 'No'       //Yes or No
-    },
-
-
-    // // E1 Gym Membership Registration for Existing SAFRA Member Manimum Terms
     // {
-    //     MemberID: 'A300002327',           //Existing SAFRA Member
-    //     CustomerName: 'Auto-Name 366H',
-    //     E1GymMemMainSelection: 'E1 quick test only',
-    //     E1GymMembershipSelection: 'E1 Quick',
-    //     LocationSelection: 'SAFRA Jurong',
+    //     MemberID: 'A300002310',           //Existing SAFRA Member
+    //     CustomerName: 'James Yap',
+    //     E1GymMemMainSelection: 'Test E1 Main ',
+    //     E1GymMembershipSelection: 'Test E1 Detail',
+    //     LocationSelection: 'All Locations',
     //     DependencyType: 'Principal',
-    //     category: '',
-    //     PreferredClubHouse: 'SAFRA Jurong',
+    //     category: 'All Customer Category',
+    //     PreferredClubHouse: 'All Locations',
     //     EffectiveDate: '04-Jan-2023',
-    //     Terms: 2,
+    //     Terms: 18,
     //     AddWaiver: 'No'       //Yes or No
     // },
+
+
+    // E1 Gym Membership Registration for Existing SAFRA Member Manimum Terms
+    {
+        MemberID: 'A300002327',           //Existing SAFRA Member
+        CustomerName: 'Auto-Name 366H',
+        E1GymMemMainSelection: 'E1 quick test only',
+        E1GymMembershipSelection: 'E1 Quick',
+        LocationSelection: 'SAFRA Jurong',
+        DependencyType: 'Principal',
+        category: 'AS',
+        PreferredClubHouse: 'SAFRA Jurong',
+        EffectiveDate: '04-Jan-2023',
+        Terms: 2,
+        AddWaiver: 'No'       //Yes or No
+    },
 
 
     // // E1 Gym Membership Registration for Existing Member for category Silver.

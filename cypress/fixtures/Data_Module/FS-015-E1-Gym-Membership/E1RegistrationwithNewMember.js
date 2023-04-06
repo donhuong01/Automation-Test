@@ -2,10 +2,9 @@ const data = [
 
     // E1 Gym Membership Registration for Non-member/New Customer for Maximum term
     {
-        NRICLast4Digit: '280D',
-        NRICFull: 'S1249280D',
-        E1GymMemMainSelection: 'Test E1 Main ',
-        E1GymMembershipSelection: 'Test E1 Detail',
+        NRICFull: 'S1919059E',
+        E1GymMemMainSelection: 'Energy One Testing Receipt Main',
+        E1GymMembershipSelection: 'Energy One Testing Receipt Listing',
         LocationSelection: 'All Locations',
         DependencyType: 'Principal',
         category: 'All Customer Category',
@@ -16,7 +15,6 @@ const data = [
     },
     // E1 Gym Membership Registration for Non-member/New Customer for Manimum term
     // {
-    //     NRICLast4Digit: '939H',
     //     NRICFull: 'S2084939H',
     //     E1GymMemMainSelection: 'E1 quick test only',
     //     E1GymMembershipSelection: 'E1 Quick',
@@ -32,7 +30,6 @@ const data = [
     // // E1 Gym Membership Registration for Non-Member/New Customer for category (silver)
 
     // {
-    //     NRICLast4Digit: '939H',
     //     NRICFull: 'S2084939H',
     //     E1GymMemMainSelection: 'Silver Main',
     //     E1GymMembershipSelection: 'Silver Main',
@@ -48,7 +45,6 @@ const data = [
     // // E1 Gym Membership Registration for Non-Member/New Customer dependent Spouse for category (silver)
 
     // {
-    //     NRICLast4Digit: '939H',
     //     NRICFull: 'S2084939H',
     //     E1GymMemMainSelection: 'Silver Main',
     //     E1GymMembershipSelection: 'Silver Main',
@@ -66,7 +62,6 @@ const data = [
     // //E1 Gym Membership Registration for Non-Member/New Customer ,Update Preferred Clubhouse, Update Membership Term,Update Membership Effective date
 
     // {
-    //     NRICLast4Digit: '939H',
     //     NRICFull: 'S2084939H',
     //     E1GymMemMainSelection: 'Silver Main',
     //     E1GymMembershipSelection: 'Silver Main',
@@ -83,7 +78,6 @@ const data = [
     // // E1 Gym Membership Registration for Non-Member/New Customer, Update Preferred Clubhouse, Update Membership Term, Update Membership Effective Date, Add Waiver
 
     // {
-    //     NRICLast4Digit: '939H',
     //     NRICFull: 'S2084939H',
     //     E1GymMemMainSelection: 'Silver Main',
     //     E1GymMembershipSelection: 'Silver Main',

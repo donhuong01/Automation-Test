@@ -11,11 +11,31 @@ const E1GYMMembershipRenewal = (MemberId, CustomerName, E1Membership) => {
 
 describe('[TS01] E1 Gym Membership Renewal Management', function () {
 
+    it('[TC01] Cancellation of E1 Gym Membership Renewal before payment', function () {
+
+        // const { RenewalTerm } = data
+
+        common.Checkin(MemberId)
+
+        cy.visit('/membership/e1GymMembershipRenewal').wait(3000)
+
+        E1GymMembershipRenewal.FilloutMembershipRenewalInfo(E1Membership, '36')
+
+        common.AddToCart()
+
+        common.ResetCart()
+
+        //Logout
+        cy.LogoutOfSmcms()
+        cy.wait(2000)
+
+    })
+
     data.forEach(item => {
 
         const { RenewalTerm } = item
 
-        it('[TC01] E1 Gym Membership Renewal', function () {
+        it('[TC02] E1 Gym Membership Renewal', function () {
 
             common.Checkin(MemberId)
 
@@ -41,25 +61,7 @@ describe('[TS01] E1 Gym Membership Renewal Management', function () {
 
         })
     })
-    it('Cancellation of E1 Gym Membership Renewal before payment', function () {
-
-        // const { RenewalTerm } = data
-
-        common.Checkin(MemberId)
-
-        cy.visit('/membership/e1GymMembershipRenewal').wait(3000)
-
-        E1GymMembershipRenewal.FilloutMembershipRenewalInfo(E1Membership, '36')
-
-        common.AddToCart()
-
-        common.ResetCart()
-
-        //Logout
-        cy.LogoutOfSmcms()
-        cy.wait(2000)
-
-    })
+   
 })
 
 }

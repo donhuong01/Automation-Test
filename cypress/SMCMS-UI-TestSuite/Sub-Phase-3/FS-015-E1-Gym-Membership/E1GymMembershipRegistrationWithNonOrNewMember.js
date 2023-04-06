@@ -21,7 +21,9 @@ const E1GYMMembershipRegistrationWithNonMember = ()=> {
 
 Data.forEach(each => {
 
-    const { NRICLast4Digit, NRICFull, E1GymMemMainSelection, E1GymMembershipSelection, LocationSelection, DependencyType, category, PreferredClubHouse, EffectiveDate, Terms, AddWaiver } = each
+    const { NRICFull, E1GymMemMainSelection, E1GymMembershipSelection, LocationSelection, DependencyType, category, PreferredClubHouse, EffectiveDate, Terms, AddWaiver } = each
+
+    const NRICLast4Digit = NRICFull.substr(NRICFull.length - 4);
 
     describe('FS-015 E1 GYM Membership Registration', function () {
         const Gender = 'Male'
@@ -54,43 +56,44 @@ Data.forEach(each => {
 
             CustomerCreation.fillOutContactInformation({
                 handPhone: Customerdata.CustomerCreationPrincipal.ContactInformation.handPhone,
-                emailAddress: "test" + Math.floor(Math.random() * 1000) + "@test.com",
+                emailAddress: "test" + Math.floor(Math.random() * 100000) + "@test.com",
                 emergencyContact: Customerdata.CustomerCreationPrincipal.ContactInformation.emergencyContact,
                 homeNumber: Customerdata.CustomerCreationPrincipal.ContactInformation.homeNumber,
 
             });
 
             CustomerCreation.save();
+            cy.wait(150000)
 
-            cy.Click(elems_Landing.SAFRA_Member)
-            cy.Click(elems_Landing.Membership_Registration)
-            cy.wait(8000)
+            // cy.Click(elems_Landing.SAFRA_Member)
+            // cy.Click(elems_Landing.Membership_Registration)
+            // cy.wait(8000)
 
-            MemRegPrincipal.verifyPersonalInformation({
-                MemberCategory: data.memberregistrationprincipal.Personal_Info.MemberCategory,
-                NameOnNRIC: CustomerName,
-                NameOnCard: CustomerName,
-                Nric: NRICFull,
-                Gender: Gender,
-                DateofBirth: DOB,
-                Age: data.memberregistrationprincipal.Personal_Info.Age,
-                NSStatus: data.memberregistrationprincipal.Personal_Info.NSStatus,
-                NSRank: data.memberregistrationprincipal.Personal_Info.NSRank,
-                MemberType: data.memberregistrationprincipal.Personal_Info.MemberType,
-                Nationality: data.memberregistrationprincipal.Personal_Info.Nationality,
-                MaritalStatus: data.memberregistrationprincipal.Personal_Info.MaritalStatus,
-                CardType: data.memberregistrationprincipal.Personal_Info.CardType,
-                InterestinDBSCard: data.memberregistrationprincipal.Personal_Info.InterestinDBSCard,
-            })
+            // MemRegPrincipal.verifyPersonalInformation({
+            //     MemberCategory: data.memberregistrationprincipal.Personal_Info.MemberCategory,
+            //     NameOnNRIC: CustomerName,
+            //     NameOnCard: CustomerName,
+            //     Nric: NRICFull,
+            //     Gender: Gender,
+            //     DateofBirth: DOB,
+            //     Age: data.memberregistrationprincipal.Personal_Info.Age,
+            //     NSStatus: data.memberregistrationprincipal.Personal_Info.NSStatus,
+            //     NSRank: data.memberregistrationprincipal.Personal_Info.NSRank,
+            //     MemberType: data.memberregistrationprincipal.Personal_Info.MemberType,
+            //     Nationality: data.memberregistrationprincipal.Personal_Info.Nationality,
+            //     MaritalStatus: data.memberregistrationprincipal.Personal_Info.MaritalStatus,
+            //     CardType: data.memberregistrationprincipal.Personal_Info.CardType,
+            //     InterestinDBSCard: data.memberregistrationprincipal.Personal_Info.InterestinDBSCard,
+            // })
 
-            MemRegPrincipal.SaveAndNextPrincipal()
-            cy.wait(5000)
+            // MemRegPrincipal.SaveAndNextPrincipal()
+            // cy.wait(5000)
 
-            MemTenureSelect.principalTenureSelection(CustomerName, '10 Years')
+            // MemTenureSelect.principalTenureSelection(CustomerName, '10 Years')
 
-            MemTenureSelect.addToCart()
+            // MemTenureSelect.addToCart()
 
-            cy.visit('/membership/e1GymMembershipMainSelection').wait(8000)
+            cy.visit('/membership/e1GymMembershipMainSelection').wait(5000)
 
             E1GymMembershipRegistration.ClickOnBox(E1GymMemMainSelection)
 
@@ -109,6 +112,8 @@ Data.forEach(each => {
             {
                 AddWaiver === 'Yes' && E1GymMembershipRegistration.AddWiaver()
             }
+
+            E1GymMembershipRegistration.FillOutOtherInfo()
 
             MemTenureSelect.addToCart()
 

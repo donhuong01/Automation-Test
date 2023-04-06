@@ -147,6 +147,21 @@ class E1GymMembershipRegistration {
         cy.xpath('//label[@for="membershipPeriod"]').should('be.visible')
 
     }
+    /*****************************************************
+         * Method: FillOutOtherInfo
+         * Description: This function fillout other information
+
+        *****************************************************/
+    FillOutOtherInfo() {
+        
+        cy.Click(elems_E1GymMembershipRegistaration.CHK_TERMCONDITION)
+        cy.Click(elems_E1GymMembershipRegistaration.CHK_INDEMNITYWAIVER)
+        
+       
+
+    }
+
+    
 
 
 }
