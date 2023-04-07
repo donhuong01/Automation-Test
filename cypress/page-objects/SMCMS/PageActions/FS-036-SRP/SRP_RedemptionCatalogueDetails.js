@@ -48,6 +48,7 @@ class SRPRedemptionCatalogueDetail {
         cy.SelectDropDownItem(elems_SRPREDEMPTIONCATALOGUEDETAIL.DRP_CATEGORY, Category)
         cy.EnterDate(elems_SRPREDEMPTIONCATALOGUEDETAIL.DATE_PUBLISHSTARTDATE, PublishStartDate)
         cy.EnterDate(elems_SRPREDEMPTIONCATALOGUEDETAIL.DATE_PUBLISHENDDATE, PublishEndDate)
+        cy.xpath(elems_SRPREDEMPTIONCATALOGUEDETAIL.TXT_EXPIRYCOLLECTION).clear()
         cy.EnterText(elems_SRPREDEMPTIONCATALOGUEDETAIL.TXT_EXPIRYCOLLECTION, ExpiryCollection)
         cy.TickCheckBox(elems_SRPREDEMPTIONCATALOGUEDETAIL.CHK_FEATURED, Featured)
         cy.wait(1000)
@@ -67,7 +68,9 @@ class SRPRedemptionCatalogueDetail {
             elems_SRPREDEMPTIONCATALOGUEDETAIL.BTN_SOURCECHANNELSEARCHFILTERS)
         cy.wait(2000)
 
+        cy.xpath(elems_SRPREDEMPTIONCATALOGUEDETAIL.TXT_REDEMPTIONAMOUNT).clear()
         cy.EnterText(elems_SRPREDEMPTIONCATALOGUEDETAIL.TXT_REDEMPTIONAMOUNT, RedemptionAmount)
+        cy.xpath(elems_SRPREDEMPTIONCATALOGUEDETAIL.TXT_REDEMPTIONPOINT).clear()
         cy.EnterText(elems_SRPREDEMPTIONCATALOGUEDETAIL.TXT_REDEMPTIONPOINT, RedemptionPoint)
 
     }

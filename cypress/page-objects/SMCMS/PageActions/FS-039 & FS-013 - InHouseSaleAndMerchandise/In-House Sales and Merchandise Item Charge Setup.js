@@ -38,7 +38,7 @@ class InHouseSaleAndMerchandiseItemChargeSetup {
        ***************************************************/
     GeneralInformation(Type, ItemName, LocationName, LifeStyle, FabsGroup, ClubClassification, SMCClassification) {
         if (Type === 'InHouse') {
-            cy.EnterText(elems_InHouseSaleAndMerchandiseItemChargeSetup.TXT_ITEMNAME, ItemName)
+            cy.EnterText(elems_InHouseSaleAndMerchandiseItemChargeSetup.TXT_INHOUSESALEITEMNAME, ItemName)
             cy.SelectPickerItem(elems_InHouseSaleAndMerchandiseItemChargeSetup.PCK_LOCATION, LocationName)
             cy.SelectPickerDifferentItemsSeachBTN(elems_InHouseSaleAndMerchandiseItemChargeSetup.PCK_LIFEGROUP, '//input[@id="txtCodeName"]', LifeStyle,
                 '//button[text()="Search Filters"]')
@@ -49,7 +49,7 @@ class InHouseSaleAndMerchandiseItemChargeSetup {
             cy.SelectPickerDifferentItemsSeachBTN(elems_InHouseSaleAndMerchandiseItemChargeSetup.PCK_SMCCLASSIFICATION, '//input[@id="txtCodeName"]', SMCClassification,
                 '//button[text()="Search Filters"]')
         } else {
-            cy.EnterText(elems_InHouseSaleAndMerchandiseItemChargeSetup.TXT_ITEMNAME, ItemName)
+            cy.EnterText(elems_InHouseSaleAndMerchandiseItemChargeSetup.TXT_INHOUSESALEITEMNAME, ItemName)
             cy.SelectPickerItem(elems_InHouseSaleAndMerchandiseItemChargeSetup.PCK_LOCATION, LocationName)
             cy.SelectPickerDifferentItemsSeachBTN(elems_InHouseSaleAndMerchandiseItemChargeSetup.PCK_LIFEGROUP, '//input[@id="txtCodeName"]', LifeStyle, '//button[text()="Search Filters"]')
             cy.SelectPickerDifferentItemsSeachBTN(elems_InHouseSaleAndMerchandiseItemChargeSetup.PCK_FABSGROUP, '//input[@id="txtCodeName"]', FabsGroup, '//button[text()="Search Filters"]')
@@ -69,9 +69,9 @@ class InHouseSaleAndMerchandiseItemChargeSetup {
 
         cy.Click(elems_InHouseSaleAndMerchandiseItemChargeSetup.CHARGERATE.BTN_ADDCHARGETYPE)
         cy.EnterText(elems_InHouseSaleAndMerchandiseItemChargeSetup.CHARGERATE.TXT_CHARGENAME, ChargeName)
-        cy.SelectDropDownItem(elems_InHouseSaleAndMerchandiseItemChargeSetup.CHARGERATE.DRP_TRANSACTIONTYPE, TransactionType)
-        cy.SelectDropDownItem(elems_InHouseSaleAndMerchandiseItemChargeSetup.CHARGERATE.DRP_CALCULATIONTYPE, CalculationType)
-        cy.SelectDropDownItem(elems_InHouseSaleAndMerchandiseItemChargeSetup.CHARGERATE.DRP_AMOUNTTYPE, AmountType)
+        cy.SelectDropDownItem(elems_InHouseSaleAndMerchandiseItemChargeSetup.CHARGERATE.TXT_TRANSACTIONTYPE, TransactionType)
+        cy.SelectDropDownItem(elems_InHouseSaleAndMerchandiseItemChargeSetup.CHARGERATE.TXT_CALCULATIONTYPE, CalculationType)
+        cy.SelectDropDownItem(elems_InHouseSaleAndMerchandiseItemChargeSetup.CHARGERATE.TXT_AMOUNTTYPE, AmountType)
 
     }
     /*****************************************************

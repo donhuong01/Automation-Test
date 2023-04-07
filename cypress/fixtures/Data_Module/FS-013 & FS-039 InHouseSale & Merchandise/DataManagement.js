@@ -13,7 +13,7 @@ const data = {
         CalculationType: 'Per Item',
         AmountType: 'Fixed Value',
         CategoryName: 'All Customer Category',
-        ProductNumber: 'PROD003',
+        ProductNumber: "2 MCDONALD'S GIFT CERTIFICATE",
         Remarks: 'test',
         EarnSAFRAPoints: 'CHECK'
     },

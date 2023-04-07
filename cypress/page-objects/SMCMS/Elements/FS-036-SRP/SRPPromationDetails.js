@@ -51,7 +51,7 @@ class elems_SRPPromationDetails {
     static MEMBERTYPES = {
 
         BTN_ADD: '(//h3[text()="Member Types"]//following::div//button)[1]',
-        TXT_MEMBERTYPENAME: '//label[text()="Member Type Name"]/following-sibling::div/input[@id="txtName"]',
+        TXT_MEMBERTYPENAME: '(//input[@id="txtName"])[2]',
 
         BTN_SEARCHFILTERS: '//button[text()="Search Filters"]',
         BTN_SELECT: '//button[text()="Select"]',

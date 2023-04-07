@@ -14,7 +14,8 @@ class elems_InHouseSaleItemChargeSetup {
     static PCK_FABSGROUP = '//label[text()="FABS Group"]/following-sibling::div//button'
     static PCK_CLUBCLASSIFICATION = '//label[text()="Club Classification"]/following-sibling::div//button'
     static PCK_SMCCLASSIFICATION = '//label[text()="SMC Classification"]/following-sibling::div//button'
-
+    static TXT_UNITSPERSET = '//input[@id="txtUnitsPerSet"]'
+    static TXT_PERCHASELIMITPERMEMBER = '//input[@id="txtPurchaseLimitPerMember"]'
     //Charge Rate
     static CHARGERATE = {
         BTN_ADDCHARGETYPE: '//button[text()="Add Charge Type"]',
@@ -39,6 +40,9 @@ class elems_InHouseSaleItemChargeSetup {
     static CHK_EARNSAFRAPOPINTS = '//input[@id="chkEarnSAFRAPoints"]'
     static PCK_PRODUCT = '//label[text()="Product"]/following-sibling::div//button'
     static TXT_REMARKS = '//textarea[@id="txtRemarks"]'
+    static BTN_SEARCHFILTERS = "//button[text()='Search Filters']"
+    static TXT_PRODUCTNUMBER = '//input[@name="productName"]'
+
 
     //Select Product Code
     static PRODUCTCODE = {

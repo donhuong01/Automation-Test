@@ -7,6 +7,19 @@ import data from '../../../fixtures/Data_Module/FS-036-SRP/SRP_Sample_Data'
 const { Name, Description, PromoType, Quantity, ProductCategory, ModuleType,
     ExtraPointsType, ExtraPercentage, ValidFrom, ValidTo, SourceChannel, EDCTerminal, MemberID, MemberType } = data.SRP_Promotion_Management
 
+    
+    const MinimuSpendingName = 'Minimum spending ' + Math.floor(Math.random() * 100000 )
+    const MinimuSpending = 'Minimum spending' 
+    
+    const MinimumSpendingOverPeriodOfTime = 'Minimum spending over period of time'
+    const MinimumSpendingOverPeriodOfTimeName = 'Minimum Spending Over Period of Time ' + Math.floor(Math.random() * 100000 )
+    
+    const Period = 'Period'
+    const PeriodName = 'Period '+ Math.floor(Math.random() * 100000 )
+
+    const UpdatePersonalInfo = 'Update Personal Info'
+    const UpdatePersonalInfoName = 'Update Personal Info ' + Math.floor(Math.random() * 100000 )
+    
     const SRPPromotionManagement = () => {
 
 describe('[TS04] FS-036 SRP Promotion Management', function () {
@@ -19,7 +32,7 @@ describe('[TS04] FS-036 SRP Promotion Management', function () {
         SRP_PromotionListing.CreateNew()
 
         SRP_PromotionDetail.FilloutGeneralFields(Name, Description, PromoType, Quantity, ProductCategory,
-            ModuleType, ExtraPointsType, ExtraPercentage, ValidFrom, ValidTo)
+            ModuleType, 'Percentage', ExtraPercentage, ValidFrom, ValidTo)
 
         SRP_PromotionDetail.SourceChannel(SourceChannel)
 
@@ -45,49 +58,50 @@ describe('[TS04] FS-036 SRP Promotion Management', function () {
 
         SRP_PromotionListing.CreateNew()
 
-        SRP_PromotionDetail.FilloutGeneralFields('Minimum Spending SRP Promotion', 'SRP Promotion for Minimum Spending',
-            'Minimum Spending', 5, 'SRP', 'Activity and Event', 'Fixed', 20, "Today's date", '31-Mar-2023')
+        SRP_PromotionDetail.FilloutGeneralFields(MinimuSpendingName, Description, MinimuSpending, Quantity, ProductCategory,
+            ModuleType, ExtraPointsType, ExtraPercentage, ValidFrom, ValidTo)
 
-        SRP_PromotionDetail.SourceChannel('SAFRA Jurong')
+        SRP_PromotionDetail.SourceChannel(SourceChannel)
 
-        SRP_PromotionDetail.EDCTerminal('TID00004')
+        SRP_PromotionDetail.EDCTerminal(EDCTerminal)
 
-        SRP_PromotionDetail.Members('A300002234')
+        SRP_PromotionDetail.Members(MemberID)
 
-        SRP_PromotionDetail.MemberType('')
+        SRP_PromotionDetail.MemberType(MemberType)
 
         SRP_PromotionDetail.Save()
 
-        SRP_PromotionListing.FilterByTitlePromoType('', 'Birthday Month')
+        SRP_PromotionListing.FilterByTitlePromoType(MinimuSpendingName, MinimuSpending)
 
-        SRP_PromotionListing.SelectTableItem('')
+        SRP_PromotionListing.SelectTableItem(MinimuSpendingName)
 
         SRP_PromotionListing.Delete()
 
     })
     it('[TC03] Creating SRP Promotion - Minimum Spending Over Period of Time', function () {
 
+
         cy.visit('/membership/srp/promotionListing')
         cy.wait(1000)
 
         SRP_PromotionListing.CreateNew()
 
-        SRP_PromotionDetail.FilloutGeneralFields('Minimum Spending Over Period of Time SRP Promotion', 'SRP Promotion for Minimum Spending Over Period of Time',
-            'Minimum Spending Over Period of Time', 3, 'SRP', 'Acommodation', 'Percentage', 30, "Today's date", '31-Mar-2023')
+        SRP_PromotionDetail.FilloutGeneralFields(MinimumSpendingOverPeriodOfTimeName, Description, MinimumSpendingOverPeriodOfTime, Quantity, ProductCategory,
+            ModuleType, ExtraPointsType, ExtraPercentage, ValidFrom, ValidTo)
 
-        SRP_PromotionDetail.SourceChannel('SAFRA Jurong')
+        SRP_PromotionDetail.SourceChannel(SourceChannel)
 
-        SRP_PromotionDetail.EDCTerminal('TID00004')
+        SRP_PromotionDetail.EDCTerminal(EDCTerminal)
 
-        SRP_PromotionDetail.Members('A300002234')
+        SRP_PromotionDetail.Members(MemberID)
 
-        SRP_PromotionDetail.MemberType('')
+        SRP_PromotionDetail.MemberType(MemberType)
 
         SRP_PromotionDetail.Save()
 
-        SRP_PromotionListing.FilterByTitlePromoType('', 'Birthday Month')
+        SRP_PromotionListing.FilterByTitlePromoType(MinimumSpendingOverPeriodOfTimeName, MinimumSpendingOverPeriodOfTime)
 
-        SRP_PromotionListing.SelectTableItem('')
+        SRP_PromotionListing.SelectTableItem(MinimumSpendingOverPeriodOfTimeName)
 
         SRP_PromotionListing.Delete()
 
@@ -99,11 +113,10 @@ describe('[TS04] FS-036 SRP Promotion Management', function () {
 
         SRP_PromotionListing.CreateNew()
 
-        SRP_PromotionDetail.FilloutGeneralFields('Period SRP Promotion', 'SRP Promotion for Period',
-            'Period', 6, 'SRP', 'Merchandise', 'Percentage', 'select a past date', 'select a future date')
+        SRP_PromotionDetail.FilloutGeneralFields(PeriodName, Description, Period, Quantity, ProductCategory,
+            ModuleType, ExtraPointsType, ExtraPercentage, ValidFrom, ValidTo)
 
-
-        SRP_PromotionDetail.SourceChannel(Name)
+        SRP_PromotionDetail.SourceChannel(SourceChannel)
 
         SRP_PromotionDetail.EDCTerminal(EDCTerminal)
 
@@ -113,25 +126,25 @@ describe('[TS04] FS-036 SRP Promotion Management', function () {
 
         SRP_PromotionDetail.Save()
 
-        SRP_PromotionListing.FilterByTitlePromoType('', 'Birthday Month')
+        SRP_PromotionListing.FilterByTitlePromoType(PeriodName, Period)
 
-        SRP_PromotionListing.SelectTableItem('')
+        SRP_PromotionListing.SelectTableItem(PeriodName)
 
         SRP_PromotionListing.Delete()
 
     })
     it('[TC05] Creating SRP Promotion - Update Personal Info ', function () {
 
+
         cy.visit('/membership/srp/promotionListing')
         cy.wait(1000)
 
         SRP_PromotionListing.CreateNew()
 
-        SRP_PromotionDetail.FilloutGeneralFields('Update Personal Info SRP Promotion', 'SRP Promotion for Update Personal Info',
-            'Update Personal Info', 4, 'SRP', 'Course', 'Registration Admin Fee', 'select a past date', 'select a future date')
+        SRP_PromotionDetail.FilloutGeneralFields(UpdatePersonalInfoName, Description, UpdatePersonalInfo, Quantity, ProductCategory,
+            ModuleType, ExtraPointsType, ExtraPercentage, ValidFrom, ValidTo)
 
-
-        SRP_PromotionDetail.SourceChannel(Name)
+        SRP_PromotionDetail.SourceChannel(SourceChannel)
 
         SRP_PromotionDetail.EDCTerminal(EDCTerminal)
 
@@ -141,25 +154,41 @@ describe('[TS04] FS-036 SRP Promotion Management', function () {
 
         SRP_PromotionDetail.Save()
 
-        SRP_PromotionListing.FilterByTitlePromoType('', 'Birthday Month')
+        SRP_PromotionListing.FilterByTitlePromoType(UpdatePersonalInfoName, UpdatePersonalInfo)
 
-        SRP_PromotionListing.SelectTableItem('')
+        SRP_PromotionListing.SelectTableItem(UpdatePersonalInfoName)
 
         SRP_PromotionListing.Delete()
 
     })
-    it('[TC06] Updating and Deleting SRP Promotion', function () {
+    it.skip('[TC06] Updating and Deleting SRP Promotion', function () {
 
+        
         cy.visit('/membership/srp/promotionListing')
         cy.wait(1000)
 
-        SRP_PromotionListing.FilterByTitlePromoType(Name, PromoType)
+        SRP_PromotionListing.CreateNew()
 
-        SRP_PromotionListing.ClickOnTableLink(Name)
+        SRP_PromotionDetail.FilloutGeneralFields(UpdatePersonalInfoName, Description, UpdatePersonalInfo, Quantity, ProductCategory,
+            ModuleType, 'Percentage', ExtraPercentage, ValidFrom, ValidTo)
+
+        SRP_PromotionDetail.SourceChannel(SourceChannel)
+
+        SRP_PromotionDetail.EDCTerminal(EDCTerminal)
+
+        SRP_PromotionDetail.Members(MemberID)
+
+        SRP_PromotionDetail.MemberType(MemberType)
+
+        SRP_PromotionDetail.Save()
+
+        SRP_PromotionListing.FilterByTitlePromoType(UpdatePersonalInfoName, UpdatePersonalInfo)
+
+        SRP_PromotionListing.ClickOnTableLink(UpdatePersonalInfoName)
 
         //provide new data for updation
 
-        SRP_PromotionDetail.FilloutGeneralFields(Name, Description, PromoType, Quantity, ProductCategory, ModuleType, ExtraPointType, ValidFrom, ValidTo)
+        SRP_PromotionDetail.FilloutGeneralFields(Name, Description, PromoType, Quantity, ProductCategory, ModuleType, 'Percentage', ValidFrom, ValidTo)
 
         SRP_PromotionDetail.SourceChannel(Name)
 

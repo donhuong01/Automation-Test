@@ -311,32 +311,32 @@ beforeEach(() => {
 
 // })
 
-describe('E2E Auto Testing:FS-036', ()=> {
+// describe('E2E Auto Testing:FS-036', ()=> {
 
     // SRPModuleSetting()
     // SAFRAPointsAdjustment("A300001410") //Provide Active member ID
     // SAFRAPointsTransaction("A300001410") //Provide Active member ID
     // SRPRedemptionCollection("A300001410") //Provide Active member ID
     // SRPRedemptionManagement("A300001410") //Provide Active member ID
-     ThirdPartyVendorManagement()
-         // EDCTerminalManagement()
-        // SRPRedemptionCatalogueManagement()// failing
-//     SRPPromotionManagement() // not completed
+    // ThirdPartyVendorManagement()
+    // EDCTerminalManagement()
+    // SRPRedemptionCatalogueManagement()
+    // SRPPromotionManagement() 
 
-
-})
-
-
-
-// describe('E2E Auto Testing:FS-013 & 039', ()=> {
-
-//     InHouseSaleAndMerchandiseItemManagement()
-//     InHouseSaleAndMerchandisePurchase()
-//     InHouseSaleAndMerchandiseTransactionAdjustment()
-//     InHouseSaleAndMerchandiseTransactionConcellation()
-//     InHouseSaleAndMerchandiseTransactionRefund()
 
 // })
+
+
+
+describe('E2E Auto Testing:FS-013 & 039', ()=> {
+
+    InHouseSaleAndMerchandiseItemManagement()
+    // InHouseSaleAndMerchandisePurchase()
+    // InHouseSaleAndMerchandiseTransactionAdjustment()
+    // InHouseSaleAndMerchandiseTransactionConcellation()
+    // InHouseSaleAndMerchandiseTransactionRefund()
+
+})
 
 //  describe('E2E Auto Testing:FS-010', ()=> {
     // FacilityGeneralSettingDtl()

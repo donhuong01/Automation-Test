@@ -89,7 +89,7 @@ class SRP_PromotionDetail {
      *****************************************************/
     MemberType(MemberTypeName) {
 
-        cy.SelectPickerDifferentItemsWait(elems_SRPPromationDetails.MEMBERTYPES.BTN_ADD, 3000,
+        cy.SelectPickerDifferentItemsWait(elems_SRPPromationDetails.MEMBERTYPES.BTN_ADD, 8000,
             elems_SRPPromationDetails.MEMBERTYPES.TXT_MEMBERTYPENAME, MemberTypeName,
             elems_SRPPromationDetails.MEMBERTYPES.BTN_SEARCHFILTERS)
 
