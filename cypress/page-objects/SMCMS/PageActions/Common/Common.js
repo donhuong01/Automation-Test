@@ -123,15 +123,25 @@ class Commons {
 
     }
 
-        /*****************************************************
-         * Method: AddToCart
-         * Description: This function Click on Add To Cart button
-        *****************************************************/
-        AddToCart() {
+    /*****************************************************
+     * Method: AddToCart
+     * Description: This function Click on Add To Cart button
+    *****************************************************/
+    AddToCart() {
 
-            cy.Click('//button[text()="Add to Cart"]')
-            cy.wait(15000)
-        }
+        cy.Click('//button[text()="Add to Cart"]')
+        cy.wait(15000)
+    }
+
+    /*****************************************************
+     * Method: AddToCart
+     * Description: This function Click on Add To Cart button
+    *****************************************************/
+    WaitFor(wait) {
+
+        cy.visit('/membership/customerCheckin')
+        cy.wait(wait)
+    }
 
 }
 

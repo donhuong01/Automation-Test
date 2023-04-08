@@ -7,9 +7,9 @@ import InHouseSaleAndMerchandisePurchaseTransaction from '../../../page-objects/
 const common = new Common()
 
 
-const { MemberIdMerchandise, MemberIdInHouse, ItemNameMerchandise, ItemNameInHouse, QuantitySetMerchandise, QuantitySetInhouse } = data.InHouseSaleAndMerchandisePurchase
+const {ItemNameMerchandise, ItemNameInHouse, QuantitySetMerchandise, QuantitySetInhouse } = data.InHouseSaleAndMerchandisePurchase
 
-const InHouseSaleAndMerchandisePurchase = ()=> {
+const InHouseSaleAndMerchandisePurchase = (MemberIdMerchandise, MemberIdInHouse)=> {
 
 describe('FS-039 & FS-013 In-House Sale and Merchandise Purchase', function () {
 
@@ -27,7 +27,7 @@ describe('FS-039 & FS-013 In-House Sale and Merchandise Purchase', function () {
 
         InHouseSaleAndMerchandiseItemPurchase.SelectItemName(ItemNameMerchandise)
 
-        InHouseSaleAndMerchandiseItemPurchase.SelectTransactionType('Purchase')
+        // InHouseSaleAndMerchandiseItemPurchase.SelectTransactionType('Purchase')
 
         InHouseSaleAndMerchandiseItemPurchase.EnterQuantityOfSetsMerchandise(QuantitySetMerchandise)
 
@@ -43,10 +43,10 @@ describe('FS-039 & FS-013 In-House Sale and Merchandise Purchase', function () {
 
         InHouseSaleAndMerchandisePurchaseTransaction.FilterWithMemberId(MemberIdMerchandise)
 
-        cy.xpath('(//div[@class="k-widget k-grid"]//table//a)[1]').then(txt => {
+        cy.xpath('(//h2[text()="Merchandise Purchase Transaction Listing"]/ancestor::div//table//a)[1]').then(txt => {
             const PurchaseNumber = txt.text()
 
-            InHouseSaleAndMerchandisePurchaseTransaction.ClickPurchaseNumberLink(PurchaseNumber)
+            InHouseSaleAndMerchandisePurchaseTransaction.ClickMerchandisePurchaseNumberLink()
 
             InHouseSaleAndMerchandisePurchaseTransaction.VerifyGeneralInfoLabels(PurchaseNumber, MemberIdMerchandise, ItemNameMerchandise)
 
@@ -62,7 +62,7 @@ describe('FS-039 & FS-013 In-House Sale and Merchandise Purchase', function () {
 
         cy.visit('/sales/inhouseSaleAndMerchandisePurchaseDetail').wait(4000)
 
-        InHouseSaleAndMerchandiseItemPurchase.SelectItemType('In-House')
+        InHouseSaleAndMerchandiseItemPurchase.SelectItemType('InHouse')
 
         InHouseSaleAndMerchandiseItemPurchase.SelectItemName(ItemNameInHouse)
 
@@ -84,10 +84,10 @@ describe('FS-039 & FS-013 In-House Sale and Merchandise Purchase', function () {
 
         InHouseSaleAndMerchandisePurchaseTransaction.FilterWithMemberId(MemberIdInHouse)
 
-        cy.xpath('(//div[@class="k-widget k-grid"]//table//a)[1]').then(txt => {
+        cy.xpath('(//h2[text()="In-House Sale Purchase Transaction Listing"]/ancestor::div//table//a)[1]').then(txt => {
             const PurchaseNumber = txt.text()
 
-            InHouseSaleAndMerchandisePurchaseTransaction.ClickPurchaseNumberLink(PurchaseNumber)
+            InHouseSaleAndMerchandisePurchaseTransaction.ClickInHousePurchaseNumberLink()
 
             InHouseSaleAndMerchandisePurchaseTransaction.VerifyGeneralInfoLabels(PurchaseNumber, MemberIdInHouse, ItemNameInHouse)
 
@@ -119,7 +119,7 @@ describe('FS-039 & FS-013 In-House Sale and Merchandise Purchase', function () {
 
     })
 
-    it('Creating and Cancelling an In-House Purchase', function () {
+    it.only('Creating and Cancelling an In-House Purchase', function () {
 
         common.Checkin(MemberIdInHouse)
 

@@ -20,8 +20,10 @@
     },
     "video": false,
     "baseUrl":"https://uat-smcms.safra.sg",
-    "viewportWidth": 1280,
-    "viewportHeight": 1280
+    
+    "viewportWidth": 1520,
+    "viewportHeight": 1420
+    
     
 
   }

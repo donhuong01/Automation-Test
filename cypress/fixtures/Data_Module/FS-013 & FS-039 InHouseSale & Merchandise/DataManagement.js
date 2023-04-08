@@ -1,8 +1,8 @@
 const data = {
 
     InHouseSaleAndMerchandiseItemChargeSetup: {
-        MerchandiseItemName: 'Auto-Merchant' + Math.floor(Math.random() * 100),
-        InhouseItemName: 'Auto-Inhouse' + Math.floor(Math.random() * 100),
+        MerchandiseItemName: 'Auto-Merchant ' + Math.floor(Math.random() * 10000),
+        InhouseItemName: 'Auto-Inhouse ' + Math.floor(Math.random() * 10000),
         LocationName: 'SAFRA Jurong',
         LifeStyle: 'Facilities',
         FabsGroup: 'Benefits',
@@ -21,8 +21,8 @@ const data = {
     InHouseSaleAndMerchandisePurchase: {
         MemberIdMerchandise: 'A300001148',
         MemberIdInHouse: 'A300001825',
-        ItemNameMerchandise: 'Hoodie',
-        ItemNameInHouse: 'Rolex Watch',
+        ItemNameMerchandise: 'Snoods',
+        ItemNameInHouse: 'Key Chain',
         QuantitySetMerchandise: '2',
         QuantitySetInhouse: '1',
     },

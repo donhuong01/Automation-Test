@@ -1,7 +1,7 @@
 class elems_MerchandiseInHouseSalePurcahse {
 
    static BTN_ADDTOCARD = '//button[@form="formSalesPurchase"]'
-   static TXT_CANCEL = '//button[text()="Cancel"]'
+   static BTN_CANCEL = '//button[text()="Cancel"]'
    static RAD_INHOUSESALEITEM = '//label[text()="In-House Sale Item"]/preceding-sibling::input'
    static RAD_MERCHANDISEITEM = '//label[text()="Merchandise Item"]/preceding-sibling::input'
    static LBL_PURCHASENUMBER = '//label[@for="lblPurchaseNumber"]'

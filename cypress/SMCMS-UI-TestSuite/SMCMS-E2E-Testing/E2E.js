@@ -136,11 +136,12 @@ import InHouseSaleAndMerchandiseTransactionAdjustment from '../Sub-Phase-3/FS-03
 import InHouseSaleAndMerchandiseTransactionConcellation from '../Sub-Phase-3/FS-039&FS-013-InHouseSaleAndMerchandise/InHouseSaleAndMerchandiseTransactionCancellation'
 import InHouseSaleAndMerchandiseTransactionRefund from '../Sub-Phase-3/FS-039&FS-013-InHouseSaleAndMerchandise/InHouseSaleAndMerchandiseTransactionRefund'
 
-//E2E DATA 
-import E2EData from '../SMCMS-E2E-Testing/E2EDataConfigUAT'
-
 //FS - 040 Club Sales
 // import ReceiptManagement from '../E2E-Scripts/FS-040/E2E-Receipt-Management'
+
+//E2E DATA 
+import E2EData from '../SMCMS-E2E-Testing/E2EDataConfigUAT'
+import WaitFor from '../../page-objects/SMCMS/PageActions/Common/WaitFor'
 
 import login from '../../fixtures/login'
 
@@ -152,10 +153,13 @@ beforeEach(() => {
     // Set local storage for UAT Enviroment
     cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
 })
+
+const wait = 20000
  
 // describe('E2E Auto Testing:FS-001', () => {
 
 //     OnlineAccountAccess() 
+//     WaitFor(wait)  
 //     SMCMSPostion()
 //     SMCMSRole() 
 //     SMCMSUser() 
@@ -293,35 +297,35 @@ beforeEach(() => {
 // describe('E2E Auto Testing:FS-016', ()=> {
 
 
-    // InterestGroupMembershipRegistration("S2102786C") //Change NRIC each time after runing this code
-    // InterestGMembershipRenewal("A300001781") //Change NRIC each time after runing this code
+//     InterestGroupMembershipRegistration(E2EData.MEMBERID_FOR_IG_REGISTRATION) //Change NRIC each time after runing this code
+//     InterestGMembershipRenewal(E2EData.MEMBERID_FOR_IG_RENEWAL) //Change NRIC each time after runing this code
 
-    // BatchMemRegWithExistingMemUsingDefaultIG("A300000511") //Provide Active member ID
-    // BatchMemRegWithExistingMemUsingNonDefaultIG("A300001194") //Provide Active member ID
-    // InterestGroupDeactivation(
-    // InterestGroupConversion("Testuser007") //Please Provide Active Member Name
-    // InterestGroupDeferment("MemBR 1") //Please Provide Active Member Name
-    //  InterestGMembershipTermination("A300001811","Tong Hui") // Provide MemberId and Member Name
-    // IGMembershipReinstatement("A300001811", "Tong Hui")
-    // InterestGMembershipReverse("Auto-User4345") //Provide Member Name
-    // InterestGMembershipwaiver("Auto-User7632")  //Provide Member Name
-    // InterestGroupManagement()
-    // InterestGroupMembershipManagment()
+//     BatchMemRegWithExistingMemUsingDefaultIG(E2EData.BATCH_MEMBER_REGISTRATION_WITH_EXISTING_MEMBER_USING_DEFUALT_IG) //Provide Active member ID
+//     BatchMemRegWithExistingMemUsingNonDefaultIG(E2EData.BATCH_MEMBER_REGISTRATION_WITH_EXISTING_MEMBER_USING_NON_DEFUALT_IG) //Provide Active member ID
+//     InterestGroupDeactivation()
+//     InterestGroupConversion(E2EData.MEMBER_NAME_FOR_IG_CONVERSION ) //Please Provide Active Member Name
+//     InterestGroupDeferment(E2EData.MEMBER_NAME_FOR_IG_DEFERMENT) //Please Provide Active Member Name
+//      InterestGMembershipTermination(E2EData.MEMBERID_AND_NAME_FOR_IG_TERMINATION.MEMBERID, E2EData.MEMBERID_AND_NAME_FOR_IG_TERMINATION.MEMBERNAME) // Provide MemberId and Member Name
+//     IGMembershipReinstatement(E2EData.MEMBERID_FOR_IG_REINSTATEMENT.MEMBERID, E2EData.MEMBERID_FOR_IG_REINSTATEMENT.MEMBERNAME)
+//     InterestGMembershipReverse(E2EData.MEMBER_NAME_FOR_IG_REVERSAL) //Provide Member Name
+//     InterestGMembershipwaiver(E2EData.MEMBER_NAME_FOR_IG_WAIVER)  //Provide Member Name
+//     InterestGroupManagement()
+//     InterestGroupMembershipManagment()
 
 
 // })
 
 // describe('E2E Auto Testing:FS-036', ()=> {
 
-    // SRPModuleSetting()
-    // SAFRAPointsAdjustment("A300001410") //Provide Active member ID
-    // SAFRAPointsTransaction("A300001410") //Provide Active member ID
-    // SRPRedemptionCollection("A300001410") //Provide Active member ID
-    // SRPRedemptionManagement("A300001410") //Provide Active member ID
-    // ThirdPartyVendorManagement()
-    // EDCTerminalManagement()
-    // SRPRedemptionCatalogueManagement()
-    // SRPPromotionManagement() 
+//     SRPModuleSetting()
+//     SAFRAPointsAdjustment(E2EData.MEMBERID_FOR_SAFRA_POINTS_ADJUSTMENT) //Provide Active member ID
+//     SAFRAPointsTransaction(E2EData.MEMBERID_FOR_SAFRA_POINTS_TRANSACTION) //Provide Active member ID
+//     SRPRedemptionCollection(E2EData.SRP_REDEMPTION_COLLECTION) //Provide Active member ID
+//     SRPRedemptionManagement(E2EData.SRP_REDEMPTION_MANAGEMENT) //Provide Active member ID
+//     ThirdPartyVendorManagement()
+//     EDCTerminalManagement()
+//     SRPRedemptionCatalogueManagement()
+//     SRPPromotionManagement() 
 
 
 // })
@@ -330,8 +334,8 @@ beforeEach(() => {
 
 describe('E2E Auto Testing:FS-013 & 039', ()=> {
 
-    InHouseSaleAndMerchandiseItemManagement()
-    // InHouseSaleAndMerchandisePurchase()
+    // InHouseSaleAndMerchandiseItemManagement()
+    InHouseSaleAndMerchandisePurchase('A300001467','A300001452') //Enter Machandise and In-House sale Member IDs 
     // InHouseSaleAndMerchandiseTransactionAdjustment()
     // InHouseSaleAndMerchandiseTransactionConcellation()
     // InHouseSaleAndMerchandiseTransactionRefund()

@@ -1,13 +1,14 @@
-class elems_InHouseSaleMerchandiseItemListing {
+class elems_InHouseSaleMerchandiseTransactionListing {
 
         static RAD_INHOUSESALEITEM = '//label[text()="In-House Sale Item"]/preceding-sibling::input'
         static RAD_MERCHANDISEITEM = '//label[text()="Merchandise Item"]/preceding-sibling::input'
         static TXT_RECIEPTNUMBER = '//input[@id="txtReceiptNumber"]'
         static PCK_MEMBERID = '//label[text()="Member ID"]/following-sibling::div//button'
+        static TXT_MEMBERID = '//label[text()="Member ID"]/following-sibling::input[@name="memberId"]'
         static DATE_TRANSACTIONDATEFROM = '//input[@id="stpTransactionDateFrom"]'
         static DATE_TRANSACTIONDATETO = '//input[@id="stpTransactionDateTo"]'
-        static BTN_SEARCHFILTERS = '//button[text()="Search Filters"]'
-        static TBL_PURCHASETRANSACTIONLIST = '//div[@class="k-widget k-grid"]//table'
+        static BTN_SEARCHFILTERS = '(//button[text()="Search Filters"])[1]'
+        static TBL_PURCHASETRANSACTIONLIST = '//h2[text()="Merchandise Purchase Transaction Listing"]/ancestor::div//table'
 
         static InHouseSalePurchase = {
 
@@ -22,4 +23,4 @@ class elems_InHouseSaleMerchandiseItemListing {
 
 }
 
-export default elems_InHouseSaleMerchandiseItemListing
+export default elems_InHouseSaleMerchandiseTransactionListing

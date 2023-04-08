@@ -43,11 +43,14 @@ describe('FS-039 & FS-013 In-House Sales and Merchandise Item Management', funct
 
         common.ApprovalWorkFlow('INS', 'Inhouse Sale Item Approval Workflow', 'Approve', 'test')
 
-        cy.wait(2000)
+        cy.wait(8000)
+
+        common.ApprovalWorkFlow('INS', 'Inhouse Sale Item Approval Workflow', 'Approve', 'test')
 
         cy.visit('/sales/inhouseSaleAndMerchandiseItemListing').wait(3000)
 
         InHouseAndMerchandise_Item_Listing.FilterBySaleItemName(InhouseItemName)
+        cy.wait(5000)
 
         InHouseAndMerchandise_Item_Listing.VerifyWorkflowStatus('Approved')
 
@@ -71,6 +74,8 @@ describe('FS-039 & FS-013 In-House Sales and Merchandise Item Management', funct
 
         InHouseSaleAndMerchandiseItemChargeSetup.SaveAsDraft()
 
+        InHouseAndMerchandise_Item_Listing.SelectItemType('Merchandise')
+
         InHouseAndMerchandise_Item_Listing.FilterBySaleItemName(MerchandiseItemName)
 
         InHouseAndMerchandise_Item_Listing.VerifyWorkflowStatus('Draft')
@@ -79,11 +84,15 @@ describe('FS-039 & FS-013 In-House Sales and Merchandise Item Management', funct
 
         InHouseSaleAndMerchandiseItemChargeSetup.SubmitForApproval()
 
-        common.ApprovalWorkFlow('INS', 'Inhouse Sale Item Approval Workflow', 'Approve', 'test')
+        common.ApprovalWorkFlow('MCD-', 'Merchandise Item Approval Workflow', 'Approve', 'test')
 
-        cy.wait(2000)
+        cy.wait(8000)
+
+        common.ApprovalWorkFlow('MCD-', 'Merchandise Item Approval Workflow', 'Approve', 'test')
 
         cy.visit('/sales/inhouseSaleAndMerchandiseItemListing').wait(3000)
+
+        InHouseAndMerchandise_Item_Listing.SelectItemType('Merchandise')
 
         InHouseAndMerchandise_Item_Listing.FilterBySaleItemName(MerchandiseItemName)
 

@@ -38,6 +38,7 @@ class InHouseAndMerchandise_Item_Listing {
 
         cy.EnterText(elems_InHouseSaleMerchandiseItemListing.TXT_ITEMNAM, Name)
         cy.Click(elems_InHouseSaleMerchandiseItemListing.BTN_SEARCHFILTER)
+        cy.wait(5000)
 
 
     }
@@ -59,6 +60,7 @@ class InHouseAndMerchandise_Item_Listing {
     VerifyWorkflowStatus(Value) {
 
         cy.VerifyTableEntry(elems_InHouseSaleMerchandiseItemListing.TBL_INHOUSEMERCHANDISE, 'Workflow Status', Value)
+        cy.wait(4000)
 
     }
     /*****************************************************
@@ -75,11 +77,7 @@ class InHouseAndMerchandise_Item_Listing {
          * Description: This function click on Table link item
          ***************************************************/
     ClickTableLink() {
-        cy.wait(1000)
-        cy.xpath('//div[@class="k-widget k-grid"]//table//a').then(txt => {
-            const ItemID = txt.text()
-            cy.ClickTableLinkItem(elems_InHouseSaleMerchandiseItemListing.TBL_INHOUSEMERCHANDISE, 'In-House Sale Item ID', ItemID)
-        })
+        cy.Click('//div[@class="container-fluid"]//table//tbody//td[1]//a')
 
 
     }

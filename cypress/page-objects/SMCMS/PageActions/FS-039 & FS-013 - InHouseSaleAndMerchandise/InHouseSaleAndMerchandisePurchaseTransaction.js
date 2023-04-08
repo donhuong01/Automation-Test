@@ -1,14 +1,24 @@
 import elems_InHouseSaleMerchandiseTransactionListing from '../../Elements/In-House_Sale-&-Merchandise/MerchandiseInhousePurchaseTransactionList'
-
+import elems_Picker from '../../Elements/Common/Picker'
 class InHouseSaleAndMerchandisePurchaseTransaction {
 
     /*****************************************************
            * Method: ClickPurchaseNumberLink
            * Description: This function click on Table Link
            ***************************************************/
-    ClickPurchaseNumberLink(PurchaseNumber) {
+    ClickMerchandisePurchaseNumberLink() {
 
-        cy.ClickTableLinkItem(elems_InHouseSaleMerchandiseTransactionListing.TBL_PURCHASETRANSACTIONLIST, 'In-House Sale Purchase Number', PurchaseNumber)
+        cy.Click('(//h2[text()="Merchandise Purchase Transaction Listing"]/ancestor::div//table//a)[1]')
+        cy.wait(4000)
+
+    }
+    /*****************************************************
+           * Method: ClickPurchaseNumberLink
+           * Description: This function click on Table Link
+           ***************************************************/
+    ClickInHousePurchaseNumberLink() {
+
+        cy.Click('(//h2[text()="In-House Sale Purchase Transaction Listing"]/ancestor::div//table//a)[1]')
         cy.wait(4000)
 
     }
@@ -28,10 +38,17 @@ class InHouseSaleAndMerchandisePurchaseTransaction {
            ***************************************************/
     FilterWithMemberId(MemberID) {
 
-        cy.SelectPickerDifferentItems(elems_InHouseSaleMerchandiseTransactionListing.PCK_MEMBERID,
-            elems_InHouseSaleMerchandiseTransactionListing.TXT_MEMBERID, MemberID)
+        // cy.SelectPickerDifferentItems(elems_InHouseSaleMerchandiseTransactionListing.PCK_MEMBERID,
+        //     elems_InHouseSaleMerchandiseTransactionListing.TXT_MEMBERID, MemberID)
+        cy.Click(elems_InHouseSaleMerchandiseTransactionListing.PCK_MEMBERID)
+        cy.wait(5000)
+        cy.EnterText(elems_InHouseSaleMerchandiseTransactionListing.TXT_MEMBERID, MemberID)
         cy.wait(1000)
         cy.Click(elems_InHouseSaleMerchandiseTransactionListing.BTN_SEARCHFILTERS)
+        cy.SelectTableItem(elems_Picker.TBL_PICKERITEMS, "Member ID", MemberID)
+        cy.Click(elems_Picker.BTN_SELECT)
+        cy.Click(elems_InHouseSaleMerchandiseTransactionListing.BTN_SEARCHFILTERS)
+        cy.wait(5000)
 
     }
     /*****************************************************
