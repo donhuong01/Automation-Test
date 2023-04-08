@@ -318,7 +318,7 @@ const wait = 20000
 // describe('E2E Auto Testing:FS-036', ()=> {
 
 //     SRPModuleSetting()
-//     SAFRAPointsAdjustment(E2EData.MEMBERID_FOR_SAFRA_POINTS_ADJUSTMENT) //Provide Active member ID
+    // SAFRAPointsAdjustment(E2EData.MEMBERID_FOR_SAFRA_POINTS_ADJUSTMENT) //Provide Active member ID
 //     SAFRAPointsTransaction(E2EData.MEMBERID_FOR_SAFRA_POINTS_TRANSACTION) //Provide Active member ID
 //     SRPRedemptionCollection(E2EData.SRP_REDEMPTION_COLLECTION) //Provide Active member ID
 //     SRPRedemptionManagement(E2EData.SRP_REDEMPTION_MANAGEMENT) //Provide Active member ID
@@ -332,15 +332,15 @@ const wait = 20000
 
 
 
-describe('E2E Auto Testing:FS-013 & 039', ()=> {
+// describe('E2E Auto Testing:FS-013 & 039', ()=> {
 
     // InHouseSaleAndMerchandiseItemManagement()
-    InHouseSaleAndMerchandisePurchase('A300001467','A300001452') //Enter Machandise and In-House sale Member IDs 
-    // InHouseSaleAndMerchandiseTransactionAdjustment()
-    // InHouseSaleAndMerchandiseTransactionConcellation()
-    // InHouseSaleAndMerchandiseTransactionRefund()
+    // InHouseSaleAndMerchandisePurchase('A300001467','A300001452') //Enter Machandise and In-House sale Member IDs 
+    // InHouseSaleAndMerchandiseTransactionAdjustment('A300001443', 'A300001093') //Enter Machandise and In-House sale Member IDs 
+    // InHouseSaleAndMerchandiseTransactionConcellation('A300001446', 'A300000288')
+    // InHouseSaleAndMerchandiseTransactionRefund('A300000396', 'A300000288')
 
-})
+// })
 
 //  describe('E2E Auto Testing:FS-010', ()=> {
     // FacilityGeneralSettingDtl()
