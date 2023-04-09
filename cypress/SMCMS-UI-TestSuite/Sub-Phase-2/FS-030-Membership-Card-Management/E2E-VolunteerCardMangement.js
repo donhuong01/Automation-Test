@@ -1,12 +1,10 @@
-import VIPMemberCardGeneration from '../../../page-objects/SMCMS/PageActions/FS-030-Membership-Conversion-CardManagement/VipMemberCardGeneration'
 import VolunteerAppointmentTermRegistrationDetail from '../../../page-objects/SMCMS/PageActions/FS-025-Membership-VIP-Volunteer-Veteran-League/FS-025-Volunteer Appointment Term Registration/VolunteerAppointmentTermRegistrationDetail'
 import AppointmentTermRegistrationListingForm from '../../../page-objects/SMCMS/PageActions/FS-025-Membership-VIP-Volunteer-Veteran-League/FS-025-Volunteer Appointment Term Registration/VolunteerAppointmentTermRegistrationListing'
-import data from '../../../fixtures/Data_Module/FS-030-Membership-Card-Management/030-data'
-import VolunteerCard from '../../../page-objects/SMCMS/PageActions/FS-030-Membership Card Management/FS-030-Volunteer-Card/VolunteerCard'
 
+import VolunteerCard from '../../../page-objects/SMCMS/PageActions/FS-030-Membership Card Management/FS-030-Volunteer-Card/VolunteerCard'
+import data from '../../../fixtures/Data_Module/FS-030-Membership-Card-Management/030-data'
 
 const AppointmentTerm = new AppointmentTermRegistrationListingForm()
-const VIPMemberCard = new VIPMemberCardGeneration()
 const VolunteerCards = new VolunteerCard()
 const VolunterAppTermDetail = new VolunteerAppointmentTermRegistrationDetail()
 
@@ -23,7 +21,7 @@ const AppointmentTypeID = data.VolAppointmentTermRegistration.AppointmentTypeID
 
 const { ECard, PhysicalCard, CardType, CardCategory, MemberCategory, CardStatus} = data.VolunteerMemberCardGeneration
 
-const VolunteerCardManagement = () => {
+const VolunteerCardManagement = (MemberID, MemberName, Last4NRICNO, CardType) => {
 
 describe('[TS020] Volunteer Appointment Term Registration Managment', function () {
 

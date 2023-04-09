@@ -21,7 +21,7 @@ import VIPMemberCardGeneration from '../../../page-objects/SMCMS/PageActions/FS-
 
  const {Title, ECard, PhysicalCard, CardType, CardCategory, MemberCategory} = data.VIPMemberCardGeneration
 
- const VIPCardManagement = () => {
+ const VIPCardManagement = (MemberID, Name, NRIC, CardType) => {
 
 
 describe('[TS020] VIP Appointment Term Registration Managment', function () {

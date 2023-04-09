@@ -11,15 +11,15 @@ const data={
     ReceiptListing:{
 
         PageTitle:'Receipt Listing Form',
-        ReceiptNo:'JR-220707-000086',
-        MemberId:'A300000545',
+        ReceiptNo:'JR-230406-002376',
+        MemberId:'A300000278',
         Type:'Sales',
         PaymasterTransaction:'No',
-        ReceiptDateFrom:'07-Jul-2022',
+        ReceiptDateFrom:'06-Apr-2023',
         ReceiptDateTo:'',
         BatchId:'',
-        MemberName:'testuserS2771567B',
-        EarnSAFRAPoints:'405',
+        MemberName:'TestUser07252022',
+        EarnSAFRAPoints:'60',
         Status:'None'
 
     },

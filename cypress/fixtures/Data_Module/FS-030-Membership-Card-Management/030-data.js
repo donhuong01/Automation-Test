@@ -32,10 +32,10 @@ VIPMemberCardGeneration: {
 VolunteerMemberCardGeneration: {
     ECard:"Inactive",
     PhysicalCard:"Inactive",
-    CardType:"SAFRA Classic Card",
+    CardType:"SAFRA DBS Credit Card",
     CardCategory:"SAFRAMember",
     MemberCategory:"Principal",
-    CardStatus:"Enable"
+    CardStatus:"Disable"
 },
 VolAppointmentTermRegistration: {
 
@@ -46,7 +46,7 @@ VolAppointmentTermRegistration: {
     AppointmentTypeID:'ACC_YS_CHAIR',
     Type:'Terminated',
     StartDate:'19-Jul-2022',
-    EndDate:'31-Oct-2022',
+    EndDate:'31-Oct-2023',
 },
 
 //SAFRA Card Generation

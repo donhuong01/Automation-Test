@@ -42,12 +42,13 @@ class ReceiptDetailForm {
 
     /*****************************************************
      * Method: SelectTableItem
-     * Description: This function will Select item in table
+     * Description: This function will Select item in Receipt Item table
      * Author mfaisal
-     * @param {string} Value
+     * @param {string} 
      *****************************************************/
-     SelectTableItem(Value){
-      cy.SelectTableItem(elems_ReceiptDetail.TBL_RECEIPTITEMS,'Product',Value)
+     SelectTableItem(){
+      cy.Click(elems_ReceiptDetail.TBL_RECEIPTITEMCHECKBOX)
+      cy.wait(5000)
     }
 
 

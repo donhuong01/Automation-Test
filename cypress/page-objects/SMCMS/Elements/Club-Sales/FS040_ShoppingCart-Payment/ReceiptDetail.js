@@ -12,6 +12,7 @@ class elems_ReceiptDetail {
     static LBL_CNRECEIPTNUMBER = '//label[text()="CN Receipt Number"]/parent::div//label[@for="lblCNReceiptNum"]'
     
     static TBL_RECEIPTITEMS = '//h2[text()="Receipt Detail"]/ancestor::div//table'
+    static TBL_RECEIPTITEMCHECKBOX = '(//h3[text()="Receipt Items"]/ancestor::div//table)//td/input[1]'
     
 
     static BTN_CLOSE = '//button[text()="Close"]'

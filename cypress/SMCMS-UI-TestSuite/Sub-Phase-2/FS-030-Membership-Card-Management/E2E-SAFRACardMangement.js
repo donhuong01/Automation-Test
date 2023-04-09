@@ -1,6 +1,6 @@
+import VIPMemberCardGeneration from '../../../page-objects/SMCMS/PageActions/FS-030-Membership Card Management/FS-030-VIP-Card/VIPMemberCardGeneration'
+import SafraCardGeneration from '../../../page-objects/SMCMS/PageActions/FS-030-Membership Card Management/FS-030-SAFRA-Card-Generation/SAFRACardGeneration'
 import data from '../../../fixtures/Data_Module/FS-030-Membership-Card-Management/030-data'
-import VIPMemberCardGeneration from '../../../page-objects/SMCMS/PageActions/FS-030-Membership-Conversion-CardManagement/VipMemberCardGeneration'
-import SafraCardGeneration from '../../../page-objects/SMCMS/PageActions/FS-030-Membership-Conversion-CardManagement/SafraCardGeneration'
 
 
  // Page Definitions
@@ -11,7 +11,7 @@ import SafraCardGeneration from '../../../page-objects/SMCMS/PageActions/FS-030-
  
  const {MemberID, NRIC, Name, ECard, PhysicalCard, CardType, CardCategory, MemberCategory} = data.SAFRACardGeneration
 
-const SAFRACardManagement = () => {
+const SAFRACardManagement = (MemberID, Name, NRIC, CardType) => {
 
 describe('[TS020] SAFRA Appointment Term Registration Managment', function () {
 

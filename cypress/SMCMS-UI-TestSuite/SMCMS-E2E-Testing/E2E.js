@@ -114,9 +114,9 @@ import MembershipExpulsionAndReinstatment from '../Sub-Phase-2/FS-028-Membership
 import MembershipChargeRate from '../Sub-Phase-2/FS-029-Member-Charge-Rate/E2E-Membership-Charge-Rate'
 
 //FS - 030 Membership Card Management
-// import SAFRACardManagement from '../Sub-Phase-2/FS-030-Membership-Card-Management/E2E-SAFRACardMangement'
-// import VIPCardManagement from '../Sub-Phase-2/FS-030-Membership-Card-Management/E2E-VIPCardMangement'
-// import VolunteerCardManagement from '../Sub-Phase-2/FS-030-Membership-Card-Management/E2E-VolunteerCardMangement'
+import SAFRACardManagement from '../Sub-Phase-2/FS-030-Membership-Card-Management/E2E-SAFRACardMangement'
+import VIPCardManagement from '../Sub-Phase-2/FS-030-Membership-Card-Management/E2E-VIPCardMangement'
+import VolunteerCardManagement from '../Sub-Phase-2/FS-030-Membership-Card-Management/E2E-VolunteerCardMangement'
 
 // FS-036 SRP 
 import EDCTerminalManagement from '../Sub-Phase-3/FS-036-SRP/E2E-EDCTerminalManagement'
@@ -137,7 +137,7 @@ import InHouseSaleAndMerchandiseTransactionConcellation from '../Sub-Phase-3/FS-
 import InHouseSaleAndMerchandiseTransactionRefund from '../Sub-Phase-3/FS-039&FS-013-InHouseSaleAndMerchandise/InHouseSaleAndMerchandiseTransactionRefund'
 
 //FS - 040 Club Sales
-// import ReceiptManagement from '../E2E-Scripts/FS-040/E2E-Receipt-Management'
+import ReceiptManagement from '../Sub-Phase-2/FS-040-Receipt-Management/E2E-Receipt-Management'
 
 //E2E DATA 
 import E2EData from '../SMCMS-E2E-Testing/E2EDataConfigUAT'
@@ -357,15 +357,15 @@ const wait = 20000
 
 // describe('E2E Auto Testing:FS-030', ()=> {
     
-    // VolunteerCardManagement()
-    // SAFRACardManagement()
-    // VIPCardManagement()
+    // VolunteerCardManagement('A300000835', 'TestUser884B', '884B', 'SAFRA DBS Credit Card') //Enter MemberID, Name, Last 4 digist of NRIC and Card Type
+    // SAFRACardManagement('A300000830','TesterMeminfo', '253F', 'SAFRA DBS Credit Card') //Enter MemberID, Name, Last 4 digist of NRIC and Card Type
+    // VIPCardManagement('A300000836','TestUser512H', '512H', 'SAFRA DBS Credit Card') //Enter MemberID, Name, Last 4 digist of NRIC and Card Type
 
 // })
 
-// describe('E2E Auto Testing:FS-040', ()=> {
+describe('E2E Auto Testing:FS-040', ()=> {
 
-//     ReceiptManagement()
+    ReceiptManagement()
 
-// })
+})
 
