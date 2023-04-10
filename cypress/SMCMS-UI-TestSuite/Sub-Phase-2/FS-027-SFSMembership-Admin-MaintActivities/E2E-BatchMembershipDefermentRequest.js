@@ -9,7 +9,7 @@ import BatchMembershipDefermentRequest from '../../../page-objects/SMCMS/PageAct
 import MemberListing from '../../../page-objects/SMCMS/PageActions/FS-028-Membership-Admin-MaintActivities/FS-028-Member Listing/MemberListing'
 import MembershipModuleSetting from '../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-14-Membership Module Setting/MembershipModuleSetting'
 
-const BatchMemDefermentRequest = (SFSActivate, Name1, MemberID1, Name2, MemberID2) => {
+const BatchMemDefermentRequest = (Name1, MemberID1, Name2, MemberID2) => {
 
 describe('[TS01] Batch Membership Deferment Request Management',function(){
 
@@ -19,16 +19,14 @@ describe('[TS01] Batch Membership Deferment Request Management',function(){
 
     it('[TC01] Creating and cancelling a Batch Membership Deferment Request', function(){
 
-        if(SFSActivate = "Yes"){
 
-            ////Enable SFS
-            cy.visit('/membership/moduleSettings')
-            cy.wait(5000)
-            
-            MemModuleSettings.SFSActivate('CHECK')
-            cy.wait(2000)
-            
-        }
+        ////Enable SFS
+        cy.visit('/membership/moduleSettings')
+        cy.wait(5000)
+        
+        MemModuleSettings.SFSActivate('CHECK')
+        cy.wait(2000)
+        
 
         cy.visit('/membership/memberList')  //Visit web page for member listing 
         

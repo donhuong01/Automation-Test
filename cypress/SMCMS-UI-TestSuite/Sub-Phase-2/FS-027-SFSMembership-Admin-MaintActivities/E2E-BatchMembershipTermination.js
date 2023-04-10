@@ -12,7 +12,7 @@ import elems_MemberListing from '../../../page-objects/SMCMS/Elements/Membership
 import data from '../../../fixtures/Data_Module/FS-028-Membership-Admin-MainActivities/028-data'
 import MembershipModuleSetting from '../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-14-Membership Module Setting/MembershipModuleSetting'
 
-const BatchMembershipTermination = (SFSActivate, Member1, Member2, Member3) => {
+const BatchMembershipTermination = (Member1, Member2, Member3) => {
 
 describe('[TS03] Batch Membership Termination Management', function () {
 
@@ -22,16 +22,14 @@ describe('[TS03] Batch Membership Termination Management', function () {
 
     it('[TC01] Test Batch Membership Termination Confirmation Popup', function () {
 
-        if(SFSActivate = "Yes"){
 
-            ////Enable SFS
-            cy.visit('/membership/moduleSettings')
-            cy.wait(5000)
-            
-            MemModuleSettings.SFSActivate('CHECK')
-            cy.wait(2000)
-            
-        }
+        ////Enable SFS
+        cy.visit('/membership/moduleSettings')
+        cy.wait(5000)
+        
+        MemModuleSettings.SFSActivate('CHECK')
+        cy.wait(2000)
+        
 
         cy.visit('/membership/memberList')
 

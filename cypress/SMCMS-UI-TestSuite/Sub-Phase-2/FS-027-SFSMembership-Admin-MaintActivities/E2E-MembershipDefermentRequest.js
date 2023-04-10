@@ -34,7 +34,7 @@ const PrincipalName = Customerdata.CustomerCreationPrincipal.RegistrationInforma
 const PrincipalEmail = /*Customerdata.CustomerCreationPrincipal.ContactInformation.emailAddress*/PrincipalName + UserID + "@test.com"
 
 
-const MemDefermentRequest = (SFSActivate, CustomerNRICFull) => {
+const MemDefermentRequest = (CustomerNRICFull) => {
 
 describe('[TS01] Membership Deferment Request Management',function(){
 
@@ -47,8 +47,7 @@ describe('[TS01] Membership Deferment Request Management',function(){
     it('[TC01] First Membership Creation and Principal Registration', function () {
 
         ///////////////////////////////CUSTOMER CREATION////////////////////////////////////////
-        
-        if(SFSActivate = "Yes"){
+    
 
             ////Enable SFS
             cy.visit('/membership/moduleSettings')
@@ -56,8 +55,6 @@ describe('[TS01] Membership Deferment Request Management',function(){
             
             MemModuleSettings.SFSActivate('CHECK')
             cy.wait(2000)
-            
-        }
             
             cy.visit('/membership/customerCheckin')
             cy.wait(5000)

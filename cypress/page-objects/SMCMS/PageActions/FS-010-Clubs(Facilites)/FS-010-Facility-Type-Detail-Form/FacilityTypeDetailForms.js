@@ -464,6 +464,25 @@ class FacilityTypeDetailForm {
     }
 
     /*****************************************************
+     * Method: SelectPeriodsOfCalendar
+     * Description: This function Add Calendar
+     * @param {string} PeriodName
+     * @param {string} 
+     * Author fshahzada
+     *****************************************************/
+     SelectPeriodsOfCalendar(PeriodOfCalendar, ) {
+        cy.Click(`//h3[text()=" Periods of Calendar "]//following-sibling::div//table//a[text()='${PeriodOfCalendar}']`)
+        cy.wait(8000)
+        cy.EnterText(elems_FacilityTypeSetupDetailForm.OPERATINGPERIOD.TXT_OPERATINGPERIODNAME,PeriodName)
+        cy.Click(elems_FacilityTypeSetupDetailForm.OPERATINGPERIOD.BTN_SEARCHFILTERS)
+        cy.wait(3000)
+
+        cy.Click(elems_FacilityTypeSetupDetailForm.OPERATINGPERIOD.BTN_APPLYTOALLCALENDARPERIOD)
+        cy.wait(3000)
+
+    }
+
+    /*****************************************************
      * Method: SelectOperatingPeriod
      * Description: This function Apply to all calendar Period
      * @param {string} PeriodName

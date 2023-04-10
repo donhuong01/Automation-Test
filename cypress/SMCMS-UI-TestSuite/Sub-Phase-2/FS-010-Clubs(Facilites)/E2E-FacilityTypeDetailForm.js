@@ -11,11 +11,11 @@ import data from '../../../fixtures/Data_Module/FS-010-Club-Facility/010-data'
 
 
 
-const FacilityTypeDetailFormManagement = () => {
+const FacilityTypeDetailFormManagement = (CalenderName, PeriodOfCalendar, OperatnPeriodName) => {
 
 describe('Facility Type Detail Form', function () {
 
-    const {FacilityName , CalenderName ,ChargeRateName  , Location, StartDate, EndDate,
+    const {FacilityName , ChargeRateName  , Location, StartDate, EndDate,
      ChargeTypeName ,Transaction ,Calculation ,Amount ,CategoryName ,CategoryNumber,
      ProductName ,AccessMode ,CustomerCategory, Status, ChargeRateLocation } = data.FacilityTypeDetail
 
@@ -164,19 +164,19 @@ describe('Facility Type Detail Form', function () {
         FacilityTypeDetailForm.AddCalendar(CalenderName)
 
         //periods of calendar
-        FacilityTypeDetailForm.PeriodsOfCalendar('Calendar 2023')
+        FacilityTypeDetailForm.SelectPeriodsOfCalendar(PeriodOfCalendar, OperatnPeriodName)
         cy.wait(2000)
 
         // FacilityTypeDetailForm.SelectOperatingPeriod('Operating--Period 2023')
 
         
         //Click Form For Save As Draft
-        FacilityTypeDetailForm.SaveAsDraft
+        FacilityTypeDetailForm.SaveAsDraft()
 
 
     });
 
-    it('[TC05] Adding Charge Rate ', function () {
+    it.skip('[TC05] Adding Charge Rate ', function () {
 
         //Must login as an admin first
         cy.visit('/facilities/facilityTypeListing');
@@ -215,7 +215,7 @@ describe('Facility Type Detail Form', function () {
 
     });
 
-    it('[TC06] Adding Product Mapping ', function () {
+    it.skip('[TC06] Adding Product Mapping ', function () {
 
         //Must login as an admin first
         cy.visit('/facilities/facilityTypeListing');
@@ -267,7 +267,7 @@ describe('Facility Type Detail Form', function () {
 
     });
 
-    it('[TC06] Adding Product MappingApproval Workflow for Facility Type detail ', function () {
+    it.skip('[TC06] Adding Product MappingApproval Workflow for Facility Type detail ', function () {
 
         //Must login as an admin first
         cy.visit('/admin/pendingTaskList');

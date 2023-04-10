@@ -11,7 +11,7 @@ import data from '../../../fixtures/Data_Module/FS-028-Membership-Admin-MainActi
 import elems_MemberListing from '../../../page-objects/SMCMS/Elements/Membership/FS028_Membership-Admin-MaintActivities/MemberListing'
 import MembershipModuleSetting from '../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-14-Membership Module Setting/MembershipModuleSetting'
 
-const MembershipDeceased = (SFSActivate, MemberID) => {
+const MembershipDeceased = (MemberID) => {
 
 describe('[TS03] Membership Deceased Confirmation Popup', function () {
 
@@ -22,17 +22,13 @@ describe('[TS03] Membership Deceased Confirmation Popup', function () {
 
     it('[TC01] Updating a deceased member status and cancelling', function () {
 
-        if(SFSActivate = "Yes"){
-
-            ////Enable SFS
-            cy.visit('/membership/moduleSettings')
-            cy.wait(5000)
-            
-            MemModuleSettings.SFSActivate('CHECK')
-            cy.wait(2000)
-            
-        }
-
+        ////Enable SFS
+        cy.visit('/membership/moduleSettings')
+        cy.wait(5000)
+        
+        MemModuleSettings.SFSActivate('CHECK')
+        cy.wait(2000)
+        
         // Navigate to Member Listing
         cy.visit('/membership/memberList')
         cy.wait(3000)

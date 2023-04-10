@@ -29,7 +29,7 @@ const PrincipalEmail = /*Customerdata.CustomerCreationPrincipal.ContactInformati
 
 
 
-const MembershipExpulsionAndReinstatment = (SFSActivate, CustomerNRICFull) => {
+const MembershipExpulsionAndReinstatment = (CustomerNRICFull) => {
     
 describe('[TS01] Membership Expulsion Confirmation PopUp and Reinstatement Management',function(){
 
@@ -39,8 +39,6 @@ describe('[TS01] Membership Expulsion Confirmation PopUp and Reinstatement Manag
 
         ///////////////////////////////CUSTOMER CREATION////////////////////////////////////////
        
-        
-        if(SFSActivate = "Yes"){
 
             ////Enable SFS
             cy.visit('/membership/moduleSettings')
@@ -49,8 +47,7 @@ describe('[TS01] Membership Expulsion Confirmation PopUp and Reinstatement Manag
             MemModuleSettings.SFSActivate('CHECK')
             cy.wait(2000)
             
-        }
-            
+
             cy.visit('/membership/customerCheckin')
             cy.wait(5000)
             cy.Click(elems_CustomerCheckInPage.RBTN_NRIC)

@@ -148,6 +148,7 @@ class elems_FacilityTypeSetupDetailForm {
         BTN_REMOVECALENDAR: '//button[text()="Remove Calendar"]',
         BTN_GOTOLASTPAGE: '//h3[text()=" Periods of Calendar "]/following-sibling::div//a[@title="Go to the last page"]',
         BTN_ADDCALENDAR: '//button[text()="Add Calendar"]',
+        BTN_APPLYTOALLCALENDARPERIOD: "//button[text()='Apply to all Calendar Period']",
         TXT_CALENDARNAME: '//input[@id="txtCalendarName"]',
         BTN_SEARCHFILTER: '//button[@form="formCalendarDialog"]',
         BTN_SEARCHFILTERS: '//button[@form="formOperatingPeriodDialog"]',

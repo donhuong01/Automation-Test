@@ -1,5 +1,5 @@
 import elems_FacilitySettingsGeneralSettingsDetail from '../../../Elements/Facilities/FS-010-CLUBS(FACILITIES)/FacilitySettingsGeneralSettingsDetail'
-import elems_PageHeader from '../../../Elements/common/PageHeader'
+import elems_PageHeader from '../../../Elements/Common/PageHeader'
 
 const GeneralSetting = elems_FacilitySettingsGeneralSettingsDetail
 
@@ -26,6 +26,31 @@ class FacilityGeneralSettingDetail {
      * @param {string} FacilityReservation
     *****************************************************/
     ReminderAndSAFRAPointSection(FacilityBookingReminder, FacilityBooking, FacilityGroup, FacilityReservation) {
+
+
+        cy.xpath(GeneralSetting.TXT_FACILITYBOOKINGREMINDER).clear()
+        cy.EnterText(GeneralSetting.TXT_FACILITYBOOKINGREMINDER, FacilityBookingReminder)
+
+        if (FacilityBooking === 'check') {
+            cy.TickCheckBox(GeneralSetting.CHK_FACIILTYBOOKINGEARN, FacilityBooking)
+        }
+        if (FacilityGroup === 'check') {
+            cy.TickCheckBox(GeneralSetting.CHK_FACIILTYGROUPBOOKINGEARN, FacilityGroup)
+        }
+        if (FacilityReservation === 'check') {
+            cy.TickCheckBox(GeneralSetting.CHK_FACIILTYRESERVATIONEARN, FacilityReservation)
+        }
+    }
+
+    /*****************************************************
+     * Method: SAFRAPointsSection
+     * Description: This function fill out Reminder and SAFRA point section 
+     * @param {string} FacilityBookingReminder
+     * @param {string} FacilityBooking
+     * @param {string} FacilityGroup
+     * @param {string} FacilityReservation
+    *****************************************************/
+    SAFRAPointsSection(FacilityBookingReminder, FacilityBooking, FacilityGroup, FacilityReservation) {
 
 
         cy.xpath(GeneralSetting.TXT_FACILITYBOOKINGREMINDER).clear()

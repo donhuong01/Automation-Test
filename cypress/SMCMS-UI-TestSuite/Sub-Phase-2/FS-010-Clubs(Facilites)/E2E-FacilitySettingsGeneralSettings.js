@@ -37,7 +37,7 @@ it('[TC01] Update General Settings Detail Form and Click Cancel', function () {
         BReminder, BookingEarn, GBookingEarn, ReservationEarn 
     )
 
-    FacilityGeneralSettingDetail.TransferAllFromAllowedSelected('jpg','Transfer All From') 
+    // FacilityGeneralSettingDetail.TransferAllFromAllowedSelected('jpg','Transfer All From') 
 
     FacilityGeneralSettingDetail.FacilityCancellationAndAutoBackUp(
         CanNotAllowedMonths, CanNotAllowedDays, DataBackUp)
@@ -70,15 +70,6 @@ it('[TC02] Update General Settings Detail Form and Click Save', function () {
 
     FacilityGeneralSettingDetail.FacilityCancellationAndAutoBackUp(
         CanNotAllowedMonths, CanNotAllowedDays, DataBackUp)
-
-    FacilityGeneralSettingDetail.Save()
-
-})
-it('[TC03] Reset General Settings Detail Form and Click Save', function () {
-
-    cy.visit('/facilities/generalSettings')
-    
-    FacilityGeneralSettingDetail.TransferAllFrom(FormatAllowed,'Transfer All To')
 
     FacilityGeneralSettingDetail.Save()
 

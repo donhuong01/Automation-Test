@@ -50,9 +50,9 @@ beforeEach(()=>{
 
 })
 
-const BatchMembershipWaiver = (SFSActivate, CustomerNRICFull, CustomerNRICFull2) => {
+const BatchMembershipWaiver = (CustomerNRICFull1, CustomerNRICFull2) => {
 
-    const CustomerNRIC = CustomerNRICFull.substr(CustomerNRICFull.length - 4);
+    const CustomerNRIC = CustomerNRICFull1.substr(CustomerNRICFull1.length - 4);
     const CustomerNRIC2 = CustomerNRICFull2.substr(CustomerNRICFull2.length - 4);
 
 describe('Batch Membership Waiver Request management',function(){
@@ -61,16 +61,16 @@ describe('Batch Membership Waiver Request management',function(){
 
         ///////////////////////////////CUSTOMER CREATION////////////////////////////////////////
         
-            if(SFSActivate = "Yes"){
+        
 
-                ////Enable SFS
-                cy.visit('/membership/moduleSettings')
-                cy.wait(5000)
-                
-                MemModuleSettings.SFSActivate('CHECK')
-                cy.wait(2000)
-                
-            }
+            ////Enable SFS
+            cy.visit('/membership/moduleSettings')
+            cy.wait(5000)
+            
+            MemModuleSettings.SFSActivate('CHECK')
+            cy.wait(2000)
+            
+            
             
             cy.visit('/membership/customerCheckin')
             cy.wait(5000)

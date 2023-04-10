@@ -15,7 +15,7 @@ import MembershipModuleSetting from '../../../page-objects/SMCMS/PageActions/FS-
  *****************************************************/
 
 // Import Pages
-const ReinstatementConfirmation = (SFSActivate, MemberID) => {
+const ReinstatementConfirmation = (MemberID) => {
 
 describe('Membership Reinstatement Confirmation', function () {
 
@@ -25,16 +25,14 @@ describe('Membership Reinstatement Confirmation', function () {
 
     it('Test Membership Reinstatement Confirmation Popup', function () {
 
-        if(SFSActivate = "Yes"){
 
-            ////Enable SFS
-            cy.visit('/membership/moduleSettings')
-            cy.wait(5000)
+        ////Enable SFS
+        cy.visit('/membership/moduleSettings')
+        cy.wait(5000)
+        
+        MemModuleSettings.SFSActivate('CHECK')
+        cy.wait(2000)
             
-            MemModuleSettings.SFSActivate('CHECK')
-            cy.wait(2000)
-            
-        }
 
         cy.visit('/membership/memberList')
 

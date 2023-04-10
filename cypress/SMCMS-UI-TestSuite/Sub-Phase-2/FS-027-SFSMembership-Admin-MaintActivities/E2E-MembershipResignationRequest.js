@@ -38,7 +38,7 @@ const { ResignType, ReasonCode, Remark, Status, TaskName, WorkflowName, Approval
 
 
 
-const MembershipResignationManagement = (SFSActivate, CustomerNRICFull) => {
+const MembershipResignationManagement = (CustomerNRICFull) => {
 
 describe('[TS01] Membership Resignation Request Management',function(){
 
@@ -49,8 +49,6 @@ describe('[TS01] Membership Resignation Request Management',function(){
 
         ///////////////////////////////CUSTOMER CREATION////////////////////////////////////////
         
-        if(SFSActivate = "Yes"){
-
             ////Enable SFS
             cy.visit('/membership/moduleSettings')
             cy.wait(5000)
@@ -58,7 +56,6 @@ describe('[TS01] Membership Resignation Request Management',function(){
             MemModuleSettings.SFSActivate('CHECK')
             cy.wait(2000)
             
-        }
 
             cy.visit('/membership/customerCheckin')
             cy.wait(5000)

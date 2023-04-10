@@ -8,6 +8,9 @@
 import OperatingPeriodDetail from '../../../page-objects/SMCMS/PageActions/FS-010-Clubs(Facilites)/FS-010-Settings-Operating-Period/OperatingPeriodDetail'
 import FacilitySettingsOperatingPeriodListing from '../../../page-objects/SMCMS/PageActions/FS-010-Clubs(Facilites)/FS-010-Settings-Operating-Period/FacilitySettingsOperatingPeriodListing'
 import data from '../../../fixtures/Data_Module/FS-010-Club-Facility/010-data'
+import Common from '../../../page-objects/SMCMS/PageActions/Common/Common'
+
+const common = new Common()
 
 const FacilityOperatingPeriod = () => {
 
@@ -20,6 +23,9 @@ describe('[TS03] Facility Setting Operating Period Settings', function () {
     const OperatingPeriodName = data.OperatingPeriodDetail.operatingPeriodName + Math.floor(Math.random() * 1000)
     const Status = data.OperatingPeriodDetail.Status
     const RecordStatus = data.OperatingPeriodDetail.RecordStatus
+    const ApprovedStatus = 'Approved'
+    const ActiveRecord = 'Active'
+    
 
     it('[TC01] Fill Out Operating Period Detail Form and Submit Form for Approval', function () {
 
@@ -117,9 +123,24 @@ describe('[TS03] Facility Setting Operating Period Settings', function () {
        
         FacilitySettingsOperatingPeriodList.VerifyPageTitle()
         
-        FacilitySettingsOperatingPeriodList.FilloutFilters(OperatingPeriodName,Status,RecordStatus)
+        FacilitySettingsOperatingPeriodList.FilloutFilters(OperatingPeriodName, Status, RecordStatus)
         
-        FacilitySettingsOperatingPeriodList.VerifyTableLink(OperatingPeriodName,Status)
+        FacilitySettingsOperatingPeriodList.VerifyTableLink(OperatingPeriodName, Status)
+
+        FacilitySettingsOperatingPeriodList.ClickOn('Submit for Approval')
+
+        common.ApprovalWorkFlow('F-OPD', 'Facility Operating Period Approval Workflow', 'Approve', 'Testing Facility Operating Period Approval Workflow')
+    
+        cy.visit('/facilities/operatingPeriodListing')
+        cy.wait(5000) 
+       
+        FacilitySettingsOperatingPeriodList.VerifyPageTitle()
+        
+        FacilitySettingsOperatingPeriodList.FilloutFilters(OperatingPeriodName, ApprovedStatus, ActiveRecord)
+        
+        FacilitySettingsOperatingPeriodList.VerifyTableLink(OperatingPeriodName, ApprovedStatus)
+
+    
     })
 
     it('[TC04] Verify the functionality of Cancelling Delete confirmation', function(){
@@ -127,9 +148,9 @@ describe('[TS03] Facility Setting Operating Period Settings', function () {
         cy.visit('/facilities/operatingPeriodListing')
         cy.wait(5000) 
 
-        FacilitySettingsOperatingPeriodList.FilloutFilters(OperatingPeriodName,Status,RecordStatus) 
+        FacilitySettingsOperatingPeriodList.FilloutFilters(OperatingPeriodName, ApprovedStatus, ActiveRecord) 
        
-        FacilitySettingsOperatingPeriodList.CancelDeleteItem(OperatingPeriodName, Status)
+        FacilitySettingsOperatingPeriodList.CancelDeleteItem(OperatingPeriodName, ApprovedStatus)
     })
 
     it('[TC05] Verify the Delete functionality', function(){
@@ -137,11 +158,11 @@ describe('[TS03] Facility Setting Operating Period Settings', function () {
         cy.visit('/facilities/operatingPeriodListing')
         cy.wait(5000) 
         
-        FacilitySettingsOperatingPeriodList.FilloutFilters(OperatingPeriodName,Status,RecordStatus)
+        FacilitySettingsOperatingPeriodList.FilloutFilters(OperatingPeriodName, ApprovedStatus, ActiveRecord)
 
-        FacilitySettingsOperatingPeriodList.DeleteItem(OperatingPeriodName, Status)
+        FacilitySettingsOperatingPeriodList.DeleteItem(OperatingPeriodName, ApprovedStatus)
 
-        // FacilitySettingsOperatingPeriodList.VerifyDeleteNotification()
+        FacilitySettingsOperatingPeriodList.VerifyDeleteNotification()
     })  
 })
 

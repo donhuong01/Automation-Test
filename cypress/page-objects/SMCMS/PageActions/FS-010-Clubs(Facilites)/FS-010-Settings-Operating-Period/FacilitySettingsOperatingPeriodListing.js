@@ -52,6 +52,13 @@ class FacilitySettingsOperatingPeriodListing {
         cy.VerifyElementText(elems_PageHeader.LBL_PAGETITLE, "Settings - Operating Period Details")
 
     }
+
+    ClickTableLink() {
+
+        cy.Click('(//h2[text()="Settings - Operating Period Listing"]//ancestor::div//table//a)[1]')
+
+    }
+
     DeleteItem(DelOperatingPeriodName, DelStatus) {
         cy.SelectTableItem(elems_FacilitySettingsOperatingPeriodListing.
             TBL_SETTINGSOPERATINGPERIODLISTING,
@@ -67,14 +74,16 @@ class FacilitySettingsOperatingPeriodListing {
         cy.Click(elems_FacilitySettingsOperatingPeriodListing.BTN_DELETE)
         cy.Click(elems_Alerts.BTN_NO)
     }
+
     CreateNew() {
         cy.Click(elems_FacilitySettingsOperatingPeriodListing.BTN_CREATENEW)
         cy.VerifyElementText(elems_PageHeader.LBL_PAGETITLE, 'Settings - Operating Period Details')
     }
+    ClickOn(ButtonName) {
 
-
-
-
+        cy.Click(`//button[text()="${ButtonName}"]`)
+        
+    }
 
     /*****************************************************
      * Method: ClickDelete
