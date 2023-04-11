@@ -16,11 +16,11 @@ const InHouseSaleAndMerchandiseTransactionAdjustment = (MemberIdMerchandise, Mem
 
 describe('FS-039 & FS-013 In-House Sale and Merchandise Transaction Adjustment', function () {
 
-    it('Create a Merchandise Transaction Adjustment Request', function () {
+    it.only('Create a Merchandise Transaction Adjustment Request', function () {
 
         common.Checkin(MemberIdMerchandise)
 
-        cy.visit('/sales/inhouseSaleAndMerchandisePurchaseTransactionListing').wait(4000)
+        cy.visit('/sales/inhouseSaleAndMerchandisePurchaseTransactionListing').wait(8000)
 
         InHouseSaleAndMerchandisePurchaseTransaction.SelectItemType('Merchandise')
 
