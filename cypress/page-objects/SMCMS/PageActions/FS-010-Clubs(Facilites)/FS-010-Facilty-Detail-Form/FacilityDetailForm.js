@@ -326,6 +326,46 @@ class FacilityDetailForm {
 
         cy.Click(elems_FacilityDetailFormDetailTab.PRODUCTMAPPING.BTN_SELECT)
     }
+    /*****************************************************
+     * Method: FacilityDetailFormProductMappingTab
+     * Description: This function fillOut Product Mapping Tab Information
+     * Author fshahzada
+     * @param {string} BookingFee
+     * @param {string} ReservationFee
+
+     *****************************************************/
+    FacilityDetailFormProductMappingTabBookingfeeAndReservationFee(BookingFee, ReservationFee) {
+
+        cy.Click(elems_FacilityDetailFormDetailTab.PRODUCTMAPPING.TAB_PRODUCTMAPPING)
+
+        // Click on Booking Fee Product
+        cy.Click(elems_FacilityDetailFormDetailTab.PRODUCTMAPPING.BTN_BOOKINGFEEPRODUCT)
+
+
+        cy.EnterText(elems_FacilityDetailFormDetailTab.PRODUCTMAPPING.TXT_PRODCUTNAME, BookingFee)
+
+        cy.Click("(//button[text()='Search Filters'])[2]")
+        cy.wait(2000)
+
+        cy.SelectTableItem(elems_FacilityDetailFormDetailTab.PRODUCTMAPPING.TBL_SELECTPRODUCTCODE, 'Product Name', BookingFee)
+
+        cy.Click(elems_FacilityDetailFormDetailTab.PRODUCTMAPPING.BTN_SELECT)
+
+
+        // Reservation Fee Product
+        // Click on Booking Fee Product
+        cy.Click(elems_FacilityDetailFormDetailTab.PRODUCTMAPPING.BTN_RESERVATIONFEEPRODUCT)
+
+
+        cy.EnterText(elems_FacilityDetailFormDetailTab.PRODUCTMAPPING.TXT_PRODCUTNAME, ReservationFee)
+
+        cy.Click("(//button[text()='Search Filters'])[2]")
+        cy.wait(2000)
+
+        cy.SelectTableItem(elems_FacilityDetailFormDetailTab.PRODUCTMAPPING.TBL_SELECTPRODUCTCODE, 'Product Name', ReservationFee)
+
+        cy.Click(elems_FacilityDetailFormDetailTab.PRODUCTMAPPING.BTN_SELECT)
+    }
 
 
     // •••••••••••••••••• ADDITIONAL INFORMATION TAB •••••••••••••••••• //

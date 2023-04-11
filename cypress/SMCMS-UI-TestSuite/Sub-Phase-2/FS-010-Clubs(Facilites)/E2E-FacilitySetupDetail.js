@@ -76,7 +76,7 @@ describe('[TS05] Facility Setup Detail Form Management', function () {
         // FacilityDetailForm.AddExistingResource(ResourceName)
 
 
-        FacilityDetailForm.FacilityDetailFormProductMappingTab(ProductNumber, ProductName, SearchName)
+        FacilityDetailForm.FacilityDetailFormProductMappingTabBookingfeeAndReservationFee(ProductName, 'Product 2')
 
         FacilityDetailForm.Save()
 

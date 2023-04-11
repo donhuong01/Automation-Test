@@ -176,7 +176,7 @@ describe('Facility Type Detail Form', function () {
 
     });
 
-    it.skip('[TC05] Adding Charge Rate ', function () {
+    it('[TC05] Adding Charge Rate ', function () {
 
         //Must login as an admin first
         cy.visit('/facilities/facilityTypeListing');
@@ -215,7 +215,7 @@ describe('Facility Type Detail Form', function () {
 
     });
 
-    it.skip('[TC06] Adding Product Mapping ', function () {
+    it('[TC06] Adding Product Mapping ', function () {
 
         //Must login as an admin first
         cy.visit('/facilities/facilityTypeListing');
@@ -267,13 +267,16 @@ describe('Facility Type Detail Form', function () {
 
     });
 
-    it.skip('[TC06] Adding Product MappingApproval Workflow for Facility Type detail ', function () {
+    it('[TC06] Adding Product MappingApproval Workflow for Facility Type detail ', function () {
 
         //Must login as an admin first
         cy.visit('/admin/pendingTaskList');
-        cy.wait(50000)
+        cy.wait(20000)
 
-        FacilityTypeDetailForm.ApprovalWorkFlow("F-FLT","Facility Type Approval Workflow","Approve","Testing")
+        FacilityTypeDetailForm.ApprovalWorkFlow("F-FLT","Facility Type Approval Workflow","Approve","Testing Finance Approval")
+        cy.wait(15000)
+
+        FacilityTypeDetailForm.ApprovalWorkFlow("F-FLT","Facility Type Approval Workflow","Approve","Testing Approval")
         
         //Must login as an admin first
         cy.visit('/facilities/facilityTypeListing');

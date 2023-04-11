@@ -114,6 +114,7 @@ class elems_FacilityDetailFormDetailTab {
 
     TAB_PRODUCTMAPPING: '//button[@data-rr-ui-event-key="productMapping" and @type="button"]',
     BTN_BOOKINGFEEPRODUCT: '//label[@for="pckBookingItem"]//following-sibling::div//button',
+    BTN_RESERVATIONFEEPRODUCT: '//label[@for="pckReservationItem"]//following-sibling::div//button',
     TXT_BOOKINGADMINITEM: '//input[@name="bookingAdminItem"]',
 
     TXT_PRODCUTNUMBER: '//input[@name="productNumber"]',

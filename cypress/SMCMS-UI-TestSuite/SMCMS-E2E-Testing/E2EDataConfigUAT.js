@@ -188,6 +188,12 @@ const E2EData = {
    CARD_TYPE_VIP_CARD_MANAGEMENT : 'SAFRA DBS Credit Card',
    
    
+
+   // FS -010 FACILITY
+   CALENDAR_NAME : 'SP 2023',
+   PERIODOFCALENDAR : 'SP 2023 Period',
+   OPERATING_PERIOD_NAME : 'JR - BBQ Sch Day',
+   
    }   
    
    export default E2EData 

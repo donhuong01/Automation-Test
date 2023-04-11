@@ -395,7 +395,7 @@ class FacilityTypeDetailForm {
         cy.Click(elems_FacilityTypeListingForm.BTN_SEARCHFILTERS)
         cy.wait(1000)
         cy.VerifyTableEntry(elems_FacilityTypeListingForm.TBL_FACILITYTYPELISTING,"Facility Type Name",FacilityName)
-        cy.VerifyTableEntry(elems_FacilityTypeListingForm.TBL_FACILITYTYPELISTING,"Status",Status)
+        cy.VerifyTableEntry(elems_FacilityTypeListingForm.TBL_FACILITYTYPELISTING,"Status", Status)
     }
 
 
@@ -467,15 +467,16 @@ class FacilityTypeDetailForm {
      * Method: SelectPeriodsOfCalendar
      * Description: This function Add Calendar
      * @param {string} PeriodName
-     * @param {string} 
+     * @param {string} PeriodOfCalendar
      * Author fshahzada
      *****************************************************/
-     SelectPeriodsOfCalendar(PeriodOfCalendar, ) {
+     SelectPeriodsOfCalendar(PeriodOfCalendar, PeriodName) {
         cy.Click(`//h3[text()=" Periods of Calendar "]//following-sibling::div//table//a[text()='${PeriodOfCalendar}']`)
         cy.wait(8000)
-        cy.EnterText(elems_FacilityTypeSetupDetailForm.OPERATINGPERIOD.TXT_OPERATINGPERIODNAME,PeriodName)
+        cy.EnterText(elems_FacilityTypeSetupDetailForm.OPERATINGPERIOD.TXT_OPERATINGPERIODNAME, PeriodName)
         cy.Click(elems_FacilityTypeSetupDetailForm.OPERATINGPERIOD.BTN_SEARCHFILTERS)
         cy.wait(3000)
+        cy.SelectTableItem(elems_Picker.TBL_PICKERITEMS, 'Operating Period Name', PeriodName)
 
         cy.Click(elems_FacilityTypeSetupDetailForm.OPERATINGPERIOD.BTN_APPLYTOALLCALENDARPERIOD)
         cy.wait(3000)
@@ -657,7 +658,7 @@ class FacilityTypeDetailForm {
         cy.EnterText(elems_PendingTaskListing.TXT_TASKID, TaskID)
         cy.EnterText(elems_PendingTaskListing.TXT_WORKFLOWNAME, WorkflowName)
         cy.Click(elems_PendingTaskListing.BTN_SEARCH)
-        cy.wait(3000)
+        cy.wait(10000)
         cy.Click('(//h2[text()="Pending Task Listing"]/ancestor::div//table//a)[1]')
 
         cy.SelectDropDownItem(elems_PendingTaskDetail.DRP_APPROVALOUTCOME, ApprovalOutcome)
