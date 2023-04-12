@@ -68,6 +68,7 @@ class AccommodationSettingsOperatingPeriodDetail {
     EnterTypeOfPeakPeriod(Day, PeakPeriod) {
 
         cy.SelectDropDownItem(`//table//td[text()="${Day}"]/following-sibling::td//span[@class="k-widget k-dropdown"]`, PeakPeriod)
+        cy.wait(1000)
 
     }
 

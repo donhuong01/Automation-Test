@@ -24,22 +24,28 @@ class elems_AccommodationSetupDetail {
     static ProductMappingTab = {
         TAB_PRODUCTMAPPING: '//li//button[text()="Product Mapping"]',
         PCK_BOOKINGFEEPRODUCT: '//label[text()="Booking Fee Product"]/following-sibling::div//button',
+        PCK_RESERVATIONFEEPRODUCT: '//label[text()="Reservation Fee Product"]/following-sibling::div//button',
         TXT_PRODUCTNAME: '//input[@name="productName"]',
         TXT_PRODUCTNO: '//input[@name="productNumber"]',
     }
     static ChargeRateTab = {
         TAB_CHARGERATE: '//li//button[text()="Charge Rate"]',
+        TXT_CHARGERATE: '//input[@id="txtChargeRateName"]',
         BTN_ADD: '//h3[text()="Charge Rate"]/following-sibling::button[text()="Add"]',
         BTN_DELETE: '//h3[text()="Charge Rate"]/following-sibling::button[text()="Delete"]',
-        TXT_CHARGERATENAME: '//input[@id="txtChargeRateName"]',
         BTN_SEARCHFILTERS: '//button[@form="frmChargeRate"]',
         TBL_CHARGERATE: '//h3[text()="Charge Rate"]/parent::div//table',
 
         BTN_SAVE: '//button[@form="formAccommodationChargeRateDetail"]',
         BTN_CANCEL: '//button[text()="Cancel"]',
-        TXT_CHARGERATENAME: '//input[@id="txtChargeRateName"]',
+        BTN_ADDCHANGETYPE: '//button[text()="Add Charge Type"]',
+        
+        TXT_CHARGERATENAME: '(//div[@class="k-grid-container"]//td)[3]',
+        DRP_TRANSACTIONTYPE: '(//div[@class="k-grid-container"]//td)[4]',
+        DRP_CALCULATETYPE: '(//div[@class="k-grid-container"]//td)[5]',
+        DRP_AMOUNTTYPE: '(//div[@class="k-grid-container"]//td)[6]',
         DATE_STARTDATE: '//input[@id="dtpStartDate"]',
-        PCK_LOCATION: '//label[text()="Location"]',
+        PCK_LOCATION: '//label[text()="Location"]//following-sibling::div//button',
         DATE_ENDDATE: '//input[@id="dtpEndDate"]',
         BTN_ADDCHARGETYPE: '//button[text()="Add Charge Type"]',
         TXT_CHARGENAME: '//h3[text()="Charge Type List"]/..//table//input',

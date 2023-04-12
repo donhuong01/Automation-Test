@@ -8,24 +8,24 @@ import AccommodationTypeDetail from '../../../../page-objects/SMCMS/PageActions/
 beforeEach(() => {
 
     // Set local storage for QA Enviroment
-    // cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
+    cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
 
     // Set local storage for UAT Enviroment
-    cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
+    // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
 })
 
 const common = new Common()
 
 const { AccTypeName, LifeStyleGroup, FABSGroup, ClubClassification, SMCClassification, AccessMode, CustomerCateName, CustomerCateg,
     EnableHorizone, NewBookingStartDate, ButWithinMonth, ButWithinDays, CustomerAllowdMonth, CustomerAllowdDays, EnableSlotNo, MaxNoOFAccommodation,
-    AllowReservation, SendNotification, PermitTemplateCode, AuthorisationPermit, CalendarName, ChargeRateName, StartDate, location, EndDate,
+    AllowReservation, SendNotification, PermitTemplateCode, AuthorisationPermit, CalendarName,OperatingPeriodName, ChargeRateName, StartDate, location, EndDate,
     TransactionType, CalculationType, AmountType, BookingAdminFeeProduct, ReservationAdminFeeProduct, CancellationAdminFeeProduct } = data.AccommodationType
 
 describe('FS-012 Accommodation Type Management', function () {
 
     it('Creating new accommodation type, fill out all the tabs, submit item, complete approval workflow', function () {
 
-        cy.visit('/accommodation/settingsAccommodationTypeListing').wait(2000)
+        cy.visit('/accommodation/settingsAccommodationTypeListing').wait(8000)
 
         AccommodationTypeListing.CreateNew()
 
@@ -46,7 +46,7 @@ describe('FS-012 Accommodation Type Management', function () {
 
         AccommodationTypeDetail.FillOutSlotConfiguration(EnableSlotNo, MaxNoOFAccommodation, AllowReservation, SendNotification)
 
-        // AccommodationTypeDetail.FillOutSlotDocuments(PermitTemplateCode, AuthorisationPermit)
+        AccommodationTypeDetail.FillOutSlotDocuments(PermitTemplateCode, AuthorisationPermit)
 
         AccommodationTypeDetail.Save()
 
@@ -61,7 +61,7 @@ describe('FS-012 Accommodation Type Management', function () {
 
         AccommodationTypeDetail.AddCalendar(CalendarName)
 
-        AccommodationTypeDetail.AddPeriodOfCalendar()
+        AccommodationTypeDetail.AddPeriodOfCalendar(OperatingPeriodName)
 
         AccommodationTypeDetail.SaveAsDraft()
 
@@ -102,7 +102,11 @@ describe('FS-012 Accommodation Type Management', function () {
         //Approval Workflow
         AccommodationTypeDetail.SubmitForApproval()
 
-        common.ApprovalWorkFlow('', '', 'Approve', 'test')
+        common.ApprovalWorkFlow('A-AMT', 'Accommodation Type Approval Workflow', 'Approve', 'Testing Finance Approval Accommodation Type Approval Workflow')
+        cy.wait(5000)
+
+        
+        common.ApprovalWorkFlow('A-AMT', 'Accommodation Type Approval Workflow', 'Approve', 'Testing Approval workflow for Accommodation Type Approval Workflow')
 
         cy.visit('/accommodation/settingsAccommodationTypeListing').wait(2000)
 

@@ -10,7 +10,7 @@ beforeEach(() => {
     // cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
 
     // Set local storage for UAT Enviroment
-    // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
+    cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
 })
 
 const common = new Common()
@@ -18,7 +18,7 @@ const { OperatingPeriodName } = data.AccomodationSettingOperatingPeriod
 
 describe('FS-012 Accommodation Settings (Operating Period)', function () {
 
-    it('Creating Operating Period and Approve', function () {
+    it.only('Creating Operating Period and Approve', function () {
 
         cy.visit('/accommodation/settingsOperatingPeriodListing').wait(2000)
 
@@ -26,13 +26,25 @@ describe('FS-012 Accommodation Settings (Operating Period)', function () {
 
         AccommodationSettingsOperatingPeriodDetail.EnterOperatingPeriodName(OperatingPeriodName)
 
-        AccommodationSettingsOperatingPeriodDetail.EnterTypeOfPeakPeriod('Sunday', 'Super Holiday')
-
-        AccommodationSettingsOperatingPeriodDetail.EnterTypeOfPeakPeriod('Monday', 'Non-Peak')
-
+        AccommodationSettingsOperatingPeriodDetail.EnterTypeOfPeakPeriod('Monday', 'Super Holiday')
+        
         AccommodationSettingsOperatingPeriodDetail.EnterTypeOfPeakPeriod('Tuesday', 'Peak')
+        
+        AccommodationSettingsOperatingPeriodDetail.EnterTypeOfPeakPeriod('Wednesday', 'Super Holiday')
+        
+        AccommodationSettingsOperatingPeriodDetail.EnterTypeOfPeakPeriod('Thursday', 'Non-Peak')
 
-        AccommodationSettingsOperatingPeriodDetail.EnterTypeOfPeakPeriod('Wednesday', 'Super-Peak')
+        AccommodationSettingsOperatingPeriodDetail.EnterTypeOfPeakPeriod('Friday', 'Super Holiday')
+
+        AccommodationSettingsOperatingPeriodDetail.EnterTypeOfPeakPeriod('Saturday', 'Super Holiday')
+
+        AccommodationSettingsOperatingPeriodDetail.EnterTypeOfPeakPeriod('Sunday', 'Non-Peak')
+
+        AccommodationSettingsOperatingPeriodDetail.EnterTypeOfPeakPeriod('Public Holiday', 'Peak')
+        
+        AccommodationSettingsOperatingPeriodDetail.EnterTypeOfPeakPeriod('Eve of Public Holiday (Weekday)', 'Peak')
+
+        AccommodationSettingsOperatingPeriodDetail.EnterTypeOfPeakPeriod('Eve of Public Holiday (Weekend)', 'Super-Peak')
 
         AccommodationSettingsOperatingPeriodDetail.SaveAsDraft()
 
@@ -44,7 +56,7 @@ describe('FS-012 Accommodation Settings (Operating Period)', function () {
 
         AccommodationSettingsOperatingPeriodDetail.SubmitForApproval()
 
-        common.ApprovalWorkFlow('', '', 'Approve', 'test')
+        common.ApprovalWorkFlow('A-OPD', 'Accommodation Operating Period Approval Workflow', 'Approve', 'Testing Accommodation Operating Period Approval Workflow	')
 
         cy.visit('/accommodation/settingsOperatingPeriodListing').wait(2000)
 

@@ -148,10 +148,10 @@ import login from '../../fixtures/login'
 beforeEach(() => {
 
     // Set local storage for QA Enviroment
-    cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
+    // cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
    
     // Set local storage for UAT Enviroment
-    // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
+    cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
 })
 
 const wait = 20000
@@ -264,34 +264,34 @@ const wait = 20000
 
 
 
-// describe('E2E Auto Testing:FS-015', ()=> {
+describe('E2E Auto Testing:FS-015', ()=> {
 
-//         E1GYMMembershipRegistrationWithExistingMember(E2EData.ENTER_MEMBERID_AND_NAME_E1GYM_REG_WITH_EXISTING_MEMBET.MEMBERID,
-//             E2EData.ENTER_MEMBERID_AND_NAME_E1GYM_REG_WITH_EXISTING_MEMBET.MEMBERNAME) // Enter MemberID and Member Name
+        // E1GYMMembershipRegistrationWithExistingMember(E2EData.ENTER_MEMBERID_AND_NAME_E1GYM_REG_WITH_EXISTING_MEMBET.MEMBERID,
+        //     E2EData.ENTER_MEMBERID_AND_NAME_E1GYM_REG_WITH_EXISTING_MEMBET.MEMBERNAME) // Enter MemberID and Member Name
 
-//         E1GYMMembershipRenewal(E2EData.ENTER_MEMBERID_NAME_AND_E1GYMID_FOR_RENEWAL.MEMBERID,
-//             E2EData.ENTER_MEMBERID_NAME_AND_E1GYMID_FOR_RENEWAL.MEMBERNAME,
-//             E2EData.ENTER_MEMBERID_NAME_AND_E1GYMID_FOR_RENEWAL.E1GYM_MEMBERSHIP_ID)
+        // E1GYMMembershipRenewal(E2EData.ENTER_MEMBERID_NAME_AND_E1GYMID_FOR_RENEWAL.MEMBERID,
+        //     E2EData.ENTER_MEMBERID_NAME_AND_E1GYMID_FOR_RENEWAL.MEMBERNAME,
+        //     E2EData.ENTER_MEMBERID_NAME_AND_E1GYMID_FOR_RENEWAL.E1GYM_MEMBERSHIP_ID)
 
-//         E1GYMMembershipRegistrationWithNonMember()
-//         E1GymMembershipCancellationBeforePayment(E2EData.MEMBERID_FOR_CANCELLATION_BEFORE_PAYMENT)//Provide Active member ID
-//         E1GYMMembershipConversion(E2EData.MEMBERID_FOR_E1GYM_CONVERSION) // Enter Member ID
-//         E1GYMMembershipDeferment(E2EData.E1_GYMID_FOR_E1GYM_DEFERMENT) // Enter E1 Gym Membership ID ok
-//         E1GYMMembershipTermination(E2EData.ACTIVE_MEMBERID_FOR_E1GYM_TERMINATION) //Provide Active member ID
-//         E1GYMMembershipReinstatement(E2EData.INACTIVE_MEMBERID_FOR_E1GYM_REINSTATMENT) //Enter Member ID
-//         E1GYMMembershipWaiver(E2EData.ACTIVE_MEMBERID_FOR_E1GYM_WAIVER) //Provide Active member ID
-//         E1GYMMembershipReversal(E2EData.MEMBERID_FOR_E1GYM_REVERSAL) //Enter Member ID
+        // E1GYMMembershipRegistrationWithNonMember()
+        // E1GymMembershipCancellationBeforePayment(E2EData.MEMBERID_FOR_CANCELLATION_BEFORE_PAYMENT)//Provide Active member ID
+        // E1GYMMembershipConversion(E2EData.MEMBERID_FOR_E1GYM_CONVERSION) // Enter Member ID
+        // E1GYMMembershipDeferment(E2EData.E1_GYMID_FOR_E1GYM_DEFERMENT) // Enter E1 Gym Membership ID ok
+        // E1GYMMembershipTermination(E2EData.ACTIVE_MEMBERID_FOR_E1GYM_TERMINATION) //Provide Active member ID
+        // E1GYMMembershipReinstatement(E2EData.INACTIVE_MEMBERID_FOR_E1GYM_REINSTATMENT) //Enter Member ID
+        E1GYMMembershipWaiver(E2EData.ACTIVE_MEMBERID_FOR_E1GYM_WAIVER) //Provide Active member ID
+        // E1GYMMembershipReversal(E2EData.MEMBERID_FOR_E1GYM_REVERSAL) //Enter Member ID
         
-//         E1GYMSetupManagement()
-//         E1GYMMembershipModuleSettings()
-//         E1GYMMembershipAndChargeRateSetup()
-//         E1GYMMembershipRenewalAdvise()
-//         E1GYMMembershipDataManagement(E2EData.E1GYMMembershipDataManagement.MEMBERID,
-//                                      E2EData.E1GYMMembershipDataManagement.E1_GYM_MEMBERSHIPID) //Provide MemberID and E1GymMemberhipID
+        // E1GYMSetupManagement()
+        // E1GYMMembershipModuleSettings()
+        // E1GYMMembershipAndChargeRateSetup()
+        // E1GYMMembershipRenewalAdvise()
+        // E1GYMMembershipDataManagement(E2EData.E1GYMMembershipDataManagement.MEMBERID,
+        //                              E2EData.E1GYMMembershipDataManagement.E1_GYM_MEMBERSHIPID) //Provide MemberID and E1GymMemberhipID
 
 
 
-// })
+})
 
 
 // describe('E2E Auto Testing:FS-016', ()=> {
@@ -331,15 +331,15 @@ const wait = 20000
 // })
 
 
-describe('E2E Auto Testing:FS-013 & 039', ()=> {
+// describe('E2E Auto Testing:FS-013 & 039', ()=> {
 
     // InHouseSaleAndMerchandiseItemManagement()
     // InHouseSaleAndMerchandisePurchase(E2EData.MEMBERID_FOR_MERCHANDISE_PUECHASE, E2EData.MEMBERID_FOR_INHOUSE_PUECHASE) //Enter Machandise and In-House sale Member IDs 
     // InHouseSaleAndMerchandiseTransactionAdjustment(E2EData.MEMBERID_FOR_MERCHANDISE_TRANSACTION_ADJUSTMENT, E2EData.MEMBERID_FOR_INHOUSE_TRANSACTION_ADJUSTMENT) //Enter Machandise and In-House sale Member IDs 
-    InHouseSaleAndMerchandiseTransactionConcellation(E2EData.MEMBERID_FOR_MERCHANDISE_TRANSACTION_CONCELLATION, E2EData.MEMBERID_FOR_INHOUSE_TRANSACTION_CONCELLATION)
+    // InHouseSaleAndMerchandiseTransactionConcellation(E2EData.MEMBERID_FOR_MERCHANDISE_TRANSACTION_CONCELLATION, E2EData.MEMBERID_FOR_INHOUSE_TRANSACTION_CONCELLATION)
     // InHouseSaleAndMerchandiseTransactionRefund(E2EData.MEMBERID_FOR_MERCHANDISE_TRANSACTION_REFUND, E2EData.MEMBERID_FOR_INHOUSE_TRANSACTION_REFUND)
 
-})
+// })
 
 
 // describe('E2E Auto Testing:FS-030', ()=> {

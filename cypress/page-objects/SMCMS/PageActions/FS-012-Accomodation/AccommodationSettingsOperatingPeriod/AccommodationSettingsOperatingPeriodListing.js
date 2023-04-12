@@ -117,7 +117,7 @@ class AccommodationSettingsOperatingPeriodListing {
      *****************************************************/
     ClickOnTableEntry(OperatingPeriodName) {
 
-        cy.ClickTableLink(elems_AccommodationSettingsOperatingPeriodListing.TBL_SETTINGSOPERATINGPERIODLISTING,
+        cy.ClickTableLinkItem(elems_AccommodationSettingsOperatingPeriodListing.TBL_SETTINGSOPERATINGPERIODLISTING,
             "Operating Period Name", OperatingPeriodName)
 
     }

@@ -218,18 +218,34 @@ class AccommodationTypeDetail {
      *****************************************************/
     AddCalendar(CalendarName) {
 
-        cy.SelectPickerDifferentItemsWait(elems_AccommodationTypeDetail.BTN_ADDCALENDAR, 5000,
+        cy.SelectPickerDifferentItemsWait(elems_AccommodationTypeDetail.BTN_ADDCALENDAR, 8000,
             elems_AccommodationTypeDetail.TXT_CALENDARNAME, CalendarName,
             '//button[@form="formCalendarDialog"]')
+
+       
+
 
     }
     /*****************************************************
      * Method: AddPeriodOfCalendar
      * Description: This function Add Period to the Calendar
+     * OperatingPeriodName
      *****************************************************/
-    AddPeriodOfCalendar() {
+    AddPeriodOfCalendar(OperatingPeriodName) {
+
+        cy.SelectPickerDifferentItemsWait(elems_AccommodationTypeDetail.LINK_PERIODNAME,5000,
+            elems_AccommodationTypeDetail.TXT_OPERATINGPERIODNAME, OperatingPeriodName,
+            '//button[@form="formOperatingPeriodDialog"]')
 
         cy.Click(elems_AccommodationTypeDetail.LINK_PERIODNAME)
+        cy.wait(5000)
+        cy.EnterText(elems_AccommodationTypeDetail.TXT_OPERATINGPERIODNAME, OperatingPeriodName)
+        cy.Click('//button[@form="formOperatingPeriodDialog"]')
+        cy.wait(2000)
+        cy.SelectTableItem(elems_Picker.TBL_PICKERITEMS, 'Operating Period Name', OperatingPeriodName)
+        
+
+        cy.Click(elems_AccommodationTypeDetail.BTN_APPLYTOALLCALENDARPERIOD)
 
     }
 
@@ -251,7 +267,7 @@ class AccommodationTypeDetail {
     AddChargeRate() {
 
         cy.Click(elems_AccommodationTypeDetail.CHARGERATE.BTN_ADD)
-        cy.wait(3000)
+        cy.wait(7000)
 
     }
     /*****************************************************
@@ -266,18 +282,34 @@ class AccommodationTypeDetail {
         cy.EnterDate(elems_AccommodationTypeDetail.CHARGERATE.DATE_ENDDATE, EndDate)
 
     }
+    // /*****************************************************
+    //  * Method: ChargeTypeList
+    //  * Description: This function 
+    //  *****************************************************/
+    // ChargeTypeList(ChargeName, TransactionType, CalculationType, AmountType) {
+
+    //     cy.EnterText(elems_AccommodationTypeDetail.CHARGERATE.TXT_CHARGENAME, ChargeName)
+    //     cy.SelectDropDownItem(elems_AccommodationTypeDetail.CHARGERATE.DRP_TRANSACTIONTYPE, TransactionType)
+    //     cy.SelectDropDownItem(elems_AccommodationTypeDetail.CHARGERATE.DRP_CALCULATIONTYPE, CalculationType)
+    //     cy.SelectDropDownItem(elems_AccommodationTypeDetail.CHARGERATE.DRP_AMOUNTTYPE, AmountType)
+
+    // }
+
     /*****************************************************
      * Method: ChargeTypeList
-     * Description: This function 
+     * Description: This function Fill Out Charge Type List
+     * @param {string} ChargeName
+     * @param {string} TransactionType
+     * @param {string} CalculationType
+     * @param {string} AmountType
      *****************************************************/
-    ChargeTypeList(ChargeName, TransactionType, CalculationType, AmountType) {
-
-        cy.EnterText(elems_AccommodationTypeDetail.CHARGERATE.TXT_CHARGENAME, ChargeName)
-        cy.SelectDropDownItem(elems_AccommodationTypeDetail.CHARGERATE.DRP_TRANSACTIONTYPE, TransactionType)
-        cy.SelectDropDownItem(elems_AccommodationTypeDetail.CHARGERATE.DRP_CALCULATIONTYPE, CalculationType)
-        cy.SelectDropDownItem(elems_AccommodationTypeDetail.CHARGERATE.DRP_AMOUNTTYPE, AmountType)
-
-    }
+        ChargeTypeList(ChargeName, TransactionType, CalculationType, AmountType) {
+            cy.Click(elems_AccommodationTypeDetail.CHARGERATE.BTN_ADDCHANGETYPE)
+            cy.EnterText(elems_AccommodationTypeDetail.CHARGERATE.TXT_CHARGERATE, ChargeName)
+            cy.SelectDropDownItem(elems_AccommodationTypeDetail.CHARGERATE.DRP_TRANSACTIONTYPE, TransactionType)
+            cy.SelectDropDownItem(elems_AccommodationTypeDetail.CHARGERATE.DRP_CALCULATIONTYPE, CalculationType)
+            cy.SelectDropDownItem(elems_AccommodationTypeDetail.CHARGERATE.DRP_AMOUNTTYPE, AmountType)
+        }
     /*****************************************************
      * Method: AddCustomerCategory
      * Description: This function 

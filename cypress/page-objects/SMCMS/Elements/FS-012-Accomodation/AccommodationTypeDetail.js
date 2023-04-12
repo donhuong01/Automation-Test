@@ -68,8 +68,10 @@ class elems_AccommodationTypeDetail {
     //Operating Period tAB
     static TAB_OPERATINGPERIOD = '//li//button[text()="Operating Period"]'
     static BTN_ADDCALENDAR = '//button[text()="Add Calendar"]'
+    static BTN_APPLYTOALLCALENDARPERIOD = '//button[text()="Apply to all Calendar Period"]'
     static BTN_REMOVECALENDAR = '//button[text()="Remove Calendar"]'
     static TXT_CALENDARNAME = '//input[@id="txtCalendarName"]'
+    static TXT_OPERATINGPERIODNAME = '//input[@id="txtOperatingPeriodName"]'
     static TBL_CALENDARS = '//h3[text()="Calendars"]//following-sibling::div//table'
     static TBL_PERIODSOFCALENDARS = '//h3[text()=" Periods of Calendar "]//following-sibling::div//table'
     static LINK_PERIODNAME = '(//h3[text()=" Periods of Calendar "]//following-sibling::div//table//a)[1]'
@@ -83,7 +85,9 @@ class elems_AccommodationTypeDetail {
         TXT_CHARGERATENAME: '//input[@id="txtChargeRateName"]',
         BTN_SEARCHFILTER: '//button[text()="Search Filters"]',
         TBL_CHARGERATE: '//form[@id="formChargeRateTab"]',
+        BTN_ADDCHANGETYPE: '//button[text()="Add Charge Type"]',
         TXT_CHARGENAME: '//h3[text()="Charge Type List"]/following-sibling::div//table//input',
+        TXT_CHARGERATE: '(//div[@class="k-grid-container"]//td)[3]',
         DRP_TRANSACTIONTYPE: '(//h3[text()="Charge Type List"]/following-sibling::div//table//span[@class="k-widget k-dropdown"])[1]',
         DRP_CALCULATIONTYPE: '(//h3[text()="Charge Type List"]/following-sibling::div//table//span[@class="k-widget k-dropdown"])[2]',
         DRP_AMOUNTTYPE: '(//h3[text()="Charge Type List"]/following-sibling::div//table//span[@class="k-widget k-dropdown"])[3]',
