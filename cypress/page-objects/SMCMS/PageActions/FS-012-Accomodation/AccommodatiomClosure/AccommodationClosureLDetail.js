@@ -1,4 +1,4 @@
-import elems_AccommodationSettingsGeneral from '../../../Elements/FS-012-Accomodation/AccommodationSettingsGeneral'
+import elems_AccommodationClosureDetail from '../../../Elements/FS-012-Accomodation/AccommodationClosureDetail'
 import elems_PageHeader from '../../../Elements/Common/PageHeader'
 import elems_Alerts from '../../../Elements/Common/Alerts'
 
@@ -15,71 +15,74 @@ class AccommodationSettingsGeneral {
   }
 
   /*****************************************************
-   * Method:fillOutSAFRAPoints
-   * Description: This function fillout SAFRAPoints section
-   * @param {string} AccoBookingEarn
-   * @param {string} AccoReservationEarn 
+   * Method: verify AccommodationType
+   * Description: This function will select accommodation type
+   * @param {string} AccommodationType 
     *****************************************************/
-  fillOutSAFRAPoints(AccoBookingEarn, AccoReservationEarn) {
-    cy.TickCheckBox(elems_AccommodationSettingsGeneral.CHK_ACCBOOKINGEARNSAFRAPOINTS, AccoBookingEarn)
-    cy.TickCheckBox(elems_AccommodationSettingsGeneral.CHK_ACCORESERVATIONEARNSAFRAPOINTS, AccoReservationEarn)
+  SelectAccommodationType(AccommodationType) {
+    cy.SelectPickerItem(elems_AccommodationClosureDetail.AccommodationType, AccommodationType)
 
   }
   /*****************************************************
-   * Method:fillOutAttachedMediaSettings
-   * Description: This function fillout Attached Media Settings section
-   * @param {string} NumOfPhotoUpload
-   * @param {string} MaxSize 
+   * Method: verify EnterReason
+   * Description: This function will enter text in Reason text aera
+   * @param {string} Reason 
     *****************************************************/
-  fillOutAttachedMediaSettings(NumOfPhotoUpload, MaxSize) {
-    cy.xpath(elems_AccommodationSettingsGeneral.TXT_NUMBEROFPHOTOGRAPHSTOUPLOAD).clear()
-    cy.EnterText(elems_AccommodationSettingsGeneral.TXT_NUMBEROFPHOTOGRAPHSTOUPLOAD, NumOfPhotoUpload)
-    cy.xpath(elems_AccommodationSettingsGeneral.TXT_MAXFILESIZE).clear()
-    cy.EnterText(elems_AccommodationSettingsGeneral.TXT_MAXFILESIZE, MaxSize)
+  EnterReason(Reason) {
+    cy.EnterText(elems_AccommodationClosureDetail.TXTAERA_REASON, Reason)
+
+  }
+
+  /*****************************************************
+   * Method: CheckedPermanentTermination
+   * Description: This function will checked Permananet Termination if value pass 'Yes"
+   * @param {string} Value 
+   * @param {string} PermananetClosureDate
+    *****************************************************/
+  CheckedPermanentTermination(Value, PermananetClosureDate) {
+
+    if(Value === "Yes")
+    {
+      CY.Click(elems_AccommodationClosureDetail.CHK_PERMANENTTERMINATION)
+      cy.EnterDate(elems_AccommodationClosureDetail.DATE_PERMANENTCLOSUREDATE, PermananetClosureDate)
+    }
+
+  }
+
+  /*****************************************************
+   * Method:AddAccommodation
+   * Description: This function will add Accommodation
+   * @param {string} Accommodation
+    *****************************************************/
+  AddAccommodation(Accommodation) {
+    cy.Click(elems_AccommodationClosureDetail.BTN_ADD)
+    cy.SelectPickerItem(elems_AccommodationClosureDetail.BTN_ADDe, Accommodation)
+
 
   }
   /*****************************************************
-   * Method:fillOutGracePeriodForBookingCancellation
-   * Description: This function fillout Grace Period For Booking Cancellation section
-   * @param {string} CancellationIsNotAllowedInMonth
-   * @param {string} CancellationIsNotAllowedInDay 
+   * Method:Remove
+   * Description: This function click on Remove button
     *****************************************************/
-  fillOutGracePeriodForBookingCancellation(CancellationIsNotAllowedInMonth, CancellationIsNotAllowedInDay) {
+  Remove() {
+    cy.Click(elems_AccommodationClosureDetail.BTN_REMOVE)
 
-    cy.xpath(elems_AccommodationSettingsGeneral.TXT_CANCELLATIONISNOTALLOWDINMONTH).clear()
-    cy.EnterText(elems_AccommodationSettingsGeneral.TXT_CANCELLATIONISNOTALLOWDINMONTH, CancellationIsNotAllowedInMonth)
-    cy.xpath(elems_AccommodationSettingsGeneral.TXT_CANCELLATIONISNOTALLOWDINDAY).clear()
-    cy.EnterText(elems_AccommodationSettingsGeneral.TXT_CANCELLATIONISNOTALLOWDINDAY, CancellationIsNotAllowedInDay)
+  }
+
+  /*****************************************************
+   * Method:SubmitForApproval
+   * Description: This function click on Submit For Approval button
+    *****************************************************/
+  SubmitForApproval() {
+    cy.Click(elems_AccommodationClosureDetail.BTN_SUBMITFORAPPROVAL)
 
   }
   /*****************************************************
-   * Method:AutoCancellationInPendingPayment
-   * Description: This function fillout Auto Cancellation In Pending Payment section
-   * @param {string} AccoTransactionCancelAfter
+   * Method:SaveAsDraft
+   * Description: This function click on Save As Draft button
     *****************************************************/
-  AutoCancellationInPendingPayment(AccoTransactionCancelAfter) {
-
-    cy.xpath(elems_AccommodationSettingsGeneral.TXT_ACCOTRANSACTIONISGOINGTOBECANCELLED).clear()
-    cy.EnterText(elems_AccommodationSettingsGeneral.TXT_ACCOTRANSACTIONISGOINGTOBECANCELLED, AccoTransactionCancelAfter)
-
-  }
-  /*****************************************************
-   * Method:EmailReminderSettings
-   * Description: This function fillout Email Reminder Settings section
-   * @param {string} AccoBookingNotificationBeforeStart
-    *****************************************************/
-  EmailReminderSettings(AccoBookingNotificationBeforeStart) {
-
-    cy.xpath(elems_AccommodationSettingsGeneral.TXT_ACCOBOOKINGNOTIFICATIONBEFORESTARTDATE).clear()
-    cy.EnterText(elems_AccommodationSettingsGeneral.TXT_ACCOBOOKINGNOTIFICATIONBEFORESTARTDATE, AccoBookingNotificationBeforeStart)
-
-  }
-  /*****************************************************
-   * Method:Save
-   * Description: This function click on save button
-    *****************************************************/
-  Save() {
-    cy.Click(elems_AccommodationSettingsGeneral.BTN_SAVE)
+  SaveAsDraft() {
+    cy.Click(elems_AccommodationClosureDetail.BTN_SAVEASDRAFT)
 
   }
   /*****************************************************
@@ -87,7 +90,7 @@ class AccommodationSettingsGeneral {
    * Description: This function click on cancel button
     *****************************************************/
   Cancel() {
-    cy.Click(elems_AccommodationSettingsGeneral.BTN_CANCEL)
+    cy.Click(elems_AccommodationClosureDetail.BTN_CANCEL)
 
   }
   /*****************************************************

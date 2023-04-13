@@ -14,7 +14,9 @@ class elems_AccommodationClosureDetail {
     static BTN_REMOVE = '//h3[text()="Accommodations"]//following-sibling::button[text()="Remove"]'
     static TBL_ACCOMADATIONS = '//h3[text()="Accommodations"]//following-sibling::div//table'
 
+    static CHK_PERMANENTTERMINATION = '//input[@id="chkPermanentTerminate"]'
     static TXTAERA_REASON = '//textarea[@id="txtareaReason"]'
+    static DATE_PERMANENTCLOSUREDATE = '//input[@id="dtpPermamnentClosureDate"]'
 
     static BTN_ADDCLOSUREPERIODS = '//h3[text()="Closure Periods"]//following-sibling::button[text()="Add"]'
     static DATE_STARTDATE = '//input[@id="dtpClosurePeriodStartDate"]'

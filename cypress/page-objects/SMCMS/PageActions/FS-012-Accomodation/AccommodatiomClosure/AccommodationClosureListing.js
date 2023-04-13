@@ -74,6 +74,18 @@ class AccommodationSettingsGeneral {
     cy.wait(2000)
 
   }
+  /*****************************************************
+   * Method:ClickOnTableEntry
+   * Description: This function will click on entry in Accommodation Closure listing
+   * @param {string} Item
+    *****************************************************/
+  ClickOnTableEntry(Item) {
+    
+
+    cy.ClickTableLinkItem(elems_AccommodationClosureListing.TBL_ACCOMADATIONCLOSURELISTING, "Accommodation Type Name", Item)
+   
+
+  }
 
 }
 
