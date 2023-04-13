@@ -20,7 +20,7 @@ class AccommodationClosureDetail {
    * @param {string} AccommodationType 
     *****************************************************/
   SelectAccommodationType(AccommodationType) {
-    cy.SelectPickerItem(elems_AccommodationClosureDetail.AccommodationType, AccommodationType)
+    cy.SelectPickerItem(elems_AccommodationClosureDetail.PCK_ACCOMODATIONTYPE, AccommodationType)
 
   }
   /*****************************************************
@@ -39,13 +39,13 @@ class AccommodationClosureDetail {
    * @param {string} Value 
    * @param {string} PermananetClosureDate
     *****************************************************/
-  CheckedPermanentTermination(Value, PermananetClosureDate) {
+  CheckedPermanentTermination(PermananetClosureDate) {
 
-    if(Value === "Yes")
-    {
-      CY.Click(elems_AccommodationClosureDetail.CHK_PERMANENTTERMINATION)
+
+      cy.Click(elems_AccommodationClosureDetail.CHK_PERMANENTTERMINATION)
       cy.EnterDate(elems_AccommodationClosureDetail.DATE_PERMANENTCLOSUREDATE, PermananetClosureDate)
-    }
+  
+
 
   }
 
@@ -56,10 +56,67 @@ class AccommodationClosureDetail {
     *****************************************************/
   AddAccommodation(Accommodation) {
     cy.Click(elems_AccommodationClosureDetail.BTN_ADD)
-    cy.SelectPickerItem(elems_AccommodationClosureDetail.BTN_ADDe, Accommodation)
+    cy.SelectPickerItem(elems_AccommodationClosureDetail.BTN_ADD, Accommodation)
 
 
   }
+  /*****************************************************
+   * Method: AddCloserPeriod
+   * Description: This function will add Add Closer Period
+   * @param {string} StartDate
+   * @param {string} StartTime
+   * @param {string} EndtDate
+   * @param {string} EndTime
+    *****************************************************/
+  AddCloserPeriod(StartDate, StartTime, EndtDate, EndTime) {
+
+    cy.Click(elems_AccommodationClosureDetail.BTN_ADDCLOSUREPERIODS)
+    cy.EnterDate(elems_AccommodationClosureDetail.DATE_STARTDATE, StartDate)
+    cy.EnterTime(elems_AccommodationClosureDetail.TIME_STARTTIME, StartTime)
+    cy.EnterDate(elems_AccommodationClosureDetail.DATE_ENDDATE, EndtDate)
+    cy.EnterTime(elems_AccommodationClosureDetail.TIME_ENDTIME, EndTime)
+    cy.Click(elems_AccommodationClosureDetail.BTN_ADDCLOSUREPERIOD)
+
+
+  }
+
+  /*****************************************************
+   * Method: AddCloserPeriod
+   * Description: This function will add Add Closer Period
+   * @param {string} RecurringType
+   * @param {string} RecurEvery
+   * @param {string} StartDate
+   * @param {string} TimeFrom
+   * @param {string} TimeTo
+   * @param {string} ENDAFTE
+    *****************************************************/
+  AddRecurringDate(RecurringType, RecurEvery, StartDate, TimeFrom, TimeTo, EndAfter) {
+
+    cy.Click(elems_AccommodationClosureDetail.BTN_ADDRECURRINGDATE)
+    cy.SelectDropDownItem(elems_AccommodationClosureDetail.DRP_RECURRINGTYPE, RecurringType)
+    cy.EnterText(elems_AccommodationClosureDetail.TXT_RECUREVERY, RecurEvery)
+    cy.EnterDate(elems_AccommodationClosureDetail.DATE_RECURSTARTSATE, StartDate)
+    cy.EnterTime(elems_AccommodationClosureDetail.TIME_RECURFROM, TimeFrom)
+    cy.EnterTime(elems_AccommodationClosureDetail.TIME_RECURTO, TimeTo)
+
+    if(EndAfter === 'Occurrences')
+    {
+      cy.Click(elems_AccommodationClosureDetail.RADIO_OCCURRENCES)
+      cy.EnterText(elems_AccommodationClosureDetail.TXT_ENDAFTEROCCURRENCES, '4')
+
+    }else{
+
+      cy.Click(elems_AccommodationClosureDetail.RADIO_CERTAINTIME)
+      cy.EnterText(elems_AccommodationClosureDetail.TXT_ENDAFTEROCCURRENCES, StartDate)
+
+    }
+    cy.Click(elems_AccommodationClosureDetail.BTN_ADDCLOSUREPERIOD)
+
+
+
+
+  }
+
   /*****************************************************
    * Method:Remove
    * Description: This function click on Remove button

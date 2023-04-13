@@ -17,11 +17,12 @@ beforeEach(() => {
 })
 
 
-const { AccommodationType, Reason} = data.AccommodationClosure
+const { AccommodationType, Reason, PermanentTermination, StartDate, StartTime, EndDate, EndTime,
+        AddRecurringDate,RecurringType, RecurEvery, RecurStartDate, TimeFrom, TimeTo, EndAfter } = data.AccommodationClosure
 
 describe('FS-012 Accommodation Closure Management', function () {
 
-    it('Creating and Updating a Accommodation', function () {
+    it('Creating and Cancelling a Accommodation Closure', function () {
 
         cy.visit('/accommodation/closureListing').wait(4000)
 
@@ -31,9 +32,100 @@ describe('FS-012 Accommodation Closure Management', function () {
 
         AccommodationClosureListing.verifyPageTitle('Accommodation Closure Detail')
 
-        AccommodationClosureDetail.SelectAccommodationType()
+        AccommodationClosureDetail.SelectAccommodationType(AccommodationType)
 
         AccommodationClosureDetail.EnterReason(Reason)
+
+        if(PermanentTermination === "No")
+        {
+            AccommodationClosureDetail.CheckedPermanentTermination(EndDate)
+
+        }else
+        {
+
+            AccommodationClosureDetail.AddCloserPeriod(StartDate, StartTime, EndDate, EndTime)
+
+            if(AddRecurringDate === "No"){
+
+            AccommodationClosureDetail.AddRecurringDate( RecurringType, RecurEvery, RecurStartDate, TimeFrom, TimeTo, EndAfter)
+            }
+        }
+
+
+        
+        AccommodationClosureDetail.Cancel()
+
+
+    })
+
+    it('Creating and Save as Draft a Accommodation Closure', function () {
+
+        cy.visit('/accommodation/closureListing').wait(4000)
+
+        AccommodationClosureListing.verifyPageTitle('Accommodation Closure Listing')
+
+        AccommodationClosureListing.CreateNew()
+
+        AccommodationClosureListing.verifyPageTitle('Accommodation Closure Detail')
+
+        AccommodationClosureDetail.SelectAccommodationType(AccommodationType)
+
+        AccommodationClosureDetail.EnterReason(Reason)
+
+        if(PermanentTermination === "No")
+        {
+            AccommodationClosureDetail.CheckedPermanentTermination(EndDate)
+
+        }else
+        {
+
+            AccommodationClosureDetail.AddCloserPeriod(StartDate, StartTime, EndDate, EndTime)
+
+            if(AddRecurringDate === "No"){
+
+            AccommodationClosureDetail.AddRecurringDate( RecurringType, RecurEvery, RecurStartDate, TimeFrom, TimeTo, EndAfter)
+            }
+        }
+
+
+        
+        AccommodationClosureDetail.SaveAsDraft()
+
+
+    })
+    it('Creating and Submit for Approval a Accommodation Closure', function () {
+
+        cy.visit('/accommodation/closureListing').wait(4000)
+
+        AccommodationClosureListing.verifyPageTitle('Accommodation Closure Listing')
+
+        AccommodationClosureListing.CreateNew()
+
+        AccommodationClosureListing.verifyPageTitle('Accommodation Closure Detail')
+
+        AccommodationClosureDetail.SelectAccommodationType(AccommodationType)
+
+        AccommodationClosureDetail.EnterReason(Reason)
+
+        if(PermanentTermination === "No")
+        {
+            AccommodationClosureDetail.CheckedPermanentTermination(EndDate)
+
+        }else
+        {
+
+            AccommodationClosureDetail.AddCloserPeriod(StartDate, StartTime, EndDate, EndTime)
+
+            if(AddRecurringDate === "No"){
+
+            AccommodationClosureDetail.AddRecurringDate( RecurringType, RecurEvery, RecurStartDate, TimeFrom, TimeTo, EndAfter)
+            }
+        }
+
+
+        
+        AccommodationClosureDetail.SubmitForApproval()
+
 
     })
 

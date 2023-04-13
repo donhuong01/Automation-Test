@@ -34,7 +34,7 @@ Cypress.Commands.add('Click', (locator) => {
 /*****************************************************
  * Command: EnterText
  * Description: Enters text on an Element
- *SelectTableItem
+ *
  * @param {string} locator Element Locator
  * @param {string} text Text to be entered
  *****************************************************/
@@ -54,7 +54,7 @@ Cypress.Commands.add('SelectDropDownItem', (locator, item) => {
     cy.log('------ Select Drop Down Item : ' + locator + ' ------')
     cy.xpath(locator).scrollIntoView()
     cy.xpath(locator + '//span[@class="k-icon k-i-arrow-s"]').click()
-    // cy.wait(2000)
+    cy.wait(1000)
     // cy.xpath(locator).invoke('attr', 'aria-owns').then(value => {
     //     cy.xpath('//ul[@id="' + value + '"]/li[text()="' + item + '"]').click()
     // })
@@ -706,7 +706,7 @@ Cypress.Commands.add("SelectPickerWithoutFields", (locator, item) => {
     cy.log('------ SelectPickerWithNoFields : ' + locator + ' ------')
     cy.xpath(locator).scrollIntoView()
     cy.xpath(locator).click()
-    cy.wait(3000)
+    cy.wait(4000)
     cy.SelectTableItem(Picker.TBL_PICKERITEMS, 'Name', item)
     cy.xpath(Picker.BTN_SELECT).first().click();
 })
@@ -873,7 +873,7 @@ Cypress.Commands.add('EnterTextInTable', (locator, rowRef, colRef, Text) => {
 Cypress.Commands.add('SelectFirstDropdownInPopupTable', (locator, colref, Value) => {
 
     cy.xpath(locator + `//tr//td[${colref}]` + '//span[@class="k-icon k-i-arrow-s"]').click()
-    cy.wait(2000)
+    cy.wait(3000)
     cy.xpath(`//li[text()="${Value}"]`).click()
 
 })
@@ -921,11 +921,40 @@ Cypress.Commands.add("EnterDate", (locator, Date) => {
     // cy.log(Year)
 
     cy.xpath(locator).eq(0).clear({ force: true })
-        .type(DD).wait(500)
+        .type(DD).wait(2000)
         .type('{rightArrow}').wait(2000)
         .type(MMM).wait(2000)
-        .type('{rightArrow}').wait(1000)
-        .type(YYYY)
+        .type('{rightArrow}').wait(2000)
+        .type(YYYY).wait(2000)
+})
+
+/*****************************************************
+* Command: EnterDateSuspension
+* Description: Type Date in the Date Picker
+*
+* @author: Runel Dacpano
+* @param {string} locator Element locator (xpath)
+* @param {string} Date example date "Jan-09-2023"
+*****************************************************/
+Cypress.Commands.add("EnterDateSuspension", (locator, Date) => {
+    var datearr = Date.split('-')
+    var DD = datearr[0]
+    var MMM = datearr[1]
+    var YYYY = datearr[2]
+
+    // cy.log(DD)
+    // cy.log(Month)
+    // cy.log(Year)
+
+    cy.xpath(locator).eq(0).clear({ force: true })
+        .type('{rightArrow}').wait(2000)
+        .type('{rightArrow}').wait(2000)
+        .type(YYYY).wait(2000)
+        .type('{leftArrow}').wait(2000)
+        .type(MMM).wait(2000)
+        .type('{leftArrow}').wait(2000)
+        .type(DD).wait(2000)
+
 })
 
 /*****************************************************
@@ -1161,6 +1190,27 @@ Cypress.Commands.add("EnterDateTime", (locator, Date, Time) => {
         .type('{rightArrow}').wait(1000)
         .type(Second).wait(1000)
 })
+/*****************************************************
+* Command: EnterTime
+* Description: Type Time in time picker
+*
+* @author: fShahzada
+* @param {string} locator Element locator (xpath)
+* @param {string} Time 
+*****************************************************/
+Cypress.Commands.add("EnterTime", (locator, Time) => {
+
+
+    let timearr = Time.split(':')
+    let Hour = timearr[0]
+    let Minute = timearr[1]
+
+    cy.xpath(locator).eq(0).clear({ force: true })
+        .type(Hour).wait(1000)
+        .type('{rightArrow}').wait(1000)
+        .type(Minute).wait(1000)
+        .type('{rightArrow}').wait(1000)
+})
 
 /*****************************************************
  * Command: SelectTenureDuration
@@ -1227,7 +1277,7 @@ Cypress.Commands.add("SelectPickerDifferentItemsSeachBTN", (locator, textField, 
     cy.log('------ SelectPickerDifferentItemsSeachBTN : ' + locator + ' ------')
     cy.xpath(locator).scrollIntoView()
     cy.xpath(locator).click()
-    cy.wait(2000)
+    cy.wait(5000)
     cy.xpath(textField).type(item)
     cy.Click(SearchFilter);
 

@@ -24,10 +24,21 @@ class elems_AccommodationClosureDetail {
     static TIME_STARTTIME = '//input[@id="dtpClosurePeriodStartTime"]'
     static TIME_ENDTIME = '//input[@id="dtpClosurePeriodEndTime"]'
     static BTN_ADDCLOSUREPERIOD = '//button[text()="Cancel"]//preceding-sibling::button[text()="Add"]'
+
     static BTN_CANCELCLOSUREPERIOD = '//button[text()="Add"]//following-sibling::button[text()="Cancel"]'
 
     static BTN_ADDRECURRINGDATE = '//h3[text()="Closure Periods"]//following-sibling::button[text()="Add Recurring Date"]'
-    
+    static DRP_RECURRINGTYPE = '//span[@id="drpRecurringType"]'
+    static BTN_ADDRECURRINGTYPE = '//button[text()="Cancel"]//preceding-sibling::button[text()="Add"]'
+    static TXT_RECUREVERY = '//input[@id="txtRecurEvery"]'
+    static DATE_RECURSTARTSATE = '//input[@id="startDate"]'
+    static TIME_RECURFROM = '//input[@id="pckStartTimeFrom"]'
+    static TIME_RECURTO = '//input[@id="pckEndTimeTo"]'
+    static RADIO_OCCURRENCES = '//label[text()="Occurrences"]//preceding-sibling::input'
+    static TXT_ENDAFTEROCCURRENCES = '//input[@id="txtEndAfterOccurences"]'
+    static RADIO_CERTAINTIME = '//label[text()="Certain  Time"]//preceding-sibling::input'
+    static DATE_ENDAFTERCERTAIN = '//input[@id="dtpEndAfterCertainTime"]'
+
     static TBL_CLOSUREPERIODS = '//h3[text()="Closure Periods"]//following-sibling::div//table'
 
 

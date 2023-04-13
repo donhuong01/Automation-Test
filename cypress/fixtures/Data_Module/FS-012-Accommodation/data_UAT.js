@@ -53,22 +53,8 @@ const data = {
     // Data for Accommodation Closre
     AccommodationClosure: {
 
-        AccommodationType: 'Accomm Type Test',
+        AccommodationType: 'Villa Type 002',
         Reason: 'Testing Accommodation ',
-        PermanentTermination:'Yes',
-        StartDate: '13-Apr-2023',
-        StartTime:'12:00 AM',
-        EndDate:'30-Apr-2023',
-        EndTime:'12:00 AM',
-
-        //Add Recuring Date
-        AddRecurringDate:'Yes',
-        RecurringType:'Weekly',
-        RecurEvery:'2',
-        RecurStartDate:'13-Apr-2023',
-        TimeFrom:'12:00 AM',
-        TimeTo:'10:00 AM',
-        EndAfter:'Occurrences',
 
 
     } 
