@@ -48,6 +48,15 @@ const data = {
         BookingAdminFeeProduct: '',
         ReservationAdminFeeProduct: '',
         CancellationAdminFeeProduct: '',
-    }
+    },
+
+    // Data for Accommodation Closre
+    AccommodationClosure: {
+
+        AccommodationType: 'Villa Type 002',
+        Reason: 'Testing Accommodation ',
+
+
+    } 
 }
 export default data

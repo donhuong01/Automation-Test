@@ -3,7 +3,7 @@ import elems_PageHeader from '../../../Elements/Common/PageHeader'
 import elems_Alerts from '../../../Elements/Common/Alerts'
 import elems_Picker from '../../../Elements/Common/Picker'
 
-class AccommodationSettingsGeneral {
+class AccommodationClosureListing {
 
   /*****************************************************
    * Method: verify PageTitle
@@ -89,4 +89,4 @@ class AccommodationSettingsGeneral {
 
 }
 
-export default new AccommodationSettingsGeneral
+export default new AccommodationClosureListing

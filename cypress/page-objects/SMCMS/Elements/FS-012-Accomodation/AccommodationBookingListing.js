@@ -1,4 +1,4 @@
-class elems_AccommodationBOOKINGListing {
+class elems_AccommodationBookingListing {
 
     static BTN_CREATENEW = '//button[text()="Create New"]'
     static BTN_CONVERTBOOKING = '//button[text()="Convert to Booking"]'
@@ -6,8 +6,10 @@ class elems_AccommodationBOOKINGListing {
 
     static TXT_BOOKINGNO = '//input[@id="txtBookingNumber"]'
     static DRP_TRANSACTIONTYPE = '//span[@id="drpTransactionType"]'
+    
     static PCK_ACCOMMODATIONNAME = '//label[text()="Accommodation Name"]//following-sibling::div//button'
     static TXT_ACCOMMODATION = '//input[@name="name"]'
+    static BTN_SEARCHFILTERACC = '(//button[text()="Search Filters"])[1]'
     static TXT_ACCOMMODATIONNO = '//input[@id="txtAccommodationNo"]'
     
     static DATE_CHECKINFROM = '//input[@id="dtpStartDateFrom"]'
@@ -30,4 +32,4 @@ class elems_AccommodationBOOKINGListing {
     static TBL_ACCOMADATIONBOOKINGLISTING = '//h2[text()="Accommodation Booking Listing"]//ancestor::div//table'
     
 }
-export default elems_AccommodationBOOKINGListing
+export default elems_AccommodationBookingListing

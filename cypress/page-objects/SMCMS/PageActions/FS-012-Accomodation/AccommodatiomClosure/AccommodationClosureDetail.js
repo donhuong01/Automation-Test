@@ -2,7 +2,7 @@ import elems_AccommodationClosureDetail from '../../../Elements/FS-012-Accomodat
 import elems_PageHeader from '../../../Elements/Common/PageHeader'
 import elems_Alerts from '../../../Elements/Common/Alerts'
 
-class AccommodationSettingsGeneral {
+class AccommodationClosureDetail {
 
   /*****************************************************
    * Method: verify PageTitle
@@ -103,4 +103,4 @@ class AccommodationSettingsGeneral {
   }
 }
 
-export default new AccommodationSettingsGeneral
+export default new AccommodationClosureDetail

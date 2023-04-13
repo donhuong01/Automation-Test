@@ -1,33 +1,33 @@
-class elems_AccommodationBOOKINGListing {
+class elems_AccommodationBookingDetail {
 
-    static BTN_CREATENEW = '//button[text()="Create New"]'
-    static BTN_CONVERTBOOKING = '//button[text()="Convert to Booking"]'
-    static BTN_CANCELRESERVARTION = '//button[text()="Cancel Reservation"]'
+    static BTN_CLOSE = '//button[text()="Create New"]'
+    static PCK_LOCATION = '//label[text()="Location"]//following-sibling::div//button'
 
-    static TXT_BOOKINGNO = '//input[@id="txtBookingNumber"]'
-    static DRP_TRANSACTIONTYPE = '//span[@id="drpTransactionType"]'
-    static PCK_ACCOMMODATIONNAME = '//label[text()="Accommodation Name"]//following-sibling::div//button'
-    static TXT_ACCOMMODATION = '//input[@name="name"]'
-    static TXT_ACCOMMODATIONNO = '//input[@id="txtAccommodationNo"]'
+    static PCK_ACCOMMODATIONTYPE = '//label[text()="Accommodation Type"]//following-sibling::div//button'
     
-    static DATE_CHECKINFROM = '//input[@id="dtpStartDateFrom"]'
-    static DATE_CHECKINTO = '//input[@id="dtpStartDateTo"]'
-    static TXT_CUSTOMERNRIC = '//input[@id="txtCustomerNRIC"]'
+    static BTN_SUBMIT = '//button[text()="Submit"]'
+    static BTN_CANCEL = '//button[text()="Cancel"]'
+    static LBL_LOCATION = '//label[@for="lblLocation"]'
+    static LBL_ACCOMMODATIONTYPE = '//label[@for="lblAccommodationType"]'
 
-    static DATE_CHECKINOUTFROM = '//input[@id="dtpEndDateFrom"]'
-    static DATE_CHECKINOUTTO = '//input[@id="dtpStartDateTo"]'
-    static TXT_MEMBERID = '//input[@id="txtMemberId"]'
-    static TXT_CUSTOMERNAME = '//input[@id="txtCustomerName"]'
+    static RADIO_BOOKING = '//label[text()="Booking"]//preceding-sibling::input'
+    static RADIO_RESERVATION = '//label[text()="Reservation"]//preceding-sibling::input'
 
-    static PCK_CUSTOMERCATEGORY = '//label[text()="Customer Category"]//following-sibling::div//button'
-    static DRP_COLLECTED = '//span[@id="drpCollected"]'
-    static DRP_STATUS = '//span[@id="drpStatus"]'
-    static DRP_RECORDSTATUS = '//span[@id="drpRecordStatus"]'
-    
-    static PCK_ACCOMODATIONTYPENAME = '//label[text()="Accommodation Type Name"]//following-sibling::div//button'
+    static DATE_START = '//label[text()="Start"]//preceding-sibling::span'
+    static DATE_END = '//label[text()="End"]//preceding-sibling::span'
 
     static BTN_SEARCHFILTER = '//button[text()="Search Filters"]'
-    static TBL_ACCOMADATIONBOOKINGLISTING = '//h2[text()="Accommodation Booking Listing"]//ancestor::div//table'
-    
+
+    static LBL_MAINACCOMMODATION = '//label[@for="//label[@for="lblAccommodationName"]"]'
+    static LBL_MEMBERID = '//label[@for="lblMemberID"]'
+    static LBL_CUSTOMERNAME = '//label[@for="lblCustomerName"]'
+    static LBL_CUSTOMERCATEGORY = '//label[@for="lblCustomerCategory"]'
+
+    static BTN_ADDWAIVEROFF = '//button[text()="Add Waiver Off"]'
+
+    static CHK_TERMANDCONDITION = '//input[@id="chkAgreeWithTermsAndConditions"]'
+    static CHK_INDENTITYWAIVER = '//input[@id="chkAgreeWithIndemnity"]'
+
+
 }
-export default elems_AccommodationBOOKINGListing
+export default elems_AccommodationBookingDetail

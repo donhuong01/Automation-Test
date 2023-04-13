@@ -263,7 +263,6 @@ const wait = 20000
 // })
 
 
-
 describe('E2E Auto Testing:FS-015', ()=> {
 
         // E1GYMMembershipRegistrationWithExistingMember(E2EData.ENTER_MEMBERID_AND_NAME_E1GYM_REG_WITH_EXISTING_MEMBET.MEMBERID,
