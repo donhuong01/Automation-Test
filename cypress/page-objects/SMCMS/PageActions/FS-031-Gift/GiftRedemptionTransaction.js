@@ -1,7 +1,8 @@
-import elems_GiftRedemptionTransaction from '../../Elements/FS-031 Gift/Gift Redemption Transaction'
+import elems_GiftRedemptionTransaction from '../../Elements/FS-031 Gift/GiftRedemptionTransaction'
 
 class GiftRedemptionTransaction {
 
+    
     /*****************************************************
      * Method: FilterWithStatus 
      * Description: This function Filter item With Status

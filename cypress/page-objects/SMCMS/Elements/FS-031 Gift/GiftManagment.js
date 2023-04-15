@@ -6,6 +6,10 @@ class elems_GiftManagement {
         TXT_ITEMDESCRIPTION: '//input[@id="txtItemDescription"]',
         TBL_GIFTMANAGEMENTLISTING: '//div[@class="container-fluid"]//table',
         BTN_SEARCHFILTERS: '//button[text()="Search Filters"]',
+        PCK_WAREHOUSE: '//label[text()="Warehouse"]//following-sibling::div//button',
+        TXT_WAREHOUSENAME: '//input[@name="name"]',
+        BTN_WAREHOUSEFILTERS: '(//button[text()="Search Filters"])[1]',
+        BTN_SELECT: '//button[text()="Select"]',
     }
     static DetailForm = {
         BTN_SAVE: '//button[@form="formDetail"]',

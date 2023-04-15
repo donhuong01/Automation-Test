@@ -278,7 +278,7 @@ describe('E2E Auto Testing:FS-015', ()=> {
         // E1GYMMembershipDeferment(E2EData.E1_GYMID_FOR_E1GYM_DEFERMENT) // Enter E1 Gym Membership ID ok
         // E1GYMMembershipTermination(E2EData.ACTIVE_MEMBERID_FOR_E1GYM_TERMINATION) //Provide Active member ID
         // E1GYMMembershipReinstatement(E2EData.INACTIVE_MEMBERID_FOR_E1GYM_REINSTATMENT) //Enter Member ID
-        E1GYMMembershipWaiver(E2EData.ACTIVE_MEMBERID_FOR_E1GYM_WAIVER) //Provide Active member ID
+        // E1GYMMembershipWaiver(E2EData.ACTIVE_MEMBERID_FOR_E1GYM_WAIVER) //Provide Active member ID
         // E1GYMMembershipReversal(E2EData.MEMBERID_FOR_E1GYM_REVERSAL) //Enter Member ID
         
         // E1GYMSetupManagement()
