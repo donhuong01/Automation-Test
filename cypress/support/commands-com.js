@@ -196,6 +196,7 @@ Cypress.Commands.add('UploadFile', (locator, fileName) => {
     cy.log('------ Upload File : ' + locator + ' ------')
     cy.xpath(locator).scrollIntoView()
     cy.xpath(locator).attachFile(Cypress.env('FIXTURE_UPLOAD_PATH') + fileName)
+    cy.wait(4000)
     cy.xpath(locator + '/ancestor::div[@class="k-widget k-upload"]//span[@class="k-file-name"]').should('have.text', fileName)
 })
 

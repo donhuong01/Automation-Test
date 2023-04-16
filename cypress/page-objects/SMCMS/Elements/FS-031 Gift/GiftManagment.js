@@ -21,7 +21,7 @@ class elems_GiftManagement {
         TXT_PRICE: '//input[@id="txtPrice"]',
         DRP_GIFTCATEGORY: '//span[@id="txtGiftCategory"]',
         DRP_STATUS: '//span[@id="drpStatus"]',
-        UPLOADFILE: '//div[@id="uplFile"]'
+        UPLOADFILE: '//div[@id="uplFile"]//input'
     }
 }
 export default elems_GiftManagement

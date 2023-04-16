@@ -1,5 +1,6 @@
 import elems_GiftManagement from '../../Elements/FS-031 Gift/GiftManagment'
 import elems_PageHeader from '../../Elements/Common/PageHeader'
+import elems_Picker from '../../Elements/Common/Picker'
 
 class GiftManagement {
 
@@ -22,7 +23,6 @@ class GiftManagement {
     FilterByItemCode(ItemCode) {
 
         cy.EnterText(elems_GiftManagement.ListingForm.TXT_ITEMCODE, ItemCode)
-        cy.Click(elems_GiftManagement.ListingForm.BTN_SEARCHFILTERS)
 
     }
     /*****************************************************
@@ -33,7 +33,6 @@ class GiftManagement {
     FilterByItemDescription(Description) {
 
         cy.EnterText(elems_GiftManagement.ListingForm.TXT_ITEMDESCRIPTION, Description)
-        cy.Click(elems_GiftManagement.ListingForm.BTN_SEARCHFILTERS)
 
     }
     /*****************************************************
@@ -46,13 +45,21 @@ class GiftManagement {
         cy.Click(elems_GiftManagement.ListingForm.PCK_WAREHOUSE)
         cy.EnterText(elems_GiftManagement.ListingForm.TXT_WAREHOUSENAME, WareHouse)
         cy.Click(elems_GiftManagement.ListingForm.BTN_WAREHOUSEFILTERS)
+        cy.wait(3000)
         cy.Click(elems_GiftManagement.ListingForm.BTN_SELECT)
-
-        cy.Click(elems_GiftManagement.ListingForm.BTN_SEARCHFILTERS)
-        cy.wait(2000)
 
     }
 
+    /*****************************************************
+     * Method: ClickOnSearhFilter 
+     * Description: This function will click on search filter button
+     *****************************************************/
+        ClickOnSearhFilter() {
+
+            cy.Click(elems_GiftManagement.ListingForm.BTN_SEARCHFILTERS)
+            cy.wait(2000)
+    
+        }
     /*****************************************************
      * Method: VerifyTableEntry 
      * Description: This function will Verify table entry
@@ -89,14 +96,14 @@ class GiftManagement {
      *****************************************************/
     FilloutGiftManagementDetailFrom(RedemptionType, PublishDateFrom, PublishDateTo,ExpiryCollection, Price, GiftCategory, UploadFile, Status) {
 
-      cy.SelecDropDownItem(elems_GiftManagement.DetailForm.DRP_REDEMPTIONTYPE, RedemptionType)
+      cy.SelectDropDownItem(elems_GiftManagement.DetailForm.DRP_REDEMPTIONTYPE, RedemptionType)
       cy.EnterDate(elems_GiftManagement.DetailForm.DATE_PUBLISHDATEFROM, PublishDateFrom)
       cy.EnterDate(elems_GiftManagement.DetailForm.DATE_PUBLISHDATETO, PublishDateTo)
-      cy.EnterDate(elems_GiftManagement.DetailForm.TXT_EXPIRYCOLLECTION, ExpiryCollection)
-      cy.EnterDate(elems_GiftManagement.DetailForm.TXT_PRICE, Price)
-      cy.SelecDropDownItem(elems_GiftManagement.DetailForm.DRP_GIFTCATEGORY, GiftCategory)
+      cy.EnterText(elems_GiftManagement.DetailForm.TXT_EXPIRYCOLLECTION, ExpiryCollection)
+      cy.EnterText(elems_GiftManagement.DetailForm.TXT_PRICE, Price)
+      cy.SelectDropDownItem(elems_GiftManagement.DetailForm.DRP_GIFTCATEGORY, GiftCategory)
       cy.UploadFile(elems_GiftManagement.DetailForm.UPLOADFILE, UploadFile)
-      cy.SelecDropDownItem(elems_GiftManagement.DetailForm.DRP_STATUS, Status)
+      cy.SelectDropDownItem(elems_GiftManagement.DetailForm.DRP_STATUS, Status)
 
     }
     
@@ -126,6 +133,16 @@ class GiftManagement {
     Cancel() {
 
         cy.Click(elems_GiftManagement.DetailForm.BTN_CANCEL)
+
+    }
+   
+    /*****************************************************
+     * Method: VerifyNotificationMessage 
+     * Description: This function will verify notification msg
+     *****************************************************/
+    VerifyNotificationMessage(msg) {
+
+        cy.VerifyElementText(elems_Picker.MSG_NOTIFICATION, msg)
 
     }
 }

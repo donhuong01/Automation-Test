@@ -11,7 +11,11 @@ class elems_GiftRedemptionTransaction {
         BTN_SENDLETTER: '//button[text()="Send Letter"]',
         BTN_PRINT: '//button[text()="Print"]',
         BTN_EXPORT: '//button[text()="Export"]',
-        PCK_MEMBER: '//label[@for="pckMemberName"]/following-sibling::div//button',
+        PCK_MEMBERID: '//label[@for="pckMemberName"]/following-sibling::div//button',
+        TXT_MEMBERID: '//input[@name="memberId"]',
+        TXT_MEMBERNAME: '//input[@name="nameOnNRIC"]',
+        BTN_SEARCHFILTERMEMBER: '(//button[text()="Search Filters"])[1]',
+
         TXT_REDEMPTIONLETTERNUMBER: '//input[@id="txtRedemptionLetterNumber"]',
         TXT_RECEIPTNUMBER: '//input[@id="txtReceiptNumber"]',
         TXT_BATCHID: '//input[@id="txtBatchId"]',
@@ -29,6 +33,35 @@ class elems_GiftRedemptionTransaction {
         PCK_GIFTITEM: '//label[text()="Gift Item"]/following-sibling::div//button',
         TXT_QUANTITY: '//input[@id="txtQuantity"]',
         TXT_REMARK: '//textarea[@id="areaRemark"]',
+
+    }
+    static GiftExchangeForm = {
+
+        BTN_EDIT: '//button[text()="Edit"]',
+        BTN_CHANGE: '//button[text()="Change"]',
+        BTN_CANCEL: '//button[text()="Cancel"]',
+        PCK_ITEMNAME: '//label[text()="Item Name"]/following-sibling::div//button',
+        TXT_MEMBERID: '//input[@name="memberId"]',
+        PCK_GIFTITEM: '//label[text()="Gift Item"]/following-sibling::div//button',
+        TXT_QUANTITY: '//input[@id="txtQuantity"]',
+        TXT_REASAON: '//textarea[@id="areaReason"]',
+        TBL_ITEMLIST: '(//div[@class="k-widget k-grid"]//table//input)[1]',
+
+    }
+
+    static GiftRefundForm = {
+
+        BTN_SUBMIT: '//button[text()="Submit"]',
+        BTN_CANCEL: '//button[text()="Cancel"]',
+        TXT_REMARK: '//textarea[@id="areaRemarks"]',
+
+    }
+
+    static GiftCanellationForm = {
+
+        BTN_SUBMIT: '//button[text()="Submit"]',
+        BTN_CANCEL: '//button[text()="Cancel"]',
+        TXT_REMARK: '//textarea[@id="areaRemarks"]',
 
     }
 }

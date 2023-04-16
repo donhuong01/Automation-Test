@@ -1,6 +1,6 @@
 import elems_GiftModuleSetting from '../../Elements/FS-031 Gift/GiftModuleSetting'
 import elems_PageHeader from '../../Elements/Common/PageHeader'
-
+import elems_Picker from '../../Elements/Common/Picker'
 class GiftModuleSetting {
 
   /*****************************************************
@@ -22,6 +22,7 @@ class GiftModuleSetting {
      *****************************************************/
     FilloutGiftModuleSetting(GiftRedpLetterPeriod, SendGift, SendReminderBefore) {
 
+        cy.xpath(elems_GiftModuleSetting.TXT_GIFTREDEMPTIONLETTER).clear()
         cy.EnterText(elems_GiftModuleSetting.TXT_GIFTREDEMPTIONLETTER, GiftRedpLetterPeriod)
 
         if (SendGift === "Yes")
@@ -29,6 +30,7 @@ class GiftModuleSetting {
             cy.Click(elems_GiftModuleSetting.CHK_SENDGIFTREDEMPTIONLETR)
         }
 
+        cy.xpath(elems_GiftModuleSetting.TXT_SENDREMINDERLETTER).clear()
         cy.EnterText(elems_GiftModuleSetting.TXT_SENDREMINDERLETTER, SendReminderBefore)
         
 
@@ -61,6 +63,16 @@ class GiftModuleSetting {
     Cancel() {
 
         cy.Click(elems_GiftModuleSetting.BTN_CANCEL)
+
+    }
+
+    /*****************************************************
+     * Method: VerifyNotificationMessage 
+     * Description: This function will verify notification msg
+     *****************************************************/
+    VerifyNotificationMessage(msg) {
+
+        cy.VerifyElementText(elems_Picker.MSG_NOTIFICATION, msg)
 
     }
 }
