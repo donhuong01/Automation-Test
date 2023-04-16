@@ -20,16 +20,21 @@ class elems_GiftRedemptionTransaction {
         TXT_RECEIPTNUMBER: '//input[@id="txtReceiptNumber"]',
         TXT_BATCHID: '//input[@id="txtBatchId"]',
         DRP_STATUS: '//span[@id="drpStatus"]',
-        TBL_GIFTREDMPTRANSACLISTING: '//div[@class="k-widget k-grid"]//table',
+        TBL_GIFTREDMPTRANSACLISTING: '//h2[text()="Gift Redemption Transaction Listing"]/ancestor::div//table',
         BTN_SEARCHFILTER: '//button[text()="Search Filters"]',
     }
 
+    static DetailForm = {
+
+        Status: '//label[@for="lblStatus"]'
+    }
     static GiftInsertionForm = {
 
         BTN_SUBMIT: '//button[text()="Submit"]',
         BTN_CANCEL: '//button[text()="Cancel"]',
         PCK_MEMBERID: '//label[text()="Member ID"]/following-sibling::div//button',
         TXT_MEMBERID: '//input[@name="memberId"]',
+        BTN_SEARCHFILTER: '//button[text()="Search Filters"]',
         PCK_GIFTITEM: '//label[text()="Gift Item"]/following-sibling::div//button',
         TXT_QUANTITY: '//input[@id="txtQuantity"]',
         TXT_REMARK: '//textarea[@id="areaRemark"]',
@@ -62,6 +67,13 @@ class elems_GiftRedemptionTransaction {
         BTN_SUBMIT: '//button[text()="Submit"]',
         BTN_CANCEL: '//button[text()="Cancel"]',
         TXT_REMARK: '//textarea[@id="areaRemarks"]',
+
+    }
+    static GiftCollectionForm = {
+
+        BTN_COLLECT: '//button[text()="Collect"]',
+        BTN_CANCEL: '//button[text()="Cancel"]',
+        TXT_REMARK: '//textarea[@id="remark"]',
 
     }
 }

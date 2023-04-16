@@ -1,8 +1,19 @@
 import elems_GiftRedemptionTransaction from '../../Elements/FS-031 Gift/GiftRedemptionTransaction'
+import elems_PageHeader from '../../Elements/Common/PageHeader'
 import elems_Picker from '../../Elements/Common/Picker'
 
 class GiftRedemptionTransaction {
 
+  /*****************************************************
+   * Method: verify PageTitle
+   * Description: Verify Accommodation Type Listing Form
+   * @param {string} ExpectedPg 
+    *****************************************************/
+  verifyPageTitle(ExpectedPg) {
+
+    cy.ValidateElementText(elems_PageHeader.LBL_PAGETITLE, ExpectedPg)
+
+  }
     /*****************************************************
      * Method: FilterWithMemberID 
      * Description: This function Filter With Member ID
@@ -25,6 +36,7 @@ class GiftRedemptionTransaction {
 
         cy.SelectDropDownItem(elems_GiftRedemptionTransaction.ListingForm.DRP_STATUS, Status)
         cy.Click(elems_GiftRedemptionTransaction.ListingForm.BTN_SEARCHFILTER)
+        cy.wait(4000)
 
     }
 
@@ -53,7 +65,7 @@ class GiftRedemptionTransaction {
      *****************************************************/
     VerifyStatusInGRTDetail(Status) {
 
-        cy.ValidateElementText('//label[@for="lblStatus"]', Status)
+        cy.ValidateElementText(elems_GiftRedemptionTransaction.DetailForm.Status, Status)
 
     }
 }

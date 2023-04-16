@@ -17,7 +17,7 @@ const {
         File, 
         Status} = Data.GiftManagement
 
-const GiftManagement = () => {
+const GiftsManagement = () => {
 
 describe('[TS01] FS-031 Gift Management', function () {
 
@@ -106,4 +106,4 @@ describe('[TS01] FS-031 Gift Management', function () {
 
 }
 
-export default new GiftManagement
+export default GiftsManagement

@@ -113,6 +113,14 @@ import MembershipExpulsionAndReinstatment from '../Sub-Phase-2/FS-028-Membership
 //FS - 029 Membership Charge Rate
 import MembershipChargeRate from '../Sub-Phase-2/FS-029-Member-Charge-Rate/E2E-Membership-Charge-Rate'
 
+// FS - 031 Gift Redemption
+import GiftModuleSettings from '../Form-Management/FS-031-Gift-Redemption/FS-031-GiftModuleSetting'
+import GiftsManagement from '../Form-Management/FS-031-Gift-Redemption/FS-031-GiftManagement'
+import GiftRedemptionTransactions from '../Form-Management/FS-031-Gift-Redemption/FS-031-GiftRedemptionTransaction'
+import GiftRedemptionManagementInsertionAndCollection from '../Form-Management/FS-031-Gift-Redemption/FS-031-GiftRedemptionManagementGiftInsertCollect'
+import GiftRedemptionManagementInsertionAndCancellation from '../Form-Management/FS-031-Gift-Redemption/FS-031-GiftRedemptionManagementGiftInsertCancelletion'
+import GiftRedemptionManagementInsertionAndExchange from '../Form-Management/FS-031-Gift-Redemption/FS-031-GiftRedemptionManagementGiftInsertExchange'
+
 //FS - 030 Membership Card Management
 import SAFRACardManagement from '../Sub-Phase-2/FS-030-Membership-Card-Management/E2E-SAFRACardMangement'
 import VIPCardManagement from '../Sub-Phase-2/FS-030-Membership-Card-Management/E2E-VIPCardMangement'
@@ -148,10 +156,10 @@ import login from '../../fixtures/login'
 beforeEach(() => {
 
     // Set local storage for QA Enviroment
-    // cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
+    cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
    
     // Set local storage for UAT Enviroment
-    cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
+    // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
 })
 
 const wait = 20000
@@ -313,6 +321,20 @@ describe('E2E Auto Testing:FS-015', ()=> {
 
 
 // })
+
+
+describe('E2E Auto Testing:FS-031', ()=> {
+
+    GiftModuleSettings()
+    GiftsManagement()
+    GiftRedemptionTransactions()
+    GiftRedemptionManagementInsertionAndCollection("A300000485","$1 MCDONALD’S GIFT CERTIFICATE","1") //Pass as Params 1.MemberID 2.Gift Name 3.Quantity
+    GiftRedemptionManagementInsertionAndCancellation("A300000487","$1 MCDONALD’S GIFT CERTIFICATE","1") //Pass as Params 1.MemberID 2.Gift Name 3.Quantity
+    GiftRedemptionManagementInsertionAndExchange("A300000489","$1 MCDONALD’S GIFT CERTIFICATE","1") //Pass as Params 1.MemberID 2.Gift Name 3.Quantity
+
+
+
+})
 
 // describe('E2E Auto Testing:FS-036', ()=> {
 

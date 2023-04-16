@@ -85,7 +85,7 @@ class Commons {
     ApprovalWorkFlow(TaskID, WorkFlowName, Approval, Remark) {
 
         cy.visit('/admin/pendingTaskList')
-        cy.wait(5000)
+        cy.wait(10000)
         cy.EnterText(elems_PendingTaskListing.TXT_TASKID, TaskID)
         cy.EnterText(elems_PendingTaskListing.TXT_WORKFLOWNAME, WorkFlowName)
 

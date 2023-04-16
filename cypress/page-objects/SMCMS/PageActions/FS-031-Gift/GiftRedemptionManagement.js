@@ -1,7 +1,17 @@
 import elems_GiftRedemptionTransaction from '../../Elements/FS-031 Gift/GiftRedemptionTransaction'
+import elems_PageHeader from '../../Elements/Common/PageHeader'
 import elems_Picker from '../../Elements/Common/Picker'
-
 class GiftRedemptionManagement {
+
+  /*****************************************************
+   * Method: verify PageTitle
+   * Description: Verify Accommodation Type Listing Form
+   * @param {string} ExpectedPg 
+    *****************************************************/
+  verifyPageTitle(ExpectedPg) {
+    cy.ValidateElementText(elems_PageHeader.LBL_PAGETITLE, ExpectedPg)
+
+  }
 
     /*****************************************************
      * Method: FilterWithMemberID 
@@ -11,11 +21,27 @@ class GiftRedemptionManagement {
         FilterWithMemberID(MemberID) {
 
             cy.Click(elems_GiftRedemptionTransaction.ListingForm.PCK_MEMBERID)
+            cy.wait(4000)
             cy.EnterText(elems_GiftRedemptionTransaction.ListingForm.TXT_MEMBERID, MemberID)
-            cy.Click(elems_GiftRedemptionTransaction.ListingForm.BTN_SEARCHFILTERMEMBER)
+            cy.xpath(elems_GiftRedemptionTransaction.ListingForm.BTN_SEARCHFILTERMEMBER).click()
+            cy.wait(4000)
+            cy.SelectTableItem(elems_Picker.TBL_PICKERITEMS, 'Member ID', MemberID)
+            cy.Click(elems_Picker.BTN_SELECT)
+
     
         }
 
+    /*****************************************************
+     * Method: ClickOnsearchFilter 
+     * Description: This function will click on Search filter button
+     *****************************************************/
+    ClickOnsearchFilter() {
+
+        cy.Click(elems_GiftRedemptionTransaction.ListingForm.BTN_SEARCHFILTER)
+        cy.wait(5000)
+    
+
+    }
     /*****************************************************
      * Method: FilterWithStatus 
      * Description: This function Filter item With Status
@@ -24,7 +50,7 @@ class GiftRedemptionManagement {
     FilterWithStatus(Status) {
 
         cy.SelectDropDownItem(elems_GiftRedemptionTransaction.ListingForm.DRP_STATUS, Status)
-        cy.Click(elems_GiftRedemptionTransaction.ListingForm.BTN_SEARCHFILTER)
+    
 
     }
 
@@ -48,12 +74,33 @@ class GiftRedemptionManagement {
 
     }
     /*****************************************************
+     * Method: SelectTableFirstItem 
+     * Description: This function Click on table first item
+     *****************************************************/
+   SelectTableFirstItem() {
+
+        cy.Click('(//h2[text()="Gift Redemption Transaction Listing"]/ancestor::div//table//td//input)[1]')
+
+    }
+    /*****************************************************
      * Method: VerifyStatusInGRTDetail 
      * Description: This function Click on table item
      *****************************************************/
     VerifyStatusInDetail(Status) {
 
         cy.ValidateElementText('//label[@for="lblStatus"]', Status)
+
+    }
+
+    /*****************************************************
+     * Method: VerifyTableEntry 
+     * Description: This function will verify table entry
+     *****************************************************/
+    VerifyTableEntry(MemberID, Status) {
+
+        cy.VerifyTableEntry(elems_GiftRedemptionTransaction.ListingForm.TBL_GIFTREDMPTRANSACLISTING,
+            "Status",Status,
+            "Member ID", MemberID)
 
     }
 
@@ -139,6 +186,7 @@ class GiftRedemptionManagement {
         Submit() {
 
             cy.Click(elems_GiftRedemptionTransaction.GiftInsertionForm.BTN_SUBMIT)
+            cy.wait(5000)
     
         }
         
@@ -166,10 +214,13 @@ class GiftRedemptionManagement {
         cy.wait(2000)
         cy.Click(elems_GiftRedemptionTransaction.GiftInsertionForm.PCK_MEMBERID)
         cy.EnterText(elems_GiftRedemptionTransaction.GiftInsertionForm.TXT_MEMBERID, MemberID)
+        cy.Click(elems_GiftRedemptionTransaction.GiftInsertionForm.BTN_SEARCHFILTER)
         cy.SelectTableItem(elems_Picker.TBL_PICKERITEMS, "Member ID", MemberID)
         cy.Click(elems_Picker.BTN_SELECT)
 
-        cy.SelectPickerItem(elems_GiftRedemptionTransaction.GiftInsertionForm.PCK_GIFTITEM, "Gift Name", GiftItem)
+        cy.Click(elems_GiftRedemptionTransaction.GiftInsertionForm.PCK_GIFTITEM)
+        cy.SelectTableItem(elems_Picker.TBL_PICKERITEMS, "Gift Name", GiftItem)
+        cy.Click(elems_Picker.BTN_SELECT)
 
         cy.EnterText(elems_GiftRedemptionTransaction.GiftInsertionForm.TXT_QUANTITY, Quantity)
 
@@ -190,9 +241,13 @@ class GiftRedemptionManagement {
 
         cy.Click(elems_GiftRedemptionTransaction.ListingForm.BTN_CHANGEGIFT)
         cy.wait(2000)
-        cy.CLick(elems_GiftRedemptionTransaction.GiftExchangeForm.BTN_EDIT)
+        cy.Click(elems_GiftRedemptionTransaction.GiftExchangeForm.BTN_EDIT)
 
-        cy.SelectPickerItem(elems_GiftRedemptionTransaction.GiftExchangeForm.PCK_ITEMNAME, "Gift Name", GiftItem)
+        cy.Click(elems_GiftRedemptionTransaction.GiftExchangeForm.PCK_ITEMNAME)
+
+        cy.SelectTableItem(elems_Picker.TBL_PICKERITEMS, "Gift Name", GiftItem)
+
+        cy.Click(elems_Picker.BTN_SELECT)
 
         cy.EnterText(elems_GiftRedemptionTransaction.GiftExchangeForm.TXT_QUANTITY, Quantity)
 
@@ -200,6 +255,8 @@ class GiftRedemptionManagement {
 
         cy.Click(elems_GiftRedemptionTransaction.GiftExchangeForm.TBL_ITEMLIST)
 
+        cy.Click(elems_GiftRedemptionTransaction.GiftExchangeForm.BTN_CHANGE)
+        cy.wait(7000)
 
 
     }
@@ -231,6 +288,25 @@ class GiftRedemptionManagement {
 
         cy.EnterText(elems_GiftRedemptionTransaction.GiftRefundForm.TXT_REMARK, Remarks)
 
+        cy.Click(elems_GiftRedemptionTransaction.GiftRefundForm.BTN_SUBMIT)
+
+
+    }
+
+    /*****************************************************
+     * Method:CollectGift
+     * Description: This function will Gift Cancel
+     * @param {string} Remarks
+     *****************************************************/
+    GiftCollection(Remarks) {
+
+        cy.Click(elems_GiftRedemptionTransaction.ListingForm.BTN_COLLECTGIFT)
+        cy.wait(3000)
+
+        cy.EnterText(elems_GiftRedemptionTransaction.GiftCollectionForm.TXT_REMARK, Remarks)
+
+        cy.Click(elems_GiftRedemptionTransaction.GiftCollectionForm.BTN_COLLECT)
+        cy.wait(4000)
 
     }
 
