@@ -1,6 +1,7 @@
 import elems_AccommodationBookingDetail from '../../../Elements/FS-012-Accomodation/AccommodationBookingDetail'
 import elems_PageHeader from '../../../Elements/Common/PageHeader'
 import elems_Alerts from '../../../Elements/Common/Alerts'
+import elems_Picker from '../../../Elements/Common/Picker'
 
 class AccommodationBookingDetail {
 
@@ -28,6 +29,29 @@ class AccommodationBookingDetail {
     *****************************************************/
   Cancel() {
     cy.Click(elems_AccommodationBookingDetail.BTN_CANCEL)
+
+  }
+
+  /*****************************************************
+   * Method:FillOutAccommmodationDetail
+   * Description: This function will Fill Out Accommmodation Detail form
+   * @param {string} Location
+   * @param {string} AccommodationType
+   * @param {string} AccommodationName
+    *****************************************************/
+  FillOutAccommmodationDetail(Location, AccommodationType, AccommodationName) {
+
+    cy.SelectPickerItem(elems_AccommodationBookingDetail.PCK_LOCATION, Location)
+    cy.SelectPickerItem(elems_AccommodationBookingDetail.PCK_ACCOMMODATIONTYPE, AccommodationType)
+    cy.wait(2000)
+    cy.EnterText(elems_AccommodationBookingDetail.TXT_ACCOMMODATIONTNAME, AccommodationName)
+    cy.Click(elems_AccommodationBookingDetail.BTN_SEARCHFILTER)
+    cy.wait(5000)
+    cy.Click(elems_Picker.BTN_SELECT)
+    cy.SelectTableItem(elems_Picker.TBL_PICKERITEMS, "Accommodation Name", AccommodationName)
+    cy.Click(elems_Picker.BTN_SELECT)
+
+    cy.wait(5000)
 
   }
 
@@ -111,6 +135,7 @@ class AccommodationBookingDetail {
   SelectAvailableSlot(Slot) {
 
     cy.Click(`(//div[text()="${Slot}"])[1]`)
+    cy.wait(5000)
 
   }
 
@@ -149,14 +174,16 @@ class AccommodationBookingDetail {
   /*****************************************************
    * Method:AddWaiverOff
    * Description: This function will add Add Waiver Off
+   * @param {string} ChargeType
    * @param {string} Amount
-   * @param {string} MainAccommodation
+   * @param {string} Reason
     *****************************************************/
-  AddWaiverOff(Amount, MainAccommodation) {
+  AddWaiverOff(ChargeType, Amount, Reason) {
 
     cy.Click(elems_AccommodationBookingDetail.BTN_ADDWAIVEROFF, MemberID)
-    cy.EnterText()
-    cy.EnterText()
+    cy.SelectDropDownItem(elems_AccommodationBookingDetail.TXT_CHARGETYPE, ChargeType)
+    cy.EnterText(elems_AccommodationBookingDetail.TXT_AMOUNT, Amount)
+    cy.EnterText(elems_AccommodationBookingDetail.TXT_REASON, Reason)
 
   }
 

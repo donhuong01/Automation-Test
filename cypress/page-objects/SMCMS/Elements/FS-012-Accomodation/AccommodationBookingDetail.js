@@ -4,6 +4,7 @@ class elems_AccommodationBookingDetail {
     static PCK_LOCATION = '//label[text()="Location"]//following-sibling::div//button'
 
     static PCK_ACCOMMODATIONTYPE = '//label[text()="Accommodation Type"]//following-sibling::div//button'
+    static TXT_ACCOMMODATIONTNAME = '//div[@role="dialog"]//label/parent::div//input'
     
     static BTN_SUBMIT = '//button[text()="Submit"]'
     static BTN_CANCEL = '//button[text()="Cancel"]'
@@ -24,6 +25,10 @@ class elems_AccommodationBookingDetail {
     static LBL_CUSTOMERCATEGORY = '//label[@for="lblCustomerCategory"]'
 
     static BTN_ADDWAIVEROFF = '//button[text()="Add Waiver Off"]'
+    static TXT_CHARGETYPE = '//span[@id="drpChargeType"]'
+    static TXT_AMOUNT = '//input[@id="txtAmount"]'
+    static TXT_REASON = '//textarea[@id="txtReason"]'
+    static BTN_CONFIRM = '//button[text()="Confirm"]'
 
     static CHK_TERMANDCONDITION = '//input[@id="chkAgreeWithTermsAndConditions"]'
     static CHK_INDENTITYWAIVER = '//input[@id="chkAgreeWithIndemnity"]'

@@ -132,6 +132,7 @@ class AccommodationClosureDetail {
     *****************************************************/
   SubmitForApproval() {
     cy.Click(elems_AccommodationClosureDetail.BTN_SUBMITFORAPPROVAL)
+    cy.wait(4000)
 
   }
   /*****************************************************

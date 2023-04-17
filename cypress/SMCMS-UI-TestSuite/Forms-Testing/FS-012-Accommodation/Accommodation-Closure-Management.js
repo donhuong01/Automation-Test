@@ -7,18 +7,11 @@ import data from "../../../fixtures/Data_Module/FS-012-Accommodation/data"
 const common = new Common()
 
 
-beforeEach(() => {
-
-    // Set local storage for QA Enviroment
-    cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
-
-    // Set local storage for UAT Enviroment
-    // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
-})
-
 
 const { AccommodationType, Reason, PermanentTermination, StartDate, StartTime, EndDate, EndTime,
         AddRecurringDate,RecurringType, RecurEvery, RecurStartDate, TimeFrom, TimeTo, EndAfter } = data.AccommodationClosure
+
+const AccommodationClosureManagement = () => {
 
 describe('FS-012 Accommodation Closure Management', function () {
 
@@ -121,6 +114,8 @@ describe('FS-012 Accommodation Closure Management', function () {
             AccommodationClosureDetail.AddRecurringDate( RecurringType, RecurEvery, RecurStartDate, TimeFrom, TimeTo, EndAfter)
             }
         }
+
+
         
         AccommodationClosureDetail.SubmitForApproval()
 
@@ -130,3 +125,7 @@ describe('FS-012 Accommodation Closure Management', function () {
     })
 
 })
+
+}
+
+export default AccommodationClosureManagement
