@@ -1,8 +1,8 @@
-import login from '../../../../fixtures/login'
-import AccommodationSettingsOperatingPeriodListing from '../../../../page-objects/SMCMS/PageActions/FS-012-Accomodation/AccommodationSettingsOperatingPeriod/AccommodationSettingsOperatingPeriodListing'
-import AccommodationSettingsOperatingPeriodDetail from '../../../../page-objects/SMCMS/PageActions/FS-012-Accomodation/AccommodationSettingsOperatingPeriod/AccommodationSettingsOperatingPeriodLDetail'
-import Common from '../../../../page-objects/SMCMS/PageActions/Common/Common'
-import data from '../../../../fixtures/Data_Module/FS-012-Accommodation/data'
+import login from '../../../fixtures/login'
+import AccommodationSettingsOperatingPeriodListing from '../../../page-objects/SMCMS/PageActions/FS-012-Accomodation/AccommodationSettingsOperatingPeriod/AccommodationSettingsOperatingPeriodListing'
+import AccommodationSettingsOperatingPeriodDetail from '../../../page-objects/SMCMS/PageActions/FS-012-Accomodation/AccommodationSettingsOperatingPeriod/AccommodationSettingsOperatingPeriodLDetail'
+import Common from '../../../page-objects/SMCMS/PageActions/Common/Common'
+import data from '../../../fixtures/Data_Module/FS-012-Accommodation/data'
 
 beforeEach(() => {
 

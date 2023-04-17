@@ -7,27 +7,17 @@ import login from '../../../fixtures/login'
 const common = new Commons
 
 
-beforeEach(() => {
-
-    // Set local storage for QA Enviroment
-    cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
-
-    // Set local storage for UAT Enviroment
-    // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
-
-})
-//A300002662
-
-const MemberID = 'A300000279'
-const GuestMember = 'A300001457'
+// const MemberID = 'A300000279'
 
 const  Location = 'SAFRA Jurong'
 const  AccommodatioType = 'Accomm Type Test'
 const  AccommodatioName = 'Accomm 2023'
 
-describe('FS-012 Accommodation Booking', function () {
+const AccommodatiomReservationManagement = (MemberID) => {
 
-    it('[TS-01] Creating a Accommodation Booking with SAFRA Members', function () {
+describe('[TS07] FS-012 Accommodation Reservation', function () {
+
+    it('[TS-01] Creating an Accommodation Reservation', function () {
 
 
         common.Checkin(MemberID)
@@ -41,9 +31,10 @@ describe('FS-012 Accommodation Booking', function () {
         AccommodationBookingListing.verifyPageTitle("Accommodation Booking Detail")
 
         AccommodationBookingDetail.FillOutAccommmodationDetail(Location, AccommodatioType, AccommodatioName)
+
+        AccommodationBookingDetail.SelectTransactionType("Reservation")
         
         AccommodationBookingDetail.SelectAvailableSlot("Available")
-        
 
         AccommodationBookingDetail.TermsAndCondition("Yes")
 
@@ -57,11 +48,11 @@ describe('FS-012 Accommodation Booking', function () {
 
         AccommodationBookingListing.FilterByMemberID(MemberID)
 
-        AccommodationBookingListing.FilterByStatus("Confirmed")
+        AccommodationBookingListing.FilterByTransactionType("Reservation")
 
         AccommodationBookingListing.VerifyTableEntery("Member ID", MemberID)
 
-        AccommodationBookingListing.VerifyTableEntery("Status", "Confirmed")
+        AccommodationBookingListing.VerifyTableEntery("Transaction Type", "Reservation")
 
         AccommodationBookingListing.ClickOnTableEntry()
 
@@ -73,55 +64,71 @@ describe('FS-012 Accommodation Booking', function () {
 
         AccommodationBookingListing.ClickOn("Download Authorization Permit Letter")
 
+        cy.LogoutOfSmcms()
+
 
     
     })
 
-    it('[TS-02] To be able to test creating a Accommodation booking with SAFRA-related Memberships', function () {
+    it('[TS-02] Converting an Accommodation Reservation to Booking', function () {
 
 
-        common.Checkin(GuestMember)
+        common.Checkin(MemberID)
 
         cy.visit('/accommodation/bookingListing').wait(4000)
 
-        AccommodationBookingListing.verifyPageTitle("Accommodation Booking Listing")
+        AccommodationBookingDetail.SelectTransactionType("Reservation")
 
-        AccommodationBookingListing.ClickOn("Create New")
+        AccommodationBookingListing.FilterByMemberID(MemberID)
 
-        AccommodationBookingListing.verifyPageTitle("Accommodation Booking Detail")
+        AccommodationBookingListing.VerifyTableEntery("Member ID", MemberID)
 
-        AccommodationBookingDetail.FillOutAccommmodationDetail(Location, AccommodatioType, AccommodatioName)
-        
-        AccommodationBookingDetail.SelectAvailableSlot("Available")
-        
+        AccommodationBookingListing.VerifyTableEntery("Transaction Type", "Reservation")
 
-        AccommodationBookingDetail.TermsAndCondition("Yes")
+        AccommodationBookingListing.SelectTableItem("Member ID", MemberID)
 
-        AccommodationBookingDetail.IdemnityWaiver("Yes")
-        
-        AccommodationBookingDetail.Submit()
-
-        common.fillOutandApplyPayment("CASH")
+        AccommodationBookingListing.ClickOn("Convert to Booking")
 
         cy.visit('/accommodation/bookingListing').wait(4000)
 
         AccommodationBookingListing.FilterByMemberID(MemberID)
 
-        AccommodationBookingListing.FilterByStatus("Confirmed")
+        AccommodationBookingListing.VerifyTableEntery("Member ID", MemberID)
 
-        AccommodationBookingListing.VerifyTableEntery("Member ID", GuestMember)
+        AccommodationBookingListing.VerifyTableEntery("Transaction Type", "Booking")
 
-        AccommodationBookingListing.VerifyTableEntery("Status", "Confirmed")
 
-        AccommodationBookingListing.ClickOnTableEntry()
 
-        AccommodationBookingListing.verifyPageTitle("Accommodation Booking Detail")
+    
+    })
 
-        AccommodationBookingDetail.VerifyInAccommodationDetailPage(GuestMember, Location, AccommodatioType, AccommodatioName)
+    it('[TS-03] Cancelling an Accommodation Reservation to Booking', function () {
 
-        AccommodationBookingListing.ClickOn("Download Permit Letter")
 
-        AccommodationBookingListing.ClickOn("Download Authorization Permit Letter")
+        common.Checkin(MemberID)
+
+        cy.visit('/accommodation/bookingListing').wait(4000)
+
+        AccommodationBookingDetail.SelectTransactionType("Reservation")
+
+        AccommodationBookingListing.FilterByMemberID(MemberID)
+
+        AccommodationBookingListing.VerifyTableEntery("Member ID", MemberID)
+
+        AccommodationBookingListing.VerifyTableEntery("Transaction Type", "Reservation")
+
+        AccommodationBookingListing.SelectTableItem("Member ID", MemberID)
+
+        AccommodationBookingListing.ClickOn("Cancel Reservation")
+
+        cy.visit('/accommodation/bookingListing').wait(4000)
+
+        AccommodationBookingListing.FilterByMemberID(MemberID)
+
+        AccommodationBookingListing.VerifyTableEntery("Member ID", MemberID)
+
+        AccommodationBookingListing.VerifyTableEntery("Status", "Cancelled")
+
 
 
     
@@ -129,3 +136,6 @@ describe('FS-012 Accommodation Booking', function () {
 
 
 })
+}
+
+export default AccommodatiomReservationManagement

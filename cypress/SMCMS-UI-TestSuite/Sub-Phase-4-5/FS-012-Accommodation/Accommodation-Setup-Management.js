@@ -1,8 +1,8 @@
-import login from "../../../../fixtures/login"
-import AccommodationSetupDetail from "../../../../page-objects/SMCMS/PageActions/FS-012-Accomodation/AccommodationSetup/AccommodationSetupDetail"
-import AccommodationSetupListing from '../../../../page-objects/SMCMS/PageActions/FS-012-Accomodation/AccommodationSetup/AccommodationSetupListing'
-import Common from '../../../../page-objects/SMCMS/PageActions/Common/Common'
-import data from "../../../../fixtures/Data_Module/FS-012-Accommodation/data"
+import login from "../../../fixtures/login"
+import AccommodationSetupDetail from "../../../page-objects/SMCMS/PageActions/FS-012-Accomodation/AccommodationSetup/AccommodationSetupDetail"
+import AccommodationSetupListing from '../../../page-objects/SMCMS/PageActions/FS-012-Accomodation/AccommodationSetup/AccommodationSetupListing'
+import Common from '../../../page-objects/SMCMS/PageActions/Common/Common'
+import data from "../../../fixtures/Data_Module/FS-012-Accommodation/data"
 
 const common = new Common()
 

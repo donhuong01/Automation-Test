@@ -19,7 +19,7 @@ class elems_AccommodationBookingDetail {
 
     static BTN_SEARCHFILTER = '//button[text()="Search Filters"]'
 
-    static LBL_MAINACCOMMODATION = '//label[@for="//label[@for="lblAccommodationName"]"]'
+    static LBL_MAINACCOMMODATION = '//label[@for="lblAccommodationName"]'
     static LBL_MEMBERID = '//label[@for="lblMemberID"]'
     static LBL_CUSTOMERNAME = '//label[@for="lblCustomerName"]'
     static LBL_CUSTOMERCATEGORY = '//label[@for="lblCustomerCategory"]'

@@ -26,6 +26,14 @@ import FacilityBookingAmendmentManagment from '../Sub-Phase-2/FS-010-Clubs(Facil
 import FacilityBookingExtentionManagment from '../Sub-Phase-2/FS-010-Clubs(Facilites)/E2E-FacilityBookingExtention'
 import FacilityBookingManagement from '../Sub-Phase-2/FS-010-Clubs(Facilites)/E2E-FacilityBooking'
 
+// FS - 12 Accommodation
+import AccommodatiomSettingGeneral from '../Form-Management/FS-012-Accommodation/Accommodation-Settings-General'
+import AccommodationSettingOperatingPeriod from '../Form-Management/FS-012-Accommodation/Accommodation-Settings-Operating-Period'
+import AccommodationTypeManagement from '../Form-Management/FS-012-Accommodation/Accommodation-Type-Managment'
+import AccommodationSetupManagement from '../Form-Management/FS-012-Accommodation/Accommodation-Setup-Management'
+import AccommodationClosureManagement from '../Form-Management/FS-012-Accommodation/Accommodation-Closure-Management'
+import AccommodatiomBookingManagement from '../Form-Management/FS-012-Accommodation/Accommodation-Booking-Management'
+import AccommodatiomReservationManagement from '../Form-Management/FS-012-Accommodation/Accommodation-Reservation-Management'
 
 //FS - 014 Membership Registration & Renewal
 import CustomerCheckIn from  '../Sub-Phase-2/FS-014-Membership-Registration-Renewal/FS-014/E2E-CustomerCheckin'
@@ -323,18 +331,37 @@ describe('E2E Auto Testing:FS-015', ()=> {
 // })
 
 
-describe('E2E Auto Testing:FS-031', ()=> {
+// describe('E2E Auto Testing:FS-031', ()=> {
 
-    GiftModuleSettings()
-    GiftsManagement()
-    GiftRedemptionTransactions()
-    GiftRedemptionManagementInsertionAndCollection("A300000485","$1 MCDONALD’S GIFT CERTIFICATE","1") //Pass as Params 1.MemberID 2.Gift Name 3.Quantity
-    GiftRedemptionManagementInsertionAndCancellation("A300000487","$1 MCDONALD’S GIFT CERTIFICATE","1") //Pass as Params 1.MemberID 2.Gift Name 3.Quantity
-    GiftRedemptionManagementInsertionAndExchange("A300000489","$1 MCDONALD’S GIFT CERTIFICATE","1") //Pass as Params 1.MemberID 2.Gift Name 3.Quantity
+//     GiftModuleSettings()
+//     GiftsManagement()
+//     GiftRedemptionTransactions()
+//     GiftRedemptionManagementInsertionAndCollection("A300000485","$1 MCDONALD’S GIFT CERTIFICATE","1") //Pass as Params 1.MemberID 2.Gift Name 3.Quantity
+//     GiftRedemptionManagementInsertionAndCancellation("A300000487","$1 MCDONALD’S GIFT CERTIFICATE","1") //Pass as Params 1.MemberID 2.Gift Name 3.Quantity
+//     GiftRedemptionManagementInsertionAndExchange("A300000489","$1 MCDONALD’S GIFT CERTIFICATE","1") //Pass as Params 1.MemberID 2.Gift Name 3.Quantity
+
+
+
+// })
+
+
+describe('E2E Auto Testing:FS-012', ()=> {
+
+    AccommodatiomSettingGeneral()
+    AccommodationSettingOperatingPeriod()
+    AccommodationTypeManagement()
+    AccommodationSetupManagement()
+    AccommodationClosureManagement()
+    AccommodatiomBookingManagement("A300002436","A300002439") //Pass SAFRA MemberID and Guest ID
+    AccommodatiomReservationManagement("A300000279") //Pass SAFRA MemberID
+
+
+
 
 
 
 })
+
 
 // describe('E2E Auto Testing:FS-036', ()=> {
 

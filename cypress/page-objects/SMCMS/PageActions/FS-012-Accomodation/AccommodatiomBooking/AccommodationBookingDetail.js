@@ -21,6 +21,7 @@ class AccommodationBookingDetail {
     *****************************************************/
   Submit() {
     cy.Click(elems_AccommodationBookingDetail.BTN_SUBMIT)
+    cy.wait(10000)
 
   }
   /*****************************************************
@@ -123,6 +124,23 @@ class AccommodationBookingDetail {
   VerifyMemberIDAndMainAccommodation(MemberID, MainAccommodation) {
 
     cy.ValidateElementText(elems_AccommodationBookingDetail.LBL_MEMBERID, MemberID)
+    cy.ValidateElementText(elems_AccommodationBookingDetail.LBL_MAINACCOMMODATION, MainAccommodation)
+
+  }
+
+  /*****************************************************
+   * Method:VerifyInAccommodationDetailPage
+   * Description: This function will Verify Info In Accommodation Detail Page
+   * @param {string} MemberID
+   * @param {string} Location
+   * @param {string} AccommodationType
+   * @param {string} MainAccommodation
+    *****************************************************/
+  VerifyInAccommodationDetailPage(MemberID, Location, AccommodationType, MainAccommodation) {
+
+    cy.ValidateElementText(elems_AccommodationBookingDetail.LBL_MEMBERID, MemberID)
+    cy.ValidateElementText(elems_AccommodationBookingDetail.LBL_LOCATION, Location)
+    cy.ValidateElementText(elems_AccommodationBookingDetail.LBL_ACCOMMODATIONTYPE, AccommodationType)
     cy.ValidateElementText(elems_AccommodationBookingDetail.LBL_MAINACCOMMODATION, MainAccommodation)
 
   }

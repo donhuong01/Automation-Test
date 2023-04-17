@@ -24,6 +24,7 @@ class AccommodationBookingListing {
   ClickOn(ButtonName) {
 
     cy.Click(`//button[text()="${ButtonName}"]`)
+    cy.wait(3000)
 
   }
 
@@ -177,10 +178,22 @@ class AccommodationBookingListing {
    * @param {string} Item
    * @param {string} ColumnName
     *****************************************************/
-  VerifyTableEntery(Item, ColumnName) {
+  VerifyTableEntery(ColumnName, Item) {
     
 
     cy.VerifyTableEntry(elems_AccommodationBookingListing.TBL_ACCOMADATIONBOOKINGLISTING, ColumnName, Item)
+   
+
+  }
+  /*****************************************************
+   * Method:ClickOnTableEntry
+   * Description: This function will click on entry in Accommodation Closure listing
+    *****************************************************/
+  ClickOnTableEntry() {
+    
+
+    cy.Click('(//h2[text()="Accommodation Booking Listing"]//ancestor::div//table//td//a)[1]')
+    cy.wait(4000)
    
 
   }
@@ -188,12 +201,13 @@ class AccommodationBookingListing {
   /*****************************************************
    * Method:SelectTableItem
    * Description: This function will select entry by accommodation name
-   * @param {string} AccommodationName
+   * @param {string} ColumnName
+   * @param {string} ColumnValue
     *****************************************************/
-  SelectTableItem(AccommodationName) {
+  SelectTableItem(ColumnName, ColumnValue) {
     
 
-    cy.SelectTableItem(elems_AccommodationBookingListing.TBL_ACCOMADATIONBOOKINGLISTING, "Accommodation Name", AccommodationName)
+    cy.SelectTableItem(elems_AccommodationBookingListing.TBL_ACCOMADATIONBOOKINGLISTING, ColumnName, ColumnValue)
    
 
   }
