@@ -22,7 +22,7 @@ class elems_AccommodationBookingCancellationDetail {
     static CHK_GIVEREFUNDCRIDT = '//input[@id="chkGiveRefundCredit"]'
     static DRP_REFUNDCRIDTTYPE = '//span[@id="drpRefundCreditType"]'
     static DRP_AMOUNTTYPE = '//span[@id="drpAmountType"]'
-    static TXTAERA_ = '//textarea[@id="txtRefundCreditReason"]'
+    static TXTAERA_REFUNDCREDIT = '//textarea[@id="txtRefundCreditReason"]'
     
     
 }

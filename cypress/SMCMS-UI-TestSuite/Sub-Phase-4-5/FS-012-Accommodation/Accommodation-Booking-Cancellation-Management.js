@@ -1,5 +1,5 @@
-import AccommodationBookingListing from '../../../page-objects/SMCMS/PageActions/FS-012-Accomodation/AccommodatiomBooking/AccommodationBookingListing'
-import AccommodationBookingDetail from '../../../page-objects/SMCMS/PageActions/FS-012-Accomodation/AccommodatiomBooking/AccommodationBookingDetail'
+import AccommodationBookingCancellationListing from '../../../page-objects/SMCMS/PageActions/FS-012-Accomodation/AccommodatiomBookingCancellation/AccommodationBookingCancellationListing'
+import AccommodationBookingCancelletionDetail from '../../../page-objects/SMCMS/PageActions/FS-012-Accomodation/AccommodatiomBookingCancellation/AccommodationBookingCancellationDetail'
 import data from '../../../fixtures/Data_Module/FS-012-Accommodation/data'
 import Commons from '../../../page-objects/SMCMS/PageActions/Common/Common'
 import login from '../../../fixtures/login'
@@ -24,56 +24,22 @@ const  Location = 'SAFRA Jurong'
 const  AccommodatioType = 'Accomm Type Test'
 const  AccommodatioName = 'Accomm 2023'
 
-describe('[TS07] FS-012 Accommodation Reservation', function () {
+describe('[TS010] FS-012 Accommodation Booking Cancellation', function () {
 
-    it('[TS-01] Creating an Accommodation Reservation', function () {
+    it('[TS-01] Creating a Accommodation Booking Cancellation without Refund/Credit', function () {
 
 
-        common.Checkin(MemberID)
+        // common.Checkin(MemberID)
 
-        cy.visit('/accommodation/bookingListing').wait(4000)
+        cy.visit('/accommodation/bookingCancellationListing').wait(5000)
 
-        AccommodationBookingListing.verifyPageTitle("Accommodation Booking Listing")
+        AccommodationBookingCancellationListing.verifyPageTitle("Accommodation Booking Cancellation Listing")
 
-        AccommodationBookingListing.ClickOn("Create New")
+        AccommodationBookingCancellationListing.ClickOn("Create New")
 
-        AccommodationBookingListing.verifyPageTitle("Accommodation Booking Detail")
+        AccommodationBookingCancelletionDetail.SelectAccommodationBooking("TestUser07252022")
 
-        AccommodationBookingDetail.FillOutAccommmodationDetail(Location, AccommodatioType, AccommodatioName)
 
-        AccommodationBookingDetail.SelectTransactionType("Reservation")
-        
-        AccommodationBookingDetail.SelectAvailableSlot("Available")
-
-        AccommodationBookingDetail.TermsAndCondition("Yes")
-
-        AccommodationBookingDetail.IdemnityWaiver("Yes")
-        
-        AccommodationBookingDetail.Submit()
-
-        common.fillOutandApplyPayment("CASH")
-
-        cy.visit('/accommodation/bookingListing').wait(4000)
-
-        AccommodationBookingListing.FilterByMemberID(MemberID)
-
-        AccommodationBookingListing.FilterByTransactionType("Reservation")
-
-        AccommodationBookingListing.VerifyTableEntery("Member ID", MemberID)
-
-        AccommodationBookingListing.VerifyTableEntery("Transaction Type", "Reservation")
-
-        AccommodationBookingListing.ClickOnTableEntry()
-
-        AccommodationBookingListing.verifyPageTitle("Accommodation Booking Detail")
-
-        AccommodationBookingDetail.VerifyInAccommodationDetailPage(MemberID, Location, AccommodatioType, AccommodatioName)
-
-        AccommodationBookingListing.ClickOn("Download Permit Letter")
-
-        AccommodationBookingListing.ClickOn("Download Authorization Permit Letter")
-
-        cy.LogoutOfSmcms()
 
 
     

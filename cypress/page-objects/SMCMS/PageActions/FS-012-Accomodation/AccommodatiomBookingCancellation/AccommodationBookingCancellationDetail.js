@@ -20,7 +20,7 @@ class AccommodationBookingCancelletionDetail {
    * Description: This function click on Submit button
     *****************************************************/
   Submit() {
-    cy.Click(elems_AccommodationBookingDetail.BTN_SUBMIT)
+    cy.Click(elems_AccommodationBookingCancellationDetail.BTN_SUBMIT)
     cy.wait(10000)
 
   }
@@ -29,69 +29,55 @@ class AccommodationBookingCancelletionDetail {
    * Description: This function click on cancel button
     *****************************************************/
   Cancel() {
-    cy.Click(elems_AccommodationBookingDetail.BTN_CANCEL)
+    cy.Click(elems_AccommodationBookingCancellationDetail.BTN_CANCEL)
 
   }
 
   /*****************************************************
-   * Method:FillOutAccommmodationDetail
-   * Description: This function will Fill Out Accommmodation Detail form
-   * @param {string} Location
-   * @param {string} AccommodationType
-   * @param {string} AccommodationName
+   * Method:SelectAccommodationBooking
+   * Description: This function will will byy Customer Name and will accommodation booking
+   * @param {string} CustomerName
     *****************************************************/
-  FillOutAccommmodationDetail(Location, AccommodationType, AccommodationName) {
+  SelectAccommodationBooking(CustomerName) {
 
-    cy.SelectPickerItem(elems_AccommodationBookingDetail.PCK_LOCATION, Location)
-    cy.SelectPickerItem(elems_AccommodationBookingDetail.PCK_ACCOMMODATIONTYPE, AccommodationType)
-    cy.wait(2000)
-    cy.EnterText(elems_AccommodationBookingDetail.TXT_ACCOMMODATIONTNAME, AccommodationName)
-    cy.Click(elems_AccommodationBookingDetail.BTN_SEARCHFILTER)
-    cy.wait(5000)
+    cy.Click(elems_AccommodationBookingCancellationDetail.PCK_ACCOMMODATIONBOOKING)
+    cy.wait(3000)
+    cy.EnterText(elems_AccommodationBookingCancellationDetail.TXT_CUSTOMERNAME, CustomerName)
+    cy.Click(elems_AccommodationBookingCancellationDetail.BTN_SEARCHFILTERS)
+    cy.wait(3000)
+    cy.SelectTableItem(elems_Picker.TBL_PICKERITEMS, "Customer Name", CustomerName)
     cy.Click(elems_Picker.BTN_SELECT)
-    cy.SelectTableItem(elems_Picker.TBL_PICKERITEMS, "Accommodation Name", AccommodationName)
-    cy.Click(elems_Picker.BTN_SELECT)
-
-    cy.wait(5000)
-
+    
   }
 
   /*****************************************************
    * Method:Cancel
    * Description: This function click on Transaction Type radio button
-   * @param {string} TransactionType
+   * @param {string} RefundCredit
+   * @param {string} RefundCreditType
+   * @param {string} Amount
     *****************************************************/
-  SelectTransactionType(TransactionType) {
+  GiveRefundCredit(RefundCredit, RefundCreditType, Amount) {
 
-    if(TransactionType === "Booking")
+    if(RefundCredit === "Yes" && RefundCreditType === "Credit")
     {
-      cy.Click(elems_AccommodationBookingDetail.RADIO_BOOKING)
+      cy.Click(elems_AccommodationBookingCancellationDetail.CHK_GIVEREFUNDCRIDT)
+      cy.SelectDropDownItem(elems_AccommodationBookingCancellationDetail.DRP_REFUNDCRIDTTYPE, RefundCreditType)
+      cy.SelectDropDownItem(elems_AccommodationBookingCancellationDetail.DRP_AMOUNTTYPE, Amount)
     }
-    if(TransactionType === "Reservation")
+    if(RefundCredit === "Yes" && RefundCreditType === "Refund")
     {
-      cy.Click(elems_AccommodationBookingDetail.RADIO_RESERVATION)
+      cy.Click(elems_AccommodationBookingCancellationDetail.CHK_GIVEREFUNDCRIDT)
+      cy.SelectDropDownItem(elems_AccommodationBookingCancellationDetail.DRP_REFUNDCRIDTTYPE, RefundCreditType)
+      cy.SelectDropDownItem(elems_AccommodationBookingCancellationDetail.DRP_AMOUNTTYPE, Amount)
     }
 
-    cy.Click(elems_AccommodationBookingDetail.BTN_SEARCHFILTER)
+    cy.EnterText(elems_AccommodationBookingCancellationDetail.TXTAERA_REFUNDCREDIT, "Testing Refund/Credit")
     cy.wait(5000)
 
   }
 
-  /*****************************************************
-   * Method:FilterAccommodationByStartDateAndEndDate
-   * Description: This function Verify Notification Msg
-   * @param {string} StartDate
-   * @param {string} EndDate
-    *****************************************************/
-  FilterAccommodationByStartDateAndEndDate(StartDate, EndDate) {
 
-    cy.SelectDate(elems_AccommodationBookingDetail.DATE_START, StartDate)
-    cy.SelectDate(elems_AccommodationBookingDetail.DATE_END, EndDate)
-    cy.wait(2000)
-    cy.Click(elems_AccommodationBookingDetail.BTN_SEARCHFILTER)
-    cy.wait(5000)
-
-  }
 
   /*****************************************************
    * Method:VerifyNotificationMsg
@@ -105,13 +91,15 @@ class AccommodationBookingCancelletionDetail {
   /*****************************************************
    * Method:VerifyLocationAndAccommodationType
    * Description: This function will Verify Location and Accommodation Type
-   * @param {string} Location
-   * @param {string} AccommodationType
+   * @param {string} CustomerName
+   * @param {string} MemberID
+   * @param {string} MainAccommodation
     *****************************************************/
-  VerifyLocationAndAccommodationType(Location, Accommodation) {
+  VerifyLocationAndAccommodationType(CustomerName, MemberID, MainAccommodation) {
 
-    cy.ValidateElementText(elems_AccommodationBookingDetail.LBL_LOCATION, Location)
-    cy.ValidateElementText(elems_AccommodationBookingDetail.LBL_ACCOMMODATIONTYPE, Accommodation)
+    cy.ValidateElementText(elems_AccommodationBookingCancellationDetail.LBL_CUSTOMERNAME, CustomerName)
+    cy.ValidateElementText(elems_AccommodationBookingCancellationDetail.LBL_MEMBERID, MemberID)
+    cy.ValidateElementText(elems_AccommodationBookingCancellationDetail.LBL_MAINACCOMMODATION, MainAccommodation)
 
   }
 
@@ -123,8 +111,8 @@ class AccommodationBookingCancelletionDetail {
     *****************************************************/
   VerifyMemberIDAndMainAccommodation(MemberID, MainAccommodation) {
 
-    cy.ValidateElementText(elems_AccommodationBookingDetail.LBL_MEMBERID, MemberID)
-    cy.ValidateElementText(elems_AccommodationBookingDetail.LBL_MAINACCOMMODATION, MainAccommodation)
+    cy.ValidateElementText(elems_AccommodationBookingCancellationDetail.LBL_MEMBERID, MemberID)
+    cy.ValidateElementText(elems_AccommodationBookingCancellationDetail.LBL_MAINACCOMMODATION, MainAccommodation)
 
   }
 
@@ -138,10 +126,10 @@ class AccommodationBookingCancelletionDetail {
     *****************************************************/
   VerifyInAccommodationDetailPage(MemberID, Location, AccommodationType, MainAccommodation) {
 
-    cy.ValidateElementText(elems_AccommodationBookingDetail.LBL_MEMBERID, MemberID)
-    cy.ValidateElementText(elems_AccommodationBookingDetail.LBL_LOCATION, Location)
-    cy.ValidateElementText(elems_AccommodationBookingDetail.LBL_ACCOMMODATIONTYPE, AccommodationType)
-    cy.ValidateElementText(elems_AccommodationBookingDetail.LBL_MAINACCOMMODATION, MainAccommodation)
+    cy.ValidateElementText(elems_AccommodationBookingCancellationDetail.LBL_MEMBERID, MemberID)
+    cy.ValidateElementText(elems_AccommodationBookingCancellationDetail.LBL_LOCATION, Location)
+    cy.ValidateElementText(elems_AccommodationBookingCancellationDetail.LBL_ACCOMMODATIONTYPE, AccommodationType)
+    cy.ValidateElementText(elems_AccommodationBookingCancellationDetail.LBL_MAINACCOMMODATION, MainAccommodation)
 
   }
 
@@ -166,7 +154,7 @@ class AccommodationBookingCancelletionDetail {
 
     if(Value === "Yes")
     {
-      cy.Click(elems_AccommodationBookingDetail.CHK_TERMANDCONDITION, Value)
+      cy.Click(elems_AccommodationBookingCancellationDetail.CHK_TERMANDCONDITION, Value)
 
     }
     
@@ -183,7 +171,7 @@ class AccommodationBookingCancelletionDetail {
     if(Value === "Yes")
     {
 
-      cy.Click(elems_AccommodationBookingDetail.CHK_INDENTITYWAIVER, Value)
+      cy.Click(elems_AccommodationBookingCancellationDetail.CHK_INDENTITYWAIVER, Value)
     }
     
 
@@ -198,10 +186,10 @@ class AccommodationBookingCancelletionDetail {
     *****************************************************/
   AddWaiverOff(ChargeType, Amount, Reason) {
 
-    cy.Click(elems_AccommodationBookingDetail.BTN_ADDWAIVEROFF, MemberID)
-    cy.SelectDropDownItem(elems_AccommodationBookingDetail.TXT_CHARGETYPE, ChargeType)
-    cy.EnterText(elems_AccommodationBookingDetail.TXT_AMOUNT, Amount)
-    cy.EnterText(elems_AccommodationBookingDetail.TXT_REASON, Reason)
+    cy.Click(elems_AccommodationBookingCancellationDetail.BTN_ADDWAIVEROFF, MemberID)
+    cy.SelectDropDownItem(elems_AccommodationBookingCancellationDetail.TXT_CHARGETYPE, ChargeType)
+    cy.EnterText(elems_AccommodationBookingCancellationDetail.TXT_AMOUNT, Amount)
+    cy.EnterText(elems_AccommodationBookingCancellationDetail.TXT_REASON, Reason)
 
   }
 
