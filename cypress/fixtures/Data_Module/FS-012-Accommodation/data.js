@@ -50,6 +50,29 @@ const data = {
         CancellationAdminFeeProduct: '',
     },
 
+    AccommodationSetup: {
+
+        AccommodationName: 'Auto-Acco' + Math.floor(Math.random() * 100),
+        ActivationDate: '21-Feb-2023',
+        AccommodationType: 'Accomm Type Test',
+        MaximumOccupancy: '5',
+        ProductName: 'Resource',
+        ChargeRateName: 'Booking',
+        StartDate: '21-Feb-2023',
+        location: 'SAFRA Jurong',
+        EndDate: '21-Dec-2023',
+        ChargeName: 'Booking',
+        TransactionType: 'Booking',
+        CalculationType: 'Per Booking',
+        AmountType: 'Percentage',
+        CustomerCategory: 'All Customer Category',
+        Description: 'Testing Description',
+        SpecialRemark: 'Special Remarks',
+        ContactPersonInfo: 'Testing Info',
+        IndemnityText: 'Indemnity Text',
+        TermConditionText: 'Term and Conditions'
+    },
+
     // Data for Accommodation Closre
     AccommodationClosure: {
 

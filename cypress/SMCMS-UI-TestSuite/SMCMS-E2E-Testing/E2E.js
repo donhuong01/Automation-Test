@@ -356,16 +356,12 @@ describe('E2E Auto Testing:FS-012', ()=> {
     AccommodatiomReservationManagement("A300000279") //Pass SAFRA MemberID
 
 
-
-
-
-
 })
 
 
 // describe('E2E Auto Testing:FS-036', ()=> {
 
-//     SRPModuleSetting()
+    // SRPModuleSetting()
 //     SAFRAPointsAdjustment(E2EData.MEMBERID_FOR_SAFRA_POINTS_ADJUSTMENT) //Provide Active member ID
 //     SAFRAPointsTransaction(E2EData.MEMBERID_FOR_SAFRA_POINTS_TRANSACTION) //Provide Active member ID
 //     SRPRedemptionCollection(E2EData.SRP_REDEMPTION_COLLECTION) //Provide Active member ID
