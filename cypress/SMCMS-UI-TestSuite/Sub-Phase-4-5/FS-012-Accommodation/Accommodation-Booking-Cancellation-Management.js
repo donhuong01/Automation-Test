@@ -18,18 +18,19 @@ beforeEach(() => {
 })
 //A300002662
 
-const MemberID = 'A300000279'
+const MemberID = 'A300000390'
 
 const  Location = 'SAFRA Jurong'
 const  AccommodatioType = 'Accomm Type Test'
 const  AccommodatioName = 'Accomm 2023'
+const  Waiver = "No"
 
 describe('[TS010] FS-012 Accommodation Booking Cancellation', function () {
 
     it('[TS-01] Creating a Accommodation Booking Cancellation without Refund/Credit', function () {
 
 
-        // common.Checkin(MemberID)
+        common.Checkin(MemberID)
 
         cy.visit('/accommodation/bookingCancellationListing').wait(5000)
 
@@ -37,10 +38,18 @@ describe('[TS010] FS-012 Accommodation Booking Cancellation', function () {
 
         AccommodationBookingCancellationListing.ClickOn("Create New")
 
-        AccommodationBookingCancelletionDetail.SelectAccommodationBooking("TestUser07252022")
+        AccommodationBookingCancelletionDetail.SelectAccommodationBooking("Renew Mem 2")
+        
+        AccommodationBookingCancelletionDetail.VerifyInfoInAccBookingCancellationDetail("Renew Mem 2","Accomm 2023")
 
+        AccommodationBookingCancelletionDetail.GiveRefundCredit("Yes","Refund","Partial Amount")
 
+        if (Waiver === "Yes")
+        {
+        AccommodationBookingCancelletionDetail.AddWaiverOff("Yes","Refund","Partial Amount")
+        }
 
+        AccommodationBookingCancelletionDetail.SelectCreditRefundItemDetail()
 
     
     })

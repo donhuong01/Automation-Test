@@ -23,6 +23,13 @@ class elems_AccommodationBookingCancellationDetail {
     static DRP_REFUNDCRIDTTYPE = '//span[@id="drpRefundCreditType"]'
     static DRP_AMOUNTTYPE = '//span[@id="drpAmountType"]'
     static TXTAERA_REFUNDCREDIT = '//textarea[@id="txtRefundCreditReason"]'
+
+    //Add Waiver off
+    static BTN_ADDWAIVEROFF = '//button[text()="Add Waiver Off"]'
+    static TXT_CHARGETYPE = '//span[@id="drpChargeType"]'
+    static TXT_AMOUNT = '//input[@id="txtAmount"]'
+    static TXT_REASON = '//textarea[@id="txtReason"]'
+    static BTN_CONFIRM = '//button[text()="Confirm"]'
     
     
 }

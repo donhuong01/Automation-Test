@@ -47,6 +47,7 @@ class AccommodationBookingCancelletionDetail {
     cy.wait(3000)
     cy.SelectTableItem(elems_Picker.TBL_PICKERITEMS, "Customer Name", CustomerName)
     cy.Click(elems_Picker.BTN_SELECT)
+    cy.wait(2000)
     
   }
 
@@ -73,7 +74,6 @@ class AccommodationBookingCancelletionDetail {
     }
 
     cy.EnterText(elems_AccommodationBookingCancellationDetail.TXTAERA_REFUNDCREDIT, "Testing Refund/Credit")
-    cy.wait(5000)
 
   }
 
@@ -89,16 +89,14 @@ class AccommodationBookingCancelletionDetail {
   }
 
   /*****************************************************
-   * Method:VerifyLocationAndAccommodationType
-   * Description: This function will Verify Location and Accommodation Type
+   * Method:VerifyInfoInAccBookingCancellationDetail
+   * Description: This function will Verify informatoin in accommodation booking cancellation detail
    * @param {string} CustomerName
-   * @param {string} MemberID
    * @param {string} MainAccommodation
     *****************************************************/
-  VerifyLocationAndAccommodationType(CustomerName, MemberID, MainAccommodation) {
+  VerifyInfoInAccBookingCancellationDetail(CustomerName, MainAccommodation) {
 
     cy.ValidateElementText(elems_AccommodationBookingCancellationDetail.LBL_CUSTOMERNAME, CustomerName)
-    cy.ValidateElementText(elems_AccommodationBookingCancellationDetail.LBL_MEMBERID, MemberID)
     cy.ValidateElementText(elems_AccommodationBookingCancellationDetail.LBL_MAINACCOMMODATION, MainAccommodation)
 
   }
@@ -117,23 +115,6 @@ class AccommodationBookingCancelletionDetail {
   }
 
   /*****************************************************
-   * Method:VerifyInAccommodationDetailPage
-   * Description: This function will Verify Info In Accommodation Detail Page
-   * @param {string} MemberID
-   * @param {string} Location
-   * @param {string} AccommodationType
-   * @param {string} MainAccommodation
-    *****************************************************/
-  VerifyInAccommodationDetailPage(MemberID, Location, AccommodationType, MainAccommodation) {
-
-    cy.ValidateElementText(elems_AccommodationBookingCancellationDetail.LBL_MEMBERID, MemberID)
-    cy.ValidateElementText(elems_AccommodationBookingCancellationDetail.LBL_LOCATION, Location)
-    cy.ValidateElementText(elems_AccommodationBookingCancellationDetail.LBL_ACCOMMODATIONTYPE, AccommodationType)
-    cy.ValidateElementText(elems_AccommodationBookingCancellationDetail.LBL_MAINACCOMMODATION, MainAccommodation)
-
-  }
-
-  /*****************************************************
    * Method:SelectAvailableSlot
    * Description: This function will Select available Slot
    * @param {string} Slot
@@ -146,34 +127,12 @@ class AccommodationBookingCancelletionDetail {
   }
 
   /*****************************************************
-   * Method:TermAndCondition
-   * Description: This function will checked Terms And Condition if user pass Yes as param
-   * @param {string} Value
+   * Method:SelectCreditRefundItemDetail
+   * Description: This function will Select CrediRefund Item Detail
     *****************************************************/
-  TermsAndCondition(Value) {
+  SelectCreditRefundItemDetail() {
 
-    if(Value === "Yes")
-    {
-      cy.Click(elems_AccommodationBookingCancellationDetail.CHK_TERMANDCONDITION, Value)
-
-    }
-    
-
-  }
-
-  /*****************************************************
-   * Method:IdemnityWaiver
-   * Description: This function will checked Idemnity Waiver if user pass Yes as param
-   * @param {string} Value
-    *****************************************************/
-  IdemnityWaiver(Value) {
-
-    if(Value === "Yes")
-    {
-
-      cy.Click(elems_AccommodationBookingCancellationDetail.CHK_INDENTITYWAIVER, Value)
-    }
-    
+    cy.Click('(//h2[text()="Accommodation Booking Cancellation Details"]//ancestor::div//table//td/input)[1]')
 
   }
 
