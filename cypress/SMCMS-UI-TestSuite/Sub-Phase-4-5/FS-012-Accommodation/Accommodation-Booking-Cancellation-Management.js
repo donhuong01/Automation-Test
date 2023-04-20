@@ -23,7 +23,9 @@ const MemberID = 'A300000390'
 const  Location = 'SAFRA Jurong'
 const  AccommodatioType = 'Accomm Type Test'
 const  AccommodatioName = 'Accomm 2023'
-const  Waiver = "No"
+const  CustomerName = "Renew Mem 2"
+const  AddWaiver = "Yes"
+const  WithRefundCredit = "Yes"
 
 describe('[TS010] FS-012 Accommodation Booking Cancellation', function () {
 
@@ -38,18 +40,175 @@ describe('[TS010] FS-012 Accommodation Booking Cancellation', function () {
 
         AccommodationBookingCancellationListing.ClickOn("Create New")
 
-        AccommodationBookingCancelletionDetail.SelectAccommodationBooking("Renew Mem 2")
+        AccommodationBookingCancelletionDetail.SelectAccommodationBooking(CustomerName)
         
-        AccommodationBookingCancelletionDetail.VerifyInfoInAccBookingCancellationDetail("Renew Mem 2","Accomm 2023")
+        AccommodationBookingCancelletionDetail.VerifyInfoInAccBookingCancellationDetail(CustomerName, AccommodatioName)
 
-        AccommodationBookingCancelletionDetail.GiveRefundCredit("Yes","Refund","Partial Amount")
-
-        if (Waiver === "Yes")
+        if(WithRefundCredit === "No")
         {
-        AccommodationBookingCancelletionDetail.AddWaiverOff("Yes","Refund","Partial Amount")
+       
+            AccommodationBookingCancelletionDetail.GiveRefundCredit("Yes","Refund","Partial Amount")
+            AccommodationBookingCancelletionDetail.SelectCreditRefundItemDetail()
         }
 
-        AccommodationBookingCancelletionDetail.SelectCreditRefundItemDetail()
+        if (AddWaiver === "No")
+        {
+
+           AccommodationBookingCancelletionDetail.AddWaiverOff("Yes","Refund","Partial Amount")
+        }
+
+        
+
+        AccommodationBookingCancellationListing.ClickOn("Submit")
+
+    
+    })
+    it('[TS-02] Creating an Accommodation Booking Cancellation to Refund - Partial Amount', function () {
+
+
+        common.Checkin(MemberID)
+
+        cy.visit('/accommodation/bookingCancellationListing').wait(5000)
+
+        AccommodationBookingCancellationListing.verifyPageTitle("Accommodation Booking Cancellation Listing")
+
+        AccommodationBookingCancellationListing.ClickOn("Create New")
+
+        AccommodationBookingCancelletionDetail.SelectAccommodationBooking(CustomerName)
+        
+        AccommodationBookingCancelletionDetail.VerifyInfoInAccBookingCancellationDetail(CustomerName, AccommodatioName)
+
+        if(WithRefundCredit === "No")
+        {
+       
+            AccommodationBookingCancelletionDetail.GiveRefundCredit("Yes","Refund","Partial Amount")
+            AccommodationBookingCancelletionDetail.EnterRefundReason()
+            AccommodationBookingCancelletionDetail.EnterRefundReason("Partial Refund")
+            AccommodationBookingCancelletionDetail.SelectCreditRefundItemDetail()
+        }
+
+        if (AddWaiver === "Yes")
+        { 
+
+           AccommodationBookingCancelletionDetail.AddWaiverOff("Yes","Refund","Partial Amount")
+        }
+
+        
+
+        AccommodationBookingCancellationListing.ClickOn("Submit")
+
+    
+    })
+
+    it('[TS-03] Creating an Accommodation Booking Cancellation to Refund - Full Amount', function () {
+
+
+        common.Checkin(MemberID)
+
+        cy.visit('/accommodation/bookingCancellationListing').wait(5000)
+
+        AccommodationBookingCancellationListing.verifyPageTitle("Accommodation Booking Cancellation Listing")
+
+        AccommodationBookingCancellationListing.ClickOn("Create New")
+
+        AccommodationBookingCancelletionDetail.SelectAccommodationBooking(CustomerName)
+        
+        AccommodationBookingCancelletionDetail.VerifyInfoInAccBookingCancellationDetail(CustomerName, AccommodatioName)
+
+        if(WithRefundCredit === "No")
+        {
+       
+            AccommodationBookingCancelletionDetail.GiveRefundCredit("Yes","Refund","Full Amount")
+            AccommodationBookingCancelletionDetail.EnterRefundReason()
+            AccommodationBookingCancelletionDetail.EnterRefundReason("Refund in Full")
+            AccommodationBookingCancelletionDetail.SelectCreditRefundItemDetail()
+        }
+
+        if (AddWaiver === "Yes")
+        {
+
+         AccommodationBookingCancelletionDetail.AddWaiverOff("Yes","Refund","Full Amount")
+        
+        }
+
+
+        AccommodationBookingCancellationListing.ClickOn("Submit")
+
+    
+    })
+
+    it('[TS-04] Creating an Accommodation Booking Cancellation to Credit - Partial Amount', function () {
+
+
+        common.Checkin(MemberID)
+
+        cy.visit('/accommodation/bookingCancellationListing').wait(5000)
+
+        AccommodationBookingCancellationListing.verifyPageTitle("Accommodation Booking Cancellation Listing")
+
+        AccommodationBookingCancellationListing.ClickOn("Create New")
+
+        AccommodationBookingCancelletionDetail.SelectAccommodationBooking(CustomerName)
+        
+        AccommodationBookingCancelletionDetail.VerifyInfoInAccBookingCancellationDetail(CustomerName, AccommodatioName)
+
+        if(WithRefundCredit === "No")
+        {
+       
+            AccommodationBookingCancelletionDetail.GiveRefundCredit("Yes","Credit","Partail Amount")
+            AccommodationBookingCancelletionDetail.EnterRefundReason()
+            AccommodationBookingCancelletionDetail.EnterRefundReason("Partail Credit")
+            AccommodationBookingCancelletionDetail.SelectCreditRefundItemDetail()
+
+        }
+
+        if (AddWaiver === "Yes")
+        {
+
+           AccommodationBookingCancelletionDetail.AddWaiverOff("Yes","Credit","Partial Amount")
+
+        }
+
+
+        AccommodationBookingCancellationListing.ClickOn("Submit")
+
+    
+    })
+
+    it('[TS-05] Creating an Accommodation Booking Cancellation to Credit - Full Amount', function () {
+
+
+        common.Checkin(MemberID)
+
+        cy.visit('/accommodation/bookingCancellationListing').wait(5000)
+
+        AccommodationBookingCancellationListing.verifyPageTitle("Accommodation Booking Cancellation Listing")
+
+        AccommodationBookingCancellationListing.ClickOn("Create New")
+
+        AccommodationBookingCancelletionDetail.SelectAccommodationBooking(CustomerName)
+        
+        AccommodationBookingCancelletionDetail.VerifyInfoInAccBookingCancellationDetail(CustomerName, AccommodatioName)
+
+        if(WithRefundCredit === "No")
+        {
+       
+            AccommodationBookingCancelletionDetail.GiveRefundCredit("Yes","Credit","Full Amount")
+            AccommodationBookingCancelletionDetail.EnterRefundReason()
+            AccommodationBookingCancelletionDetail.EnterRefundReason("Full Credit")
+            AccommodationBookingCancelletionDetail.SelectCreditRefundItemDetail()
+
+        }
+
+        if (AddWaiver === "Yes")
+        {
+
+           AccommodationBookingCancelletionDetail.AddWaiverOff("Yes","Credit","Full Amount")
+
+        }
+
+
+        AccommodationBookingCancellationListing.ClickOn("Submit")
 
     
     })

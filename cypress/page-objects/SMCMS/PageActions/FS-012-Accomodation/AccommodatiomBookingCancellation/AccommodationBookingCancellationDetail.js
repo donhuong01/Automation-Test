@@ -125,6 +125,16 @@ class AccommodationBookingCancelletionDetail {
     cy.wait(5000)
 
   }
+  /*****************************************************
+   * Method:EnterRefundReason
+   * Description: This function will Enter Refund Reason
+   * @param {string} Reason
+    *****************************************************/
+  EnterRefundReason(Reason) {
+
+    cy.EnterText(elems_AccommodationBookingCancellationDetail.TXTAERA_REFUNDCREDIT, Reason)
+
+  }
 
   /*****************************************************
    * Method:SelectCreditRefundItemDetail
