@@ -20,8 +20,9 @@ class AccommodationBookingDetail {
    * Description: This function click on Submit button
     *****************************************************/
   Submit() {
+    cy.xpath(elems_AccommodationBookingDetail.BTN_SUBMIT)
     cy.Click(elems_AccommodationBookingDetail.BTN_SUBMIT)
-    cy.wait(10000)
+    cy.wait(15000)
 
   }
   /*****************************************************
