@@ -15,4 +15,4 @@ class elems_FacilityGroupBookingBallotDetails{
     }    
 
 }
-export default elems_FacilityGroupBookingBallotDetails
+export default elems_FacilityGroupBookingBallotDetails 
