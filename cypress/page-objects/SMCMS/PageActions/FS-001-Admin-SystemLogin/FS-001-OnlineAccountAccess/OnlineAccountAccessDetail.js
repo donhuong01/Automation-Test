@@ -23,7 +23,7 @@ class OnlineAccountAccessDetail{
     FillOutFormRemarks(Remarks) 
     {
         cy.xpath(elems_OnlineAccountAccessDetail.TXTAREA_REMARK).clear()
-        cy.EnterText(elems_OnlineAccountAccessDetail.TXTAREA_REMARK,Remarks)
+        cy.EnterText(elems_OnlineAccountAccessDetail.TXTAREA_REMARK, Remarks)
     }
 
     /*****************************************************

@@ -45,7 +45,7 @@ describe ('[TS10] Membership Renewal Advice Setting Detail Form', function (){
     
     it('[TC01] FillOut Membership Renewal Advice Setting Detail Form and click Cancel button', function() {
 
-        cy.visit('https://qa-smcms.safra.sg/membership/renewalAdviceSettingList') //visit the form
+        cy.visit('/membership/renewalAdviceSettingList') //visit the form
         cy.wait(5000) //wait for 10 secs
 
         // Verify Page Title
@@ -73,7 +73,7 @@ describe ('[TS10] Membership Renewal Advice Setting Detail Form', function (){
     })
     it('[TC02] Fillout Membership Renewal Advice Setting Detail Form an click Save button', function() {
 
-        cy.visit('https://qa-smcms.safra.sg/membership/renewalAdviceSettingList') //visit the form
+        cy.visit('/membership/renewalAdviceSettingList') //visit the form
         cy.wait(5000) //wait for 10 secs
 
         // Verify Page Title

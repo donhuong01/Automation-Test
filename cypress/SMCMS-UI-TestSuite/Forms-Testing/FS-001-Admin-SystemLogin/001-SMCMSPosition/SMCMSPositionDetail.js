@@ -18,7 +18,7 @@ describe('[TS01] SMCMS Position Detail Form', function () {
         const TargetUserName = data.SAMFRAPostionDetails.targetUserName
 
         //Navigate to SMCMS Position Listing
-        cy.visit('https://qa-smcms.safra.sg/admin/smcmsPositionDetails')
+        cy.visit('/admin/smcmsPositionDetails')
         cy.wait(8000)
 
         //Verify page title
@@ -54,7 +54,7 @@ describe('[TS01] SMCMS Position Detail Form', function () {
         const TargetUserName = data.SAMFRAPostionDetails.targetUserName
 
         //Navigate to SMCMS Position Listing
-        cy.visit('https://qa-smcms.safra.sg/admin/smcmsPositionDetails')
+        cy.visit('/admin/smcmsPositionDetails')
         cy.wait(5000)
 
         //Verify page title

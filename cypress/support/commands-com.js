@@ -795,7 +795,7 @@ Cypress.Commands.add('SaveUserInfoInLocalStorageForUAT', (AuthenticatedUser, Act
 Cypress.Commands.add('GlobalNavTo', (firstMenu, secondMenu, thirdMenu, ExpectedPage) => {
 
     //Visit Check-in page
-    cy.visit('https://qa-smcms.safra.sg/membership/customerCheckin')
+    cy.visit('/membership/customerCheckin')
 
     //wait for 2 sec 
     cy.wait(5000)

@@ -20,7 +20,7 @@ describe('[TS04] SMCMS Role Detail Form', function () {
     it('[TC01] Adding, updating and deleting a Role Name', function () {
 
         // Visit SMCMS Role Listing Form
-        cy.visit('https://qa-smcms.safra.sg/admin/smcmsRoleList')
+        cy.visit('/admin/smcmsRoleList')
 
         SMCMSRoleList.createNew()
 
@@ -100,7 +100,7 @@ describe('[TS04] SMCMS Role Detail Form', function () {
     it('[TC02] Updating and cancelling a Role Name', function () {
        
         // Visit SMCMS Listing Form
-        cy.visit('https://qa-smcms.safra.sg/admin/smcmsRoleList')
+        cy.visit('/admin/smcmsRoleList')
 
         // Fill out filter
         SMCMSRoleList.fillOutFilters(data.SMCMSRoleDetail.UpdateRoleName)
@@ -129,7 +129,7 @@ describe('[TS04] SMCMS Role Detail Form', function () {
     it('[TC03] Delete newly created Role Name', function () {
        
         // Visit SMCMS Role Listing Form
-        cy.visit('https://qa-smcms.safra.sg/admin/smcmsRoleList')
+        cy.visit('/admin/smcmsRoleList')
 
         // Fill out filter
         SMCMSRoleList.fillOutFilters(data.SMCMSRoleDetail.UpdateRoleName)

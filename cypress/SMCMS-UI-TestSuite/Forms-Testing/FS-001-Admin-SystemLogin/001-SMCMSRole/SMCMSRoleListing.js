@@ -20,7 +20,7 @@ describe('[TS04] SMCMS Role Listing', function () {
         data.forEach( data => {
 
             // Navigate to Form
-            cy.visit('https://qa-smcms.safra.sg/admin/smcmsRoleList')
+            cy.visit('/admin/smcmsRoleList')
             cy.wait(3000)
 
             // Fill out filter
@@ -48,7 +48,7 @@ describe('[TS04] SMCMS Role Listing', function () {
         data.forEach( data => {
 
             // Navigate to SMCMS Role Form
-            cy.visit('https://qa-smcms.safra.sg/admin/smcmsRoleList')
+            cy.visit('/admin/smcmsRoleList')
             cy.wait(3000)
 
             // Fill out filter
@@ -79,7 +79,7 @@ describe('[TS04] SMCMS Role Listing', function () {
         data.forEach( data => {
 
             // Navigate to SMCMS Role Form
-            cy.visit('https://qa-smcms.safra.sg/admin/smcmsRoleList')
+            cy.visit('/admin/smcmsRoleList')
             cy.wait(3000)
 
             // Fill out filter

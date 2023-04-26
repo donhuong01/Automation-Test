@@ -9,12 +9,12 @@ describe('[TS01] SMCMS Position Listing Form', function () {
     const Name = data.positionList.positionName
     const lastDate = data.positionList.lastDate
 
-    beforeEach(() => {
+ beforeEach(() => {
 
-        cy.visit('https://qa-smcms.safra.sg/admin/smcmsPositionList') //visit the form
+        cy.visit('/admin/smcmsPositionList') //visit the form
         cy.wait(5000) //wait for 5 secs
 
-    })
+    })   
 
     it('[TC01] Verify the form title and create new button functionality', function () {
 
