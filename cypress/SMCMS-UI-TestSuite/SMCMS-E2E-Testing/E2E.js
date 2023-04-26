@@ -164,7 +164,7 @@ import login from '../../fixtures/login'
 beforeEach(() => {
 
     // Set local storage for QA Enviroment
-    cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
+     cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
    
     // Set local storage for UAT Enviroment
     // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
@@ -279,7 +279,7 @@ describe('E2E Auto Testing:FS-027', () => {
 // })
 
 
-describe('E2E Auto Testing:FS-015', ()=> {
+// describe('E2E Auto Testing:FS-015', ()=> {
 
         // E1GYMMembershipRegistrationWithExistingMember(E2EData.ENTER_MEMBERID_AND_NAME_E1GYM_REG_WITH_EXISTING_MEMBET.MEMBERID,
         //     E2EData.ENTER_MEMBERID_AND_NAME_E1GYM_REG_WITH_EXISTING_MEMBET.MEMBERNAME) // Enter MemberID and Member Name
@@ -306,7 +306,7 @@ describe('E2E Auto Testing:FS-015', ()=> {
 
 
 
-})
+// })
 
 
 // describe('E2E Auto Testing:FS-016', ()=> {
@@ -335,28 +335,28 @@ describe('E2E Auto Testing:FS-015', ()=> {
 
 //     GiftModuleSettings()
 //     GiftsManagement()
-//     GiftRedemptionTransactions()
-//     GiftRedemptionManagementInsertionAndCollection("A300000485","$1 MCDONALD’S GIFT CERTIFICATE","1") //Pass as Params 1.MemberID 2.Gift Name 3.Quantity
-//     GiftRedemptionManagementInsertionAndCancellation("A300000487","$1 MCDONALD’S GIFT CERTIFICATE","1") //Pass as Params 1.MemberID 2.Gift Name 3.Quantity
-//     GiftRedemptionManagementInsertionAndExchange("A300000489","$1 MCDONALD’S GIFT CERTIFICATE","1") //Pass as Params 1.MemberID 2.Gift Name 3.Quantity
+    GiftRedemptionTransactions()
+//     GiftRedemptionManagementInsertionAndCollection("A300001467","$1 MCDONALD’S GIFT CERTIFICATE","1") //Pass as Params 1.MemberID 2.Gift Name 3.Quantity
+//     GiftRedemptionManagementInsertionAndCancellation("A300001467","$1 MCDONALD’S GIFT CERTIFICATE","1") //Pass as Params 1.MemberID 2.Gift Name 3.Quantity
+//     GiftRedemptionManagementInsertionAndExchange("A300001467","$1 MCDONALD’S GIFT CERTIFICATE","1") //Pass as Params 1.MemberID 2.Gift Name 3.Quantity
 
 
 
 // })
 
 
-describe('E2E Auto Testing:FS-012', ()=> {
+// describe('E2E Auto Testing:FS-012', ()=> {
 
-    AccommodatiomSettingGeneral()
-    AccommodationSettingOperatingPeriod()
-    AccommodationTypeManagement()
-    AccommodationSetupManagement()
-    AccommodationClosureManagement()
-    AccommodatiomBookingManagement("A300002436","A300002439") //Pass SAFRA MemberID and Guest ID
-    AccommodatiomReservationManagement("A300000279") //Pass SAFRA MemberID
+//     // AccommodatiomSettingGeneral()
+//     // AccommodationSettingOperatingPeriod()
+//     // AccommodationTypeManagement()
+//     // AccommodationSetupManagement()
+//     // AccommodationClosureManagement()
+//     AccommodatiomBookingManagement("A300002294","A300000547") //Pass SAFRA MemberID and Guest ID
+//     AccommodatiomReservationManagement("A300002294") //Pass SAFRA MemberID
 
 
-})
+// })
 
 
 // describe('E2E Auto Testing:FS-036', ()=> {

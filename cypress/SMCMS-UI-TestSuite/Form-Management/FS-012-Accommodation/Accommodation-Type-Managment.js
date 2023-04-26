@@ -105,6 +105,8 @@ describe('FS-012 Accommodation Type Management', function () {
 
         AccommodationTypeListing.FilterByAccommodationName(AccTypeName)
 
+        AccommodationTypeListing.FilterByStatus('Approved')
+
         AccommodationTypeListing.SearchFilter()
 
         AccommodationTypeListing.VerifyItemStatus('Approved', 'Active')

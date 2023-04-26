@@ -119,7 +119,7 @@ describe('FS-012 Accommodation Closure Management', function () {
         
         AccommodationClosureDetail.SubmitForApproval()
 
-        common.ApprovalWorkFlow("A-CLO", "Accommodation Closure Approval Workflow", "Approval", "Testing Accommodation Closure Approval Workflow")
+        common.ApprovalWorkFlow("A-CLO", "Accommodation Closure Approval Workflow", "Approve", "Testing Accommodation Closure Approval Workflow")
 
 
     })
