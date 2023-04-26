@@ -15,5 +15,9 @@ class elems_FacilityGroupBookingBallotDetails{
         TXT_FACILITY :'//input[@name="facilityName"]'
     }    
 
+    static LBL_BALLOTNUMBER = '//label[@for="lblBallotNumber"]'
+    static LBL_FACILITY = '//label[@for="pckFacility"]'
+    static LBL_BALLOTFORGROUP = '//label[@for="lblBallotForGroupBookingsIn"]'
+
 }
 export default elems_FacilityGroupBookingBallotDetails 

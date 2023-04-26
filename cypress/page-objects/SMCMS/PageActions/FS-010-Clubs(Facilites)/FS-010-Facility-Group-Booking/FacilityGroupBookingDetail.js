@@ -1,10 +1,10 @@
-import elems_FacilityGroupBookingBallotDetails from "../../../Elements/Facilities/FS-010-CLUBS(FACILITIES)/FacilityGroupBookingBallotDetails"
+import elems_FacilityGroupBookingDetail from "../../../Elements/Facilities/FS-010-CLUBS(FACILITIES)/FacilityGroupBookingDetail"
 import elems_PageHeader from '../../../Elements/Common/PageHeader'
 import elems_Alert from '../../../Elements/Common/Alerts'
 import elems_Picker from "../../../Elements/Common/Picker"
 
 
-class FacilityGroupBookingBallotDetail {
+class FacilityGroupBookingDetail {
 
     /*****************************************************
      * Method: VerifyPageTitle
@@ -22,7 +22,7 @@ class FacilityGroupBookingBallotDetail {
      *****************************************************/
     Save() {
 
-        cy.Click(elems_FacilityGroupBookingBallotDetails.BTN_SAVE)
+        cy.Click(elems_FacilityGroupBookingDetail.BTN_SAVE)
 
     }
     /*****************************************************
@@ -31,30 +31,42 @@ class FacilityGroupBookingBallotDetail {
      *****************************************************/
     Cancel() {
 
-        cy.Click(elems_FacilityGroupBookingBallotDetails.BTN_CANCEL)
+        cy.Click(elems_FacilityGroupBookingDetail.BTN_CANCEL)
 
     }
-    /*****************************************************
-     * Method: Clear
-     * Description: This function will click on Clear button
-     *****************************************************/
-    Clear() {
 
-        cy.Click(elems_FacilityGroupBookingBallotDetails.BTN_CLEAR)
+
+    /*****************************************************
+     * Method: SelectFacilityType
+     * Description: This function will select facility type
+     * @param {string} FacilityType
+     *****************************************************/
+    SelectFacilityType(FacilityType) {
+
+        cy.SelectPickerItem(elems_FacilityGroupBookingDetail.PCK_FACILITYTYPE, "", FacilityType)
 
     }
 
     /*****************************************************
      * Method: Facility
-     * Description: This function will select facility
-     * @param {string} Facility
+     * Description: This function will select Location Name
+     * @param {string} Location
+     * @param {string} Facilities
      *****************************************************/
-    Facility(Facility) {
+    SelectLocation(Location, Facilities) {
 
-        cy.SelectPickerItem(elems_FacilityGroupBookingBallotDetails.PCK_FACILITY, Facility)
+        cy.Click(elems_FacilityGroupBookingDetail.PCK_LOCATION)
+        cy.SelectTableItem(elems_Picker.TBL_PICKERITEMS, "Location Name", Location)
+        cy.Click(elems_Picker.BTN_SELECT)
+        cy.wait(3000)
+
+        cy.SelectTableItem(elems_Picker.TBL_PICKERITEMS, "Booking Setup", Facilities)
+        cy.Click(elems_Picker.BTN_SELECT)
+        cy.wait(3000)
+
 
     }
 
 }
 
-export default new FacilityGroupBookingBallotDetail
+export default new FacilityGroupBookingDetail
