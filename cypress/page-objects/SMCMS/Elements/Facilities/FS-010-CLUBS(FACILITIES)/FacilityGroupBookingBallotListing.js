@@ -1,9 +1,10 @@
-class elems_FacilityGroupBookingListing{
+class elems_FacilityGroupBookingBallotListing{
 
     TXT_BOOKINNO = '//input[@id="txtBookingNumber"]'
     PCK_FACILITY = '//label[text()="Facility"]//following-sibling::div//button'
     TXT_FACILITY = '//input[@name="name"]'
     
+    BTN_CREATENEW = '//button[text()="Create New"]'
     BTN_SEARCHFILTER = '//button[text()="Search Filters"]'
     BTN_FACILITYSEARCHFILTER = '(//button[text()="Search Filters"])[1]'
 
@@ -17,4 +18,4 @@ class elems_FacilityGroupBookingListing{
 
 }
 
-export default elems_FacilityGroupBookingListing
+export default new elems_FacilityGroupBookingBallotListing
