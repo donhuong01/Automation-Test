@@ -156,7 +156,7 @@ import InHouseSaleAndMerchandiseTransactionRefund from '../Sub-Phase-3/FS-039&FS
 import ReceiptManagement from '../Sub-Phase-2/FS-040-Receipt-Management/E2E-Receipt-Management'
 
 //E2E DATA 
-import E2EData from '../SMCMS-E2E-Testing/E2EDataConfigUAT'
+import E2EData from './E2EDataConfigUAT'
 import WaitFor from '../../page-objects/SMCMS/PageActions/Common/WaitFor'
 
 import login from '../../fixtures/login'
