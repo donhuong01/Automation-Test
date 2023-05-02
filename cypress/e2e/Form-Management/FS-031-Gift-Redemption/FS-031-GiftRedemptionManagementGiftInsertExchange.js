@@ -31,6 +31,8 @@ describe('[TS02] FS-031 Gift Redemption Management', function () {
 
         GiftRedemptionManagement.FilterWithMemberID(MemberID)
 
+        GiftRedemptionManagement.FilterWithStatus("Pending Redemption Letter Generation")
+
         GiftRedemptionManagement.ClickOnsearchFilter()
 
         GiftRedemptionManagement.ClickTableLink()
@@ -52,9 +54,9 @@ describe('[TS02] FS-031 Gift Redemption Management', function () {
 
         GiftRedemptionManagement.FilterWithMemberID(MemberID)
 
-        GiftRedemptionManagement.ClickOnsearchFilter()
-        
         GiftRedemptionManagement.FilterWithStatus("Pending Redemption Letter Generation")
+
+        GiftRedemptionManagement.ClickOnsearchFilter()
 
         GiftRedemptionManagement.SelectTableFirstItem()
 
@@ -79,9 +81,9 @@ describe('[TS02] FS-031 Gift Redemption Management', function () {
 
         GiftRedemptionManagement.FilterWithMemberID(MemberID)
 
-        GiftRedemptionManagement.ClickOnsearchFilter()
-        
         GiftRedemptionManagement.FilterWithStatus("Uncollected")
+
+        GiftRedemptionManagement.ClickOnsearchFilter()
 
         GiftRedemptionManagement.SelectTableFirstItem()
 

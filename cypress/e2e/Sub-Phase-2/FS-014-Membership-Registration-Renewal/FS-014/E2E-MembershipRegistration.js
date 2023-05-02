@@ -96,7 +96,7 @@ describe('[TS01] Membership Registration Management',function(){
             CustomerCreation.save();
         
         ///////////////////////////////PRINCIPAL REGISTRATION////////////////////////////////////////
-            cy.wait(8000)
+            cy.wait(15000)
             cy.Click(elems_Landing.SAFRA_Member)
             cy.Click(elems_Landing.Membership_Registration)
             cy.wait(15000)

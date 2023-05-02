@@ -43,24 +43,34 @@ class FacilityGroupBookingDetail {
      *****************************************************/
     SelectFacilityType(FacilityType) {
 
-        cy.SelectPickerItem(elems_FacilityGroupBookingDetail.PCK_FACILITYTYPE, "", FacilityType)
+        cy.SelectPickerItem(elems_FacilityGroupBookingDetail.PCK_FACILITYTYPE, "Facility Type", FacilityType)
 
     }
 
+    /*****************************************************
+     * Method: SelectAvailableSlot
+     * Description: This function will select will select Availble slot
+     * @param {string} SlotName
+     *****************************************************/
+     SelectAvailableSlot(SlotName) {
+
+        cy.Click(`(//div[text()="${SlotName}"])[1]`)
+        cy.wait(3000)
+    }
     /*****************************************************
      * Method: Facility
      * Description: This function will select Location Name
      * @param {string} Location
      * @param {string} Facilities
      *****************************************************/
-    SelectLocation(Location, Facilities) {
+    SelectLocationAndFacility(Location, Facilities) {
 
         cy.Click(elems_FacilityGroupBookingDetail.PCK_LOCATION)
         cy.SelectTableItem(elems_Picker.TBL_PICKERITEMS, "Location Name", Location)
         cy.Click(elems_Picker.BTN_SELECT)
         cy.wait(3000)
 
-        cy.SelectTableItem(elems_Picker.TBL_PICKERITEMS, "Booking Setup", Facilities)
+        cy.SelectTableItem(elems_Picker.TBL_PICKERITEMS, "Name", Facilities)
         cy.Click(elems_Picker.BTN_SELECT)
         cy.wait(3000)
 

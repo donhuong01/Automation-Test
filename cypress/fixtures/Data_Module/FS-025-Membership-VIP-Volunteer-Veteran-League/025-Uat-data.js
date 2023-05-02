@@ -63,11 +63,10 @@ VIPAppointmentTermRegDetail: {
     UpdatedMemberID:'A300000639',
     UpdatedName:'Test User 924530',
     UpdatedNRIC:'871J',
-    UpdatedAppointmentID:'BOG-001',
+    UpdatedAppointmentID:'HM-001',
     UpdatedType:'VIP 1',
     UpdatedStartDate:'16-Nov-2022',
     UpdatedEndDate:'18-May-2023',
-
 },
 
 

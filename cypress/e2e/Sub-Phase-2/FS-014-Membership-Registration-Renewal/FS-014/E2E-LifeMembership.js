@@ -92,6 +92,7 @@ describe('[TS06] Life Membership Management',function(){
         
         
             CustomerCreation.save();
+            cy.wait(15000)
         
         ///////////////////////////////PRINCIPAL REGISTRATION////////////////////////////////////////
             
@@ -122,7 +123,7 @@ describe('[TS06] Life Membership Management',function(){
             
 
             MemRegPrincipal.SaveAndNextPrincipal()
-            cy.wait(7000)
+            cy.wait(15000)
         
             ///////////////////////////////////TENURE SELECTION////////////////////////////////////////////////////////////
         

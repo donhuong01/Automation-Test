@@ -45,13 +45,13 @@ class FacilityGroupBookingBallotDetail {
     }
 
     /*****************************************************
-     * Method: Facility
+     * Method: SelectFacility
      * Description: This function will select facility
      * @param {string} Facility
      *****************************************************/
-    Facility(Facility) {
+    SelectFacility(Facility) {
 
-        cy.SelectPickerItem(elems_FacilityGroupBookingBallotDetails.PCK_FACILITY, Facility)
+        cy.SelectPickerItem(elems_FacilityGroupBookingBallotDetails.PCK_FACILITY, "Facility", Facility)
 
     }
 

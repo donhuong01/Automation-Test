@@ -23,7 +23,7 @@ describe('Facility Type Detail Form', function () {
          ClubClassification, SMCClassification} = data.CategorySection
   
 
-    it.skip('[TC01] FillOut Facility Type Detail form and click cancel button', function () {
+    it('[TC01] FillOut Facility Type Detail form and click cancel button', function () {
 
         //Must login as an admin first
         cy.visit('/facilities/facilityTypeDetail');

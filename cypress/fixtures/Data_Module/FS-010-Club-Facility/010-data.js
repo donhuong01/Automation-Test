@@ -17,12 +17,12 @@ const data = {
 
     },
     FacilityBookingDetails: {
-        FacilityType: '2023 FA',
-        slot: 'Available (06:00 am - 07:00 am)',
-        ChargeType: 'Charge Rate 2023',
+        FacilityType: 'Facility  Type 2023',
+        slot: 'Available (12:00 pm - 01:00 pm)',
+        ChargeType: 'Charge Rate-2023',
         Amount: '2',
         Reason: 'Testing',
-        FacilityName: 'FA-2023',
+        FacilityName: 'Auto-Test 5066',
         Location: 'SAFRA Jurong',
     },
 

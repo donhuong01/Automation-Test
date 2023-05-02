@@ -96,6 +96,7 @@ class E1GymMembershipRegistration {
 
         cy.EnterText(elems_E1GymMembershipListing.TXT_CUSTOMERNAME, CustomerName)
         cy.Click(elems_E1GymMembershipListing.BTN_SEARCHFILTERS)
+      
 
     }
     /*****************************************************

@@ -20,7 +20,7 @@ const CustomerCreation = new CustomerCreationPage()
 const UserID = Math.floor(Math.random() * 1000 )
 
 const PrincipalName = Customerdata.CustomerCreationPrincipal.RegistrationInformation.name + UserID
-const PrincipalEmail = /*Customerdata.CustomerCreationPrincipal.ContactInformation.emailAddress + UserID*/ PrincipalName + "@test.com"
+const PrincipalEmail = Customerdata.CustomerCreationPrincipal.ContactInformation.emailAddress + UserID //PrincipalName + "@test.com" 
 
 
 const Status = 'Confirmed'
@@ -34,7 +34,7 @@ describe('[TS06] Facility Booking Form Management', function () {
 
     it('[TC01] Creating and verifying Facility Booking', function () {
 
-        ///////////////////////////////CUSTOMER CREATION////////////////////////////////////////
+        // ///////////////////////////////CUSTOMER CREATION////////////////////////////////////////
         
             //Enable SFS
             // cy.visit('/membership/moduleSettings')
@@ -142,10 +142,17 @@ describe('[TS06] Facility Booking Form Management', function () {
             cy.wait(20000) 
         
    
-    //     }) 
+        }) 
 
 
-    // it('[TC02] Creating and verifying Facility Booking', function () {
+     it('[TC02] Creating and verifying Facility Booking', function () {
+
+    cy.visit('/membership/customerCheckin')
+         cy.wait(5000)
+        cy.Click(elems_CustomerCheckInPage.RBTN_EMAILADDRESS)
+        cy.EnterText(elems_CustomerCheckInPage.TXT_EMAILADDRESS, PrincipalEmail)
+        cy.Click(elems_CustomerCheckInPage.BTN_CHECKIN)
+    /    cy.wait(7000)
 
 
         //visit facility booking listing
@@ -181,6 +188,8 @@ describe('[TS06] Facility Booking Form Management', function () {
 
         //Click Save
         FacilityBookingDetail.Save()
+
+        cy.wait(10000)
 
         //add payment
         FacilityBookingDetail.fillOutandApplyPayment('CASH')

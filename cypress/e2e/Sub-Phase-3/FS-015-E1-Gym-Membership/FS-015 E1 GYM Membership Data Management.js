@@ -1,10 +1,10 @@
 import E1GymMembershipListing from '../../../page-objects/SMCMS/PageActions/FS-015-E1-Gym-MemberShip/E1 Gym Membership Listing'
 
-beforeEach(() => {
+// beforeEach(() => {
 
-    cy.visit('/membership/e1GymMembershipList')
+//     cy.visit('/membership/e1GymMembershipList')
 
-})
+// })
 
 const E1GYMMembershipDataManagement = (E1MembershipID, SAFRAMemberID) => {
 

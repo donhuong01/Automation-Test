@@ -51,6 +51,9 @@ describe('[TS03] Code Type Management',function(){
         //visit the web
         cy.visit('/admin/codeTypeList')
         cy.wait(7000)
+
+        cy.visit('/admin/codeTypeList')
+        cy.wait(5000)
         
         //Filter by code type
         CodeTypeListingForm.codeSetMasterListingFilterbyCodeType(data.CodeTypeListing.codeType)
