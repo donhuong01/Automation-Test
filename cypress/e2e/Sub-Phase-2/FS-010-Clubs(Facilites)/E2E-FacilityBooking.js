@@ -20,7 +20,7 @@ const CustomerCreation = new CustomerCreationPage()
 const UserID = Math.floor(Math.random() * 1000 )
 
 const PrincipalName = Customerdata.CustomerCreationPrincipal.RegistrationInformation.name + UserID
-const PrincipalEmail = Customerdata.CustomerCreationPrincipal.ContactInformation.emailAddress + UserID //PrincipalName + "@test.com" 
+const PrincipalEmail = /*Customerdata.CustomerCreationPrincipal.ContactInformation.emailAddress +*/ UserID + PrincipalName + "@test.com" 
 
 
 const Status = 'Confirmed'
@@ -142,17 +142,17 @@ describe('[TS06] Facility Booking Form Management', function () {
             cy.wait(20000) 
         
    
-        }) 
+    //      }) 
 
 
-     it('[TC02] Creating and verifying Facility Booking', function () {
+    //  it.only('[TC02] Creating and verifying Facility Booking', function () {
 
-    cy.visit('/membership/customerCheckin')
-         cy.wait(5000)
-        cy.Click(elems_CustomerCheckInPage.RBTN_EMAILADDRESS)
-        cy.EnterText(elems_CustomerCheckInPage.TXT_EMAILADDRESS, PrincipalEmail)
-        cy.Click(elems_CustomerCheckInPage.BTN_CHECKIN)
-    /    cy.wait(7000)
+    // cy.visit('/membership/customerCheckin')
+    //      cy.wait(5000)
+    //     cy.Click(elems_CustomerCheckInPage.RBTN_EMAILADDRESS)
+    //     cy.EnterText(elems_CustomerCheckInPage.TXT_EMAILADDRESS, '177Test User 177@test.com')
+    //     cy.Click(elems_CustomerCheckInPage.BTN_CHECKIN)
+    //     cy.wait(7000)
 
 
         //visit facility booking listing

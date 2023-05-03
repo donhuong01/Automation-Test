@@ -21,13 +21,13 @@ beforeEach(() => {
 
 const common = new Common()
 
-const SAFRAMember = ''
+const SAFRAMember = 'A300000160'
 const SAFRARelatedMemberships = ''
 const GeustOfSAFAR = ''
 
 describe('[TS-07] FS-010 Facility Group Booking', function () {
 
-    it('[TC01] Creating Facility Group Booking - SAFRA Members', function () {
+    it.only('[TC01] Creating Facility Group Booking - SAFRA Members', function () {
 
         common.Checkin(SAFRAMember)
 
@@ -39,12 +39,11 @@ describe('[TS-07] FS-010 Facility Group Booking', function () {
 
         FacilityGroupBookingDetail.VerifyPageTitle("Facility Group Booking Detail")
 
-        FacilityGroupBookingDetail.SelectFacilityType("SelectFacilityType")
+        FacilityGroupBookingDetail.SelectFacilityType("Type 2023")
 
-        FacilityGroupBookingDetail.SelectLocationAndFacility("Jorung", "FA 2023")
+        FacilityGroupBookingDetail.SelectLocationAndFacility("Jurong", "Auto-Test 5066")
 
-
-        FacilityGroupBookingDetail.SelectAvailableSlot("")
+        FacilityGroupBookingDetail.SelectAvailableSlot("Available (09:00 am - 10:00 am)")
 
         FacilityGroupBookingDetail.Save()
 
@@ -65,11 +64,11 @@ describe('[TS-07] FS-010 Facility Group Booking', function () {
 
         FacilityGroupBookingDetail.VerifyPageTitle("Facility Group Booking Detail")
 
-        FacilityGroupBookingDetail.SelectFacilityType("SelectFacilityType")
+        FacilityGroupBookingDetail.SelectFacilityType("Type 2023")
 
-        FacilityGroupBookingDetail.SelectLocationAndFacility("Jorung", "FA 2023")
+        FacilityGroupBookingDetail.SelectLocationAndFacility("Jurong", "Auto-Test 5066")
 
-        FacilityGroupBookingDetail.SelectAvailableSlot("")
+        FacilityGroupBookingDetail.SelectAvailableSlot("Available (10:00 am - 11:00 am)")
 
         FacilityGroupBookingDetail.Save()
 
@@ -90,11 +89,11 @@ describe('[TS-07] FS-010 Facility Group Booking', function () {
 
         FacilityGroupBookingDetail.VerifyPageTitle("Facility Group Booking Detail")
 
-        FacilityGroupBookingDetail.SelectFacilityType("SelectFacilityType")
+        FacilityGroupBookingDetail.SelectFacilityType("Type 2023")
 
-        FacilityGroupBookingDetail.SelectLocationAndFacility("Jurong", "FA 2023")
+        FacilityGroupBookingDetail.SelectLocationAndFacility("Jurong", "Auto-Test 5066")
 
-        FacilityGroupBookingDetail.SelectAvailableSlot("")
+        FacilityGroupBookingDetail.SelectAvailableSlot("Available (11:00 am - 12:00 pm)")
 
         FacilityGroupBookingDetail.Save()
 
