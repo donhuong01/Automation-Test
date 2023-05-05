@@ -139,13 +139,13 @@ class elems_FacilityDetailFormDetailTab {
   static ADDITIONALINFORMATION = {
 
     TAB_ADDITIONALINFO: '//button[@data-rr-ui-event-key="additionalInformation"]',
-    TXTAERA_DESCRIPTION: '//textarea[@id="txtDescription"]',
-    TXTAERA_SPECAILREMARKS: '//textarea[@id="txtSpecialRemarks"]',
-    TXTAERA_CONTACTPERSONINFORMATION: '//textarea[@id="txtContactPersonInformation"]',
+    TXTAERA_DESCRIPTION: '//label[text()="Description"]/..//div[@class="k-editor-content"]',
+    TXTAERA_SPECAILREMARKS: '//label[text()="Special Remarks"]/..//div[@class="k-editor-content"]',
+    TXTAERA_CONTACTPERSONINFORMATION: '//label[text()="Contact Person Information"]/..//div[@class="k-editor-content"]',
     CHK_ENABLEINDEITYWAIVER: '//input[@id="chkEnableIndemnityWaiver"]',
-    TXTAERA_INDEMNITYTEXT: '//textarea[@id="txtIdemnityWaiver"]',
+    TXTAERA_INDEMNITYTEXT: '//label[text()="Indemnity Text"]/..//div[@class="k-editor-content"]',
     CHK_ENABLETERMANDCONDITIONS: '//input[@id="chkEnableTermsAndConditions"]',
-    TXTAREA_TERMANDCONDITIONTEXT: '//textarea[@id="txtTermsAndConditionsText"]'
+    TXTAREA_TERMANDCONDITIONTEXT: '//label[text()="Terms and Conditions Text"]/..//div[@class="k-editor-content"]'
   }
 
   static ATTACHMENT = {

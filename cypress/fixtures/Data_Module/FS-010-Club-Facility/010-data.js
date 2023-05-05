@@ -22,7 +22,7 @@ const data = {
         ChargeType: 'Charge Rate-2023',
         Amount: '2',
         Reason: 'Testing',
-        FacilityName: 'Auto-Test 5066',
+        FacilityName: 'Auto-Test 450',
         Location: 'SAFRA Jurong',
     },
 

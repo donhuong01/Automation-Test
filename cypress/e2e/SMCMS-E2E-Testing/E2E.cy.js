@@ -24,7 +24,9 @@ import FacilitySetupDetail from '../Sub-Phase-2/FS-010-Clubs(Facilites)/E2E-Faci
 import FacilityTypeDetailFormManagement from '../Sub-Phase-2/FS-010-Clubs(Facilites)/E2E-FacilityTypeDetailForm'
 import FacilityBookingAmendmentManagment from '../Sub-Phase-2/FS-010-Clubs(Facilites)/E2E-FacilityBookingAmendment'
 import FacilityBookingExtentionManagment from '../Sub-Phase-2/FS-010-Clubs(Facilites)/E2E-FacilityBookingExtention'
+import FacilityBookingCancellationManagment from '../Sub-Phase-2/FS-010-Clubs(Facilites)/E2E-FacilityBookingCancellation'
 import FacilityBookingManagement from '../Sub-Phase-2/FS-010-Clubs(Facilites)/E2E-FacilityBooking'
+import FacilityGroupBooking from '../Sub-Phase-2/FS-010-Clubs(Facilites)/E2E-FacilityGroupBooking'
 
 // FS - 12 Accommodation
 import AccommodatiomSettingGeneral from '../Form-Management/FS-012-Accommodation/Accommodation-Settings-General'
@@ -161,6 +163,8 @@ import PrommotionForFacilityandFacilityType from '../Sub-Phase-4-5/FS-042-Promot
 import PromotionforInHouseMerchandise from '../Sub-Phase-4-5/FS-042-Promotion/E2E-PrommotionForInHouseMerchandise'
 import PromotionforInterestGroup from '../Sub-Phase-4-5/FS-042-Promotion/E2E-PrommotionForInterestGroup'
 import PromoUtilization from '../Sub-Phase-4-5/FS-042-Promotion/E2E-Promotion-Utilization'
+import Promotion from '../Sub-Phase-4-5/FS-042-Promotion/E2E-Promotion'
+import PromotionforMembership from '../Sub-Phase-4-5/FS-042-Promotion/E2E-PromotionForMembership'
 
 
 //UAT E2E DATA 
@@ -203,18 +207,20 @@ beforeEach(() => {
 
 
 // This module need minor updates
-//  describe('E2E Auto Testing:FS-010 Facility', ()=> {
-//     FacilityGeneralSettingDtl()
-//     FacilitySettingsCalendar()
-//     FacilitySettingCalendarSettings()
-//     FacilityOperatingPeriod()
-//     FacilityTypeDetailFormManagement(E2EData.CALENDAR_NAME, E2EData.PERIODOFCALENDAR, E2EData.OPERATING_PERIOD_NAME) 
-//     FacilitySetupDetail() //Check Agian
-//     FacilityBookingManagement("S2416856E") //Change NRIC before runing this function
-//     FacilityBookingAmendmentManagment()
-//     FacilityBookingExtentionManagment()
-
-//  })
+ describe('E2E Auto Testing:FS-010 Facility', ()=> {
+    // FacilityGeneralSettingDtl()
+    // FacilitySettingsCalendar()
+    // FacilitySettingCalendarSettings()
+    // FacilityOperatingPeriod()
+    // FacilityTypeDetailFormManagement(E2EData.CALENDAR_NAME, E2EData.PERIODOFCALENDAR, E2EData.OPERATING_PERIOD_NAME) 
+    // FacilitySetupDetail() 
+     FacilityBookingManagement("S2350553C") //Change NRIC before runing this function
+    //  FacilityBookingAmendmentManagment()
+    // FacilityBookingExtentionManagment()
+    //  FacilityBookingCancellationManagment()
+    // FacilityGroupBooking(E2EData.FACILITY_GROUP_BOOKING.SAFRA_MEMBER, E2EData.FACILITY_GROUP_BOOKING.SAFRA_RELATED_MEMBER,
+    //     E2EData.FACILITY_GROUP_BOOKING.SAFRA_GUEST) //Pass Active Safra Member ID - 1.Safra Member 2. SAFRARelatedMemberships 3. Guest Member
+ })
 
 
 // describe('E2E Auto Testing:FS-012 Accommodation', ()=> {
@@ -349,16 +355,16 @@ beforeEach(() => {
 
 // describe('E2E Auto Testing:FS-028 Membership: Admin Maintenance Activities', ()=> {
     
-//     MembershipDeceased(E2EData.ACTIVE_MEMBERID_FOR_DECEASED) //Provide Active member ID
-//     BatchMembershipTermination(E2EData.SFS_BATCH_TERMINATION_IDS.MEMBERID1, E2EData.SFS_BATCH_TERMINATION_IDS.MEMBERID2,
-//         E2EData.SFS_BATCH_TERMINATION_IDS.MEMBERID3) //Provide Active member ID's
-//     BatchMemDefermentRequest(E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERNAME1, E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERID1,
-//         E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERNAME2, E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERID2) 
-//     ReinstatementConfirmation(E2EData.ACTIVE_MEMBERID_FOR_REINSTATEMENT_CONFIRMATION) //Provide Active member ID
-//     BatchMembershipWaiver(E2EData.TWO_NRICS_FOR_BATCH_MEMBERSHIP_WAIVER.NRIC1, E2EData.TWO_NRICS_FOR_BATCH_MEMBERSHIP_WAIVER.NRIC2) // Enter 2 NRIC's for Member Registration 
-//     MemDefermentRequest(E2EData.NRIC_FOR_MEMBERSHIP_DEFERMENT_REQUEST) //Change NRIC before runing this function
-//      MembershipResignationManagement(E2EData.NRIC_FOR_MEMBERSHIP_RESIGNATION_MANAGEMENT) //Change NRIC before runing this function
-//     MembershipExpulsionAndReinstatment(E2EData.NRIC_FOR_MEMBERSHIP_EXPULSION_AND_REINSTATEMENT) //Change NRIC before runing this function
+    // MembershipDeceased(E2EData.ACTIVE_MEMBERID_FOR_DECEASED) //Provide Active member ID
+    // BatchMembershipTermination(E2EData.SFS_BATCH_TERMINATION_IDS.MEMBERID1, E2EData.SFS_BATCH_TERMINATION_IDS.MEMBERID2,
+    //     E2EData.SFS_BATCH_TERMINATION_IDS.MEMBERID3) //Provide Active member ID's
+    //  BatchMemDefermentRequest(E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERNAME1, E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERID1,
+    //     E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERNAME2, E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERID2) 
+    // ReinstatementConfirmation(E2EData.ACTIVE_MEMBERID_FOR_REINSTATEMENT_CONFIRMATION) //Provide Active member ID
+    // BatchMembershipWaiver(E2EData.TWO_NRICS_FOR_BATCH_MEMBERSHIP_WAIVER.NRIC1, E2EData.TWO_NRICS_FOR_BATCH_MEMBERSHIP_WAIVER.NRIC2) // Enter 2 NRIC's for Member Registration 
+    // MemDefermentRequest(E2EData.NRIC_FOR_MEMBERSHIP_DEFERMENT_REQUEST) //Change NRIC before runing this function
+    //  MembershipResignationManagement(E2EData.NRIC_FOR_MEMBERSHIP_RESIGNATION_MANAGEMENT) //Change NRIC before runing this function
+    // MembershipExpulsionAndReinstatment(E2EData.NRIC_FOR_MEMBERSHIP_EXPULSION_AND_REINSTATEMENT) //Change NRIC before runing this function
 
 // })
 
@@ -432,15 +438,16 @@ beforeEach(() => {
 // })
 
 
-describe('E2E Auto Testing:FS-042 Promotion', ()=> {
+// describe('E2E Auto Testing:FS-042 Promotion', ()=> {
 
-    PromotionforE1Gym(E2EData.MEMBERID_FOR_E1_RENEWAL_PROMOTION.MEMBER_ID)
-    PrommotionForFacilityandFacilityType(E2EData.MEMBERID_FOR_FACILITY_PROMOTION.MEMBER_ID)
-    PromotionforInHouseMerchandise (E2EData.MEMBERID_FOR_INHOUSE_MERCHANDISE_PROMOTION.MEMBERID)
-    PromotionforInterestGroup(E2EData.MEMBERID_FOR_INTERESTG_PROMOTION.MEMBERID)
-    PromoUtilization()
-
-})
+    // PromotionforE1Gym(E2EData.MEMBERID_FOR_E1_RENEWAL_PROMOTION.MEMBER_ID) //Provide Active Member
+    // PrommotionForFacilityandFacilityType(E2EData.MEMBERID_FOR_FACILITY_PROMOTION.MEMBER_ID) //Provide Active Member
+    // PromotionforInHouseMerchandise (E2EData.MEMBERID_FOR_INHOUSE_MERCHANDISE_PROMOTION.MEMBERID) //Provide Active Member
+    // PromotionforInterestGroup(E2EData.MEMBERID_FOR_INTERESTG_PROMOTION.MEMBERID) //Provide Active Member
+    // PromoUtilization()
+    // Promotion()
+    // PromotionforMembership(E2EData.FULLNRIC_FOR_MEMBERSHIP_PROMOTION.FULLNRIC) //Provide New NRIC
+// })
 
 
 

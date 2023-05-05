@@ -221,6 +221,8 @@ describe('[TS05] Facility Setup Detail Form Management', function () {
         cy.visit('/admin/pendingTaskList');
         cy.wait(8000)
         FacilityDetailForm.FacilityApprovalWorkFlow("F-FLY","Facility Approval Workflow",ApprovalOutcome,Remarks)
+        cy.wait(8000)
+        FacilityDetailForm.FacilityApprovalWorkFlow("F-FLY","Facility Approval Workflow",ApprovalOutcome,Remarks)
         cy.visit('/facilities/facilityListing');
         cy.wait(5000)
         FacilityDetailForm.FiltersFacilitieListingForm(FacilityName,

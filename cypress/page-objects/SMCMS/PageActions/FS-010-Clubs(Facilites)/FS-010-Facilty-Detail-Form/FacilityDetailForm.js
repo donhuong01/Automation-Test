@@ -389,24 +389,24 @@ class FacilityDetailForm {
 
         cy.Click(elems_FacilityDetailFormDetailTab.ADDITIONALINFORMATION.TAB_ADDITIONALINFO)
 
-        cy.Click(elems_FacilityDetailFormDetailTab.ADDITIONALINFORMATION.TXTAERA_DESCRIPTION).clear()
+        cy.Click(elems_FacilityDetailFormDetailTab.ADDITIONALINFORMATION.TXTAERA_DESCRIPTION)
         cy.EnterText(elems_FacilityDetailFormDetailTab.ADDITIONALINFORMATION.TXTAERA_DESCRIPTION, Description)
 
-        cy.Click(elems_FacilityDetailFormDetailTab.ADDITIONALINFORMATION.TXTAERA_SPECAILREMARKS).clear()
+        //cy.Click(elems_FacilityDetailFormDetailTab.ADDITIONALINFORMATION.TXTAERA_SPECAILREMARKS).clear()
         cy.EnterText(elems_FacilityDetailFormDetailTab.ADDITIONALINFORMATION.TXTAERA_SPECAILREMARKS, SpecialRemark)
 
-        cy.Click(elems_FacilityDetailFormDetailTab.ADDITIONALINFORMATION.TXTAERA_CONTACTPERSONINFORMATION).clear()
+        //cy.Click(elems_FacilityDetailFormDetailTab.ADDITIONALINFORMATION.TXTAERA_CONTACTPERSONINFORMATION).clear()
         cy.EnterText(elems_FacilityDetailFormDetailTab.ADDITIONALINFORMATION.TXTAERA_CONTACTPERSONINFORMATION, ContactPersonInfo)
 
         if (EnbleIndWaiver === 'check') {
             cy.TickCheckBox(elems_FacilityDetailFormDetailTab.ADDITIONALINFORMATION.CHK_ENABLEINDEITYWAIVER, 'check')
-            cy.Click(elems_FacilityDetailFormDetailTab.ADDITIONALINFORMATION.TXTAERA_INDEMNITYTEXT).clear()
+            //cy.Click(elems_FacilityDetailFormDetailTab.ADDITIONALINFORMATION.TXTAERA_INDEMNITYTEXT).clear()
             cy.EnterText(elems_FacilityDetailFormDetailTab.ADDITIONALINFORMATION.TXTAERA_INDEMNITYTEXT, IndemnityText)
         }
 
         if (TermAndConditions === 'check') {
             cy.TickCheckBox(elems_FacilityDetailFormDetailTab.ADDITIONALINFORMATION.CHK_ENABLETERMANDCONDITIONS, 'check')
-            cy.Click(elems_FacilityDetailFormDetailTab.ADDITIONALINFORMATION.TXTAREA_TERMANDCONDITIONTEXT).clear()
+            //cy.Click(elems_FacilityDetailFormDetailTab.ADDITIONALINFORMATION.TXTAREA_TERMANDCONDITIONTEXT).clear()
             cy.EnterText(elems_FacilityDetailFormDetailTab.ADDITIONALINFORMATION.TXTAREA_TERMANDCONDITIONTEXT, TermAndConditionsText)
         }
     }
@@ -776,7 +776,7 @@ class FacilityDetailForm {
      *****************************************************/
     FacilityApprovalWorkFlow(TaskID, WorkflowName, ApprovalOutcome, Remarks) {
 
-        cy.visit('/facilities/facilityListing');
+        //cy.visit('/facilities/facilityListing');
         cy.wait(5000)
         cy.VerifyElementText(elems_PageHeader.LBL_PAGETITLE, 'Pending Task Listing')
         cy.EnterText(elems_PendingTaskListing.TXT_TASKID, TaskID)

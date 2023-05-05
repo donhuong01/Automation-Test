@@ -16,6 +16,8 @@ beforeEach(() => {
 
 const common = new Common()
 
+const Promotion = () => {
+
 data.forEach(data => {
 
     const { PromotionTitle, BasicType, PromoCode, UtilizeLimitPerCustomer, MaxCap, ValidityStartDate,
@@ -124,3 +126,7 @@ data.forEach(data => {
 
     })
 })
+
+}
+
+export default Promotion

@@ -33,12 +33,14 @@ beforeEach(() => {
 
 const common = new Common()
 
+const PromotionforMembership = (NRICFull) => {
+
 Promodata.forEach(each => {
 
     const { PromotionTitle, BasicType, PromoCode, UtilizeLimitPerCustomer, MaxCap, ValidityStartDate,
         ValidityExpiryDate, Remark, PromotionType, StartDate, EndDate, ItemCate, Quantity,
         BenefitType, FixedDollarRate, AgeRangFrom, AgeRangTo, CustomerCateg, ApplicableMemberID,
-        ApplicableSourceChannel, Approval, BundlePromotion, NRICFull, NRICLast4Digit } = each
+        ApplicableSourceChannel, Approval, BundlePromotion,  NRICLast4Digit } = each
 
 
     describe('SP4-FS042_TS01 Promotion Setup and Management', function () {
@@ -219,3 +221,6 @@ Promodata.forEach(each => {
     })
 })
 
+}
+
+export default PromotionforMembership

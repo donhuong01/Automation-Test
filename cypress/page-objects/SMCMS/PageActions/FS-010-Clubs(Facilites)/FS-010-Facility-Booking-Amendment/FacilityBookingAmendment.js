@@ -48,7 +48,7 @@ class FacilityBookingAmendment {
         cy.wait(1000)
         cy.SelectPickerFilter(
             elems_FacilityBookingAmendmentDetail.PCK_FACILITYBOOKING,
-            elems_FacilityBookingAmendmentDetail.TXT_CUSTOMERNAME,
+            elems_FacilityBookingAmendmentDetail.TXT_BOOKINGNUMBER,
             CustomerName,
             elems_FacilityBookingAmendmentDetail.BTN_SEARCHFILTER,
         )

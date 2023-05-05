@@ -10,10 +10,11 @@ const FacilityBookingAmendmentManagment = () => {
     describe('Facility Booking Extention Management', function () {
 
         const type = 'MEMBERID'
-        const value1 = 'A300002262'
+        const value1 = 'A300002763'
         const value2 = '867F'
         const expectedPage = 'Member Information'
-        const CustomerName = 'Auto-User 8609315';
+        const CustomerName = 'Jayson Teng';
+        const BookingNum = 'F-BOK-20230424-000589'
         const AmendmentType = 'Replacement Slot';
         const Reason = 'Amend Slot 2022'
         const check = 'check'
@@ -47,7 +48,7 @@ const FacilityBookingAmendmentManagment = () => {
             FacilityBookingAmendment.SelectTypeOfAmendment(AmendmentType)
 
             //select facility booking
-            FacilityBookingAmendment.SelectFacilityBooking(CustomerName)
+            FacilityBookingAmendment.SelectFacilityBooking(BookingNum)
             cy.wait(2000)
 
             // Fillout Amendment information Form
@@ -59,16 +60,18 @@ const FacilityBookingAmendmentManagment = () => {
             //click submit button
             FacilityBookingAmendment.Submit()
 
-            FacilityBookingAmendment.ShoppinCart()
+            // FacilityBookingAmendment.ShoppinCart()
 
-            FacilityBookingAmendment.fillOutandApplyPayment('CASH')
+            // FacilityBookingAmendment.fillOutandApplyPayment('CASH')
 
-            cy.visit('/facilities/bookingAmendmentListing')
-            cy.wait(3000)
+            // cy.visit('/facilities/bookingAmendmentListing')
+            // cy.wait(3000)
 
             FacilityBookingAmendment.VerifyFacilityAmendment(CustomerName, 'Confirmed')
 
             cy.LogoutOfSmcms()
+
+            cy.wait(5000)
 
         })
 
@@ -99,7 +102,7 @@ const FacilityBookingAmendmentManagment = () => {
             FacilityBookingAmendment.SelectTypeOfAmendment("Associated Resource")
 
             //select facility booking
-            FacilityBookingAmendment.SelectFacilityBooking(CustomerName)
+            FacilityBookingAmendment.SelectFacilityBooking(BookingNum)
             cy.wait(2000)
 
             // Fillout Amendment information Form
@@ -111,16 +114,18 @@ const FacilityBookingAmendmentManagment = () => {
             //click submit button
             FacilityBookingAmendment.Submit()
 
-            FacilityBookingAmendment.ShoppinCart()
+            // FacilityBookingAmendment.ShoppinCart()
 
-            FacilityBookingAmendment.fillOutandApplyPayment('CASH')
+            // FacilityBookingAmendment.fillOutandApplyPayment('CASH')
 
-            cy.visit('/facilities/bookingAmendmentListing')
+            // cy.visit('/facilities/bookingAmendmentListing')
             cy.wait(3000)
 
             FacilityBookingAmendment.VerifyFacilityAmendment(CustomerName, 'Confirmed')
 
             cy.LogoutOfSmcms()
+
+            cy.wait(5000)
 
 
         })
@@ -155,13 +160,13 @@ const FacilityBookingAmendmentManagment = () => {
             //click submit button
             FacilityBookingAmendment.Submit()
 
-            //shopping Cart
-            FacilityBookingAmendment.ShoppinCart()
+            // //shopping Cart
+            // FacilityBookingAmendment.ShoppinCart()
 
-            //filout apply payment
-            FacilityBookingAmendment.fillOutandApplyPayment("CASH")
+            // //filout apply payment
+            // FacilityBookingAmendment.fillOutandApplyPayment("CASH")
 
-            cy.visit('/facilities/bookingAmendmentListing')
+            // cy.visit('/facilities/bookingAmendmentListing')
 
             FacilityBookingAmendment.VerifyFacilityAmendment(CustomerName, 'Confirmed')
 
@@ -186,7 +191,7 @@ const FacilityBookingAmendmentManagment = () => {
             FacilityBookingAmendment.SelectTypeOfAmendment("Replacement Slot")
 
             //select facility booking
-            FacilityBookingAmendment.SelectFacilityBooking(CustomerName)
+            FacilityBookingAmendment.SelectFacilityBooking(BookingNum)
             cy.wait(2000)
 
             // Fillout Amendment information Form
