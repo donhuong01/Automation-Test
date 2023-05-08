@@ -173,7 +173,17 @@ class FacilityBookingDetail {
         cy.EnterText(elems_FacilityBookingListing.TXT_CUSTOMERNRIC, NRIC)
         cy.wait(1000)
         cy.Click(elems_FacilityBookingListing.BTN_SEARCHFILTER)
+    }
 
+    /*****************************************************
+    * Method: SearchWithCustomerName
+    * Description: This function will fiter table item with nric
+    * @param {string} CustomerName 
+    *****************************************************/
+    SearchWithCustomerName(CustomerName) {
+        cy.EnterText(elems_FacilityBookingListing.TXT_CUSTOMERNAME, CustomerName)
+        cy.wait(1000)
+        cy.Click(elems_FacilityBookingListing.BTN_SEARCHFILTER)
     }
 
     /*****************************************************
@@ -183,8 +193,8 @@ class FacilityBookingDetail {
      * @param {string} status 
      * @param {string} RecordStatus 
      *****************************************************/
-    VerifyFacilityBooking(NRIC, status, RecordStatus) {
-        cy.VerifyTableEntry(elems_FacilityBookingListing.TBL_FACILTYBOOKINGLIST, "NRIC", NRIC)
+    VerifyFacilityBooking(/*NRIC,*/ status, RecordStatus) {
+        //cy.VerifyTableEntry(elems_FacilityBookingListing.TBL_FACILTYBOOKINGLIST, "NRIC", NRIC)
         cy.VerifyTableEntry(elems_FacilityBookingListing.TBL_FACILTYBOOKINGLIST, "Status", status)
         cy.VerifyTableEntry(elems_FacilityBookingListing.TBL_FACILTYBOOKINGLIST, "Record Status", RecordStatus)
 

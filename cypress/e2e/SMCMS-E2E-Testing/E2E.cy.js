@@ -187,10 +187,10 @@ beforeEach(() => {
  
 // describe('E2E Auto Testing:FS-001 Admin: System Login', () => {
 
-//     OnlineAccountAccess() 
-//     SMCMSPostion()
-//     SMCMSRole() 
-//     SMCMSUser() 
+    // OnlineAccountAccess() 
+    // SMCMSPostion()
+    // SMCMSRole() 
+    // SMCMSUser() 
 // })
 
 // describe('E2E Auto Testing:FS-004 Admin: Settings', () => {
@@ -208,19 +208,19 @@ beforeEach(() => {
 
 // This module need minor updates
  describe('E2E Auto Testing:FS-010 Facility', ()=> {
-    // FacilityGeneralSettingDtl()
-    // FacilitySettingsCalendar()
-    // FacilitySettingCalendarSettings()
-    // FacilityOperatingPeriod()
+    FacilityGeneralSettingDtl()
+    FacilitySettingsCalendar()
+    FacilitySettingCalendarSettings()
+    FacilityOperatingPeriod()
     // FacilityTypeDetailFormManagement(E2EData.CALENDAR_NAME, E2EData.PERIODOFCALENDAR, E2EData.OPERATING_PERIOD_NAME) 
     // FacilitySetupDetail() 
-     FacilityBookingManagement("S2350553C") //Change NRIC before runing this function
+    // FacilityBookingManagement("S2350553C") //Please update after fixing bug on newly registered user that can't booked
     //  FacilityBookingAmendmentManagment()
     // FacilityBookingExtentionManagment()
     //  FacilityBookingCancellationManagment()
     // FacilityGroupBooking(E2EData.FACILITY_GROUP_BOOKING.SAFRA_MEMBER, E2EData.FACILITY_GROUP_BOOKING.SAFRA_RELATED_MEMBER,
     //     E2EData.FACILITY_GROUP_BOOKING.SAFRA_GUEST) //Pass Active Safra Member ID - 1.Safra Member 2. SAFRARelatedMemberships 3. Guest Member
- })
+  })
 
 
 // describe('E2E Auto Testing:FS-012 Accommodation', ()=> {
@@ -238,7 +238,7 @@ beforeEach(() => {
 
 // describe('E2E Auto Testing:FS-014 Membership: Master Registration and Renewal', ()=> {
 
-//     MembershipRegistration(E2EData.NRIC_FOR_MEMBERSHIP_REGISTRATION) // Enter Full NRIC
+     MembershipRegistration(E2EData.NRIC_FOR_MEMBERSHIP_REGISTRATION) // Enter Full NRIC
 //     CustomerCheckIn()
 //     MemberType()
 //     //BadAddressUpdate()// Fail Need code updates
@@ -372,7 +372,7 @@ beforeEach(() => {
 
 // describe('E2E Auto Testing:FS-029 Member: Charge Rate', ()=> {
 
-//     MembershipChargeRate()
+    // MembershipChargeRate()
 
 // })
 

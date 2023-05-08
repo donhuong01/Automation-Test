@@ -36,7 +36,7 @@ class MembershipChargeRateListing {
 
         // Select Charge Rate Table Link Item
         if(nameLink !== undefined){
-            cy.ClickTableLink(
+            cy.ClickTableLinkItem(
                 elems_MembershipChargeRateListing.TBL_MEMSHIPCHARGERATELIST, 
                 'Name', nameLink
             )

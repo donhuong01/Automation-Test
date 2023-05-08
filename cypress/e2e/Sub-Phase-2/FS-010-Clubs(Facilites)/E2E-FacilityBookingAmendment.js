@@ -19,7 +19,7 @@ const FacilityBookingAmendmentManagment = () => {
         const Reason = 'Amend Slot 2022'
         const check = 'check'
         const slot = "Available (10:00 am - 11:00 am)"
-        const ResourceName = 'Booking Resource 111'
+        const ResourceName = 'Resource C'
 
 
 
@@ -47,7 +47,7 @@ const FacilityBookingAmendmentManagment = () => {
             // select type of amendment
             FacilityBookingAmendment.SelectTypeOfAmendment(AmendmentType)
 
-            //select facility booking
+            //select facility booking number
             FacilityBookingAmendment.SelectFacilityBooking(BookingNum)
             cy.wait(2000)
 
@@ -101,7 +101,7 @@ const FacilityBookingAmendmentManagment = () => {
             // select type of amendment
             FacilityBookingAmendment.SelectTypeOfAmendment("Associated Resource")
 
-            //select facility booking
+            //select facility booking number
             FacilityBookingAmendment.SelectFacilityBooking(BookingNum)
             cy.wait(2000)
 
@@ -190,7 +190,7 @@ const FacilityBookingAmendmentManagment = () => {
             // select type of amendment
             FacilityBookingAmendment.SelectTypeOfAmendment("Replacement Slot")
 
-            //select facility booking
+            //select facility booking number
             FacilityBookingAmendment.SelectFacilityBooking(BookingNum)
             cy.wait(2000)
 

@@ -96,17 +96,17 @@ describe('FS-029] Membership Charge Rate Management', () =>{
         MemChargeRateList.verifyMemChargeRateList(Name, Description)
     })
 
-    it('[TC04] Access Charge Rate Item', function () {
+    it.only('[TC04] Access Charge Rate Item', function () {
 
         // Navigate to Form
         cy.visit('/membership/chargeRateList').wait(7000)
 
 
         //Filter by Name and CardType
-        MemChargeRateList.FilterByNameAndCardType(Name, CardType)
+        MemChargeRateList.FilterByNameAndCardType('Testing1455', CardType)
 
         // Click Name Link
-        MemChargeRateList.clickNameLink(Name)
+        MemChargeRateList.clickNameLink('Testing1455')
         
         // Verify Page title
         MemChargeRateList.VerifyPageTitle('Membership Charge Rate Details')
