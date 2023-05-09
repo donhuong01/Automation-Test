@@ -208,10 +208,10 @@ beforeEach(() => {
 
 // This module need minor updates
  describe('E2E Auto Testing:FS-010 Facility', ()=> {
-    FacilityGeneralSettingDtl()
-    FacilitySettingsCalendar()
-    FacilitySettingCalendarSettings()
-    FacilityOperatingPeriod()
+    // FacilityGeneralSettingDtl()
+    // FacilitySettingsCalendar()
+    // FacilitySettingCalendarSettings()
+    // FacilityOperatingPeriod()
     // FacilityTypeDetailFormManagement(E2EData.CALENDAR_NAME, E2EData.PERIODOFCALENDAR, E2EData.OPERATING_PERIOD_NAME) 
     // FacilitySetupDetail() 
     // FacilityBookingManagement("S2350553C") //Please update after fixing bug on newly registered user that can't booked
@@ -238,7 +238,7 @@ beforeEach(() => {
 
 // describe('E2E Auto Testing:FS-014 Membership: Master Registration and Renewal', ()=> {
 
-     MembershipRegistration(E2EData.NRIC_FOR_MEMBERSHIP_REGISTRATION) // Enter Full NRIC
+    //  MembershipRegistration(E2EData.NRIC_FOR_MEMBERSHIP_REGISTRATION) // Enter Full NRIC
 //     CustomerCheckIn()
 //     MemberType()
 //     //BadAddressUpdate()// Fail Need code updates
@@ -338,14 +338,14 @@ beforeEach(() => {
 
 // describe('E2E Auto Testing:FS-027 SFS Membership: Admin Maintenance Activities', () => {
 
-//     SFSMembershipDeceased(E2EData.SFS_ACTIVE_MEMBERID_FOR_DECEASED) // Enter MemberID
-//     SFSBatchMembershipTermination(E2EData.SFS_BATCH_TERMINATION_IDS.MEMBERID1, E2EData.SFS_BATCH_TERMINATION_IDS.MEMBERID2,
-//         E2EData.SFS_BATCH_TERMINATION_IDS.MEMBERID3) // Enter 3 Active Member IDs
-//     SFSBatchMemDefermentRequest(E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERNAME1, E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERID1,
-//         E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERNAME2, E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERID2) 
-//     SFSReinstatementConfirmation(E2EData.SFS_ACTIVE_MEMBERID_FOR_REINSTATEMENT_CONFIRMATION)// Enter  MemberID
-//     SFSBatchMembershipWaiver(E2EData.SFS_TWO_NRICS_FOR_BATCH_MEMBERSHIP_WAIVER.NRIC1, E2EData.SFS_TWO_NRICS_FOR_BATCH_MEMBERSHIP_WAIVER.NRIC2) // Enter 2 NRIC's for Member Registration 
-//     SFSMemDefermentRequest(E2EData.SFS_NRIC_FOR_MEMBERSHIP_DEFERMENT_REQUEST) //Change NRIC before runing this function
+//     // SFSMembershipDeceased(E2EData.SFS_ACTIVE_MEMBERID_FOR_DECEASED) // Enter MemberID
+//     // SFSBatchMembershipTermination(E2EData.SFS_BATCH_TERMINATION_IDS.MEMBERID1, E2EData.SFS_BATCH_TERMINATION_IDS.MEMBERID2,
+//     //     E2EData.SFS_BATCH_TERMINATION_IDS.MEMBERID3) // Enter 3 Active Member IDs
+//     // SFSBatchMemDefermentRequest(E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERNAME1, E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERID1,
+//     //     E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERNAME2, E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERID2) 
+//     // SFSReinstatementConfirmation(E2EData.SFS_ACTIVE_MEMBERID_FOR_REINSTATEMENT_CONFIRMATION)// Enter  Inactive MemberID
+//     // SFSBatchMembershipWaiver(E2EData.SFS_TWO_NRICS_FOR_BATCH_MEMBERSHIP_WAIVER.NRIC1, E2EData.SFS_TWO_NRICS_FOR_BATCH_MEMBERSHIP_WAIVER.NRIC2) // Enter 2 NRIC's for Member Registration 
+//     // SFSMemDefermentRequest(E2EData.SFS_NRIC_FOR_MEMBERSHIP_DEFERMENT_REQUEST) //Change NRIC before runing this function
 //     SFSMembershipResignationManagement(E2EData.SFS_NRIC_FOR_MEMBERSHIP_RESIGNATION_MANAGEMENT) //Change NRIC before runing this function
 //     SFSMembershipExpulsionAndReinstatment(E2EData.SFS_NRIC_FOR_MEMBERSHIP_EXPULSION_AND_REINSTATEMENT) //Change NRIC before runing this function
 
@@ -355,7 +355,7 @@ beforeEach(() => {
 
 // describe('E2E Auto Testing:FS-028 Membership: Admin Maintenance Activities', ()=> {
     
-    // MembershipDeceased(E2EData.ACTIVE_MEMBERID_FOR_DECEASED) //Provide Active member ID
+     // MembershipDeceased(E2EData.ACTIVE_MEMBERID_FOR_DECEASED) //Provide Active member ID
     // BatchMembershipTermination(E2EData.SFS_BATCH_TERMINATION_IDS.MEMBERID1, E2EData.SFS_BATCH_TERMINATION_IDS.MEMBERID2,
     //     E2EData.SFS_BATCH_TERMINATION_IDS.MEMBERID3) //Provide Active member ID's
     //  BatchMemDefermentRequest(E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERNAME1, E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERID1,
@@ -372,7 +372,7 @@ beforeEach(() => {
 
 // describe('E2E Auto Testing:FS-029 Member: Charge Rate', ()=> {
 
-    // MembershipChargeRate()
+//     MembershipChargeRate()
 
 // })
 
@@ -438,16 +438,16 @@ beforeEach(() => {
 // })
 
 
-// describe('E2E Auto Testing:FS-042 Promotion', ()=> {
+describe('E2E Auto Testing:FS-042 Promotion', ()=> {
 
     // PromotionforE1Gym(E2EData.MEMBERID_FOR_E1_RENEWAL_PROMOTION.MEMBER_ID) //Provide Active Member
-    // PrommotionForFacilityandFacilityType(E2EData.MEMBERID_FOR_FACILITY_PROMOTION.MEMBER_ID) //Provide Active Member
+     PrommotionForFacilityandFacilityType(E2EData.MEMBERID_FOR_FACILITY_PROMOTION.MEMBER_ID) //Provide Active Member
     // PromotionforInHouseMerchandise (E2EData.MEMBERID_FOR_INHOUSE_MERCHANDISE_PROMOTION.MEMBERID) //Provide Active Member
     // PromotionforInterestGroup(E2EData.MEMBERID_FOR_INTERESTG_PROMOTION.MEMBERID) //Provide Active Member
     // PromoUtilization()
     // Promotion()
     // PromotionforMembership(E2EData.FULLNRIC_FOR_MEMBERSHIP_PROMOTION.FULLNRIC) //Provide New NRIC
-// })
+})
 
 
 
