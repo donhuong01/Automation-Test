@@ -7,6 +7,7 @@ import BatchMembershipWaiverRequest from "../../../page-objects/SMCMS/PageAction
 import elems_MemberListing from '../../../page-objects/SMCMS/Elements/Membership/FS028_Membership-Admin-MaintActivities/MemberListing'
 import dataWaiver from '../../../fixtures/Data_Module/FS-028-Membership-Admin-MainActivities/028-data'
 import login from '../../../fixtures/login'
+import Commons from "../../../page-objects/SMCMS/PageActions/Common/Common"
 
 // Membership Registration
 // Import Pages
@@ -27,6 +28,7 @@ const MemRegPrincipal = new MemberRegistrationPrincipal()
 const MemTenureSelect = new MembershipTenureSelection()
 const ShoppingCart = new ShoppingCartPayments()
 const CustomerCreation = new CustomerCreationPage()
+const commons = new Commons()
 
 const UserID = Math.floor(Math.random() * 1000 )
 const UserID2 = Math.floor(Math.random() * 1000 )
@@ -272,8 +274,8 @@ describe('Batch Membership Waiver Request management',function(){
             // Wait for 3 minites
             // cy.wait(20000)
             
-            // //Logout
-            // cy.LogoutOfSmcms()
+            //Logout
+            cy.LogoutOfSmcms()
         
    
         })
@@ -317,7 +319,7 @@ describe('Batch Membership Waiver Request management',function(){
 
          //cy.wait(300000)
          //cy.visit(`/admin/pendingTaskDetails?id=${Id}`).as('MemID')
-         
+        
 
         // Select Approval Outcome
         //cy.SelectDropDownItem(elems_PendingTaskDetail.DRP_APPROVALOUTCOME, "Approve")
@@ -329,7 +331,9 @@ describe('Batch Membership Waiver Request management',function(){
         //   cy.wait(1000)
         //   cy.ValidateElementText(elems_Picker.MSG_NOTIFICATION, 'Record has been saved successfully.')
         // })
-        
+
+        commons.ApprovalWorkFlow('M-WAV','Batch Membership Waiver Approval Workflow','Approve', 'Test Batch membership')
+        cy.visit('/membership/memberList?pageNumber=1&pageSize=20')
     })
 
 

@@ -51,9 +51,45 @@ class FacilityGroupBookingBallotDetail {
      *****************************************************/
     SelectFacility(Facility) {
 
-        cy.SelectPickerItem(elems_FacilityGroupBookingBallotDetails.PCK_FACILITY, "Facility", Facility)
+        cy.SelectPickerItem(elems_FacilityGroupBookingBallotDetails.PCK_FACILITY,  Facility)
 
     }
+
+    /*****************************************************
+     * Method: ShoppinCart
+     * Description: This function click on shopping cart icon
+     *****************************************************/
+    ShoppinCart() {
+      
+        cy.Click(elems_PageHeader.BTN_SHOPPINGCART)
+        cy.wait(8000)
+        cy.xpath(elems_PageHeader.DRP_USERLINKS).click()
+        cy.wait(5000)
+        cy.xpath('//ul//li').contains('A-').click()
+
+        .should('contain.text', 'Standard').select('Standard')
+        // cy.xpath(elems_PageHeader.DRP_USERLINKS).then(($select)=> {
+
+        //  const slct = $select.find('//select//option')
+
+        //  cy.wrap(slct).should('contain.text', 'A-').click()
+         
+        // })
+
+        cy.select([0])
+      // //   .select(0)
+      //   cy.xpath('//span').should('contain', 'A-').click()
+
+      //   cy.wait(3000)
+         // cy.select([0])
+
+        cy.xpath('//label[@for="lblMemberId"]').then( $MemID => {
+
+        const MemberID = $MemID.text().trim()
+        console.log(MemberID)
+      
+        })
+     }
 
 }
 

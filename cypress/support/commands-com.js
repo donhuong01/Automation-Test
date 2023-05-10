@@ -153,6 +153,22 @@ Cypress.Commands.add('SelectTableItem', (locator, columnReference1, rowReference
 })
 
 /*****************************************************
+ * Command: SelectTableItem2
+ * Description: Verifies a Table Entry using
+ * column and row references. Selects all items if all
+ * is supplied on columnReference1.
+ *
+ * @param {string} locator Element Locator
+ * @param {string} columnReference1 Column Name of the Row Reference Value - 1
+ * @param {string} rowReference1 Row Reference Value - 1
+ *****************************************************/
+Cypress.Commands.add('SelectTableItem2', (locator, columnReference1, rowReference1) => {
+    cy.log('------ Select Table Item : ' + locator + ' ------')
+    //cy.xpath(locator).scrollIntoView()
+    new Table().selectTableItem(locator, columnReference1, rowReference1)
+})
+
+/*****************************************************
  * Command: ClickTableLink
  * Description: Clicks a link on a table
  *

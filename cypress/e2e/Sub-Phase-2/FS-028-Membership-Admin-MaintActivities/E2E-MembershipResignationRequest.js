@@ -17,7 +17,7 @@ import Customerdata from '../../../fixtures/Data_Module/CustomerCreationData'
 import elems_CustomerCheckInPage from '../../../page-objects/SMCMS/Elements/Membership/FS014_Membership-Master-Registration-Renewal/CustomerCheckInPage'
 import MembershipResignationRequest from '../../../page-objects/SMCMS/PageActions/FS-028-Membership-Admin-MaintActivities/FS-028-Membership Admin MaintActivities/MembershipResignationRequest'
 import MembershipModuleSetting from '../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-14-Membership Module Setting/MembershipModuleSetting'
-
+import Commons from '../../../page-objects/SMCMS/PageActions/Common/Common'
 
 //Page definition
 const MemRegPrincipal = new MemberRegistrationPrincipal()
@@ -26,6 +26,7 @@ const ShoppingCart = new ShoppingCartPayments()
 const CustomerCreation = new CustomerCreationPage()
 const MembershipResignationRequests = new MembershipResignationRequest()
 const MemModuleSettings = new MembershipModuleSetting()
+const commons = new Commons()
 
 const UserID = Math.floor(Math.random() * 1000 * 1000 )
 
@@ -151,8 +152,10 @@ describe('[TS01] Membership Resignation Request Management',function(){
             // Wait for 4.1 minites
             // cy.wait(20000)
             
-            // //Logout
-            // cy.LogoutOfSmcms()
+            //Logout
+            cy.LogoutOfSmcms()
+
+            cy.wait(3000)
         
    
         })
@@ -176,14 +179,16 @@ describe('[TS01] Membership Resignation Request Management',function(){
             MembershipResignationRequests.Request()
             
             // Filter and select item from pending listing form
-            MembershipResignationRequests.ApprovalWorkFlow(WorkflowName)
+            // MembershipResignationRequests.ApprovalWorkFlow(WorkflowName)
+            
+            commons.ApprovalWorkFlow('M-RSN','Membership Resignation Approval Workflow','Approve', 'Test Resignation Membership')
 
-            // FillOut Pending Task Detail form
-            MembershipResignationRequests.FillOutPendingTaskDetail(TaskName, WorkflowName, ApprovalOutcome, Remark)
+            // // FillOut Pending Task Detail form
+            // MembershipResignationRequests.FillOutPendingTaskDetail(TaskName, WorkflowName, ApprovalOutcome, Remark)
 
-            // Click on Save button
-            MembershipResignationRequests.Save()
-            cy.wait(20000)
+            // // Click on Save button
+            // MembershipResignationRequests.Save()
+            cy.wait(7000)
     
             // Fillout Membership Resignation Request form
             // MembershipResignationRequests.fillOutDefermentForm(CustomerNRIC, PrincipalName,  ResignType, ReasonCode, Remark, "Resign")

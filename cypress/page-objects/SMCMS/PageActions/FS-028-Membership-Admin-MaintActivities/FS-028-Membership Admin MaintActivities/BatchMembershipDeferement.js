@@ -39,18 +39,18 @@ class BatchMembershipDefermentRequest{
          * @param {string} MemberListing
     
     *****************************************************/
-    VerifyDefermentForm(MemberListing)
+    VerifyDefermentForm(Name1,MemberId1,Name2,MemberId2)
         {
             
             cy.VerifyTableEntryDeferment(
                 elems_BatchMembershipDefermentRequest.MemberListing.TBL_MEMBERLISTING,
-                'Member Name', MemberListing.Name1,
-                'Member ID', MemberListing.MemberId1
+                'Member Name', Name1,
+                'Member ID', MemberId1
                 )
             cy.VerifyTableEntryDeferment(
                 elems_BatchMembershipDefermentRequest.MemberListing.TBL_MEMBERLISTING,
-                'Member Name', MemberListing.Name2,
-                'Member ID', MemberListing.MemberId2
+                'Member Name', Name2,
+                'Member ID', MemberId2
                 )   
     
         }
@@ -115,7 +115,7 @@ class BatchMembershipDefermentRequest{
         cy.EnterText('//input[@id="txtTaskId"]', 'M-BDF')
         cy.EnterText('//input[@id="txtWorkflowname"]', 'Batch Membership Deferment Approval Workflow')
         cy.Click('//button[text()="Search Filters"]')
-        cy.wait(3000)
+        cy.wait(7000)
         cy.Click('(//table//a)[1]')
         cy.wait(3000)
         cy.SelectDropDownItem('//span[@id="drpApprovalOutcome"]', ApproveOutCome)

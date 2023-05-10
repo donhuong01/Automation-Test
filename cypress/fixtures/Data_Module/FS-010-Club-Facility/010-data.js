@@ -26,6 +26,16 @@ const data = {
         Location: 'SAFRA Jurong',
     },
 
+    FacilityGroupBookingDetails: {
+        FacilityType: 'Facility  Type 2023',
+        slot: 'Available (02:00 am - 03:00 am)',
+        ChargeType: 'Charge Rate-2023',
+        Amount: '2',
+        Reason: 'Testing',
+        FacilityName: 'Group Ballot 2023',
+        Location: 'SAFRA Jurong',
+    },
+
     Period: {
         PeriodName1: '2022 Term 1 Sch Day',
         PeriodStartDate1: '31-Dec-2022',

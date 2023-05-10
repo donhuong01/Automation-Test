@@ -17,8 +17,8 @@ const data = {
         ReasonCode: 'OTHERS',
         Remarks: 'Deferment Please',
         DefermentPeriod: '1',
-        StartMonth: '01-Dec-2022',
-        EndDate: '01-Jan-2023'
+        StartMonth: '01-Jun-2023',
+        EndDate: '01-Jul-2023'
 
     },
     DefermentMemberListing: {

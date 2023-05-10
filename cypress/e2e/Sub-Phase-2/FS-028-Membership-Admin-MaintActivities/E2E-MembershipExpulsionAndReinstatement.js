@@ -141,8 +141,9 @@ describe('[TS01] Membership Expulsion Confirmation PopUp and Reinstatement Manag
             // cy.wait(20000)
             
             //Logout
-            // cy.LogoutOfSmcms()
-        
+             cy.LogoutOfSmcms()
+            
+             cy.wait(3000)
    
         })
 

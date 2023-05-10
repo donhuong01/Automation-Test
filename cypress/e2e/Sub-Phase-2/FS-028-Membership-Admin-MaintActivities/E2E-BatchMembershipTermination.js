@@ -31,9 +31,9 @@ describe('[TS03] Batch Membership Termination Management', function () {
         cy.wait(3000)
 
         // Select Members to Terminate
-        cy.SelectTableItem(elems_MemberListing.TBL_MEMBERLISTING,'Member ID', Member1)
-        cy.SelectTableItem(elems_MemberListing.TBL_MEMBERLISTING,'Member ID', Member2)
-        cy.SelectTableItem(elems_MemberListing.TBL_MEMBERLISTING,'Member ID', Member3)
+        cy.SelectTableItem2(elems_MemberListing.TBL_MEMBERLISTING,'Member ID', Member1)
+        cy.SelectTableItem2(elems_MemberListing.TBL_MEMBERLISTING,'Member ID', Member2)
+        cy.SelectTableItem2(elems_MemberListing.TBL_MEMBERLISTING,'Member ID', Member3)
 
         // Select Terminate Option
         cy.SelectDropDownItem(elems_MemberListing.BTNDRP_MAINTENANCE,'Terminate')

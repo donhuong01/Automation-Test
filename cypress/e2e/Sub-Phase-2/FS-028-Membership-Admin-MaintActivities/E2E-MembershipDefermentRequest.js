@@ -6,6 +6,7 @@
 import Defdata from '../../../fixtures/Data_Module/FS-028-Membership-Admin-MainActivities/028-data'
 import MembershipDefermentRequest from '../../../page-objects/SMCMS/PageActions/FS-028-Membership-Admin-MaintActivities/FS-028-Membership Admin MaintActivities/MembershipDeferement'
 import elems_MemberListing from '../../../page-objects/SMCMS/Elements/Membership/FS028_Membership-Admin-MaintActivities/MemberListing'
+import Commons from '../../../page-objects/SMCMS/PageActions/Common/Common'
 
 // Membership Registration
 // Import Pages
@@ -26,6 +27,7 @@ const MemRegPrincipal = new MemberRegistrationPrincipal()
 const MemTenureSelect = new MembershipTenureSelection()
 const ShoppingCart = new ShoppingCartPayments()
 const CustomerCreation = new CustomerCreationPage()
+const commons = new Commons()
 
 const UserID = Math.floor(Math.random() * 1000 )
 
@@ -149,8 +151,8 @@ describe('[TS01] Membership Deferment Request Management',function(){
             // // Wait for 3 minites
             // cy.wait(20000)
             
-            // //Logout
-            // cy.LogoutOfSmcms()
+            //Logout
+            cy.LogoutOfSmcms()
         
    
         })
@@ -236,7 +238,9 @@ describe('[TS01] Membership Deferment Request Management',function(){
                                                 
         DefermentRequest.verifyPageTitle()
 
-       
+        commons.ApprovalWorkFlow('M-DFE','Membership Deferment Approval Workflow','Approve', 'Test Deferment Membership')
+        
+        cy.visit('/membership/memberList?pageNumber=1&pageSize=20')
         
     })
 
