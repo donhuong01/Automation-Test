@@ -209,7 +209,7 @@ beforeEach(() => {
 
 
 // This module need minor updates
- //describe('E2E Auto Testing:FS-010 Facility', ()=> {
+ describe('E2E Auto Testing:FS-010 Facility', ()=> {
     // FacilityGeneralSettingDtl()
     // FacilitySettingsCalendar()
     // FacilitySettingCalendarSettings()
@@ -222,8 +222,8 @@ beforeEach(() => {
     //  FacilityBookingCancellationManagment()
     // FacilityGroupBooking(E2EData.FACILITY_GROUP_BOOKING.SAFRA_MEMBER, E2EData.FACILITY_GROUP_BOOKING.SAFRA_RELATED_MEMBER,
     //     E2EData.FACILITY_GROUP_BOOKING.SAFRA_GUEST) //Pass Active Safra Member ID - 1.Safra Member 2. SAFRARelatedMemberships 3. Guest Member
-        FacilityGroupBookingBallot("A300000387")
-  //})
+    //    FacilityGroupBookingBallot("A300002855", "A300002871") - Recheck again tomorrow morning
+  })
 
 
 // describe('E2E Auto Testing:FS-012 Accommodation', ()=> {
@@ -358,15 +358,15 @@ beforeEach(() => {
 
 // describe('E2E Auto Testing:FS-028 Membership: Admin Maintenance Activities', ()=> {
     
-//     // MembershipDeceased(E2EData.ACTIVE_MEMBERID_FOR_DECEASED) //Provide Active member ID
-//     // BatchMembershipTermination(E2EData.SFS_BATCH_TERMINATION_IDS.MEMBERID1, E2EData.SFS_BATCH_TERMINATION_IDS.MEMBERID2,
-//     //     E2EData.SFS_BATCH_TERMINATION_IDS.MEMBERID3) //Provide Active member ID's
-//     //  BatchMemDefermentRequest(E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERNAME1, E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERID1,
-//     //     E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERNAME2, E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERID2) 
-//     // BatchMembershipWaiver(E2EData.TWO_NRICS_FOR_BATCH_MEMBERSHIP_WAIVER.NRIC1, E2EData.TWO_NRICS_FOR_BATCH_MEMBERSHIP_WAIVER.NRIC2) // Enter 2 NRIC's for Member Registration 
-//     // MemDefermentRequest(E2EData.NRIC_FOR_MEMBERSHIP_DEFERMENT_REQUEST) //Change NRIC before runing this function
-//     //  MembershipResignationManagement(E2EData.NRIC_FOR_MEMBERSHIP_RESIGNATION_MANAGEMENT) //Change NRIC before runing this function
-//     // MembershipExpulsionAndReinstatment(E2EData.NRIC_FOR_MEMBERSHIP_EXPULSION_AND_REINSTATEMENT) //Change NRIC before runing this function
+    //MembershipDeceased(E2EData.ACTIVE_MEMBERID_FOR_DECEASED) //Provide Active member ID
+    //BatchMembershipTermination(E2EData.SFS_BATCH_TERMINATION_IDS.MEMBERID1, E2EData.SFS_BATCH_TERMINATION_IDS.MEMBERID2,
+    //    E2EData.SFS_BATCH_TERMINATION_IDS.MEMBERID3) //Provide Active member ID's
+    // BatchMemDefermentRequest(E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERNAME1, E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERID1,
+    //    E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERNAME2, E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERID2) 
+    // BatchMembershipWaiver(E2EData.TWO_NRICS_FOR_BATCH_MEMBERSHIP_WAIVER.NRIC1, E2EData.TWO_NRICS_FOR_BATCH_MEMBERSHIP_WAIVER.NRIC2) // Enter 2 NRIC's for Member Registration 
+    // MemDefermentRequest(E2EData.NRIC_FOR_MEMBERSHIP_DEFERMENT_REQUEST) //Change NRIC before runing this function
+    //  MembershipResignationManagement(E2EData.NRIC_FOR_MEMBERSHIP_RESIGNATION_MANAGEMENT) //Change NRIC before runing this function
+    // MembershipExpulsionAndReinstatment(E2EData.NRIC_FOR_MEMBERSHIP_EXPULSION_AND_REINSTATEMENT) //Change NRIC before runing this function
 
 // })
 
@@ -407,19 +407,19 @@ beforeEach(() => {
 
 // })
 
-// describe('E2E Auto Testing:FS-036 SRP', ()=> {
+describe('E2E Auto Testing:FS-036 SRP', ()=> {
 
-//     SRPModuleSetting()
-//     SAFRAPointsAdjustment(E2EData.MEMBERID_FOR_SAFRA_POINTS_ADJUSTMENT) //Provide Active member ID
-//     SAFRAPointsTransaction(E2EData.MEMBERID_FOR_SAFRA_POINTS_TRANSACTION) //Provide Active member ID
-//     SRPRedemptionCollection(E2EData.SRP_REDEMPTION_COLLECTION) //Provide Active member ID
-//     SRPRedemptionManagement(E2EData.SRP_REDEMPTION_MANAGEMENT) //Provide Active member ID
-//     ThirdPartyVendorManagement()
-//     EDCTerminalManagement()
-//     SRPRedemptionCatalogueManagement()
-//     SRPPromotionManagement() 
+    SRPModuleSetting()
+    // SAFRAPointsAdjustment(E2EData.MEMBERID_FOR_SAFRA_POINTS_ADJUSTMENT) //Provide Active member ID
+    // SAFRAPointsTransaction(E2EData.MEMBERID_FOR_SAFRA_POINTS_TRANSACTION) //Provide Active member ID
+    // SRPRedemptionCollection(E2EData.SRP_REDEMPTION_COLLECTION) //Provide Active member ID
+    // SRPRedemptionManagement(E2EData.SRP_REDEMPTION_MANAGEMENT) //Provide Active member ID
+    ThirdPartyVendorManagement()
+    EDCTerminalManagement()
+    SRPRedemptionCatalogueManagement()
+    SRPPromotionManagement() 
 
-// })
+})
 
 
 // describe('E2E Auto Testing:FS-013 & 039: In-House Sale and Merchandise', ()=> {
@@ -440,16 +440,16 @@ beforeEach(() => {
 // })
 
 
-//describe('E2E Auto Testing:FS-042 Promotion', ()=> {
+// describe('E2E Auto Testing:FS-042 Promotion', ()=> {
 
-    // PromotionforE1Gym(E2EData.MEMBERID_FOR_E1_RENEWAL_PROMOTION.MEMBER_ID) //Provide Active Member
-    // PrommotionForFacilityandFacilityType(E2EData.MEMBERID_FOR_FACILITY_PROMOTION.MEMBER_ID) //Provide Active Member
-    // PromotionforInHouseMerchandise (E2EData.MEMBERID_FOR_INHOUSE_MERCHANDISE_PROMOTION.MEMBERID) //Provide Active Member
-    // PromotionforInterestGroup(E2EData.MEMBERID_FOR_INTERESTG_PROMOTION.MEMBERID) //Provide Active Member
-    // PromoUtilization()
-    // Promotion()
-    // PromotionforMembership(E2EData.FULLNRIC_FOR_MEMBERSHIP_PROMOTION.FULLNRIC) //Provide New NRIC
-//})
+//     // PromotionforE1Gym(E2EData.MEMBERID_FOR_E1_RENEWAL_PROMOTION.MEMBER_ID) //Provide Active Member
+//     //  PrommotionForFacilityandFacilityType(E2EData.MEMBERID_FOR_FACILITY_PROMOTION.MEMBER_ID) //Provide Active Member
+//     //  PromotionforInHouseMerchandise (E2EData.MEMBERID_FOR_INHOUSE_MERCHANDISE_PROMOTION.MEMBERID) //Provide Active Member
+//     //  PromotionforInterestGroup(E2EData.MEMBERID_FOR_INTERESTG_PROMOTION.MEMBERID) //Provide Active Member
+//     //  PromoUtilization()
+//     //  Promotion()
+//     //  PromotionforMembership(E2EData.FULLNRIC_FOR_MEMBERSHIP_PROMOTION.FULLNRIC) //Provide New NRIC
+// })
 
 
 

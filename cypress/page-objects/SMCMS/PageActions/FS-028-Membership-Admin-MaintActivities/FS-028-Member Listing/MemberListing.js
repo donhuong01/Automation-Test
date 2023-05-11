@@ -26,7 +26,7 @@ class MemberListingPage {
 
         cy.Click(elems_MemberListing.BTN_SEARCHFILTER);
         cy.wait(4000)
-        cy.VerifyTableEntry(elems_MemberListing.TBL_MEMBERLISTING, "Member ID", MemberID)
+        cy.VerifyTableEntryDeferment(elems_MemberListing.TBL_MEMBERLISTING, "Member ID", MemberID)
     }
 
     /********************************* 

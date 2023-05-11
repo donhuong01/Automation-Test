@@ -2,6 +2,7 @@ import elems_FacilityGroupBookingBallotListing from "../../../Elements/Facilitie
 import elems_PageHeader from '../../../Elements/Common/PageHeader'
 import elems_Alert from '../../../Elements/Common/Alerts'
 import elems_Picker from '../../../Elements/Common/Picker'
+import elems_FacilityGroupBookingListing from '../../../Elements/Facilities/FS-010-CLUBS(FACILITIES)/FacilityGroupBookingListing'
 
 
 class FacilityGroupBookingBallotListing {
@@ -112,6 +113,23 @@ class FacilityGroupBookingBallotListing {
 
         cy.Click('(//h2[text()="Facility Group Booking Ballot Listing"]//ancestor::div//table//td//a)[1]')
 
+    }
+
+      /*****************************************************
+     * Method:VerifyTable
+     * Description: This function will verify the data inside tables
+     *****************************************************/
+    VerifyTable(facility,Status){
+        
+        cy.wait(4000)
+
+        cy.VerifyTableEntry(
+            elems_FacilityGroupBookingListing.TBL_FACILTYGROUPBOOKINGLIST,
+            'Main Facility', facility,
+            'Status', Status
+            )
+
+        cy.wait(3000)
     }
     
 

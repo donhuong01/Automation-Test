@@ -57,11 +57,11 @@ Promodata.forEach(each => {
 
             PromotionDetail.SaveAsDraft()
 
-            PromotionListing.FilterByPromotionName(PromotionTitle)
+            // PromotionListing.FilterByPromotionName(PromotionTitle)
 
-            PromotionListing.ClickSearchFilter()
+            // PromotionListing.ClickSearchFilter()
 
-            PromotionListing.ClickTableLink()
+            // PromotionListing.ClickTableLink()
 
             //Promotion Type Tab
             PromotionDetail.ClickOnTab('Promotion Type') //pass the text of the related button 

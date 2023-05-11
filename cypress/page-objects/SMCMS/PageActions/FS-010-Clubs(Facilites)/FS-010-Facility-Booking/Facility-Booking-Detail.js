@@ -43,6 +43,7 @@ class FacilityBookingDetail {
         // Select Facilities
         // cy.Click(elems_FacilityBookingDetails.PCK_LOCATION)
         cy.wait(3000)
+        cy.Click('//a[text()="2"]') //Please Comment when in UAT
         cy.Click(`//table//td[text()="${Facilites}"]//preceding-sibling::td`)
         cy.Click(elems_FacilityBookingDetails.BTN_SELECT)
         cy.wait(4000)
@@ -101,9 +102,34 @@ class FacilityBookingDetail {
      *****************************************************/
 
     SelectSlot(SlotName) {
+        if(`(//div[text()="OnHold (${SlotName})"])[1]` || `(//div[text()="Booked (${SlotName})"])[1]` || undefined ){
+            cy.Click(`(//div[text()="Available (${SlotName})"])[1]`)
+            cy.wait(3000)
+        }
 
-        cy.Click(`//div[text()="${SlotName}"]`)
-        cy.wait(3000)
+        else if(`(//div[text()="OnHold (${SlotName})"])[2]` || `(//div[text()="Booked (${SlotName})"])[2]` || undefined ){
+            cy.Click(`(//div[text()="Available (${SlotName})"])[1]`)
+            cy.wait(3000)
+        }
+
+        else if(`(//div[text()="OnHold (${SlotName})"])[3]` || `(//div[text()="Booked (${SlotName})"])[3]` || undefined ){
+            cy.Click(`(//div[text()="Available (${SlotName})"])[1]`)
+            cy.wait(3000)
+        }
+
+        else if(`(//div[text()="OnHold (${SlotName})"])[4]` || `(//div[text()="Booked (${SlotName})"])[4]` || undefined ){
+            cy.Click(`(//div[text()="Available (${SlotName})"])[1]`)
+            cy.wait(3000)
+        }
+
+        else if(`(//div[text()="OnHold (${SlotName})"])[5]` || `(//div[text()="Booked (${SlotName})"])[5]` || undefined ){
+            cy.Click(`(//div[text()="Available (${SlotName})"])[1]`)
+            cy.wait(3000)
+        }
+        else{
+            cy.log("The given time is unavailable please changed")
+        }
+        
     }
 
     /*****************************************************

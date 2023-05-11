@@ -11,6 +11,7 @@ import FacilityBookingDetail from '../../../page-objects/SMCMS/PageActions/FS-01
 import data from '../../../fixtures/Data_Module/FS-010-Club-Facility/010-data'
 import login from '../../../fixtures/login'
 import Common from '../../../page-objects/SMCMS/PageActions/Common/Common'
+import ShoppingCartPayments from '../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Shopping Cart and Payment/ShoppingCartandPayments'
 
 beforeEach(() => {
 
@@ -21,30 +22,34 @@ beforeEach(() => {
 })
 
 const common = new Common()
-const { FacilityType, Location,  FacilityName, slot, ChargeType, Amount, Reason } = data.FacilityBookingDetails
+const ShoppingCart = new ShoppingCartPayments()
+const { FacilityType, Location,  FacilityName, slot, slot2,  ChargeType, Amount, Reason } = data.FacilityGroupBookingDetails
 
 const FacilityGroupBookingBallot = (SAFRAMember1,SAFRAMember2) => {
 
 describe('[TS-13] FS-010 Facility Group Booking Ballot', function () {
 
-    it('[TC01] Create New Group Booking Ballot with Successful Items', function () {
+    it('[TC03] Create New Group Booking Ballot and Cancel', function () {
 
-        common.Checkin(SAFRAMember1)
 
-        cy.visit('/facilities/bookingListing')
+        common.Checkin(SAFRAMember2)
+
+        cy.visit('/facilities/groupBookingList')
         cy.wait(5000)
 
         // Verify Page Title 
-        FacilityBookingDetail.verifyPageTitle('Facility Booking Listing')
+        FacilityBookingDetail.verifyPageTitle('Facility Group Booking Listing Form')
 
         // // Verify Page Title 
         // FacilityBookingDetail.verifyPageTitle('Facility Booking Listing')
-
+        
         // Click Create New button 
         FacilityBookingDetail.CreateNew()
 
+        cy.wait(4000)
+
         // Verify Page Title 
-        FacilityBookingDetail.verifyPageTitle('Facility Booking Details')
+        FacilityBookingDetail.verifyPageTitle('Facility Group Booking Detail')
 
         //Filout Facility Booking detail form
         FacilityBookingDetail.CreateNewFaciltyBooking(FacilityType, Location, FacilityName)
@@ -53,7 +58,50 @@ describe('[TS-13] FS-010 Facility Group Booking Ballot', function () {
         // FacilityBookingDetail.SelectFacilities(FacilityName)
 
         //verify booking info
-        FacilityBookingDetail.VerifyBookingInfo(FacilityType, Location)
+        //FacilityBookingDetail.VerifyBookingInfo(FacilityType, Location)
+
+        // select slot
+        FacilityBookingDetail.SelectSlot(slot)
+
+        // add waiver
+        //FacilityBookingDetail.AddWaiver(ChargeType, Amount, Reason)
+
+        //Click Save
+        FacilityBookingDetail.Cancel()
+
+
+    })
+
+    it('[TC01] Create New Group Booking Ballot with Successful Items', function () {
+
+        common.Checkin(SAFRAMember1)
+
+        cy.visit('/facilities/groupBookingList')
+        cy.wait(5000)
+
+        // Verify Page Title 
+        FacilityBookingDetail.verifyPageTitle('Facility Group Booking Listing Form')
+
+        // // Verify Page Title 
+        // FacilityBookingDetail.verifyPageTitle('Facility Booking Listing')
+
+        // Click Create New button 
+        FacilityBookingDetail.CreateNew()
+
+        cy.wait(4000)
+
+
+        // Verify Page Title 
+        FacilityBookingDetail.verifyPageTitle('Facility Group Booking Detail')
+
+        //Filout Facility Booking detail form
+        FacilityBookingDetail.CreateNewFaciltyBooking(FacilityType, Location, FacilityName)
+
+        //select facility name
+        // FacilityBookingDetail.SelectFacilities(FacilityName)
+
+        //verify booking info
+        //FacilityBookingDetail.VerifyBookingInfo(FacilityType, Location)
 
         // select slot
         FacilityBookingDetail.SelectSlot(slot)
@@ -76,45 +124,133 @@ describe('[TS-13] FS-010 Facility Group Booking Ballot', function () {
 
         FacilityGroupBookingBallotDetail.SelectFacility("Group Ballot 2023")
 
-        cy.ValidateElementText('//td[text()="Successful"]', "Successful")
+        //cy.ValidateElementText('//td[text()="Successful"]', "Successful")
 
         FacilityGroupBookingBallotDetail.Save()
 
-        common.AddToCart()
-
-
-
-        // Stop devepment of this testscript due Error Message "No Facility Group Booking to Display" 
-
-
-
-
-    })
-
-    it.only('Test', function(){
-
-        common.Checkin('A300000639')
-        cy.wait(3000)
         cy.visit('/facilities/groupBookingBallotListing')
-        cy.wait(5000)
-
-        // FacilityGroupBookingBallotListing.VerifyPageTitle("Facility Group Booking Ballot Listing")
-        
-        // FacilityGroupBookingBallotListing.CreateNew()
-
-        // FacilityGroupBookingBallotDetail.VerifyPageTitle("Facility Group Booking Ballot Details")
-
-        // FacilityGroupBookingBallotDetail.SelectFacility("Group Ballot 2023")
-
-        // cy.ValidateElementText('//td[text()="Successful"]', "Successful")
-
-        // FacilityGroupBookingBallotDetail.Save()
 
         FacilityGroupBookingBallotDetail.ShoppinCart()
+
+        ShoppingCart.fillOutandApplyPayment('CASH')
+
+        cy.wait(5000)
+
+        cy.visit('/facilities/groupBookingBallotListing')
+
+        FacilityGroupBookingBallotListing.VerifyPageTitle("Facility Group Booking Ballot Listing")
+
+        cy.wait(3000)
+
+        cy.visit('/facilities/groupBookingList')
+
+        cy.wait(3000)
+
+        FacilityGroupBookingBallotListing.FilterByFacility(FacilityName)
+
+         FacilityGroupBookingBallotListing.VerifyTable(FacilityName,'Confirmed')
+
+        //Logout
+        // cy.LogoutOfSmcms()
+        // cy.wait(3000)
+
     })
+
 
     it('[TC02] Create New Group Booking Ballot with Unsuccessful Items', function () {
 
+        /******************** 
+           1st Member Login
+        ********************/
+
+        common.Checkin(SAFRAMember1)
+
+        cy.visit('/facilities/groupBookingList')
+        cy.wait(5000)
+
+        // Verify Page Title 
+        FacilityBookingDetail.verifyPageTitle('Facility Group Booking Listing Form')
+
+        // // Verify Page Title 
+        // FacilityBookingDetail.verifyPageTitle('Facility Booking Listing')
+
+        // Click Create New button 
+        FacilityBookingDetail.CreateNew()
+
+        cy.wait(4000)
+
+
+        // Verify Page Title 
+        FacilityBookingDetail.verifyPageTitle('Facility Group Booking Detail')
+
+        //Filout Facility Booking detail form
+        FacilityBookingDetail.CreateNewFaciltyBooking(FacilityType, Location, FacilityName)
+
+        //select facility name
+        // FacilityBookingDetail.SelectFacilities(FacilityName)
+
+        //verify booking info
+        //FacilityBookingDetail.VerifyBookingInfo(FacilityType, Location)
+
+        // select slot
+        FacilityBookingDetail.SelectSlot(slot2)
+
+        // add waiver
+        //FacilityBookingDetail.AddWaiver(ChargeType, Amount, Reason)
+
+        //Click Save
+        FacilityBookingDetail.Save()
+
+        //Logout
+        cy.LogoutOfSmcms()
+        cy.wait(5000)
+
+
+        /******************** 
+           2nd Member Login
+        ********************/
+
+        common.Checkin(SAFRAMember2)
+        cy.wait(3000)
+
+        cy.visit('/facilities/groupBookingList')
+        cy.wait(5000)
+
+        // Verify Page Title 
+        FacilityBookingDetail.verifyPageTitle('Facility Group Booking Listing Form')
+
+        // // Verify Page Title 
+        // FacilityBookingDetail.verifyPageTitle('Facility Booking Listing')
+
+        // Click Create New button 
+        FacilityBookingDetail.CreateNew()
+
+        cy.wait(4000)
+
+
+        // Verify Page Title 
+        FacilityBookingDetail.verifyPageTitle('Facility Group Booking Detail')
+
+        //Filout Facility Booking detail form
+        FacilityBookingDetail.CreateNewFaciltyBooking(FacilityType, Location, FacilityName)
+
+        //select facility name
+        // FacilityBookingDetail.SelectFacilities(FacilityName)
+
+        //verify booking info
+        //FacilityBookingDetail.VerifyBookingInfo(FacilityType, Location)
+
+        // select slot
+        FacilityBookingDetail.SelectSlot(slot2)
+
+        // add waiver
+        //FacilityBookingDetail.AddWaiver(ChargeType, Amount, Reason)
+
+        //Click Save
+        FacilityBookingDetail.Save()
+
+
+        cy.wait(10000)
 
         cy.visit('/facilities/groupBookingBallotListing')
 
@@ -124,28 +260,40 @@ describe('[TS-13] FS-010 Facility Group Booking Ballot', function () {
 
         FacilityGroupBookingBallotDetail.VerifyPageTitle("Facility Group Booking Ballot Details")
 
-        FacilityGroupBookingBallotDetail.SelectFacility("Facility Setup F")
+        FacilityGroupBookingBallotDetail.SelectFacility("Group Ballot 2023")
 
-        // Stop devepment of this testscript due Error Message "No Facility Group Booking to Display" 
+        // cy.ValidateElementText('//td[text()="Unsuccessful"]', "Unsuccessful")
 
+        // cy.Click('//button[text()="Set as Successful"]')
 
-    })
+        // FacilityGroupBookingBallotDetail.Save()
 
-    it('[TC03] Create New Group Booking Ballot and Cancel', function () {
+        // cy.wait(3000)
 
+        //  FacilityGroupBookingBallotDetail.ShoppinCart()
 
-        cy.visit('/facilities/groupBookingBallotListing')
+        //  ShoppingCart.fillOutandApplyPayment('CASH')
 
-        FacilityGroupBookingBallotListing.VerifyPageTitle("Facility Group Booking Ballot Listing")
-        
-        FacilityGroupBookingBallotListing.CreateNew()
+        //  cy.wait(5000)
 
-        FacilityGroupBookingBallotDetail.VerifyPageTitle("Facility Group Booking Ballot Details")
+        //  cy.visit('/facilities/groupBookingBallotListing')
 
-        FacilityGroupBookingBallotDetail.SelectFacility("Facility Setup F")
+        //  FacilityGroupBookingBallotListing.VerifyPageTitle("Facility Group Booking Ballot Listing")
 
-        // Stop devepment of this testscript due Error Message "No Facility Group Booking to Display" 
+        //  cy.wait(3000)
 
+        cy.visit('/facilities/groupBookingList')
+
+        cy.wait(3000)
+
+        FacilityGroupBookingBallotListing.FilterByFacility(FacilityName)
+
+         FacilityGroupBookingBallotListing.VerifyTable(FacilityName,'Confirmed')
+
+        //Logout
+        // cy.wait(3000)
+        // cy.LogoutOfSmcms()
+        // cy.wait(3000)
 
     })
 

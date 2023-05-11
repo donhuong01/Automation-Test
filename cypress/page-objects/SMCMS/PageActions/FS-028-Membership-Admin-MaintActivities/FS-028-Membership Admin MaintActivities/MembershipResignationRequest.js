@@ -46,7 +46,7 @@ class MembershipResignationRequest{
                 cy.Click(elems_MemberListing.BTN_SEARCHFILTER)
                 cy.wait(3000)
        
-                cy.VerifyTableEntryDeferment(elems_MemberListing.TBL_MEMBERLISTING, "Reason Code", ReasonCode)
+                cy.VerifyTableEntry(elems_MemberListing.TBL_MEMBERLISTING, "Reason Code", ReasonCode)
                 cy.wait(2000)
 
                 // cy.VerifyTableEntry(elems_MemberListing.TBL_MEMBERLISTING, "Name", Name)

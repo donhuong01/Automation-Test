@@ -121,7 +121,7 @@ describe('Batch Membership Waiver Request management',function(){
             
             cy.Click(elems_Landing.SAFRA_Member)
             cy.Click(elems_Landing.Membership_Registration)
-            cy.wait(12000)
+            cy.wait(15000)
         
             MemRegPrincipal.verifyPersonalInformation({
                 MemberCategory: data.memberregistrationprincipal.Personal_Info.MemberCategory,
@@ -167,9 +167,9 @@ describe('Batch Membership Waiver Request management',function(){
             // Wait for 3 minites
             // cy.wait(20000) 
             
-            // //Logout
-            // cy.LogoutOfSmcms()
-        
+            //Logout
+            cy.LogoutOfSmcms()
+            cy.wait(3000)
    
         }) 
     it('[TC02] Second Membership Creation and Principal Registration', function () {
@@ -276,7 +276,7 @@ describe('Batch Membership Waiver Request management',function(){
             
             //Logout
             cy.LogoutOfSmcms()
-        
+            cy.wait(3000)
    
         })
     

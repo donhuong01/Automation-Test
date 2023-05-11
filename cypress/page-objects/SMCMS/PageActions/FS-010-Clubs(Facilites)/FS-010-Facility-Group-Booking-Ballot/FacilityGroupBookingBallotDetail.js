@@ -63,11 +63,11 @@ class FacilityGroupBookingBallotDetail {
       
         cy.Click(elems_PageHeader.BTN_SHOPPINGCART)
         cy.wait(8000)
-        cy.xpath(elems_PageHeader.DRP_USERLINKS).click()
+        //cy.xpath(elems_PageHeader.DRP_USERLINKS).click()
         cy.wait(5000)
-        cy.xpath('//ul//li').contains('A-').click()
-
-        .should('contain.text', 'Standard').select('Standard')
+        cy.xpath('//span[text()="Standard"]')
+        cy.Click('//span[text()="Standard"]')
+         cy.xpath('//ul//li').contains('A-').click()//.should('contain.text', 'Standard').select('Standard')
         // cy.xpath(elems_PageHeader.DRP_USERLINKS).then(($select)=> {
 
         //  const slct = $select.find('//select//option')
@@ -76,7 +76,7 @@ class FacilityGroupBookingBallotDetail {
          
         // })
 
-        cy.select([0])
+      //  cy.select([0])
       // //   .select(0)
       //   cy.xpath('//span').should('contain', 'A-').click()
 
