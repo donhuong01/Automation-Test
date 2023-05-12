@@ -46,10 +46,11 @@ class FacilityGroupBookingBallotListing {
     FilterByFacility(Facility) {
 
         cy.Click(elems_FacilityGroupBookingBallotListing.PCK_FACILITY)
-        cy.EnterText(elems_FacilityGroupBookingBallotListing.PCK_FACILITY, Facility)
+        cy.EnterText(elems_FacilityGroupBookingBallotListing.TXT_FACILITY, Facility)
         cy.Click(elems_FacilityGroupBookingBallotListing.BTN_FACILITYSEARCHFILTER)
         cy.wait(3000)
         cy.SelectTableItem(elems_Picker.TBL_PICKERITEMS, "Facility", Facility)
+        cy.wait(3000)
         cy.Click(elems_Picker.BTN_SELECT)
 
     }
@@ -116,21 +117,31 @@ class FacilityGroupBookingBallotListing {
     }
 
       /*****************************************************
-     * Method:VerifyTable
+     * Method:VerifyTableConfirmed
      * Description: This function will verify the data inside tables
      *****************************************************/
-    VerifyTable(facility,Status){
+    VerifyTableConfirmed(){
         
         cy.wait(4000)
 
-        cy.VerifyTableEntry(
-            elems_FacilityGroupBookingListing.TBL_FACILTYGROUPBOOKINGLIST,
-            'Main Facility', facility,
-            'Status', Status
-            )
+        cy.ValidateElementText('(//td[7][1])[1]', 'Confirmed')
 
         cy.wait(3000)
     }
+
+    /*****************************************************
+     * Method:VerifyTableUnsuccessful
+     * Description: This function will verify the data inside tables
+     *****************************************************/
+    VerifyTableUnsuccessful(){
+        
+        cy.wait(4000)
+
+        cy.ValidateElementText('(//td[7][1])[2]', 'Unsuccessful')
+
+        cy.wait(3000)
+    }
+
     
 
 }

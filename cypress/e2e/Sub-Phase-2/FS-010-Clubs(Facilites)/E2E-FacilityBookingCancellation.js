@@ -20,13 +20,13 @@ describe('FS-010 Facility Booking Cancellation', function () {
 
     it('[TC01] Creating a Facility Booking Cancellation without Refund/Credit', function () {
 
-        common.Checkin(MemberID)
+        common.Checkin('A300002855')
 
         cy.visit('/facilities/bookingListing')
 
-        FacilityBookingListing.FilterWithBookingNo('F-BOK-20221122-000193')
+        FacilityBookingListing.FilterWithBookingNo('F-BOK-20230510-000915')
 
-        FacilityBookingListing.SelectItem('F-BOK-20221122-000193')
+        FacilityBookingListing.SelectItem('F-BOK-20230510-000915')
 
         FacilityBookingListing.ClickMaintenanceDrp('Cancel')
 
@@ -36,7 +36,7 @@ describe('FS-010 Facility Booking Cancellation', function () {
 
         cy.visit('/facilities/bookingListing')
 
-        FacilityBookingListing.FilterWithBookingNo('F-BOK-20221122-000193')
+        FacilityBookingListing.FilterWithBookingNo('F-BOK-20230510-000915')
 
         FacilityBookingListing.VerifyStatus('Cancelled')
 

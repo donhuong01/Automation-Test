@@ -189,10 +189,10 @@ beforeEach(() => {
  
 // describe('E2E Auto Testing:FS-001 Admin: System Login', () => {
 
-    // OnlineAccountAccess() 
-    // SMCMSPostion()
-    // SMCMSRole() 
-    // SMCMSUser() 
+//     OnlineAccountAccess() 
+//     SMCMSPostion()
+//     SMCMSRole() 
+//     SMCMSUser() 
 // })
 
 // describe('E2E Auto Testing:FS-004 Admin: Settings', () => {
@@ -210,19 +210,19 @@ beforeEach(() => {
 
 // This module need minor updates
  describe('E2E Auto Testing:FS-010 Facility', ()=> {
-    // FacilityGeneralSettingDtl()
-    // FacilitySettingsCalendar()
-    // FacilitySettingCalendarSettings()
-    // FacilityOperatingPeriod()
-    // FacilityTypeDetailFormManagement(E2EData.CALENDAR_NAME, E2EData.PERIODOFCALENDAR, E2EData.OPERATING_PERIOD_NAME) 
-    // FacilitySetupDetail() 
-    // FacilityBookingManagement("S2350553C") //Please update after fixing bug on newly registered user that can't booked
-    //  FacilityBookingAmendmentManagment()
-    // FacilityBookingExtentionManagment()
-    //  FacilityBookingCancellationManagment()
-    // FacilityGroupBooking(E2EData.FACILITY_GROUP_BOOKING.SAFRA_MEMBER, E2EData.FACILITY_GROUP_BOOKING.SAFRA_RELATED_MEMBER,
-    //     E2EData.FACILITY_GROUP_BOOKING.SAFRA_GUEST) //Pass Active Safra Member ID - 1.Safra Member 2. SAFRARelatedMemberships 3. Guest Member
-    //    FacilityGroupBookingBallot("A300002855", "A300002871") - Recheck again tomorrow morning
+    FacilityGeneralSettingDtl()
+    FacilitySettingsCalendar()
+    FacilitySettingCalendarSettings()
+    FacilityOperatingPeriod()
+    FacilityTypeDetailFormManagement(E2EData.CALENDAR_NAME, E2EData.PERIODOFCALENDAR, E2EData.OPERATING_PERIOD_NAME) 
+    FacilitySetupDetail() 
+     FacilityBookingManagement("S3709565F")
+    FacilityBookingAmendmentManagment()
+     FacilityBookingExtentionManagment() // Needs an update in Facility for extension setting
+      FacilityBookingCancellationManagment()
+     FacilityGroupBooking(E2EData.FACILITY_GROUP_BOOKING.SAFRA_MEMBER, E2EData.FACILITY_GROUP_BOOKING.SAFRA_RELATED_MEMBER,
+         E2EData.FACILITY_GROUP_BOOKING.SAFRA_GUEST) //Pass Active Safra Member ID - 1.Safra Member 2. SAFRARelatedMemberships 3. Guest Member
+       FacilityGroupBookingBallot("A300002855", "A300002871") // Recheck again tomorrow morning
   })
 
 
@@ -308,7 +308,7 @@ beforeEach(() => {
 
 
 
-// describe('E2E Auto Testing:FS-016 Interest Group: Registration and Maintenance Activities', ()=> {
+describe('E2E Auto Testing:FS-016 Interest Group: Registration and Maintenance Activities', ()=> {
 
 // InterestGroupMembershipRegistration(E2EData.MEMBERID_FOR_IG_REGISTRATION) //Change NRIC each time after runing this code
 // InterestGMembershipRenewal(E2EData.MEMBERID_FOR_IG_RENEWAL) //Change NRIC each time after runing this code
@@ -324,7 +324,7 @@ beforeEach(() => {
 // InterestGroupManagement()
 // InterestGroupMembershipManagment()
 
-// })
+})
 
 
 
@@ -407,19 +407,19 @@ beforeEach(() => {
 
 // })
 
-describe('E2E Auto Testing:FS-036 SRP', ()=> {
+// describe('E2E Auto Testing:FS-036 SRP', ()=> {
 
-    SRPModuleSetting()
+    // SRPModuleSetting()
     // SAFRAPointsAdjustment(E2EData.MEMBERID_FOR_SAFRA_POINTS_ADJUSTMENT) //Provide Active member ID
     // SAFRAPointsTransaction(E2EData.MEMBERID_FOR_SAFRA_POINTS_TRANSACTION) //Provide Active member ID
     // SRPRedemptionCollection(E2EData.SRP_REDEMPTION_COLLECTION) //Provide Active member ID
     // SRPRedemptionManagement(E2EData.SRP_REDEMPTION_MANAGEMENT) //Provide Active member ID
-    ThirdPartyVendorManagement()
-    EDCTerminalManagement()
-    SRPRedemptionCatalogueManagement()
-    SRPPromotionManagement() 
+    // ThirdPartyVendorManagement()
+    // EDCTerminalManagement()
+    // SRPRedemptionCatalogueManagement()
+    // SRPPromotionManagement() 
 
-})
+// })
 
 
 // describe('E2E Auto Testing:FS-013 & 039: In-House Sale and Merchandise', ()=> {

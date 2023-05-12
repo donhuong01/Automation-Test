@@ -8,7 +8,7 @@ class FacilityBookingListing {
          ****************************************************/
     FilterWithBookingNo(BookingNo) {
         cy.EnterText(elems_FacilityBookingListing.TXT_BOOKINGNUMBER, BookingNo)
-        cy.Click(elems_FacilityBookingListing.BTN_SEARCHFILTERS)
+        cy.Click(elems_FacilityBookingListing.BTN_SEARCHFILTER)
     }
 
 
@@ -17,7 +17,7 @@ class FacilityBookingListing {
          * Description: 
          ****************************************************/
     SelectItem(BookingNo) {
-        cy.SelectTableItem(elems_FacilityBookingListing.TBL_FACILITYBOOKINGLISTING, 'Booking Number', BookingNo)
+        cy.SelectTableItem(elems_FacilityBookingListing.TBL_FACILTYBOOKINGLIST, 'Booking Number', BookingNo)
     }
 
 
@@ -64,7 +64,7 @@ class FacilityBookingListing {
          * Description: 
          ****************************************************/
     VerifyStatus(Status) {
-        cy.VerifyTableEntry(elems_FacilityBookingListing.TBL_FACILITYBOOKINGLISTING, 'Status', Status)
+        cy.VerifyTableEntry(elems_FacilityBookingListing.TBL_FACILTYBOOKINGLIST, 'Status', Status)
     }
     /*****************************************************
          * Method: FilterWithCustomerName
@@ -72,7 +72,7 @@ class FacilityBookingListing {
          ****************************************************/
     FilterWithCustomerName(CustomerName) {
         cy.EnterText(elems_FacilityBookingListing.TXT_CUSTOMERNAME, CustomerName)
-        cy.Click(elems_FacilityBookingListing.BTN_SEARCHFILTERS)
+        cy.Click(elems_FacilityBookingListing.BTN_SEARCHFILTER)
         cy.wait(2000)
     }
     /*****************************************************
@@ -91,7 +91,7 @@ class FacilityBookingListing {
         cy.wait(2000)
         cy.EnterText(elems_FacilityBookingListing.TXT_CUSTOMERNAME, CustomerName)
         cy.SelectDropDownItem(elems_FacilityBookingListing.DRP_STATUS, Status)
-        cy.Click(elems_FacilityBookingListing.BTN_SEARCHFILTERS)
+        cy.Click(elems_FacilityBookingListing.BTN_SEARCHFILTER)
         cy.wait(2000)
     }
 

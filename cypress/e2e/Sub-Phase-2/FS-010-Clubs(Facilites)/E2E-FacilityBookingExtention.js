@@ -11,11 +11,11 @@ const FacilityBookingExtentionManagment = () => {
     describe('Facility Booking Extention Management', function () {
 
         const type = 'MEMBERID'
-        const value1 = 'A300000674'
+        const value1 = 'A300002855'
         const value2 = '022D'
         const expectedPage = 'Member Information'
-        const CustomerName = 'Test 022D';
-        const Amount = '10';
+        const CustomerName = 'Waiver 711';
+        const Amount = '3';
         const Reason = 'Testing'
         const Status = 'Confirmed'
 

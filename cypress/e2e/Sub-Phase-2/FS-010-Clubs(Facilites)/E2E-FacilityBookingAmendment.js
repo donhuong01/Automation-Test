@@ -48,7 +48,7 @@ const FacilityBookingAmendmentManagment = () => {
             FacilityBookingAmendment.SelectTypeOfAmendment(AmendmentType)
 
             //select facility booking number
-            FacilityBookingAmendment.SelectFacilityBooking(BookingNum)
+            FacilityBookingAmendment.SelectFacilityBooking(CustomerName)
             cy.wait(2000)
 
             // Fillout Amendment information Form
@@ -102,7 +102,7 @@ const FacilityBookingAmendmentManagment = () => {
             FacilityBookingAmendment.SelectTypeOfAmendment("Associated Resource")
 
             //select facility booking number
-            FacilityBookingAmendment.SelectFacilityBooking(BookingNum)
+            FacilityBookingAmendment.SelectFacilityBooking(CustomerName)
             cy.wait(2000)
 
             // Fillout Amendment information Form
@@ -131,6 +131,13 @@ const FacilityBookingAmendmentManagment = () => {
         })
 
         it('[TC03] Createing New Booking Amendment - Replacement Slot for Expired Booking', function () {
+
+             // checkin customer first
+            cy.visit('/membership/customerCheckin')
+            cy.wait(5000)
+ 
+            checkin.checkIn({ type, value1, value2, expectedPage })
+            cy.wait(2000)
 
             cy.visit('/facilities/bookingAmendmentListing')
             cy.wait(3000)
@@ -174,6 +181,13 @@ const FacilityBookingAmendmentManagment = () => {
         })
 
         it('[TC04] Create New Booking Amendment Cancel', function () {
+
+             // checkin customer first
+             cy.visit('/membership/customerCheckin')
+             cy.wait(5000)
+ 
+             checkin.checkIn({ type, value1, value2, expectedPage })
+             cy.wait(2000)
 
             cy.visit('/facilities/bookingAmendmentListing')
             cy.wait(3000)
