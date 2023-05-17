@@ -205,7 +205,7 @@ const FacilityBookingAmendmentManagment = () => {
             FacilityBookingAmendment.SelectTypeOfAmendment("Replacement Slot")
 
             //select facility booking number
-            FacilityBookingAmendment.SelectFacilityBooking(BookingNum)
+            FacilityBookingAmendment.SelectFacilityBooking(CustomerName)
             cy.wait(2000)
 
             // Fillout Amendment information Form

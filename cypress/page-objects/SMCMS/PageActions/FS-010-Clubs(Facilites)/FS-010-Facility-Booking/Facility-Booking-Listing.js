@@ -22,6 +22,24 @@ class FacilityBookingListing {
 
 
     /*****************************************************
+     * Method: SelectFacilityBooking
+     * Description: This function Select Facility Booking
+     * @param {string} CustomerName
+     *****************************************************/
+    SelectFacilityBooking(CustomerName) {
+        cy.wait(1000)
+        cy.SelectPickerFilter(
+            elems_FacilityBookingListing.PCK_FACILITYBOOKING,
+            elems_FacilityBookingListing.TXT_CUSTOMERNAME,
+            CustomerName,
+            elems_FacilityBookingListing.BTN_SEARCHFILTER,
+        )
+
+
+    }
+
+
+    /*****************************************************
          * Method: ClickMaintenanceDrp
          * Description: 
          ****************************************************/

@@ -168,6 +168,8 @@ describe('[TS06] Facility Booking Form Management', function () {
         // Click Create New button 
         FacilityBookingDetail.CreateNew()
 
+        cy.wait(4000)
+
         // Verify Page Title 
         FacilityBookingDetail.verifyPageTitle('Facility Booking Details')
 

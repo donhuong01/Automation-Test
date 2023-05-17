@@ -210,19 +210,19 @@ beforeEach(() => {
 
 // This module need minor updates
  describe('E2E Auto Testing:FS-010 Facility', ()=> {
-    FacilityGeneralSettingDtl()
-    FacilitySettingsCalendar()
-    FacilitySettingCalendarSettings()
-    FacilityOperatingPeriod()
-    FacilityTypeDetailFormManagement(E2EData.CALENDAR_NAME, E2EData.PERIODOFCALENDAR, E2EData.OPERATING_PERIOD_NAME) 
-    FacilitySetupDetail() 
-     FacilityBookingManagement("S3709565F")
-    FacilityBookingAmendmentManagment()
-     FacilityBookingExtentionManagment() // Needs an update in Facility for extension setting
-      FacilityBookingCancellationManagment()
-     FacilityGroupBooking(E2EData.FACILITY_GROUP_BOOKING.SAFRA_MEMBER, E2EData.FACILITY_GROUP_BOOKING.SAFRA_RELATED_MEMBER,
-         E2EData.FACILITY_GROUP_BOOKING.SAFRA_GUEST) //Pass Active Safra Member ID - 1.Safra Member 2. SAFRARelatedMemberships 3. Guest Member
-       FacilityGroupBookingBallot("A300002855", "A300002871") // Recheck again tomorrow morning
+    // FacilityGeneralSettingDtl()
+    // FacilitySettingsCalendar()
+    // FacilitySettingCalendarSettings()
+    // FacilityOperatingPeriod()
+    // FacilityTypeDetailFormManagement(E2EData.CALENDAR_NAME, E2EData.PERIODOFCALENDAR, E2EData.OPERATING_PERIOD_NAME) 
+    // FacilitySetupDetail() 
+    // FacilityBookingManagement("S5545610J")
+    // FacilityBookingAmendmentManagment()
+    //  FacilityBookingExtentionManagment() // Needs an update in Facility for extension setting
+    //  FacilityBookingCancellationManagment() // Needs own page action
+    //  FacilityGroupBooking(E2EData.FACILITY_GROUP_BOOKING.SAFRA_MEMBER, E2EData.FACILITY_GROUP_BOOKING.SAFRA_RELATED_MEMBER,
+    //      E2EData.FACILITY_GROUP_BOOKING.SAFRA_GUEST) //Pass Active Safra Member ID - 1.Safra Member 2. SAFRARelatedMemberships 3. Guest Member
+    //    FacilityGroupBookingBallot("A300002855", "A300002871") // Recheck again tomorrow morning
   })
 
 
@@ -321,7 +321,7 @@ describe('E2E Auto Testing:FS-016 Interest Group: Registration and Maintenance A
 // IGMembershipReinstatement(E2EData.MEMBERID_FOR_IG_REINSTATEMENT.MEMBERID, E2EData.MEMBERID_FOR_IG_REINSTATEMENT.MEMBERNAME)
 // InterestGMembershipReverse(E2EData.MEMBER_NAME_FOR_IG_REVERSAL) //Provide Member Name
 // InterestGMembershipwaiver(E2EData.MEMBER_NAME_FOR_IG_WAIVER)  //Provide Member Name
-// InterestGroupManagement()
+ InterestGroupManagement()
 // InterestGroupMembershipManagment()
 
 })

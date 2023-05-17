@@ -22,11 +22,18 @@ describe('FS-010 Facility Booking Cancellation', function () {
 
         common.Checkin('A300002855')
 
-        cy.visit('/facilities/bookingListing')
+        cy.visit('/facilities/bookingCancellationListing')
 
-        FacilityBookingListing.FilterWithBookingNo('F-BOK-20230510-000915')
+        // Verify page title
+        FacilityBookingExtention.VerifyPageTitle('Facility Booking Extension Listing')
 
-        FacilityBookingListing.SelectItem('F-BOK-20230510-000915')
+        // click create New button
+        FacilityBookingExtention.CreateNew()
+
+        // Verify page title
+        FacilityBookingExtention.VerifyPageTitle('Facility Booking Extension Detail')
+
+        FacilityBookingListing.SelectFacilityBooking('Waiver 711')
 
         FacilityBookingListing.ClickMaintenanceDrp('Cancel')
 
@@ -34,9 +41,9 @@ describe('FS-010 Facility Booking Cancellation', function () {
 
         common.ApprovalWorkFlow('F-CAN', 'Facility Cancellation Approval Workflow', 'Approve', 'Approved')
 
-        cy.visit('/facilities/bookingListing')
+        cy.visit('/facilities/bookingCancellationListing')
 
-        FacilityBookingListing.FilterWithBookingNo('F-BOK-20230510-000915')
+        FacilityBookingListing.FilterWithCustomerName('Waiver 711')
 
         FacilityBookingListing.VerifyStatus('Cancelled')
 

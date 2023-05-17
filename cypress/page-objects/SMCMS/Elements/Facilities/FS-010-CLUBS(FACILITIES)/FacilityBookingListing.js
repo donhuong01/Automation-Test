@@ -10,6 +10,8 @@ class elems_FacilityBookingListing{
     static PCK_MAINFACILITY = '//label[text()="Main Facility"]//following-sibling::div//button'
     static DRP_MAINTENANCE ='//button[@aria-label="menu toggling button"]'
     static DRP_STATUS = '//span[@id="drpStatus"]'
+    static PCK_FACILITYBOOKING = '//label[@for="facilityBooking"]//following-sibling::div//button'
+    static TXT_CUSTOMERNAME = '//input[@name="customerName"]'
 
 
 }

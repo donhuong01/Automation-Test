@@ -9,12 +9,12 @@ const data = {
     ClubClassification: 'Fitness & Leisure',
     LifeStyleGroup: 'Clubbing/Pubbing',
     SMCClassification: 'Fitness & Adventure-SMC',
-    OwnerEmail: 'fshahzada@synergyonline.com',
+    OwnerEmail: 'rdacpano@synergyonline.com',
 
     LocationName: 'SAFRA Jurong',
 
     ApproverOption: 'Specific Approver',
-    ApproverEmail: 'fshahzada@synergyonline.com',
+    ApproverEmail: 'rdacpano@synergyonline.com',
     Status: 'Draft',
 
     ChargeName: 'Registration Fee',
