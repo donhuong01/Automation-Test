@@ -66,7 +66,7 @@ describe('FS-012 Accommodation Setup Management', function () {
 
         AccommodationSetupDetail.ClickAddButton()
 
-        AccommodationSetupDetail.ChargeRateInformation(ChargeRateName, StartDate, location, EndDate)
+        AccommodationSetupDetail.ChargeRateInformation(ChargeRateName, /*StartDate,*/ location, /*EndDate*/)
 
         AccommodationSetupDetail.ChargeTypeList(ChargeName, TransactionType, CalculationType, AmountType)
 

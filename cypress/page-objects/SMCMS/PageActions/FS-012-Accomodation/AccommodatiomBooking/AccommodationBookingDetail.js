@@ -2,6 +2,7 @@ import elems_AccommodationBookingDetail from '../../../Elements/FS-012-Accomodat
 import elems_PageHeader from '../../../Elements/Common/PageHeader'
 import elems_Alerts from '../../../Elements/Common/Alerts'
 import elems_Picker from '../../../Elements/Common/Picker'
+import elems_AccommodationBookingListing from '../../../Elements/FS-012-Accomodation/AccommodationBookingListing'
 
 class AccommodationBookingDetail {
 
@@ -72,6 +73,30 @@ class AccommodationBookingDetail {
     {
       cy.Click(elems_AccommodationBookingDetail.RADIO_RESERVATION)
     }
+
+    cy.Click(elems_AccommodationBookingDetail.BTN_SEARCHFILTER)
+    cy.wait(5000)
+
+  }
+
+   /*****************************************************
+   * Method:FilterTransactionType
+   * Description: This function click on Transaction Type radio button
+   * @param {string} TransactionType
+    *****************************************************/
+   FilterTransactionType(TransactionType) {
+
+  //  cy.Click(elems_AccommodationBookingListing.DRP_TRANSACTIONTYPE)
+
+    if(TransactionType === "Booking")
+    {
+      cy.SelectDropDownItem(elems_AccommodationBookingListing.DRP_TRANSACTIONTYPE, "Booking")
+    }
+    if(TransactionType === "Reservation")
+    {
+      cy.SelectDropDownItem(elems_AccommodationBookingListing.DRP_TRANSACTIONTYPE, "Reservation")
+    }
+    
 
     cy.Click(elems_AccommodationBookingDetail.BTN_SEARCHFILTER)
     cy.wait(5000)

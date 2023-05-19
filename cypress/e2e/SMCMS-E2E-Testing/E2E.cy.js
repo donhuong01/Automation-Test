@@ -209,7 +209,7 @@ beforeEach(() => {
 
 
 // This module need minor updates
- describe('E2E Auto Testing:FS-010 Facility', ()=> {
+//  describe('E2E Auto Testing:FS-010 Facility', ()=> {
     // FacilityGeneralSettingDtl()
     // FacilitySettingsCalendar()
     // FacilitySettingCalendarSettings()
@@ -223,25 +223,25 @@ beforeEach(() => {
     //  FacilityGroupBooking(E2EData.FACILITY_GROUP_BOOKING.SAFRA_MEMBER, E2EData.FACILITY_GROUP_BOOKING.SAFRA_RELATED_MEMBER,
     //      E2EData.FACILITY_GROUP_BOOKING.SAFRA_GUEST) //Pass Active Safra Member ID - 1.Safra Member 2. SAFRARelatedMemberships 3. Guest Member
     //    FacilityGroupBookingBallot("A300002855", "A300002871") // Recheck again tomorrow morning
-  })
+//   })
 
 
 // describe('E2E Auto Testing:FS-012 Accommodation', ()=> {
 
-//     AccommodatiomSettingGeneral()
-//     AccommodationSettingOperatingPeriod()
-//     AccommodationTypeManagement()
-//     AccommodationSetupManagement()
-//     AccommodationClosureManagement()
-//     AccommodatiomBookingManagement(E2EData.ACCOMMODATION_BOOKING_MANAGEMENT.SAFRA_MEMBERID, E2EData.ACCOMMODATION_BOOKING_MANAGEMENT.GEUSTID) //Pass SAFRA MemberID and Guest ID
-//     AccommodatiomReservationManagement(E2EData.ACCOMMODATION_RESERVATION_MANAGEMENT.SAFRA_MEMBERID) //Pass SAFRA MemberID
+    // AccommodatiomSettingGeneral()
+   // AccommodationSettingOperatingPeriod()
+   // AccommodationTypeManagement() 
+   // AccommodationSetupManagement()
+   // AccommodationClosureManagement() // Need to add accommodation on page action
+    //AccommodatiomBookingManagement(E2EData.ACCOMMODATION_BOOKING_MANAGEMENT.SAFRA_MEMBERID, E2EData.ACCOMMODATION_BOOKING_MANAGEMENT.GEUSTID) //Pass SAFRA MemberID and Guest ID
+    //AccommodatiomReservationManagement(E2EData.ACCOMMODATION_RESERVATION_MANAGEMENT.SAFRA_MEMBERID) //Pass SAFRA MemberID
 
 // })
 
 
 // describe('E2E Auto Testing:FS-014 Membership: Master Registration and Renewal', ()=> {
 
-    //  MembershipRegistration(E2EData.NRIC_FOR_MEMBERSHIP_REGISTRATION) // Enter Full NRIC
+//      MembershipRegistration(E2EData.NRIC_FOR_MEMBERSHIP_REGISTRATION) // Enter Full NRIC
 //     CustomerCheckIn()
 //     MemberType()
 //     //BadAddressUpdate()// Fail Need code updates
@@ -274,7 +274,7 @@ beforeEach(() => {
 //         E2EData.BATCH_REGISTRATION.NRIC_FOR_ADDING_NEW_DEPENDENT,
 //         E2EData.BATCH_REGISTRATION.PRINCIPALID_FOR_NEW_DEPENDENT) 
 
-// })
+//  })
 
 
 
@@ -308,7 +308,7 @@ beforeEach(() => {
 
 
 
-describe('E2E Auto Testing:FS-016 Interest Group: Registration and Maintenance Activities', ()=> {
+// describe('E2E Auto Testing:FS-016 Interest Group: Registration and Maintenance Activities', ()=> {
 
 // InterestGroupMembershipRegistration(E2EData.MEMBERID_FOR_IG_REGISTRATION) //Change NRIC each time after runing this code
 // InterestGMembershipRenewal(E2EData.MEMBERID_FOR_IG_RENEWAL) //Change NRIC each time after runing this code
@@ -321,10 +321,10 @@ describe('E2E Auto Testing:FS-016 Interest Group: Registration and Maintenance A
 // IGMembershipReinstatement(E2EData.MEMBERID_FOR_IG_REINSTATEMENT.MEMBERID, E2EData.MEMBERID_FOR_IG_REINSTATEMENT.MEMBERNAME)
 // InterestGMembershipReverse(E2EData.MEMBER_NAME_FOR_IG_REVERSAL) //Provide Member Name
 // InterestGMembershipwaiver(E2EData.MEMBER_NAME_FOR_IG_WAIVER)  //Provide Member Name
- InterestGroupManagement()
-// InterestGroupMembershipManagment()
+// InterestGroupManagement()
+//  InterestGroupMembershipManagment()
 
-})
+// })
 
 
 
@@ -333,8 +333,8 @@ describe('E2E Auto Testing:FS-016 Interest Group: Registration and Maintenance A
 //     VolunteerAppointment()
 //     VolunteerAppointmentType()
 //     VIPAppointmentType()
-//     VolunteerAppointmentTermRegistration()
-//     VIPAppointmentTermRegistration()
+//     VolunteerAppointmentTermRegistration() // 
+//     VIPAppointmentTermRegistration() //Update the the Type in Registration
 // })
 
 

@@ -116,11 +116,11 @@ class AccommodationSetupDetail {
      * @param {string} location
      * @param {string} EndDate
      *****************************************************/
-    ChargeRateInformation(ChargeRateName, StartDate, location, EndDate) {
+    ChargeRateInformation(ChargeRateName, /*StartDate,*/ location, /*EndDate*/) {
         cy.EnterText(elems_AccommodationSetupDetail.ChargeRateTab.TXT_CHARGERATE, ChargeRateName)
-        cy.EnterDate(elems_AccommodationSetupDetail.ChargeRateTab.DATE_STARTDATE, StartDate)
+        //cy.EnterDate(elems_AccommodationSetupDetail.ChargeRateTab.DATE_STARTDATE, StartDate)
         cy.SelectPickerItem(elems_AccommodationSetupDetail.ChargeRateTab.PCK_LOCATION, location)
-        cy.EnterDate(elems_AccommodationSetupDetail.ChargeRateTab.DATE_ENDDATE, EndDate)
+        //cy.EnterDate(elems_AccommodationSetupDetail.ChargeRateTab.DATE_ENDDATE, EndDate)
     }
     
     /*****************************************************

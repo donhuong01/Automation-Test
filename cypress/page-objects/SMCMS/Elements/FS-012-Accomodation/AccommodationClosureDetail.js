@@ -43,7 +43,7 @@ class elems_AccommodationClosureDetail {
 
 
     static TXT_ACCOMODATION = '//input[@id="txtAccommodation"]'
-    
+    static TXT_ACCOMMODATIONNAME = '//input[@id="txtAccommodationName"]'    
     
 }
 export default elems_AccommodationClosureDetail

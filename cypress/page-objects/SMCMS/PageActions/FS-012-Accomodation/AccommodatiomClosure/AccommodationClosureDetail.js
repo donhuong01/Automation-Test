@@ -56,7 +56,7 @@ class AccommodationClosureDetail {
     *****************************************************/
   AddAccommodation(Accommodation) {
     cy.Click(elems_AccommodationClosureDetail.BTN_ADD)
-    cy.SelectPickerItem(elems_AccommodationClosureDetail.BTN_ADD, Accommodation)
+    cy.SelectPickerItem(elems_AccommodationClosureDetail.TXT_ACCOMMODATIONNAME, Accommodation)
 
 
   }

@@ -42,7 +42,7 @@ describe('[TS07] FS-012 Accommodation Reservation', function () {
         
         AccommodationBookingDetail.Submit()
 
-        common.fillOutandApplyPayment("CASH")
+        //common.fillOutandApplyPayment("CASH")
 
         cy.visit('/accommodation/bookingListing').wait(4000)
 
@@ -77,7 +77,9 @@ describe('[TS07] FS-012 Accommodation Reservation', function () {
 
         cy.visit('/accommodation/bookingListing').wait(4000)
 
-        AccommodationBookingDetail.SelectTransactionType("Reservation")
+
+
+        AccommodationBookingDetail.FilterTransactionType("Reservation")
 
         AccommodationBookingListing.FilterByMemberID(MemberID)
 
@@ -109,7 +111,7 @@ describe('[TS07] FS-012 Accommodation Reservation', function () {
 
         cy.visit('/accommodation/bookingListing').wait(4000)
 
-        AccommodationBookingDetail.SelectTransactionType("Reservation")
+        AccommodationBookingDetail.FilterTransactionType("Reservation")
 
         AccommodationBookingListing.FilterByMemberID(MemberID)
 
