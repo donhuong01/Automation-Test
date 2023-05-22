@@ -202,7 +202,7 @@ beforeEach(() => {
 //     CodeType()
 //     CodeSetMaster()
 //     DocumentTemplate()
-//     ApplicationSetting() //Not Required
+//     ApplicationSetting() //Not Required //Changed Font Siz to - 4 (14pt)
 //     NotificationMessageTemplate() //Not Required
 //     AnnouncementPortalNotification() //Not Required
 // })
@@ -222,7 +222,7 @@ beforeEach(() => {
     //  FacilityBookingCancellationManagment() // Needs own page action
     //  FacilityGroupBooking(E2EData.FACILITY_GROUP_BOOKING.SAFRA_MEMBER, E2EData.FACILITY_GROUP_BOOKING.SAFRA_RELATED_MEMBER,
     //      E2EData.FACILITY_GROUP_BOOKING.SAFRA_GUEST) //Pass Active Safra Member ID - 1.Safra Member 2. SAFRARelatedMemberships 3. Guest Member
-    //    FacilityGroupBookingBallot("A300002855", "A300002871") // Recheck again tomorrow morning
+        FacilityGroupBookingBallot("A300002855", "A300002871") // Recheck again tomorrow morning
 //   })
 
 

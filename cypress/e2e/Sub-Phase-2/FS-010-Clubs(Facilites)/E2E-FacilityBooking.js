@@ -139,13 +139,13 @@ describe('[TS06] Facility Booking Form Management', function () {
             ShoppingCart.fillOutandApplyPayment('CASH')
             
             // Wait for 3 minites
-            cy.wait(20000) 
+            cy.wait(15000) 
         
    
          }) 
 
 
-     it ('[TC02] Creating and verifying Facility Booking', function () { //Please update after fixing bug on newly registered user that can't booked
+   //  it ('[TC02] Creating and verifying Facility Booking', function () { //Please update after fixing bug on newly registered user that can't booked
 
     // cy.visit('/membership/customerCheckin')
     //      cy.wait(5000)
@@ -224,7 +224,6 @@ describe('[TS06] Facility Booking Form Management', function () {
     })
 
 
-})
 
 }
 

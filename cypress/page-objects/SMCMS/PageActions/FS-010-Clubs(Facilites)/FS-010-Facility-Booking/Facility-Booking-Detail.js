@@ -43,7 +43,8 @@ class FacilityBookingDetail {
         // Select Facilities
         // cy.Click(elems_FacilityBookingDetails.PCK_LOCATION)
         cy.wait(3000)
-        cy.Click('//a[text()="2"]') //Please Comment when in UAT
+        cy.Click('//a[text()="3"]') //Please Comment when in UAT
+        
         cy.Click(`//table//td[text()="${Facilites}"]//preceding-sibling::td`)
         cy.Click(elems_FacilityBookingDetails.BTN_SELECT)
         cy.wait(4000)
