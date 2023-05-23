@@ -222,7 +222,7 @@ beforeEach(() => {
     //  FacilityBookingCancellationManagment() // Needs own page action
     //  FacilityGroupBooking(E2EData.FACILITY_GROUP_BOOKING.SAFRA_MEMBER, E2EData.FACILITY_GROUP_BOOKING.SAFRA_RELATED_MEMBER,
     //      E2EData.FACILITY_GROUP_BOOKING.SAFRA_GUEST) //Pass Active Safra Member ID - 1.Safra Member 2. SAFRARelatedMemberships 3. Guest Member
-        FacilityGroupBookingBallot("A300002855", "A300002871") // Recheck again tomorrow morning
+    //    FacilityGroupBookingBallot("A300002855", "A300002871") // Recheck again tomorrow morning
 //   })
 
 
@@ -233,7 +233,7 @@ beforeEach(() => {
    // AccommodationTypeManagement() 
    // AccommodationSetupManagement()
    // AccommodationClosureManagement() // Need to add accommodation on page action
-    //AccommodatiomBookingManagement(E2EData.ACCOMMODATION_BOOKING_MANAGEMENT.SAFRA_MEMBERID, E2EData.ACCOMMODATION_BOOKING_MANAGEMENT.GEUSTID) //Pass SAFRA MemberID and Guest ID
+   // AccommodatiomBookingManagement(E2EData.ACCOMMODATION_BOOKING_MANAGEMENT.SAFRA_MEMBERID, E2EData.ACCOMMODATION_BOOKING_MANAGEMENT.GEUSTID) //Pass SAFRA MemberID and Guest ID
     //AccommodatiomReservationManagement(E2EData.ACCOMMODATION_RESERVATION_MANAGEMENT.SAFRA_MEMBERID) //Pass SAFRA MemberID
 
 // })
@@ -253,9 +253,9 @@ beforeEach(() => {
 //     MembershipModuleSettings()
 //     SFSMemberRegistion(E2EData.MEMBER_REGISTRATION_WITH_SPOUSE_AND_CHILD.PRINCIPAL_NRIC,
 //         E2EData.MEMBER_REGISTRATION_WITH_SPOUSE_AND_CHILD.CHILD_NRIC, E2EData.MEMBER_REGISTRATION_WITH_SPOUSE_AND_CHILD.SPOUSE_NRIC) //Add three NRIC's for Principal, Dependent Child, Dependent Spouse
-//     E2EMemberShipRenewal(E2EData.NRIC_FOR_MEMBERSHIP_REGISTRATION_AND_RENEWAL) //Add NRIC For Principal Registration
+     E2EMemberShipRenewal(E2EData.NRIC_FOR_MEMBERSHIP_REGISTRATION_AND_RENEWAL) //Add NRIC For Principal Registration
 //     LifeMembershipManagment(E2EData.NRIC_FOR_LIFE_MEMBERSHIP_REGISTRATION) //Add NRIC For Principal Registration
-//     BatchMembershipRegistration(
+//    BatchMembershipRegistration(
 
 //         //Pass Info for Existing Member MemberID and LAST4DigitsNRIC
 //         E2EData.BATCH_REGISTRATION.MEMBERID_FOR_EXISTING_MEMBER,
@@ -374,7 +374,7 @@ beforeEach(() => {
 
 // describe('E2E Auto Testing:FS-029 Member: Charge Rate', ()=> {
 
-//     MembershipChargeRate()
+//    MembershipChargeRate()
 
 // })
 

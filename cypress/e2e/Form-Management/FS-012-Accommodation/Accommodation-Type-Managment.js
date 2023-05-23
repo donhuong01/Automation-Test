@@ -70,7 +70,7 @@ describe('FS-012 Accommodation Type Management', function () {
 
         AccommodationTypeDetail.AddChargeRate()
 
-        AccommodationTypeDetail.FilloutChargeRateInformation(ChargeRateName, StartDate, location, EndDate)
+        AccommodationTypeDetail.FilloutChargeRateInformation(ChargeRateName, /*StartDate,*/ location, /*EndDate*/)
 
         AccommodationTypeDetail.ChargeTypeList(ChargeRateName, TransactionType, CalculationType, AmountType)
 

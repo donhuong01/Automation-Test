@@ -274,12 +274,12 @@ class AccommodationTypeDetail {
      * Method: FilloutChargeRateInformation
      * Description: This function 
      *****************************************************/
-    FilloutChargeRateInformation(ChargeRateName, StartDate, location, EndDate) {
+    FilloutChargeRateInformation(ChargeRateName, /*StartDate,*/ location, /*EndDate*/) {
 
         cy.EnterText(elems_AccommodationTypeDetail.CHARGERATE.TXT_CHARGERATENAME, ChargeRateName)
-        cy.EnterDate(elems_AccommodationTypeDetail.CHARGERATE.DATE_STARTDATE, StartDate)
+        //cy.EnterDate(elems_AccommodationTypeDetail.CHARGERATE.DATE_STARTDATE, StartDate)
         cy.SelectPickerItem(elems_AccommodationTypeDetail.CHARGERATE.PCK_LOCATION, location)
-        cy.EnterDate(elems_AccommodationTypeDetail.CHARGERATE.DATE_ENDDATE, EndDate)
+        //cy.EnterDate(elems_AccommodationTypeDetail.CHARGERATE.DATE_ENDDATE, EndDate)
 
     }
     // /*****************************************************

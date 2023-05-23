@@ -96,7 +96,7 @@ describe('FS-029] Membership Charge Rate Management', () =>{
         MemChargeRateList.verifyMemChargeRateList(Name, Description)
     })
 
-    it.only('[TC04] Access Charge Rate Item', function () {
+    it('[TC04] Access Charge Rate Item', function () {
 
         // Navigate to Form
         cy.visit('/membership/chargeRateList').wait(7000)

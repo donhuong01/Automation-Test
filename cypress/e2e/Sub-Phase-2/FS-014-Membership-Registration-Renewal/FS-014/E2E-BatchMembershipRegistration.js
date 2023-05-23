@@ -404,7 +404,7 @@ describe('[TS13] Batch Membership Registration Details form', function () {
             
     })
 
-    it.only('[TC04] Creating a Batch Membership Registration with New Member(Defendent)', function () {
+    it('[TC04] Creating a Batch Membership Registration with New Member(Defendent)', function () {
 
         //filloutPersonalInformation
         const TestUser = 'Test User-' + Math.floor(Math.random() * 100000 * 2 )

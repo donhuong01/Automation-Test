@@ -6,6 +6,7 @@ class elems_IGMembershipWaiveristing {
     static BTN_GENERATE = '//button[text()="Generate"]'
     static BTN_EXPORT = '//button[text()="Export"]'
     static TXT_NAME = '//input[@name="name"]'
+    static LBL_PAGETITLE = '//h2'
 }
 
 export default elems_IGMembershipWaiveristing
