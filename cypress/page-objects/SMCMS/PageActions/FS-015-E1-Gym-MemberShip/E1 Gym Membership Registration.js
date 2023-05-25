@@ -30,7 +30,7 @@ class E1GymMembershipRegistration {
     AddToCart() {
 
         cy.Click(elems_E1GymMembershipRegistaration.BTN_ADDTOCART)
-        cy.wait(5000)
+        cy.wait(10000)
 
     }
     /*****************************************************
@@ -85,7 +85,7 @@ class E1GymMembershipRegistration {
         cy.visit('/membership/e1GymMembershipList')
         cy.EnterText(elems_E1GymMembershipListing.TXT_CUSTOMERNAME, CustomerName)
         cy.Click(elems_E1GymMembershipListing.BTN_SEARCHFILTERS)
-        cy.VerifyTableEntry(elems_E1GymMembershipListing.TBL_E1GYMMEMBERSHIPLISTING, 'Customer Name', CustomerName)
+        cy.VerifyTableContent(elems_E1GymMembershipListing.TBL_E1GYMMEMBERSHIPLISTING, 'Customer Name', CustomerName)
 
     }
     /*****************************************************

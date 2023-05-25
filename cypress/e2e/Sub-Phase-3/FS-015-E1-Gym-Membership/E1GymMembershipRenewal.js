@@ -22,6 +22,7 @@ describe('[TS01] E1 Gym Membership Renewal Management', function () {
         E1GymMembershipRenewal.FilloutMembershipRenewalInfo(E1Membership, '36')
 
         common.AddToCart()
+        cy.wait(7000)
 
         common.ResetCart()
 
@@ -44,6 +45,7 @@ describe('[TS01] E1 Gym Membership Renewal Management', function () {
             E1GymMembershipRenewal.FilloutMembershipRenewalInfo(E1Membership, RenewalTerm)
 
             common.AddToCart()
+            cy.wait(7000)
 
             common.fillOutandApplyPayment('CASH')
 

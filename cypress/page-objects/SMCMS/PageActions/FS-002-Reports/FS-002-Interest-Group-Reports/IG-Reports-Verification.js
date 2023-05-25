@@ -253,4 +253,4 @@ class Reports_IG {
 
 }
 
-export default new Reports_IG
+export default Reports_IG

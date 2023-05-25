@@ -21,14 +21,14 @@ const data = [
     {
         MemberID: 'A300002327',           //Existing SAFRA Member
         CustomerName: 'Auto-Name 366H',
-        E1GymMemMainSelection: 'E1 quick test only',
-        E1GymMembershipSelection: 'E1 Quick',
-        LocationSelection: 'SAFRA Jurong',
+        E1GymMemMainSelection: 'Test E1 Main ',
+        E1GymMembershipSelection: 'Test E1 Detail',
+        LocationSelection: 'All Locations',
         DependencyType: 'Principal',
         category: 'AS',
         PreferredClubHouse: 'SAFRA Jurong',
-        EffectiveDate: '04-Jan-2023',
-        Terms: 2,
+        EffectiveDate: '24-May-2023',
+        Terms: '18',
         AddWaiver: 'No'       //Yes or No
     },
 

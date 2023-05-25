@@ -119,7 +119,7 @@ describe('FS-039 & FS-013 In-House Sale and Merchandise Purchase', function () {
 
     })
 
-    it.only('Creating and Cancelling an In-House Purchase', function () {
+    it('Creating and Cancelling an In-House Purchase', function () {
 
         common.Checkin(MemberIdInHouse)
 

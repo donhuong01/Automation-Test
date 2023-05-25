@@ -113,7 +113,7 @@ Data.forEach(each => {
                 AddWaiver === 'Yes' && E1GymMembershipRegistration.AddWiaver()
             }
 
-            E1GymMembershipRegistration.FillOutOtherInfo()
+            //E1GymMembershipRegistration.FillOutOtherInfo()
 
             MemTenureSelect.addToCart()
 

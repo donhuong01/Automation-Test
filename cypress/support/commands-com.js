@@ -1240,9 +1240,10 @@ Cypress.Commands.add("EnterTime", (locator, Time) => {
  *****************************************************/
 Cypress.Commands.add("TenureSelection", (locator, columnValue, TenureDuration) => {
 
-    cy.Click(`${locator}//tr[contains(@class, "k-master-row")]//td[text()="${columnValue}"]//following-sibling::td//span[@class="k-dropdown-wrap"]`)
+    cy.Click(`${locator}//tr[contains(@class, "k-master-row")]//td[text()="${columnValue.toUpperCase()}"]//following-sibling::td//span[@class="k-dropdown-wrap"]`)
     cy.Click(`//li[text()="${TenureDuration}"]`)
 
+    //(`${locator}//tr[contains(@class, "k-master-row")]//td[text()="${columnValue}"]//following-sibling::td//span[@class="k-dropdown-wrap"]`)})   , {matchCase}
 })
 
 /*****************************************************

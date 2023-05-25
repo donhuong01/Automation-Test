@@ -21,8 +21,8 @@ const data = {
     InHouseSaleAndMerchandisePurchase: {
         MemberIdMerchandise: 'A300001148',
         MemberIdInHouse: 'A300001825',
-        ItemNameMerchandise: 'Snoods',
-        ItemNameInHouse: 'Key Chain',
+        ItemNameMerchandise: 'Amazon Tablet',
+        ItemNameInHouse: 'Poster Amended',
         QuantitySetMerchandise: '2',
         QuantitySetInhouse: '1',
     },

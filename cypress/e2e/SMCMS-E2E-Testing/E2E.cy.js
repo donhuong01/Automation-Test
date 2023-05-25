@@ -241,7 +241,7 @@ beforeEach(() => {
 
 // describe('E2E Auto Testing:FS-014 Membership: Master Registration and Renewal', ()=> {
 
-//      MembershipRegistration(E2EData.NRIC_FOR_MEMBERSHIP_REGISTRATION) // Enter Full NRIC
+      MembershipRegistration(E2EData.NRIC_FOR_MEMBERSHIP_REGISTRATION) // Enter Full NRIC
 //     CustomerCheckIn()
 //     MemberType()
 //     //BadAddressUpdate()// Fail Need code updates
@@ -253,7 +253,9 @@ beforeEach(() => {
 //     MembershipModuleSettings()
 //     SFSMemberRegistion(E2EData.MEMBER_REGISTRATION_WITH_SPOUSE_AND_CHILD.PRINCIPAL_NRIC,
 //         E2EData.MEMBER_REGISTRATION_WITH_SPOUSE_AND_CHILD.CHILD_NRIC, E2EData.MEMBER_REGISTRATION_WITH_SPOUSE_AND_CHILD.SPOUSE_NRIC) //Add three NRIC's for Principal, Dependent Child, Dependent Spouse
-     E2EMemberShipRenewal(E2EData.NRIC_FOR_MEMBERSHIP_REGISTRATION_AND_RENEWAL) //Add NRIC For Principal Registration
+//     E2EMemberShipRenewal(E2EData.NRIC_FOR_MEMBERSHIP_REGISTRATION_AND_RENEWAL) //Add NRIC For Principal Registration
+    
+    
 //     LifeMembershipManagment(E2EData.NRIC_FOR_LIFE_MEMBERSHIP_REGISTRATION) //Add NRIC For Principal Registration
 //    BatchMembershipRegistration(
 
@@ -280,28 +282,28 @@ beforeEach(() => {
 
 // describe('E2E Auto Testing:FS-015 Energy One: Gym Membership and Maintenance Activities', ()=> {
 
-//     E1GYMMembershipRegistrationWithExistingMember(E2EData.ENTER_MEMBERID_AND_NAME_E1GYM_REG_WITH_EXISTING_MEMBET.MEMBERID,
-//         E2EData.ENTER_MEMBERID_AND_NAME_E1GYM_REG_WITH_EXISTING_MEMBET.MEMBERNAME) // Enter MemberID and Member Name
+    // E1GYMMembershipRegistrationWithExistingMember(E2EData.ENTER_MEMBERID_AND_NAME_E1GYM_REG_WITH_EXISTING_MEMBET.MEMBERID,
+    //     E2EData.ENTER_MEMBERID_AND_NAME_E1GYM_REG_WITH_EXISTING_MEMBET.MEMBERNAME) // Enter MemberID and Member Name
 
-//     E1GYMMembershipRenewal(E2EData.ENTER_MEMBERID_NAME_AND_E1GYMID_FOR_RENEWAL.MEMBERID,
-//         E2EData.ENTER_MEMBERID_NAME_AND_E1GYMID_FOR_RENEWAL.MEMBERNAME,
-//         E2EData.ENTER_MEMBERID_NAME_AND_E1GYMID_FOR_RENEWAL.E1GYM_MEMBERSHIP_ID)
+    // E1GYMMembershipRenewal(E2EData.ENTER_MEMBERID_NAME_AND_E1GYMID_FOR_RENEWAL.MEMBERID,
+    //     E2EData.ENTER_MEMBERID_NAME_AND_E1GYMID_FOR_RENEWAL.MEMBERNAME,
+    //     E2EData.ENTER_MEMBERID_NAME_AND_E1GYMID_FOR_RENEWAL.E1GYM_MEMBERSHIP_ID)
 
-//     E1GYMMembershipRegistrationWithNonMember()
-//     E1GymMembershipCancellationBeforePayment(E2EData.MEMBERID_FOR_CANCELLATION_BEFORE_PAYMENT)//Provide Active member ID
-//     E1GYMMembershipConversion(E2EData.MEMBERID_FOR_E1GYM_CONVERSION) // Enter Member ID
-//     E1GYMMembershipDeferment(E2EData.E1_GYMID_FOR_E1GYM_DEFERMENT) // Enter E1 Gym Membership ID ok
-//     E1GYMMembershipTermination(E2EData.ACTIVE_MEMBERID_FOR_E1GYM_TERMINATION) //Provide Active member ID
-//     E1GYMMembershipReinstatement(E2EData.INACTIVE_MEMBERID_FOR_E1GYM_REINSTATMENT) //Enter Member ID
-//     E1GYMMembershipWaiver(E2EData.ACTIVE_MEMBERID_FOR_E1GYM_WAIVER) //Provide Active member ID
-//     E1GYMMembershipReversal(E2EData.MEMBERID_FOR_E1GYM_REVERSAL) //Enter Member ID
+    // E1GYMMembershipRegistrationWithNonMember()
+    // E1GymMembershipCancellationBeforePayment(E2EData.MEMBERID_FOR_CANCELLATION_BEFORE_PAYMENT)//Provide Active member ID
+    // E1GYMMembershipConversion(E2EData.MEMBERID_FOR_E1GYM_CONVERSION) // Enter Member ID
+    // E1GYMMembershipDeferment(E2EData.E1_GYMID_FOR_E1GYM_DEFERMENT) // Enter E1 Gym Membership ID ok
+    // E1GYMMembershipTermination(E2EData.ACTIVE_MEMBERID_FOR_E1GYM_TERMINATION) //Provide Active member ID
+    // E1GYMMembershipReinstatement(E2EData.INACTIVE_MEMBERID_FOR_E1GYM_REINSTATMENT) //Enter Member ID
+    // E1GYMMembershipWaiver(E2EData.ACTIVE_MEMBERID_FOR_E1GYM_WAIVER) //Provide Active member ID
+    // E1GYMMembershipReversal(E2EData.MEMBERID_FOR_E1GYM_REVERSAL) //Enter Member ID
     
-//     E1GYMSetupManagement()
-//     E1GYMMembershipModuleSettings()
-//     E1GYMMembershipAndChargeRateSetup()
-//     E1GYMMembershipRenewalAdvise()
-//     E1GYMMembershipDataManagement(E2EData.E1GYMMembershipDataManagement.MEMBERID,
-//                                  E2EData.E1GYMMembershipDataManagement.E1_GYM_MEMBERSHIPID) //Provide MemberID and E1GymMemberhipID
+    // E1GYMSetupManagement()
+    // E1GYMMembershipModuleSettings()
+    // E1GYMMembershipAndChargeRateSetup()
+    // E1GYMMembershipRenewalAdvise()
+    // E1GYMMembershipDataManagement(E2EData.E1GYMMembershipDataManagement.MEMBERID,
+                                //  E2EData.E1GYMMembershipDataManagement.E1_GYM_MEMBERSHIPID) //Provide MemberID and E1GymMemberhipID
 
 // })
 
@@ -341,14 +343,14 @@ beforeEach(() => {
 
 // describe('E2E Auto Testing:FS-027 SFS Membership: Admin Maintenance Activities', () => {
 
-//     // SFSMembershipDeceased(E2EData.SFS_ACTIVE_MEMBERID_FOR_DECEASED) // Enter MemberID
-//     // SFSBatchMembershipTermination(E2EData.SFS_BATCH_TERMINATION_IDS.MEMBERID1, E2EData.SFS_BATCH_TERMINATION_IDS.MEMBERID2,
-//     //     E2EData.SFS_BATCH_TERMINATION_IDS.MEMBERID3) // Enter 3 Active Member IDs
-//     // SFSBatchMemDefermentRequest(E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERNAME1, E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERID1,
-//     //     E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERNAME2, E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERID2) 
-//     // SFSReinstatementConfirmation(E2EData.SFS_ACTIVE_MEMBERID_FOR_REINSTATEMENT_CONFIRMATION)// Enter  Inactive MemberID
-//     // SFSBatchMembershipWaiver(E2EData.SFS_TWO_NRICS_FOR_BATCH_MEMBERSHIP_WAIVER.NRIC1, E2EData.SFS_TWO_NRICS_FOR_BATCH_MEMBERSHIP_WAIVER.NRIC2) // Enter 2 NRIC's for Member Registration 
-//     // SFSMemDefermentRequest(E2EData.SFS_NRIC_FOR_MEMBERSHIP_DEFERMENT_REQUEST) //Change NRIC before runing this function
+    // SFSMembershipDeceased(E2EData.SFS_ACTIVE_MEMBERID_FOR_DECEASED) // Enter MemberID
+    // SFSBatchMembershipTermination(E2EData.SFS_BATCH_TERMINATION_IDS.MEMBERID1, E2EData.SFS_BATCH_TERMINATION_IDS.MEMBERID2,
+    //     E2EData.SFS_BATCH_TERMINATION_IDS.MEMBERID3) // Enter 3 Active Member IDs
+    // SFSBatchMemDefermentRequest(E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERNAME1, E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERID1,
+    //     E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERNAME2, E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERID2) 
+    // SFSReinstatementConfirmation(E2EData.SFS_ACTIVE_MEMBERID_FOR_REINSTATEMENT_CONFIRMATION)// Enter  Inactive MemberID
+    // SFSBatchMembershipWaiver(E2EData.SFS_TWO_NRICS_FOR_BATCH_MEMBERSHIP_WAIVER.NRIC1, E2EData.SFS_TWO_NRICS_FOR_BATCH_MEMBERSHIP_WAIVER.NRIC2) // Enter 2 NRIC's for Member Registration 
+    // SFSMemDefermentRequest(E2EData.SFS_NRIC_FOR_MEMBERSHIP_DEFERMENT_REQUEST) //Change NRIC before runing this function
 //     SFSMembershipResignationManagement(E2EData.SFS_NRIC_FOR_MEMBERSHIP_RESIGNATION_MANAGEMENT) //Change NRIC before runing this function
 //     SFSMembershipExpulsionAndReinstatment(E2EData.SFS_NRIC_FOR_MEMBERSHIP_EXPULSION_AND_REINSTATEMENT) //Change NRIC before runing this function
 
@@ -424,7 +426,7 @@ beforeEach(() => {
 
 // describe('E2E Auto Testing:FS-013 & 039: In-House Sale and Merchandise', ()=> {
 
-//     InHouseSaleAndMerchandiseItemManagement()
+    //InHouseSaleAndMerchandiseItemManagement()
     // InHouseSaleAndMerchandisePurchase(E2EData.MEMBERID_FOR_MERCHANDISE_PUECHASE, E2EData.MEMBERID_FOR_INHOUSE_PUECHASE) //Enter Machandise and In-House sale Member IDs 
     // InHouseSaleAndMerchandiseTransactionAdjustment(E2EData.MEMBERID_FOR_MERCHANDISE_TRANSACTION_ADJUSTMENT, E2EData.MEMBERID_FOR_INHOUSE_TRANSACTION_ADJUSTMENT) //Enter Machandise and In-House sale Member IDs 
     // InHouseSaleAndMerchandiseTransactionConcellation(E2EData.MEMBERID_FOR_MERCHANDISE_TRANSACTION_CONCELLATION, E2EData.MEMBERID_FOR_INHOUSE_TRANSACTION_CONCELLATION)

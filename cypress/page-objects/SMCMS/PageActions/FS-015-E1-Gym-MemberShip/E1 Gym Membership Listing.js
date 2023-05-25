@@ -40,7 +40,7 @@ class E1GymMembershipListing {
         cy.EnterText(elems_E1GymMembershipListing.TXT_E1GYMMEMBERSHIPID, E1GymMembershipID)
         cy.Click(elems_E1GymMembershipListing.BTN_SEARCHFILTERS)
         cy.wait(3000)
-        cy.VerifyTableEntry(elems_E1GymMembershipListing.TBL_E1GYMMEMBERSHIPLISTING, 'Status', Status)
+        cy.VerifyTableEntryDeferment(elems_E1GymMembershipListing.TBL_E1GYMMEMBERSHIPLISTING, 'Status', Status)
         cy.SelectTableItem(elems_E1GymMembershipListing.TBL_E1GYMMEMBERSHIPLISTING, 'E1 Gym Membership ID', E1GymMembershipID)
 
     }
@@ -52,7 +52,7 @@ class E1GymMembershipListing {
 
         // cy.EnterText(elems_E1GymMembershipListing.TXT_SAFRAMEMBERSHIPID, Memberid)
         // cy.Click(elems_E1GymMembershipListing.BTN_SEARCHFILTERS)
-        cy.VerifyTableEntry(elems_E1GymMembershipListing.TBL_E1GYMMEMBERSHIPLISTING, 'Status', Status)
+        cy.VerifyTableEntryDeferment(elems_E1GymMembershipListing.TBL_E1GYMMEMBERSHIPLISTING, 'Status', Status)
 
     }
     /*****************************************************
@@ -63,7 +63,7 @@ class E1GymMembershipListing {
 
         cy.EnterText(elems_E1GymMembershipListing.TXT_CUSTOMERNAME, CustomerName)
         cy.Click(elems_E1GymMembershipListing.BTN_SEARCHFILTERS)
-        cy.VerifyTableEntry(elems_E1GymMembershipListing.TBL_E1GYMMEMBERSHIPLISTING, 'Customer Name', CustomerName)
+        cy.VerifyTableEntryDeferment(elems_E1GymMembershipListing.TBL_E1GYMMEMBERSHIPLISTING, 'Customer Name', CustomerName)
 
     }
     /*****************************************************
@@ -74,7 +74,7 @@ class E1GymMembershipListing {
 
         cy.EnterText(elems_E1GymMembershipListing.TXT_SAFRAMEMBERSHIPID, MembershipId)
         cy.Click(elems_E1GymMembershipListing.BTN_SEARCHFILTERS)
-        cy.VerifyTableEntry(elems_E1GymMembershipListing.TBL_E1GYMMEMBERSHIPLISTING, 'SAFRA Membership ID', MembershipId)
+        cy.VerifyTableEntryDeferment(elems_E1GymMembershipListing.TBL_E1GYMMEMBERSHIPLISTING, 'SAFRA Membership ID', MembershipId)
         cy.SelectTableItem(elems_E1GymMembershipListing.TBL_E1GYMMEMBERSHIPLISTING, 'SAFRA Membership ID', MembershipId)
         cy.wait(3000)
     }
@@ -86,7 +86,7 @@ class E1GymMembershipListing {
 
         cy.EnterText(elems_E1GymMembershipListing.TXT_E1GYMMEMBERSHIPID, E1GymMembershipId)
         cy.Click(elems_E1GymMembershipListing.BTN_SEARCHFILTERS)
-        cy.VerifyTableEntry(elems_E1GymMembershipListing.TBL_E1GYMMEMBERSHIPLISTING, 'E1 Gym Membership ID', E1GymMembershipId)
+        cy.VerifyTableEntryDeferment(elems_E1GymMembershipListing.TBL_E1GYMMEMBERSHIPLISTING, 'E1 Gym Membership ID', E1GymMembershipId)
         cy.SelectTableItem(elems_E1GymMembershipListing.TBL_E1GYMMEMBERSHIPLISTING, 'E1 Gym Membership ID', E1GymMembershipId)
     }
 
@@ -117,8 +117,8 @@ class E1GymMembershipListing {
     *****************************************************/
     VerifyTransactionTableItem(Remark, ReasonCode) {
 
-        cy.VerifyTableEntry(elems_E1GymMembershipListing.TBL_TRANSACTIONHISTORY, 'Remark', Remark)
-        cy.VerifyTableEntry(elems_E1GymMembershipListing.TBL_TRANSACTIONHISTORY, 'Reason Code', ReasonCode)
+        cy.VerifyTableEntryDeferment(elems_E1GymMembershipListing.TBL_TRANSACTIONHISTORY, 'Remark', Remark)
+        cy.VerifyTableEntryDeferment(elems_E1GymMembershipListing.TBL_TRANSACTIONHISTORY, 'Reason Code', ReasonCode)
 
     }
 

@@ -60,6 +60,8 @@ describe('[TS02] VIP Appointment Term Registration Managment', function () {
 
         //Save Detail Form
         VIPAppTermRegDetail.saveForm()
+        
+        cy.wait(2500)
 
         //Verify Success Message
         VIPAppTermRegDetail.VerifySuccessMSG('Record has been saved successfully.')
