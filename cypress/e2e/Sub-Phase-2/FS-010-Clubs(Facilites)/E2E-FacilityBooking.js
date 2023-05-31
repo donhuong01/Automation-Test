@@ -142,7 +142,7 @@ describe('[TS06] Facility Booking Form Management', function () {
             cy.wait(15000) 
         
    
-         }) 
+        // }) 
 
 
    //  it ('[TC02] Creating and verifying Facility Booking', function () { //Please update after fixing bug on newly registered user that can't booked
@@ -225,6 +225,7 @@ describe('[TS06] Facility Booking Form Management', function () {
 
 
 
-}
+})
 
+}
 export default FacilityBookingManagement

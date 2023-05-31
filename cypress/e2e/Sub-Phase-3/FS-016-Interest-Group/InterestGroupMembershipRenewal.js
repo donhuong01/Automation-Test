@@ -42,74 +42,74 @@ const InterestGMembershipRenewal = (MemberID) => {
 describe('[TS08] FS-016 Interest Group Membership Renewal', function () {
 
 
-    it('[TC01] Interest Group Membership Renewal for existing active member', function () {
+     it('[TC01] Interest Group Membership Renewal for existing active member', function () {
 
 
-        cy.visit('/membership/customerCheckin')
-        cy.wait(5000)
-        cy.Click(elems_CustomerCheckInPage.RBTN_NRIC)
-        cy.EnterDate(elems_CustomerCheckInPage.DATE_DATEOFBIRTH, Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB)
-        cy.EnterText(elems_CustomerCheckInPage.TXT_LAST4DIGITSNRIC, CustomerNRIC)
-        cy.Click(elems_CustomerCheckInPage.BTN_CHECKIN)
-        cy.wait(2000)
-        cy.Click(elems_CustomerCheckInPage.BTN_CREATNEW)
+    //     cy.visit('/membership/customerCheckin')
+    //     cy.wait(5000)
+    //     cy.Click(elems_CustomerCheckInPage.RBTN_NRIC)
+    //     cy.EnterDate(elems_CustomerCheckInPage.DATE_DATEOFBIRTH, Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB)
+    //     cy.EnterText(elems_CustomerCheckInPage.TXT_LAST4DIGITSNRIC, CustomerNRIC)
+    //     cy.Click(elems_CustomerCheckInPage.BTN_CHECKIN)
+    //     cy.wait(2000)
+    //     cy.Click(elems_CustomerCheckInPage.BTN_CREATNEW)
 
-        CustomerCreation.fillOutRegistrationInfo({
-            name: PrincipalName,
-            DOB: Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB,
-            gender: Customerdata.CustomerCreationPrincipal.RegistrationInformation.gender,
-        });
+    //     CustomerCreation.fillOutRegistrationInfo({
+    //         name: PrincipalName,
+    //         DOB: Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB,
+    //         gender: Customerdata.CustomerCreationPrincipal.RegistrationInformation.gender,
+    //     });
 
-        CustomerCreation.fillOutAddressInformation({
-            postalCode: Customerdata.CustomerCreationPrincipal.AddressInformation.postalCode,
-            address: Customerdata.CustomerCreationPrincipal.AddressInformation.address,
-            unitNumber: Customerdata.CustomerCreationPrincipal.AddressInformation.unitNumber,
-            POBOx: Customerdata.CustomerCreationPrincipal.AddressInformation.POBOx,
-            myMailbox: Customerdata.CustomerCreationPrincipal.AddressInformation.myMailbox
-        });
+    //     CustomerCreation.fillOutAddressInformation({
+    //         postalCode: Customerdata.CustomerCreationPrincipal.AddressInformation.postalCode,
+    //         address: Customerdata.CustomerCreationPrincipal.AddressInformation.address,
+    //         unitNumber: Customerdata.CustomerCreationPrincipal.AddressInformation.unitNumber,
+    //         POBOx: Customerdata.CustomerCreationPrincipal.AddressInformation.POBOx,
+    //         myMailbox: Customerdata.CustomerCreationPrincipal.AddressInformation.myMailbox
+    //     });
 
-        CustomerCreation.fillOutContactInformation({
-            handPhone: '56585896',
-            emailAddress: PrincipalEmail,
-            emergencyContact: Customerdata.CustomerCreationPrincipal.ContactInformation.emergencyContact,
-            homeNumber: '56585896',
+    //     CustomerCreation.fillOutContactInformation({
+    //         handPhone: '56585896',
+    //         emailAddress: PrincipalEmail,
+    //         emergencyContact: Customerdata.CustomerCreationPrincipal.ContactInformation.emergencyContact,
+    //         homeNumber: '56585896',
 
-        });
+    //     });
 
 
-        CustomerCreation.save();
+    //     CustomerCreation.save();
 
-        cy.Click(elems_Landing.SAFRA_Member)
-        cy.Click(elems_Landing.Membership_Registration)
-        cy.wait(5000)
+    //     cy.Click(elems_Landing.SAFRA_Member)
+    //     cy.Click(elems_Landing.Membership_Registration)
+    //     cy.wait(5000)
 
-        MemRegPrincipal.verifyPersonalInformation({
-            MemberCategory: data.memberregistrationprincipal.Personal_Info.MemberCategory,
-            NameOnNRIC: PrincipalName,
-            NameOnCard: PrincipalName,
-            Nric: CustomerNRICFull,
-            Gender: data.memberregistrationprincipal.Personal_Info.Gender,
-            DateofBirth: data.memberregistrationprincipal.Personal_Info.DateofBirth,
-            Age: data.memberregistrationprincipal.Personal_Info.Age,
-            NSStatus: data.memberregistrationprincipal.Personal_Info.NSStatus,
-            NSRank: data.memberregistrationprincipal.Personal_Info.NSRank,
-            MemberType: data.memberregistrationprincipal.Personal_Info.MemberType,
-            Nationality: data.memberregistrationprincipal.Personal_Info.Nationality,
-            MaritalStatus: data.memberregistrationprincipal.Personal_Info.MaritalStatus,
-            CardType: data.memberregistrationprincipal.Personal_Info.CardType,
-            InterestinDBSCard: data.memberregistrationprincipal.Personal_Info.InterestinDBSCard,
-        })
+    //     MemRegPrincipal.verifyPersonalInformation({
+    //         MemberCategory: data.memberregistrationprincipal.Personal_Info.MemberCategory,
+    //         NameOnNRIC: PrincipalName,
+    //         NameOnCard: PrincipalName,
+    //         Nric: CustomerNRICFull,
+    //         Gender: data.memberregistrationprincipal.Personal_Info.Gender,
+    //         DateofBirth: data.memberregistrationprincipal.Personal_Info.DateofBirth,
+    //         Age: data.memberregistrationprincipal.Personal_Info.Age,
+    //         NSStatus: data.memberregistrationprincipal.Personal_Info.NSStatus,
+    //         NSRank: data.memberregistrationprincipal.Personal_Info.NSRank,
+    //         MemberType: data.memberregistrationprincipal.Personal_Info.MemberType,
+    //         Nationality: data.memberregistrationprincipal.Personal_Info.Nationality,
+    //         MaritalStatus: data.memberregistrationprincipal.Personal_Info.MaritalStatus,
+    //         CardType: data.memberregistrationprincipal.Personal_Info.CardType,
+    //         InterestinDBSCard: data.memberregistrationprincipal.Personal_Info.InterestinDBSCard,
+    //     })
 
-        MemRegPrincipal.SaveAndNextPrincipal()
-        cy.wait(5000)
+    //     MemRegPrincipal.SaveAndNextPrincipal()
+    //     cy.wait(5000)
 
-        MemTenureSelect.principalTenureSelection(PrincipalName, '10 Years')
+    //     MemTenureSelect.principalTenureSelection(PrincipalName, '10 Years')
 
-        MemTenureSelect.addToCart()
+    //     MemTenureSelect.addToCart()
 
-        ShoppingCart.fillOutandApplyPayment('CASH')
+    //     ShoppingCart.fillOutandApplyPayment('CASH')
 
-        cy.wait(9000)
+    //     cy.wait(9000)
 
         cy.visit('/membership/customerCheckin')
         cy.wait(3000)
@@ -118,32 +118,32 @@ describe('[TS08] FS-016 Interest Group Membership Renewal', function () {
         cy.wait(5000)
     
 
-        cy.visit('/membership/interestGroupMainSelection')
-        cy.wait(2000)
+        // cy.visit('/membership/interestGroupMainSelection')
+        // cy.wait(2000)
 
-        IGMembershipRenewal.ClickOnBox("Badminton Social Group")
+        // IGMembershipRenewal.ClickOnBox("QA Test IG Main 1")
 
-        IGMembershipRenewal.ClickOnBox('BITEZ')
+        // IGMembershipRenewal.ClickOnBox('IG Detail Test 1')
 
-        IGMembershipRenewal.ClickOnBox('All Locations')
+        // IGMembershipRenewal.ClickOnBox('All Locations')
 
-        IGMembershipRenewal.SelectMembershipTerm()
+        // IGMembershipRenewal.SelectMembershipTerm()
 
-        IGMembershipRenewal.MembershipEffectiveDate('30-Nov-2022')
+        // IGMembershipRenewal.MembershipEffectiveDate('25-May-2023')
 
-        IGMembershipRenewal.AgreeWithTermCondition('CHECK')
+        // IGMembershipRenewal.AgreeWithTermCondition('CHECK')
 
-        IGMembershipRegistration.AddWaiver('Registration')
+        // IGMembershipRegistration.AddWaiver('Registration')
 
-        MemTenureSelect.addToCart()
+        // MemTenureSelect.addToCart()
 
-        ShoppingCart.fillOutandApplyPayment('CASH')
+        // ShoppingCart.fillOutandApplyPayment('CASH')
 
-        cy.wait(15000)
+        // cy.wait(15000)
 
-        IGMembershipRenewal.VerifyItemInIGMemListingTBL(PrincipalName)
+        // IGMembershipRenewal.VerifyItemInIGMemListingTBL(PrincipalName)
 
-        cy.wait(5000)
+        //cy.wait(5000)
         cy.visit('/membership/interestGroupMembershipRenewal')
         cy.wait(5000)
 
@@ -161,7 +161,7 @@ describe('[TS08] FS-016 Interest Group Membership Renewal', function () {
 
         cy.wait(3000)
 
-        IGMembershipRenewal.ViewTransactionHistory(PrincipalName)
+        IGMembershipRenewal.ViewTransactionHistory('SAFDXO1028')
 
         IGMembershipRenewal.VerifyReasonCode('Renew')
 

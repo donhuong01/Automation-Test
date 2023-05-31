@@ -115,6 +115,12 @@ describe('[TS01] Interest Group Membership Registration Management', function ()
 
         cy.wait(10000)
 
+        // cy.visit('/membership/customerCheckin')
+        // cy.wait(3000)
+        // cy.EnterText('//input[@id="txtMemberId"]', MemberID)
+        // cy.Click('//button[@form="formCustomerCheckIn"]')
+        // cy.wait(5000)
+
         cy.visit('/membership/interestGroupMainSelection')
         cy.wait(4000)
 

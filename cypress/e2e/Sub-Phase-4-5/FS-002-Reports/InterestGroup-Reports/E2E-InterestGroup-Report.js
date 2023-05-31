@@ -55,6 +55,76 @@ describe("IG Reports Verification",function(){
         })
     })
 
+    it('Checking functionallity and Verification on IG Membership Listing Address', function(){
+        IG_Reports.verifyIGmemberListingAddress
+        ({
+            expectedPg: data.EXPECTEDPG_MEMBERLISTING_ADDRESS, 
+            iGMain: data.IGMAIN, 
+            iG: data.IG,
+            initialJoin: data.INITIAL_DATE,
+            expiryDate: data.EXPIRY_DATE
+        })
+    })
+
+    it('Checking functionallity and Verification on IG Membership Listing Email', function(){
+        IG_Reports.verifyIGmemberListingEmail
+        ({
+            expectedPg: data.EXPECTEDPG_MEMBERLISTING_EMAIL, 
+            iGMain: data.IGMAIN, 
+            iG: data.IG,
+            initialJoin: data.INITIAL_DATE,
+            expiryDate: data.EXPIRY_DATE
+        })
+    })
+
+    it('Checking functionallity and Verification on IG Membership Registration', function(){
+        IG_Reports.verifyIGmemberRegistration
+        ({
+            expectedPg: data.EXPECTEDPG_REGISTRATION, 
+            iGMain: data.IGMAIN, 
+            iG: data.IG,
+            initialJoin: data.INITIAL_DATE,
+            expiryDate: data.EXPIRY_DATE
+        })
+    })
+
+    it('Checking functionallity and Verification on IG Deferment Summary', function(){
+        IG_Reports.verifyIGTerminationSummary
+        ({
+            expectedPg: data.EXPECTEDPG_TERMINATION_SUMMARY     
+        })
+    })
+
+    it('Checking functionallity and Verification on IG Termination Listing', function(){
+        IG_Reports.verifyIGWaiverListing
+        ({
+            expectedPg: data.EXPECTEDPG_WAIVER, 
+            iGMain: data.IGMAIN, 
+            iG: data.IG,
+            termstartDate: data.TERM_START_DATE,
+            termendDate: data.TERM_END_DATE
+        })
+    })
+    
+    it('Checking functionallity and Verification on IG Renewal Summary', function(){
+        IG_Reports.verifyIGRenewalConfirmation
+        ({
+            expectedPg: data.EXPECTEDPG_RENEWAL_SUMMARY     
+        })
+    })
+
+    it('Checking functionallity and Verification on Registration or Renewal', function(){
+        IG_Reports.verifyIGRegistrationorRenewal
+        ({
+            expectedPg: data.EXPECTEDPG_REGISTRATIONORRENEWAL, 
+            iGMain: data.IGMAIN, 
+            iG: data.IG,
+            initialJoin: data.INITIAL_DATE,
+            expiryFrom: data.EXPIRY_FROM,
+            expiryTo: data.EXPIRY_TO
+        })    
+        })
+
 
 
 

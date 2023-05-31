@@ -168,7 +168,7 @@ class Reports_IG {
             IG Membership Registration Listing
         * Description: This function verifies the page
         *****************************************************/
-        verifyIGmemberRegistration(expectedPg, iGMain, iG, initialJoin, expiryDate){
+        verifyIGmemberRegistration(expectedPg, iGMain, iG, RegisterDateFrom, RegisterDateTo){
         
             cy.visit('/report?reportId=ReportIG.MembershipRegistrationListing')
             cy.wait(2000)
@@ -177,8 +177,8 @@ class Reports_IG {
             cy.SelectPickerItem(elems_IGMembershipRegistrationListing.PCK_IGMAIN, iGMain)
             cy.wait(2000)
             cy.SelectPickerItem(elems_IGMembershipRegistrationListing.PCK_IG, iG)
-            cy.EnterDate(elems_IGMembershipRegistrationListing.TXT_REGISTERDATEFROM, initialJoin)
-            cy.EnterDate(elems_IGMembershipRegistrationListing.TXT_REGISTERDATETO, expiryDate)
+            cy.EnterDate(elems_IGMembershipRegistrationListing.TXT_REGISTERDATEFROM, RegisterDateFrom)
+            cy.EnterDate(elems_IGMembershipRegistrationListing.TXT_REGISTERDATETO, RegisterDateTo)
                             
             cy.click(elems_IGMembershipRegistrationListing.BTN_GENERATE)
             cy.wait(4000)
@@ -228,10 +228,10 @@ class Reports_IG {
 
         /*****************************************************
          * Method: Checking functionallity and Verification on 
-                 IG Termination Listing
+                 IG Waiver Listing
         * Description: This function verifies the page
         *****************************************************/
-        verifyIGTerminationListing(expectedPg, iGMain, iG, termstartDate, termendDate){
+        verifyIGWaiverListing(expectedPg, iGMain, iG, termstartDate, termendDate){
 
             cy.visit('/report?reportId=ReportIG.MembershipWaiverListing')
             cy.wait(2000)
@@ -247,6 +247,47 @@ class Reports_IG {
             cy.wait(4000)
             cy.ValidateElementText('//div[@data-id="table1_1"]')
             //cy.click(elems_IGMainListing.BTN_EXPORT)
+        }
+
+        /*****************************************************
+        * Method: Checking functionallity and Verification on 
+                 IG Renewal Confirmation Summary
+        * Description: This function verifies the page
+        *****************************************************/
+        verifyIGRenewalConfirmation(expectedPg){
+
+        cy.visit('https://qa-smcms.safra.sg/report?reportId=ReportIG.RenewalConfirmation')
+        cy.wait(2000)
+        cy.ValidateElementText(elems_IGMembershipTerminationListing.LBL_PAGETITLE, expectedPg)
+                
+        cy.click(elems_IGMembershipTerminationListing.BTN_GENERATE)
+        cy.wait(4000)
+        cy.ValidateElementText('//div[@data-id="table1_1"]')
+        //cy.click(elems_IGMainListing.BTN_EXPORT)
+        }
+
+        /*****************************************************
+         * Method: Checking functionallity and Verification on 
+            IG Membership Listing Email
+        * Description: This function verifies the page
+        *****************************************************/
+        verifyIGRegistrationorRenewal(expectedPg, iGMain, iG, initialJoin, expiryFrom, expiryTo){
+        
+        cy.visit('https://qa-smcms.safra.sg/report?reportId=ReportIG.MembershipRegistrationOrRenewalListing')
+        cy.wait(2000)
+        cy.ValidateElementText(elems_IGMembershipListing.LBL_PAGETITLE, expectedPg)
+                            
+        cy.SelectPickerItem(elems_IGMembershipListing.PCK_IGMAIN, iGMain)
+        cy.wait(2000)
+        cy.SelectPickerItem(elems_IGMembershipListing.PCK_IG, iG)
+        cy.EnterDate(elems_IGMembershipListing.TXT_INITIAL_JOIN, initialJoin)
+        cy.EnterDate(elems_IGMembershipListing.TXT_EXPIRY_FROM, expiryFrom)
+        cy.EnterDate(elems_IGMembershipListing.TXT_EXPIRY_TO, expiryTo)
+                            
+        cy.click(elems_IGMainListing.BTN_GENERATE)
+        cy.wait(4000)
+        cy.ValidateElementText('//div[@data-id="table1_1"]')
+        //cy.click(elems_IGMainListing.BTN_EXPORT)
         }
 
         

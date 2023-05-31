@@ -17,11 +17,11 @@ const Data = {
     IGMembershipRegistration: {
         CustomerNRICFull: 'S6797328C',
         NRICLast4Digit: '328C',
-        IGMainSelectionBox: "MOVIEMAX",
-        IGSelection: "CINIPEX",
+        IGMainSelectionBox: "QA Test IG Main 1",
+        IGSelection: "IG Detail Test 1",
         IGLocationSelection: "All Locations",
         MembershipTenure: "5",
-        EffectiveDate: "20-Feb-2023",
+        EffectiveDate: "26-May-2023",
         AgreeWithTermAndCondition: "CHECK",
         AgreeWithIndemnityWaiver: "CHECK",
 
@@ -41,7 +41,7 @@ const Data = {
         CalculatePayment: 'CHECK',
         Maintenace: 'Terminate',
         TerminatedBy: 'Customer',
-        TerminationDate: '28-Feb-2023',  //Must be the last day of the current month
+        TerminationDate: '31-May-2023',  //Must be the last day of the current month
         TerminationReason: 'Termination',
         CustomerName: 'Test User 46',
         Status: 'InActive',
@@ -68,7 +68,7 @@ const Data = {
 
     },
     IGMmebershipReinstatement: {
-        TermStartDate: '06-Dec-2022',
+        TermStartDate: '25-May-2023',
         MembershipTerm: '3',
         MemID: 'A300001854',  // Must be InActive ( Terminated )
         CustomerName: 'Test User 8310150',
@@ -76,8 +76,8 @@ const Data = {
     },
 
     IGMembershipDeactivation: {
-        IGName: 'QA-IG 2023',
-        DeactivationDate: '07-Dec-2022',
+        IGName: 'SAFRA BITEZ331',
+        DeactivationDate: '26-May-2023',
         DReason: 'Deactivate',
         Status: 'Deactivated'
     },

@@ -209,21 +209,21 @@ beforeEach(() => {
 
 
 // This module need minor updates
-//  describe('E2E Auto Testing:FS-010 Facility', ()=> {
+ describe('E2E Auto Testing:FS-010 Facility', ()=> {
     // FacilityGeneralSettingDtl()
     // FacilitySettingsCalendar()
     // FacilitySettingCalendarSettings()
     // FacilityOperatingPeriod()
     // FacilityTypeDetailFormManagement(E2EData.CALENDAR_NAME, E2EData.PERIODOFCALENDAR, E2EData.OPERATING_PERIOD_NAME) 
-    // FacilitySetupDetail() 
-    // FacilityBookingManagement("S5545610J")
-    // FacilityBookingAmendmentManagment()
+    //FacilitySetupDetail() 
+    FacilityBookingManagement("S6690184Z")
+    FacilityBookingAmendmentManagment()
     //  FacilityBookingExtentionManagment() // Needs an update in Facility for extension setting
     //  FacilityBookingCancellationManagment() // Needs own page action
-    //  FacilityGroupBooking(E2EData.FACILITY_GROUP_BOOKING.SAFRA_MEMBER, E2EData.FACILITY_GROUP_BOOKING.SAFRA_RELATED_MEMBER,
-    //      E2EData.FACILITY_GROUP_BOOKING.SAFRA_GUEST) //Pass Active Safra Member ID - 1.Safra Member 2. SAFRARelatedMemberships 3. Guest Member
-    //    FacilityGroupBookingBallot("A300002855", "A300002871") // Recheck again tomorrow morning
-//   })
+      FacilityGroupBooking(E2EData.FACILITY_GROUP_BOOKING.SAFRA_MEMBER, E2EData.FACILITY_GROUP_BOOKING.SAFRA_RELATED_MEMBER,
+          E2EData.FACILITY_GROUP_BOOKING.SAFRA_GUEST) //Pass Active Safra Member ID - 1.Safra Member 2. SAFRARelatedMemberships 3. Guest Member
+        FacilityGroupBookingBallot("A300002855", "A300002871") // Recheck again tomorrow morning
+  })
 
 
 // describe('E2E Auto Testing:FS-012 Accommodation', ()=> {
@@ -241,7 +241,7 @@ beforeEach(() => {
 
 // describe('E2E Auto Testing:FS-014 Membership: Master Registration and Renewal', ()=> {
 
-      MembershipRegistration(E2EData.NRIC_FOR_MEMBERSHIP_REGISTRATION) // Enter Full NRIC
+//      MembershipRegistration(E2EData.NRIC_FOR_MEMBERSHIP_REGISTRATION) // Enter Full NRIC
 //     CustomerCheckIn()
 //     MemberType()
 //     //BadAddressUpdate()// Fail Need code updates
@@ -382,44 +382,44 @@ beforeEach(() => {
 
 
 
-// describe('E2E Auto Testing:FS-030 Membership: Card Management', ()=> {
+describe('E2E Auto Testing:FS-030 Membership: Card Management', ()=> {
     
-//     VolunteerCardManagement(E2EData.MEMBERID_VOLUNTERR_CARD_MANAGEMENT, E2EData.MEMBER_NAME_VOLUNTERR_CARD_MANAGEMENT,
-//                             E2EData.LAST4DIGITNRIC_VOLUNTERR_CARD_MANAGEMENT, E2EData.CARD_TYPE_VOLUNTERR_CARD_MANAGEMENT) //Enter MemberID, Name, Last 4 digist of NRIC and Card Type
+    VolunteerCardManagement(E2EData.MEMBERID_VOLUNTERR_CARD_MANAGEMENT, E2EData.MEMBER_NAME_VOLUNTERR_CARD_MANAGEMENT,
+                            E2EData.LAST4DIGITNRIC_VOLUNTERR_CARD_MANAGEMENT, E2EData.CARD_TYPE_VOLUNTERR_CARD_MANAGEMENT) //Enter MemberID, Name, Last 4 digist of NRIC and Card Type
 
-//     SAFRACardManagement(E2EData.MEMBERID_SAFRA_CARD_MANAGEMENT, E2EData.MEMBER_NAME_SAFRA_CARD_MANAGEMENT,
-//                         E2EData.LAST4DIGITNRIC_SAFRA_CARD_MANAGEMENT, E2EData.CARD_TYPE_SAFRA_CARD_MANAGEMENT) //Enter MemberID, Name, Last 4 digist of NRIC and Card Type
+    SAFRACardManagement(E2EData.MEMBERID_SAFRA_CARD_MANAGEMENT, E2EData.MEMBER_NAME_SAFRA_CARD_MANAGEMENT,
+                        E2EData.LAST4DIGITNRIC_SAFRA_CARD_MANAGEMENT, E2EData.CARD_TYPE_SAFRA_CARD_MANAGEMENT) //Enter MemberID, Name, Last 4 digist of NRIC and Card Type
     
-//     VIPCardManagement(E2EData.MEMBERID_VIP_CARD_MANAGEMENT, E2EData.MEMBER_NAME_VIP_CARD_MANAGEMENT,
-//                       E2EData.LAST4DIGITNRIC_VIP_CARD_MANAGEMENT, E2EData.CARD_TYPE_VIP_CARD_MANAGEMENT) //Enter MemberID, Name, Last 4 digist of NRIC and Card Type
+    VIPCardManagement(E2EData.MEMBERID_VIP_CARD_MANAGEMENT, E2EData.MEMBER_NAME_VIP_CARD_MANAGEMENT,
+                      E2EData.LAST4DIGITNRIC_VIP_CARD_MANAGEMENT, E2EData.CARD_TYPE_VIP_CARD_MANAGEMENT) //Enter MemberID, Name, Last 4 digist of NRIC and Card Type
 
-// })
+})
 
 
 
 
 // describe('E2E Auto Testing:FS-031 Gift: Redemption Management', ()=> {
 
-    // GiftModuleSettings()
-    // GiftsManagement() // Always update Publishdatefrom data to current day
-    // GiftRedemptionTransactions()
-    // GiftRedemptionManagementInsertionAndCollection(E2EData.GRM_INSERTION_AND_COLLECTION.MEMBERID,E2EData.GRM_INSERTION_AND_COLLECTION.GIFT_NAME,E2EData.GRM_INSERTION_AND_COLLECTION.GIFT_QUANTITY) //Pass as Params 1.MemberID 2.Gift Name 3.Quantity
-    // GiftRedemptionManagementInsertionAndCancellation(E2EData.GRM_INSERTION_AND_CANCELLETION.MEMBERID,E2EData.GRM_INSERTION_AND_CANCELLETION.GIFT_NAME,E2EData.GRM_INSERTION_AND_CANCELLETION.GIFT_QUANTITY) //Pass as Params 1.MemberID 2.Gift Name 3.Quantity
-    // GiftRedemptionManagementInsertionAndExchange(E2EData.GRM_INSERTION_AND_EXCHANGE.MEMBERID,E2EData.GRM_INSERTION_AND_EXCHANGE.GIFT_NAME,E2EData.GRM_INSERTION_AND_EXCHANGE.GIFT_QUANTITY) //Pass as Params 1.MemberID 2.Gift Name 3.Quantity
+//     GiftModuleSettings()
+//     GiftsManagement() // Always update Publishdatefrom data to current day
+//     GiftRedemptionTransactions()
+//     GiftRedemptionManagementInsertionAndCollection(E2EData.GRM_INSERTION_AND_COLLECTION.MEMBERID,E2EData.GRM_INSERTION_AND_COLLECTION.GIFT_NAME,E2EData.GRM_INSERTION_AND_COLLECTION.GIFT_QUANTITY) //Pass as Params 1.MemberID 2.Gift Name 3.Quantity
+//     GiftRedemptionManagementInsertionAndCancellation(E2EData.GRM_INSERTION_AND_CANCELLETION.MEMBERID,E2EData.GRM_INSERTION_AND_CANCELLETION.GIFT_NAME,E2EData.GRM_INSERTION_AND_CANCELLETION.GIFT_QUANTITY) //Pass as Params 1.MemberID 2.Gift Name 3.Quantity
+//     GiftRedemptionManagementInsertionAndExchange(E2EData.GRM_INSERTION_AND_EXCHANGE.MEMBERID,E2EData.GRM_INSERTION_AND_EXCHANGE.GIFT_NAME,E2EData.GRM_INSERTION_AND_EXCHANGE.GIFT_QUANTITY) //Pass as Params 1.MemberID 2.Gift Name 3.Quantity
 
 // })
 
 // describe('E2E Auto Testing:FS-036 SRP', ()=> {
 
-    // SRPModuleSetting()
-    // SAFRAPointsAdjustment(E2EData.MEMBERID_FOR_SAFRA_POINTS_ADJUSTMENT) //Provide Active member ID
-    // SAFRAPointsTransaction(E2EData.MEMBERID_FOR_SAFRA_POINTS_TRANSACTION) //Provide Active member ID
-    // SRPRedemptionCollection(E2EData.SRP_REDEMPTION_COLLECTION) //Provide Active member ID
-    // SRPRedemptionManagement(E2EData.SRP_REDEMPTION_MANAGEMENT) //Provide Active member ID
-    // ThirdPartyVendorManagement()
-    // EDCTerminalManagement()
-    // SRPRedemptionCatalogueManagement()
-    // SRPPromotionManagement() 
+//     //SRPModuleSetting()
+//     SAFRAPointsAdjustment(E2EData.MEMBERID_FOR_SAFRA_POINTS_ADJUSTMENT) //Provide Active member ID
+//     SAFRAPointsTransaction(E2EData.MEMBERID_FOR_SAFRA_POINTS_TRANSACTION) //Provide Active member ID
+//     SRPRedemptionCollection(E2EData.SRP_REDEMPTION_COLLECTION) //Provide Active member ID
+//     SRPRedemptionManagement(E2EData.SRP_REDEMPTION_MANAGEMENT) //Provide Active member ID
+//     ThirdPartyVendorManagement()
+//     EDCTerminalManagement()
+//     SRPRedemptionCatalogueManagement()
+//     SRPPromotionManagement() 
 
 // })
 
