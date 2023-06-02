@@ -1,6 +1,7 @@
 import elems_SMCMSShoppingCartAndPayment from '../../../../page-objects/SMCMS/Elements/Club-Sales/FS040_ShoppingCart-Payment/SMCMSShoppingCartAndPayment'
 import elems_PendingTaskDetail from '../../Elements/Admin/FS004_Admin-Settings/PendingTaskDetail'
 import elems_PendingTaskListing from '../../Elements/Admin/FS004_Admin-Settings/PendingTaskListing'
+import elems_Alerts from '../../Elements/Common/Alerts'
 
 class Commons {
 

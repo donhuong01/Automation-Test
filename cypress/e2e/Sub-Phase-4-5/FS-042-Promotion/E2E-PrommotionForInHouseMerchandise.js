@@ -9,14 +9,14 @@ import InHouseSaleAndMerchandiseItemPurchase from '../../../page-objects/SMCMS/P
 //Page definition
 const common = new Common()
 
-beforeEach(() => {
+// beforeEach(() => {
 
-    // Set local storage for QA Enviroment
-    cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
+//     // Set local storage for QA Enviroment
+//     //cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
 
-    // Set local storage for UAT Enviroment
-    // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
-})
+//     // Set local storage for UAT Enviroment
+//     // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
+// })
 
 const PromotionforInHouseMerchandise = (MemberId) => {
 
@@ -29,7 +29,7 @@ Promodata.forEach(each => {
 
     describe('SP4-FS042_TS01 Promotion Setup and Management', function () {
 
-        it.skip(`[TC01] Creating New ${BasicType} Promotion for ${ItemCate} On ${PromotionType}`, function () {
+        it(`[TC01] Creating New ${BasicType} Promotion for ${ItemCate} On ${PromotionType}`, function () {
 
             cy.visit('/club/promotionListing').wait(3000)
 
@@ -109,16 +109,18 @@ Promodata.forEach(each => {
 
                     InHouseSaleAndMerchandiseItemPurchase.SelectItemType('Merchandise')
 
-                    InHouseSaleAndMerchandiseItemPurchase.EnterQuantityOfSetsMerchandise(1)
+                    InHouseSaleAndMerchandiseItemPurchase.EnterQuantityOfSetsMerchandise('1')
+
+                    InHouseSaleAndMerchandiseItemPurchase.SelectItemName('Amazon Tablet')
 
                 } else {
 
                     InHouseSaleAndMerchandiseItemPurchase.SelectItemType('InHouse')
 
-                    InHouseSaleAndMerchandiseItemPurchase.EnterQuantityOfSetsInHouse(1)
-                }
+                    InHouseSaleAndMerchandiseItemPurchase.EnterQuantityOfSetsInHouse('1')
 
-                InHouseSaleAndMerchandiseItemPurchase.SelectItemName('Picnic Set')
+                    InHouseSaleAndMerchandiseItemPurchase.SelectItemName('Game Card')
+                }
 
                 InHouseSaleAndMerchandiseItemPurchase.AddToCart()
 

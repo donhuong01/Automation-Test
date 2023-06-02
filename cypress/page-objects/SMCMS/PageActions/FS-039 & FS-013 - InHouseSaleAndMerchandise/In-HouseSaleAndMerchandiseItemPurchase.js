@@ -76,7 +76,7 @@ class InHouseSaleAndMerchandiseItemPurchase {
        * @param {string} Value
        ***************************************************/
     EnterQuantityOfSetsInHouse(Value) {
-
+        cy.xpath(elems_MerchandiseInHouseSalePurcahse.TXT_QUANTITYOFSETSINHOUSE).clear()
         cy.EnterText(elems_MerchandiseInHouseSalePurcahse.TXT_QUANTITYOFSETSINHOUSE, Value)
 
     }
@@ -86,7 +86,7 @@ class InHouseSaleAndMerchandiseItemPurchase {
        * @param {string} Value
        ***************************************************/
     EnterQuantityOfSetsMerchandise(Value) {
-
+        cy.xpath(elems_MerchandiseInHouseSalePurcahse.TXT_QUANTITYOFSETSMERCHANDISE).clear()
         cy.EnterText(elems_MerchandiseInHouseSalePurcahse.TXT_QUANTITYOFSETSMERCHANDISE, Value)
 
     }
