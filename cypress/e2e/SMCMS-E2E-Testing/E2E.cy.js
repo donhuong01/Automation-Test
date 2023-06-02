@@ -5,6 +5,9 @@ import SMCMSPostion from '../Sub-Phase-1/FS-001-Admin-SystemLogin/E2E-SMCMSPosit
 import SMCMSRole from '../Sub-Phase-1/FS-001-Admin-SystemLogin/E2E-SMCMSRole'
 import SMCMSUser from '../Sub-Phase-1/FS-001-Admin-SystemLogin/E2E-SMCMSUser'
 
+//FS - 002 Reports
+import IG_Report from '../Sub-Phase-4-5/FS-002-Reports/InterestGroup-Reports/E2E-InterestGroup-Report'
+
 //FS - 004 Admin Settings
 import ApplicationSetting from '../Sub-Phase-1/FS-004-Admin-Settings/E2E-ApplicationSettings'
 import NotificationMessageTemplate from '../Sub-Phase-1/FS-004-Admin-Settings/E2E-NotficationMessageTemplate'
@@ -195,6 +198,13 @@ beforeEach(() => {
 //     SMCMSUser() 
 // })
 
+ describe('E2E Auto Testing:FS-002 Reports', () => {
+
+    IG_Report() //Needs an Updates
+
+ })
+
+
 // describe('E2E Auto Testing:FS-004 Admin: Settings', () => {
 
 //     CustomerCategoryType()
@@ -256,7 +266,7 @@ beforeEach(() => {
 //     E2EMemberShipRenewal(E2EData.NRIC_FOR_MEMBERSHIP_REGISTRATION_AND_RENEWAL) //Add NRIC For Principal Registration
     
     
-//     LifeMembershipManagment(E2EData.NRIC_FOR_LIFE_MEMBERSHIP_REGISTRATION) //Add NRIC For Principal Registration
+     LifeMembershipManagment(E2EData.NRIC_FOR_LIFE_MEMBERSHIP_REGISTRATION) //Add NRIC For Principal Registration
 //    BatchMembershipRegistration(
 
 //         //Pass Info for Existing Member MemberID and LAST4DigitsNRIC
@@ -444,13 +454,13 @@ beforeEach(() => {
 
 // describe('E2E Auto Testing:FS-042 Promotion', ()=> {
 
-//     // PromotionforE1Gym(E2EData.MEMBERID_FOR_E1_RENEWAL_PROMOTION.MEMBER_ID) //Provide Active Member
-//     //  PrommotionForFacilityandFacilityType(E2EData.MEMBERID_FOR_FACILITY_PROMOTION.MEMBER_ID) //Provide Active Member
- //    PromotionforInHouseMerchandise (E2EData.MEMBERID_FOR_INHOUSE_MERCHANDISE_PROMOTION.MEMBERID) //Provide Active Member
-//     //  PromotionforInterestGroup(E2EData.MEMBERID_FOR_INTERESTG_PROMOTION.MEMBERID) //Provide Active Member
-//     //  PromoUtilization()
-//     //  Promotion()
-//     //  PromotionforMembership(E2EData.FULLNRIC_FOR_MEMBERSHIP_PROMOTION.FULLNRIC) //Provide New NRIC
+    PromotionforE1Gym(E2EData.MEMBERID_FOR_E1_RENEWAL_PROMOTION.MEMBER_ID) //Provide Active Member
+    PrommotionForFacilityandFacilityType(E2EData.MEMBERID_FOR_FACILITY_PROMOTION.MEMBER_ID) //Provide Active Member
+    PromotionforInHouseMerchandise (E2EData.MEMBERID_FOR_INHOUSE_MERCHANDISE_PROMOTION.MEMBERID) //Provide Active Member
+    PromotionforInterestGroup(E2EData.MEMBERID_FOR_INTERESTG_PROMOTION.MEMBERID) //Provide Active Member
+    PromoUtilization()
+    Promotion()
+    PromotionforMembership(E2EData.FULLNRIC_FOR_MEMBERSHIP_PROMOTION.FULLNRIC) //Provide New NRIC
 // })
 
 

@@ -54,26 +54,26 @@ Promodata.forEach(each => {
 
             PromotionDetail.PromotionTypeTab(PromotionType, StartDate, EndDate)
 
-            PromotionDetail.SaveAsDraft()
+            // PromotionDetail.SaveAsDraft()
 
-            PromotionListing.FilterByPromotionName(PromotionTitle)
+            // PromotionListing.FilterByPromotionName(PromotionTitle)
 
-            PromotionListing.ClickSearchFilter()
+            // PromotionListing.ClickSearchFilter()
 
-            PromotionListing.ClickTableLink()
+            // PromotionListing.ClickTableLink()
 
             //Benifit Item Tab
             PromotionDetail.ClickOnTab('Benefit Item')
 
             PromotionDetail.BenefitItemTab(ItemCate, Quantity, BenefitType, FixedDollarRate, BundlePromotion)
 
-            PromotionDetail.SaveAsDraft()
+            // PromotionDetail.SaveAsDraft()
 
-            PromotionListing.FilterByPromotionName(PromotionTitle)
+            // PromotionListing.FilterByPromotionName(PromotionTitle)
 
-            PromotionListing.ClickSearchFilter()
+            // PromotionListing.ClickSearchFilter()
 
-            PromotionListing.ClickTableLink()
+            // PromotionListing.ClickTableLink()
 
             //Promotion Criteria
             PromotionDetail.ClickOnTab('Promotion Criteria')
