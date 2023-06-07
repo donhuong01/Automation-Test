@@ -45,7 +45,7 @@ VolAppointmentTermRegistration: {
     MemberName:'Test User S4539621E',
     AppointmentTypeID:'ACC_YS_CHAIR',
     Type:'Terminated',
-    StartDate:'19-Jul-2022',
+    StartDate:'19-Jun-2022',
     EndDate:'31-Oct-2023',
 },
 

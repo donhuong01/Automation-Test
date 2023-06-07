@@ -3,7 +3,7 @@ const data = {
     Name: 'E1 Main Test',
     Code: 'EMT',
     MainCategory: 'Sport',
-    IGGroupCategoryGroup: 'INTEREST GROUP CATERY',
+    IGGroupCategoryGroup: 'INTEREST GROUP CATEGORY',
     FabsGroup: 'IG Activities',
     ClubClassification: 'Food & Beverages',
     LifeStyleGroup: 'Enrichment',

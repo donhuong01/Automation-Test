@@ -10,7 +10,7 @@ const data = [
         category: 'All Customer Category',
         PreferredClubHouse: 'All Locations',
         EffectiveDate: '28-Mar-2023',
-        Terms: 18,
+        Terms: '3',
         AddWaiver: 'No' // Yes or no
     },
     // E1 Gym Membership Registration for Non-member/New Customer for Manimum term

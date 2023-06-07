@@ -1,6 +1,6 @@
-class elems_AccommodationOperatingPeriodListing {
-    static DRP_TYPEOFPEAK = '//span[@id="drpTypeOfPeak"]'
-    static DRP_OPERATINGDAY = '//span[@id="drpOperatingDay"]'
+class elems_AccommodationReservationBookingListing {
+
+    static PCK_ACCOMMODATIONNAME = '//label[text()="Accommodation Name"]//following-sibling::div//button'
     static BTN_GENERATE = '//button[text()="Generate"]'
     static BTN_EXPORT = '//button[text()="Export"]'
     static BTN_SEARCHFILTER = '//button[text()="Search Filters"]'
@@ -9,4 +9,4 @@ class elems_AccommodationOperatingPeriodListing {
     static LBL_PAGE = '//h2'
 }
 
-export default elems_AccommodationOperatingPeriodListing
+export default elems_AccommodationReservationBookingListing

@@ -1,8 +1,8 @@
 const data = {
     MemberId: 'A300002195',
     CustomerName: 'Auto-User8335887137906',
-    E1GymMemMainSelection: 'Energy One Testing Receipt Main',
-    E1GymMembershipSelection: 'Energy One Testing Receipt Listing',
+    E1GymMemMainSelection: 'Test E1 Main',
+    E1GymMembershipSelection: 'Test E1 Detail',
     LocationSelection: 'All Locations',
     DependencyType: 'Principal',
     PreferredClubHouse: 'All Locations',

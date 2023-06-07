@@ -28,7 +28,7 @@ const data = [
         category: 'AS',
         PreferredClubHouse: 'SAFRA Jurong',
         EffectiveDate: '24-May-2023',
-        Terms: '18',
+        Terms: '3',
         AddWaiver: 'No'       //Yes or No
     },
 

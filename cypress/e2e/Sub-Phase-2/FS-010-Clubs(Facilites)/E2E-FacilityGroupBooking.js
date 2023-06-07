@@ -40,7 +40,7 @@ describe('[TS-07] FS-010 Facility Group Booking', function () {
 
         FacilityGroupBookingDetail.SelectFacilityType("Type 2023")
 
-        FacilityGroupBookingDetail.SelectLocationAndFacility("Jurong", "Auto-Test 5066")
+        FacilityGroupBookingDetail.SelectLocationAndFacility("SAFRA Jurong", "Auto-Test 5066")
 
         FacilityGroupBookingDetail.SelectAvailableSlot("Available (09:00 am - 10:00 am)")
 
@@ -65,7 +65,7 @@ describe('[TS-07] FS-010 Facility Group Booking', function () {
 
         FacilityGroupBookingDetail.SelectFacilityType("Type 2023")
 
-        FacilityGroupBookingDetail.SelectLocationAndFacility("Jurong", "Auto-Test 5066")
+        FacilityGroupBookingDetail.SelectLocationAndFacility("SAFRA Jurong", "Auto-Test 5066")
 
         FacilityGroupBookingDetail.SelectAvailableSlot("Available (09:00 am - 10:00 am)")
 
@@ -90,7 +90,7 @@ describe('[TS-07] FS-010 Facility Group Booking', function () {
 
         FacilityGroupBookingDetail.SelectFacilityType("Type 2023")
 
-        FacilityGroupBookingDetail.SelectLocationAndFacility("Jurong", "Auto-Test 5066")
+        FacilityGroupBookingDetail.SelectLocationAndFacility("SAFRA Jurong", "Auto-Test 5066")
 
         FacilityGroupBookingDetail.SelectAvailableSlot("Available (09:00 am - 10:00 am)")
 
