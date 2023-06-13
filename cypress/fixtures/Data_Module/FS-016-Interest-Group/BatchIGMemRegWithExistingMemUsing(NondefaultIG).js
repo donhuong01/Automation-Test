@@ -5,10 +5,10 @@ const data = [
         MemberId: 'A300000303',            // Non-Existing Member 
         BatchName: 'Test Batch' + Math.floor(Math.random() * 100),
         BatchType: 'Interest Group',
-        InterestGroup: 'CINIPEX',
-        InterestGroupMain: 'MOVIEMAX',
-        EffectiveDate: '05-Jan-2023',
-        IGMembershipTerm: 18,              // Provide Manimum term
+        InterestGroup: 'IG Detail Test 1',
+        InterestGroupMain: 'QA Test IG Main 1',
+        EffectiveDate: '07-Jun-2023',
+        IGMembershipTerm: 6,              // Provide Manimum term
         InterestGroupLocation: 'All Locations',
     },
 

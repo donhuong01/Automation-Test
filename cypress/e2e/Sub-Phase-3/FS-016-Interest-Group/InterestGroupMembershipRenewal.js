@@ -163,7 +163,7 @@ describe('[TS08] FS-016 Interest Group Membership Renewal', function () {
 
         IGMembershipRenewal.ViewTransactionHistory('SAFDXO1028')
 
-        IGMembershipRenewal.VerifyReasonCode('Renew')
+        IGMembershipRenewal.VerifyReasonCode('Renewal')
 
     })
 

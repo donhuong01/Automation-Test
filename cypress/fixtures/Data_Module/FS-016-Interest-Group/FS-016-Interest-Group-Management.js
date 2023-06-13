@@ -1,16 +1,16 @@
 const Data = {
 
     IGMembershipListing: {
-        IGMian: 'Badminton Social Group',
-        InterestGroup: 'BITEZ',
-        IGMembershipID: 'G1000000225',
-        SAFRAMembershipID: 'A300001194',
+        IGMian: 'QA Test IG Main 1',
+        InterestGroup: 'IG Detail Test 1',
+        IGMembershipID: 'G1000000108',
+        SAFRAMembershipID: 'LD test 1',
         Status: 'Active',
-        CustomerName: 'Rowen Ming',
-        ExpiryDateFrom: '18-Nov-2022',
-        ExpiryDateTo: '17-Dec-2022',
-        InitialJoinDate: '05-Jan-2023',
-        ExpiryDate: '05-Jan-2026',
+        CustomerName: 'LD test 1',
+        ExpiryDateFrom: '05-Jun-2023',
+        ExpiryDateTo: '05-Dec-2024',
+        InitialJoinDate: '05-Jun-2023',
+        ExpiryDate: '05-Dec-2024',
         MembershipStatusReason: 'New'
 
     },
@@ -41,7 +41,7 @@ const Data = {
         CalculatePayment: 'CHECK',
         Maintenace: 'Terminate',
         TerminatedBy: 'Customer',
-        TerminationDate: '31-May-2023',  //Must be the last day of the current month
+        TerminationDate: '30-Jun-2023',  //Must be the last day of the current month
         TerminationReason: 'Termination',
         CustomerName: 'Test User 46',
         Status: 'InActive',

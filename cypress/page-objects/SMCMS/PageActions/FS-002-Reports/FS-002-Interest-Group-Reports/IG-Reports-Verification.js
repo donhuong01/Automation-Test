@@ -24,9 +24,9 @@ class Reports_IG {
         cy.EnterText(elems_IGMainListing.TXT_IGMAINNUMBER, iGMainNumber)
 
         cy.Click(elems_IGMainListing.BTN_GENERATE)
-        cy.wait(4000)
+        cy.wait(5000)
         ////cy.ValidateElementText('//div[@data-id="table1_1"]')
-        //cy.click(elems_IGMainListing.BTN_EXPORT)
+        //cy.Click(elems_IGMainListing.BTN_EXPORT)
 
     }
 
@@ -46,10 +46,10 @@ class Reports_IG {
         cy.SelectPickerItem(elems_IGMemberhsipDeactivationLisitng.PCK_IG, iG)
         cy.EnterDate(elems_IGMemberhsipDeactivationLisitng.TXT_DEACTIVATIONDATE, DeactDate)
 
-        cy.click(elems_IGMainListing.BTN_GENERATE)
-        cy.wait(4000)
+        cy.Click(elems_IGMainListing.BTN_GENERATE)
+        cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
-        //cy.click(elems_IGMainListing.BTN_EXPORT)
+        //cy.Click(elems_IGMainListing.BTN_EXPORT)
     }
 
     /*****************************************************
@@ -63,10 +63,10 @@ class Reports_IG {
         cy.wait(2000)
         cy.ValidateElementText(elems_IGMemberhsipDeactivationLisitng.LBL_PAGETITLE, expectedPg)
 
-        cy.click(elems_IGMainListing.BTN_GENERATE)
-        cy.wait(4000)
+        cy.Click(elems_IGMainListing.BTN_GENERATE)
+        cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
-        //cy.click(elems_IGMainListing.BTN_EXPORT)
+        //cy.Click(elems_IGMainListing.BTN_EXPORT)
     }
 
     /*****************************************************
@@ -86,10 +86,10 @@ class Reports_IG {
         cy.EnterDate(elems_IGRenewalListing.TXT_RENEWALLISTINGFROM, renewalFrom)
         cy.EnterDate(elems_IGRenewalListing.TXT_RENEWALLISTINGTO, renewalTo)
 
-        cy.click(elems_IGMainListing.BTN_GENERATE)
-        cy.wait(4000)
+        cy.Click(elems_IGMainListing.BTN_GENERATE)
+        cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
-        //cy.click(elems_IGMainListing.BTN_EXPORT)
+        //cy.Click(elems_IGMainListing.BTN_EXPORT)
     }
 
         /*****************************************************
@@ -109,10 +109,10 @@ class Reports_IG {
                 cy.EnterDate(elems_IGMembershipListing.TXT_INITIAL_JOIN, initialJoin)
                 cy.EnterDate(elems_IGMembershipListing.TXT_EXPIRY_DATE, expiryDate)
         
-                cy.click(elems_IGMainListing.BTN_GENERATE)
-                cy.wait(4000)
+                cy.Click(elems_IGMainListing.BTN_GENERATE)
+                cy.wait(5000)
                 //cy.ValidateElementText('//div[@data-id="table1_1"]')
-                //cy.click(elems_IGMainListing.BTN_EXPORT)
+                //cy.Click(elems_IGMainListing.BTN_EXPORT)
             }
         
 
@@ -133,10 +133,10 @@ class Reports_IG {
             cy.EnterDate(elems_IGMembershipListing.TXT_INITIAL_JOIN, initialJoin)
             cy.EnterDate(elems_IGMembershipListing.TXT_EXPIRY_DATE, expiryDate)
                     
-            cy.click(elems_IGMainListing.BTN_GENERATE)
-            cy.wait(4000)
+            cy.Click(elems_IGMainListing.BTN_GENERATE)
+            cy.wait(5000)
             //cy.ValidateElementText('//div[@data-id="table1_1"]')
-            //cy.click(elems_IGMainListing.BTN_EXPORT)
+            //cy.Click(elems_IGMainListing.BTN_EXPORT)
          }
 
 
@@ -157,10 +157,10 @@ class Reports_IG {
             cy.EnterDate(elems_IGMembershipListing.TXT_INITIAL_JOIN, initialJoin)
             cy.EnterDate(elems_IGMembershipListing.TXT_EXPIRY_DATE, expiryDate)
                         
-            cy.click(elems_IGMainListing.BTN_GENERATE)
-            cy.wait(4000)
+            cy.Click(elems_IGMainListing.BTN_GENERATE)
+            cy.wait(5000)
             //cy.ValidateElementText('//div[@data-id="table1_1"]')
-            //cy.click(elems_IGMainListing.BTN_EXPORT)
+            //cy.Click(elems_IGMainListing.BTN_EXPORT)
         }
 
         /*****************************************************
@@ -180,10 +180,10 @@ class Reports_IG {
             cy.EnterDate(elems_IGMembershipRegistrationListing.TXT_REGISTERDATEFROM, RegisterDateFrom)
             cy.EnterDate(elems_IGMembershipRegistrationListing.TXT_REGISTERDATETO, RegisterDateTo)
                             
-            cy.click(elems_IGMembershipRegistrationListing.BTN_GENERATE)
-            cy.wait(4000)
+            cy.Click(elems_IGMembershipRegistrationListing.BTN_GENERATE)
+            cy.wait(5000)
             //cy.ValidateElementText('//div[@data-id="table1_1"]')
-                //cy.click(elems_IGMainListing.BTN_EXPORT)
+                //cy.Click(elems_IGMainListing.BTN_EXPORT)
         }
 
         /*****************************************************
@@ -197,10 +197,10 @@ class Reports_IG {
             cy.wait(2000)
             cy.ValidateElementText(elems_IGMembershipTerminationListing.LBL_PAGETITLE, expectedPg)
         
-            cy.click(elems_IGMembershipTerminationListing.BTN_GENERATE)
-            cy.wait(4000)
+            cy.Click(elems_IGMembershipTerminationListing.BTN_GENERATE)
+            cy.wait(5000)
             //cy.ValidateElementText('//div[@data-id="table1_1"]')
-            //cy.click(elems_IGMainListing.BTN_EXPORT)
+            //cy.Click(elems_IGMainListing.BTN_EXPORT)
         }
 
         /*****************************************************
@@ -220,10 +220,10 @@ class Reports_IG {
             cy.SelectDropDownItem(elems_IGMembershipTerminationListing.DRP_TERMINATEDBY, terminateBy)
             cy.EnterDate(elems_IGMembershipTerminationListing.TXT_TERMINATIONDATE, terminateDate)
 
-            cy.click(elems_IGMembershipTerminationListing.BTN_GENERATE)
-            cy.wait(4000)
+            cy.Click(elems_IGMembershipTerminationListing.BTN_GENERATE)
+            cy.wait(5000)
             //cy.ValidateElementText('//div[@data-id="table1_1"]')
-            //cy.click(elems_IGMainListing.BTN_EXPORT)
+            //cy.Click(elems_IGMainListing.BTN_EXPORT)
         }
 
         /*****************************************************
@@ -243,10 +243,10 @@ class Reports_IG {
             cy.EnterDate(elems_IGMembershipWaiveristing.TXT_MEMBERSHIPTERMSTART, termstartDate)
             cy.EnterDate(elems_IGMembershipWaiveristing.TXT_MEMBERSHIPTERMEND, termendDate)
         
-            cy.click(elems_IGMembershipWaiveristing.BTN_GENERATE)
-            cy.wait(4000)
+            cy.Click(elems_IGMembershipWaiveristing.BTN_GENERATE)
+            cy.wait(5000)
             //cy.ValidateElementText('//div[@data-id="table1_1"]')
-            //cy.click(elems_IGMainListing.BTN_EXPORT)
+            //cy.Click(elems_IGMainListing.BTN_EXPORT)
         }
 
         /*****************************************************
@@ -260,10 +260,10 @@ class Reports_IG {
         cy.wait(2000)
         cy.ValidateElementText(elems_IGMembershipTerminationListing.LBL_PAGETITLE, expectedPg)
                 
-        cy.click(elems_IGMembershipTerminationListing.BTN_GENERATE)
-        cy.wait(4000)
+        cy.Click(elems_IGMembershipTerminationListing.BTN_GENERATE)
+        cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
-        //cy.click(elems_IGMainListing.BTN_EXPORT)
+        //cy.Click(elems_IGMainListing.BTN_EXPORT)
         }
 
         /*****************************************************
@@ -284,10 +284,10 @@ class Reports_IG {
         cy.EnterDate(elems_IGMembershipListing.TXT_EXPIRY_FROM, expiryFrom)
         cy.EnterDate(elems_IGMembershipListing.TXT_EXPIRY_TO, expiryTo)
                             
-        cy.click(elems_IGMainListing.BTN_GENERATE)
-        cy.wait(4000)
+        cy.Click(elems_IGMainListing.BTN_GENERATE)
+        cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
-        //cy.click(elems_IGMainListing.BTN_EXPORT)
+        //cy.Click(elems_IGMainListing.BTN_EXPORT)
         }
 
         

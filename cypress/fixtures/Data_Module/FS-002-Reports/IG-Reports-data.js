@@ -34,7 +34,7 @@ const data = {
     EXPECTEDPG_MEMBERLISTING_ADDRESS: 'Report Viewer - ReportIG.MembershipListingAddress',
 
     //IG Member listing Email
-    EXPECTEDPG_MEMBERLISTING_EMAIL: '/report?reportId=ReportIG.MembershipListingEmail',
+    EXPECTEDPG_MEMBERLISTING_EMAIL: 'Report Viewer - ReportIG.MembershipListingEmail',
 
     //IG Membership Registration
     EXPECTEDPG_REGISTRATION: 'Report Viewer - ReportIG.MembershipRegistrationListing',
@@ -43,7 +43,7 @@ const data = {
     EXPECTEDPG_TERMINATION_SUMMARY: 'Report Viewer - ReportIG.MembershipTerminationSummaryListing',
 
     //IG Deferment Summary
-    EXPECTEDPG_DEFERMENT_SUMMARY: 'Report Viewer - ReportIG.MembershipTerminationSummaryListing',
+    EXPECTEDPG_DEFERMENT_SUMMARY: 'Report Viewer - ReportIG.MembershipDefermentSummaryListing',
 
     //IG Termination Listing
     EXPECTEDPG_TERMINATION: 'Report Viewer - ReportIG.MembershipTerminationSummaryListing',

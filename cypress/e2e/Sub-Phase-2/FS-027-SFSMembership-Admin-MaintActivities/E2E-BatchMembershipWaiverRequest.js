@@ -130,7 +130,7 @@ describe('Batch Membership Waiver Request management',function(){
                 MemberCategory: data.memberregistrationprincipal.Personal_Info.MemberCategory,
                 NameOnNRIC: PrincipalName,
                 NameOnCard: PrincipalName,
-                Nric: CustomerNRICFull,
+                Nric: CustomerNRICFull1,
                 Gender: data.memberregistrationprincipal.Personal_Info.Gender,
                 DateofBirth: data.memberregistrationprincipal.Personal_Info.DateofBirth,
                 Age: data.memberregistrationprincipal.Personal_Info.Age,

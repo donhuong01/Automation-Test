@@ -88,10 +88,10 @@ describe("IG Reports Verification",function(){
         )
     })
 
-    it('Checking functionallity and Verification on IG Deferment Summary', function(){
+    it('Checking functionallity and Verification on IG Termination Summary', function(){
         IG_Reports.verifyIGTerminationSummary
         (
-            data.EXPECTEDPG_DEFERMENT_SUMMARY     
+            data.EXPECTEDPG_TERMINATION_SUMMARY     
         )
     })
 
