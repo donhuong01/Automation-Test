@@ -1,6 +1,6 @@
 //Paying Listing, Paying Email, Paying Mobile
 
-class E1MembershipPayingListingReport {
+class elems_E1MembershipPayingListingReport {
 
     static PCK_ENERGYONEMAIN = '//label[text()="Energy One Main"]//following-sibling::div//button'
     static PCK_ENERGYONE = '//label[text()="Energy One"]//following-sibling::div//button'
@@ -14,4 +14,4 @@ class E1MembershipPayingListingReport {
     static LBL_PAGE = '//h2'
 }
 
-export default E1MembershipPayingListingReport
+export default elems_E1MembershipPayingListingReport

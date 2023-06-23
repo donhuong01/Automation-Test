@@ -1,5 +1,5 @@
 const data = {
-    Name: 'E1-Test-Auto',
+    Name: 'E1-Test-Auto-2',
     Code: 'ETA',
     IGMain: 'MOVIEMAX',
     SubcategoryType: 'E1 Silver',
@@ -26,6 +26,6 @@ const data = {
     TransactionType: 'Reinstatement',
     CalculationType: 'Per Term',
     AmountType: 'Fixed Value',
-    ProductName: 'IG Prod 0001',
+    ProductName: 'IG Prod 001',
 }
 export default data

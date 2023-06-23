@@ -71,7 +71,7 @@ describe('[TS06] Life Membership Management',function(){
             });
         
             CustomerCreation.fillOutContactInformation({
-                handPhone: '6323016',
+                handPhone: '63230126',
                 emailAddress: PrincipalEmail,
                 emergencyContact: Customerdata.CustomerCreationPrincipal.ContactInformation.emergencyContact,
                 homeNumber: Customerdata.CustomerCreationPrincipal.ContactInformation.homeNumber,

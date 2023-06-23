@@ -1,4 +1,4 @@
-class E1MembershipRegistrationListingReport {
+class elems_E1MembershipRegistrationListingReport {
     static PCK_ENERGYONEMAIN = '//label[text()="Energy One Main"]//following-sibling::div//button'
     static PCK_ENERGYONE = '//label[text()="Energy One"]//following-sibling::div//button'
     static TXT_REGISTRATIONDATEFROM = '//input[@id="dtRegistrationDateFrom"]'
@@ -11,4 +11,4 @@ class E1MembershipRegistrationListingReport {
     static LBL_PAGE = '//h2'
 }
 
-export default E1MembershipRegistrationListingReport
+export default elems_E1MembershipRegistrationListingReport

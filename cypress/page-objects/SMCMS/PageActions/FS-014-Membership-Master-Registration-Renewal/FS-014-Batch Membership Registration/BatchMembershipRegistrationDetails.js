@@ -335,7 +335,7 @@ class BatchMembershipRegistrationDetail {
         }
         // VerifyDate of Birth
         if (DateofBirth !== undefined) {
-            cy.SelectDate('//input[@id="dtpDateOfBirth"]', DateofBirth)
+            cy.EnterDate('//input[@id="dtpDateOfBirth"]', DateofBirth)
 
         }
         // Verify Age
@@ -477,7 +477,7 @@ class BatchMembershipRegistrationDetail {
         }
         // VerifyDate of Birth
         if (DateofBirth !== undefined) {
-             cy.SelectDate(elems_MemberRegistrationPrincipal.PERSONALINFORMATION.DATE_DATEOFBIRTH, DateofBirth)
+             cy.EnterDate(elems_MemberRegistrationPrincipal.PERSONALINFORMATION.DATE_DATEOFBIRTH, DateofBirth)
         }
 
         // Verify NS Status

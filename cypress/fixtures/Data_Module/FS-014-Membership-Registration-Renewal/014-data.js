@@ -16,11 +16,11 @@ const data = {
     },
     checkin_email: {
         type: 'EMAIL',
-        value1: 'AutotestS1435B@test.com',
+        value1: 'AutotestS1435B@test.com', //A300002657
     },
     checkin_mobile: {
         type: 'MOBILENUMBER',
-        value1: '5434343',
+        value1: '2525-2626',
         value2: 'A300002657'
     },
     checkin_scancard: {
@@ -185,7 +185,7 @@ const data = {
         ContactInfo: {
             Handphone: '87126534',
             EmailAddress: 'auto' + Math.floor(Math.random() * 10000 * 50) + '@test.com',
-            HomeNumber: '123477',
+            HomeNumber: '12347722',
             EmergencyContact: '+65 658 5894',
             //Preferred COntact Mode
             SelectAll: 'check',
@@ -885,7 +885,7 @@ const data = {
             handPhone: '+65 658 5896',
             emailAddress: 'testuser',
             emergencyContact: "+65 658 5893",
-            homeNumber: "102",
+            homeNumber: "10234567",
 
             preferredContactModeSelectAll: 'check',
             preferredContactModeEmail: 'uncheck',

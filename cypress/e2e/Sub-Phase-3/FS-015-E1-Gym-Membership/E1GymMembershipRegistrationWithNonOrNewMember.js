@@ -28,7 +28,7 @@ Data.forEach(each => {
     describe('FS-015 E1 GYM Membership Registration', function () {
         const Gender = 'Male'
         const CustomerName = 'Customer-' + Math.floor(Math.random() * 124453)
-        const DOB = '12-Jan-1980'
+        const DOB = '12-Aug-1980'
 
         it('E1 GYM Member Registration for Non-Existing or New SAFRA member', function () {
 

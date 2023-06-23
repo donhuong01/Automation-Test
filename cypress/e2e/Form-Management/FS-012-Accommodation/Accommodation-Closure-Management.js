@@ -105,7 +105,7 @@ describe('FS-012 Accommodation Closure Management', function () {
 
 
     })
-    it.only('Creating and Submit for Approval a Accommodation Closure', function () {
+    it('Creating and Submit for Approval a Accommodation Closure', function () {
 
         // Creating Accomodation for Closing
 

@@ -1,10 +1,9 @@
-// E1 Member Listing Mobile Report, E1 Member Registration Mobile
+class elems_E1MembershipRenewalListingMobile {
 
-class elems_E1MembershipListingRegistrationMobileReport {
     static PCK_ENERGYONEMAIN = '//label[text()="Energy One Main"]//following-sibling::div//button'
     static PCK_ENERGYONE = '//label[text()="Energy One"]//following-sibling::div//button'
-    static TXT_REGISTRATIONDATEFROM = '//input[@id="dtEnergyOneDateFrom"]'
-    static TXT_REGISTRATIONDATETO = '//input[@id="dtEnergyOneDateTo"]'
+    static TXT_RENEWALLISTINGDATEFROM = '//input[@id="dtEnergyOneDateFrom"]'
+    static TXT_RENEWALLISTINGDATETO = '//input[@id="dtEnergyOneDateTo"]'
     static BTN_GENERATE = '//button[text()="Generate"]'
     static BTN_EXPORT = '//button[text()="Export"]'
     static BTN_SEARCHFILTER = '//button[text()="Search Filters"]'
@@ -13,4 +12,4 @@ class elems_E1MembershipListingRegistrationMobileReport {
     static LBL_PAGE = '//h2'
 }
 
-export default elems_E1MembershipListingRegistrationMobileReport
+export default elems_E1MembershipRenewalListingMobile

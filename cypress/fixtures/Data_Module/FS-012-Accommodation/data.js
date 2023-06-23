@@ -34,6 +34,7 @@ const data = {
         NonPeakMaximumSlotHour: '4',
         EnableSlotNo: 'CHECK',
         MaxNoOFAccommodation: '5',
+        AReservationCanBeHoldBy: '2',
         AllowReservation: 'CHECK',
         SendNotification: 'CHECK',
         PermitTemplateCode: 'Accommodation Permit Template',

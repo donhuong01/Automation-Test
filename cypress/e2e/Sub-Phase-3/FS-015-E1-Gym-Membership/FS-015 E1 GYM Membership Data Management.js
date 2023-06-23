@@ -11,17 +11,17 @@ const E1GYMMembershipDataManagement = (E1MembershipID, SAFRAMemberID) => {
 describe('[TS01] FS-015 E1 GYM Membership Data Management ', function () {
 
     it('[TC01] Filter with E1 Gym Membership ID', function () {
-
+        cy.visit('/membership/e1GymMembershipList')
         E1GymMembershipListing.FilterE1GymMembershipID(E1MembershipID)
 
     })
     it('[TC02] Filter with SAFRA Membership ID', function () {
-
+        cy.visit('/membership/e1GymMembershipList')
         E1GymMembershipListing.FilterSAFRAMembershipID(SAFRAMemberID)
 
     })
     it('[TC03] Filter with Customer Name', function () {
-
+        cy.visit('/membership/e1GymMembershipList')
         E1GymMembershipListing.FiterWithCustomerName('Jack Frost')
 
     })

@@ -1,6 +1,7 @@
 //Listing Address, Listing, Listing Email
 
-class E1MembershipListingReport {
+class elems_E1MembershipListingReport {
+    
     static PCK_ENERGYONEMAIN = '//label[text()="Energy One Main"]//following-sibling::div//button'
     static PCK_ENERGYONE = '//label[text()="Energy One"]//following-sibling::div//button'
     static TXT_INITIAL_JOIN = '//label[text()="Initial Join Date"]//following-sibling::div//input'
@@ -14,4 +15,4 @@ class E1MembershipListingReport {
     static LBL_PAGE = '//h2'
 }
 
-export default E1MembershipListingReport
+export default elems_E1MembershipListingReport

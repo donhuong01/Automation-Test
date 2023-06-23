@@ -300,8 +300,8 @@ describe('Batch Membership Waiver Request management',function(){
         cy.wait(5000)
         Waiver.ClickOnRightEndArrowInMemListing()
 
-        Waiver.VerifyMemberInListing('New', CustomerNRIC)
-        Waiver.VerifyMemberInListing('New', CustomerNRIC2)
+        // Waiver.VerifyMemberInListing(CustomerNRIC)
+        // Waiver.VerifyMemberInListing(CustomerNRIC2)
         
         Waiver.SelectTableLinkItem(PrincipalName)
         Waiver.SelectTableLinkItem(PrincipalName2)

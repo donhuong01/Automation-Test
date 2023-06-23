@@ -178,12 +178,13 @@ class AccommodationTypeDetail {
      * @param {string} AllowReservation
      * @param {string} SendNotification
      *****************************************************/
-    FillOutSlotConfiguration(EnableSlotNo, MaxNoOFAccommodation, AllowReservation, SendNotification) {
+    FillOutSlotConfiguration(EnableSlotNo, MaxNoOFAccommodation, AReservationCanBeHold /*AllowReservation, SendNotification*/) {
 
         cy.TickCheckBox(elems_AccommodationTypeDetail.CHK_ENABLESLOTNUMBER, EnableSlotNo)
-        cy.Click(elems_AccommodationTypeDetail.TXT_MAXNOOFACCOMODATION, MaxNoOFAccommodation)
-        cy.TickCheckBox(elems_AccommodationTypeDetail.CHK_ALLOWRESERVATION, AllowReservation)
-        cy.TickCheckBox(elems_AccommodationTypeDetail.CHK_SENDNOTIFICATIONWHENRESERVATIONEXPIRED, SendNotification)
+        cy.EnterText(elems_AccommodationTypeDetail.TXT_MAXNOOFACCOMODATION, MaxNoOFAccommodation)
+        cy.EnterText(elems_AccommodationTypeDetail.TXT_ARESERVATIONCANBEHOLD, AReservationCanBeHold)
+        // cy.TickCheckBox(elems_AccommodationTypeDetail.CHK_ALLOWRESERVATION, AllowReservation)
+        // cy.TickCheckBox(elems_AccommodationTypeDetail.CHK_SENDNOTIFICATIONWHENRESERVATIONEXPIRED, SendNotification)
 
     }
 

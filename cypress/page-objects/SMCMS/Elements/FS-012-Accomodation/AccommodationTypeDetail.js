@@ -58,6 +58,7 @@ class elems_AccommodationTypeDetail {
     }
     static CHK_ENABLESLOTNUMBER = '//input[@id="chkEnableSlotRestriction"]'
     static TXT_MAXNOOFACCOMODATION = '//input[@id="txtCustomerBookAtMost"]'
+    static TXT_ARESERVATIONCANBEHOLD = '//input[@id="txtMaxDaysToHoldReservation"]'
     static CHK_ALLOWRESERVATION = '//input[@id="chkAllowReservation"]'
     static CHK_SENDNOTIFICATIONWHENRESERVATIONEXPIRED = '//input[@id="chkSendNotification"]'
     static DRP_PERMITTEMPLTECODE = '//span[@id="drpPermitTemplateCode"]'

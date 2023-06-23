@@ -17,7 +17,7 @@ beforeEach(() => {
 const common = new Common()
 
 const { AccTypeName, LifeStyleGroup, FABSGroup, ClubClassification, SMCClassification, AccessMode, CustomerCateName, CustomerCateg,
-    EnableHorizone, NewBookingStartDate, ButWithinMonth, ButWithinDays, CustomerAllowdMonth, CustomerAllowdDays, EnableSlotNo, MaxNoOFAccommodation,
+    EnableHorizone, NewBookingStartDate, ButWithinMonth, ButWithinDays, CustomerAllowdMonth, CustomerAllowdDays, EnableSlotNo, MaxNoOFAccommodation, AReservationCanBeHoldBy,
     AllowReservation, SendNotification, PermitTemplateCode, AuthorisationPermit, CalendarName,OperatingPeriodName, ChargeRateName, StartDate, location, EndDate,
     TransactionType, CalculationType, AmountType, BookingAdminFeeProduct, ReservationAdminFeeProduct, CancellationAdminFeeProduct } = data.AccommodationType
 
@@ -44,7 +44,7 @@ describe('FS-012 Accommodation Type Management', function () {
         AccommodationTypeDetail.FilloutHorizon(AccessMode, CustomerCateg, EnableHorizone, NewBookingStartDate,
             ButWithinMonth, ButWithinDays, CustomerAllowdMonth, CustomerAllowdDays)
 
-        AccommodationTypeDetail.FillOutSlotConfiguration(EnableSlotNo, MaxNoOFAccommodation, AllowReservation, SendNotification)
+        AccommodationTypeDetail.FillOutSlotConfiguration(EnableSlotNo, MaxNoOFAccommodation, AReservationCanBeHoldBy /*AllowReservation, SendNotification*/)
 
         AccommodationTypeDetail.FillOutSlotDocuments(PermitTemplateCode, AuthorisationPermit)
 
