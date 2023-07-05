@@ -9,7 +9,7 @@ const data = {
         AccoBookingNotificationBeforeStart: '1'
     },
     AccomodationSettingOperatingPeriod: {
-        OperatingPeriodName: 'Auto-test' + Math.floor(Math.random() * 10),
+        OperatingPeriodName: 'Auto-test' + Math.floor(Math.random() * 12340),
     },
     AccommodationType: {
         AccTypeName: 'Auto-Accomodation' + Math.floor(Math.random() * 100),

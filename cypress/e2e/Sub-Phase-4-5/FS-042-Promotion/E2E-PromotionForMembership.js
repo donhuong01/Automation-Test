@@ -63,6 +63,8 @@ Promodata.forEach(each => {
 
             // PromotionListing.ClickTableLink()
 
+            cy.wait(4000)
+
             //Promotion Type Tab
             PromotionDetail.ClickOnTab('Promotion Type') //pass the text of the related button 
 

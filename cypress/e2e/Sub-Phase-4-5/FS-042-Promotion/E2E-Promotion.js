@@ -45,6 +45,8 @@ data.forEach(data => {
 
             // PromotionListing.ClickTableLink()
 
+            cy.wait(4000)
+
             //Promotion Type Tab
             PromotionDetail.ClickOnTab('Promotion Type') //pass the text of the related button 
 
@@ -52,11 +54,11 @@ data.forEach(data => {
 
             PromotionDetail.SaveAsDraft()
 
-            PromotionListing.FilterByPromotionName(PromotionTitle)
+            // PromotionListing.FilterByPromotionName(PromotionTitle)
 
-            PromotionListing.ClickSearchFilter()
+            // PromotionListing.ClickSearchFilter()
 
-            PromotionListing.ClickTableLink()
+            // PromotionListing.ClickTableLink()
 
             //Benifit Item Tab
             PromotionDetail.ClickOnTab('Benefit Item')
@@ -65,11 +67,11 @@ data.forEach(data => {
 
             PromotionDetail.SaveAsDraft()
 
-            PromotionListing.FilterByPromotionName(PromotionTitle)
+            // PromotionListing.FilterByPromotionName(PromotionTitle)
 
-            PromotionListing.ClickSearchFilter()
+            // PromotionListing.ClickSearchFilter()
 
-            PromotionListing.ClickTableLink()
+            // PromotionListing.ClickTableLink()
 
             //Promotion Criteria
             PromotionDetail.ClickOnTab('Promotion Criteria')

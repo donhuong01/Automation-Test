@@ -7,6 +7,8 @@ import SMCMSUser from '../Sub-Phase-1/FS-001-Admin-SystemLogin/E2E-SMCMSUser'
 
 //FS - 002 Reports
 import IG_Report from '../Sub-Phase-4-5/FS-002-Reports/InterestGroup-Reports/E2E-InterestGroup-Report'
+import E1_Reports from '../Sub-Phase-4-5/FS-002-Reports/EnergyOne-Reports/E2E-EnergyOne-Report'
+import Accommodation_Reports from '../Sub-Phase-4-5/FS-002-Reports/Accommodation-Reports/E2E-Accommodation-Reports'
 
 //FS - 004 Admin Settings
 import ApplicationSetting from '../Sub-Phase-1/FS-004-Admin-Settings/E2E-ApplicationSettings'
@@ -201,14 +203,15 @@ beforeEach(() => {
 //  describe('E2E Auto Testing:FS-002 Reports', () => {
 
 //     IG_Report()
-
+//     E1_Reports()
+//     Accommodation_Reports()
 //  })
 
 
 // describe('E2E Auto Testing:FS-004 Admin: Settings', () => {
 
 //     CustomerCategoryType()
-//     CustomerCategory()
+    CustomerCategory()
 //     CodeType()
 //     CodeSetMaster()
 //     DocumentTemplate()
@@ -225,23 +228,23 @@ beforeEach(() => {
     // FacilitySettingCalendarSettings()
     // FacilityOperatingPeriod()
     // FacilityTypeDetailFormManagement(E2EData.CALENDAR_NAME, E2EData.PERIODOFCALENDAR, E2EData.OPERATING_PERIOD_NAME) 
-    //FacilitySetupDetail() 
+    // FacilitySetupDetail() 
     // FacilityBookingManagement("S6690184Z")
     // FacilityBookingAmendmentManagment()
     //  FacilityBookingExtentionManagment() // Needs an update in Facility for extension setting
     //  FacilityBookingCancellationManagment() // Needs own page action
     //   FacilityGroupBooking(E2EData.FACILITY_GROUP_BOOKING.SAFRA_MEMBER, E2EData.FACILITY_GROUP_BOOKING.SAFRA_RELATED_MEMBER,
     //       E2EData.FACILITY_GROUP_BOOKING.SAFRA_GUEST) //Pass Active Safra Member ID - 1.Safra Member 2. SAFRARelatedMemberships 3. Guest Member
-//        FacilityGroupBookingBallot("A300002855", "A300003031") // Recheck again tomorrow morning
+        // FacilityGroupBookingBallot("A300002855", "A300003031") // Recheck again tomorrow morning
 //   })
 
 
 // describe('E2E Auto Testing:FS-012 Accommodation', ()=> {
 
-    // AccommodatiomSettingGeneral()
-   // AccommodationSettingOperatingPeriod()
-   // AccommodationTypeManagement() 
-   // AccommodationSetupManagement()
+//     // AccommodatiomSettingGeneral()
+//    AccommodationSettingOperatingPeriod()
+//    AccommodationTypeManagement() 
+//    AccommodationSetupManagement()
    // AccommodationClosureManagement() // Need to add accommodation on page action
    // AccommodatiomBookingManagement(E2EData.ACCOMMODATION_BOOKING_MANAGEMENT.SAFRA_MEMBERID, E2EData.ACCOMMODATION_BOOKING_MANAGEMENT.GEUSTID) //Pass SAFRA MemberID and Guest ID
     //AccommodatiomReservationManagement(E2EData.ACCOMMODATION_RESERVATION_MANAGEMENT.SAFRA_MEMBERID) //Pass SAFRA MemberID

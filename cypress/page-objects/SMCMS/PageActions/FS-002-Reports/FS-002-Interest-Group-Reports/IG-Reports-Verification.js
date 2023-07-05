@@ -256,7 +256,7 @@ class Reports_IG {
         *****************************************************/
         verifyIGRenewalConfirmation(expectedPg){
 
-        cy.visit('https://qa-smcms.safra.sg/report?reportId=ReportIG.RenewalConfirmation')
+        cy.visit('/report?reportId=ReportIG.RenewalConfirmation')
         cy.wait(2000)
         cy.ValidateElementText(elems_IGMembershipTerminationListing.LBL_PAGETITLE, expectedPg)
                 
@@ -273,7 +273,7 @@ class Reports_IG {
         *****************************************************/
         verifyIGRegistrationorRenewal(expectedPg, iGMain, iG, initialJoin, expiryFrom, expiryTo){
         
-        cy.visit('https://qa-smcms.safra.sg/report?reportId=ReportIG.MembershipRegistrationOrRenewalListing')
+        cy.visit('/report?reportId=ReportIG.MembershipRegistrationOrRenewalListing')
         cy.wait(2000)
         cy.ValidateElementText(elems_IGMembershipListing.LBL_PAGETITLE, expectedPg)
                             
