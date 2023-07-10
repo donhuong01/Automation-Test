@@ -7,62 +7,163 @@ const data = {
 
     table: '//div[@data-id="table1_1"]',
     
+
     //IG Main Data
-    IGMAIN: 'Badminton Social Group',
-    IG: 'BITEZ',
-    IGMAINNUMBER: 'IGM-260922-000037',
-    EXPECTEDPG_IGMAIN: 'Report Viewer - ReportIG.InterestGroupMainListing',
+    IG_MAIN:{
+        IGMAIN: 'Badminton Social Group',
+        IG: 'BITEZ',
+        IGMAINNUMBER: 'IGM-260922-000037',
+        EXPECTEDPG_IGMAIN: 'Report Viewer - ReportIG.InterestGroupMainListing',
+    },
+
 
     //IG Deactivation Data
-    DEACTIVATEDATE: '25-May-2023',
-    EXPECTEDPG_DEACTIVATION: 'Report Viewer - ReportIG.MembershipDeactivationListing',
+    IG_DEACTIVATE:{
+        IGMAIN: 'Badminton Social Group',
+        IG: 'BITEZ',
+        DEACTIVATEDATE: '25-May-2023',
+        EXPECTEDPG_DEACTIVATION: 'Report Viewer - ReportIG.MembershipDeactivationListing',
+    },
+
 
     //IG Deferment Summary
-    EXPECTEDPG_DEFERMENT_SUMMARY: 'Report Viewer - ReportIG.MembershipDefermentSummaryListing',
+    IG_DEFER_SUMMARY:{
+        EXPECTEDPG_DEFERMENT_SUMMARY: 'Report Viewer - ReportIG.MembershipDefermentSummaryListing',
+    },
+
 
     //IG Renewal listing
-    EXPECTEDPG_RENEWAL: 'Report Viewer - ReportIG.MembershipRenewalListing',
-    RENEWAL_FROM: '01-Dec-2022',
-    RENEWAL_TO: '01-Dec-2026',
+    IG_RENEWAL:{
+        IGMAIN: 'Badminton Social Group',
+        IG: 'BITEZ',
+        EXPECTEDPG_RENEWAL: 'Report Viewer - ReportIG.MembershipRenewalListing',
+        RENEWAL_FROM: '01-Dec-2022',
+        RENEWAL_TO: '01-Dec-2026',
+    },
+
 
     //IG Member Listing
-    EXPECTEDPG_MEMBERLISTING: 'Report Viewer - ReportIG.MembershipListing',
-    INITIAL_DATE:'01-Jan-2020',
-    EXPIRY_DATE: '29-Dec-2026',
+    IG_MEM_LIST:{
+        IGMAIN: 'Badminton Social Group',
+        IG: 'BITEZ',
+        EXPECTEDPG_MEMBERLISTING: 'Report Viewer - ReportIG.MembershipListing',
+        INITIAL_DATE:'01-Jan-2020',
+        EXPIRY_DATE: '29-Dec-2026',
+    },
+    
 
     //IG Member Listing Address
-    EXPECTEDPG_MEMBERLISTING_ADDRESS: 'Report Viewer - ReportIG.MembershipListingAddress',
+    IG_MEM_LIST_ADD:{
+        IGMAIN: 'Badminton Social Group',
+        IG: 'BITEZ',
+        EXPECTEDPG_MEMBERLISTING_ADDRESS: 'Report Viewer - ReportIG.MembershipListingAddress',
+        INITIAL_DATE:'01-Jan-2020',
+        EXPIRY_DATE: '29-Dec-2026',
+    },
+    
 
     //IG Member listing Email
-    EXPECTEDPG_MEMBERLISTING_EMAIL: 'Report Viewer - ReportIG.MembershipListingEmail',
+    IG_MEM_LIST_EMAIL:{
+        IGMAIN: 'Badminton Social Group',
+        IG: 'BITEZ',
+        EXPECTEDPG_MEMBERLISTING_EMAIL: 'Report Viewer - ReportIG.MembershipListingEmail',
+        INITIAL_DATE:'01-Jan-2020',
+        EXPIRY_DATE: '29-Dec-2026',
+    },
+
+    //IG Member listing Mobile
+    IG_MEM_LIST_MOBILE:{
+        IGMAIN: 'Badminton Social Group',
+        IG: 'BITEZ',
+        EXPECTEDPG: 'Report Viewer - ReportIG.MembershipListingEmail',
+        INITIAL_DATE:'01-Jan-2020',
+        EXPIRY_FROM: '01-Dec-2020',
+        EXPIRY_TO: '30-Dec-2030'
+    },
 
     //IG Membership Registration
-    EXPECTEDPG_REGISTRATION: 'Report Viewer - ReportIG.MembershipRegistrationListing',
+    IG_REGISTRATION:{
+        IGMAIN: 'Badminton Social Group',
+        IG: 'BITEZ',
+        EXPECTEDPG_REGISTRATION: 'Report Viewer - ReportIG.MembershipRegistrationListing',
+        REG_FROM:'01-Jan-2020',
+        REG_TOL:'29-Dec-2026',
+    },
+
 
     //IG Termination Summary
-    EXPECTEDPG_TERMINATION_SUMMARY: 'Report Viewer - ReportIG.MembershipTerminationSummaryListing',
+    IG_TERMI_SUMAMRY:{
+        EXPECTEDPG_TERMINATION_SUMMARY: 'Report Viewer - ReportIG.MembershipTerminationSummaryListing',
+    },
+
 
     //IG Deferment Summary
-    EXPECTEDPG_DEFERMENT_SUMMARY: 'Report Viewer - ReportIG.MembershipDefermentSummaryListing',
+    IG_DEFER_SUMAMRY:{
+        EXPECTEDPG_DEFERMENT_SUMMARY: 'Report Viewer - ReportIG.MembershipDefermentSummaryListing',
+    },
+
 
     //IG Termination Listing
-    EXPECTEDPG_TERMINATION: 'Report Viewer - ReportIG.MembershipTerminationSummaryListing',
-    TERMINATED_BY: '01-Jan-2020',
-    TERMINATED_DATE: '29-Dec-2026',
+    IG_TERMINATION: {
+        IGMAIN: 'Badminton Social Group',
+        IG: 'BITEZ',
+        EXPECTEDPG_TERMINATION: 'Report Viewer - ReportIG.MembershipTerminationSummaryListing',
+        TERMINATED_BY: 'Customer',
+        TERMINATED_DATE: '29-Dec-2026',
+    },
+
 
     //IG Waiver Listing
-    EXPECTEDPG_WAIVER: 'Report Viewer - ReportIG.MembershipWaiverListing',
-    TERM_START_DATE: '01-Jan-2020',
-    TERM_END_DATE: '29-Dec-2026',
+    IG_WAIVER:{
+        IGMAIN: 'Badminton Social Group',
+        IG: 'BITEZ',
+        EXPECTEDPG_WAIVER: 'Report Viewer - ReportIG.MembershipWaiverListing',
+        TERM_START_DATE: '01-Jan-2020',
+        TERM_END_DATE: '29-Dec-2026',
+    },
+    
 
-    //IG Renewal Summary
-    EXPECTEDPG_RENEWAL_SUMMARY: 'Report Viewer - ReportIG.RenewalConfirmation',
+    //IG Renewal Confirmation
+    IG_RENEWAL_CONFIRM:{
+        EXPECTEDPG_RENEWAL_SUMMARY: 'Report Viewer - ReportIG.RenewalConfirmation',
+    },
 
     //IG Member Listing
-    EXPECTEDPG_REGISTRATIONORRENEWAL: 'Report Viewer - ReportIG.MembershipRegistrationOrRenewalListing',
-    INITIAL_DATE:'01-Jan-2020',
-    EXPIRY_FROM: '29-Dec-2020',
-    EXPIRY_TO: '29-Dec-2026',
+    IG_RENEW_REGIS:{
+        IGMAIN: 'Badminton Social Group',
+        IG: 'BITEZ',
+        EXPECTEDPG_REGISTRATIONORRENEWAL: 'Report Viewer - ReportIG.MembershipRegistrationOrRenewalListing',
+        EXPIRY_FROM: '29-Dec-2020',
+        EXPIRY_TO: '29-Dec-2026',
+    },
+    
+    //IG MOVIEMAX Confirmation
+    IG_MOVIEMAX:{
+        EXPECTEDPG_MOVIEMAX: 'Report Viewer - ReportIG.MovieMaxPromotion',
+    },
+
+    //IG Membership Registration Listing Receipt Date
+    IG_REG_RECEIPT_DATE: {
+        IGMAIN: 'Badminton Social Group',
+        IG: 'BITEZ',
+        EXPECTEDPG: 'Report Viewer - ReportIG.MembershipRegistrationByReceiptDate',
+        START_DATE: '29-Dec-2020',
+        END_DATE: '29-Dec-2026',
+    },
+
+    //IG Membership Interest Group Listing
+    IG_MEM_INTEREST_GROUP: {
+        IG: 'BITEZ',
+        CUSTOM_CATEG: 'All Customer Category',
+        EXPECTEDPG: 'Report Viewer - ReportIG.MembershipInterestGroupListing',
+        BUSINESS_TYPE: 'Normal',
+        STATUS: 'Approved',
+        PUBLISHING_DATE: '29-Dec-2020',
+        END_DATE: '29-Dec-2026',
+    },
+
+
+
 
 
 }

@@ -202,7 +202,7 @@ beforeEach(() => {
 
 //  describe('E2E Auto Testing:FS-002 Reports', () => {
 
-//     IG_Report()
+     IG_Report()
 //     E1_Reports()
 //     Accommodation_Reports()
 //  })
@@ -211,7 +211,7 @@ beforeEach(() => {
 // describe('E2E Auto Testing:FS-004 Admin: Settings', () => {
 
 //     CustomerCategoryType()
-    CustomerCategory()
+//    CustomerCategory()
 //     CodeType()
 //     CodeSetMaster()
 //     DocumentTemplate()

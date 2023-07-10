@@ -10,123 +10,177 @@ describe("IG Reports Verification",function(){
     it('Checking functionallity and Verification on IG Main Listing', function(){
         IG_Reports.verifyIGMainReports
         (
-           data.EXPECTEDPG_IGMAIN, 
-           data.IGMAIN, 
-           data.IGMAINNUMBER
+           data.IG_MAIN.EXPECTEDPG_IGMAIN, 
+           data.IG_MAIN.IGMAIN, 
+           data.IG_MAIN.IGMAINNUMBER
         )
     })
 
     it('Checking functionallity and Verification on IG Deactivation Listing', function(){
         IG_Reports.verifyIGDeactivationReports
         (
-            data.EXPECTEDPG_DEACTIVATION, 
-            data.IGMAIN, 
-            data.IG,
-            data.DEACTIVATEDATE
+            data.IG_DEACTIVATE.EXPECTEDPG_DEACTIVATION, 
+            data.IG_DEACTIVATE.IGMAIN, 
+            data.IG_DEACTIVATE.IG,
+            data.IG_DEACTIVATE.DEACTIVATEDATE
         )
     })
 
     it('Checking functionallity and Verification on IG Deferment Summary', function(){
         IG_Reports.verifyIGDefermentSummary
         (
-            data.EXPECTEDPG_DEFERMENT_SUMMARY,     
+            data.IG_DEFER_SUMMARY.EXPECTEDPG_DEFERMENT_SUMMARY,     
         )
     })
 
     it('Checking functionallity and Verification on IG Renewal Listing', function(){
         IG_Reports.verifyIGRenewalListing
         (
-            data.EXPECTEDPG_RENEWAL, 
-            data.IGMAIN, 
-            data.IG,
-            data.RENEWAL_FROM,
-            data.RENEWAL_TO
+            data.IG_RENEWAL.EXPECTEDPG_RENEWAL, 
+            data.IG_RENEWAL.IGMAIN, 
+            data.IG_RENEWAL.IG,
+            data.IG_RENEWAL.RENEWAL_FROM,
+            data.IG_RENEWAL.RENEWAL_TO
         )
     })
 
     it('Checking functionallity and Verification on IG Membership Listing', function(){
         IG_Reports.verifyIGmemberListing
         (
-            data.EXPECTEDPG_MEMBERLISTING, 
-            data.IGMAIN, 
-            data.IG,
-            data.INITIAL_DATE,
-            data.EXPIRY_DATE
+            data.IG_MEM_LIST.EXPECTEDPG_MEMBERLISTING, 
+            data.IG_MEM_LIST.IGMAIN, 
+            data.IG_MEM_LIST.IG,
+            data.IG_MEM_LIST.INITIAL_DATE,
+            data.IG_MEM_LIST.EXPIRY_DATE
         )
     })
 
     it('Checking functionallity and Verification on IG Membership Listing Address', function(){
         IG_Reports.verifyIGmemberListingAddress
         (
-            data.EXPECTEDPG_MEMBERLISTING_ADDRESS, 
-            data.IGMAIN, 
-            data.IG,
-            data.INITIAL_DATE,
-            data.EXPIRY_DATE
+            data.IG_MEM_LIST_ADD.EXPECTEDPG_MEMBERLISTING_ADDRESS, 
+            data.IG_MEM_LIST_ADD.IGMAIN, 
+            data.IG_MEM_LIST_ADD.IG,
+            data.IG_MEM_LIST_ADD.INITIAL_DATE,
+            data.IG_MEM_LIST_ADD.EXPIRY_DATE
         )
     })
 
     it('Checking functionallity and Verification on IG Membership Listing Email', function(){
         IG_Reports.verifyIGmemberListingEmail
         (
-            data.EXPECTEDPG_MEMBERLISTING_EMAIL, 
-            data.IGMAIN, 
-            data.IG,
-            data.INITIAL_DATE,
-            data.EXPIRY_DATE
+            data.IG_MEM_LIST_EMAIL.EXPECTEDPG_MEMBERLISTING_EMAIL, 
+            data.IG_MEM_LIST_EMAIL.IGMAIN, 
+            data.IG_MEM_LIST_EMAIL.IG,
+            data.IG_MEM_LIST_EMAIL.INITIAL_DATE,
+            data.IG_MEM_LIST_EMAIL.EXPIRY_DATE
+        )
+    })
+
+    it('Checking functionallity and Verification on IG Membership Listing Mobile', function(){
+        IG_Reports.verifyIGmemberListingMobile
+        (
+            data.IG_MEM_LIST_MOBILE.EXPECTEDPG, 
+            data.IG_MEM_LIST_MOBILE.IGMAIN, 
+            data.IG_MEM_LIST_MOBILE.IG,
+            data.IG_MEM_LIST_MOBILE.INITIAL_DATE,
+            data.IG_MEM_LIST_MOBILE.EXPIRY_FROM,
+            data.IG_MEM_LIST_MOBILE.EXPIRY_TO
         )
     })
 
     it('Checking functionallity and Verification on IG Membership Registration', function(){
         IG_Reports.verifyIGmemberRegistration
         (
-            data.EXPECTEDPG_REGISTRATION, 
-            data.IGMAIN, 
-            data.IG,
-            data.INITIAL_DATE,
-            data.EXPIRY_DATE
+            data.IG_REGISTRATION.EXPECTEDPG_REGISTRATION, 
+            data.IG_REGISTRATION.IGMAIN, 
+            data.IG_REGISTRATION.IG,
+            data.IG_REGISTRATION.REG_FROM,
+            data.IG_REGISTRATION.REG_TOL
         )
     })
 
     it('Checking functionallity and Verification on IG Termination Summary', function(){
         IG_Reports.verifyIGTerminationSummary
         (
-            data.EXPECTEDPG_TERMINATION_SUMMARY     
+            data.IG_TERMI_SUMAMRY.EXPECTEDPG_TERMINATION_SUMMARY     
+        )
+    })
+
+    it('Checking functionallity and Verification on IG MOVIEMAX Summary', function(){
+        IG_Reports.verifyIGMOVIEMAX 
+        (
+            data.IG_MOVIEMAX.EXPECTEDPG_MOVIEMAX     
         )
     })
 
     it('Checking functionallity and Verification on IG Termination Listing', function(){
+        IG_Reports.verifyIGTerminationListing
+        (
+            data.IG_TERMINATION.EXPECTEDPG_TERMINATION, 
+            data.IG_TERMINATION.IGMAIN, 
+            data.IG_TERMINATION.IG,
+            data.IG_TERMINATION.TERMINATED_BY,
+            data.IG_TERMINATION.TERMINATED_DATE
+        )
+    })
+
+    it('Checking functionallity and Verification on IG Waiver Listing', function(){
         IG_Reports.verifyIGWaiverListing
         (
-            data.EXPECTEDPG_WAIVER, 
-            data.IGMAIN, 
-            data.IG,
-            data.TERM_START_DATE,
-            data.TERM_END_DATE
+            data.IG_WAIVER.EXPECTEDPG_WAIVER, 
+            data.IG_WAIVER.IGMAIN, 
+            data.IG_WAIVER.IG,
+            data.IG_WAIVER.TERM_START_DATE,
+            data.IG_WAIVER.TERM_END_DATE
         )
     })
     
     it('Checking functionallity and Verification on IG Renewal Summary', function(){
         IG_Reports.verifyIGRenewalConfirmation
         (
-            data.EXPECTEDPG_RENEWAL_SUMMARY     
+            data.IG_RENEWAL_CONFIRM.EXPECTEDPG_RENEWAL_SUMMARY     
         )
     })
 
     it('Checking functionallity and Verification on Registration or Renewal', function(){
         IG_Reports.verifyIGRegistrationorRenewal
         (
-            data.EXPECTEDPG_REGISTRATIONORRENEWAL, 
-            data.IGMAIN, 
-            data.IG,
-            data.INITIAL_DATE,
-            data.EXPIRY_FROM,
-            data.EXPIRY_TO
+            data.IG_RENEW_REGIS.EXPECTEDPG_REGISTRATIONORRENEWAL, 
+            data.IG_RENEW_REGIS.IGMAIN, 
+            data.IG_RENEW_REGIS.IG,
+            data.IG_RENEW_REGIS.EXPIRY_FROM,
+            data.IG_RENEW_REGIS.EXPIRY_TO
         )    
-        })
+    })
+
+    it('Checking functionallity and Verification on Registration Listing Receipt Date', function(){
+        IG_Reports.verifyIGmemberRegistrationReceiptDate
+        (
+            data.IG_REG_RECEIPT_DATE.EXPECTEDPG, 
+            data.IG_REG_RECEIPT_DATE.IGMAIN, 
+            data.IG_REG_RECEIPT_DATE.IG,
+            data.IG_REG_RECEIPT_DATE.START_DATE,
+            data.IG_REG_RECEIPT_DATE.END_DATE
+        )    
+    })
+
+    it('Checking functionallity and Verification on Membership Interest Group Listing', function(){
+        IG_Reports.verifyIGmemberInterestGroupListing
+        (
+            data.IG_MEM_INTEREST_GROUP.EXPECTEDPG, 
+            data.IG_MEM_INTEREST_GROUP.IG,
+            data.IG_MEM_INTEREST_GROUP.CUSTOM_CATEG, 
+            data.IG_MEM_INTEREST_GROUP.BUSINESS_TYPE, 
+            data.IG_MEM_INTEREST_GROUP.STATUS, 
+            data.IG_MEM_INTEREST_GROUP.PUBLISHING_DATE,
+            data.IG_MEM_INTEREST_GROUP.END_DATE
+        )    
+    })
 
 
 
+// Edit The Data since its QA
 
 
    
