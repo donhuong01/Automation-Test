@@ -55,6 +55,29 @@ class Reports_IG {
 
     /*****************************************************
      * Method: Checking functionallity and Verification on 
+               IG Deferment Listing
+     * Description: This function verifies the page
+    *****************************************************/
+        verifyIGDefermentReports(expectedPg, iGMain, iG, defermentDateFrom, defermentDateTo){
+
+        cy.visit('/report?reportId=ReportIG.MembershipDefermentListing')
+        cy.wait(2000)
+        cy.ValidateElementText(elems_IGMembershipDefermentListing.LBL_PAGETITLE, expectedPg)
+
+        cy.SelectPickerItem(elems_IGMembershipDefermentListing.PCK_IGMAIN, iGMain)
+        cy.wait(2000)
+        cy.SelectPickerItem(elems_IGMembershipDefermentListing.PCK_IG, iG)
+        cy.EnterDate(elems_IGMembershipDefermentListing.TXT_DEFERMENTDATEFROM, defermentDateFrom)
+        cy.EnterDate(elems_IGMembershipDefermentListing.TXT_DEFERMENTDATETO, defermentDateTo)
+
+        cy.Click(elems_IGMembershipDefermentListing.BTN_GENERATE)
+        cy.wait(5000)
+        //cy.ValidateElementText('//div[@data-id="table1_1"]')
+        //cy.Click(elems_IGMembershipDefermentListing.BTN_EXPORT)
+    }
+
+    /*****************************************************
+     * Method: Checking functionallity and Verification on 
                IG Deferment Summary
      * Description: This function verifies the page
     *****************************************************/
@@ -100,21 +123,21 @@ class Reports_IG {
         *****************************************************/
         verifyIGmemberListing(expectedPg, iGMain, iG, initialJoin, expiryDate){
         
-         cy.visit('/report?reportId=ReportIG.MembershipListing')
-                cy.wait(2000)
-                cy.ValidateElementText(elems_IGMembershipListing.LBL_PAGETITLE, expectedPg)
-        
-                cy.SelectPickerItem(elems_IGMembershipListing.PCK_IGMAIN, iGMain)
-                cy.wait(2000)
-                cy.SelectPickerItem(elems_IGMembershipListing.PCK_IG, iG)
-                cy.EnterDate(elems_IGMembershipListing.TXT_INITIAL_JOIN, initialJoin)
-                cy.EnterDate(elems_IGMembershipListing.TXT_EXPIRY_DATE, expiryDate)
-        
-                cy.Click(elems_IGMainListing.BTN_GENERATE)
-                cy.wait(5000)
-                //cy.ValidateElementText('//div[@data-id="table1_1"]')
-                //cy.Click(elems_IGMainListing.BTN_EXPORT)
-            }
+        cy.visit('/report?reportId=ReportIG.MembershipListing')
+        cy.wait(2000)
+        cy.ValidateElementText(elems_IGMembershipListing.LBL_PAGETITLE, expectedPg)
+
+        cy.SelectPickerItem(elems_IGMembershipListing.PCK_IGMAIN, iGMain)
+        cy.wait(2000)
+        cy.SelectPickerItem(elems_IGMembershipListing.PCK_IG, iG)
+        cy.EnterDate(elems_IGMembershipListing.TXT_INITIAL_JOIN, initialJoin)
+        cy.EnterDate(elems_IGMembershipListing.TXT_EXPIRY_DATE, expiryDate)
+
+        cy.Click(elems_IGMainListing.BTN_GENERATE)
+        cy.wait(5000)
+        //cy.ValidateElementText('//div[@data-id="table1_1"]')
+        //cy.Click(elems_IGMainListing.BTN_EXPORT)
+    }
         
 
         /*****************************************************

@@ -7,8 +7,9 @@ import SMCMSUser from '../Sub-Phase-1/FS-001-Admin-SystemLogin/E2E-SMCMSUser'
 
 //FS - 002 Reports
 import IG_Report from '../Sub-Phase-4-5/FS-002-Reports/InterestGroup-Reports/E2E-InterestGroup-Report'
-import E1_Reports from '../Sub-Phase-4-5/FS-002-Reports/EnergyOne-Reports/E2E-EnergyOne-Report'
-import Accommodation_Reports from '../Sub-Phase-4-5/FS-002-Reports/Accommodation-Reports/E2E-Accommodation-Reports'
+import E1_Report from '../Sub-Phase-4-5/FS-002-Reports/EnergyOne-Reports/E2E-EnergyOne-Report'
+import Accommodation_Report from '../Sub-Phase-4-5/FS-002-Reports/Accommodation-Reports/E2E-Accommodation-Reports'
+import MemberCards_Report from '../Sub-Phase-4-5/FS-002-Reports/Membership(MemberCards)-Reports/E2E-MemberCards-Report'
 
 //FS - 004 Admin Settings
 import ApplicationSetting from '../Sub-Phase-1/FS-004-Admin-Settings/E2E-ApplicationSettings'
@@ -200,12 +201,13 @@ beforeEach(() => {
 //     SMCMSUser() 
 // })
 
-//  describe('E2E Auto Testing:FS-002 Reports', () => {
+ describe('E2E Auto Testing:FS-002 Reports', () => {
 
-     IG_Report()
-//     E1_Reports()
-//     Accommodation_Reports()
-//  })
+    IG_Report()
+    E1_Report()
+    Accommodation_Report()
+    MemberCards_Report()
+ })
 
 
 // describe('E2E Auto Testing:FS-004 Admin: Settings', () => {

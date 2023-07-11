@@ -26,6 +26,17 @@ describe("IG Reports Verification",function(){
         )
     })
 
+    it('Checking functionallity and Verification on IG Deferment', function(){
+        IG_Reports.verifyIGDefermentReports
+        (
+            data.IG_DEFERMENT.EXPECTEDPG_DEFERMENT,
+            data.IG_DEFERMENT.IGMAIN,
+            data.IG_DEFERMENT.IG,
+            data.IG_DEFERMENT.DEFERDATE_FROM,
+            data.IG_DEFERMENT.DEFERDATE_TO     
+        )
+    })
+
     it('Checking functionallity and Verification on IG Deferment Summary', function(){
         IG_Reports.verifyIGDefermentSummary
         (

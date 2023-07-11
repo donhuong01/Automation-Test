@@ -3,6 +3,8 @@ import data from "../../../../fixtures/Data_Module/FS-002-Reports/E1-Reports-dat
 
 const E1_Reports = new Reports_E1 ()
 
+const E1_Report = () => {
+
 describe("E1 Reports Verification",function(){
 
     it('Checking functionallity and Verification on E1 Membership Listing Address', function(){
@@ -151,8 +153,8 @@ describe("E1 Reports Verification",function(){
         )
     })
 
-
-
-
-
 })
+
+}
+
+export default E1_Report

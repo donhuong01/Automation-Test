@@ -3,6 +3,8 @@ import data from '../../../../fixtures/Data_Module/FS-002-Reports/Accommodation-
 
 const Accommodation_Reports = new Reports_Accommodation ()
 
+const Accommodation_Report = () => {
+
 describe("E1 Accommodation Verification",function(){
 
     it('Checking functionallity and Verification on Accommodation Charge Rate Listing', function(){
@@ -94,3 +96,7 @@ describe("E1 Accommodation Verification",function(){
 
 
 })
+
+}
+
+export default Accommodation_Report
