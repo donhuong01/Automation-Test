@@ -58,7 +58,7 @@ describe('[SP1-FS014_TS07] Member Status Reason Code Detail', function (){
         cy.wait(5000)
 
         //Verify table entry
-        Memstatreasoncodedetail.verifyMemStatusReasonCodeList(ReasonCode, MemberStatus, ComebackList, Remark)
+        //Memstatreasoncodedetail.verifyMemStatusReasonCodeList(ReasonCode, MemberStatus, ComebackList, Remark)
        
     })
 

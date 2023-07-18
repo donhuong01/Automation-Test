@@ -126,8 +126,8 @@ describe('[TS01] Membership Registration Management',function(){
             // MemRegPrincipal.VerifyPageTitle('Membership Registration - Principal')
             
             MemRegPrincipal.SaveAndNextPrincipal()
-            cy.wait(15000)
-        
+            //cy.wait(15000) //QA
+            cy.wait(8000) //UAT 
             ///////////////////////////////////TENURE SELECTION////////////////////////////////////////////////////////////
         
         
@@ -143,11 +143,12 @@ describe('[TS01] Membership Registration Management',function(){
             ShoppingCart.fillOutandApplyPayment('CASH')
             
             // Wait for 3 minites
-            cy.wait(25000)
-            
+            //cy.wait(25000) //QA
+            cy.wait(8000)   //UAT
+
             //Verify New Created Member Reason Code
             MembershipRenewal.VerifyMemberStatus(PrincipalName, LAST4NRIC, 'New')
-        
+            
             //Logout
             // cy.LogoutOfSmcms()
    

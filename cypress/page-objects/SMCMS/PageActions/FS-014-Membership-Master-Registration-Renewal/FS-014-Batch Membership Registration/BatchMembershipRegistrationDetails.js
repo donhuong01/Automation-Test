@@ -186,7 +186,7 @@ class BatchMembershipRegistrationDetail {
     FillOutFormForNonMember(NRIC, DOB) {
         cy.TickRadioButton(elems_BatchMembershipRegistrationDetail.MemRegInBatchRegistration.CHK_NONMEMBER)
         cy.EnterText(elems_BatchMembershipRegistrationDetail.MemRegInBatchRegistration.TXT_LAST4NRIC, NRIC)
-        cy.EnterDate(elems_BatchMembershipRegistrationDetail.MemRegInBatchRegistration.DATE_DOB, DOB)
+        cy.SelectDate(elems_BatchMembershipRegistrationDetail.MemRegInBatchRegistration.DATE_DOB, DOB)
     }
 
     /*****************************************************
@@ -477,7 +477,7 @@ class BatchMembershipRegistrationDetail {
         }
         // VerifyDate of Birth
         if (DateofBirth !== undefined) {
-             cy.EnterDate(elems_MemberRegistrationPrincipal.PERSONALINFORMATION.DATE_DATEOFBIRTH, DateofBirth)
+             cy.SelectDate(elems_MemberRegistrationPrincipal.PERSONALINFORMATION.DATE_DATEOFBIRTH, DateofBirth)
         }
 
         // Verify NS Status

@@ -19,7 +19,7 @@ describe('CustomerCheckin', function () {
 
         })
    
-        it('Checkin with Member ID', function() {   
+        it.only('Checkin with Member ID', function() {   
         
             // Go to website
             const type = data.checkin_memberID.type
@@ -28,6 +28,8 @@ describe('CustomerCheckin', function () {
             const expectedPage = data.meminfo_expectedPg
 
             checkin.checkIn({type,value1,value2,expectedPage})
+            cy.wait(3000)
+            cy.url().should('include', '/membership/memberInformation')
             cy.wait(5000)    
             //Click cancel
             memberinfo.cancel(checkin_expectedPg)

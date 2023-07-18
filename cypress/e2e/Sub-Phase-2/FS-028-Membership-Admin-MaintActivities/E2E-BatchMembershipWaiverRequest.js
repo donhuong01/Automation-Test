@@ -148,7 +148,7 @@ describe('Batch Membership Waiver Request management',function(){
             // MemRegPrincipal.VerifyPageTitle('Membership Registration - Principal')
             
             MemRegPrincipal.SaveAndNextPrincipal()
-            cy.wait(15000)
+            cy.wait(10000)
         
             ///////////////////////////////////TENURE SELECTION////////////////////////////////////////////////////////////
         

@@ -7,7 +7,7 @@ class Reports_MemberCards{
                Identity User Matrix Listing
      * Description: This function verifies the page
     *****************************************************/
-   verifyIdentifyUserMatrix(expectedPg){
+    verifyIdentifyUserMatrix(expectedPg){
     cy.visit('/report?reportId=ReportIdentity.UserAccessMatrixReport')
     cy.wait(2000)
     cy.ValidateElementText(elems_Identity_UserMatrixLising.LBL_PAGE, expectedPg)

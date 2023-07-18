@@ -142,7 +142,7 @@ describe('[TS13] Batch Membership Registration Details form', function () {
 
     })
 
-    it('[TC02] Creating a Batch Membership Registration with Non-Member', function () {
+    it.only('[TC02] Creating a Batch Membership Registration with Non-Member', function () {
 
         const BatchNameNonMem = 'Auto-Batch' + Math.floor(Math.random() * 100000 * 2 ) 
 

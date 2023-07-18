@@ -103,10 +103,10 @@ describe('FS-029] Membership Charge Rate Management', () =>{
 
 
         //Filter by Name and CardType
-        MemChargeRateList.FilterByNameAndCardType('Testing1455', CardType)
+        MemChargeRateList.FilterByNameAndCardType(Name, CardType)
 
         // Click Name Link
-        MemChargeRateList.clickNameLink('Testing1455')
+        MemChargeRateList.clickNameLink(Name)
         
         // Verify Page title
         MemChargeRateList.VerifyPageTitle('Membership Charge Rate Details')

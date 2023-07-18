@@ -5,7 +5,7 @@ module.exports = defineConfig({
     "projectId": "2qznzd",
     "chromeWebSecurity": false,
     "env": {
-      "url": "https://qa-smcms.safra.sg",
+      "url": "https://uat-smcms.safra.sg",
       "DB_HOST": "mongodb://qasmcmsdb:MC5iFa2aAJ0lC09BzZVFqpEu9Z7hoaUhFqUKNB0VVHxrJk46q85rhgqJJwQ3ewKPqXbDoF4sd76fxmceqSCpNw==@qasmcmsdb.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@qasmcmsdb@",
       "DB_UI": "SAFRA-SMCMS-QA-UI",
       "FIXTURE_UPLOAD_PATH": "upload/"
@@ -21,7 +21,7 @@ module.exports = defineConfig({
       "inlineAssets": true
     },
     "video": false,
-    "baseUrl": "https://qa-smcms.safra.sg",
+    "baseUrl": "https://uat-smcms.safra.sg",
     "viewportWidth": 1520,
     "viewportHeight": 1420,
     setupNodeEvents(on, config) {

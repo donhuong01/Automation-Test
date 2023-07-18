@@ -178,7 +178,7 @@ class BatchMembershipRegistrationListing {
           // Set Tenure Selection
           if (TenureDuration !== undefined) {
 
-               cy.TenureSelection(elems_MembershipTenureSelection.Principal.TBL_PRINCIPAL,
+               cy.TenureSelectionBatch(elems_MembershipTenureSelection.Principal.TBL_PRINCIPAL,
                     ColumnValue, TenureDuration)
                // const locator = elems_MembershipTenureSelection.Principal.TBL_PRINCIPAL
                // cy.Click(`${locator}//tr[contains(@class, "k-master-row")]//td//following-sibling::td//span[@class="k-dropdown-wrap"]`)
@@ -201,7 +201,7 @@ class BatchMembershipRegistrationListing {
      *****************************************************/
     dependentTenureSelection(ColumnValue, tenureSelection){
         
-     cy.TenureSelection(elems_MembershipTenureSelection.Dependent.TBL_DEPENDENT,
+     cy.TenureSelectionBatch(elems_MembershipTenureSelection.Dependent.TBL_DEPENDENT,
          ColumnValue,  tenureSelection)
  }
 

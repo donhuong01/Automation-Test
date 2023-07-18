@@ -1247,6 +1247,23 @@ Cypress.Commands.add("TenureSelection", (locator, columnValue, TenureDuration) =
 })
 
 /*****************************************************
+ * Command: SelectTenureDuration
+ * Description: This function select tenure duration
+ *
+ * @author: Fshahzada
+ * @param {string} locator table locator
+ * @param {string} columnValue  target value
+ * @param {string} TenureDuration Tenure duration
+ *****************************************************/
+Cypress.Commands.add("TenureSelectionBatch", (locator, columnValue, TenureDuration) => {
+
+    cy.Click(`${locator}//tr[contains(@class, "k-master-row")]//td[text()="${columnValue}"]//following-sibling::td//span[@class="k-dropdown-wrap"]`)
+    cy.Click(`//li[text()="${TenureDuration}"]`)
+
+    //(`${locator}//tr[contains(@class, "k-master-row")]//td[text()="${columnValue}"]//following-sibling::td//span[@class="k-dropdown-wrap"]`)})   , {matchCase}
+})
+
+/*****************************************************
  * Command: AddOperatingHour
  * Description: This function add operating hour
  * @param {string} tableLocator // Table locator

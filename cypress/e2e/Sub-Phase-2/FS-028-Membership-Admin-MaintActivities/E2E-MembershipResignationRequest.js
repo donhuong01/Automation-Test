@@ -81,7 +81,7 @@ describe('[TS01] Membership Resignation Request Management',function(){
             });
          
             CustomerCreation.fillOutContactInformation({
-                handPhone: '56582' + Math.floor(Math.random() * 1000),
+                handPhone: '565821' + Math.floor(Math.random() * 1000),
                 emailAddress: PrincipalEmail,
                 emergencyContact: Customerdata.CustomerCreationPrincipal.ContactInformation.emergencyContact,
                 homeNumber: '56582' + Math.floor(Math.random() * 1000),

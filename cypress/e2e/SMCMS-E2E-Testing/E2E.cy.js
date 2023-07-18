@@ -10,6 +10,8 @@ import IG_Report from '../Sub-Phase-4-5/FS-002-Reports/InterestGroup-Reports/E2E
 import E1_Report from '../Sub-Phase-4-5/FS-002-Reports/EnergyOne-Reports/E2E-EnergyOne-Report'
 import Accommodation_Report from '../Sub-Phase-4-5/FS-002-Reports/Accommodation-Reports/E2E-Accommodation-Reports'
 import MemberCards_Report from '../Sub-Phase-4-5/FS-002-Reports/Membership(MemberCards)-Reports/E2E-MemberCards-Report'
+import Gifts_Report from '../Sub-Phase-4-5/FS-002-Reports/Gift-Reports/E2E-Gift-Report'
+import InHouseMerchandise_Report from '../Sub-Phase-4-5/FS-002-Reports/InHouse-and-Merchandise-Reports/E2E-InHouse-and-Merchandise-Report'
 
 //FS - 004 Admin Settings
 import ApplicationSetting from '../Sub-Phase-1/FS-004-Admin-Settings/E2E-ApplicationSettings'
@@ -175,10 +177,10 @@ import PromotionforMembership from '../Sub-Phase-4-5/FS-042-Promotion/E2E-Promot
 
 
 //UAT E2E DATA 
-import E2EData from '../SMCMS-E2E-Testing/E2EDataConfigUAT'
+//import E2EData from '../SMCMS-E2E-Testing/E2EDataConfigUAT'
 
 //QA E2E Data
-//import E2EData from '../SMCMS-E2E-Testing/E2EDataConfig'
+import E2EData from '../SMCMS-E2E-Testing/E2EDataConfig'
 
 import login from '../../fixtures/login'
 import FacilityGroupBookingBallot from '../Sub-Phase-2/FS-010-Clubs(Facilites)/E2E-FacilityGroupBookingBallot'
@@ -186,10 +188,10 @@ import FacilityGroupBookingBallot from '../Sub-Phase-2/FS-010-Clubs(Facilites)/E
 beforeEach(() => {
 
     // Set local storage for QA Enviroment
-     cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
+    // cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
    
     // Set local storage for UAT Enviroment
-    // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
+     cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
 })
 
  
@@ -203,10 +205,12 @@ beforeEach(() => {
 
  describe('E2E Auto Testing:FS-002 Reports', () => {
 
-    IG_Report()
-    E1_Report()
-    Accommodation_Report()
-    MemberCards_Report()
+//     IG_Report()
+//     E1_Report()
+//     Accommodation_Report()
+//     MemberCards_Report()
+//     Gifts_Report()
+//     InHouseMerchandise_Report()
  })
 
 
@@ -233,24 +237,24 @@ beforeEach(() => {
     // FacilitySetupDetail() 
     // FacilityBookingManagement("S6690184Z")
     // FacilityBookingAmendmentManagment()
-    //  FacilityBookingExtentionManagment() // Needs an update in Facility for extension setting
-    //  FacilityBookingCancellationManagment() // Needs own page action
-    //   FacilityGroupBooking(E2EData.FACILITY_GROUP_BOOKING.SAFRA_MEMBER, E2EData.FACILITY_GROUP_BOOKING.SAFRA_RELATED_MEMBER,
-    //       E2EData.FACILITY_GROUP_BOOKING.SAFRA_GUEST) //Pass Active Safra Member ID - 1.Safra Member 2. SAFRARelatedMemberships 3. Guest Member
-        // FacilityGroupBookingBallot("A300002855", "A300003031") // Recheck again tomorrow morning
+    // FacilityBookingExtentionManagment() // Needs an update in Facility for extension setting
+    // FacilityBookingCancellationManagment() // Needs own page action
+//     FacilityGroupBooking(E2EData.FACILITY_GROUP_BOOKING.SAFRA_MEMBER, E2EData.FACILITY_GROUP_BOOKING.SAFRA_RELATED_MEMBER,
+//        E2EData.FACILITY_GROUP_BOOKING.SAFRA_GUEST) //Pass Active Safra Member ID - 1.Safra Member 2. SAFRARelatedMemberships 3. Guest Member
+//     FacilityGroupBookingBallot("A300002855", "A300003031") // Recheck again tomorrow morning
 //   })
 
 
 // describe('E2E Auto Testing:FS-012 Accommodation', ()=> {
 
-//     // AccommodatiomSettingGeneral()
+//    AccommodatiomSettingGeneral()
 //    AccommodationSettingOperatingPeriod()
 //    AccommodationTypeManagement() 
 //    AccommodationSetupManagement()
-   // AccommodationClosureManagement() // Need to add accommodation on page action
-   // AccommodatiomBookingManagement(E2EData.ACCOMMODATION_BOOKING_MANAGEMENT.SAFRA_MEMBERID, E2EData.ACCOMMODATION_BOOKING_MANAGEMENT.GEUSTID) //Pass SAFRA MemberID and Guest ID
-    //AccommodatiomReservationManagement(E2EData.ACCOMMODATION_RESERVATION_MANAGEMENT.SAFRA_MEMBERID) //Pass SAFRA MemberID
-    // Update the booking,  no available slots when running
+//    AccommodationClosureManagement() // Need to add accommodation on page action
+//    AccommodatiomBookingManagement(E2EData.ACCOMMODATION_BOOKING_MANAGEMENT.SAFRA_MEMBERID, E2EData.ACCOMMODATION_BOOKING_MANAGEMENT.GEUSTID) //Pass SAFRA MemberID and Guest ID
+//    AccommodatiomReservationManagement(E2EData.ACCOMMODATION_RESERVATION_MANAGEMENT.SAFRA_MEMBERID) //Pass SAFRA MemberID
+      // Update the booking,  no available slots when running
     
 // })
 
@@ -258,14 +262,14 @@ beforeEach(() => {
 // describe('E2E Auto Testing:FS-014 Membership: Master Registration and Renewal', ()=> {
 
 //     MembershipRegistration(E2EData.NRIC_FOR_MEMBERSHIP_REGISTRATION) // Enter Full NRIC
-//     CustomerCheckIn()
-//     MemberType()
-    //BadAddressUpdate()// Fail Need code updates
+    // CustomerCheckIn()
+    // MemberType()
+    // BadAddressUpdate()// Fail Need code updates
     // MembershipRenewalAdvise()
     // WithdrawalOfConsent(E2EData.ACTIVE_MEMBERID_FOR_WITHDRAWAL_OF_CONSENT) //Enter Member ID for Withdrawal Of Consent
     // SourceChannel() 
-    //////MemberStatusReasonCode() // Not Required
-    // MassUpdateForMemberData()
+    // MemberStatusReasonCode() // Not Required
+    // MassUpdateForMemberData() // Needs to update code for Approval
     // MembershipModuleSettings()
     //  SFSMemberRegistion(E2EData.MEMBER_REGISTRATION_WITH_SPOUSE_AND_CHILD.PRINCIPAL_NRIC,
     //      E2EData.MEMBER_REGISTRATION_WITH_SPOUSE_AND_CHILD.CHILD_NRIC, E2EData.MEMBER_REGISTRATION_WITH_SPOUSE_AND_CHILD.SPOUSE_NRIC) //Add three NRIC's for Principal, Dependent Child, Dependent Spouse
@@ -376,8 +380,8 @@ beforeEach(() => {
 
 // describe('E2E Auto Testing:FS-028 Membership: Admin Maintenance Activities', ()=> {
     
-    //MembershipDeceased(E2EData.ACTIVE_MEMBERID_FOR_DECEASED) //Provide Active member ID
-    //BatchMembershipTermination(E2EData.SFS_BATCH_TERMINATION_IDS.MEMBERID1, E2EData.SFS_BATCH_TERMINATION_IDS.MEMBERID2,
+    // MembershipDeceased(E2EData.ACTIVE_MEMBERID_FOR_DECEASED) //Provide Active member ID
+    // BatchMembershipTermination(E2EData.SFS_BATCH_TERMINATION_IDS.MEMBERID1, E2EData.SFS_BATCH_TERMINATION_IDS.MEMBERID2,
     //    E2EData.SFS_BATCH_TERMINATION_IDS.MEMBERID3) //Provide Active member ID's
     // BatchMemDefermentRequest(E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERNAME1, E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERID1,
     //    E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERNAME2, E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERID2) 
