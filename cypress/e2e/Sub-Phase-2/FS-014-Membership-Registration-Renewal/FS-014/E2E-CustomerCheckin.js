@@ -19,7 +19,7 @@ describe('CustomerCheckin', function () {
 
         })
    
-        it.only('Checkin with Member ID', function() {   
+        it('Checkin with Member ID', function() {   
         
             // Go to website
             const type = data.checkin_memberID.type

@@ -12,6 +12,7 @@ import Accommodation_Report from '../Sub-Phase-4-5/FS-002-Reports/Accommodation-
 import MemberCards_Report from '../Sub-Phase-4-5/FS-002-Reports/Membership(MemberCards)-Reports/E2E-MemberCards-Report'
 import Gifts_Report from '../Sub-Phase-4-5/FS-002-Reports/Gift-Reports/E2E-Gift-Report'
 import InHouseMerchandise_Report from '../Sub-Phase-4-5/FS-002-Reports/InHouse-and-Merchandise-Reports/E2E-InHouse-and-Merchandise-Report'
+import SRP_Report from '../Sub-Phase-4-5/FS-002-Reports/SRP-Reports/E2E-SRP-Reports'
 
 //FS - 004 Admin Settings
 import ApplicationSetting from '../Sub-Phase-1/FS-004-Admin-Settings/E2E-ApplicationSettings'
@@ -205,12 +206,13 @@ beforeEach(() => {
 
  describe('E2E Auto Testing:FS-002 Reports', () => {
 
-//     IG_Report()
-//     E1_Report()
-//     Accommodation_Report()
-//     MemberCards_Report()
-//     Gifts_Report()
-//     InHouseMerchandise_Report()
+    // IG_Report()
+    // E1_Report()
+    // Accommodation_Report()
+    // MemberCards_Report()
+    // Gifts_Report()
+    // InHouseMerchandise_Report()
+    SRP_Report()
  })
 
 

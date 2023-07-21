@@ -1,4 +1,4 @@
-import Reports_Accommodation from '../../../../page-objects/SMCMS/PageActions/FS-002-Reports/FS-002-Accommodation-Reports/Accommodation-Reports-Verification'
+import Reports_Accommodation from '../../../../page-objects/SMCMS/PageActions/FS-002-Reports/FS-012-Accommodation-Reports/Accommodation-Reports-Verification'
 import data from '../../../../fixtures/Data_Module/FS-002-Reports/Accommodation-Reports-data';
 
 const Accommodation_Reports = new Reports_Accommodation ()

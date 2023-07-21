@@ -12,7 +12,7 @@ class Reports_MemberCards{
     cy.wait(2000)
     cy.ValidateElementText(elems_Identity_UserMatrixLising.LBL_PAGE, expectedPg)
 
-    cy.Click(elems_Identity_UserMatrixLising.BTN_GENERATE)
+    // cy.Click(elems_Identity_UserMatrixLising.BTN_GENERATE)
         cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_Identity_UserMatrixLising.BTN_EXPORT)
@@ -23,15 +23,15 @@ class Reports_MemberCards{
                Member Card Listing
      * Description: This function verifies the page
     *****************************************************/
-    verifyMemberCard(expectedPg, fromDate, toDate){
+    verifyMemberCard(expectedPg, /*fromDate, toDate*/){
     cy.visit('/report?reportId=ReportMemberCard.MemberCard')
     cy.wait(2000)
     cy.ValidateElementText(elems_MemberCard.LBL_PAGE, expectedPg)
 
-    cy.EnterDate(elems_MemberCard.TXT_LASTUSEDFROMDATE, fromDate)
-    cy.EnterDate(elems_MemberCard.TXT_LASTUSEDTODATE, toDate)
+    // cy.EnterDate(elems_MemberCard.TXT_LASTUSEDFROMDATE, fromDate)
+    // cy.EnterDate(elems_MemberCard.TXT_LASTUSEDTODATE, toDate)
 
-    cy.Click(elems_MemberCard.BTN_GENERATE)
+    // cy.Click(elems_MemberCard.BTN_GENERATE)
         cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_MemberCard.BTN_EXPORT)

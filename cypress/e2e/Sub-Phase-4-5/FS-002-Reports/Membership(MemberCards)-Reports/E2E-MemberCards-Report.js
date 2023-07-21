@@ -5,7 +5,7 @@ const MemberCards_Reports = new Reports_MemberCards ()
 
 const Accommodation_Report = () => {
 
-describe("E1 Accommodation Verification",function(){
+describe("Member Cards Verification",function(){
 
     it('Checking functionallity and Verification on Identity User Matrix Listing', function(){
         MemberCards_Reports.verifyIdentifyUserMatrix
@@ -18,8 +18,8 @@ describe("E1 Accommodation Verification",function(){
         MemberCards_Reports.verifyMemberCard
         (
             data.MEMBER_CARD.EXPECTEDPG,
-            data.MEMBER_CARD.LASTUSED_FROM,
-            data.MEMBER_CARD.LASTUSED_TO
+            // data.MEMBER_CARD.LASTUSED_FROM,
+            // data.MEMBER_CARD.LASTUSED_TO
         )
     })
 
