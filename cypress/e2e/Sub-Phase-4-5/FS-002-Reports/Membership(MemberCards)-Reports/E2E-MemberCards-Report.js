@@ -18,8 +18,8 @@ describe("Member Cards Verification",function(){
         MemberCards_Reports.verifyMemberCard
         (
             data.MEMBER_CARD.EXPECTEDPG,
-            // data.MEMBER_CARD.LASTUSED_FROM,
-            // data.MEMBER_CARD.LASTUSED_TO
+            data.MEMBER_CARD.LASTUSED_FROM,
+            data.MEMBER_CARD.LASTUSED_TO
         )
     })
 

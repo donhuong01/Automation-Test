@@ -316,7 +316,7 @@ class Reports_E1 {
      * Description: This function verifies the page
     *****************************************************/
         verifyE1MembershipTerminationListing(expectedPg, e1Main, e1, terminationDatefrom, terminationDateto ){
-        cy.visit('/report?reportId=ReportE1.MembershipRenewalListingMobile')
+        cy.visit('/report?reportId=ReportE1.MembershipTerminationListing')
         cy.wait(2000)
         cy.ValidateElementText(elems_E1MembershipTerminationListing.LBL_PAGE, expectedPg)
         

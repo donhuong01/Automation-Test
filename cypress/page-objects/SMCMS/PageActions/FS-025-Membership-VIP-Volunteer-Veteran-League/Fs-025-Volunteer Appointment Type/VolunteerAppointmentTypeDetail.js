@@ -70,6 +70,7 @@ class VolunteerAppointmentTypeDetail{
     FilterAndSelectByNameGroupClubStore(Name, Group){
 
         cy.Click(elems_VolunteerAppointmentTypeDetail.PCK_CLUBHOUSE)
+        cy.wait(10000)
         cy.EnterText(elems_VolunteerAppointmentTypeDetail.SELECTSOURCECHANNEL.TXT_NAME, Name,)
         // cy.EnterText(elems_VolunteerAppointmentTypeDetail.SELECTSOURCECHANNEL.TXT_GROUP, Group,)
         cy.Click(elems_VolunteerAppointmentTypeDetail.SELECTSOURCECHANNEL.BTN_SEARCHFILTER)

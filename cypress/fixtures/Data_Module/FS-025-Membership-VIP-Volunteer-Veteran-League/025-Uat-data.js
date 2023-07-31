@@ -39,9 +39,9 @@ VIPAppointmentTypeDetail:{
 VolAppointmentTermRegistration: {
 
     AppointmentID:'ACC_YS_CHAIR',
-    Last4NRICNO:'451C',
-    MemberID:'A300000160',
-    MemberName:'Test User 1',
+    Last4NRICNO:'703I',
+    MemberID:'A300002856',//'A300000160',
+    MemberName:'TestuserQA92',
     AppointmentTypeID:'ACC_YS_CHAIR',
     Type:'Terminated',
     StartDate:'15-Nov-2013',
@@ -51,22 +51,22 @@ VolAppointmentTermRegistration: {
 // VIP Appointment Term Registration Detail
 VIPAppointmentTermRegDetail: {
 
-    MemberID:'A300000160',
-    Name:'Test User 1',
-    NRIC:'451C',
+    MemberID:'A300002856',
+    Name:'TestuserQA92',//'Test User 1',
+    NRIC:'703I',//'451C',
     AppointmentID:'BOG-002',
     Type:'VIP 1',
     StartDate:'08-Feb-2023',
     EndDate:'09-Oct-2024',
 
     //Updated data
-    UpdatedMemberID:'A300000639',
-    UpdatedName:'Test User 924530',
-    UpdatedNRIC:'871J',
+    UpdatedMemberID:'A300002857',
+    UpdatedName:'TestuserQA93',
+    UpdatedNRIC:'484C',
     UpdatedAppointmentID:'HM-001',
     UpdatedType:'HM',
     UpdatedStartDate:'16-Nov-2022',
-    UpdatedEndDate:'18-May-2023',
+    UpdatedEndDate:'18-May-2024',
 },
 
 

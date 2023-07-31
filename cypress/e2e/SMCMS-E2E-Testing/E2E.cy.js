@@ -204,16 +204,16 @@ beforeEach(() => {
 //     SMCMSUser() 
 // })
 
- describe('E2E Auto Testing:FS-002 Reports', () => {
+//  describe('E2E Auto Testing:FS-002 Reports', () => {
 
     // IG_Report()
     // E1_Report()
-    // Accommodation_Report()
-    // MemberCards_Report()
+    Accommodation_Report()
+     MemberCards_Report()
     // Gifts_Report()
     // InHouseMerchandise_Report()
     SRP_Report()
- })
+//  })
 
 
 // describe('E2E Auto Testing:FS-004 Admin: Settings', () => {
@@ -263,7 +263,7 @@ beforeEach(() => {
 
 // describe('E2E Auto Testing:FS-014 Membership: Master Registration and Renewal', ()=> {
 
-//     MembershipRegistration(E2EData.NRIC_FOR_MEMBERSHIP_REGISTRATION) // Enter Full NRIC
+    // MembershipRegistration(E2EData.NRIC_FOR_MEMBERSHIP_REGISTRATION) // Enter Full NRIC
     // CustomerCheckIn()
     // MemberType()
     // BadAddressUpdate()// Fail Need code updates
@@ -354,11 +354,11 @@ beforeEach(() => {
 
 //  describe('E2E Auto Testing:FS-025 Membership: VIP Volunteer Veteran League', ()=> {
     // VolunteerCommittee()
-    // VolunteerAppointment()
+    //  VolunteerAppointment()
     // VolunteerAppointmentType()
     // VIPAppointmentType()
     // VolunteerAppointmentTermRegistration() // 
-    // VIPAppointmentTermRegistration() //Update the the Type in Registration
+//     VIPAppointmentTermRegistration() //Update the the Type in Registration
 // })
 
 

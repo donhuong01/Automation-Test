@@ -37,8 +37,8 @@ const data = {
     //Accomodation Operating Period Listing
     ACCOM_OPERATING_PERIOD: {
         EXPECTEDPG: 'Report Viewer - ReportAccommodation.OperatingPeriodListing',
-        TYPE_OF_PEAK: '',
-        OPERATING_DAY: ''
+        TYPE_OF_PEAK: 'Non-Peak',
+        OPERATING_DAY: 'Monday'
     },
 
     //Accomodation Booking Listing

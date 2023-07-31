@@ -59,7 +59,7 @@ const data = {
         IGMAIN: 'Badminton Social Group',
         IG: 'Badminton Training.',
         EXPECTEDPG_MEMBERLISTING: 'Report Viewer - ReportIG.MembershipListing',
-        INITIAL_DATE:'01-Dec-2021',
+        INITIAL_DATE:'18-Nov-2022',
         EXPIRY_DATE: '30-Dec-2030',
     },
     
@@ -69,7 +69,7 @@ const data = {
         IGMAIN: 'Badminton Social Group',
         IG: 'Badminton Training.',
         EXPECTEDPG_MEMBERLISTING_ADDRESS: 'Report Viewer - ReportIG.MembershipListingAddress',
-        INITIAL_DATE:'01-Dec-2021',
+        INITIAL_DATE:'18-Nov-2022',
         EXPIRY_DATE: '30-Dec-2030',
     },
     
@@ -79,7 +79,7 @@ const data = {
         IGMAIN: 'Badminton Social Group',
         IG: 'Badminton Training.',
         EXPECTEDPG_MEMBERLISTING_EMAIL: 'Report Viewer - ReportIG.MembershipListingEmail',
-        INITIAL_DATE:'01-Dec-2021',
+        INITIAL_DATE:'18-Nov-2022',
         EXPIRY_DATE: '30-Dec-2030',
     },
 
@@ -87,8 +87,8 @@ const data = {
     IG_MEM_LIST_MOBILE:{
         IGMAIN: 'Badminton Social Group',
         IG: 'Badminton Training.',
-        EXPECTEDPG: 'Report Viewer - ReportIG.MembershipListingEmail',
-        INITIAL_DATE:'01-Dec-2021',
+        EXPECTEDPG: 'Report Viewer - ReportIG.MembershipListingMobile',
+        INITIAL_DATE:'18-Nov-2022',
         EXPIRY_FROM: '01-Dec-2020',
         EXPIRY_TO: '30-Dec-2030'
     },
@@ -119,7 +119,7 @@ const data = {
     IG_TERMINATION: {
         IGMAIN: 'Badmintion Social Group',
         IG: 'Test IG Receipt',
-        EXPECTEDPG_TERMINATION: 'Report Viewer - ReportIG.MembershipTerminationSummaryListing',
+        EXPECTEDPG_TERMINATION: 'Report Viewer - ReportIG.MembershipTerminationListing',
         TERMINATED_BY: 'Customer',
         TERMINATED_DATE: '07-Apr-2023',
     },

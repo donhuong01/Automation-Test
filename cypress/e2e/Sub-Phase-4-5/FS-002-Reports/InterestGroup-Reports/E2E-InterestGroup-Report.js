@@ -190,11 +190,6 @@ describe("IG Reports Verification",function(){
     })
 
 
-
-// Edit The Data since its QA
-
-
-   
         
 })
 
