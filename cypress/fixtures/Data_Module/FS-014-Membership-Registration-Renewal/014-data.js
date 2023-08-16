@@ -92,7 +92,7 @@ const data = {
         MemberCategory: 'Principal',
         DependentType: 'Spouse',
         ParentType: 'OD',
-        Code: 'ITZY',
+        Code: 'ITZY' + + Math.floor(Math.random() * 10000 * 50),
         Description: 'Sample Description',
         MembershipType: 'OD',
         ServiceStatus: 'SAFVC Active',
@@ -292,7 +292,7 @@ const data = {
         ContactInfo: {
             Handphone: '87126534',
             EmailAddress: 'Testuser' + Math.floor(Math.random() * 100000 * 2) + '@synergyonline.com',
-            HomeNumber: '2323',
+            HomeNumber: '23231234',
             EmergencyContact: '+65 658 5894',
             //Preferred COntact Mode
             SelectAll: 'uncheck',
@@ -971,7 +971,7 @@ const data = {
             handPhone: '+65 658 5896',
             emailAddress: 'testuser',
             emergencyContact: "+65 658 5893",
-            homeNumber: "122",
+            homeNumber: "12112342",
 
             preferredContactModeSelectAll: 'check',
             preferredContactModeEmail: 'uncheck',
@@ -1064,7 +1064,7 @@ const data = {
             emailAddress: 'testuser',
             emergencyContact: "+65 658 5893",
             conentInformationServiceNotification: 'check',
-            homeNumber: "123",
+            homeNumber: "12232323",
 
             preferredContactModeSelectAll: 'check',
             preferredContactModeEmail: 'uncheck',

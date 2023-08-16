@@ -122,7 +122,7 @@ describe('[TS01] Membership Renewal Management',function(){
                 })
             
 
-        
+            
             // MemRegPrincipal.SaveAndNext()
             // cy.wait(10000)
             // MemRegPrincipal.VerifyPageTitle('Membership Registration - Principal')

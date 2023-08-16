@@ -43,7 +43,7 @@ describe('[TS07] FS-036 Collect Uncollected Redemptions', function () {
         cy.LogoutOfSmcms()
 
     })
-
+    // Todo Download Redemption Letter
 
 })
 }

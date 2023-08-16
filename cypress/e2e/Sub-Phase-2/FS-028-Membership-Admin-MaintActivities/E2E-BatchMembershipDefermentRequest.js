@@ -64,7 +64,7 @@ describe('[TS01] Batch Membership Deferment Request Management',function(){
         
     })
 
-    it.only('[TC02] Creating a Batch Membership Deferment Request', function(){
+    it('[TC02] Creating a Batch Membership Deferment Request', function(){
 
         cy.visit('/membership/memberList')  //Visit web page for member listing 
 

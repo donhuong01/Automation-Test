@@ -3,7 +3,7 @@ import data from "../../../../fixtures/Data_Module/FS-002-Reports/MemberCards-Re
 
 const MemberCards_Reports = new Reports_MemberCards ()
 
-const Accommodation_Report = () => {
+const MemberCards_Report = () => {
 
 describe("Member Cards Verification",function(){
 
@@ -28,4 +28,4 @@ describe("Member Cards Verification",function(){
 
 }
 
-export default Accommodation_Report
+export default MemberCards_Report

@@ -24,8 +24,8 @@ const MemModuleSettings = new MembershipModuleSetting()
 
 const UserID = Math.floor(Math.random() * 100000)
 
-const PrincipalName = Customerdata.CustomerCreationPrincipal.RegistrationInformation.name + UserID //"Demo - Test Account 4"
-const PrincipalEmail = Customerdata.CustomerCreationPrincipal.ContactInformation.emailAddress //PrincipalName+"@gmail.com" //
+const PrincipalName = "Test User 10" //Customerdata.CustomerCreationPrincipal.RegistrationInformation.name + UserID //
+const PrincipalEmail = PrincipalName+"@test.com" //Customerdata.CustomerCreationPrincipal.ContactInformation.emailAddress //"safraonlineuser009@gmail.com"//
 // const CustomerNRIC = '415D'
 // const CustomerNRICFull = 'S0309415D'
 

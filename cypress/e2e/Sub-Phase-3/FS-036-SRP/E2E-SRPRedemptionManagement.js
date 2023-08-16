@@ -44,7 +44,6 @@ describe('[TS06] FS-036 SRP Redemption management', function () {
 
     })
 
-
 })
 
 }

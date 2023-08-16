@@ -298,9 +298,8 @@ describe('Batch Membership Waiver Request management',function(){
         // Waiver.ClickOnRightEndArrowInMemListing()
 
         Waiver.VerifyMemberInListing(PrincipalName)
-        Waiver.VerifyMemberInListing(PrincipalName2)
-        
         Waiver.SelectTableLinkItem(PrincipalName)
+        Waiver.VerifyMemberInListing(PrincipalName2)
         Waiver.SelectTableLinkItem(PrincipalName2)
 
         

@@ -97,17 +97,22 @@ class MembershipTenureSelection{
      *
      * @param {string} name   Dependent Member Name
      *****************************************************/
-     selectDependent( name){
+     selectDependent(name){
 
         // Tick Checkbox of Member ID
-        if( name !== undefined ){
-            cy.SelectTableItem(
-                elems_MembershipTenureSelection.Dependent.TBL_DEPENDENT,
-                // 'Member ID', memberId,
-                'Name', name, 
+        cy.SelectTableItem(elems_MembershipTenureSelection.Dependent.TBL_DEPENDENT,'Name', name)
+        
+        
+        
+        
+        // if(name !== undefined ){
+        //     cy.SelectTableItem2(
+        //         elems_MembershipTenureSelection.Dependent.TBL_DEPENDENT,
+        //         // 'Member ID', memberId,
+        //         'Name', name, 
                
-            )
-        }
+        //     )
+        // }
      }
        /*****************************************************
      * Method: SelectPrincipal

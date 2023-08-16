@@ -13,6 +13,7 @@ import MemberCards_Report from '../Sub-Phase-4-5/FS-002-Reports/Membership(Membe
 import Gifts_Report from '../Sub-Phase-4-5/FS-002-Reports/Gift-Reports/E2E-Gift-Report'
 import InHouseMerchandise_Report from '../Sub-Phase-4-5/FS-002-Reports/InHouse-and-Merchandise-Reports/E2E-InHouse-and-Merchandise-Report'
 import SRP_Report from '../Sub-Phase-4-5/FS-002-Reports/SRP-Reports/E2E-SRP-Reports'
+import Reports_Payments from '../Sub-Phase-4-5/FS-002-Reports/Payments-Reports/E2E-Payments-Report'
 
 //FS - 004 Admin Settings
 import ApplicationSetting from '../Sub-Phase-1/FS-004-Admin-Settings/E2E-ApplicationSettings'
@@ -198,7 +199,7 @@ beforeEach(() => {
  
 // describe('E2E Auto Testing:FS-001 Admin: System Login', () => {
 
-//     OnlineAccountAccess() 
+    // OnlineAccountAccess() 
 //     SMCMSPostion()
 //     SMCMSRole() 
 //     SMCMSUser() 
@@ -206,21 +207,23 @@ beforeEach(() => {
 
 //  describe('E2E Auto Testing:FS-002 Reports', () => {
 
-    // IG_Report()
-    // E1_Report()
-    Accommodation_Report()
-     MemberCards_Report()
-    // Gifts_Report()
-    // InHouseMerchandise_Report()
-    SRP_Report()
+//        IG_Report()
+//     E1_Report()
+//     Accommodation_Report()
+//     MemberCards_Report()
+    //    Gifts_Report()
+//     InHouseMerchandise_Report()
+//     SRP_Report()
+//     Reports_Payments()
+
 //  })
 
 
 // describe('E2E Auto Testing:FS-004 Admin: Settings', () => {
 
 //     CustomerCategoryType()
-//    CustomerCategory()
-//     CodeType()
+//     CustomerCategory()
+    //    CodeType()
 //     CodeSetMaster()
 //     DocumentTemplate()
 //     ApplicationSetting() //Not Required //Changed Font Siz to - 4 (14pt)
@@ -263,7 +266,7 @@ beforeEach(() => {
 
 // describe('E2E Auto Testing:FS-014 Membership: Master Registration and Renewal', ()=> {
 
-    // MembershipRegistration(E2EData.NRIC_FOR_MEMBERSHIP_REGISTRATION) // Enter Full NRIC
+    MembershipRegistration(E2EData.NRIC_FOR_MEMBERSHIP_REGISTRATION) // Enter Full NRIC
     // CustomerCheckIn()
     // MemberType()
     // BadAddressUpdate()// Fail Need code updates
@@ -334,10 +337,10 @@ beforeEach(() => {
 
 // describe('E2E Auto Testing:FS-016 Interest Group: Registration and Maintenance Activities', ()=> {
 
-//   InterestGroupMembershipRegistration(E2EData.MEMBERID_FOR_IG_REGISTRATION) //Change NRIC each time after runing this code
+// InterestGroupMembershipRegistration(E2EData.MEMBERID_FOR_IG_REGISTRATION) //Change NRIC each time after runing this code
 // InterestGMembershipRenewal(E2EData.MEMBERID_FOR_IG_RENEWAL) //Change NRIC each time after runing this code
-//  BatchMemRegWithExistingMemUsingDefaultIG(E2EData.BATCH_MEMBER_REGISTRATION_WITH_EXISTING_MEMBER_USING_DEFUALT_IG) //Provide Active member ID
-//  BatchMemRegWithExistingMemUsingNonDefaultIG(E2EData.BATCH_MEMBER_REGISTRATION_WITH_EXISTING_MEMBER_USING_NON_DEFUALT_IG) //Provide Active member ID
+// BatchMemRegWithExistingMemUsingDefaultIG(E2EData.BATCH_MEMBER_REGISTRATION_WITH_EXISTING_MEMBER_USING_DEFUALT_IG) //Provide Active member ID //1
+// BatchMemRegWithExistingMemUsingNonDefaultIG(E2EData.BATCH_MEMBER_REGISTRATION_WITH_EXISTING_MEMBER_USING_NON_DEFUALT_IG) //Provide Active member ID //2
 // InterestGroupDeactivation()
 // InterestGroupConversion(E2EData.MEMBER_NAME_FOR_IG_CONVERSION ) //Please Provide Active Member Name
 // InterestGroupDeferment(E2EData.MEMBER_NAME_FOR_IG_DEFERMENT) //Please Provide Active Member Name
@@ -346,7 +349,9 @@ beforeEach(() => {
 // InterestGMembershipReverse(E2EData.MEMBER_NAME_FOR_IG_REVERSAL) //Provide Member Name
 // InterestGMembershipwaiver(E2EData.MEMBER_NAME_FOR_IG_WAIVER)  //Provide Member Name
 // InterestGroupManagement()
-//  InterestGroupMembershipManagment()
+// InterestGroupMembershipManagment()
+// //IG Main
+// //IG Renewal Advice
 
 // })
 
@@ -369,12 +374,12 @@ beforeEach(() => {
     // SFSBatchMembershipTermination(E2EData.SFS_BATCH_TERMINATION_IDS.MEMBERID1, E2EData.SFS_BATCH_TERMINATION_IDS.MEMBERID2,
     //     E2EData.SFS_BATCH_TERMINATION_IDS.MEMBERID3) // Enter 3 Active Member IDs //NOTE: Members inputed should be on the first page on sorting active
     // SFSBatchMemDefermentRequest(E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERNAME1, E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERID1,
-    //     E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERNAME2, E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERID2) //NOTE: Members inputed should be on the first page on sorting active
+    //     E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERNAME2, E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERID2) //NOTE: Members inputed should be on the first page on sorting new //Update Always 1st day of month
     // SFSReinstatementConfirmation(E2EData.SFS_ACTIVE_MEMBERID_FOR_REINSTATEMENT_CONFIRMATION)// Enter  Inactive MemberID
     // SFSBatchMembershipWaiver(E2EData.SFS_TWO_NRICS_FOR_BATCH_MEMBERSHIP_WAIVER.NRIC1, E2EData.SFS_TWO_NRICS_FOR_BATCH_MEMBERSHIP_WAIVER.NRIC2) // Enter 2 NRIC's for Member Registration 
-    //  SFSMemDefermentRequest(E2EData.SFS_NRIC_FOR_MEMBERSHIP_DEFERMENT_REQUEST) //Change NRIC before runing this function
-    // SFSMembershipResignationManagement(E2EData.SFS_NRIC_FOR_MEMBERSHIP_RESIGNATION_MANAGEMENT) //Change NRIC before runing this function
-    // SFSMembershipExpulsionAndReinstatment(E2EData.SFS_NRIC_FOR_MEMBERSHIP_EXPULSION_AND_REINSTATEMENT) //Change NRIC before runing this function
+//      SFSMemDefermentRequest(E2EData.SFS_NRIC_FOR_MEMBERSHIP_DEFERMENT_REQUEST) //Change NRIC before runing this function
+//     SFSMembershipResignationManagement(E2EData.SFS_NRIC_FOR_MEMBERSHIP_RESIGNATION_MANAGEMENT) //Change NRIC before runing this function
+//     SFSMembershipExpulsionAndReinstatment(E2EData.SFS_NRIC_FOR_MEMBERSHIP_EXPULSION_AND_REINSTATEMENT) //Change NRIC before runing this function
 
 // })
 
@@ -387,11 +392,12 @@ beforeEach(() => {
     //    E2EData.SFS_BATCH_TERMINATION_IDS.MEMBERID3) //Provide Active member ID's
     // BatchMemDefermentRequest(E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERNAME1, E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERID1,
     //    E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERNAME2, E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERID2) 
-    // BatchMembershipWaiver(E2EData.TWO_NRICS_FOR_BATCH_MEMBERSHIP_WAIVER.NRIC1, E2EData.TWO_NRICS_FOR_BATCH_MEMBERSHIP_WAIVER.NRIC2) // Enter 2 NRIC's for Member Registration 
+    //BatchMembershipWaiver(E2EData.TWO_NRICS_FOR_BATCH_MEMBERSHIP_WAIVER.NRIC1, E2EData.TWO_NRICS_FOR_BATCH_MEMBERSHIP_WAIVER.NRIC2) // Enter 2 NRIC's for Member Registration 
     // MemDefermentRequest(E2EData.NRIC_FOR_MEMBERSHIP_DEFERMENT_REQUEST) //Change NRIC before runing this function
-    //  MembershipResignationManagement(E2EData.NRIC_FOR_MEMBERSHIP_RESIGNATION_MANAGEMENT) //Change NRIC before runing this function
+    // MembershipResignationManagement(E2EData.NRIC_FOR_MEMBERSHIP_RESIGNATION_MANAGEMENT) //Change NRIC before runing this function
     // MembershipExpulsionAndReinstatment(E2EData.NRIC_FOR_MEMBERSHIP_EXPULSION_AND_REINSTATEMENT) //Change NRIC before runing this function
-
+//     //Membership Transaction Cancellation
+//     //Membership Adjustment
 // })
 
 
@@ -433,7 +439,7 @@ beforeEach(() => {
 
 // describe('E2E Auto Testing:FS-036 SRP', ()=> {
 
-//     //SRPModuleSetting()
+//     SRPModuleSetting()
 //     SAFRAPointsAdjustment(E2EData.MEMBERID_FOR_SAFRA_POINTS_ADJUSTMENT) //Provide Active member ID
 //     SAFRAPointsTransaction(E2EData.MEMBERID_FOR_SAFRA_POINTS_TRANSACTION) //Provide Active member ID
 //     SRPRedemptionCollection(E2EData.SRP_REDEMPTION_COLLECTION) //Provide Active member ID
