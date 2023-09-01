@@ -871,7 +871,7 @@ const data = {
     CustomerCreationPrincipal: {
         RegistrationInformation: {
             name: 'Test User ',
-            DOB: '24-Jan-1980',
+            DOB: '18-Aug-1980',
             gender: 'Male'
         },
         AddressInformation: {
@@ -882,10 +882,11 @@ const data = {
             myMailbox: "SGPost"
         },
         ContactInformation: {
-            handPhone: '+65 658 5896',
+            handPhone: '85658589',
             emailAddress: 'testuser',
-            emergencyContact: "+65 658 5893",
-            homeNumber: "10234567",
+            emergencyContact: "85 658 5893",
+            homeNumber: "81892739",
+            homeNumber2: "61892739",
 
             preferredContactModeSelectAll: 'check',
             preferredContactModeEmail: 'uncheck',
@@ -968,10 +969,10 @@ const data = {
             //ProfilePicture: 'test_images.png'
         },
         ContactInformation: {
-            handPhone: '+65 658 5896',
+            handPhone: '85 658 5896',
             emailAddress: 'testuser',
-            emergencyContact: "+65 658 5893",
-            homeNumber: "12112342",
+            emergencyContact: "85 658 5893",
+            homeNumber: "82112342",
 
             preferredContactModeSelectAll: 'check',
             preferredContactModeEmail: 'uncheck',

@@ -14,6 +14,7 @@ import Gifts_Report from '../Sub-Phase-4-5/FS-002-Reports/Gift-Reports/E2E-Gift-
 import InHouseMerchandise_Report from '../Sub-Phase-4-5/FS-002-Reports/InHouse-and-Merchandise-Reports/E2E-InHouse-and-Merchandise-Report'
 import SRP_Report from '../Sub-Phase-4-5/FS-002-Reports/SRP-Reports/E2E-SRP-Reports'
 import Reports_Payments from '../Sub-Phase-4-5/FS-002-Reports/Payments-Reports/E2E-Payments-Report'
+import AdminSetting_Report from '../Sub-Phase-4-5/FS-002-Reports/AdminSetting-Reports/E2E-AdminSetting-Reports'
 
 //FS - 004 Admin Settings
 import ApplicationSetting from '../Sub-Phase-1/FS-004-Admin-Settings/E2E-ApplicationSettings'
@@ -207,14 +208,15 @@ beforeEach(() => {
 
 //  describe('E2E Auto Testing:FS-002 Reports', () => {
 
-//        IG_Report()
-//     E1_Report()
-//     Accommodation_Report()
+    // IG_Report()
+    // E1_Report()
+    // Accommodation_Report()
 //     MemberCards_Report()
-    //    Gifts_Report()
+    // Gifts_Report()
 //     InHouseMerchandise_Report()
-//     SRP_Report()
-//     Reports_Payments()
+    // SRP_Report()
+    // Reports_Payments()
+    // AdminSetting_Report()
 
 //  })
 
@@ -264,9 +266,9 @@ beforeEach(() => {
 // })
 
 
-// describe('E2E Auto Testing:FS-014 Membership: Master Registration and Renewal', ()=> {
+describe('E2E Auto Testing:FS-014 Membership: Master Registration and Renewal', ()=> { 
 
-    MembershipRegistration(E2EData.NRIC_FOR_MEMBERSHIP_REGISTRATION) // Enter Full NRIC
+    //  MembershipRegistration(E2EData.NRIC_FOR_MEMBERSHIP_REGISTRATION) // Enter Full NRIC
     // CustomerCheckIn()
     // MemberType()
     // BadAddressUpdate()// Fail Need code updates
@@ -276,8 +278,8 @@ beforeEach(() => {
     // MemberStatusReasonCode() // Not Required
     // MassUpdateForMemberData() // Needs to update code for Approval
     // MembershipModuleSettings()
-    //  SFSMemberRegistion(E2EData.MEMBER_REGISTRATION_WITH_SPOUSE_AND_CHILD.PRINCIPAL_NRIC,
-    //      E2EData.MEMBER_REGISTRATION_WITH_SPOUSE_AND_CHILD.CHILD_NRIC, E2EData.MEMBER_REGISTRATION_WITH_SPOUSE_AND_CHILD.SPOUSE_NRIC) //Add three NRIC's for Principal, Dependent Child, Dependent Spouse
+     SFSMemberRegistion(E2EData.MEMBER_REGISTRATION_WITH_SPOUSE_AND_CHILD.PRINCIPAL_NRIC,
+         E2EData.MEMBER_REGISTRATION_WITH_SPOUSE_AND_CHILD.CHILD_NRIC/*, E2EData.MEMBER_REGISTRATION_WITH_SPOUSE_AND_CHILD.SPOUSE_NRIC*/) //Add three NRIC's for Principal, Dependent Child, Dependent Spouse
     // E2EMemberShipRenewal(E2EData.NRIC_FOR_MEMBERSHIP_REGISTRATION_AND_RENEWAL) //Add NRIC For Principal Registration
     
     
@@ -301,7 +303,7 @@ beforeEach(() => {
 //         E2EData.BATCH_REGISTRATION.NRIC_FOR_ADDING_NEW_DEPENDENT,
 //         E2EData.BATCH_REGISTRATION.PRINCIPALID_FOR_NEW_DEPENDENT) 
 
-//  })
+ })
 
 
 

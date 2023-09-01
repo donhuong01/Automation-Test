@@ -24,7 +24,7 @@ const MemModuleSettings = new MembershipModuleSetting()
 
 const UserID = Math.floor(Math.random() * 100000)
 
-const PrincipalName = "Test User 10" //Customerdata.CustomerCreationPrincipal.RegistrationInformation.name + UserID //
+const PrincipalName = "Test User 11" //Customerdata.CustomerCreationPrincipal.RegistrationInformation.name + UserID //
 const PrincipalEmail = PrincipalName+"@test.com" //Customerdata.CustomerCreationPrincipal.ContactInformation.emailAddress //"safraonlineuser009@gmail.com"//
 // const CustomerNRIC = '415D'
 // const CustomerNRICFull = 'S0309415D'
@@ -79,7 +79,7 @@ describe('[TS01] Membership Registration Management',function(){
                 homeNumber: '56585896',
         
                 // Preferred Contact Mode
-                // preferredContactModeSelectAll: Customerdata.CustomerCreationPrincipal.ContactInformation.preferredContactModeSelectAll,
+                preferredContactModeSelectAll: Customerdata.CustomerCreationPrincipal.ContactInformation.preferredContactModeSelectAll,
                 // preferredContactModeEmail: Customerdata.CustomerCreationPrincipal.ContactInformation.preferredContactModeEmail,
                 // preferredContactModeMail: Customerdata.CustomerCreationPrincipal.ContactInformation.preferredContactModeMail,
                 // preferredContactModeSMS: Customerdata.CustomerCreationPrincipal.ContactInformation.preferredContactModeSMS,
@@ -96,10 +96,10 @@ describe('[TS01] Membership Registration Management',function(){
             CustomerCreation.save();
         
         ///////////////////////////////PRINCIPAL REGISTRATION////////////////////////////////////////
-            cy.wait(15000)
+            cy.wait(5000)
             cy.Click(elems_Landing.SAFRA_Member)
             cy.Click(elems_Landing.Membership_Registration)
-            cy.wait(15000)
+            cy.wait(5000)
         
             MemRegPrincipal.verifyPersonalInformation({
                 MemberCategory: data.memberregistrationprincipal.Personal_Info.MemberCategory,
@@ -132,7 +132,7 @@ describe('[TS01] Membership Registration Management',function(){
         
         
             // Membership Tenure Selection
-            MemTenureSelect.principalTenureSelection(PrincipalName,'10 Years')
+            MemTenureSelect.principalTenureSelection(PrincipalName,'5 Years')
             // cy.wait(30000)
 
             // Click on add to cart
@@ -144,7 +144,7 @@ describe('[TS01] Membership Registration Management',function(){
             
             // Wait for 3 minites
             //cy.wait(25000) //QA
-            cy.wait(8000)   //UAT
+            cy.wait(5000)   //UAT
 
             //Verify New Created Member Reason Code
             MembershipRenewal.VerifyMemberStatus(PrincipalName, LAST4NRIC, 'New')

@@ -1287,7 +1287,7 @@ class MemberRegistrationPrincipal {
     AddDependent() {
         cy.wait(2000)
         cy.Click(elems_MemberRegistrationPrincipal.DEPENDENTS.BTN_ADDDEPENDENT)
-        cy.wait(30000)
+        cy.wait(12000)
 
         // cy.visit('https://qa-smcms-fe.azurewebsites.net/membershipregistrationdependent')
         cy.ValidateElementText(elems_PageHeader.LBL_PAGETITLE, 'Membership Registration - Dependent')

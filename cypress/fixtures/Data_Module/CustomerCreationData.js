@@ -3,7 +3,7 @@ const data = {
     CustomerCreationPrincipal: {
         RegistrationInformation: {
             name: 'Auto-User' + Math.floor(Math.random() * 100000 ),
-            DOB: '05-Oct-1978',
+            DOB: '18-Aug-1980',
             gender: 'Male',
             NRICFULL: 'S0187959F',
             NRICLAST4DIGIT: '959F'

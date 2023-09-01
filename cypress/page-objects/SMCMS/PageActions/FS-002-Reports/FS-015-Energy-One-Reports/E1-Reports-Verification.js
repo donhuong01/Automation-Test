@@ -95,7 +95,7 @@ class Reports_E1 {
         cy.SelectPickerItem(elems_E1MembershipListingRegistrationMobileReport.PCK_ENERGYONE, e1)
         
         cy.EnterDate(elems_E1MembershipListingRegistrationMobileReport.TXT_REGISTRATIONDATEFROM, registrationDateFrom)
-        cy.EnterDate(elems_E1MembershipListingRegistrationMobileReport.TXT_REGISTRATIONDATEFROM, registrationDateTo)
+        cy.EnterDate(elems_E1MembershipListingRegistrationMobileReport.TXT_REGISTRATIONDATETO, registrationDateTo)
         
         cy.Click(elems_E1MembershipListingRegistrationMobileReport.BTN_GENERATE)
         cy.wait(5000)
@@ -118,7 +118,7 @@ class Reports_E1 {
         cy.SelectPickerItem(elems_E1MembershipListingRegistrationMobileReport.PCK_ENERGYONE, e1)
         
         cy.EnterDate(elems_E1MembershipListingRegistrationMobileReport.TXT_REGISTRATIONDATEFROM, registrationDateFrom)
-        cy.EnterDate(elems_E1MembershipListingRegistrationMobileReport.TXT_REGISTRATIONDATEFROM, registrationDateTo)
+        cy.EnterDate(elems_E1MembershipListingRegistrationMobileReport.TXT_REGISTRATIONDATETO, registrationDateTo)
         
         cy.Click(elems_E1MembershipListingRegistrationMobileReport.BTN_GENERATE)
         cy.wait(5000)
@@ -233,7 +233,7 @@ class Reports_E1 {
         cy.SelectPickerItem(elems_E1MembershipRegistrationListingReport.PCK_ENERGYONE, e1)
         
         cy.EnterDate(elems_E1MembershipRegistrationListingReport.TXT_REGISTRATIONDATEFROM, registrationDateFrom)
-        cy.EnterDate(elems_E1MembershipRegistrationListingReport.TXT_REGISTRATIONDATEFROM, registrationDateTo)
+        cy.EnterDate(elems_E1MembershipRegistrationListingReport.TXT_REGISTRATIONDATETO, registrationDateTo)
         
         cy.Click(elems_E1MembershipRegistrationListingReport.BTN_GENERATE)
         cy.wait(5000)
