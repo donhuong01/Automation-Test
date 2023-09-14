@@ -8,6 +8,7 @@ class SRP_Reports {
     *****************************************************/
     verifyCollectedRedeemedStock(expectedPg){
     cy.visit('/report?reportId=ReportSRP.CollectedRedeemedStock')
+    cy.SelectPickerItem('//a[text()="Change"]', 'SAFRA HQ')
     cy.wait(2000)
     cy.ValidateElementText(elems_MemberCard.LBL_PAGE, expectedPg)
 

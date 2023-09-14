@@ -6,7 +6,7 @@ const Reports_AdminSetting  = new Report_AdminSetting ()
 
 const AdminSetting_Report = () => {
 
-    describe("SRP Verification",function(){
+    describe("Admin Settings Verification",function(){
 
         it('Checking functionallity and Verification on Collected Redeemed Stock Listing', function(){
             Reports_AdminSetting.verifyNotificationLogListing

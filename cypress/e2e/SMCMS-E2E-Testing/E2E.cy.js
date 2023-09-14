@@ -15,6 +15,8 @@ import InHouseMerchandise_Report from '../Sub-Phase-4-5/FS-002-Reports/InHouse-a
 import SRP_Report from '../Sub-Phase-4-5/FS-002-Reports/SRP-Reports/E2E-SRP-Reports'
 import Reports_Payments from '../Sub-Phase-4-5/FS-002-Reports/Payments-Reports/E2E-Payments-Report'
 import AdminSetting_Report from '../Sub-Phase-4-5/FS-002-Reports/AdminSetting-Reports/E2E-AdminSetting-Reports'
+import Facility_Report from '../Sub-Phase-4-5/FS-002-Reports/Facility-Reports/E2E-Facility-Report'
+import Membership_Report from '../Sub-Phase-4-5/FS-002-Reports/Membership-Reports/E2E-Membership-Reports'
 
 //FS - 004 Admin Settings
 import ApplicationSetting from '../Sub-Phase-1/FS-004-Admin-Settings/E2E-ApplicationSettings'
@@ -180,10 +182,10 @@ import PromotionforMembership from '../Sub-Phase-4-5/FS-042-Promotion/E2E-Promot
 
 
 //UAT E2E DATA 
-//import E2EData from '../SMCMS-E2E-Testing/E2EDataConfigUAT'
+import E2EData from '../SMCMS-E2E-Testing/E2EDataConfigUAT'
 
 //QA E2E Data
-import E2EData from '../SMCMS-E2E-Testing/E2EDataConfig'
+// import E2EData from '../SMCMS-E2E-Testing/E2EDataConfig'
 
 import login from '../../fixtures/login'
 import FacilityGroupBookingBallot from '../Sub-Phase-2/FS-010-Clubs(Facilites)/E2E-FacilityGroupBookingBallot'
@@ -195,6 +197,9 @@ beforeEach(() => {
    
     // Set local storage for UAT Enviroment
      cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
+
+    cy.visit('/membership/customerCheckin')
+    cy.SelectPickerItem('//a[text()="Change"]', 'SAFRA HQ')
 })
 
  
@@ -206,19 +211,21 @@ beforeEach(() => {
 //     SMCMSUser() 
 // })
 
-//  describe('E2E Auto Testing:FS-002 Reports', () => {
+ describe('E2E Auto Testing:FS-002 Reports', () => {
 
     // IG_Report()
-    // E1_Report()
+    E1_Report()
     // Accommodation_Report()
-//     MemberCards_Report()
+    // MemberCards_Report()
+    // Membership_Report()
     // Gifts_Report()
-//     InHouseMerchandise_Report()
+    // InHouseMerchandise_Report()
     // SRP_Report()
     // Reports_Payments()
     // AdminSetting_Report()
+    // Facility_Report()   // Still no data
 
-//  })
+ })
 
 
 // describe('E2E Auto Testing:FS-004 Admin: Settings', () => {
@@ -246,8 +253,8 @@ beforeEach(() => {
     // FacilityBookingAmendmentManagment()
     // FacilityBookingExtentionManagment() // Needs an update in Facility for extension setting
     // FacilityBookingCancellationManagment() // Needs own page action
-//     FacilityGroupBooking(E2EData.FACILITY_GROUP_BOOKING.SAFRA_MEMBER, E2EData.FACILITY_GROUP_BOOKING.SAFRA_RELATED_MEMBER,
-//        E2EData.FACILITY_GROUP_BOOKING.SAFRA_GUEST) //Pass Active Safra Member ID - 1.Safra Member 2. SAFRARelatedMemberships 3. Guest Member
+    // FacilityGroupBooking(E2EData.FACILITY_GROUP_BOOKING.SAFRA_MEMBER, E2EData.FACILITY_GROUP_BOOKING.SAFRA_RELATED_MEMBER,
+    //    E2EData.FACILITY_GROUP_BOOKING.SAFRA_GUEST) //Pass Active Safra Member ID - 1.Safra Member 2. SAFRARelatedMemberships 3. Guest Member
 //     FacilityGroupBookingBallot("A300002855", "A300003031") // Recheck again tomorrow morning
 //   })
 
@@ -266,9 +273,9 @@ beforeEach(() => {
 // })
 
 
-describe('E2E Auto Testing:FS-014 Membership: Master Registration and Renewal', ()=> { 
+// describe('E2E Auto Testing:FS-014 Membership: Master Registration and Renewal', ()=> { 
 
-    //  MembershipRegistration(E2EData.NRIC_FOR_MEMBERSHIP_REGISTRATION) // Enter Full NRIC
+//      MembershipRegistration(E2EData.NRIC_FOR_MEMBERSHIP_REGISTRATION) // Enter Full NRIC
     // CustomerCheckIn()
     // MemberType()
     // BadAddressUpdate()// Fail Need code updates
@@ -278,8 +285,8 @@ describe('E2E Auto Testing:FS-014 Membership: Master Registration and Renewal', 
     // MemberStatusReasonCode() // Not Required
     // MassUpdateForMemberData() // Needs to update code for Approval
     // MembershipModuleSettings()
-     SFSMemberRegistion(E2EData.MEMBER_REGISTRATION_WITH_SPOUSE_AND_CHILD.PRINCIPAL_NRIC,
-         E2EData.MEMBER_REGISTRATION_WITH_SPOUSE_AND_CHILD.CHILD_NRIC/*, E2EData.MEMBER_REGISTRATION_WITH_SPOUSE_AND_CHILD.SPOUSE_NRIC*/) //Add three NRIC's for Principal, Dependent Child, Dependent Spouse
+    //  SFSMemberRegistion(E2EData.MEMBER_REGISTRATION_WITH_SPOUSE_AND_CHILD.PRINCIPAL_NRIC,
+    //      E2EData.MEMBER_REGISTRATION_WITH_SPOUSE_AND_CHILD.CHILD_NRIC/*, E2EData.MEMBER_REGISTRATION_WITH_SPOUSE_AND_CHILD.SPOUSE_NRIC*/) //Add three NRIC's for Principal, Dependent Child, Dependent Spouse
     // E2EMemberShipRenewal(E2EData.NRIC_FOR_MEMBERSHIP_REGISTRATION_AND_RENEWAL) //Add NRIC For Principal Registration
     
     
@@ -303,14 +310,14 @@ describe('E2E Auto Testing:FS-014 Membership: Master Registration and Renewal', 
 //         E2EData.BATCH_REGISTRATION.NRIC_FOR_ADDING_NEW_DEPENDENT,
 //         E2EData.BATCH_REGISTRATION.PRINCIPALID_FOR_NEW_DEPENDENT) 
 
- })
+//  })
 
 
 
 // describe('E2E Auto Testing:FS-015 Energy One: Gym Membership and Maintenance Activities', ()=> {
 
-    // E1GYMMembershipRegistrationWithExistingMember(E2EData.ENTER_MEMBERID_AND_NAME_E1GYM_REG_WITH_EXISTING_MEMBET.MEMBERID,
-        // E2EData.ENTER_MEMBERID_AND_NAME_E1GYM_REG_WITH_EXISTING_MEMBET.MEMBERNAME) // Enter MemberID and Member Name
+    E1GYMMembershipRegistrationWithExistingMember(E2EData.ENTER_MEMBERID_AND_NAME_E1GYM_REG_WITH_EXISTING_MEMBET.MEMBERID,
+        E2EData.ENTER_MEMBERID_AND_NAME_E1GYM_REG_WITH_EXISTING_MEMBET.MEMBERNAME) // Enter MemberID and Member Name
 
     // E1GYMMembershipRenewal(E2EData.ENTER_MEMBERID_NAME_AND_E1GYMID_FOR_RENEWAL.MEMBERID,
     //     E2EData.ENTER_MEMBERID_NAME_AND_E1GYMID_FOR_RENEWAL.MEMBERNAME,

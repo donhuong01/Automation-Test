@@ -8,6 +8,7 @@ class Payment_Reports {
     *****************************************************/
     verifyReceiptListing(expectedPg){
     cy.visit('/report?reportId=ReportPayment.Receipt')
+    cy.SelectPickerItem('//a[text()="Change"]', 'SAFRA HQ')
     cy.wait(2000)
     cy.ValidateElementText(elems_Payment.LBL_PAGE, expectedPg)
 

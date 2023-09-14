@@ -9,6 +9,7 @@ class Reports_Gifts{
 *****************************************************/
 verifyCollectionSettlement(expectedPg){
     cy.visit('/report?reportId=ReportMembershipGiftRedemption.CollectionSettlement')
+    cy.SelectPickerItem('//a[text()="Change"]', 'SAFRA HQ')
     cy.wait(2000)
     cy.ValidateElementText(elems_CollectionSettlement.LBL_PAGE, expectedPg)
 

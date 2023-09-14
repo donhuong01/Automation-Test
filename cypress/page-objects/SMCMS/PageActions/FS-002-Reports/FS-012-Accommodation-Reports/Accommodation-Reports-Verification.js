@@ -14,6 +14,7 @@ class Reports_Accommodation {
      * Description: This function verifies the page
     *****************************************************/
     verifyAccommodationChargeRateListing(expectedPg,transactType, calcType, amountType, accommTypeName, accommName, location) {
+        cy.SelectPickerItem('//a[text()="Change"]', 'SAFRA HQ')
         cy.visit('/report?reportId=ReportAccommodation.AccommodationChargeRateTableListingReport')
         cy.wait(2000)
         cy.ValidateElementText(elems_AccommodationChargeRateTableListingReport.LBL_PAGE, expectedPg)

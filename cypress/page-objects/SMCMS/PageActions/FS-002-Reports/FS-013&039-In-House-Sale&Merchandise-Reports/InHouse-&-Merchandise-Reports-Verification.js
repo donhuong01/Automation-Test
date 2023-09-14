@@ -9,6 +9,7 @@ class Reports_InHouseMerchandise {
     *****************************************************/
     verifyInHouseRevenueSale(expectedPg, inHouseItem, receipt, dateFrom, dateTo){
         cy.visit('/report?reportId=ReportSale.InhouseRevenueSale')
+        cy.SelectPickerItem('//a[text()="Change"]', 'SAFRA HQ')
         cy.wait(2000)
         cy.ValidateElementText(elems_InHouseRevenueSale.LBL_PAGE, expectedPg)
 

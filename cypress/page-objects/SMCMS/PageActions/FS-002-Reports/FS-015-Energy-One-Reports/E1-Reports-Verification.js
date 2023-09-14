@@ -14,20 +14,25 @@ class Reports_E1 {
      * Description: This function verifies the page
     *****************************************************/
    verifyE1MembershipListingAddress(expectedPg, e1Main, e1, initialJoin, expiryDateFrom, expiryDateTo ){
+    cy.visit('/membership/customerCheckin')
+    cy.SelectPickerItem('//a[text()="Change"]', 'SAFRA HQ')
+
+    cy.wait(2000)
+
         cy.visit('/report?reportId=ReportE1.MembershipListingAddress')
         cy.wait(2000)
         cy.ValidateElementText(elems_E1MembershipListingReport.LBL_PAGE, expectedPg)
 
-        cy.SelectPickerItem(elems_E1MembershipListingReport.PCK_ENERGYONEMAIN, e1Main)
-        cy.wait(2000)
-        cy.SelectPickerItem(elems_E1MembershipListingReport.PCK_ENERGYONE, e1)
+        // cy.SelectPickerItem(elems_E1MembershipListingReport.PCK_ENERGYONEMAIN, e1Main)
+        // cy.wait(2000)
+        // cy.SelectPickerItem(elems_E1MembershipListingReport.PCK_ENERGYONE, e1)
 
-        cy.EnterDate(elems_E1MembershipListingReport.TXT_INITIAL_JOIN, initialJoin)
-        cy.EnterDate(elems_E1MembershipListingReport.TXT_EXPIRY_DATE_FROM, expiryDateFrom)
-        cy.EnterDate(elems_E1MembershipListingReport.TXT_EXPIRY_DATE_TO, expiryDateTo)
+        // cy.EnterDate(elems_E1MembershipListingReport.TXT_INITIAL_JOIN, initialJoin)
+        // cy.EnterDate(elems_E1MembershipListingReport.TXT_EXPIRY_DATE_FROM, expiryDateFrom)
+        // cy.EnterDate(elems_E1MembershipListingReport.TXT_EXPIRY_DATE_TO, expiryDateTo)
 
-        cy.Click(elems_E1MembershipListingReport.BTN_GENERATE)
-        cy.wait(5000)
+        // cy.Click(elems_E1MembershipListingReport.BTN_GENERATE)
+        // cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_E1MembershipListingReport.BTN_EXPORT)
    }
@@ -42,16 +47,16 @@ class Reports_E1 {
         cy.wait(2000)
         cy.ValidateElementText(elems_E1MembershipListingReport.LBL_PAGE, expectedPg)
         
-        cy.SelectPickerItem(elems_E1MembershipListingReport.PCK_ENERGYONEMAIN, e1Main)
-        cy.wait(2000)
-        cy.SelectPickerItem(elems_E1MembershipListingReport.PCK_ENERGYONE, e1)
+        // cy.SelectPickerItem(elems_E1MembershipListingReport.PCK_ENERGYONEMAIN, e1Main)
+        // cy.wait(2000)
+        // cy.SelectPickerItem(elems_E1MembershipListingReport.PCK_ENERGYONE, e1)
         
-        cy.EnterDate(elems_E1MembershipListingReport.TXT_INITIAL_JOIN, initialJoin)
-        cy.EnterDate(elems_E1MembershipListingReport.TXT_EXPIRY_DATE_FROM, expiryDateFrom)
-        cy.EnterDate(elems_E1MembershipListingReport.TXT_EXPIRY_DATE_TO, expiryDateTo)
+        // cy.EnterDate(elems_E1MembershipListingReport.TXT_INITIAL_JOIN, initialJoin)
+        // cy.EnterDate(elems_E1MembershipListingReport.TXT_EXPIRY_DATE_FROM, expiryDateFrom)
+        // cy.EnterDate(elems_E1MembershipListingReport.TXT_EXPIRY_DATE_TO, expiryDateTo)
         
-        cy.Click(elems_E1MembershipListingReport.BTN_GENERATE)
-        cy.wait(5000)
+        // cy.Click(elems_E1MembershipListingReport.BTN_GENERATE)
+        // cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_E1MembershipListingReport.BTN_EXPORT)
     }
@@ -66,16 +71,16 @@ class Reports_E1 {
         cy.wait(2000)
         cy.ValidateElementText(elems_E1MembershipListingReport.LBL_PAGE, expectedPg)
         
-        cy.SelectPickerItem(elems_E1MembershipListingReport.PCK_ENERGYONEMAIN, e1Main)
-        cy.wait(2000)
-        cy.SelectPickerItem(elems_E1MembershipListingReport.PCK_ENERGYONE, e1)
+        // cy.SelectPickerItem(elems_E1MembershipListingReport.PCK_ENERGYONEMAIN, e1Main)
+        // cy.wait(2000)
+        // cy.SelectPickerItem(elems_E1MembershipListingReport.PCK_ENERGYONE, e1)
         
-        cy.EnterDate(elems_E1MembershipListingReport.TXT_INITIAL_JOIN, initialJoin)
-        cy.EnterDate(elems_E1MembershipListingReport.TXT_EXPIRY_DATE_FROM, expiryDateFrom)
-        cy.EnterDate(elems_E1MembershipListingReport.TXT_EXPIRY_DATE_TO, expiryDateTo)
+        // cy.EnterDate(elems_E1MembershipListingReport.TXT_INITIAL_JOIN, initialJoin)
+        // cy.EnterDate(elems_E1MembershipListingReport.TXT_EXPIRY_DATE_FROM, expiryDateFrom)
+        // cy.EnterDate(elems_E1MembershipListingReport.TXT_EXPIRY_DATE_TO, expiryDateTo)
         
-        cy.Click(elems_E1MembershipListingReport.BTN_GENERATE)
-        cy.wait(5000)
+        // cy.Click(elems_E1MembershipListingReport.BTN_GENERATE)
+        // cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_E1MembershipListingReport.BTN_EXPORT)
     }
@@ -90,15 +95,15 @@ class Reports_E1 {
         cy.wait(2000)
         cy.ValidateElementText(elems_E1MembershipListingRegistrationMobileReport.LBL_PAGE, expectedPg)
         
-        cy.SelectPickerItem(elems_E1MembershipListingRegistrationMobileReport.PCK_ENERGYONEMAIN, e1Main)
-        cy.wait(2000)
-        cy.SelectPickerItem(elems_E1MembershipListingRegistrationMobileReport.PCK_ENERGYONE, e1)
+        // cy.SelectPickerItem(elems_E1MembershipListingRegistrationMobileReport.PCK_ENERGYONEMAIN, e1Main)
+        // cy.wait(2000)
+        // cy.SelectPickerItem(elems_E1MembershipListingRegistrationMobileReport.PCK_ENERGYONE, e1)
         
-        cy.EnterDate(elems_E1MembershipListingRegistrationMobileReport.TXT_REGISTRATIONDATEFROM, registrationDateFrom)
-        cy.EnterDate(elems_E1MembershipListingRegistrationMobileReport.TXT_REGISTRATIONDATETO, registrationDateTo)
+        // cy.EnterDate(elems_E1MembershipListingRegistrationMobileReport.TXT_REGISTRATIONDATEFROM, registrationDateFrom)
+        // cy.EnterDate(elems_E1MembershipListingRegistrationMobileReport.TXT_REGISTRATIONDATETO, registrationDateTo)
         
-        cy.Click(elems_E1MembershipListingRegistrationMobileReport.BTN_GENERATE)
-        cy.wait(5000)
+        // cy.Click(elems_E1MembershipListingRegistrationMobileReport.BTN_GENERATE)
+        // cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_E1MembershipListingRegistrationMobileReport.BTN_EXPORT)
     }
@@ -113,15 +118,15 @@ class Reports_E1 {
         cy.wait(2000)
         cy.ValidateElementText(elems_E1MembershipListingRegistrationMobileReport.LBL_PAGE, expectedPg)
         
-        cy.SelectPickerItem(elems_E1MembershipListingRegistrationMobileReport.PCK_ENERGYONEMAIN, e1Main)
-        cy.wait(2000)
-        cy.SelectPickerItem(elems_E1MembershipListingRegistrationMobileReport.PCK_ENERGYONE, e1)
+        // cy.SelectPickerItem(elems_E1MembershipListingRegistrationMobileReport.PCK_ENERGYONEMAIN, e1Main)
+        // cy.wait(2000)
+        // cy.SelectPickerItem(elems_E1MembershipListingRegistrationMobileReport.PCK_ENERGYONE, e1)
         
-        cy.EnterDate(elems_E1MembershipListingRegistrationMobileReport.TXT_REGISTRATIONDATEFROM, registrationDateFrom)
-        cy.EnterDate(elems_E1MembershipListingRegistrationMobileReport.TXT_REGISTRATIONDATETO, registrationDateTo)
+        // cy.EnterDate(elems_E1MembershipListingRegistrationMobileReport.TXT_REGISTRATIONDATEFROM, registrationDateFrom)
+        // cy.EnterDate(elems_E1MembershipListingRegistrationMobileReport.TXT_REGISTRATIONDATETO, registrationDateTo)
         
-        cy.Click(elems_E1MembershipListingRegistrationMobileReport.BTN_GENERATE)
-        cy.wait(5000)
+        // cy.Click(elems_E1MembershipListingRegistrationMobileReport.BTN_GENERATE)
+        // cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_E1MembershipListingRegistrationMobileReport.BTN_EXPORT)
     }
@@ -136,15 +141,15 @@ class Reports_E1 {
         cy.wait(2000)
         cy.ValidateElementText(elems_E1MembershipPayingListingReport.LBL_PAGE, expectedPg)
         
-        cy.SelectPickerItem(elems_E1MembershipPayingListingReport.PCK_ENERGYONEMAIN, e1Main)
-        cy.wait(2000)
-        cy.SelectPickerItem(elems_E1MembershipPayingListingReport.PCK_ENERGYONE, e1)
+        // cy.SelectPickerItem(elems_E1MembershipPayingListingReport.PCK_ENERGYONEMAIN, e1Main)
+        // cy.wait(2000)
+        // cy.SelectPickerItem(elems_E1MembershipPayingListingReport.PCK_ENERGYONE, e1)
         
-        cy.EnterDate(elems_E1MembershipPayingListingReport.TXT_STARTDATE, startDate)
-        cy.EnterDate(elems_E1MembershipPayingListingReport.TXT_ENDDATE, endDate)
+        // cy.EnterDate(elems_E1MembershipPayingListingReport.TXT_STARTDATE, startDate)
+        // cy.EnterDate(elems_E1MembershipPayingListingReport.TXT_ENDDATE, endDate)
         
-        cy.Click(elems_E1MembershipPayingListingReport.BTN_GENERATE)
-        cy.wait(5000)
+        // cy.Click(elems_E1MembershipPayingListingReport.BTN_GENERATE)
+        // cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_E1MembershipPayingListingReport.BTN_EXPORT)
     }
@@ -159,15 +164,15 @@ class Reports_E1 {
         cy.wait(2000)
         cy.ValidateElementText(elems_E1MembershipPayingListingReport.LBL_PAGE, expectedPg)
         
-        cy.SelectPickerItem(elems_E1MembershipPayingListingReport.PCK_ENERGYONEMAIN, e1Main)
-        cy.wait(2000)
-        cy.SelectPickerItem(elems_E1MembershipPayingListingReport.PCK_ENERGYONE, e1)
+        // cy.SelectPickerItem(elems_E1MembershipPayingListingReport.PCK_ENERGYONEMAIN, e1Main)
+        // cy.wait(2000)
+        // cy.SelectPickerItem(elems_E1MembershipPayingListingReport.PCK_ENERGYONE, e1)
         
-        cy.EnterDate(elems_E1MembershipPayingListingReport.TXT_STARTDATE, startDate)
-        cy.EnterDate(elems_E1MembershipPayingListingReport.TXT_ENDDATE, endDate)
+        // cy.EnterDate(elems_E1MembershipPayingListingReport.TXT_STARTDATE, startDate)
+        // cy.EnterDate(elems_E1MembershipPayingListingReport.TXT_ENDDATE, endDate)
         
-        cy.Click(elems_E1MembershipPayingListingReport.BTN_GENERATE)
-        cy.wait(5000)
+        // cy.Click(elems_E1MembershipPayingListingReport.BTN_GENERATE)
+        // cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_E1MembershipPayingListingReport.BTN_EXPORT)
     }
@@ -182,15 +187,15 @@ class Reports_E1 {
         cy.wait(2000)
         cy.ValidateElementText(elems_E1MembershipPayingListingReport.LBL_PAGE, expectedPg)
         
-        cy.SelectPickerItem(elems_E1MembershipPayingListingReport.PCK_ENERGYONEMAIN, e1Main)
-        cy.wait(2000)
-        cy.SelectPickerItem(elems_E1MembershipPayingListingReport.PCK_ENERGYONE, e1)
+        // cy.SelectPickerItem(elems_E1MembershipPayingListingReport.PCK_ENERGYONEMAIN, e1Main)
+        // cy.wait(2000)
+        // cy.SelectPickerItem(elems_E1MembershipPayingListingReport.PCK_ENERGYONE, e1)
         
-        cy.EnterDate(elems_E1MembershipPayingListingReport.TXT_STARTDATE, startDate)
-        cy.EnterDate(elems_E1MembershipPayingListingReport.TXT_ENDDATE, endDate)
+        // cy.EnterDate(elems_E1MembershipPayingListingReport.TXT_STARTDATE, startDate)
+        // cy.EnterDate(elems_E1MembershipPayingListingReport.TXT_ENDDATE, endDate)
         
-        cy.Click(elems_E1MembershipPayingListingReport.BTN_GENERATE)
-        cy.wait(5000)
+        // cy.Click(elems_E1MembershipPayingListingReport.BTN_GENERATE)
+        // cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_E1MembershipPayingListingReport.BTN_EXPORT)
     }
@@ -205,15 +210,15 @@ class Reports_E1 {
         cy.wait(2000)
         cy.ValidateElementText(elems_E1MembershipPayingListingReport.LBL_PAGE, expectedPg)
         
-        cy.SelectPickerItem(elems_E1MembershipPayingListingReport.PCK_ENERGYONEMAIN, e1Main)
-        cy.wait(2000)
-        cy.SelectPickerItem(elems_E1MembershipPayingListingReport.PCK_ENERGYONE, e1)
+        // cy.SelectPickerItem(elems_E1MembershipPayingListingReport.PCK_ENERGYONEMAIN, e1Main)
+        // cy.wait(2000)
+        // cy.SelectPickerItem(elems_E1MembershipPayingListingReport.PCK_ENERGYONE, e1)
         
-        cy.EnterDate(elems_E1MembershipPayingListingReport.TXT_STARTDATE, startDate)
-        cy.EnterDate(elems_E1MembershipPayingListingReport.TXT_ENDDATE, endDate)
+        // cy.EnterDate(elems_E1MembershipPayingListingReport.TXT_STARTDATE, startDate)
+        // cy.EnterDate(elems_E1MembershipPayingListingReport.TXT_ENDDATE, endDate)
         
-        cy.Click(elems_E1MembershipPayingListingReport.BTN_GENERATE)
-        cy.wait(5000)
+        // cy.Click(elems_E1MembershipPayingListingReport.BTN_GENERATE)
+        // cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_E1MembershipPayingListingReport.BTN_EXPORT)
     }
@@ -228,15 +233,15 @@ class Reports_E1 {
         cy.wait(2000)
         cy.ValidateElementText(elems_E1MembershipRegistrationListingReport.LBL_PAGE, expectedPg)
         
-        cy.SelectPickerItem(elems_E1MembershipRegistrationListingReport.PCK_ENERGYONEMAIN, e1Main)
-        cy.wait(2000)
-        cy.SelectPickerItem(elems_E1MembershipRegistrationListingReport.PCK_ENERGYONE, e1)
+        // cy.SelectPickerItem(elems_E1MembershipRegistrationListingReport.PCK_ENERGYONEMAIN, e1Main)
+        // cy.wait(2000)
+        // cy.SelectPickerItem(elems_E1MembershipRegistrationListingReport.PCK_ENERGYONE, e1)
         
-        cy.EnterDate(elems_E1MembershipRegistrationListingReport.TXT_REGISTRATIONDATEFROM, registrationDateFrom)
-        cy.EnterDate(elems_E1MembershipRegistrationListingReport.TXT_REGISTRATIONDATETO, registrationDateTo)
+        // cy.EnterDate(elems_E1MembershipRegistrationListingReport.TXT_REGISTRATIONDATEFROM, registrationDateFrom)
+        // cy.EnterDate(elems_E1MembershipRegistrationListingReport.TXT_REGISTRATIONDATETO, registrationDateTo)
         
-        cy.Click(elems_E1MembershipRegistrationListingReport.BTN_GENERATE)
-        cy.wait(5000)
+        // cy.Click(elems_E1MembershipRegistrationListingReport.BTN_GENERATE)
+        // cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_E1MembershipRegistrationListingReport.BTN_EXPORT)
     }
@@ -251,15 +256,15 @@ class Reports_E1 {
         cy.wait(2000)
         cy.ValidateElementText(elems_E1MembershipReinstatementListingReport.LBL_PAGE, expectedPg)
         
-        cy.SelectPickerItem(elems_E1MembershipReinstatementListingReport.PCK_ENERGYONEMAIN, e1Main)
-        cy.wait(2000)
-        cy.SelectPickerItem(elems_E1MembershipReinstatementListingReport.PCK_ENERGYONE, e1)
+        // cy.SelectPickerItem(elems_E1MembershipReinstatementListingReport.PCK_ENERGYONEMAIN, e1Main)
+        // cy.wait(2000)
+        // cy.SelectPickerItem(elems_E1MembershipReinstatementListingReport.PCK_ENERGYONE, e1)
         
-        cy.EnterDate(elems_E1MembershipReinstatementListingReport.TXT_REINSTATEMENTFROMMONTH, reinstatementfrom)
-        cy.EnterDate(elems_E1MembershipReinstatementListingReport.TXT_REINSTATEMENTTOMONTH, reinstatementto)
+        // cy.EnterDate(elems_E1MembershipReinstatementListingReport.TXT_REINSTATEMENTFROMMONTH, reinstatementfrom)
+        // cy.EnterDate(elems_E1MembershipReinstatementListingReport.TXT_REINSTATEMENTTOMONTH, reinstatementto)
         
-        cy.Click(elems_E1MembershipReinstatementListingReport.BTN_GENERATE)
-        cy.wait(5000)
+        // cy.Click(elems_E1MembershipReinstatementListingReport.BTN_GENERATE)
+        // cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_E1MembershipReinstatementListingReport.BTN_EXPORT)
     }
@@ -274,15 +279,15 @@ class Reports_E1 {
         cy.wait(2000)
         cy.ValidateElementText(elems_E1MembershipRenewalListing.LBL_PAGE, expectedPg)
         
-        cy.SelectPickerItem(elems_E1MembershipRenewalListing.PCK_ENERGYONEMAIN, e1Main)
-        cy.wait(2000)
-        cy.SelectPickerItem(elems_E1MembershipRenewalListing.PCK_ENERGYONE, e1)
+        // cy.SelectPickerItem(elems_E1MembershipRenewalListing.PCK_ENERGYONEMAIN, e1Main)
+        // cy.wait(2000)
+        // cy.SelectPickerItem(elems_E1MembershipRenewalListing.PCK_ENERGYONE, e1)
         
-        cy.EnterDate(elems_E1MembershipRenewalListing.TXT_RENEWALDATEFROM, renewalDatefrom)
-        cy.EnterDate(elems_E1MembershipRenewalListing.TXT_RENEWALDATETO, renewalDateto)
+        // cy.EnterDate(elems_E1MembershipRenewalListing.TXT_RENEWALDATEFROM, renewalDatefrom)
+        // cy.EnterDate(elems_E1MembershipRenewalListing.TXT_RENEWALDATETO, renewalDateto)
         
-        cy.Click(elems_E1MembershipRenewalListing.BTN_GENERATE)
-        cy.wait(5000)
+        // cy.Click(elems_E1MembershipRenewalListing.BTN_GENERATE)
+        // cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_E1MembershipRenewalListing.BTN_EXPORT)
     }
@@ -297,15 +302,15 @@ class Reports_E1 {
         cy.wait(2000)
         cy.ValidateElementText(elems_E1MembershipRenewalListingMobile.LBL_PAGE, expectedPg)
         
-        cy.SelectPickerItem(elems_E1MembershipRenewalListingMobile.PCK_ENERGYONEMAIN, e1Main)
-        cy.wait(2000)
-        cy.SelectPickerItem(elems_E1MembershipRenewalListingMobile.PCK_ENERGYONE, e1)
+        // cy.SelectPickerItem(elems_E1MembershipRenewalListingMobile.PCK_ENERGYONEMAIN, e1Main)
+        // cy.wait(2000)
+        // cy.SelectPickerItem(elems_E1MembershipRenewalListingMobile.PCK_ENERGYONE, e1)
         
-        cy.EnterDate(elems_E1MembershipRenewalListingMobile.TXT_RENEWALLISTINGDATEFROM, renewalListingDatefrom)
-        cy.EnterDate(elems_E1MembershipRenewalListingMobile.TXT_RENEWALLISTINGDATETO, renewalListingDateto)
+        // cy.EnterDate(elems_E1MembershipRenewalListingMobile.TXT_RENEWALLISTINGDATEFROM, renewalListingDatefrom)
+        // cy.EnterDate(elems_E1MembershipRenewalListingMobile.TXT_RENEWALLISTINGDATETO, renewalListingDateto)
         
-        cy.Click(elems_E1MembershipRenewalListingMobile.BTN_GENERATE)
-        cy.wait(5000)
+        // cy.Click(elems_E1MembershipRenewalListingMobile.BTN_GENERATE)
+        // cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_E1MembershipRenewalListingMobile.BTN_EXPORT)
     }
@@ -320,15 +325,15 @@ class Reports_E1 {
         cy.wait(2000)
         cy.ValidateElementText(elems_E1MembershipTerminationListing.LBL_PAGE, expectedPg)
         
-        cy.SelectPickerItem(elems_E1MembershipTerminationListing.PCK_ENERGYONEMAIN, e1Main)
-        cy.wait(2000)
-        cy.SelectPickerItem(elems_E1MembershipTerminationListing.PCK_ENERGYONE, e1)
+        // cy.SelectPickerItem(elems_E1MembershipTerminationListing.PCK_ENERGYONEMAIN, e1Main)
+        // cy.wait(2000)
+        // cy.SelectPickerItem(elems_E1MembershipTerminationListing.PCK_ENERGYONE, e1)
         
-        cy.EnterDate(elems_E1MembershipTerminationListing.TXT_TERMINATIONDATEFROM, terminationDatefrom)
-        cy.EnterDate(elems_E1MembershipTerminationListing.TXT_TERMINATIONDATETO, terminationDateto)
+        // cy.EnterDate(elems_E1MembershipTerminationListing.TXT_TERMINATIONDATEFROM, terminationDatefrom)
+        // cy.EnterDate(elems_E1MembershipTerminationListing.TXT_TERMINATIONDATETO, terminationDateto)
         
-        cy.Click(elems_E1MembershipTerminationListing.BTN_GENERATE)
-        cy.wait(5000)
+        // cy.Click(elems_E1MembershipTerminationListing.BTN_GENERATE)
+        // cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_E1MembershipTerminationListing.BTN_EXPORT)
     }

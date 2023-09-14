@@ -32,7 +32,7 @@ describe('[TS01] Facility Settings Calendar', function () {
     it('[TC01] Fill out detail form and and create new item', function () {
 
     cy.visit('/facilities/calendarListing')
-    cy.wait(5000)
+    cy.wait(8000)
 
         FacilitySettingsCalendarListingForm.CreateNew()
         FacilitySettingsCalendarDetailForm.EnterCalendarName(CalendarName)

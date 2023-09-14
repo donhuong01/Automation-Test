@@ -56,7 +56,7 @@ describe("Membership Reports Verification",function(){
     *                     FS 034                          *
     ******************************************************/
 
-    it('Checking functionallity and Verification on Bad Address Members Listing', function(){
+    it('Checking functionallity and Verification on Customer Marketing Profile Listing', function(){
         CustomerMarketing_Reports.verifyCustomerMarketingProfile
         (
            data.CUSTOMER_MARKTING.EXPECTEDPG,

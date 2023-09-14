@@ -14,7 +14,7 @@ describe("Member Cards Verification",function(){
         )
     })
 
-    it('Checking functionallity and Verification on Identity User Matrix Listing', function(){
+    it('Checking functionallity and Verification on Member Card Listing', function(){
         MemberCards_Reports.verifyMemberCard
         (
             data.MEMBER_CARD.EXPECTEDPG,

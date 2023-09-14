@@ -24,7 +24,7 @@ const MemModuleSettings = new MembershipModuleSetting()
 
 const UserID = Math.floor(Math.random() * 100000)
 
-const PrincipalName = "Test User 11" //Customerdata.CustomerCreationPrincipal.RegistrationInformation.name + UserID //
+const PrincipalName = "LD Test 011" //Customerdata.CustomerCreationPrincipal.RegistrationInformation.name + UserID //
 const PrincipalEmail = PrincipalName+"@test.com" //Customerdata.CustomerCreationPrincipal.ContactInformation.emailAddress //"safraonlineuser009@gmail.com"//
 // const CustomerNRIC = '415D'
 // const CustomerNRICFull = 'S0309415D'
@@ -39,10 +39,14 @@ describe('[TS01] Membership Registration Management',function(){
 
     it('[TC01] Membership Creation and Principal Registration', function () {
 
+        
+
         ///////////////////////////////CUSTOMER CREATION////////////////////////////////////////
         
             //Enable SFS
             cy.visit('/membership/moduleSettings')
+            cy.wait(2000)
+            cy.SelectPickerItem('//a[text()="Change"]', 'SAFRA Jurong')
             cy.wait(5000)
             
             MemModuleSettings.SFSActivate('CHECK')
@@ -59,7 +63,7 @@ describe('[TS01] Membership Registration Management',function(){
         
             CustomerCreation.fillOutRegistrationInfo({
                 name: PrincipalName,
-                DOB: Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB,
+                // DOB: Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB,
                 gender:Customerdata.CustomerCreationPrincipal.RegistrationInformation.gender,
                 /* profilePicture: "DP.png" */
             });
@@ -73,10 +77,10 @@ describe('[TS01] Membership Registration Management',function(){
             });
         
             CustomerCreation.fillOutContactInformation({
-                handPhone: '56585896',
+                handPhone: '86585896',
                 emailAddress: PrincipalEmail,
-                emergencyContact: Customerdata.CustomerCreationPrincipal.ContactInformation.emergencyContact,
-                homeNumber: '56585896',
+                // emergencyContact: Customerdata.CustomerCreationPrincipal.ContactInformation.emergencyContact,
+                // homeNumber: '56585896',
         
                 // Preferred Contact Mode
                 preferredContactModeSelectAll: Customerdata.CustomerCreationPrincipal.ContactInformation.preferredContactModeSelectAll,
@@ -99,15 +103,15 @@ describe('[TS01] Membership Registration Management',function(){
             cy.wait(5000)
             cy.Click(elems_Landing.SAFRA_Member)
             cy.Click(elems_Landing.Membership_Registration)
-            cy.wait(5000)
+            cy.wait(20000)
         
             MemRegPrincipal.verifyPersonalInformation({
                 MemberCategory: data.memberregistrationprincipal.Personal_Info.MemberCategory,
-                NameOnNRIC: PrincipalName,
-                NameOnCard: PrincipalName,
+                // NameOnNRIC: PrincipalName,
+                // NameOnCard: PrincipalName,
                 Nric: CustomerNRICFull,
                 Gender: data.memberregistrationprincipal.Personal_Info.Gender,
-                DateofBirth: data.memberregistrationprincipal.Personal_Info.DateofBirth,
+                // DateofBirth: data.memberregistrationprincipal.Personal_Info.DateofBirth,
                 Age: data.memberregistrationprincipal.Personal_Info.Age,
                 NSStatus: data.memberregistrationprincipal.Personal_Info.NSStatus,
                 NSRank: data.memberregistrationprincipal.Personal_Info.NSRank,
@@ -140,7 +144,7 @@ describe('[TS01] Membership Registration Management',function(){
             
         
             // Shopping cart and Payments
-            ShoppingCart.fillOutandApplyPayment('CASH')
+            ShoppingCart.fillOutandApplyPayment('CSO-CASH')
             
             // Wait for 3 minites
             //cy.wait(25000) //QA

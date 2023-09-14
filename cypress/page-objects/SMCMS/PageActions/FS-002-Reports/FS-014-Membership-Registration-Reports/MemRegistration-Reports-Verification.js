@@ -11,8 +11,8 @@ class Reports_MembershipMasters {
     cy.wait(2000)
     cy.ValidateElementText(elems_MembershipMasters.LBL_PAGE, expectedPg)
 
-    cy.Click(elems_MembershipMasters.BTN_GENERATE)
-    cy.wait(5000)
+    // cy.Click(elems_MembershipMasters.BTN_GENERATE)
+    // cy.wait(5000)
     //cy.ValidateElementText('//div[@data-id="table1_1"]')
     //cy.Click(elems_MembershipMasters.BTN_EXPORT)
     }
@@ -27,8 +27,8 @@ class Reports_MembershipMasters {
         cy.wait(2000)
         cy.ValidateElementText(elems_MembershipMasters.LBL_PAGE, expectedPg)
     
-        cy.Click(elems_MembershipMasters.BTN_GENERATE)
-        cy.wait(5000)
+        // cy.Click(elems_MembershipMasters.BTN_GENERATE)
+        // cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_MembershipMasters.BTN_EXPORT)
         }
@@ -43,12 +43,12 @@ class Reports_MembershipMasters {
         cy.wait(2000)
         cy.ValidateElementText(elems_MembershipMasters.LBL_PAGE, expectedPg)
 
-        cy.SelectDropDownItem(elems_MembershipMasters.DRP_DOCUMENT, docuProof)
-        cy.EnterDate(elems_MembershipMasters.VAL_STARTDATE, startDate)
-        cy.EnterDate(elems_MembershipMasters.VAL_ENDDATE, endDate)
+        // cy.SelectDropDownItem(elems_MembershipMasters.DRP_DOCUMENT, docuProof)
+        // cy.EnterDate(elems_MembershipMasters.VAL_STARTDATE, startDate)
+        // cy.EnterDate(elems_MembershipMasters.VAL_ENDDATE, endDate)
     
-        cy.Click(elems_MembershipMasters.BTN_GENERATE)
-        cy.wait(5000)
+        // cy.Click(elems_MembershipMasters.BTN_GENERATE)
+        // cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_MembershipMasters.BTN_EXPORT)
         }

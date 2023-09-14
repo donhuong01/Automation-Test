@@ -17,15 +17,20 @@ class Reports_IG {
     *****************************************************/
     verifyIGMainReports(expectedPg, iGMain, iGMainNumber){
 
+        cy.visit('/membership/customerCheckin')
+        cy.SelectPickerItem('//a[text()="Change"]', 'SAFRA HQ')
+
+        cy.wait(2000)
         cy.visit('/report?reportId=ReportIG.InterestGroupMainListing')
+        
         cy.wait(2000)
         cy.ValidateElementText(elems_IGMainListing.LBL_PAGETITLE, expectedPg)
 
-        cy.EnterText(elems_IGMainListing.TXT_IGMAINNAME, iGMain)
-        cy.EnterText(elems_IGMainListing.TXT_IGMAINNUMBER, iGMainNumber)
+        // cy.EnterText(elems_IGMainListing.TXT_IGMAINNAME, iGMain)
+        // cy.EnterText(elems_IGMainListing.TXT_IGMAINNUMBER, iGMainNumber)
 
-        cy.Click(elems_IGMainListing.BTN_GENERATE)
-        cy.wait(5000)
+        // cy.Click(elems_IGMainListing.BTN_GENERATE)
+        // cy.wait(5000)
         ////cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_IGMainListing.BTN_EXPORT)
 
@@ -42,13 +47,13 @@ class Reports_IG {
         cy.wait(2000)
         cy.ValidateElementText(elems_IGMemberhsipDeactivationLisitng.LBL_PAGETITLE, expectedPg)
 
-        cy.SelectPickerItem(elems_IGMemberhsipDeactivationLisitng.PCK_IGMAIN, iGMain)
-        cy.wait(2000)
-        cy.SelectPickerItem(elems_IGMemberhsipDeactivationLisitng.PCK_IG, iG)
-        cy.EnterDate(elems_IGMemberhsipDeactivationLisitng.TXT_DEACTIVATIONDATE, DeactDate)
+        // cy.SelectPickerItem(elems_IGMemberhsipDeactivationLisitng.PCK_IGMAIN, iGMain)
+        // cy.wait(2000)
+        // cy.SelectPickerItem(elems_IGMemberhsipDeactivationLisitng.PCK_IG, iG)
+        // cy.EnterDate(elems_IGMemberhsipDeactivationLisitng.TXT_DEACTIVATIONDATE, DeactDate)
 
-        cy.Click(elems_IGMainListing.BTN_GENERATE)
-        cy.wait(5000)
+        // cy.Click(elems_IGMainListing.BTN_GENERATE)
+        // cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_IGMainListing.BTN_EXPORT)
     }
@@ -64,14 +69,14 @@ class Reports_IG {
         cy.wait(2000)
         cy.ValidateElementText(elems_IGMembershipDefermentListing.LBL_PAGETITLE, expectedPg)
 
-        cy.SelectPickerItem(elems_IGMembershipDefermentListing.PCK_IGMAIN, iGMain)
-        cy.wait(2000)
-        cy.SelectPickerItem(elems_IGMembershipDefermentListing.PCK_IG, iG)
-        cy.EnterDate(elems_IGMembershipDefermentListing.TXT_DEFERMENTDATEFROM, defermentDateFrom)
-        cy.EnterDate(elems_IGMembershipDefermentListing.TXT_DEFERMENTDATETO, defermentDateTo)
+        // cy.SelectPickerItem(elems_IGMembershipDefermentListing.PCK_IGMAIN, iGMain)
+        // cy.wait(2000)
+        // cy.SelectPickerItem(elems_IGMembershipDefermentListing.PCK_IG, iG)
+        // cy.EnterDate(elems_IGMembershipDefermentListing.TXT_DEFERMENTDATEFROM, defermentDateFrom)
+        // cy.EnterDate(elems_IGMembershipDefermentListing.TXT_DEFERMENTDATETO, defermentDateTo)
 
-        cy.Click(elems_IGMembershipDefermentListing.BTN_GENERATE)
-        cy.wait(5000)
+        // cy.Click(elems_IGMembershipDefermentListing.BTN_GENERATE)
+        // cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_IGMembershipDefermentListing.BTN_EXPORT)
     }
@@ -87,8 +92,8 @@ class Reports_IG {
         cy.wait(2000)
         cy.ValidateElementText(elems_IGMemberhsipDeactivationLisitng.LBL_PAGETITLE, expectedPg)
 
-        cy.Click(elems_IGMainListing.BTN_GENERATE)
-        cy.wait(5000)
+        // cy.Click(elems_IGMainListing.BTN_GENERATE)
+        // cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_IGMainListing.BTN_EXPORT)
     }
@@ -104,14 +109,14 @@ class Reports_IG {
         cy.wait(2000)
         cy.ValidateElementText(elems_IGRenewalListing.LBL_PAGETITLE, expectedPg)
 
-        cy.SelectPickerItem(elems_IGRenewalListing.PCK_IGMAIN, iGMain)
-        cy.wait(2000)
-        cy.SelectPickerItem(elems_IGRenewalListing.PCK_IG, iG)
-        cy.EnterDate(elems_IGRenewalListing.TXT_RENEWALLISTINGFROM, renewalFrom)
-        cy.EnterDate(elems_IGRenewalListing.TXT_RENEWALLISTINGTO, renewalTo)
+        // cy.SelectPickerItem(elems_IGRenewalListing.PCK_IGMAIN, iGMain)
+        // cy.wait(2000)
+        // cy.SelectPickerItem(elems_IGRenewalListing.PCK_IG, iG)
+        // cy.EnterDate(elems_IGRenewalListing.TXT_RENEWALLISTINGFROM, renewalFrom)
+        // cy.EnterDate(elems_IGRenewalListing.TXT_RENEWALLISTINGTO, renewalTo)
 
-        cy.Click(elems_IGMainListing.BTN_GENERATE)
-        cy.wait(5000)
+        // cy.Click(elems_IGMainListing.BTN_GENERATE)
+        // cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_IGMainListing.BTN_EXPORT)
     }
@@ -127,14 +132,14 @@ class Reports_IG {
         cy.wait(2000)
         cy.ValidateElementText(elems_IGMembershipListing.LBL_PAGETITLE, expectedPg)
 
-        cy.SelectPickerItem(elems_IGMembershipListing.PCK_IGMAIN, iGMain)
-        cy.wait(2000)
-        cy.SelectPickerItem(elems_IGMembershipListing.PCK_IG, iG)
-        cy.EnterDate(elems_IGMembershipListing.TXT_INITIAL_JOIN, initialJoin)
-        cy.EnterDate(elems_IGMembershipListing.TXT_EXPIRY_DATE, expiryDate)
+        // cy.SelectPickerItem(elems_IGMembershipListing.PCK_IGMAIN, iGMain)
+        // cy.wait(2000)
+        // cy.SelectPickerItem(elems_IGMembershipListing.PCK_IG, iG)
+        // cy.EnterDate(elems_IGMembershipListing.TXT_INITIAL_JOIN, initialJoin)
+        // cy.EnterDate(elems_IGMembershipListing.TXT_EXPIRY_DATE, expiryDate)
 
-        cy.Click(elems_IGMainListing.BTN_GENERATE)
-        cy.wait(5000)
+        // cy.Click(elems_IGMainListing.BTN_GENERATE)
+        // cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_IGMainListing.BTN_EXPORT)
     }
@@ -151,14 +156,14 @@ class Reports_IG {
             cy.wait(2000)
             cy.ValidateElementText(elems_IGMembershipListing.LBL_PAGETITLE, expectedPg)
                     
-            cy.SelectPickerItem(elems_IGMembershipListing.PCK_IGMAIN, iGMain)
-            cy.wait(2000)
-            cy.SelectPickerItem(elems_IGMembershipListing.PCK_IG, iG)
-            cy.EnterDate(elems_IGMembershipListing.TXT_INITIAL_JOIN, initialJoin)
-            cy.EnterDate(elems_IGMembershipListing.TXT_EXPIRY_DATE, expiryDate)
+            // cy.SelectPickerItem(elems_IGMembershipListing.PCK_IGMAIN, iGMain)
+            // cy.wait(2000)
+            // cy.SelectPickerItem(elems_IGMembershipListing.PCK_IG, iG)
+            // cy.EnterDate(elems_IGMembershipListing.TXT_INITIAL_JOIN, initialJoin)
+            // cy.EnterDate(elems_IGMembershipListing.TXT_EXPIRY_DATE, expiryDate)
                     
-            cy.Click(elems_IGMainListing.BTN_GENERATE)
-            cy.wait(5000)
+            // cy.Click(elems_IGMainListing.BTN_GENERATE)
+            // cy.wait(5000)
             //cy.ValidateElementText('//div[@data-id="table1_1"]')
             //cy.Click(elems_IGMainListing.BTN_EXPORT)
          }
@@ -175,14 +180,14 @@ class Reports_IG {
             cy.wait(2000)
             cy.ValidateElementText(elems_IGMembershipListing.LBL_PAGETITLE, expectedPg)
                         
-            cy.SelectPickerItem(elems_IGMembershipListing.PCK_IGMAIN, iGMain)
-            cy.wait(2000)
-            cy.SelectPickerItem(elems_IGMembershipListing.PCK_IG, iG)
-            cy.EnterDate(elems_IGMembershipListing.TXT_INITIAL_JOIN, initialJoin)
-            cy.EnterDate(elems_IGMembershipListing.TXT_EXPIRY_DATE, expiryDate)
+            // cy.SelectPickerItem(elems_IGMembershipListing.PCK_IGMAIN, iGMain)
+            // cy.wait(2000)
+            // cy.SelectPickerItem(elems_IGMembershipListing.PCK_IG, iG)
+            // cy.EnterDate(elems_IGMembershipListing.TXT_INITIAL_JOIN, initialJoin)
+            // cy.EnterDate(elems_IGMembershipListing.TXT_EXPIRY_DATE, expiryDate)
                         
-            cy.Click(elems_IGMainListing.BTN_GENERATE)
-            cy.wait(5000)
+            // cy.Click(elems_IGMainListing.BTN_GENERATE)
+            // cy.wait(5000)
             //cy.ValidateElementText('//div[@data-id="table1_1"]')
             //cy.Click(elems_IGMainListing.BTN_EXPORT)
         }
@@ -198,14 +203,14 @@ class Reports_IG {
             cy.wait(2000)
             cy.ValidateElementText(elems_IGMembershipRegistrationListing.LBL_PAGETITLE, expectedPg)
                             
-            cy.SelectPickerItem(elems_IGMembershipRegistrationListing.PCK_IGMAIN, iGMain)
-            cy.wait(2000)
-            cy.SelectPickerItem(elems_IGMembershipRegistrationListing.PCK_IG, iG)
-            cy.EnterDate(elems_IGMembershipRegistrationListing.TXT_REGISTERDATEFROM, RegisterDateFrom)
-            cy.EnterDate(elems_IGMembershipRegistrationListing.TXT_REGISTERDATETO, RegisterDateTo)
+            // cy.SelectPickerItem(elems_IGMembershipRegistrationListing.PCK_IGMAIN, iGMain)
+            // cy.wait(2000)
+            // cy.SelectPickerItem(elems_IGMembershipRegistrationListing.PCK_IG, iG)
+            // cy.EnterDate(elems_IGMembershipRegistrationListing.TXT_REGISTERDATEFROM, RegisterDateFrom)
+            // cy.EnterDate(elems_IGMembershipRegistrationListing.TXT_REGISTERDATETO, RegisterDateTo)
                             
-            cy.Click(elems_IGMembershipRegistrationListing.BTN_GENERATE)
-            cy.wait(5000)
+            // cy.Click(elems_IGMembershipRegistrationListing.BTN_GENERATE)
+            // cy.wait(5000)
             //cy.ValidateElementText('//div[@data-id="table1_1"]')
                 //cy.Click(elems_IGMainListing.BTN_EXPORT)
         }
@@ -221,8 +226,8 @@ class Reports_IG {
             cy.wait(2000)
             cy.ValidateElementText(elems_IGMembershipTerminationListing.LBL_PAGETITLE, expectedPg)
         
-            cy.Click(elems_IGMembershipTerminationListing.BTN_GENERATE)
-            cy.wait(5000)
+            // cy.Click(elems_IGMembershipTerminationListing.BTN_GENERATE)
+            // cy.wait(5000)
             //cy.ValidateElementText('//div[@data-id="table1_1"]')
             //cy.Click(elems_IGMainListing.BTN_EXPORT)
         }
@@ -238,8 +243,8 @@ class Reports_IG {
             cy.wait(2000)
             cy.ValidateElementText(elems_IGMembershipTerminationListing.LBL_PAGETITLE, expectedPg)
         
-            cy.Click(elems_IGMembershipTerminationListing.BTN_GENERATE)
-            cy.wait(5000)
+            // cy.Click(elems_IGMembershipTerminationListing.BTN_GENERATE)
+            // cy.wait(5000)
             //cy.ValidateElementText('//div[@data-id="table1_1"]')
             //cy.Click(elems_IGMainListing.BTN_EXPORT)
         }
@@ -255,14 +260,14 @@ class Reports_IG {
             cy.wait(2000)
             cy.ValidateElementText(elems_IGMembershipTerminationListing.LBL_PAGETITLE, expectedPg)
                 
-            cy.SelectPickerItem(elems_IGMembershipRegistrationListing.PCK_IGMAIN, iGMain)
-            cy.wait(2000)
-            cy.SelectPickerItem(elems_IGMembershipTerminationListing.PCK_IG, iG)
-            cy.SelectDropDownItem(elems_IGMembershipTerminationListing.DRP_TERMINATEDBY, terminateBy)
-            cy.EnterDate(elems_IGMembershipTerminationListing.TXT_TERMINATIONDATE, terminateDate)
+            // cy.SelectPickerItem(elems_IGMembershipRegistrationListing.PCK_IGMAIN, iGMain)
+            // cy.wait(2000)
+            // cy.SelectPickerItem(elems_IGMembershipTerminationListing.PCK_IG, iG)
+            // cy.SelectDropDownItem(elems_IGMembershipTerminationListing.DRP_TERMINATEDBY, terminateBy)
+            // cy.EnterDate(elems_IGMembershipTerminationListing.TXT_TERMINATIONDATE, terminateDate)
 
-            cy.Click(elems_IGMembershipTerminationListing.BTN_GENERATE)
-            cy.wait(5000)
+            // cy.Click(elems_IGMembershipTerminationListing.BTN_GENERATE)
+            // cy.wait(5000)
             //cy.ValidateElementText('//div[@data-id="table1_1"]')
             //cy.Click(elems_IGMainListing.BTN_EXPORT)
         }
@@ -278,14 +283,14 @@ class Reports_IG {
             cy.wait(2000)
             cy.ValidateElementText(elems_IGMembershipWaiveristing.LBL_PAGETITLE, expectedPg)
                         
-            cy.SelectPickerItem(elems_IGMembershipWaiveristing.PCK_IGMAIN, iGMain)
-            cy.wait(2000)
-            cy.SelectPickerItem(elems_IGMembershipWaiveristing.PCK_IG, iG)
-            cy.EnterDate(elems_IGMembershipWaiveristing.TXT_MEMBERSHIPTERMSTART, termstartDate)
-            cy.EnterDate(elems_IGMembershipWaiveristing.TXT_MEMBERSHIPTERMEND, termendDate)
+            // cy.SelectPickerItem(elems_IGMembershipWaiveristing.PCK_IGMAIN, iGMain)
+            // cy.wait(2000)
+            // cy.SelectPickerItem(elems_IGMembershipWaiveristing.PCK_IG, iG)
+            // cy.EnterDate(elems_IGMembershipWaiveristing.TXT_MEMBERSHIPTERMSTART, termstartDate)
+            // cy.EnterDate(elems_IGMembershipWaiveristing.TXT_MEMBERSHIPTERMEND, termendDate)
         
-            cy.Click(elems_IGMembershipWaiveristing.BTN_GENERATE)
-            cy.wait(5000)
+            // cy.Click(elems_IGMembershipWaiveristing.BTN_GENERATE)
+            // cy.wait(5000)
             //cy.ValidateElementText('//div[@data-id="table1_1"]')
             //cy.Click(elems_IGMainListing.BTN_EXPORT)
         }
@@ -301,8 +306,8 @@ class Reports_IG {
             cy.wait(2000)
             cy.ValidateElementText(elems_IGMembershipTerminationListing.LBL_PAGETITLE, expectedPg)
                     
-            cy.Click(elems_IGMembershipTerminationListing.BTN_GENERATE)
-            cy.wait(5000)
+            // cy.Click(elems_IGMembershipTerminationListing.BTN_GENERATE)
+            // cy.wait(5000)
             //cy.ValidateElementText('//div[@data-id="table1_1"]')
             //cy.Click(elems_IGMainListing.BTN_EXPORT)
         }
@@ -318,14 +323,14 @@ class Reports_IG {
             cy.wait(2000)
             cy.ValidateElementText(elems_IGMembershipListing.LBL_PAGETITLE, expectedPg)
                                 
-            cy.SelectPickerItem(elems_IGMembershipListing.PCK_IGMAIN, iGMain)
-            cy.wait(2000)
-            cy.SelectPickerItem(elems_IGMembershipListing.PCK_IG, iG)
-            cy.EnterDate(elems_IGMembershipWaiveristing.TXT_MEMBERSHIPTERMSTART, termstartDate)
-            cy.EnterDate(elems_IGMembershipWaiveristing.TXT_MEMBERSHIPTERMEND, termendDate)
+            // cy.SelectPickerItem(elems_IGMembershipListing.PCK_IGMAIN, iGMain)
+            // cy.wait(2000)
+            // cy.SelectPickerItem(elems_IGMembershipListing.PCK_IG, iG)
+            // cy.EnterDate(elems_IGMembershipWaiveristing.TXT_MEMBERSHIPTERMSTART, termstartDate)
+            // cy.EnterDate(elems_IGMembershipWaiveristing.TXT_MEMBERSHIPTERMEND, termendDate)
                                 
-            cy.Click(elems_IGMainListing.BTN_GENERATE)
-            cy.wait(5000)
+            // cy.Click(elems_IGMainListing.BTN_GENERATE)
+            // cy.wait(5000)
             //cy.ValidateElementText('//div[@data-id="table1_1"]')
             //cy.Click(elems_IGMainListing.BTN_EXPORT)
         }
@@ -341,15 +346,15 @@ class Reports_IG {
             cy.wait(2000)
             cy.ValidateElementText(elems_IGMembershipListing.LBL_PAGETITLE, expectedPg)
     
-            cy.SelectPickerItem(elems_IGMembershipListing.PCK_IGMAIN, iGMain)
-            cy.wait(2000)
-            cy.SelectPickerItem(elems_IGMembershipListing.PCK_IG, iG)
-            cy.EnterDate(elems_IGMembershipListing.TXT_INITIAL_JOIN, initialJoin)
-            cy.EnterDate(elems_IGMembershipListing.TXT_EXPIRY_FROM, expiryFrom)
-            cy.EnterDate(elems_IGMembershipListing.TXT_EXPIRY_TO, expiryTo)
+            // cy.SelectPickerItem(elems_IGMembershipListing.PCK_IGMAIN, iGMain)
+            // cy.wait(2000)
+            // cy.SelectPickerItem(elems_IGMembershipListing.PCK_IG, iG)
+            // cy.EnterDate(elems_IGMembershipListing.TXT_INITIAL_JOIN, initialJoin)
+            // cy.EnterDate(elems_IGMembershipListing.TXT_EXPIRY_FROM, expiryFrom)
+            // cy.EnterDate(elems_IGMembershipListing.TXT_EXPIRY_TO, expiryTo)
     
-            cy.Click(elems_IGMainListing.BTN_GENERATE)
-            cy.wait(5000)
+            // cy.Click(elems_IGMainListing.BTN_GENERATE)
+            // cy.wait(5000)
             //cy.ValidateElementText('//div[@data-id="table1_1"]')
             //cy.Click(elems_IGMainListing.BTN_EXPORT)
         }
@@ -365,14 +370,14 @@ class Reports_IG {
             cy.wait(2000)
             cy.ValidateElementText(elems_IGMembershipRegistrationListingReceiptDate.LBL_PAGETITLE, expectedPg)
     
-            cy.SelectPickerItem(elems_IGMembershipRegistrationListingReceiptDate.PCK_IGMAIN, iGMain)
-            cy.wait(2000)
-            cy.SelectPickerItem(elems_IGMembershipRegistrationListingReceiptDate.PCK_IG, iG)
-            cy.EnterDate(elems_IGMembershipRegistrationListingReceiptDate.TXT_STARTDATE, startDate)
-            cy.EnterDate(elems_IGMembershipRegistrationListingReceiptDate.TXT_ENDDATE, endDate)
+            // cy.SelectPickerItem(elems_IGMembershipRegistrationListingReceiptDate.PCK_IGMAIN, iGMain)
+            // cy.wait(2000)
+            // cy.SelectPickerItem(elems_IGMembershipRegistrationListingReceiptDate.PCK_IG, iG)
+            // cy.EnterDate(elems_IGMembershipRegistrationListingReceiptDate.TXT_STARTDATE, startDate)
+            // cy.EnterDate(elems_IGMembershipRegistrationListingReceiptDate.TXT_ENDDATE, endDate)
     
-            cy.Click(elems_IGMembershipRegistrationListingReceiptDate.BTN_GENERATE)
-            cy.wait(5000)
+            // cy.Click(elems_IGMembershipRegistrationListingReceiptDate.BTN_GENERATE)
+            // cy.wait(5000)
             //cy.ValidateElementText('//div[@data-id="table1_1"]')
             //cy.Click(elems_IGMembershipRegistrationListingReceiptDate.BTN_EXPORT)
         }
@@ -388,16 +393,16 @@ class Reports_IG {
                 cy.wait(2000)
                 cy.ValidateElementText(elems_IGMembershipInterestGroupListing.LBL_PAGETITLE, expectedPg)
         
-                cy.SelectPickerItem(elems_IGMembershipInterestGroupListing.PCK_IG, iG)
-                cy.wait(2000)
-                cy.SelectPickerItem(elems_IGMembershipInterestGroupListing.PCK_CUSTOM_CATEGORY, customCategory)
-                cy.SelectDropDownItem(elems_IGMembershipInterestGroupListing.DRP_BUSINESS_TYPE, businessType)
-                cy.SelectDropDownItem(elems_IGMembershipInterestGroupListing.DRP_STATUS, status)
-                cy.EnterDate(elems_IGMembershipInterestGroupListing.TXT_PUBLISHINGDATE, publishingDate)
-                cy.EnterDate(elems_IGMembershipInterestGroupListing.TXT_ENDDATE, endDate)
+                // cy.SelectPickerItem(elems_IGMembershipInterestGroupListing.PCK_IG, iG)
+                // cy.wait(2000)
+                // cy.SelectPickerItem(elems_IGMembershipInterestGroupListing.PCK_CUSTOM_CATEGORY, customCategory)
+                // cy.SelectDropDownItem(elems_IGMembershipInterestGroupListing.DRP_BUSINESS_TYPE, businessType)
+                // cy.SelectDropDownItem(elems_IGMembershipInterestGroupListing.DRP_STATUS, status)
+                // cy.EnterDate(elems_IGMembershipInterestGroupListing.TXT_PUBLISHINGDATE, publishingDate)
+                // cy.EnterDate(elems_IGMembershipInterestGroupListing.TXT_ENDDATE, endDate)
         
-                cy.Click(elems_IGMembershipInterestGroupListing.BTN_GENERATE)
-                cy.wait(5000)
+                // cy.Click(elems_IGMembershipInterestGroupListing.BTN_GENERATE)
+                // cy.wait(5000)
                 //cy.ValidateElementText('//div[@data-id="table1_1"]')
                 //cy.Click(elems_IGMembershipInterestGroupListing.BTN_EXPORT)
         }

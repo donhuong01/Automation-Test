@@ -5,7 +5,7 @@ const data = {
             name: 'Auto-User' + Math.floor(Math.random() * 100000 ),
             DOB: '18-Aug-1980',
             gender: 'Male',
-            NRICFULL: 'S0187959F',
+            NRICFULL: 'S1261790I',
             NRICLAST4DIGIT: '959F'
         },
         AddressInformation: {
