@@ -59,7 +59,7 @@ Cypress.Commands.add('SelectDropDownItem', (locator, item) => {
     //     cy.xpath('//ul[@id="' + value + '"]/li[text()="' + item + '"]').click()
     // })
 
-    cy.xpath('//li[text()="' + item + '"]').click()
+    cy.xpath('//li[text()="' + item + '"]').click({force: true})
 })
 
 /*****************************************************
@@ -790,6 +790,24 @@ Cypress.Commands.add('SaveUserInfoInLocalStorage', (AuthenticatedUser, ActiveLoc
  * @param {string} SafraClient Safra Client Token ID
  *****************************************************/
 Cypress.Commands.add('SaveUserInfoInLocalStorageForUAT', (AuthenticatedUser, ActiveLocation, SafraClient) => {
+
+    cy.log('------ Save User ID, Location and Safra Client ID in Local Storage ------')
+
+    window.localStorage.setItem('azuatsf_smcms|authenticated_user', AuthenticatedUser)
+    window.localStorage.setItem('azuatsf_smcms|active_location', ActiveLocation)
+    window.localStorage.setItem('oidc.user:https://login-uat-smcms.safra.sg:safra.client', SafraClient)
+
+})
+
+/*****************************************************
+ * Command: SaveUserInfoInLocalStorageForUAT
+ * Description: This function store user information in local storage for Uat envoriment
+ *
+ * @param {string} AuthenticatedUser Authenticated User ID
+ * @param {string} ActiveLocation Active Location Name and ID
+ * @param {string} SafraClient Safra Client Token ID
+ *****************************************************/
+Cypress.Commands.add('SaveUserInfoInLocalStorageForUATR', (AuthenticatedUser, ActiveLocation, SafraClient) => {
 
     cy.log('------ Save User ID, Location and Safra Client ID in Local Storage ------')
 

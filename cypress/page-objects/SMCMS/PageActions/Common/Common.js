@@ -2,6 +2,7 @@ import elems_SMCMSShoppingCartAndPayment from '../../../../page-objects/SMCMS/El
 import elems_PendingTaskDetail from '../../Elements/Admin/FS004_Admin-Settings/PendingTaskDetail'
 import elems_PendingTaskListing from '../../Elements/Admin/FS004_Admin-Settings/PendingTaskListing'
 import elems_Alerts from '../../Elements/Common/Alerts'
+import login from '../../../../fixtures/login'
 
 class Commons {
 
@@ -85,6 +86,8 @@ class Commons {
        *****************************************************/
     ApprovalWorkFlow(TaskID, WorkFlowName, Approval, Remark) {
 
+        cy.visit('https://login-uat-smcms.safra.sg')
+        cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
         cy.visit('/admin/pendingTaskList')
         cy.wait(10000)
         cy.EnterText(elems_PendingTaskListing.TXT_TASKID, TaskID)

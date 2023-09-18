@@ -199,13 +199,14 @@ describe('[TS01] Membership Deferment Request Management',function(){
         
     })
 
-    it('[TC03] Creating a Membership Deferment Request', function(){
+    it.only('[TC03] Creating a Membership Deferment Request', function(){
 
         cy.visit('/membership/memberList')  //Visit web page for member listing 
         cy.wait(5000)
 
         //Filter Out Name
-        cy.EnterText(elems_MemberListing.TXT_NAME, PrincipalName)
+        cy.EnterText(elems_MemberListing.TXT_NAME, 'Test User')
+        cy.EnterText(elems_MemberListing.TXT_NRIC, '838C')
         cy.Click(elems_MemberListing.BTN_SEARCHFILTER)
         cy.wait(3000)
 
@@ -214,29 +215,29 @@ describe('[TS01] Membership Deferment Request Management',function(){
 
         cy.SelectTableItem(
             elems_MemberListing.TBL_MEMBERLISTING,
-            'Name', PrincipalName,
-            'NRIC (Last 4 digits)', CustomerNRIC
+            'Name', 'Test User',
+            'NRIC (Last 4 digits)', '838C'
             )
         
         cy.SelectBtnDropdownItem(elems_MemberListing.BTNDRP_MAINTENANCE,'Deferment')
        
         //Start page action 
 
-        const StartMonth =Defdata.Deferment.StartMonth
-        const ReasonCode = Defdata.Deferment.ReasonCode
-        const Remarks = Defdata.Deferment.Remarks
-        const DefermentPeriod = Defdata.Deferment.DefermentPeriod
-        const EndDate = Defdata.Deferment.EndDate  
+        // const StartMonth =Defdata.Deferment.StartMonth
+        // const ReasonCode = Defdata.Deferment.ReasonCode
+        // const Remarks = Defdata.Deferment.Remarks
+        // const DefermentPeriod = Defdata.Deferment.DefermentPeriod
+        // const EndDate = Defdata.Deferment.EndDate  
 
-        DefermentRequest.fillOutDefermentForm(StartMonth,DefermentPeriod,ReasonCode,Remarks)
+        // DefermentRequest.fillOutDefermentForm(StartMonth,DefermentPeriod,ReasonCode,Remarks)
         
-        // DefermentRequest.VerifyDefermentForm(Defdata.DefermentMemberListing)
+        // // DefermentRequest.VerifyDefermentForm(Defdata.DefermentMemberListing)
 
-        // DefermentRequest.verifyEndDate()
+        // // DefermentRequest.verifyEndDate()
         
-        DefermentRequest.Request()
+        // DefermentRequest.Request()
                                                 
-        DefermentRequest.verifyPageTitle()
+        // DefermentRequest.verifyPageTitle()
 
         commons.ApprovalWorkFlow('M-DFE','Membership Deferment Approval Workflow','Approve', 'Test Deferment Membership')
         

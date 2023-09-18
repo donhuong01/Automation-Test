@@ -194,9 +194,20 @@ beforeEach(() => {
 
     // Set local storage for QA Enviroment
     // cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
-   
-    // Set local storage for UAT Enviroment
-     cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
+    
+    /****************************
+     * Requestor Testing - Erik *
+     ****************************/
+    // Set local storage for UAT Enviroment  
+    // cy.SaveUserInfoInLocalStorageForUAT(login.R_authenticated_user_uat, login.R_active_location_uat, login.R_safra_client_uat)
+
+    /************************
+     * Admin Testing - Hung *
+     ************************/
+    // Set local storage for UAT Enviroment  
+    cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
+
+
 
     cy.visit('/membership/customerCheckin')
     cy.SelectPickerItem('//a[text()="Change"]', 'SAFRA HQ')
@@ -211,13 +222,13 @@ beforeEach(() => {
 //     SMCMSUser() 
 // })
 
- describe('E2E Auto Testing:FS-002 Reports', () => {
+//  describe('E2E Auto Testing:FS-002 Reports', () => {
 
     // IG_Report()
-    E1_Report()
+    // E1_Report()
     // Accommodation_Report()
     // MemberCards_Report()
-    // Membership_Report()
+    Membership_Report()
     // Gifts_Report()
     // InHouseMerchandise_Report()
     // SRP_Report()
@@ -225,7 +236,7 @@ beforeEach(() => {
     // AdminSetting_Report()
     // Facility_Report()   // Still no data
 
- })
+//  })
 
 
 // describe('E2E Auto Testing:FS-004 Admin: Settings', () => {
@@ -316,8 +327,8 @@ beforeEach(() => {
 
 // describe('E2E Auto Testing:FS-015 Energy One: Gym Membership and Maintenance Activities', ()=> {
 
-    E1GYMMembershipRegistrationWithExistingMember(E2EData.ENTER_MEMBERID_AND_NAME_E1GYM_REG_WITH_EXISTING_MEMBET.MEMBERID,
-        E2EData.ENTER_MEMBERID_AND_NAME_E1GYM_REG_WITH_EXISTING_MEMBET.MEMBERNAME) // Enter MemberID and Member Name
+    // E1GYMMembershipRegistrationWithExistingMember(E2EData.ENTER_MEMBERID_AND_NAME_E1GYM_REG_WITH_EXISTING_MEMBET.MEMBERID,
+    //    E2EData.ENTER_MEMBERID_AND_NAME_E1GYM_REG_WITH_EXISTING_MEMBET.MEMBERNAME) // Enter MemberID and Member Name
 
     // E1GYMMembershipRenewal(E2EData.ENTER_MEMBERID_NAME_AND_E1GYMID_FOR_RENEWAL.MEMBERID,
     //     E2EData.ENTER_MEMBERID_NAME_AND_E1GYMID_FOR_RENEWAL.MEMBERNAME,
@@ -402,7 +413,7 @@ beforeEach(() => {
     // BatchMemDefermentRequest(E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERNAME1, E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERID1,
     //    E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERNAME2, E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERID2) 
     //BatchMembershipWaiver(E2EData.TWO_NRICS_FOR_BATCH_MEMBERSHIP_WAIVER.NRIC1, E2EData.TWO_NRICS_FOR_BATCH_MEMBERSHIP_WAIVER.NRIC2) // Enter 2 NRIC's for Member Registration 
-    // MemDefermentRequest(E2EData.NRIC_FOR_MEMBERSHIP_DEFERMENT_REQUEST) //Change NRIC before runing this function
+    MemDefermentRequest(E2EData.NRIC_FOR_MEMBERSHIP_DEFERMENT_REQUEST) //Change NRIC before runing this function
     // MembershipResignationManagement(E2EData.NRIC_FOR_MEMBERSHIP_RESIGNATION_MANAGEMENT) //Change NRIC before runing this function
     // MembershipExpulsionAndReinstatment(E2EData.NRIC_FOR_MEMBERSHIP_EXPULSION_AND_REINSTATEMENT) //Change NRIC before runing this function
 //     //Membership Transaction Cancellation

@@ -1,11 +1,14 @@
 import Reports_CustomerMarketing from "../../../../page-objects/SMCMS/PageActions/FS-002-Reports/FS-034-Membership-Magazine-Reports/MemMagazine-Reports-Verification"
 import Reports_MembershipMasters from "../../../../page-objects/SMCMS/PageActions/FS-002-Reports/FS-014-Membership-Registration-Reports/MemRegistration-Reports-Verification"
 import Reports_MembershipVIPs from "../../../../page-objects/SMCMS/PageActions/FS-002-Reports/FS-025-VIP-Reports/MemVIP-Reports-Verification"
+import Reports_MemberCards from "../../../../page-objects/SMCMS/PageActions/FS-002-Reports/FS-030-Membership-CardManagement-Reports/CardManagement-Reports-Verification"
 import data from "../../../../fixtures/Data_Module/FS-002-Reports/Membership-Reports-data"
+
 
 const CustomerMarketing_Reports = new Reports_CustomerMarketing()
 const MembershipMasters_Reports = new Reports_MembershipMasters()
 const MembershipVIPs_Reports = new Reports_MembershipVIPs()
+const MemberCards_Reports = new Reports_MemberCards()
 
 const Membership_Report = () => {
 
@@ -69,7 +72,17 @@ describe("Membership Reports Verification",function(){
         )
     })
 
+    /******************************************************
+    *                     FS 030                          *
+    ******************************************************/
+    it('Checking functionallity and Verification on DBS Billing Listing', function(){
+        MemberCards_Reports.verifyDBSBilling
+        {
+            data.DBS_BILLING.EXPECTEDPG
+        }
         
+})
+
 })
 
 }

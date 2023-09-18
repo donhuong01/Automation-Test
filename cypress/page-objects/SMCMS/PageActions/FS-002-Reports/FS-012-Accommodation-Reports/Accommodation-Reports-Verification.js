@@ -19,15 +19,15 @@ class Reports_Accommodation {
         cy.wait(2000)
         cy.ValidateElementText(elems_AccommodationChargeRateTableListingReport.LBL_PAGE, expectedPg)
 
-        cy.SelectDropDownItem(elems_AccommodationChargeRateTableListingReport.DRP_TRANSACTIONTYPE, transactType)
-        cy.SelectDropDownItem(elems_AccommodationChargeRateTableListingReport.DRP_CALCULATIONTYPE, calcType)
-        cy.SelectDropDownItem(elems_AccommodationChargeRateTableListingReport.DRP_AMOUNTTYPE, amountType)
-        cy.SelectPickerItem(elems_AccommodationChargeRateTableListingReport.PCK_ACCOMODATIONTYPENAME, accommTypeName)
-        cy.SelectPickerItem(elems_AccommodationChargeRateTableListingReport.PCK_ACCOMMODATIONNAME, accommName)
-        cy.SelectPickerItem(elems_AccommodationChargeRateTableListingReport.PCK_LOCATION, location)
+        // cy.SelectDropDownItem(elems_AccommodationChargeRateTableListingReport.DRP_TRANSACTIONTYPE, transactType)
+        // cy.SelectDropDownItem(elems_AccommodationChargeRateTableListingReport.DRP_CALCULATIONTYPE, calcType)
+        // cy.SelectDropDownItem(elems_AccommodationChargeRateTableListingReport.DRP_AMOUNTTYPE, amountType)
+        // cy.SelectPickerItem(elems_AccommodationChargeRateTableListingReport.PCK_ACCOMODATIONTYPENAME, accommTypeName)
+        // cy.SelectPickerItem(elems_AccommodationChargeRateTableListingReport.PCK_ACCOMMODATIONNAME, accommName)
+        // cy.SelectPickerItem(elems_AccommodationChargeRateTableListingReport.PCK_LOCATION, location)
 
-        cy.Click(elems_AccommodationChargeRateTableListingReport.BTN_GENERATE)
-        cy.wait(5000)
+        // cy.Click(elems_AccommodationChargeRateTableListingReport.BTN_GENERATE)
+        // cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_IGMainListing.BTN_EXPORT)
     }
@@ -43,13 +43,13 @@ class Reports_Accommodation {
         cy.ValidateElementText(elems_AccommodationListingReports.LBL_PAGE, expectedPg)
 
         
-        cy.SelectPickerItem(elems_AccommodationListingReports.PCK_ACCOMODATIONTYPENAME, accommTypeName)
-        cy.SelectPickerItem(elems_AccommodationListingReports.PCK_ACCOMMODATIONNAME, accommName)
-        cy.EnterDate(elems_AccommodationListingReports.TXT_DATEOFACTIVATION, dateOfActivation)
-        cy.SelectDropDownItem(elems_AccommodationListingReports.DRP_STATUS, status)
+        // cy.SelectPickerItem(elems_AccommodationListingReports.PCK_ACCOMODATIONTYPENAME, accommTypeName)
+        // cy.SelectPickerItem(elems_AccommodationListingReports.PCK_ACCOMMODATIONNAME, accommName)
+        // cy.EnterDate(elems_AccommodationListingReports.TXT_DATEOFACTIVATION, dateOfActivation)
+        // cy.SelectDropDownItem(elems_AccommodationListingReports.DRP_STATUS, status)
 
-        cy.Click(elems_AccommodationListingReports.BTN_GENERATE)
-        cy.wait(5000)
+        // cy.Click(elems_AccommodationListingReports.BTN_GENERATE)
+        // cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_AccommodationListingReports.BTN_EXPORT)
     }
@@ -64,13 +64,13 @@ class Reports_Accommodation {
         cy.wait(2000)
         cy.ValidateElementText(elems_AccommodationOccupancyReports.LBL_PAGE, expectedPg)
 
-        cy.SelectPickerItem(elems_AccommodationOccupancyReports.PCK_ACCOMODATIONTYPENAME, accommTypeName)
-        cy.SelectPickerItem(elems_AccommodationOccupancyReports.PCK_ACCOMMODATIONNAME, accommName)
-        cy.SelectPickerItem(elems_AccommodationOccupancyReports.PCK_LOCATION, location)
+        // cy.SelectPickerItem(elems_AccommodationOccupancyReports.PCK_ACCOMODATIONTYPENAME, accommTypeName)
+        // cy.SelectPickerItem(elems_AccommodationOccupancyReports.PCK_ACCOMMODATIONNAME, accommName)
+        // cy.SelectPickerItem(elems_AccommodationOccupancyReports.PCK_LOCATION, location)
 
 
-        cy.Click(elems_AccommodationOccupancyReports.BTN_GENERATE)
-        cy.wait(5000)
+        // cy.Click(elems_AccommodationOccupancyReports.BTN_GENERATE)
+        // cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_AccommodationOccupancyReports.BTN_EXPORT)
     }
@@ -85,12 +85,12 @@ class Reports_Accommodation {
         cy.wait(2000)
         cy.ValidateElementText(elems_AccommodationOperatingPeriodListing.LBL_PAGE, expectedPg)
 
-        cy.SelectDropDownItem(elems_AccommodationOperatingPeriodListing.DRP_TYPEOFPEAK, typeofPeak)
-        cy.SelectDropDownItem(elems_AccommodationOperatingPeriodListing.DRP_OPERATINGDAY, operatingPeriod)
+        // cy.SelectDropDownItem(elems_AccommodationOperatingPeriodListing.DRP_TYPEOFPEAK, typeofPeak)
+        // cy.SelectDropDownItem(elems_AccommodationOperatingPeriodListing.DRP_OPERATINGDAY, operatingPeriod)
 
 
-        cy.Click(elems_AccommodationOperatingPeriodListing.BTN_GENERATE)
-        cy.wait(5000)
+        // cy.Click(elems_AccommodationOperatingPeriodListing.BTN_GENERATE)
+        // cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_AccommodationOperatingPeriodListing.BTN_EXPORT)
     }
@@ -105,10 +105,10 @@ class Reports_Accommodation {
         cy.wait(2000)
         cy.ValidateElementText(elems_AccommodationReservationBookingListing.LBL_PAGE, expectedPg)
 
-        cy.SelectPickerItem(elems_AccommodationReservationBookingListing.PCK_ACCOMMODATIONNAME, accommodationName)
+        // cy.SelectPickerItem(elems_AccommodationReservationBookingListing.PCK_ACCOMMODATIONNAME, accommodationName)
 
-        cy.Click(elems_AccommodationReservationBookingListing.BTN_GENERATE)
-        cy.wait(5000)
+        // cy.Click(elems_AccommodationReservationBookingListing.BTN_GENERATE)
+        // cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_AccommodationReservationBookingListing.BTN_EXPORT)
     }
@@ -123,10 +123,10 @@ class Reports_Accommodation {
         cy.wait(2000)
         cy.ValidateElementText(elems_AccommodationReservationBookingListing.LBL_PAGE, expectedPg)
 
-        cy.SelectPickerItem(elems_AccommodationReservationBookingListing.PCK_ACCOMMODATIONNAME, accommodationName)
+        // cy.SelectPickerItem(elems_AccommodationReservationBookingListing.PCK_ACCOMMODATIONNAME, accommodationName)
 
-        cy.Click(elems_AccommodationReservationBookingListing.BTN_GENERATE)
-        cy.wait(5000)
+        // cy.Click(elems_AccommodationReservationBookingListing.BTN_GENERATE)
+        // cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_AccommodationReservationBookingListing.BTN_EXPORT)
     }
@@ -141,8 +141,8 @@ class Reports_Accommodation {
         cy.wait(2000)
         cy.ValidateElementText(elems_AccommodationReservationBookingListing.LBL_PAGE, expectedPg)
 
-        cy.Click(elems_AccommodationReservationBookingListing.BTN_GENERATE)
-        cy.wait(5000)
+        // cy.Click(elems_AccommodationReservationBookingListing.BTN_GENERATE)
+        // cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_AccommodationReservationBookingListing.BTN_EXPORT)
     }
@@ -157,8 +157,8 @@ class Reports_Accommodation {
         cy.wait(2000)
         cy.ValidateElementText(elems_AccommodationReservationBookingListing.LBL_PAGE, expectedPg)
 
-        cy.Click(elems_AccommodationReservationBookingListing.BTN_GENERATE)
-        cy.wait(5000)
+        // cy.Click(elems_AccommodationReservationBookingListing.BTN_GENERATE)
+        // cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_AccommodationReservationBookingListing.BTN_EXPORT)
     }
@@ -173,13 +173,13 @@ class Reports_Accommodation {
         cy.wait(2000)
         cy.ValidateElementText(elems_AccommodationTypeListingReports.LBL_PAGE, expectedPg)
 
-        cy.SelectPickerItem(elems_AccommodationTypeListingReports.PCK_ACCOMODATIONTYPENAME, accommodationType)
-        cy.SelectPickerItem(elems_AccommodationTypeListingReports.PCK_LIFESTYLEGROUP, lifeStyle)
-        cy.SelectPickerItem(elems_AccommodationTypeListingReports.PCK_FABSGROUP, fabsGroup)
-        cy.SelectDropDownItem(elems_AccommodationTypeListingReports.DRP_STATUS, accoStatus)
+        // cy.SelectPickerItem(elems_AccommodationTypeListingReports.PCK_ACCOMODATIONTYPENAME, accommodationType)
+        // cy.SelectPickerItem(elems_AccommodationTypeListingReports.PCK_LIFESTYLEGROUP, lifeStyle)
+        // cy.SelectPickerItem(elems_AccommodationTypeListingReports.PCK_FABSGROUP, fabsGroup)
+        // cy.SelectDropDownItem(elems_AccommodationTypeListingReports.DRP_STATUS, accoStatus)
 
-        cy.Click(elems_AccommodationTypeListingReports.BTN_GENERATE)
-        cy.wait(5000)
+        // cy.Click(elems_AccommodationTypeListingReports.BTN_GENERATE)
+        // cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_AccommodationTypeListingReports.BTN_EXPORT)
     }

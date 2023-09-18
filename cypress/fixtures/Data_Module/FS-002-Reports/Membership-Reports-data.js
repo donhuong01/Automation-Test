@@ -37,6 +37,11 @@ const data = {
         EMAIL: ''
     },
 
+    //FS-030
+    DBS_BILLING: {
+        EXPECTEDPG: 'Report Viewer - ReportMemberCard.DBSBilling',
+    }
+
 }
 
 export default data

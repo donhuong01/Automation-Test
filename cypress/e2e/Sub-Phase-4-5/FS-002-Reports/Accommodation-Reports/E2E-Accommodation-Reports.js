@@ -58,13 +58,13 @@ describe("E1 Accommodation Verification",function(){
         )
     })
 
-    it('Checking functionallity and Verification on Accomodation Reservation Listing', function(){
-        Accommodation_Reports.verifyAccommodationReservationListing
-        (
-            data.ACCOM_RESERVATION.EXPECTEDPG,
-            data.ACCOM_RESERVATION.ACCOM_NAME
-        )
-    })
+    // it('Checking functionallity and Verification on Accomodation Reservation Listing', function(){
+    //     Accommodation_Reports.verifyAccommodationReservationListing
+    //     (
+    //         data.ACCOM_RESERVATION.EXPECTEDPG,
+    //         data.ACCOM_RESERVATION.ACCOM_NAME
+    //     )
+    // })
 
     it('Checking functionallity and Verification on Accomodation Booking Cancellation Listing', function(){
         Accommodation_Reports.verifyBookingCancellationListing

@@ -37,6 +37,24 @@ class Reports_MemberCards{
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_MemberCard.BTN_EXPORT)
     }
+
+    /*****************************************************
+     * Method: Checking functionallity and Verification on 
+               DBS Billing Listing
+     * Description: This function verifies the page
+    *****************************************************/
+    verifyDBSBilling(expectedPg, fromDate, toDate){
+    cy.visit('/report?reportId=ReportMemberCard.DBSBilling')
+    cy.wait(2000)
+    cy.ValidateElementText(elems_MemberCard.LBL_PAGE, expectedPg)
+
+    // cy.Click(elems_MemberCard.BTN_GENERATE)
+    //     cy.wait(5000)
+        //cy.ValidateElementText('//div[@data-id="table1_1"]')
+        //cy.Click(elems_MemberCard.BTN_EXPORT)
+    }
+
+
 }
 
 export default Reports_MemberCards
