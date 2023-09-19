@@ -30,9 +30,12 @@ class OnlineAccountAccessDetail {
    * @param {String} Function
   *****************************************************/
   AddFunction(Function) {
-    cy.SelectPickerFilter(elems_OnlineAccountAccessDetail.Functions.BTN_ADD_FUNCTION,
-      elems_OnlineAccountAccessDetail.AddFunctionPopUp.LBL_FUNCTIONAME_TEXTFIELD, Function,
-      elems_OnlineAccountAccessDetail.AddFunctionPopUp.BTN_SEARCH)
+    cy.get('.k-loading-image', { timeout: 10000 }).should('not.exist').then(() => {
+      cy.SelectPickerFilter(elems_OnlineAccountAccessDetail.Functions.BTN_ADD_FUNCTION,
+        elems_OnlineAccountAccessDetail.AddFunctionPopUp.LBL_FUNCTIONAME_TEXTFIELD, Function,
+        elems_OnlineAccountAccessDetail.AddFunctionPopUp.BTN_SEARCH)
+    })
+
 
   }
 
