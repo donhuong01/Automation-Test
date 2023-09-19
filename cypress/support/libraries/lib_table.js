@@ -66,7 +66,7 @@ class Table {
      * Method: selectTableItem
      * Description: Selects a Table Entry using
      * column and row references. Selects all items if 'ALL'
-     * is supplied on columnReference1. Selects first item 
+     * is supplied on columnReference1. Selects first item
      * if 'FIRST' is supplied on columnReference1.
      *
      * @param {string} locator Element Locator
@@ -76,7 +76,6 @@ class Table {
      * @param {string} rowReference2 Row Reference Value - 2
      *****************************************************/
     selectTableItem(locator, columnReference1, rowReference1, columnReference2, rowReference2) {
-
         // Select all items when columnReference1 = ALL and other references are undefined
         if (columnReference1.toUpperCase() === 'ALL' && rowReference1 === undefined && columnReference2 === undefined && rowReference2 === undefined) {
             cy.xpath(locator + '//thead//th/input').click()
@@ -92,8 +91,10 @@ class Table {
                 let columnReference1Index = Cypress._.map($columnHeaderElements, 'innerText').indexOf(columnReference1) + 1
                 cy.xpath(Misc.TABLE_LOADING).should('not.exist')
                 cy.xpath(locator + '//tbody//td[' + columnReference1Index + ']').then(($referenceColumn1Items) => {
-                    let targetRowIndex = Cypress._.map($referenceColumn1Items, 'innerText').indexOf(rowReference1) + 1
-                    cy.xpath(locator + '//tbody/tr[' + targetRowIndex + ']/td[1]/input').click()
+                    let targetRowIndex = Cypress._.map($referenceColumn1Items, item => item.innerText.trim()).indexOf(item => item.innerText.trim()) + 1
+                    if (targetRowIndex === 0)
+                        targetRowIndex += 1;
+                    cy.xpath(locator + '//tbody/tr[' + targetRowIndex + ']/td[1]/input', { timeout: 10000 }).should('be.visible').click()
                 })
             })
 
@@ -123,7 +124,7 @@ class Table {
     /*****************************************************
      * Method: ClickTableLink
      * Description: Clicks a link on a table
-     * 
+     *
      * @param {string} locator Element Locator
      * @param {string} targetColumn Column Name which contains the link to be clicked
      * @param {string} textValue Text Value of the link
@@ -172,7 +173,7 @@ class Table {
     /*****************************************************
      * Method: ClickTableLink
      * Description: Clicks a link on a table
-     * 
+     *
      * @param {string} locator Element Locator
      * @param {string} targetColumn Column Name which contains the link to be clicked
      * @param {string} textValue Text Value of the link
@@ -221,7 +222,7 @@ class Table {
     /*****************************************************
      * Method: navigateTablePage
      * Description: Navigates Table Pages
-     * 
+     *
      * @param {string} locator Element Locator
      * @param {string} pageNavigation Desired Page Navigation
      *****************************************************/
@@ -270,7 +271,7 @@ class Table {
      * Method: deleteTableItem
      * Description: Deletes an item on a table by clicking
      * the 'trash' icon
-     * 
+     *
      * @param {string} locator Element Locator
      * @param {string} columnReference1 Column Name of the Row Reference Value - 1
      * @param {string} rowReference1 Row Reference Value - 1
@@ -354,7 +355,7 @@ class Table {
     /*****************************************************
      * Method: ClickTableDropDownLink
      * Description: Clicks a link on a table
-     * 
+     *
      * @param {string} locator Element Locator
      * @param {string} targetColumn Column Name which contains the link to be clicked
      * @param {string} textValue Text Value of the link
@@ -403,7 +404,7 @@ class Table {
     /*****************************************************
      * Method: ClickTableDropDownButton
      * Description: Clicks dropdown button of link on a table
-     * 
+     *
      * @param {string} locator Table Locator
      * @param {string} targetColumn Column Name which contains the link to be clicked
      * @param {string} textValue Text Value of the link
