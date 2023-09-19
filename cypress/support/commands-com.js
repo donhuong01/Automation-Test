@@ -8,7 +8,7 @@ import "cypress-localstorage-commands";
 
 /*****************************************************
  * Command: GoToWebPage
- * Description: Navigates to web page defined at the 
+ * Description: Navigates to web page defined at the
  * Cypres 'env'
  *
  * @param {string} pageName Web Page Name
@@ -59,7 +59,7 @@ Cypress.Commands.add('SelectDropDownItem', (locator, item) => {
     //     cy.xpath('//ul[@id="' + value + '"]/li[text()="' + item + '"]').click()
     // })
 
-    cy.xpath('//li[text()="' + item + '"]').click({force: true})
+    cy.xpath('//li[text()="' + item + '"]', { timeout: 10000 }).click({ force: true })
 })
 
 /*****************************************************
@@ -238,7 +238,7 @@ Cypress.Commands.add('NavigateTablePage', (locator, pageNavigation) => {
  * Command: Display Data Description
  * Description: Logs the value of the 'objLabel' from
  * the test data. This will serve as the description
- * of the test data. 
+ * of the test data.
  *
  * @param {string} description Web Page Name
  *****************************************************/
@@ -607,7 +607,7 @@ Cypress.Commands.add('SelectSectionTab', (locator, tabName) => {
  * Description: Selects a tab on a section
  *
  * @param {string} locator Element Locator
- * @param {string} Option Option name (Yes,No or cancel) 
+ * @param {string} Option Option name (Yes,No or cancel)
  *****************************************************/
 
 Cypress.Commands.add('SelectPopUpOption', (Locator, option) => {
@@ -706,7 +706,7 @@ Cypress.Commands.add("SelectPickerDifferentItems", (locator, textField, item) =>
     cy.xpath(locator).scrollIntoView()
     cy.xpath(locator).click()
     cy.wait(5000)
-    cy.xpath(textField).type(item)
+    cy.xpath(textField, { timeout: 10000 }).should('exist').should('be.visible').type(item)
     cy.Click(Picker.BTN_SEARCHFILTERS);
 
     new Table().selectTableItem(Picker.TBL_PICKERITEMS, 'FIRST')
@@ -754,11 +754,11 @@ Cypress.Commands.add("SearchAndDeleteUser", (searchField, searchText, tableLocat
  * an expected text value
  * @param {string} locator Element Locator 
  * @param {binary} expectedTextFieldValue Expected Text Value 
- 
+
 *****************************************************/
 Cypress.Commands.add('VerifyTextFieldValue', (locator, expectedTextFieldValue) => {
     cy.log('------ Validate Element Value: ' + locator + ' ------')
-    //cy.xpath(locator).scrollIntoView()    
+    //cy.xpath(locator).scrollIntoView()   
     cy.xpath(locator).should('have.value', expectedTextFieldValue)
 })
 
@@ -821,7 +821,7 @@ Cypress.Commands.add('SaveUserInfoInLocalStorageForUATR', (AuthenticatedUser, Ac
  * Command: GlobalNavTo
  * Description: This function naviagtes to a form
  *
- * @param {string} firstMenu first menu value eg Admin 
+ * @param {string} firstMenu first menu value eg Admin
  * @param {string} secondMenu second menu value eg System Administration
  * @param {string} thirdMenu third menu value eg Code Type
  * @param {string} ExpectedPage Verify expected page
@@ -831,7 +831,7 @@ Cypress.Commands.add('GlobalNavTo', (firstMenu, secondMenu, thirdMenu, ExpectedP
     //Visit Check-in page
     cy.visit('/membership/customerCheckin')
 
-    //wait for 2 sec 
+    //wait for 2 sec
     cy.wait(5000)
 
     const selector = '//li[@aria-label'
@@ -853,7 +853,7 @@ Cypress.Commands.add('GlobalNavTo', (firstMenu, secondMenu, thirdMenu, ExpectedP
 /*****************************************************
  * Command: ClickFirstColumnButton //td[@aria-selected="false" and contains(.,"Monday")]
  * Description: This function click on first column plus button
- * @param {string} value select dropdown value 
+ * @param {string} value select dropdown value
  *****************************************************/
 Cypress.Commands.add('ClickTablePlusButton', (value) => {
 
@@ -914,12 +914,12 @@ Cypress.Commands.add('SelectFirstDropdownInPopupTable', (locator, colref, Value)
 })
 
 /*****************************************************
- * Command: Checkbox in a table 
- * Description: This function checks/unchecks in a table 
+ * Command: Checkbox in a table
+ * Description: This function checks/unchecks in a table
  * @param {string} locator // Table locator
  * @param {string} rowRef // Row reference number
  * @param {string} colRef //Table data reference number
- * @param {string} value //Check or uncheck 
+ * @param {string} value //Check or uncheck
  *****************************************************/
 Cypress.Commands.add('CheckboxInTable', (locator, rowRef, colRef, value) => {
 
@@ -1019,9 +1019,9 @@ Cypress.Commands.add("EnterDateWithCSS", (locator, Date) => {
 })
 
 /*****************************************************
- * Command: Types text in a table 
+ * Command: Types text in a table
  * Description: This function types text in table.
- * 
+ *
  * @author: jricohermoso
  * @param {string} locator // Table locator
  * @param {string} rowReference // Row reference number
@@ -1065,14 +1065,14 @@ Cypress.Commands.add('SelectTableDropdownWithHeaderGroup', (locator, columnHeade
 //For Button:
 /*****************************************************
  * Command: StyleRichTextButtons
- * Description: Selects formatting of the text in style toolbar buttons of rich text box 
+ * Description: Selects formatting of the text in style toolbar buttons of rich text box
  * Cypres 'env'
  *
- * @param {string} locator //form locator 
+ * @param {string} locator //form locator
  * @param {string} styleProperty //Button
  * @param {string} styleValue
  * For buttons: Bold, Italic,  Underline, Strikethrough, Undo, Align text left, Align text right, Align text center
- * 
+ *
  *****************************************************/
 Cypress.Commands.add("StyleRichTextButtons", (locator, styleProperty, styleValue) => {
     cy.log('------ StyleRichTextButtons : ' + locator + styleProperty + ':' + styleValue + ' ------')
@@ -1090,10 +1090,10 @@ Cypress.Commands.add("StyleRichTextButtons", (locator, styleProperty, styleValue
 
 /*****************************************************
  * Command: StyleRichText
- * Description: Selects formatting of the text in style  toolbar of rich text box 
+ * Description: Selects formatting of the text in style  toolbar of rich text box
  * Cypres 'env'
  *
- * @param {string} locator //form locator 
+ * @param {string} locator //form locator
  * @param {string} styleProperty
  * VALUES: Font Size, Font Name, Paragraph
  * @param {string} styleValue
@@ -1101,7 +1101,7 @@ Cypress.Commands.add("StyleRichTextButtons", (locator, styleProperty, styleValue
  * For Font Size: 1 (8pt), 2 (10 pt), 3 (12pt)
  * For Font Name:  Arial, Courier New, Georgia
  * For Paragraph: Heading 1, Heading 2, Heading 3, Heading 4
- * 
+ *
  *****************************************************/
 Cypress.Commands.add("StyleRichText", (locator, styleProperty, styleValue) => {
     cy.log('------ StyleRichText : ' + styleProperty + ':' + styleValue + ' ------')
@@ -1152,7 +1152,7 @@ Cypress.Commands.add('ClickTableDropDownLink', (locator, targetColumn, textValue
 /*****************************************************
  * Command: ClickTableDropDownLinkButton
  * Description: Clicks a dropdown button of link on a table with dropdown tree
- * 
+ *
  * @author: asadol
  * @param {string} locator Table Locator
  * @param {string} targetColumn Column Name which contains the button/link to be clicked
@@ -1199,7 +1199,7 @@ Cypress.Commands.add("SelectPickerFilter", (locator, textField, item, searchButt
 * @author: mfaisal
 * @param {string} locator Element locator (xpath)
 * @param {string} Date
-* @param {string} Time 
+* @param {string} Time
 *****************************************************/
 Cypress.Commands.add("EnterDateTime", (locator, Date, Time) => {
     let datearr = Date.split('-')
@@ -1231,7 +1231,7 @@ Cypress.Commands.add("EnterDateTime", (locator, Date, Time) => {
 *
 * @author: fShahzada
 * @param {string} locator Element locator (xpath)
-* @param {string} Time 
+* @param {string} Time
 *****************************************************/
 Cypress.Commands.add("EnterTime", (locator, Time) => {
 
@@ -1303,17 +1303,16 @@ Cypress.Commands.add('SelectMenuInTable', (tableLocator, rowRef, tdata, Value) =
  * @param {string} locator Item Picker Element locator
  * @param {string} textField value to select in item picker
  * @param {string} item value to select in item picker
- * @param {string} SearchFilter 
- * @param {string} wait Custom wait 
+ * @param {string} SearchFilter
+ * @param {string} wait Custom wait
  *****************************************************/
 Cypress.Commands.add("SelectPickerDifferentItemsWait", (locator, wait, textField, item, SearchFilter) => {
     cy.log('------ SelectPickerDifferentItemsWait : ' + locator + ' ------')
     cy.xpath(locator).scrollIntoView()
     cy.xpath(locator).click()
-    cy.wait(wait)
-    cy.xpath(textField).type(item)
+    // cy.wait(wait)
+    cy.xpath(textField, { timeout: wait }).should('be.visible').type(item)
     cy.Click(SearchFilter);
-
     new Table().selectTableItem(Picker.TBL_PICKERITEMS, 'FIRST')
     cy.Click(Picker.BTN_SELECT);
 })
