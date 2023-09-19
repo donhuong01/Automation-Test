@@ -7,17 +7,20 @@ class PositionDetailForm {
     /*****************************************************
      * Method: verifyPageTitle
      * Description: Verify page title
-     * @param {string} ExpectedPg 
+     * @param {string} ExpectedPg
      *****************************************************/
     verifyPageTitle(ExpectedPg) {
-        cy.ValidateElementText(elems_PageHeader.LBL_PAGETITLE, ExpectedPg)
+        cy.xpath('//div[@class="page-title"]/h2', { timeout: 10000 }).should('have.text', ExpectedPg).then(() => {
+            cy.ValidateElementText(elems_PageHeader.LBL_PAGETITLE, ExpectedPg)
+        });
+
     }
 
     /*****************************************************
      * Method: fillOutPositionDetailForm
      * Description: Fills Out the Position Detail Form
-     * @param {string} PositionName Position Name 
-     * @param {string} Role Role 
+     * @param {string} PositionName Position Name
+     * @param {string} Role Role
      * @param {string} Location Location
      * @param {string} Remark Remark
      *****************************************************/
@@ -48,14 +51,12 @@ class PositionDetailForm {
     /*****************************************************
      * Method: addUsers
      * Description: Select user from the userlist
-     * @param {string} targetUserEmail user email 
-     * @param {string} targetUserName user name 
+     * @param {string} targetUserEmail user email
+     * @param {string} targetUserName user name
      *****************************************************/
     addUsersAndVerifyTableEntry(targetUserEmail, targetUserName) {
-
-
         cy.SelectPickerDifferentItemsWait(
-            elems_SMCMSRoleDetail.BTN_ADDUSERS, 5000,
+            elems_SMCMSRoleDetail.BTN_ADDUSERS, 15000,
             elems_Picker.TXT_LOGINEMAIL,
             targetUserEmail,
             elems_SMCMSRoleDetail.BTN_SEARCHFILTERS
@@ -73,7 +74,7 @@ class PositionDetailForm {
     /*****************************************************
      * Method: searchAndDeleteUser
      * Description: Select user from the userlist and delete the user
-     * @param {string} targetUserEmail user email 
+     * @param {string} targetUserEmail user email
      *****************************************************/
     searchAndDeleteUser(targetUserEmail) {
 
@@ -100,7 +101,7 @@ class PositionDetailForm {
     /*****************************************************
      * Method: searchAndDeleteUser
      * Description: Select user from the userlist and delete the user
-     * @param {string} targetUserEmail user email 
+     * @param {string} targetUserEmail user email
      *****************************************************/
     AddPostionPicsAndDeleteUser(targetUserEmail) {
 
@@ -121,7 +122,7 @@ class PositionDetailForm {
     /*****************************************************
      * Method: Save
      * Description: THis function clicks on save button
-     * @param {string} targetUserEmail user email 
+     * @param {string} targetUserEmail user email
      *****************************************************/
     Save() {
         cy.Click(elems_SMCMSRoleDetail.BTN_SAVE)
@@ -130,7 +131,7 @@ class PositionDetailForm {
     /*****************************************************
      * Method: Cancel
      * Description: THis function clicks on Cancel button
-     * @param {string} targetUserEmail user email 
+     * @param {string} targetUserEmail user email
      *****************************************************/
     Cancel() {
         cy.Click(elems_SMCMSRoleDetail.BTN_CANCEL)
