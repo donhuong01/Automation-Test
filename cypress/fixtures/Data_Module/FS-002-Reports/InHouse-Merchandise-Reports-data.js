@@ -82,6 +82,11 @@ const data = {
 
     table: '//div[@data-id="table1_1"]',
 
+     //Counter Receipt Collection
+     COUNTER_RECEIPT: {
+        EXPECTEDPG: 'Report Viewer - ReportSale.CounterReceiptCollection',
+    },
+
     //InHouse Revenue Sale
     INHOUSE_REVENUE_SALE: {
         EXPECTEDPG: 'Report Viewer - ReportSale.InhouseRevenueSale',

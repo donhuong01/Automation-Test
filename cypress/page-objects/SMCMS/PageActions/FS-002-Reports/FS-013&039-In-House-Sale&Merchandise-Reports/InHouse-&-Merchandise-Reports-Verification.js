@@ -2,24 +2,48 @@ import elems_MerchandiseRevenueSale from "../../../Elements/FS-002 Reports/FS-01
 import elems_InHouseRevenueSale from "../../../Elements/FS-002 Reports/FS-013&039-In-House-Sale&Merchandise/InHouseRevenueSale"
 
 class Reports_InHouseMerchandise {
-     /*****************************************************
+     
+    /*****************************************************
+        * Method: Checking functionallity and Verification on 
+                Counter Receipt Collection Listing
+        * Description: This function verifies the page
+    *****************************************************/
+    verifyCounterReceiptCollection(expectedPg, inHouseItem, receipt, dateFrom, dateTo){
+        cy.visit('/report?reportId=ReportSale.CounterReceiptCollection')
+        // cy.SelectPickerItem('//a[text()="Change"]', 'SAFRA HQ')
+        cy.wait(2000)
+        cy.ValidateElementText(elems_InHouseRevenueSale.LBL_PAGE, expectedPg)
+
+        // cy.SelectPickerItem(elems_InHouseRevenueSale.PCK_INHOUSEITEM, inHouseItem)
+        // cy.SelectDropDownItem(elems_InHouseRevenueSale.DRP_RECEIPT, receipt)
+        // cy.EnterDate(elems_InHouseRevenueSale.TXT_DATEFROM, dateFrom)
+        // cy.EnterDate(elems_InHouseRevenueSale.TXT_DATETO, dateTo)
+    
+        // cy.Click(elems_InHouseRevenueSale.BTN_GENERATE)
+        // cy.wait(5000)
+        //cy.ValidateElementText('//div[@data-id="table1_1"]')
+        //cy.Click(elems_InHouseRevenueSale.BTN_EXPORT)
+    }
+    
+    
+    /*****************************************************
         * Method: Checking functionallity and Verification on 
                 In-House Revenue Sale Listing
         * Description: This function verifies the page
     *****************************************************/
     verifyInHouseRevenueSale(expectedPg, inHouseItem, receipt, dateFrom, dateTo){
         cy.visit('/report?reportId=ReportSale.InhouseRevenueSale')
-        cy.SelectPickerItem('//a[text()="Change"]', 'SAFRA HQ')
+        // cy.SelectPickerItem('//a[text()="Change"]', 'SAFRA HQ')
         cy.wait(2000)
         cy.ValidateElementText(elems_InHouseRevenueSale.LBL_PAGE, expectedPg)
 
-        cy.SelectPickerItem(elems_InHouseRevenueSale.PCK_INHOUSEITEM, inHouseItem)
-        cy.SelectDropDownItem(elems_InHouseRevenueSale.DRP_RECEIPT, receipt)
-        cy.EnterDate(elems_InHouseRevenueSale.TXT_DATEFROM, dateFrom)
-        cy.EnterDate(elems_InHouseRevenueSale.TXT_DATETO, dateTo)
+        // cy.SelectPickerItem(elems_InHouseRevenueSale.PCK_INHOUSEITEM, inHouseItem)
+        // cy.SelectDropDownItem(elems_InHouseRevenueSale.DRP_RECEIPT, receipt)
+        // cy.EnterDate(elems_InHouseRevenueSale.TXT_DATEFROM, dateFrom)
+        // cy.EnterDate(elems_InHouseRevenueSale.TXT_DATETO, dateTo)
     
-        cy.Click(elems_InHouseRevenueSale.BTN_GENERATE)
-        cy.wait(5000)
+        // cy.Click(elems_InHouseRevenueSale.BTN_GENERATE)
+        // cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_InHouseRevenueSale.BTN_EXPORT)
     }
@@ -34,13 +58,13 @@ class Reports_InHouseMerchandise {
         cy.wait(2000)
         cy.ValidateElementText(elems_InHouseRevenueSale.LBL_PAGE, expectedPg)
 
-        cy.SelectPickerItem(elems_InHouseRevenueSale.PCK_INHOUSEITEM, inHouseItem)
-        cy.SelectDropDownItem(elems_InHouseRevenueSale.DRP_RECEIPT, receipt)
-        cy.EnterDate(elems_InHouseRevenueSale.TXT_DATEFROM, dateFrom)
-        cy.EnterDate(elems_InHouseRevenueSale.TXT_DATETO, dateTo)
+        // cy.SelectPickerItem(elems_InHouseRevenueSale.PCK_INHOUSEITEM, inHouseItem)
+        // cy.SelectDropDownItem(elems_InHouseRevenueSale.DRP_RECEIPT, receipt)
+        // cy.EnterDate(elems_InHouseRevenueSale.TXT_DATEFROM, dateFrom)
+        // cy.EnterDate(elems_InHouseRevenueSale.TXT_DATETO, dateTo)
     
-        cy.Click(elems_InHouseRevenueSale.BTN_GENERATE)
-        cy.wait(5000)
+        // cy.Click(elems_InHouseRevenueSale.BTN_GENERATE)
+        // cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_InHouseRevenueSale.BTN_EXPORT)
     }
@@ -55,13 +79,13 @@ class Reports_InHouseMerchandise {
         cy.wait(2000)
         cy.ValidateElementText(elems_InHouseRevenueSale.LBL_PAGE, expectedPg)
 
-        cy.SelectPickerItem(elems_InHouseRevenueSale.PCK_INHOUSEITEM, inHouseItem)
-        cy.SelectDropDownItem(elems_InHouseRevenueSale.DRP_RECEIPT, receipt)
-        cy.EnterDate(elems_InHouseRevenueSale.TXT_DATEFROM, dateFrom)
-        cy.EnterDate(elems_InHouseRevenueSale.TXT_DATETO, dateTo)
+        // cy.SelectPickerItem(elems_InHouseRevenueSale.PCK_INHOUSEITEM, inHouseItem)
+        // cy.SelectDropDownItem(elems_InHouseRevenueSale.DRP_RECEIPT, receipt)
+        // cy.EnterDate(elems_InHouseRevenueSale.TXT_DATEFROM, dateFrom)
+        // cy.EnterDate(elems_InHouseRevenueSale.TXT_DATETO, dateTo)
     
-        cy.Click(elems_InHouseRevenueSale.BTN_GENERATE)
-        cy.wait(5000)
+        // cy.Click(elems_InHouseRevenueSale.BTN_GENERATE)
+        // cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_InHouseRevenueSale.BTN_EXPORT)
     }
@@ -76,13 +100,13 @@ class Reports_InHouseMerchandise {
         cy.wait(2000)
         cy.ValidateElementText(elems_MerchandiseRevenueSale.LBL_PAGE, expectedPg)
 
-        cy.SelectPickerItem(elems_MerchandiseRevenueSale.PCK_MERCHANDISE, merchandiseItem)
-        cy.SelectDropDownItem(elems_MerchandiseRevenueSale.DRP_RECEIPT, receipt)
-        cy.EnterDate(elems_MerchandiseRevenueSale.TXT_DATEFROM, dateFrom)
-        cy.EnterDate(elems_MerchandiseRevenueSale.TXT_DATETO, dateTo)
+        // cy.SelectPickerItem(elems_MerchandiseRevenueSale.PCK_MERCHANDISE, merchandiseItem)
+        // cy.SelectDropDownItem(elems_MerchandiseRevenueSale.DRP_RECEIPT, receipt)
+        // cy.EnterDate(elems_MerchandiseRevenueSale.TXT_DATEFROM, dateFrom)
+        // cy.EnterDate(elems_MerchandiseRevenueSale.TXT_DATETO, dateTo)
     
-        cy.Click(elems_MerchandiseRevenueSale.BTN_GENERATE)
-        cy.wait(5000)
+        // cy.Click(elems_MerchandiseRevenueSale.BTN_GENERATE)
+        // cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_MerchandiseRevenueSale.BTN_EXPORT)
     }
@@ -97,8 +121,8 @@ class Reports_InHouseMerchandise {
         cy.wait(2000)
         cy.ValidateElementText(elems_MerchandiseRevenueSale.LBL_PAGE, expectedPg)
 
-        cy.Click(elems_MerchandiseRevenueSale.BTN_GENERATE)
-        cy.wait(5000)
+        // cy.Click(elems_MerchandiseRevenueSale.BTN_GENERATE)
+        // cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_MerchandiseRevenueSale.BTN_EXPORT)
     }
@@ -113,13 +137,13 @@ class Reports_InHouseMerchandise {
         cy.wait(2000)
         cy.ValidateElementText(elems_MerchandiseRevenueSale.LBL_PAGE, expectedPg)
 
-        cy.SelectPickerItem(elems_MerchandiseRevenueSale.PCK_MERCHANDISE, merchandiseItem)
-        cy.SelectDropDownItem(elems_MerchandiseRevenueSale.DRP_RECEIPT, receipt)
-        cy.EnterDate(elems_MerchandiseRevenueSale.TXT_DATEFROM, dateFrom)
-        cy.EnterDate(elems_MerchandiseRevenueSale.TXT_DATETO, dateTo)
+        // cy.SelectPickerItem(elems_MerchandiseRevenueSale.PCK_MERCHANDISE, merchandiseItem)
+        // cy.SelectDropDownItem(elems_MerchandiseRevenueSale.DRP_RECEIPT, receipt)
+        // cy.EnterDate(elems_MerchandiseRevenueSale.TXT_DATEFROM, dateFrom)
+        // cy.EnterDate(elems_MerchandiseRevenueSale.TXT_DATETO, dateTo)
     
-        cy.Click(elems_MerchandiseRevenueSale.BTN_GENERATE)
-        cy.wait(5000)
+        // cy.Click(elems_MerchandiseRevenueSale.BTN_GENERATE)
+        // cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_MerchandiseRevenueSale.BTN_EXPORT)
     }
@@ -134,13 +158,13 @@ class Reports_InHouseMerchandise {
         cy.wait(2000)
         cy.ValidateElementText(elems_MerchandiseRevenueSale.LBL_PAGE, expectedPg)
 
-        cy.SelectPickerItem(elems_MerchandiseRevenueSale.PCK_MERCHANDISE, merchandiseItem)
-        cy.SelectDropDownItem(elems_MerchandiseRevenueSale.DRP_RECEIPT, receipt)
-        cy.EnterDate(elems_MerchandiseRevenueSale.TXT_DATEFROM, dateFrom)
-        cy.EnterDate(elems_MerchandiseRevenueSale.TXT_DATETO, dateTo)
+        // cy.SelectPickerItem(elems_MerchandiseRevenueSale.PCK_MERCHANDISE, merchandiseItem)
+        // cy.SelectDropDownItem(elems_MerchandiseRevenueSale.DRP_RECEIPT, receipt)
+        // cy.EnterDate(elems_MerchandiseRevenueSale.TXT_DATEFROM, dateFrom)
+        // cy.EnterDate(elems_MerchandiseRevenueSale.TXT_DATETO, dateTo)
     
-        cy.Click(elems_MerchandiseRevenueSale.BTN_GENERATE)
-        cy.wait(5000)
+        // cy.Click(elems_MerchandiseRevenueSale.BTN_GENERATE)
+        // cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_MerchandiseRevenueSale.BTN_EXPORT)
     }

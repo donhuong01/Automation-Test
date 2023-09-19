@@ -91,6 +91,43 @@ describe("SRP Verification",function(){
         )
     })
 
+    it('Checking functionallity and Verification on Points Adjustment Listing', function(){
+        SRP_Reported.verifyPointsAdjustment
+        (
+            data.POINTS_ADJUSTMENT.EXPECTEDPG
+        )
+    })
+
+    it('Checking functionallity and Verification on Point Distribution Listing', function(){
+        SRP_Reported.verifyPointDistribution
+        (
+            data.POINTS_DISTRIBUTION.EXPECTEDPG
+        )
+    })
+
+    it('Checking functionallity and Verification on Receipt Refund Listing', function(){
+        SRP_Reported.verifyReceiptRefund
+        (
+            data.RECEIPT_REFUND.EXPECTEDPG
+        )
+    })
+
+    it('Checking functionallity and Verification on Reinstatement Listing', function(){
+        SRP_Reported.verifyReinstatement
+        (
+            data.REINSTATEMENT.EXPECTEDPG
+        )
+    })
+
+    it('Checking functionallity and Verification on Uncollected Expiry Redeemed Stock', function(){
+        SRP_Reported.verifyUncollectedExpiryListing
+        (
+            data.UNCOLLECTED_EXPIRY.EXPECTEDPG
+        )
+    })
+
+
+
 })
 
 

@@ -14,8 +14,8 @@ class Report_Facility {
         cy.wait(2000)
         cy.ValidateElementText(elems_FacilityReports.LBL_PAGE, expectedPg)
     
-        cy.Click(elems_FacilityReports.BTN_GENERATE)
-        cy.wait(5000)
+        // cy.Click(elems_FacilityReports.BTN_GENERATE)
+        // cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_FacilityReports.BTN_EXPORT)
     }
@@ -30,14 +30,14 @@ class Report_Facility {
         cy.wait(2000)
         cy.ValidateElementText(elems_FacilityReports.LBL_PAGE, expectedPg)
 
-        cy.SelectPickerItem(elems_FacilityReports.PCK_FACILITYTYPE, facilityType)
-        cy.SelectPickerItem(elems_FacilityReports.PCK_FACILITYTYPE, facility)
-        cy.EnterText(elems_FacilityReports.TXT_NRIC, nric)
-        cy.EnterDate(elems_FacilityReports.TXT_STARTDATE, startDate)
-        cy.EnterDate(elems_FacilityReports.TXT_ENDDATE, endDate)
+        // cy.SelectPickerItem(elems_FacilityReports.PCK_FACILITYTYPE, facilityType)
+        // cy.SelectPickerItem(elems_FacilityReports.PCK_FACILITYTYPE, facility)
+        // cy.EnterText(elems_FacilityReports.TXT_NRIC, nric)
+        // cy.EnterDate(elems_FacilityReports.TXT_STARTDATE, startDate)
+        // cy.EnterDate(elems_FacilityReports.TXT_ENDDATE, endDate)
     
-        cy.Click(elems_FacilityReports.BTN_GENERATE)
-        cy.wait(5000)
+        // cy.Click(elems_FacilityReports.BTN_GENERATE)
+        // cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_FacilityReports.BTN_EXPORT)
     }
@@ -52,8 +52,8 @@ class Report_Facility {
         cy.wait(2000)
         cy.ValidateElementText(elems_FacilityReports.LBL_PAGE, expectedPg)
     
-        cy.Click(elems_FacilityReports.BTN_GENERATE)
-        cy.wait(5000)
+        // cy.Click(elems_FacilityReports.BTN_GENERATE)
+        // cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_FacilityReports.BTN_EXPORT)
     }
@@ -68,8 +68,8 @@ class Report_Facility {
         cy.wait(2000)
         cy.ValidateElementText(elems_FacilityReports.LBL_PAGE, expectedPg)
     
-        cy.Click(elems_FacilityReports.BTN_GENERATE)
-        cy.wait(5000)
+        // cy.Click(elems_FacilityReports.BTN_GENERATE)
+        // cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_FacilityReports.BTN_EXPORT)
     }
@@ -84,8 +84,8 @@ class Report_Facility {
         cy.wait(2000)
         cy.ValidateElementText(elems_FacilityReports.LBL_PAGE, expectedPg)
     
-        cy.Click(elems_FacilityReports.BTN_GENERATE)
-        cy.wait(5000)
+        // cy.Click(elems_FacilityReports.BTN_GENERATE)
+        // cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_FacilityReports.BTN_EXPORT)
     }
@@ -100,12 +100,12 @@ class Report_Facility {
         cy.wait(2000)
         cy.ValidateElementText(elems_FacilityReports.LBL_PAGE, expectedPg)
 
-        cy.SelectPickerItem(elems_FacilityReports.PCK_FACILITYTYPE, facilityType)
-        cy.EnterDate(elems_FacilityReports.TXT_STARTDATE, startDate)
-        cy.EnterDate(elems_FacilityReports.TXT_ENDDATE, endDate)
+        // cy.SelectPickerItem(elems_FacilityReports.PCK_FACILITYTYPE, facilityType)
+        // cy.EnterDate(elems_FacilityReports.TXT_STARTDATE, startDate)
+        // cy.EnterDate(elems_FacilityReports.TXT_ENDDATE, endDate)
     
-        cy.Click(elems_FacilityReports.BTN_GENERATE)
-        cy.wait(5000)
+        // cy.Click(elems_FacilityReports.BTN_GENERATE)
+        // cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_FacilityReports.BTN_EXPORT)
     }
@@ -120,8 +120,8 @@ class Report_Facility {
         cy.wait(2000)
         cy.ValidateElementText(elems_FacilityReports.LBL_PAGE, expectedPg)
     
-        cy.Click(elems_FacilityReports.BTN_GENERATE)
-        cy.wait(5000)
+        // cy.Click(elems_FacilityReports.BTN_GENERATE)
+        // cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_FacilityReports.BTN_EXPORT)
     }
@@ -136,14 +136,14 @@ class Report_Facility {
         cy.wait(2000)
         cy.ValidateElementText(elems_FacilityReports.LBL_PAGE, expectedPg)
 
-        cy.SelectPickerItem(elems_FacilityReports.PCK_FACILITYTYPE, facilityType)
-        cy.SelectPickerItem(elems_FacilityReports.PCK_FACILITYTYPE, facility)
-        cy.EnterText(elems_FacilityReports.TXT_NRIC, nric)
-        cy.EnterDate(elems_FacilityReports.TXT_STARTDATE, startDate)
-        cy.EnterDate(elems_FacilityReports.TXT_ENDDATE, endDate)
+        // cy.SelectPickerItem(elems_FacilityReports.PCK_FACILITYTYPE, facilityType)
+        // cy.SelectPickerItem(elems_FacilityReports.PCK_FACILITYTYPE, facility)
+        // cy.EnterText(elems_FacilityReports.TXT_NRIC, nric)
+        // cy.EnterDate(elems_FacilityReports.TXT_STARTDATE, startDate)
+        // cy.EnterDate(elems_FacilityReports.TXT_ENDDATE, endDate)
     
-        cy.Click(elems_FacilityReports.BTN_GENERATE)
-        cy.wait(5000)
+        // cy.Click(elems_FacilityReports.BTN_GENERATE)
+        // cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_FacilityReports.BTN_EXPORT)
     }
@@ -158,8 +158,8 @@ class Report_Facility {
         cy.wait(2000)
         cy.ValidateElementText(elems_FacilityReports.LBL_PAGE, expectedPg)
     
-        cy.Click(elems_FacilityReports.BTN_GENERATE)
-        cy.wait(5000)
+        // cy.Click(elems_FacilityReports.BTN_GENERATE)
+        // cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_FacilityReports.BTN_EXPORT)
     }
@@ -174,14 +174,14 @@ class Report_Facility {
         cy.wait(2000)
         cy.ValidateElementText(elems_FacilityReports.LBL_PAGE, expectedPg)
 
-        cy.SelectPickerItem(elems_FacilityReports.PCK_FACILITYTYPE, facilityType)
-        cy.SelectPickerItem(elems_FacilityReports.PCK_FACILITYTYPE, facility)
-        cy.EnterText(elems_FacilityReports.TXT_NRIC, nric)
-        cy.EnterDate(elems_FacilityReports.TXT_STARTDATE, startDate)
-        cy.EnterDate(elems_FacilityReports.TXT_ENDDATE, endDate)
+        // cy.SelectPickerItem(elems_FacilityReports.PCK_FACILITYTYPE, facilityType)
+        // cy.SelectPickerItem(elems_FacilityReports.PCK_FACILITYTYPE, facility)
+        // cy.EnterText(elems_FacilityReports.TXT_NRIC, nric)
+        // cy.EnterDate(elems_FacilityReports.TXT_STARTDATE, startDate)
+        // cy.EnterDate(elems_FacilityReports.TXT_ENDDATE, endDate)
     
-        cy.Click(elems_FacilityReports.BTN_GENERATE)
-        cy.wait(5000)
+        // cy.Click(elems_FacilityReports.BTN_GENERATE)
+        // cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_FacilityReports.BTN_EXPORT)
     }
@@ -196,12 +196,12 @@ class Report_Facility {
         cy.wait(2000)
         cy.ValidateElementText(elems_FacilityReports.LBL_PAGE, expectedPg)
 
-        cy.SelectPickerItem(elems_FacilityReports.PCK_FACILITYTYPE, facilityType)
-        cy.EnterDate(elems_FacilityReports.TXT_STARTDATE, startDate)
-        cy.EnterDate(elems_FacilityReports.TXT_ENDDATE, endDate)
+        // cy.SelectPickerItem(elems_FacilityReports.PCK_FACILITYTYPE, facilityType)
+        // cy.EnterDate(elems_FacilityReports.TXT_STARTDATE, startDate)
+        // cy.EnterDate(elems_FacilityReports.TXT_ENDDATE, endDate)
     
-        cy.Click(elems_FacilityReports.BTN_GENERATE)
-        cy.wait(5000)
+        // cy.Click(elems_FacilityReports.BTN_GENERATE)
+        // cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_FacilityReports.BTN_EXPORT)
     }

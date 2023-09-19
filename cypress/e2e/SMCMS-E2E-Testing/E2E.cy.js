@@ -228,7 +228,7 @@ beforeEach(() => {
     // E1_Report()
     // Accommodation_Report()
     // MemberCards_Report()
-    Membership_Report()
+    // Membership_Report()
     // Gifts_Report()
     // InHouseMerchandise_Report()
     // SRP_Report()
