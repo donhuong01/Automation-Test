@@ -53,11 +53,11 @@ const data = {
         Reports: {
             filter: 'Print',
 
-            addReport: 'Report.Receipt.View',
+            addReport: 'ReportAccommodation.AccommodationBookingListing.View',
 
-            removeReport: 'Report.Receipt.View',
+            removeReport: 'ReportAccommodation.AccommodationBookingListing.View',
 
-            reportsList: 'Report.Receipt.View'
+            reportsList: 'ReportAccommodation.AccommodationBookingListing.View'
 
         }
     },
