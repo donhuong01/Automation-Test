@@ -194,6 +194,86 @@ class SRP_Reports {
         //cy.Click(elems_MemberCard.BTN_EXPORT)
     }
 
+    /*************************************************************
+     * Method: Checking functionallity and Verification on 
+               Point Adjustment Listing
+     * Description: This function verifies the page
+    *************************************************************/
+    verifyPointsAdjustment(expectedPg){
+    cy.visit('/report?reportId=ReportSRP.PointAdjustment')
+    cy.wait(2000)
+    cy.ValidateElementText(elems_MemberCard.LBL_PAGE, expectedPg)
+
+    // cy.Click(elems_MemberCard.BTN_GENERATE)
+        cy.wait(2000)
+        //cy.ValidateElementText('//div[@data-id="table1_1"]')
+        //cy.Click(elems_MemberCard.BTN_EXPORT)
+    }
+
+    /*************************************************************
+     * Method: Checking functionallity and Verification on 
+               Point Distribution Listing
+     * Description: This function verifies the page
+    *************************************************************/
+    verifyPointDistribution(expectedPg){
+    cy.visit('/report?reportId=ReportSRP.PointDistribution')
+    cy.wait(2000)
+    cy.ValidateElementText(elems_MemberCard.LBL_PAGE, expectedPg)
+
+    // cy.Click(elems_MemberCard.BTN_GENERATE)
+        cy.wait(2000)
+        //cy.ValidateElementText('//div[@data-id="table1_1"]')
+        //cy.Click(elems_MemberCard.BTN_EXPORT)
+    }
+
+    /*************************************************************
+     * Method: Checking functionallity and Verification on 
+               Receipt Refund Listing
+     * Description: This function verifies the page
+    *************************************************************/
+    verifyReceiptRefund(expectedPg){
+    cy.visit('/report?reportId=ReportSRP.ReceiptRefund')
+    cy.wait(2000)
+    cy.ValidateElementText(elems_MemberCard.LBL_PAGE, expectedPg)
+
+    // cy.Click(elems_MemberCard.BTN_GENERATE)
+        cy.wait(2000)
+        //cy.ValidateElementText('//div[@data-id="table1_1"]')
+        //cy.Click(elems_MemberCard.BTN_EXPORT)
+    }
+
+    /*************************************************************
+     * Method: Checking functionallity and Verification on 
+               Reinstatement Listing
+     * Description: This function verifies the page
+    *************************************************************/
+    verifyReinstatement(expectedPg){
+    cy.visit('/report?reportId=ReportSRP.Reinstatement')
+    cy.wait(2000)
+    cy.ValidateElementText(elems_MemberCard.LBL_PAGE, expectedPg)
+
+    // cy.Click(elems_MemberCard.BTN_GENERATE)
+        cy.wait(2000)
+        //cy.ValidateElementText('//div[@data-id="table1_1"]')
+        //cy.Click(elems_MemberCard.BTN_EXPORT)
+    }
+
+    /*************************************************************
+     * Method: Checking functionallity and Verification on 
+               Uncollected Expiry Redeemed Stock Listing
+     * Description: This function verifies the page
+    *************************************************************/
+    verifyUncollectedExpiryListing(expectedPg){
+    cy.visit('/report?reportId=ReportSRP.UncollectedExpiryRedeemedStock')
+    cy.wait(2000)
+    cy.ValidateElementText(elems_MemberCard.LBL_PAGE, expectedPg)
+
+    // cy.Click(elems_MemberCard.BTN_GENERATE)
+        cy.wait(2000)
+        //cy.ValidateElementText('//div[@data-id="table1_1"]')
+        //cy.Click(elems_MemberCard.BTN_EXPORT)
+    }
+
 }
 
 export default SRP_Reports

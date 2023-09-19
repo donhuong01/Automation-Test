@@ -20,6 +20,10 @@ const data = {
         END_DATE: ''
     },
 
+    MEMBERSHIP_FIGURE: {
+        EXPECTEDPG: 'Report Viewer - ReportMembership.MembershipFigure',
+    },
+
     //FS-025
     VIP_APPOINTMENT: {
         EXPECTEDPG: 'Report Viewer - ReportMembership.VIPAppointmentTerm',
@@ -40,7 +44,37 @@ const data = {
     //FS-030
     DBS_BILLING: {
         EXPECTEDPG: 'Report Viewer - ReportMemberCard.DBSBilling',
-    }
+    },
+
+    //FS-032
+    LUCKYDRAW_TRACKING: {
+        EXPECTEDPG: 'Report Viewer - ReportMembership.LuckyDrawTracking',
+    },
+
+    LUCKYDRAW_WINNER: {
+        EXPECTEDPG: 'Report Viewer - ReportMembership.LuckyDrawWinner',
+    },
+
+    //FS-026
+    NSF_RECONCILIATION: {
+        EXPECTEDPG: 'Report Viewer - ReportNSF.NSFReconciliation',
+    },
+
+    NSF_SUMMARY: {
+        EXPECTEDPG: 'Report Viewer - ReportNSF.NSFSummary',
+    },
+
+    FAILED_PAYMASTER: {
+        EXPECTEDPG: 'Report Viewer - ReportMembership.FailedPaymasterDeduction',
+    },
+
+    //FS-027
+    TRANSACTION_PRINCIPAL: {
+        EXPECTEDPG: 'Report Viewer - ReportMembership.TransactionByPrincipal',
+    },
+
+
+
 
 }
 

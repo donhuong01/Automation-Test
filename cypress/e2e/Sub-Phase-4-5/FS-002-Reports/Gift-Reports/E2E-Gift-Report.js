@@ -20,6 +20,35 @@ const Gifts_Report = () => {
                 data.COUNTER_COLLECTION_SETTLEMENT.EXPECTEDPG
             }
         })
+
+        it('Checking functionallity and Verification on Gift Redemption Letter Email', function(){
+            Gifts_Reports.verifyGiftRedemptionLetterEmail
+            {
+                data.GIFT_REDEMPTION_LETTER_EMAIL.EXPECTEDPG
+            }
+        })
+        
+        it('Checking functionallity and Verification on Gift Redemption Letter Mobile', function(){
+            Gifts_Reports.verifyGiftRedemptionLetterMobile
+            {
+                data.GIFT_REDEMPTION_LETTER_MOBILE.EXPECTEDPG
+            }
+        })
+
+        it('Checking functionallity and Verification on Inventory Transaction', function(){
+            Gifts_Reports.verifyInventoryTransaction
+            {
+                data.INVENTORY_TRANSACTION.EXPECTEDPG
+            }
+        })
+
+        it('Checking functionallity and Verification on Pending Collection', function(){
+            Gifts_Reports.verifyPendingCollection
+            {
+                data.INVENTORY_TRANSACTION.EXPECTEDPG
+            }
+        })
+        
     })
 
 }

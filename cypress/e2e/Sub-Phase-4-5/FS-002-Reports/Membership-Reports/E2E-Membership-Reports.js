@@ -2,6 +2,9 @@ import Reports_CustomerMarketing from "../../../../page-objects/SMCMS/PageAction
 import Reports_MembershipMasters from "../../../../page-objects/SMCMS/PageActions/FS-002-Reports/FS-014-Membership-Registration-Reports/MemRegistration-Reports-Verification"
 import Reports_MembershipVIPs from "../../../../page-objects/SMCMS/PageActions/FS-002-Reports/FS-025-VIP-Reports/MemVIP-Reports-Verification"
 import Reports_MemberCards from "../../../../page-objects/SMCMS/PageActions/FS-002-Reports/FS-030-Membership-CardManagement-Reports/CardManagement-Reports-Verification"
+import Reports_LuckyDraw from "../../../../page-objects/SMCMS/PageActions/FS-002-Reports/FS-032-LuckyDraw-Reports/LuckyDraw-Reports-Verification"
+import Reports_NSF from "../../../../page-objects/SMCMS/PageActions/FS-002-Reports/FS-026-NSF-Reports/NSF-Reports-Verification"
+import Reports_SFS from "../../../../page-objects/SMCMS/PageActions/FS-002-Reports/FS-027-SFS-Reports/SFS-Reports-Verification"
 import data from "../../../../fixtures/Data_Module/FS-002-Reports/Membership-Reports-data"
 
 
@@ -9,6 +12,9 @@ const CustomerMarketing_Reports = new Reports_CustomerMarketing()
 const MembershipMasters_Reports = new Reports_MembershipMasters()
 const MembershipVIPs_Reports = new Reports_MembershipVIPs()
 const MemberCards_Reports = new Reports_MemberCards()
+const LuckyDraw_Reports = new Reports_LuckyDraw()
+const NSF_Reports = new Reports_NSF()
+const SFS_Reports = new Reports_SFS()
 
 const Membership_Report = () => {
 
@@ -41,6 +47,15 @@ describe("Membership Reports Verification",function(){
            data.DOCUMENTARY_PROOF_VERIFIED.END_DATE
         )
     })
+
+    it('Checking functionallity and Verification on Membership Figure Listing', function(){
+        MembershipMasters_Reports.verifyMembershipFigure
+        (
+           data.MEMBERSHIP_FIGURE.EXPECTEDPG
+        )
+    })
+
+
 
     /******************************************************
     *                     FS 025                          *
@@ -80,8 +95,61 @@ describe("Membership Reports Verification",function(){
         {
             data.DBS_BILLING.EXPECTEDPG
         }
-        
-})
+    })
+
+    /******************************************************
+    *                     FS 032                          *
+    ******************************************************/
+    it('Checking functionallity and Verification on Lucky Draw Tracking Listing', function(){
+        LuckyDraw_Reports.verifyLuckyDrawTracking
+        {
+            data.LUCKYDRAW_TRACKING.EXPECTEDPG
+        }
+    })
+
+    it('Checking functionallity and Verification on Lucky Draw Winner Listing', function(){
+        LuckyDraw_Reports.verifyLuckyDrawWinner
+        {
+            data.LUCKYDRAW_WINNER.EXPECTEDPG
+        }
+    })
+
+    /******************************************************
+    *                     FS 026                         *
+    ******************************************************/
+    it('Checking functionallity and Verification on NSF Reconciliation Listing', function(){
+        NSF_Reports.verifyNSFReconciliation
+        {
+            data.NSF_RECONCILIATION.EXPECTEDPG
+        }
+    })
+
+    it('Checking functionallity and Verification on NSF Summary Listing', function(){
+        NSF_Reports.verifyNSFSummary
+        {
+            data.NSF_SUMMARY.EXPECTEDPG
+        }
+    })
+
+    it('Checking functionallity and Verification on Failed Paymaster Deduction Listing', function(){
+        NSF_Reports.verifyFailedPaymasterDeduction
+        {
+            data.FAILED_PAYMASTER.EXPECTEDPG
+        }
+    })
+
+    /******************************************************
+    *                     FS 027                         *
+    ******************************************************/
+
+    it('Checking functionallity and Verification on Transaction By Principal Listing', function(){
+        SFS_Reports.verifyTransactionByPrinicpal
+        {
+            data.TRANSACTION_PRINCIPAL.EXPECTEDPG
+        }
+    })
+
+
 
 })
 

@@ -7,6 +7,14 @@ const InHouseMerchandise_Report = () => {
 
     describe("InHouse and Merchandise Reports Verification",function(){
 
+        it('Checking functionality and Verification on Counter Receipt Collection Listing', function(){
+            InHouseMerchandise_Reports.verifyCounterReceiptCollection
+            (
+                data.COUNTER_RECEIPT.EXPECTEDPG,
+
+            )
+        })
+
         it('Checking functionality and Verification on In-House Revenue Sale Listing', function(){
             InHouseMerchandise_Reports.verifyInHouseRevenueSale
             (

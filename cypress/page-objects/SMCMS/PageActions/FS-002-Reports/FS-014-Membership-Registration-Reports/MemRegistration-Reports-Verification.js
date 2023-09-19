@@ -52,7 +52,22 @@ class Reports_MembershipMasters {
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_MembershipMasters.BTN_EXPORT)
         }
-        
+    
+    /*****************************************************
+     * Method: Checking functionallity and Verification on 
+               Membership Figure Listing
+     * Description: This function verifies the page
+    *****************************************************/
+        verifyMembershipFigure(expectedPg){
+        cy.visit('/report?reportId=ReportMembership.MembershipFigure')
+        cy.wait(2000)
+        cy.ValidateElementText(elems_MembershipMasters.LBL_PAGE, expectedPg)
+    
+        // cy.Click(elems_MembershipMasters.BTN_GENERATE)
+        // cy.wait(5000)
+        //cy.ValidateElementText('//div[@data-id="table1_1"]')
+        //cy.Click(elems_MembershipMasters.BTN_EXPORT)
+        }
 
 }
 

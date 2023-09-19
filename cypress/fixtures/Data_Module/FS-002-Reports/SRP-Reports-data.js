@@ -52,7 +52,25 @@ MEMBER_SRP_MOBILE: {
     EXPECTEDPG: 'Report Viewer - ReportSRP.MemberSRPSpendingAndRedemptionMobile',
 },
 
+POINTS_ADJUSTMENT: {
+    EXPECTEDPG: 'Report Viewer - ReportSRP.PointAdjustment',
+},
 
+POINTS_DISTRIBUTION: {
+    EXPECTEDPG: 'Report Viewer - ReportSRP.PointDistribution',
+},
+
+RECEIPT_REFUND: {
+    EXPECTEDPG: 'Report Viewer - ReportSRP.ReceiptRefund',
+},
+
+REINSTATEMENT: {
+    EXPECTEDPG: 'Report Viewer - ReportSRP.Reinstatement',
+},
+
+UNCOLLECTED_EXPIRY: {
+    EXPECTEDPG: 'Report Viewer - ReportSRP.UncollectedExpiryRedeemedStock',
+},
 
 
 }

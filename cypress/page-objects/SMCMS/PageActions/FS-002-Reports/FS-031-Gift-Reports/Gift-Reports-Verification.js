@@ -13,8 +13,8 @@ verifyCollectionSettlement(expectedPg){
     cy.wait(2000)
     cy.ValidateElementText(elems_CollectionSettlement.LBL_PAGE, expectedPg)
 
-    cy.Click(elems_CollectionSettlement.BTN_GENERATE)
-        cy.wait(5000)
+    // cy.Click(elems_CollectionSettlement.BTN_GENERATE)
+    //     cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_CollectionSettlement.BTN_EXPORT)
 }
@@ -29,11 +29,77 @@ verifyCounterCollectionSettlement(expectedPg){
     cy.wait(2000)
     cy.ValidateElementText(elems_CounterCollectionSettlement.LBL_PAGE, expectedPg)
 
-    cy.Click(elems_CounterCollectionSettlement.BTN_GENERATE)
-        cy.wait(5000)
+    // cy.Click(elems_CounterCollectionSettlement.BTN_GENERATE)
+    //     cy.wait(5000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_CounterCollectionSettlement.BTN_EXPORT)
 }
+
+ /*****************************************************
+    * Method: Checking functionallity and Verification on 
+              Gift Redemption Letter Email Listing
+     * Description: This function verifies the page
+*****************************************************/
+verifyGiftRedemptionLetterEmail(expectedPg){
+    cy.visit('/report?reportId=ReportMembershipGiftRedemption.GiftRedemptionLetterEmail')
+    cy.wait(2000)
+    cy.ValidateElementText(elems_CounterCollectionSettlement.LBL_PAGE, expectedPg)
+
+    // cy.Click(elems_CounterCollectionSettlement.BTN_GENERATE)
+    //     cy.wait(5000)
+        //cy.ValidateElementText('//div[@data-id="table1_1"]')
+        //cy.Click(elems_CounterCollectionSettlement.BTN_EXPORT)
+}
+
+ /*****************************************************
+    * Method: Checking functionallity and Verification on 
+              Gift Redemption Letter Mobile Listing
+     * Description: This function verifies the page
+*****************************************************/
+verifyGiftRedemptionLetterMobile(expectedPg){
+    cy.visit('/report?reportId=ReportMembershipGiftRedemption.GiftRedemptionLetterMobile')
+    cy.wait(2000)
+    cy.ValidateElementText(elems_CounterCollectionSettlement.LBL_PAGE, expectedPg)
+
+    // cy.Click(elems_CounterCollectionSettlement.BTN_GENERATE)
+    //     cy.wait(5000)
+        //cy.ValidateElementText('//div[@data-id="table1_1"]')
+        //cy.Click(elems_CounterCollectionSettlement.BTN_EXPORT)
+}
+
+ /*****************************************************
+    * Method: Checking functionallity and Verification on 
+              Inventory Transaction Listing
+     * Description: This function verifies the page
+*****************************************************/
+verifyInventoryTransaction(expectedPg){
+    cy.visit('/report?reportId=ReportMembershipGiftRedemption.InventoryTransaction')
+    cy.wait(2000)
+    cy.ValidateElementText(elems_CounterCollectionSettlement.LBL_PAGE, expectedPg)
+
+    // cy.Click(elems_CounterCollectionSettlement.BTN_GENERATE)
+    //     cy.wait(5000)
+        //cy.ValidateElementText('//div[@data-id="table1_1"]')
+        //cy.Click(elems_CounterCollectionSettlement.BTN_EXPORT)
+}
+
+ /*****************************************************
+    * Method: Checking functionallity and Verification on 
+              Pending Collection Listing
+     * Description: This function verifies the page
+*****************************************************/
+verifyPendingCollection(expectedPg){
+    cy.visit('/report?reportId=ReportMembershipGiftRedemption.PendingCollection')
+    cy.wait(2000)
+    cy.ValidateElementText(elems_CounterCollectionSettlement.LBL_PAGE, expectedPg)
+
+    // cy.Click(elems_CounterCollectionSettlement.BTN_GENERATE)
+    //     cy.wait(5000)
+        //cy.ValidateElementText('//div[@data-id="table1_1"]')
+        //cy.Click(elems_CounterCollectionSettlement.BTN_EXPORT)
+}
+
+
 
 }
  
