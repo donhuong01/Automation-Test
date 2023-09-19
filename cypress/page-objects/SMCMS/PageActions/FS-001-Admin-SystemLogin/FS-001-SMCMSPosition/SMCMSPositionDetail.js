@@ -55,12 +55,15 @@ class PositionDetailForm {
      * @param {string} targetUserName user name
      *****************************************************/
     addUsersAndVerifyTableEntry(targetUserEmail, targetUserName) {
-        cy.SelectPickerDifferentItemsWait(
-            elems_SMCMSRoleDetail.BTN_ADDUSERS, 15000,
-            elems_Picker.TXT_LOGINEMAIL,
-            targetUserEmail,
-            elems_SMCMSRoleDetail.BTN_SEARCHFILTERS
-        )
+        cy.get('.k-loading-image').should('not.exist').then(() => {
+            cy.SelectPickerDifferentItemsWait(
+                elems_SMCMSRoleDetail.BTN_ADDUSERS, 15000,
+                elems_Picker.TXT_LOGINEMAIL,
+                targetUserEmail,
+                elems_SMCMSRoleDetail.BTN_SEARCHFILTERS
+            )
+        });
+
 
         //Verify table entry
         // cy.VerifyTableEntry(
