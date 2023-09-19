@@ -1,5 +1,5 @@
-class elems_SMCMSPositionListing{
-    static BTN_CREATENEW = '//button[text()="Create New"]'
+class elems_SMCMSPositionListing {
+    static BTN_CREATENEW = '//button[contains(text(), "Create New")]'
     static BTN_DELETE = '//button[text()="Delete"]'
     static TXT_POSITION = '//input[@id="txtPosition"]'
     static BTN_SEARCHFILTERS = '//button[text()="Search Filters"]'
@@ -9,6 +9,6 @@ class elems_SMCMSPositionListing{
     static BTN_CONFIRM_DELETE_CANCEL = '//span[@class="k-icon k-i-x"]'
     static DELETE_POPUP_TITLE = '//div[text()="Delete Confirmation"]'
     static DELETE_POPUP_CONTENT = '//div[@class="k-window-content k-dialog-content"]'
-    
+
 }
 export default elems_SMCMSPositionListing
