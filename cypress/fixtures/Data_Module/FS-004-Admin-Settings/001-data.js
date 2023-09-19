@@ -5,8 +5,8 @@ const data = {
         Role: "System Administrator",
         Location: 'SAFRA Jurong',
         Remark: "Remark",
-        targetUserEmail: 'fshahzada@synergyonline.com',
-        targetUserName: 'Fawad Shahzada'
+        targetUserEmail: 'htran@synergyonline.com',
+        targetUserName: 'Hung Tran'
     },
 
     UpdatedSAMFRAPostionDetails: {
@@ -14,8 +14,8 @@ const data = {
         Role: "Energy One Viewer",
         Location: 'SAFRA Punggol',
         Remark: "Update",
-        targetUserEmail: 'fshahzada@synergyonline.com',
-        targetUserName: 'Fawad Shahzada'
+        targetUserEmail: 'htran@synergyonline.co',
+        targetUserName: 'Hung Tran'
     },
 
     //Position Listing
