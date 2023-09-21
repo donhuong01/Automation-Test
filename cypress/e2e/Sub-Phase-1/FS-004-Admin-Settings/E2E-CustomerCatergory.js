@@ -23,8 +23,7 @@ const CustomerCategory = () => {
         const D365ID = data.CustomerCategoryDetail.D365ID
 
         it('[TC01] Create New Customer Category ', () => {
-            cy.visit('/admin/customerCategoryListing')
-            cy.wait(5000)
+            cy.visit('/admin/customerCategoryListing', { timeout: 15000 })
             CustomerCatListing.VerifyPageTitle()
             CustomerCatListing.CreateNew()
             CustomerCatDetail.VerifyPageTitle()
