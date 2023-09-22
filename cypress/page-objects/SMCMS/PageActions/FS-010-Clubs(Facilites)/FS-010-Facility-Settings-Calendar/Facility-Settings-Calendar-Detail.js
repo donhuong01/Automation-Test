@@ -10,21 +10,20 @@ class FacilitySettingsCalendarDetailForm {
      * Description: This function enter text in calendar name field
      * @param {string} CalenderName
      *****************************************************/
-     EnterCalendarName(CalenderName){
+    EnterCalendarName(CalenderName) {
 
         cy.EnterText(elems_SettingsCalendarDetail.TXT_CALENDARNAME, CalenderName)
-       
-     }
+
+    }
 
     /*****************************************************
      * Method: startDate
-     * Description: This function enter start date 
+     * Description: This function enter start date
      * @param {string} DD
      * @param {string} MM
      * @param {string} YY
      *****************************************************/
-    StartDate(DD, MM, YY)
-    {
+    StartDate(DD, MM, YY) {
         cy.EnterDate(elems_SettingsCalendarDetail.DATE_STARTDATE, DD, MM, YY)
     }
     /*****************************************************
@@ -34,10 +33,9 @@ class FacilitySettingsCalendarDetailForm {
      * @param {string} MM
      * @param {string} YY
      *****************************************************/
-     EndDate(DD, MM, YY)
-     {
-         cy.EnterDate(elems_SettingsCalendarDetail.DATE_ENDDATE, DD, MM, YY)
-     }
+    EndDate(DD, MM, YY) {
+        cy.EnterDate(elems_SettingsCalendarDetail.DATE_ENDDATE, DD, MM, YY)
+    }
 
     /*****************************************************
      * Method: AddHolidayDates
@@ -47,10 +45,10 @@ class FacilitySettingsCalendarDetailForm {
      * @param {string} MM
      * @param {string} YY
      * ********************/
-    AddHolidayDates(HolidayName1,  DD, MM, YY){
+    AddHolidayDates(HolidayName1, DD, MM, YY) {
 
-        cy.wait(5000)
-        cy.Click(elems_SettingsCalendarDetail.HolidayDatesTAB.BTN_ADDHOLIDAY)
+        // cy.wait(5000)
+        cy.xpath(elems_SettingsCalendarDetail.HolidayDatesTAB.BTN_ADDHOLIDAY, { timeout: 10000 }).should('be.visible').click();
         cy.EnterText(elems_SettingsCalendarDetail.NewHolidayPopUp.TXT_NAME, HolidayName1)
         // cy.wait(3000)
         // cy.SelectDate(elems_SettingsCalendarDetail.NewHolidayPopUp.DATE_DATE, HolidayDate1)
@@ -64,11 +62,11 @@ class FacilitySettingsCalendarDetailForm {
      * @param {string} HolidayName1
      * @param {string} HolidayName2
      *****************************************************/
-    CopySelectedHoildayToCurrentYear(HolidayName1, HolidayName2){
+    CopySelectedHoildayToCurrentYear(HolidayName1, HolidayName2) {
 
         cy.EnterText(elems_SettingsCalendarDetail.HolidayDatesTAB.TXT_DESCRIPTION, HolidayName1)
         cy.SelectTableItem(elems_SettingsCalendarDetail.HolidayDatesTAB.TBL_HOLIDAYDATES,
-            
+
             'Holiday Name', HolidayName1)
 
         cy.Click(elems_SettingsCalendarDetail.HolidayDatesTAB.BTN_COPYSELECTEDHOLIDAYSTOCURRENTYEAR)
@@ -80,13 +78,13 @@ class FacilitySettingsCalendarDetailForm {
      * Description: This function Copy Selected Holidays To Next Year
      * @param {string} HolidayName
      *****************************************************/
-     CopySelectedHolidaysToNextYear(HolidayName){
+    CopySelectedHolidaysToNextYear(HolidayName) {
 
         cy.xpath(elems_SettingsCalendarDetail.HolidayDatesTAB.TXT_DESCRIPTION).clear()
         cy.EnterText(elems_SettingsCalendarDetail.HolidayDatesTAB.TXT_DESCRIPTION, HolidayName)
         cy.Click(elems_SettingsCalendarDetail.HolidayDatesTAB.BTN_SEARCHFILTERS)
         cy.SelectTableItem(elems_SettingsCalendarDetail.HolidayDatesTAB.TBL_HOLIDAYDATES,
-            
+
             'Holiday Name', HolidayName)
 
         cy.Click(elems_SettingsCalendarDetail.HolidayDatesTAB.BTN_COPYSELECTEDHOLIDAYSTONEXTYEAR)
@@ -98,151 +96,151 @@ class FacilitySettingsCalendarDetailForm {
      * Description: This function Deletes Selected Dates
      * @param {string} HolidayName
      *****************************************************/
-     DeleteSelectedDates(HolidayName){
+    DeleteSelectedDates(HolidayName) {
 
         cy.SelectTableItem(elems_SettingsCalendarDetail.HolidayDatesTAB.TBL_HOLIDAYDATES,
-            
+
             'Holiday Name', HolidayName)
 
         cy.Click(elems_SettingsCalendarDetail.HolidayDatesTAB.BTN_DELETE)
-     
+
     }
 
     /*****************************************************
      * Method: ClickPeriodsTab
      * Description: This function click on Periods Tab
      *****************************************************/
-     ClickPeriodsTab(){
+    ClickPeriodsTab() {
 
         cy.Click(elems_SettingsCalendarDetail.PeriodsTAB.TAB_Periods)
-     
+
     }
 
-/*****************************************************
-     * Method: AddPeriods
-     * Description: This function add new Periods
+    /*****************************************************
+         * Method: AddPeriods
+         * Description: This function add new Periods
+         * @param {string} PeriodName1
+         * @param {string} StartDate1
+         * @param {string} EndDate1
+         * @param {string} PeriodName2
+         * @param {string} StartDate2
+         * @param {string} EndDate2
+         *****************************************************/
+    AddPeriods(PeriodName1, StartDate1, EndDate1) {
+
+        cy.Click(elems_SettingsCalendarDetail.PeriodsTAB.BTN_ADDPERIOD)
+        cy.EnterText(elems_SettingsCalendarDetail.PeriodPopUp.TXT_NAME, PeriodName1)
+
+        cy.EnterDate(elems_SettingsCalendarDetail.PeriodPopUp.DATE_STARTDATE, StartDate1)
+        cy.EnterDate(elems_SettingsCalendarDetail.PeriodPopUp.DATE_ENDDATE, EndDate1)
+
+        // cy.SelectDate(elems_SettingsCalendarDetail.PeriodPopUp.DATE_STARTDATE, StartDate1)
+        // cy.wait(5000)
+        // cy.SelectDate(elems_SettingsCalendarDetail.PeriodPopUp.DATE_ENDDATE, EndDate1)
+        // cy.Click(elems_SettingsCalendarDetail.PeriodPopUp.BTN_ADDANDNEW)
+
+        // cy.EnterText(elems_SettingsCalendarDetail.PeriodPopUp.TXT_NAME, PeriodName2)
+        // cy.SelectDate(elems_SettingsCalendarDetail.PeriodPopUp.DATE_STARTDATE, StartDate2)
+        // cy.wait(10000)
+        // cy.SelectDate(elems_SettingsCalendarDetail.PeriodPopUp.DATE_ENDDATE, EndDate2)
+        cy.Click(elems_SettingsCalendarDetail.PeriodPopUp.BTN_ADD)
+
+    }
+    /*****************************************************
+     * Method: CopySelectedPeriodToCurrentYear
+     * Description: This function Copy Selected Period To Current Year
      * @param {string} PeriodName1
-     * @param {string} StartDate1
-     * @param {string} EndDate1
      * @param {string} PeriodName2
-     * @param {string} StartDate2
-     * @param {string} EndDate2
      *****************************************************/
- AddPeriods(PeriodName1, StartDate1, EndDate1){
+    CopySelectedPeriodToCurrentYear(PeriodName1, PeriodName2) {
 
-    cy.Click(elems_SettingsCalendarDetail.PeriodsTAB.BTN_ADDPERIOD)
-    cy.EnterText(elems_SettingsCalendarDetail.PeriodPopUp.TXT_NAME, PeriodName1)
+        cy.xpath(elems_SettingsCalendarDetail.PeriodsTAB.TXT_DESCRIPTION).clear()
+        cy.EnterText(elems_SettingsCalendarDetail.PeriodsTAB.TXT_DESCRIPTION, PeriodName1)
+        cy.SelectTableItem(elems_SettingsCalendarDetail.PeriodsTAB.TBL_PERIODS,
 
-    cy.EnterDate(elems_SettingsCalendarDetail.PeriodPopUp.DATE_STARTDATE, StartDate1)
-    cy.EnterDate(elems_SettingsCalendarDetail.PeriodPopUp.DATE_ENDDATE, EndDate1)
+            'Period Name', PeriodName1)
 
-    // cy.SelectDate(elems_SettingsCalendarDetail.PeriodPopUp.DATE_STARTDATE, StartDate1)
-    // cy.wait(5000)
-    // cy.SelectDate(elems_SettingsCalendarDetail.PeriodPopUp.DATE_ENDDATE, EndDate1)
-    // cy.Click(elems_SettingsCalendarDetail.PeriodPopUp.BTN_ADDANDNEW)
+        cy.Click(elems_SettingsCalendarDetail.PeriodsTAB.BTN_COPYSELECTEDPERIODTOCURRENTYEAR)
+        // cy.wait(5000)
+    }
 
-    // cy.EnterText(elems_SettingsCalendarDetail.PeriodPopUp.TXT_NAME, PeriodName2)
-    // cy.SelectDate(elems_SettingsCalendarDetail.PeriodPopUp.DATE_STARTDATE, StartDate2)
-    // cy.wait(10000)
-    // cy.SelectDate(elems_SettingsCalendarDetail.PeriodPopUp.DATE_ENDDATE, EndDate2)
-    cy.Click(elems_SettingsCalendarDetail.PeriodPopUp.BTN_ADD)
+    /*****************************************************
+     * Method: CopySelectedPeriodToNextYear
+     * Description: This function Copy Selected Period To Next Year
+     * @param {string} PeriodName2
+     *****************************************************/
+    CopySelectedPeriodToNextYear(PeriodName2) {
 
-}
-/*****************************************************
- * Method: CopySelectedPeriodToCurrentYear
- * Description: This function Copy Selected Period To Current Year
- * @param {string} PeriodName1
- * @param {string} PeriodName2
- *****************************************************/
-CopySelectedPeriodToCurrentYear(PeriodName1, PeriodName2){
+        cy.xpath(elems_SettingsCalendarDetail.PeriodsTAB.TXT_DESCRIPTION).clear()
+        cy.EnterText(elems_SettingsCalendarDetail.PeriodsTAB.TXT_DESCRIPTION, PeriodName2)
+        cy.Click(elems_SettingsCalendarDetail.PeriodsTAB.BTN_SEARCHFILTERS)
+        cy.SelectTableItem(elems_SettingsCalendarDetail.PeriodsTAB.TBL_PERIODS,
 
-    cy.xpath(elems_SettingsCalendarDetail.PeriodsTAB.TXT_DESCRIPTION).clear()
-    cy.EnterText(elems_SettingsCalendarDetail.PeriodsTAB.TXT_DESCRIPTION, PeriodName1)
-    cy.SelectTableItem(elems_SettingsCalendarDetail.PeriodsTAB.TBL_PERIODS,
-        
-        'Period Name', PeriodName1)
+            'Period Name', PeriodName2)
 
-    cy.Click(elems_SettingsCalendarDetail.PeriodsTAB.BTN_COPYSELECTEDPERIODTOCURRENTYEAR)
-    // cy.wait(5000)
-}
+        cy.Click(elems_SettingsCalendarDetail.PeriodsTAB.BTN_COPYSELECTEDPERIODTONEXTYEAR)
+        // cy.wait(5000)
+    }
+    /*****************************************************
+     * Method: AddHolidayFromSettingToCurrentYear
+     * Description: This function add holiday from settings to current year
+     * @param {string} HolidayName
+     *****************************************************/
+    AddHolidayFromSettingToCurrentYear(HolidayName) {
 
-/*****************************************************
- * Method: CopySelectedPeriodToNextYear
- * Description: This function Copy Selected Period To Next Year
- * @param {string} PeriodName2
- *****************************************************/
- CopySelectedPeriodToNextYear(PeriodName2){
+        cy.Click(elems_SettingsCalendarDetail.HolidayDatesTAB.BTN_ADDHOLIDAYFROMSETTINGSTOCURRENTYEAR)
+        cy.SelectTableItem(elems_SettingsCalendarDetail.NewHolidayPopUp.TBL_HOLIDAYSETTINGLIST,
 
-    cy.xpath(elems_SettingsCalendarDetail.PeriodsTAB.TXT_DESCRIPTION).clear()
-    cy.EnterText(elems_SettingsCalendarDetail.PeriodsTAB.TXT_DESCRIPTION, PeriodName2)
-    cy.Click(elems_SettingsCalendarDetail.PeriodsTAB.BTN_SEARCHFILTERS)
-    cy.SelectTableItem(elems_SettingsCalendarDetail.PeriodsTAB.TBL_PERIODS,
-        
-        'Period Name', PeriodName2)
+            'Hoilday Name', HolidayName)
 
-    cy.Click(elems_SettingsCalendarDetail.PeriodsTAB.BTN_COPYSELECTEDPERIODTONEXTYEAR)
-    // cy.wait(5000)
-}
-/*****************************************************
- * Method: AddHolidayFromSettingToCurrentYear
- * Description: This function add holiday from settings to current year
- * @param {string} HolidayName
- *****************************************************/
- AddHolidayFromSettingToCurrentYear(HolidayName){
+        // cy.Click(elems_SettingsCalendarDetail.PeriodsTAB.BTN_COPYSELECTEDPERIODTONEXTYEAR)
+        // cy.wait(5000)
+    }
 
-    cy.Click(elems_SettingsCalendarDetail.HolidayDatesTAB.BTN_ADDHOLIDAYFROMSETTINGSTOCURRENTYEAR)
-    cy.SelectTableItem(elems_SettingsCalendarDetail.NewHolidayPopUp.TBL_HOLIDAYSETTINGLIST,
-        
-        'Hoilday Name', HolidayName)
+    /*****************************************************
+     * Method: DeleteSelectedPeriod
+     * Description: This function Deletes Selected Period
+     * @param {string} PeriodName
+     *****************************************************/
+    DeleteSelectedPeriod(PeriodName) {
 
-   // cy.Click(elems_SettingsCalendarDetail.PeriodsTAB.BTN_COPYSELECTEDPERIODTONEXTYEAR)
-   // cy.wait(5000)
-}
+        cy.SelectTableItem(elems_SettingsCalendarDetail.PeriodsTAB.TBL_PERIODS,
 
-/*****************************************************
- * Method: DeleteSelectedPeriod
- * Description: This function Deletes Selected Period
- * @param {string} PeriodName
- *****************************************************/
- DeleteSelectedPeriod(PeriodName){
+            'Period Name', PeriodName)
 
-    cy.SelectTableItem(elems_SettingsCalendarDetail.PeriodsTAB.TBL_PERIODS,
-        
-        'Period Name', PeriodName)
+        cy.Click(elems_SettingsCalendarDetail.PeriodsTAB.BTN_DELETE)
 
-    cy.Click(elems_SettingsCalendarDetail.PeriodsTAB.BTN_DELETE)
- 
-}
+    }
     /*****************************************************
      * Method: VerifyNotificationMessage
      * Description: This function verifies Notification Message
      * @param {string} NotificationMSG
      *****************************************************/
-    VerifyNotificationMessage(NotificationMSG){
+    VerifyNotificationMessage(NotificationMSG) {
 
         cy.wait(4000)
         cy.VerifyElementText(elems_SettingsCalendarDetail.MSG_NOTIFICATION, NotificationMSG)
     }
-    
+
     /*****************************************************
      * Method: SubmitForApproval
      * Description: This function click on Submit for Approval button
      *****************************************************/
-    SubmitForApproval(){
+    SubmitForApproval() {
         cy.Click(elems_SettingsCalendarDetail.BTN_SUBMITFORAPPROVAL)
     }
     /*****************************************************
      * Method: SaveAsDraft
      * Description: This function click on Save as Draft button
      *****************************************************/
-     SaveAsDraft(){
+    SaveAsDraft() {
         cy.Click(elems_SettingsCalendarDetail.BTN_SAVEASDRAFT)
     }
     /*****************************************************
      * Method: Cancel
      * Description: This function click on Cancel button
      *****************************************************/
-     Cancel(){
+    Cancel() {
         cy.Click(elems_SettingsCalendarDetail.BTN_CANCEL)
     }
 
@@ -252,20 +250,20 @@ CopySelectedPeriodToCurrentYear(PeriodName1, PeriodName2){
      * @param {string} CalendarName
      * @param {string} Status
      *****************************************************/
-    VerifyTableEntry(CalendarName, Status){
+    VerifyTableEntry(CalendarName, Status) {
 
         cy.VerifyTableEntry(
             elems_SettingsCalendarListing.TBL_LIST,
-            
+
             'Status', Status,
             'Calendar Name', CalendarName,
         )
         cy.VerifyTableEntry(
             elems_SettingsCalendarListing.TBL_LIST,
-            
+
             'Calendar Name', CalendarName,
             'Status', Status,
-            
+
         )
     }
 
@@ -275,20 +273,20 @@ CopySelectedPeriodToCurrentYear(PeriodName1, PeriodName2){
      * @param {string} TaskID
      * @param {string} WorkFlowName
      *****************************************************/
-        FacilityCalendarWorkFlow(TaskID, WorkFlowName, ApprovalOutCome, Remark){
+    FacilityCalendarWorkFlow(TaskID, WorkFlowName, ApprovalOutCome, Remark) {
 
-            cy.VerifyElementText(elems_PageHeader.LBL_PAGETITLE, "Pending Task Listing")
-            cy.EnterText(elems_PendingTaskListing.TXT_TASKID, TaskID)
-            cy.EnterText(elems_PendingTaskListing.TXT_WORKFLOWNAME, WorkFlowName)
-            cy.Click(elems_PendingTaskListing.BTN_SEARCH)
-            cy.wait(5000)
-            cy.Click('(//h2[text()="Pending Task Listing"]/ancestor::div//table//a)[1]')
-            cy.wait(5000)
-            cy.VerifyElementText(elems_PageHeader.LBL_PAGETITLE, "Pending Task Detail")
-            cy.SelectDropDownItem(elems_PendingTaskDetail.DRP_APPROVALOUTCOME, ApprovalOutCome)
-            cy.EnterText(elems_PendingTaskDetail.TXTAREA_REMARK, Remark)
-            cy.Click(elems_PendingTaskDetail.BTN_SUBMIT)
-        }
+        cy.VerifyElementText(elems_PageHeader.LBL_PAGETITLE, "Pending Task Listing")
+        cy.EnterText(elems_PendingTaskListing.TXT_TASKID, TaskID)
+        cy.EnterText(elems_PendingTaskListing.TXT_WORKFLOWNAME, WorkFlowName)
+        cy.Click(elems_PendingTaskListing.BTN_SEARCH)
+        cy.wait(5000)
+        cy.Click('(//h2[text()="Pending Task Listing"]/ancestor::div//table//a)[1]')
+        cy.wait(5000)
+        cy.VerifyElementText(elems_PageHeader.LBL_PAGETITLE, "Pending Task Detail")
+        cy.SelectDropDownItem(elems_PendingTaskDetail.DRP_APPROVALOUTCOME, ApprovalOutCome)
+        cy.EnterText(elems_PendingTaskDetail.TXTAREA_REMARK, Remark)
+        cy.Click(elems_PendingTaskDetail.BTN_SUBMIT)
+    }
 
 }
 
