@@ -1,0 +1,73 @@
+[
+  {
+    "Id": 1,
+    "CalendarName": "Jan 2015 - Dec 2018 PH Calendar",
+    "Holidays": [
+      {
+        "CalendarId": 1,
+        "HolidayName": "Chinese New Year Day 1",
+        "Date": "02/05/2019 0:00"
+      },
+      {
+        "CalendarId": 1,
+        "HolidayName": "Chinese New Year Day 1",
+        "Date": "2/16/2018 0:00"
+      },
+      {
+        "CalendarId": 1,
+        "HolidayName": "Chinese New Year Day 1",
+        "Date": "2/19/2015 0:00"
+      }
+    ],
+    "Periods": [
+      {
+        "CalendarId": 2,
+        "PeriodName": "2019 - TERM 2 SCHOOL HOLIDAY",
+        "StartDate": "06/01/2019 0:00",
+        "EndDate": "6/30/2019 0:00"
+      },
+      {
+        "CalendarId": 2,
+        "PeriodName": "2019 - TERM 3 SCHOOL DAY",
+        "StartDate": "07/01/2019 0:00",
+        "EndDate": "09/06/2019 0:00"
+      },
+      {
+        "CalendarId": 2,
+        "PeriodName": "2019 - TERM 3 SCHOOL HOLIDAY",
+        "StartDate": "09/07/2019 0:00",
+        "EndDate": "9/15/2019 0:00"
+      }
+    ]
+  },
+  {
+    "Id": 2,
+    "CalendarName": "TP - PUBLIC HOLIDAY AND SCHOOL HOLIDAY",
+    "Holidays": [
+      {
+        "CalendarId": 1,
+        "HolidayName": "Chinese New Year Day 1",
+        "Date": "02/05/2019 0:00"
+      },
+      {
+        "CalendarId": 1,
+        "HolidayName": "Chinese New Year Day 1",
+        "Date": "2/16/2018 0:00"
+      }
+    ],
+    "Periods": [
+      {
+        "CalendarId": 2,
+        "PeriodName": "2019 - TERM 2 SCHOOL HOLIDAY",
+        "StartDate": "06/01/2019 0:00",
+        "EndDate": "6/30/2019 0:00"
+      },
+      {
+        "CalendarId": 2,
+        "PeriodName": "2019 - TERM 3 SCHOOL DAY",
+        "StartDate": "07/01/2019 0:00",
+        "EndDate": "09/06/2019 0:00"
+      }
+    ]
+  }
+]
