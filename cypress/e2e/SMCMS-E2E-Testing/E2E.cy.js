@@ -199,16 +199,15 @@ beforeEach(() => {
      * Requestor Testing - Erik *
      ****************************/
     // Set local storage for UAT Enviroment  
-    // cy.SaveUserInfoInLocalStorageForUAT(login.R_authenticated_user_uat, login.R_active_location_uat, login.R_safra_client_uat)
+    cy.SaveUserInfoInLocalStorageForUAT(login.R_authenticated_user_uat, login.R_active_location_uat, login.R_safra_client_uat)
 
     /************************
      * Admin Testing - Hung *
      ************************/
     // Set local storage for UAT Enviroment  
-    cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
+    // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
 
-
-
+    //Select Channel
     cy.visit('/membership/customerCheckin')
     cy.SelectPickerItem('//a[text()="Change"]', 'SAFRA HQ')
 })
@@ -222,9 +221,9 @@ beforeEach(() => {
 //     SMCMSUser() 
 // })
 
-//  describe('E2E Auto Testing:FS-002 Reports', () => {
+ describe('E2E Auto Testing:FS-002 Reports', () => {
 
-    // IG_Report()
+     IG_Report()
     // E1_Report()
     // Accommodation_Report()
     // MemberCards_Report()
@@ -234,16 +233,16 @@ beforeEach(() => {
     // SRP_Report()
     // Reports_Payments()
     // AdminSetting_Report()
-    // Facility_Report()   // Still no data
+    // Facility_Report()   
 
-//  })
+ })
 
 
 // describe('E2E Auto Testing:FS-004 Admin: Settings', () => {
 
 //     CustomerCategoryType()
 //     CustomerCategory()
-    //    CodeType()
+//     CodeType()
 //     CodeSetMaster()
 //     DocumentTemplate()
 //     ApplicationSetting() //Not Required //Changed Font Siz to - 4 (14pt)
@@ -265,8 +264,8 @@ beforeEach(() => {
     // FacilityBookingExtentionManagment() // Needs an update in Facility for extension setting
     // FacilityBookingCancellationManagment() // Needs own page action
     // FacilityGroupBooking(E2EData.FACILITY_GROUP_BOOKING.SAFRA_MEMBER, E2EData.FACILITY_GROUP_BOOKING.SAFRA_RELATED_MEMBER,
-    //    E2EData.FACILITY_GROUP_BOOKING.SAFRA_GUEST) //Pass Active Safra Member ID - 1.Safra Member 2. SAFRARelatedMemberships 3. Guest Member
-//     FacilityGroupBookingBallot("A300002855", "A300003031") // Recheck again tomorrow morning
+    // E2EData.FACILITY_GROUP_BOOKING.SAFRA_GUEST) //Pass Active Safra Member ID - 1.Safra Member 2. SAFRARelatedMemberships 3. Guest Member
+    // FacilityGroupBookingBallot("A300002855", "A300003031") // Recheck again tomorrow morning
 //   })
 
 
@@ -279,7 +278,7 @@ beforeEach(() => {
 //    AccommodationClosureManagement() // Need to add accommodation on page action
 //    AccommodatiomBookingManagement(E2EData.ACCOMMODATION_BOOKING_MANAGEMENT.SAFRA_MEMBERID, E2EData.ACCOMMODATION_BOOKING_MANAGEMENT.GEUSTID) //Pass SAFRA MemberID and Guest ID
 //    AccommodatiomReservationManagement(E2EData.ACCOMMODATION_RESERVATION_MANAGEMENT.SAFRA_MEMBERID) //Pass SAFRA MemberID
-      // Update the booking,  no available slots when running
+            // Update the booking,  no available slots when running
     
 // })
 
@@ -409,10 +408,10 @@ beforeEach(() => {
     
     // MembershipDeceased(E2EData.ACTIVE_MEMBERID_FOR_DECEASED) //Provide Active member ID
     // BatchMembershipTermination(E2EData.SFS_BATCH_TERMINATION_IDS.MEMBERID1, E2EData.SFS_BATCH_TERMINATION_IDS.MEMBERID2,
-    //    E2EData.SFS_BATCH_TERMINATION_IDS.MEMBERID3) //Provide Active member ID's
+    // E2EData.SFS_BATCH_TERMINATION_IDS.MEMBERID3) //Provide Active member ID's
     // BatchMemDefermentRequest(E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERNAME1, E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERID1,
-    //    E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERNAME2, E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERID2) 
-    //BatchMembershipWaiver(E2EData.TWO_NRICS_FOR_BATCH_MEMBERSHIP_WAIVER.NRIC1, E2EData.TWO_NRICS_FOR_BATCH_MEMBERSHIP_WAIVER.NRIC2) // Enter 2 NRIC's for Member Registration 
+    // E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERNAME2, E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERID2) 
+    // BatchMembershipWaiver(E2EData.TWO_NRICS_FOR_BATCH_MEMBERSHIP_WAIVER.NRIC1, E2EData.TWO_NRICS_FOR_BATCH_MEMBERSHIP_WAIVER.NRIC2) // Enter 2 NRIC's for Member Registration 
     MemDefermentRequest(E2EData.NRIC_FOR_MEMBERSHIP_DEFERMENT_REQUEST) //Change NRIC before runing this function
     // MembershipResignationManagement(E2EData.NRIC_FOR_MEMBERSHIP_RESIGNATION_MANAGEMENT) //Change NRIC before runing this function
     // MembershipExpulsionAndReinstatment(E2EData.NRIC_FOR_MEMBERSHIP_EXPULSION_AND_REINSTATEMENT) //Change NRIC before runing this function

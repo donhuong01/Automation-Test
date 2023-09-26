@@ -1,7 +1,8 @@
 import Reports_E1 from "../../../../page-objects/SMCMS/PageActions/FS-002-Reports/FS-015-Energy-One-Reports/E1-Reports-Verification";
+import Reports_E12 from "../../../../page-objects/SMCMS/PageActions/FS-002-Reports/FS-015-Energy-One-Reports/E1-Reports-Verification";
 import data from "../../../../fixtures/Data_Module/FS-002-Reports/E1-Reports-data";
 
-const E1_Reports = new Reports_E1 ()
+const E1_Reports = new Reports_E1 ()// Reports_E12() //
 
 const E1_Report = () => {
 

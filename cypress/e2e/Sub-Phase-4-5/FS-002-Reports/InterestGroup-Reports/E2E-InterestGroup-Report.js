@@ -1,7 +1,8 @@
 import Reports_IG from "../../../../page-objects/SMCMS/PageActions/FS-002-Reports/FS-016-Interest-Group-Reports/IG-Reports-Verification"
+import Reports_IG2 from "../../../../page-objects/SMCMS/PageActions/FS-002-Reports/FS-016-Interest-Group-Reports/IG-Reports-Verification"
 import data from "../../../../fixtures/Data_Module/FS-002-Reports/IG-Reports-data"
 
-const IG_Reports = new Reports_IG()
+const IG_Reports =  new Reports_IG() // new Reports_IG2() // 
 
 const IG_Report = () => {
 

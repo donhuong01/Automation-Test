@@ -1,4 +1,4 @@
-const data = {
+const Customerdata = {
 
     CustomerCreationPrincipal: {
         RegistrationInformation: {
@@ -265,4 +265,4 @@ const data = {
 
 }
 
-export default data;
+export default Customerdata;
