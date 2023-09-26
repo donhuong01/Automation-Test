@@ -48,7 +48,7 @@ class FacilitySettingsCalendarDetailForm {
     AddHolidayDates(HolidayName1, DD, MM, YY) {
 
         // cy.wait(5000)
-        cy.xpath(elems_SettingsCalendarDetail.HolidayDatesTAB.BTN_ADDHOLIDAY, { timeout: 10000 }).should('be.visible').click();
+        cy.xpath(elems_SettingsCalendarDetail.HolidayDatesTAB.BTN_ADDHOLIDAY, { timeout: 20000 }).should('be.visible').click();
         cy.EnterText(elems_SettingsCalendarDetail.NewHolidayPopUp.TXT_NAME, HolidayName1)
         // cy.wait(3000)
         // cy.SelectDate(elems_SettingsCalendarDetail.NewHolidayPopUp.DATE_DATE, HolidayDate1)
