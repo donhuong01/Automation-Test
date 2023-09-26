@@ -2,8 +2,9 @@ const data = [
 
     // E1 Gym Membership Registration for Non-member/New Customer for Maximum term
     {
+        NRICLast4Digit: '',
         NRICFull: 'S2350911C',
-        E1GymMemMainSelection: 'Test E1 Main ',
+        E1GymMemMainSelection: 'Test E1 Main',
         E1GymMembershipSelection: 'Test E1 Detail',
         LocationSelection: 'All Locations',
         DependencyType: 'Principal',

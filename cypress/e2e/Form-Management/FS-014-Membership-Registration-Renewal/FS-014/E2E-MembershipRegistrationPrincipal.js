@@ -15,8 +15,9 @@ import MemberListingPage from '../../../../../page-objects/SMCMS/PageActions/FS-
 import MemberRegistrationDependent from '../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Member Registration/MembershipRegistrationDependent'
 // Import Pages
 import CustomerCreationPage from '../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-CustomerCreation/CustomerCreation'
-import Customerdata from '../../../../../fixtures/Data_Module/CustomerCreationData'
-import elems_CustomerCheckInPage from '../../../../../page-objects/SMCMS/Elements/Membership/FS014_Membership-Master-Registration-Renewal/CustomerCheckInPage'
+import Customerdata from '../../../../fixtures/Data_Module/CustomerCreationData'
+//import Customerdata from '../../../../../fixtures/Data_Module/CustomerCreationData'
+import elems_CustomerCheckInPage from '../../../../page-objects/SMCMS/Elements/Membership/FS014_Membership-Master-Registration-Renewal/CustomerCheckInPage'
 import MembershipModuleSetting from '../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-14-Membership Module Setting/MembershipModuleSetting'
 
 const MembershipRegistration = ()=> {
