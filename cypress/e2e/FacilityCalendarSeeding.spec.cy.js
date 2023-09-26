@@ -6,53 +6,66 @@ import FacilitySettingsCalendarListingForm from '../page-objects/SMCMS/PageActio
 
 import login from '../fixtures/login';
 
+beforeEach(() => {
+
+  //Set local storage for QA Enviroment
+  // cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
+
+  /****************************
+   * Requestor Testing - Erik *
+   ****************************/
+  // Set local storage for UAT Enviroment
+  // cy.SaveUserInfoInLocalStorageForUAT(login.R_authenticated_user_uat, login.R_active_location_uat, login.R_safra_client_uat)
+
+  /************************
+   * Admin Testing - Hung *
+   ************************/
+  // Set local storage for UAT Enviroment
+  cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
+
+
+  // cy.SelectPickerItem('//a[text()="Change"]', 'SAFRA HQ')
+})
+
 describe('Seed Facility', () => {
-  before(() => {
-    //set appropriate env
-    cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client);
-
-    //moved visit logic to before() method
-    cy.visit('/facilities/calendarListing', { timeout: 20000 });
-    FacilitySettingsCalendarListingForm.CreateNew();
-  });
-
   it('loop', () => {
-    //read file
-    //ran twice because of memory issues, update accordingly
     cy.readFile('cypress/fixtures/FacilityMasterSeeding/id2.json').then((data) => {
-      for (const dataIndex in data) {
-        if (data.hasOwnProperty(dataIndex)) {
+      cy.visit('/facilities/calendarListing', { timeout: 30000 });
+      // Wait for the loading image to appear
+      cy.get('.k-loading-image', { timeout: 10000 }).should('be.visible');
 
-          //access objects at current index
-          const { Holidays, Periods, CalendarName } = data[dataIndex];
+      // Wait for the loading image to disappear
+      cy.get('.k-loading-image', { timeout: 30000 }).should('not.exist');
 
-          // Enter the calendar name before processing holidays and periods
-          FacilitySettingsCalendarDetailForm.EnterCalendarName(CalendarName);
+      for (var dataIndex in data) {
+        const { Holidays, Periods, CalendarName } = data[dataIndex];
 
-          // Process holidays
-          Holidays.forEach((holiday) => {
-            const formattedHolidayDate = convertToDDMMMYYYY(holiday.Date);
-            FacilitySettingsCalendarDetailForm.AddHolidayDates(holiday.HolidayName, formattedHolidayDate);
-          });
+        FacilitySettingsCalendarListingForm.CreateNew();
+        FacilitySettingsCalendarDetailForm.EnterCalendarName(data[dataIndex].CalendarName)
 
-          // Process periods
-          Periods.forEach((period) => {
-            const formattedStartDate = convertToDDMMMYYYY(period.StartDate);
-            const formattedEndDate = convertToDDMMMYYYY(period.EndDate);
-            FacilitySettingsCalendarDetailForm.ClickPeriodsTab();
-            FacilitySettingsCalendarDetailForm.AddPeriods(period.PeriodName, formattedStartDate, formattedEndDate);
-          });
-          //save
-          FacilitySettingsCalendarDetailForm.SaveAsDraft();
+        for (var holidayIndex in Holidays) {
+          const holiday = Holidays[holidayIndex];
+          const formattedHolidayDate = convertToDDMMMYYYY(holiday.Date);
+          FacilitySettingsCalendarDetailForm.AddHolidayDates(holiday.HolidayName, formattedHolidayDate);
         }
+
+        for (var periodIndex in Periods) {
+          const period = Periods[periodIndex];
+          const formattedStartDate = convertToDDMMMYYYY(period.StartDate);
+          const formattedEndDate = convertToDDMMMYYYY(period.EndDate);
+
+          FacilitySettingsCalendarDetailForm.ClickPeriodsTab();
+          FacilitySettingsCalendarDetailForm.AddPeriods(period.PeriodName, formattedStartDate, formattedEndDate);
+        }
+
+        FacilitySettingsCalendarDetailForm.SaveAsDraft();
       }
     });
   });
-
 });
 
 function convertToDDMMMYYYY(rawDate) {
-  const [datePart] = rawDate.split(' '); // Split the date and time
+  const [datePart, timePart] = rawDate.split(' '); // Split the date and time
   const [month, day, year] = datePart.split('/').map(part => part.padStart(2, '0'));
   const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
   const monthName = monthNames[Number(month) - 1];
