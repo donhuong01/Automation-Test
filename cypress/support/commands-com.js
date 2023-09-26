@@ -958,7 +958,7 @@ Cypress.Commands.add("EnterDate", (locator, Date) => {
     cy.xpath(locator, { timeout: 10000 }).eq(0).clear({ force: true })
         .type(DD).wait(2000)
         .type('{rightArrow}').wait(2000)
-        .type(MMM).wait(20)
+        .type(MMM).wait(2000)
         .type('{rightArrow}').wait(2000)
         .type(YYYY).wait(2000)
 })
