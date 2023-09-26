@@ -1,0 +1,142 @@
+[
+ {
+   "FacilityTypeId": 1,
+   "Peak Type": "Non-Peak",
+   "Min Booking Slot": 1,
+   "Max Booking Slot": 9,
+   "Enable": true
+ },
+ {
+   "FacilityTypeId": 1,
+   "Peak Type": "Peak",
+   "Min Booking Slot": 1,
+   "Max Booking Slot": 18,
+   "Enable": true
+ },
+ {
+   "FacilityTypeId": 1,
+   "Peak Type": "Super Peak",
+   "Min Booking Slot": 1,
+   "Max Booking Slot": 5,
+   "Enable": false
+ },
+ {
+   "FacilityTypeId": 1,
+   "Peak Type": "General",
+   "Min Booking Slot": 1,
+   "Max Booking Slot": 5,
+   "Enable": false
+ },
+ {
+   "FacilityTypeId": 2,
+   "Peak Type": "Non-Peak",
+   "Min Booking Slot": 1,
+   "Max Booking Slot": 2,
+   "Enable": true
+ },
+ {
+   "FacilityTypeId": 2,
+   "Peak Type": "Peak",
+   "Min Booking Slot": 1,
+   "Max Booking Slot": 2,
+   "Enable": true
+ },
+ {
+   "FacilityTypeId": 2,
+   "Peak Type": "Super Peak",
+   "Min Booking Slot": 0,
+   "Max Booking Slot": 0,
+   "Enable": false
+ },
+ {
+   "FacilityTypeId": 2,
+   "Peak Type": "General",
+   "Min Booking Slot": 0,
+   "Max Booking Slot": 0,
+   "Enable": false
+ },
+ {
+   "FacilityTypeId": 3,
+   "Peak Type": "Non-Peak",
+   "Min Booking Slot": 1,
+   "Max Booking Slot": 2,
+   "Enable": true
+ },
+ {
+   "FacilityTypeId": 3,
+   "Peak Type": "Peak",
+   "Min Booking Slot": 1,
+   "Max Booking Slot": 2,
+   "Enable": true
+ },
+ {
+   "FacilityTypeId": 3,
+   "Peak Type": "Super Peak",
+   "Min Booking Slot": 0,
+   "Max Booking Slot": 0,
+   "Enable": false
+ },
+ {
+   "FacilityTypeId": 3,
+   "Peak Type": "General",
+   "Min Booking Slot": 0,
+   "Max Booking Slot": 0,
+   "Enable": false
+ },
+ {
+   "FacilityTypeId": 4,
+   "Peak Type": "Non-Peak",
+   "Min Booking Slot": 1,
+   "Max Booking Slot": 5,
+   "Enable": true
+ },
+ {
+   "FacilityTypeId": 4,
+   "Peak Type": "Peak",
+   "Min Booking Slot": 1,
+   "Max Booking Slot": 5,
+   "Enable": true
+ },
+ {
+   "FacilityTypeId": 4,
+   "Peak Type": "Super Peak",
+   "Min Booking Slot": 1,
+   "Max Booking Slot": 5,
+   "Enable": true
+ },
+ {
+   "FacilityTypeId": 4,
+   "Peak Type": "General",
+   "Min Booking Slot": 1,
+   "Max Booking Slot": 5,
+   "Enable": true
+ },
+ {
+   "FacilityTypeId": 5,
+   "Peak Type": "Non-Peak",
+   "Min Booking Slot": 1,
+   "Max Booking Slot": 5,
+   "Enable": true
+ },
+ {
+   "FacilityTypeId": 5,
+   "Peak Type": "Peak",
+   "Min Booking Slot": 1,
+   "Max Booking Slot": 5,
+   "Enable": true
+ },
+ {
+   "FacilityTypeId": 5,
+   "Peak Type": "Super Peak",
+   "Min Booking Slot": 1,
+   "Max Booking Slot": 5,
+   "Enable": true
+ },
+ {
+   "FacilityTypeId": 5,
+   "Peak Type": "General",
+   "Min Booking Slot": 1,
+   "Max Booking Slot": 5,
+   "Enable": true
+ }
+]

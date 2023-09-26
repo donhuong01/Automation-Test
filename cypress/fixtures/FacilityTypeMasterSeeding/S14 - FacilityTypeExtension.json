@@ -1,0 +1,26 @@
+[
+ {
+   "FacilityTypeId": 1,
+   "New extension can be maximum minutes after booking end time": 120,
+   "New extension can be maximum minutes before booking start time": 60,
+   "Maximum Slots for each Booking Extension": 8
+ },
+ {
+   "FacilityTypeId": 2,
+   "New extension can be maximum minutes after booking end time": 60,
+   "New extension can be maximum minutes before booking start time": 60,
+   "Maximum Slots for each Booking Extension": 2
+ },
+ {
+   "FacilityTypeId": 3,
+   "New extension can be maximum minutes after booking end time": 120,
+   "New extension can be maximum minutes before booking start time": 60,
+   "Maximum Slots for each Booking Extension": 2
+ },
+ {
+   "FacilityTypeId": 5,
+   "New extension can be maximum minutes after booking end time": 0,
+   "New extension can be maximum minutes before booking start time": 60,
+   "Maximum Slots for each Booking Extension": 2
+ }
+]
