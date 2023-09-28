@@ -4,7 +4,7 @@ const data = {
     IGName: 'IG Main testing' + Math.floor(Math.random() * 1000),
     Code: 'SMCMS06',
     MainCategory: 'TEST',
-    IGCategoryGroup: 'INTEREST GROUP CATERY',
+    IGCategoryGroup: 'INTEREST GROUP CATEGORY',
     FABSGroup: 'Contest',
     ClubClassification: 'Fitness & Leisure',
     LifeStyleGroup: 'Clubbing/Pubbing',
@@ -13,8 +13,8 @@ const data = {
 
     LocationName: 'SAFRA Jurong',
 
-    ApproverOption: 'Specific Approver',
-    ApproverEmail: 'rdacpano@synergyonline.com',
+    ApproverOption: 'PIC of the requestor',
+    ApproverEmail: 'HTran@synergyonline.com',
     Status: 'Draft',
 
     ChargeName: 'Registration Fee',

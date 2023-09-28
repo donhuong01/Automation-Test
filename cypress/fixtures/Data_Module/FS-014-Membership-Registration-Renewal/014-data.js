@@ -570,9 +570,9 @@ const data = {
         BatchType: 'Membership',
         RecTalkSessionID: 'RECID',
         MemRegTenure: '2 YRS CC',
-        PromationReg: 'REGPROMO',
+        PromationReg: '',
         MemRenewalTenure: '5 YRS SC',
-        PromationRenewal: 'REGPROMO',
+        PromationRenewal: '',
         PaymentMode: 'SAFRA $',
         Status: 'Open',
 

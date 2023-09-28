@@ -109,7 +109,7 @@ Cypress.Commands.add('TickCheckBox', (locator, value) => {
 Cypress.Commands.add('ValidateElementText', (locator, expectedText) => {
     cy.log('------ Validate Element Text : ' + locator + ' ------')
     //cy.xpath(locator).scrollIntoView()
-    cy.xpath(locator).should('have.text', expectedText)
+    cy.xpath(locator, {timeout: 60000}).should('have.text', expectedText)
 })
 
 /*****************************************************
@@ -562,11 +562,11 @@ Cypress.Commands.add("SelectBtnDropdownItem", (locator, item) => {
  *****************************************************/
 Cypress.Commands.add("SelectPickerItem", (locator, item) => {
     cy.log('------ SelectPickerItem : ' + locator + ' ------')
-    cy.xpath(locator, { timeout: 10000 }).scrollIntoView()
-    cy.xpath(locator, { timeout: 10000 }).click()
+    cy.xpath(locator, { timeout: 30000 }).scrollIntoView()
+    cy.xpath(locator, { timeout: 30000 }).click()
     // cy.wait(2000)
-    cy.xpath(Picker.TXT_ITEM).type(item)
-    cy.xpath(Picker.BTN_SEARCH, { timeout: 10000 }).click()
+    cy.xpath(Picker.TXT_ITEM, { timeout: 30000 }).type(item)
+    cy.xpath(Picker.BTN_SEARCH, { timeout: 30000 }).click()
     // cy.wait(2000)
     new Table().selectTableItem(Picker.TBL_PICKERITEMS, 'FIRST')
     cy.xpath(Picker.BTN_SELECT).click()

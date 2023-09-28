@@ -5,21 +5,21 @@
  *****************************************************/
 
 // Import Pages
-import BatchMembershipRegistrationListing from '../../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Batch Membership Registration/BatchMembershipRegistrationListing'
-import BatchMembershipRegistrationDetail from '../../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Batch Membership Registration/BatchMembershipRegistrationDetails'
-import MemberRegistrationPrincipal from '../../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Member Registration/MemberRegistrationPrincipal'
-import ShoppingCartPayments from '../../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Shopping Cart and Payment/ShoppingCartandPayments'
-import MemberRegistrationWithDifferentMemberType from '../../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Mem Reg WIth Different Mem Type/RegistrationWithDifferentMemberType'
-import MembershipModuleSetting from '../../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-14-Membership Module Setting/MembershipModuleSetting'
-import elems_CustomerCheckInPage from '../../../../../../page-objects/SMCMS/Elements/Membership/FS014_Membership-Master-Registration-Renewal/CustomerCheckInPage'
-import Customerdata from '../../../../../../fixtures/Data_Module/CustomerCreationData'
-import CustomerCreationPage from '../../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-CustomerCreation/CustomerCreation'
-import elems_MemberListing from '../../../../../../page-objects/SMCMS/Elements/Membership/FS028_Membership-Admin-MaintActivities/MemberListing'
-import MembershipTenureSelection from '../../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Mem Reg WIth Different Mem Type/MembershipTenureSelection'
-import MemberListingPage from '../../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Member Listing/MemberListing'
-import elems_Landing from '../../../../../../page-objects/SMCMS/Elements/Common/Customer_LandingPage'
+import BatchMembershipRegistrationListing from '../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Batch Membership Registration/BatchMembershipRegistrationListing'
+import BatchMembershipRegistrationDetail from '../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Batch Membership Registration/BatchMembershipRegistrationDetails'
+import MemberRegistrationPrincipal from '../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Member Registration/MemberRegistrationPrincipal'
+import ShoppingCartPayments from '../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Shopping Cart and Payment/ShoppingCartandPayments'
+import MemberRegistrationWithDifferentMemberType from '../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Mem Reg WIth Different Mem Type/RegistrationWithDifferentMemberType'
+import MembershipModuleSetting from '../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-14-Membership Module Setting/MembershipModuleSetting'
+import elems_CustomerCheckInPage from '../../../../../page-objects/SMCMS/Elements/Membership/FS014_Membership-Master-Registration-Renewal/CustomerCheckInPage'
+import Customerdata from '../../../../../fixtures/Data_Module/CustomerCreationData'
+import CustomerCreationPage from '../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-CustomerCreation/CustomerCreation'
+import elems_MemberListing from '../../../../../page-objects/SMCMS/Elements/Membership/FS028_Membership-Admin-MaintActivities/MemberListing'
+import MembershipTenureSelection from '../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Mem Reg WIth Different Mem Type/MembershipTenureSelection'
+import MemberListingPage from '../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Member Listing/MemberListing'
+import elems_Landing from '../../../../../page-objects/SMCMS/Elements/Common/Customer_LandingPage'
 
-import data from '../../../../../../fixtures/Data_Module/FS-014-Membership-Registration-Renewal/014-data'
+import data from '../../../../../fixtures/Data_Module/FS-014-Membership-Registration-Renewal/014-data'
 
 const BatchMembershipRegistrationAddNewMemberDependent = (PrincipleNricFull, PrincipalMemberType, PrncipalMaritalStatus, P_Tenure, DepNRICFull, DepTenure, DependentType, RegistationType) => {
 
@@ -88,7 +88,7 @@ const BatchMembershipRegistrationAddNewMemberDependent = (PrincipleNricFull, Pri
                 handPhone: Customerdata.CustomerCreationPrincipal.ContactInformation.handPhone,
                 emailAddress: PrincipalEmail,
                 emergencyContact: Customerdata.CustomerCreationPrincipal.ContactInformation.emergencyContact,
-                homeNumber: '123',
+                homeNumber: Customerdata.CustomerCreationPrincipal.ContactInformation.homeNumber,
 
                 // Preferred Contact Mode
                 preferredContactModeSelectAll: Customerdata.CustomerCreationPrincipal.ContactInformation.preferredContactModeSelectAll,
@@ -149,7 +149,7 @@ const BatchMembershipRegistrationAddNewMemberDependent = (PrincipleNricFull, Pri
 
 
                 /////////////////////////////////////PAYMENTS//////////////////////////////////////////////////
-                ShoppingCart.fillOutandApplyPayment('CHEQUE')
+                ShoppingCart.fillOutandApplyPayment('I-Banking')
                 cy.wait(4000)
 
             }
@@ -422,7 +422,7 @@ const BatchMembershipRegistrationAddNewMemberDependent = (PrincipleNricFull, Pri
             BatchMembershipRegistrationDetail.SaveAndNextTenure()
 
             // Shopping cart and Payments
-            ShoppingCartPayment.fillOutandApplyPaymentWithComplete('CHEQUE')
+            ShoppingCartPayment.fillOutandApplyPaymentWithComplete('I-Banking')
 
             cy.wait(15000)
 

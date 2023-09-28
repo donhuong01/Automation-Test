@@ -18,14 +18,14 @@ const {IGName, Code, MainCategory, IGCategoryGroup, FABSGroup, ClubClassificatio
       DefermentItemCode, ReinstatementItemCode,
       TerminationItemCode, WaiverItemCode, ReversalItemCode} = data
 
-const InterestGroupMainManagement = () => { 
+const InterestGroupMainManagements = () => { 
 
 describe('[TS02] FS-016 Interest Group Main Management', function () {
 
     
     it('[TC01] Creating New Interest Group Main', function () {
 
-        cy.intercept('PUT', 'https://api.qa-smcms.safra.sg/v2/adminapi/interest-group/interest-group-mains/charge-rate').as('ID')
+        cy.intercept('PUT', 'https://api.uat-smcms.safra.sg/v2/adminapi/interest-group/interest-group-mains/charge-rate').as('ID')
         cy.visit('/membership/interestGroupMainListing')
         cy.wait(2000)
 
@@ -259,4 +259,4 @@ describe('[TS02] FS-016 Interest Group Main Management', function () {
 
 }
 
-export default InterestGroupMainManagement
+export default InterestGroupMainManagements

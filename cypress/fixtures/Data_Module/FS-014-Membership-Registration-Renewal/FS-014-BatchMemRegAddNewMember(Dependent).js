@@ -407,11 +407,11 @@ const BatchMembershipRegistrationWithNewMemberDependent = [
     // /// Marital Status Married with different Member Type with dependent type of Spouse and registration type of Batch Registration
 
     {
-        PrincipleNricFull: 'S0587727Z',
+        PrincipleNricFull: 'S1977607G',
         PrincipalMemberType: 'AS',
         PrncipalMaritalStatus: 'Married',     // Marital Status
         P_Tenure: '10 Years',
-        NricNewDependent: 'S6266993D',
+        NricNewDependent: 'S6635268D',
         DependentTenure: '5 Years',
         DependentType: 'Spouse',              //Spouse
         RegistationType: 'BatchRegistration'     /// Resgistration type  Batch Registration 

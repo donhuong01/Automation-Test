@@ -5,14 +5,14 @@ const SFSBatchMembershipRegistrationWithExistingMembers = [
         SFS: 'SFS Enable',                     // To disable SFS type 'SFS Disable'
         MaritalStatus: 'Married',              // Enter Marital Status
         MemberType: 'AS',                      // Enter Member Type      
-        CustomerNRICFull: 'S3599331B',         // Enter Nric
+        CustomerNRICFull: 'S4202091E',         // Enter Nric
         PrincipalTenure: '10 Years',           // Membership Tenure 
         BatchTenure: '5 Years',                // Batch MemberShip Tenure
-        Dependent: 'YES',                       // If want to Add Child Pass YES else Pass NO
-        DepChildNRICFull: 'S3464819J',         // Chid NRIC
+        Dependent: 'YES',                      // If want to Add Child Pass YES else Pass NO
+        DepChildNRICFull: 'S9713741B',         // Chid NRIC
         DependentChildTenure: '10 Years',      // Child Tenure 
         Spouse: 'YES',                         // If want to Add Spouse Pass YES else Pass NO
-        DepSouseNRICFull: 'S1441978J',         // Spouse Nric
+        DepSouseNRICFull: 'S6711243A',         // Spouse Nric
         DependentSpouseTenure: '10 Years'      // Spouse Tenure
     },
     // {

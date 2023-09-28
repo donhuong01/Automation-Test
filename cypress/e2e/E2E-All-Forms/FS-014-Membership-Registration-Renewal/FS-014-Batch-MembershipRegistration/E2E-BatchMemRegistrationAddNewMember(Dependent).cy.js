@@ -11,6 +11,9 @@ beforeEach(() => {
 
     // Set local storage for UAT Enviroment
     cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
+
+    cy.visit('/membership/customerCheckin', {timeout: 30000})
+    cy.SelectPickerItem('//a[text()="Change"]', 'SAFRA HQ')
 })
 
 

@@ -99,6 +99,7 @@ import InterestGMembershipRenewal from '../Sub-Phase-3/FS-016-Interest-Group/Int
 import InterestGMembershipReverse from '../Sub-Phase-3/FS-016-Interest-Group/InterestGroupMembershipReverse'
 import InterestGMembershipTermination from '../Sub-Phase-3/FS-016-Interest-Group/InterestGroupMembershipTermination'
 import InterestGMembershipwaiver from '../Sub-Phase-3/FS-016-Interest-Group/InterestGroupMembershipWaiver'
+import InterestGroupMainManagements from '../Sub-Phase-3/FS-016-Interest-Group/InterestGroupMainManagement'
 
 //FS - 025 Membership VIP Volunteer Veteran League
 import VolunteerCommittee from '../Sub-Phase-2/FS-025-Membership-VIP-Volunteer-Veteran-League/E2E-VolunteerCommitte'
@@ -193,13 +194,13 @@ import FacilityGroupBookingBallot from '../Sub-Phase-2/FS-010-Clubs(Facilites)/E
 beforeEach(() => {
 
     // Set local storage for QA Enviroment
-    // cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
+    cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
     
     /****************************
      * Requestor Testing - Erik *
      ****************************/
     // Set local storage for UAT Enviroment  
-    cy.SaveUserInfoInLocalStorageForUAT(login.R_authenticated_user_uat, login.R_active_location_uat, login.R_safra_client_uat)
+    // cy.SaveUserInfoInLocalStorageForUAT(login.R_authenticated_user_uat, login.R_active_location_uat, login.R_safra_client_uat)
 
     /************************
      * Admin Testing - Hung *
@@ -221,9 +222,9 @@ beforeEach(() => {
 //     SMCMSUser() 
 // })
 
- describe('E2E Auto Testing:FS-002 Reports', () => {
+//  describe('E2E Auto Testing:FS-002 Reports', () => {
 
-     IG_Report()
+//      IG_Report()
     // E1_Report()
     // Accommodation_Report()
     // MemberCards_Report()
@@ -235,7 +236,7 @@ beforeEach(() => {
     // AdminSetting_Report()
     // Facility_Report()   
 
- })
+//  })
 
 
 // describe('E2E Auto Testing:FS-004 Admin: Settings', () => {
@@ -283,7 +284,7 @@ beforeEach(() => {
 // })
 
 
-// describe('E2E Auto Testing:FS-014 Membership: Master Registration and Renewal', ()=> { 
+describe('E2E Auto Testing:FS-014 Membership: Master Registration and Renewal', ()=> { 
 
 //      MembershipRegistration(E2EData.NRIC_FOR_MEMBERSHIP_REGISTRATION) // Enter Full NRIC
     // CustomerCheckIn()
@@ -301,26 +302,26 @@ beforeEach(() => {
     
     
     // LifeMembershipManagment(E2EData.NRIC_FOR_LIFE_MEMBERSHIP_REGISTRATION) //Add NRIC For Principal Registration
-//    BatchMembershipRegistration(
+   BatchMembershipRegistration(
 
-//         //Pass Info for Existing Member MemberID and LAST4DigitsNRIC
-//         E2EData.BATCH_REGISTRATION.MEMBERID_FOR_EXISTING_MEMBER,
-//         E2EData.BATCH_REGISTRATION.LAST4DIGITSNRIC_FOR_EXISTING_MEMBER,
+        //Pass Info for Existing Member MemberID and LAST4DigitsNRIC
+        E2EData.BATCH_REGISTRATION.MEMBERID_FOR_EXISTING_MEMBER,
+        E2EData.BATCH_REGISTRATION.LAST4DIGITSNRIC_FOR_EXISTING_MEMBER,
         
-//         //Pass informstion for Non-Member Name, DOB, LAST4DigitsNRIC and Full NRIC
-//         E2EData.BATCH_REGISTRATION.MEMBER_NAME_FOR_NON_MEMBER,
-//         E2EData.BATCH_REGISTRATION.DOB_FOR_NON_MEMBER,
-//         E2EData.BATCH_REGISTRATION.LAST4DIGITSNRIC_FOR_NON_MEMBER,
-//         E2EData.BATCH_REGISTRATION.FULLNRIC_FOR_NON_MEMBER,
+        //Pass informstion for Non-Member Name, DOB, LAST4DigitsNRIC and Full NRIC
+        E2EData.BATCH_REGISTRATION.MEMBER_NAME_FOR_NON_MEMBER,
+        E2EData.BATCH_REGISTRATION.DOB_FOR_NON_MEMBER,
+        E2EData.BATCH_REGISTRATION.LAST4DIGITSNRIC_FOR_NON_MEMBER,
+        E2EData.BATCH_REGISTRATION.FULLNRIC_FOR_NON_MEMBER,
 
-//         //NRIC for New Principal
-//         E2EData.BATCH_REGISTRATION.NRIC_FOR_NEW_PRINCIPAL,
+        //NRIC for New Principal
+        E2EData.BATCH_REGISTRATION.NRIC_FOR_NEW_PRINCIPAL,
 
-//         //NRIC for New Dependent and Dependent PrincipalID
-//         E2EData.BATCH_REGISTRATION.NRIC_FOR_ADDING_NEW_DEPENDENT,
-//         E2EData.BATCH_REGISTRATION.PRINCIPALID_FOR_NEW_DEPENDENT) 
+        //NRIC for New Dependent and Dependent PrincipalID
+        E2EData.BATCH_REGISTRATION.NRIC_FOR_ADDING_NEW_DEPENDENT,
+        E2EData.BATCH_REGISTRATION.PRINCIPALID_FOR_NEW_DEPENDENT) 
 
-//  })
+ })
 
 
 
@@ -369,7 +370,7 @@ beforeEach(() => {
 // InterestGMembershipwaiver(E2EData.MEMBER_NAME_FOR_IG_WAIVER)  //Provide Member Name
 // InterestGroupManagement()
 // InterestGroupMembershipManagment()
-// //IG Main
+// InterestGroupMainManagements()
 // //IG Renewal Advice
 
 // })
@@ -412,7 +413,7 @@ beforeEach(() => {
     // BatchMemDefermentRequest(E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERNAME1, E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERID1,
     // E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERNAME2, E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERID2) 
     // BatchMembershipWaiver(E2EData.TWO_NRICS_FOR_BATCH_MEMBERSHIP_WAIVER.NRIC1, E2EData.TWO_NRICS_FOR_BATCH_MEMBERSHIP_WAIVER.NRIC2) // Enter 2 NRIC's for Member Registration 
-    MemDefermentRequest(E2EData.NRIC_FOR_MEMBERSHIP_DEFERMENT_REQUEST) //Change NRIC before runing this function
+    // MemDefermentRequest(E2EData.NRIC_FOR_MEMBERSHIP_DEFERMENT_REQUEST) //Change NRIC before runing this function
     // MembershipResignationManagement(E2EData.NRIC_FOR_MEMBERSHIP_RESIGNATION_MANAGEMENT) //Change NRIC before runing this function
     // MembershipExpulsionAndReinstatment(E2EData.NRIC_FOR_MEMBERSHIP_EXPULSION_AND_REINSTATEMENT) //Change NRIC before runing this function
 //     //Membership Transaction Cancellation

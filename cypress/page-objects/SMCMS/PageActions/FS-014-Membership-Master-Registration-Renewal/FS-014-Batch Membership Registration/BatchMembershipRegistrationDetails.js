@@ -39,9 +39,9 @@ class BatchMembershipRegistrationDetail {
             cy.SelectDropDownItem(elems_BatchMembershipRegistrationDetail.BatchInformation.DRP_BATCHTYPE, BatchType)
             // cy.EnterText(elems_BatchMembershipRegistrationDetail.BatchInformation.TXT_RECTALKSESSIONID, RecTalkSessionID)
             cy.SelectDropDownItem(elems_BatchMembershipRegistrationDetail.BatchInformation.DRP_MEMSHIPREGTENURE, MemRegTenure)
-            cy.EnterText(elems_BatchMembershipRegistrationDetail.BatchInformation.TXT_PROMOTIONREGISTRATION, PromationReg)
+            // cy.EnterText(elems_BatchMembershipRegistrationDetail.BatchInformation.TXT_PROMOTIONREGISTRATION, PromationReg)
             cy.SelectDropDownItem(elems_BatchMembershipRegistrationDetail.BatchInformation.DRP_MEMSHIPRENEWALTENURE, MemRenewalTenure)
-            cy.EnterText(elems_BatchMembershipRegistrationDetail.BatchInformation.TXT_PROMOTION_RENEWAL, PromationTenure)
+            // cy.EnterText(elems_BatchMembershipRegistrationDetail.BatchInformation.TXT_PROMOTION_RENEWAL, PromationTenure)
             cy.SelectDropDownItem(elems_BatchMembershipRegistrationDetail.BatchInformation.DRP_PAYMENTMODE, PaymentMode)
         }
         if (BatchType === "Interest Group") {

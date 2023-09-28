@@ -44,7 +44,7 @@ describe('[TS07] SFS Member Registration]', function (){
     
     //For Principal Creation
     // const PrincipalName = data.CustomerCreationPrincipal.RegistrationInformation.name + UserID
-    const PrincipalName = 'LD Test 11 - DO NOT TOUCH'//'SFS User ' + UserID //
+    const PrincipalName = 'Etest1'//'SFS User ' + UserID //
     const PrincipalEmail = PrincipalName+"@test.com"//data.CustomerCreationPrincipal.ContactInformation.emailAddress + UserID + "@test.com" //'safraonlineuser014@gmail.com'//
     // const CustomerNRIC = '691J'           //To be changed Each time 
 
@@ -54,7 +54,7 @@ describe('[TS07] SFS Member Registration]', function (){
     //For Dependent Child 
     const UserIDDep = Math.floor(Math.random() * 10000 )
     // const DepChildName = data.CustomerCreationDependentChild.RegistrationInformation.name + UserIDDep
-    const DepChildName = 'LD Test 11-C - DO NOT TOUCH'//'SFS User - C' + UserIDDep //
+    const DepChildName = 'EtestC1'//'SFS User - C' + UserIDDep //
     const DepChildEmail = DepChildName+"@test.com"//data.CustomerCreationDependentChild.ContactInformation.emailAddress + UserIDDep + "@test.com" //'safraonlineuser014-C@gmail.com'//
     // const DepChildNRIC = '167D'            //To be changed Each time 
     // const DepChildNRICFull = 'S7296807G'   //To be changed Each time 
@@ -62,7 +62,7 @@ describe('[TS07] SFS Member Registration]', function (){
     //For Dependent Spouse
     const UserIDSpouse = Math.floor(Math.random() * 10000 )
     // const DepSouseName = data.CustomerCreationDependentSpouse.RegistrationInformation.name + UserIDSpouse
-    const DepSouseName = 'SFS User - S' + UserIDSpouse //'TestuserQA98 - S'//
+    const DepSouseName = 'EtestS1' + UserIDSpouse //'TestuserQA98 - S'//
     const DepSouseEmail = data.CustomerCreationDependentSpouse.ContactInformation.emailAddress + UserIDSpouse + "@synergyonline.com" //'safraonlineuser014-S@gmail.com'//
     // const DepSouseNRIC = '319Z'             //To be changed Each time 
     // const DepSouseNRICFull = 'S3170144I'    //To be changed Each time 

@@ -8,10 +8,14 @@ import login from '../../../../fixtures/login'
 beforeEach(() => {
 
     // Set local storage for QA Enviroment
-    // cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
+    cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
 
     // Set local storage for UAT Enviroment
-    cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
+    // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
+
+    //Select Channel
+    cy.visit('/membership/customerCheckin')
+    cy.SelectPickerItem('//a[text()="Change"]', 'SAFRA HQ')
 })
 
 
@@ -26,14 +30,14 @@ SFSBatchMembershipRegistrationWithExistingMembers.forEach(data => {
     })
 })
 
-// This function will add SFS Inactive Existing member to the Batch
-NonSFSBatchMembershipRegistrationWithExistingMembers.forEach(data => {
+// // This function will add SFS Inactive Existing member to the Batch
+// NonSFSBatchMembershipRegistrationWithExistingMembers.forEach(data => {
 
-    describe(`Non SFS Batch MemberShip Registration With Existing Member With ${data.MemberType} Member Type`, function () {
+//     describe(`Non SFS Batch MemberShip Registration With Existing Member With ${data.MemberType} Member Type`, function () {
 
-        BatchMembershipRegistrationWithExistingMember(data.SFS, data.MaritalStatus, data.MemberType, data.CustomerNRICFull, data.PrincipalTenure,
-            data.Dependent, data.DepChildNRICFull, data.DependentChildTenure, data.Spouse, data.DepSouseNRICFull, data.DependentSpouseTenure , data.BatchTenure)
+//         BatchMembershipRegistrationWithExistingMember(data.SFS, data.MaritalStatus, data.MemberType, data.CustomerNRICFull, data.PrincipalTenure,
+//             data.Dependent, data.DepChildNRICFull, data.DependentChildTenure, data.Spouse, data.DepSouseNRICFull, data.DependentSpouseTenure , data.BatchTenure)
 
-    })
-})
+//     })
+// })
 

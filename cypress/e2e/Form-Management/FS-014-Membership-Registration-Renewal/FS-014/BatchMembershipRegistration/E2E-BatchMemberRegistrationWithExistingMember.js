@@ -5,23 +5,23 @@
  *****************************************************/
 
 // Import Pages
-import BatchMembershipRegistrationDetail from '../../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Batch Membership Registration/BatchMembershipRegistrationDetails'
-import BatchMembershipRegistrationListing from '../../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Batch Membership Registration/BatchMembershipRegistrationListing'
-import data from '../../../../../../fixtures/Data_Module/FS-014-Membership-Registration-Renewal/014-data'
-import ShoppingCartPayments from '../../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Shopping Cart and Payment/ShoppingCartandPayments'
+import BatchMembershipRegistrationDetail from '../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Batch Membership Registration/BatchMembershipRegistrationDetails'
+import BatchMembershipRegistrationListing from '../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Batch Membership Registration/BatchMembershipRegistrationListing'
+import data from '../../../../../fixtures/Data_Module/FS-014-Membership-Registration-Renewal/014-data'
+import ShoppingCartPayments from '../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Shopping Cart and Payment/ShoppingCartandPayments'
 // Import Pages
-import MemberRegistrationPrincipal from '../../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Member Registration/MemberRegistrationPrincipal'
-import elems_Landing from '../../../../../../page-objects/SMCMS/Elements/Common/Customer_LandingPage'
-import MembershipTenureSelection from '../../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Mem Reg WIth Different Mem Type/MembershipTenureSelection'
-import elems_MemberListing from '../../../../../../page-objects/SMCMS/Elements/Membership/FS028_Membership-Admin-MaintActivities/MemberListing'
-import MemberListingPage from '../../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Member Listing/MemberListing'
+import MemberRegistrationPrincipal from '../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Member Registration/MemberRegistrationPrincipal'
+import elems_Landing from '../../../../../page-objects/SMCMS/Elements/Common/Customer_LandingPage'
+import MembershipTenureSelection from '../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Mem Reg WIth Different Mem Type/MembershipTenureSelection'
+import elems_MemberListing from '../../../../../page-objects/SMCMS/Elements/Membership/FS028_Membership-Admin-MaintActivities/MemberListing'
+import MemberListingPage from '../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Member Listing/MemberListing'
 // Import Pages
-import CustomerCreationPage from '../../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-CustomerCreation/CustomerCreation'
-import Customerdata from '../../../../../../fixtures/Data_Module/CustomerCreationData'
-import elems_CustomerCheckInPage from '../../../../../../page-objects/SMCMS/Elements/Membership/FS014_Membership-Master-Registration-Renewal/CustomerCheckInPage'
-import MembershipModuleSetting from '../../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-14-Membership Module Setting/MembershipModuleSetting'
-import MemberRegistrationWithDifferentMemberType from '../../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Mem Reg WIth Different Mem Type/RegistrationWithDifferentMemberType'
-import MemberRegistrationDependent from '../../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Mem Reg WIth Different Mem Type/DependentRegistration'
+import CustomerCreationPage from '../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-CustomerCreation/CustomerCreation'
+import Customerdata from '../../../../../fixtures/Data_Module/CustomerCreationData'
+import elems_CustomerCheckInPage from '../../../../../page-objects/SMCMS/Elements/Membership/FS014_Membership-Master-Registration-Renewal/CustomerCheckInPage'
+import MembershipModuleSetting from '../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-14-Membership Module Setting/MembershipModuleSetting'
+import MemberRegistrationWithDifferentMemberType from '../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Mem Reg WIth Different Mem Type/RegistrationWithDifferentMemberType'
+import MemberRegistrationDependent from '../../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Mem Reg WIth Different Mem Type/DependentRegistration'
 
 
 
@@ -53,10 +53,10 @@ const BatchMembershipRegistrationWithExistingMember = (SFS, MaritalStatus, Membe
         const CustomerNRIC = CustomerNRICFull.substr(CustomerNRICFull.length - 4);
         const UserID = Math.floor(Math.random() * 1000500 * 5)
         const PrincipalName = Customerdata.CustomerCreationPrincipal.RegistrationInformation.name + UserID
-        const PrincipalEmail = Customerdata.CustomerCreationPrincipal.ContactInformation.emailAddress + UserID + "ly" + "@synergyonline.com"
+        const PrincipalEmail = Customerdata.CustomerCreationPrincipal.ContactInformation.emailAddress //+ UserID + "ly" + "@synergyonline.com"
 
 
-        const ApplicationDate = '01-Sep-2022'
+        const ApplicationDate = '28-Sep-2023'
         const BatchName = 'Auto-' + Math.floor(Math.random() * 100000 * 4) + data.BatchMemRegDetail.BatchName
         const BatchType = data.BatchMemRegDetail.BatchType
         const RecTalkSessionID = data.BatchMemRegDetail.RecTalkSessionID
@@ -116,7 +116,7 @@ const BatchMembershipRegistrationWithExistingMember = (SFS, MaritalStatus, Membe
                 handPhone: Customerdata.CustomerCreationPrincipal.ContactInformation.handPhone,
                 emailAddress: PrincipalEmail,
                 emergencyContact: Customerdata.CustomerCreationPrincipal.ContactInformation.emergencyContact,
-                homeNumber: '123',
+                homeNumber: '61237123',
 
                 // Preferred Contact Mode
                 preferredContactModeSelectAll: Customerdata.CustomerCreationPrincipal.ContactInformation.preferredContactModeSelectAll,
@@ -289,13 +289,13 @@ const BatchMembershipRegistrationWithExistingMember = (SFS, MaritalStatus, Membe
 
             if (MaritalStatus !== "Single" && MaritalStatus !== "N/A" && Dependent === "YES") {
 
-                MemTenureSelect.dependentTenureSelection(DepChildName, DependentChildTenure)
+                MemTenureSelect.principalTenureSelection(DepChildName, DependentChildTenure)
                 MemTenureSelect.selectDependent(DepChildName)
 
             }
             if (MaritalStatus !== "Single" && MaritalStatus !== "N/A" && MaritalStatus !== "Divorced" && Spouse === "YES") {
 
-                MemTenureSelect.dependentTenureSelection(DepSouseName, DependentSpouseTenure)
+                MemTenureSelect.principalTenureSelection(DepSouseName, DependentSpouseTenure)
                 // MemTenureSelect.selectDependent(DepSouseName)
 
             }
@@ -309,7 +309,7 @@ const BatchMembershipRegistrationWithExistingMember = (SFS, MaritalStatus, Membe
 
 
                 /////////////////////////////////////PAYMENTS//////////////////////////////////////////////////
-                ShoppingCart.fillOutandApplyPayment('CHEQUE')
+                ShoppingCart.fillOutandApplyPayment('I-Banking')
                 cy.wait(4000)
 
             }
@@ -404,7 +404,7 @@ const BatchMembershipRegistrationWithExistingMember = (SFS, MaritalStatus, Membe
         })
 
 
-        it('[TC02] Creating a Batch Membership Registration and Add Existing Member', function () {
+        it.only('[TC02] Creating a Batch Membership Registration and Add Existing Member', function () {
 
             cy.visit('/membership/batchMembershipRegistrationList')
 
@@ -422,7 +422,7 @@ const BatchMembershipRegistrationWithExistingMember = (SFS, MaritalStatus, Membe
 
             //Fillout form
             BatchMembershipRegistrationDetail.FillOutBatchMembershipRegistrationDetailForm(
-                BatchName, BatchType, RecTalkSessionID, MemRegTenure, PromationReg,
+                BatchName, BatchType, /*RecTalkSessionID,*/ MemRegTenure, PromationReg,
                 MemRenewalTenure, PromationRenewal, PaymentMode
             )
 
@@ -481,7 +481,7 @@ const BatchMembershipRegistrationWithExistingMember = (SFS, MaritalStatus, Membe
             BatchMembershipRegistrationDetail.SaveAndNextTenure()
 
             // Shopping cart and Payments
-            ShoppingCartPayment.fillOutandApplyPaymentWithComplete('CHEQUE')
+            ShoppingCartPayment.fillOutandApplyPaymentWithComplete('I-Banking')
             // verify New Member In Membership Registration and Renewal Listing
             BatchMembershipRegistrationDetail.VerifyNewMemberPrincipal(CustomerNRICFull)
 
@@ -522,7 +522,7 @@ const BatchMembershipRegistrationWithExistingMember = (SFS, MaritalStatus, Membe
                 BatchMembershipRegistrationDetail.SaveAndNextTenure()
 
                 // Shopping cart and Payments
-                ShoppingCartPayment.fillOutandApplyPaymentWithComplete('CHEQUE')
+                ShoppingCartPayment.fillOutandApplyPaymentWithComplete('I-Banking')
                 // verify New Member In Membership Registration and Renewal Listing
                 BatchMembershipRegistrationDetail.VerifyNewMemberPrincipal(DepChildNRICFull)
 
@@ -564,7 +564,7 @@ const BatchMembershipRegistrationWithExistingMember = (SFS, MaritalStatus, Membe
                 BatchMembershipRegistrationDetail.SaveAndNextTenure()
 
                 // Shopping cart and Payments
-                ShoppingCartPayment.fillOutandApplyPaymentWithComplete('CHEQUE')
+                ShoppingCartPayment.fillOutandApplyPaymentWithComplete('I-Banking')
                 // verify New Member In Membership Registration and Renewal Listing
                 BatchMembershipRegistrationDetail.VerifyNewMemberPrincipal(DepSouseNRICFull)
 

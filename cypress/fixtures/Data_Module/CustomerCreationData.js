@@ -16,10 +16,10 @@ const Customerdata = {
             myMailbox: "SGPost"
         },
         ContactInformation: {
-            handPhone: '+65 658 5896',
+            handPhone: '8658 5896',
             emailAddress: 'Auto-Test' +  Math.floor(Math.random() * 1000300) + '@test.com',
-            emergencyContact: "+65 658 5893",
-            homeNumber: "12378565",
+            emergencyContact: "8658 5893",
+            homeNumber: "62378565",
 
             preferredContactModeSelectAll: 'check',
             preferredContactModeEmail: 'uncheck',
@@ -102,10 +102,10 @@ const Customerdata = {
             //ProfilePicture: 'test_images.png'
         },
         ContactInformation: {
-            handPhone: '+65 658 5896',
+            handPhone: '8658 5896',
             emailAddress: 'testuser',
-            emergencyContact: "+65 658 5893",
-            homeNumber: "6585896",
+            emergencyContact: "8658 5893",
+            homeNumber: "65825896",
 
             preferredContactModeSelectAll: 'check',
             preferredContactModeEmail: 'uncheck',
@@ -194,11 +194,11 @@ const Customerdata = {
             myMailbox: "SGPost"
         },
         ContactInformation: {
-            handPhone: '+65 658 5896',
+            handPhone: '8658 5896',
             emailAddress: 'testuser',
-            emergencyContact: "+65 658 5893",
+            emergencyContact: "8658 5893",
             conentInformationServiceNotification: 'check',
-            homeNumber: "658 5896",
+            homeNumber: "65825896",
 
             preferredContactModeSelectAll: 'check',
             preferredContactModeEmail: 'uncheck',

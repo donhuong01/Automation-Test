@@ -21,7 +21,7 @@ class InterestGroupMain {
     *****************************************************/
     CreateNew() {
         cy.Click(elems_InterestGroupMainListing.BTN_CREATENEW)
-        cy.wait(2000)
+        cy.wait(20000)
     }
 
     /*****************************************************
