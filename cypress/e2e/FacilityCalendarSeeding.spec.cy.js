@@ -29,7 +29,7 @@ beforeEach(() => {
 
 describe('Seed Facility', () => {
   it('loop', () => {
-    cy.readFile('cypress/fixtures/FacilityMasterSeeding/id2.json').then((data) => {
+    cy.readFile('cypress/fixtures/AccommodationSeeding/Calendar/Calendar.json').then((data) => {
       cy.visit('/facilities/calendarListing', { timeout: 30000 });
       // Wait for the loading image to appear
       cy.get('.k-loading-image', { timeout: 10000 }).should('be.visible');
@@ -51,8 +51,8 @@ describe('Seed Facility', () => {
 
         for (var periodIndex in Periods) {
           const period = Periods[periodIndex];
-          const formattedStartDate = convertToDDMMMYYYY(period.StartDate);
-          const formattedEndDate = convertToDDMMMYYYY(period.EndDate);
+          const formattedStartDate = convertToDDMMMYYYY2(period.StartDate);
+          const formattedEndDate = convertToDDMMMYYYY2(period.EndDate);
 
           FacilitySettingsCalendarDetailForm.ClickPeriodsTab();
           FacilitySettingsCalendarDetailForm.AddPeriods(period.PeriodName, formattedStartDate, formattedEndDate);
@@ -64,9 +64,18 @@ describe('Seed Facility', () => {
   });
 });
 
+
 function convertToDDMMMYYYY(rawDate) {
   const [datePart, timePart] = rawDate.split(' '); // Split the date and time
   const [month, day, year] = datePart.split('/').map(part => part.padStart(2, '0'));
+  const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  const monthName = monthNames[Number(month) - 1];
+  return `${day}-${monthName}-${year}`;
+}
+
+function convertToDDMMMYYYY2(rawDate) {
+  const [datePart] = rawDate.split(' '); // Split the date and time
+  const [day, month, year] = datePart.split('/').map(part => part.padStart(2, '0'));
   const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
   const monthName = monthNames[Number(month) - 1];
   return `${day}-${monthName}-${year}`;
