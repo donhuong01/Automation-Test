@@ -1311,7 +1311,7 @@ Cypress.Commands.add("SelectPickerDifferentItemsWait", (locator, wait, textField
     cy.xpath(locator).scrollIntoView()
     cy.xpath(locator).click()
     // cy.wait(wait)
-    cy.xpath(textField, { timeout: wait }).should('be.visible').type(item)
+    cy.xpath(textField, { timeout: 30000 }).should('be.visible').type(item)
     cy.Click(SearchFilter);
     new Table().selectTableItem(Picker.TBL_PICKERITEMS, 'FIRST')
     cy.Click(Picker.BTN_SELECT);
