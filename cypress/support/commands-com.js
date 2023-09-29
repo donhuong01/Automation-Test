@@ -28,7 +28,7 @@ Cypress.Commands.add('GoToWebPage', (url) => {
 Cypress.Commands.add('Click', (locator) => {
     cy.log('------ Click : ' + locator + ' ------')
     cy.xpath(locator,{timeout: 30000}).scrollIntoView()
-    cy.xpath(locator).click()
+    cy.xpath(locator,{timeout: 30000}).click({timeout: 30000})
 })
 
 /*****************************************************
@@ -41,7 +41,7 @@ Cypress.Commands.add('Click', (locator) => {
 Cypress.Commands.add('EnterText', (locator, text) => {
     cy.log('------ Enter Text : ' + locator + ' ------')
     cy.xpath(locator,{timeout: 30000}).scrollIntoView()
-    cy.xpath(locator).type(text)
+    cy.xpath(locator,{timeout: 30000}).type(text,{timeout: 30000})
 })
 
 /*****************************************************

@@ -2,24 +2,24 @@ const data = {
 
     SRP_Redemption_Managment: {
         MemberID: "A300001959",
-        ItemCode: "006",
-        ItemDescription: "SRP Voucher 006",
-        Category: "Consignment Item",
+        ItemCode: "SRP001", // QA: SRP001 ; UAT: 006
+        ItemDescription: "SRP Prod 001", // QA: SRP Prod 001 ; UAT: SRP Voucher 006
+        Category: "e-Vouchers", // QA: e-Vouchers ; UAT: Consignment Item
         RedemptionSourceLoc: "SAFRA Jurong",
         Status: "Pending Payment",
         Quantity: 1,
-        PaymentMethod: 'CASH'
+        PaymentMethod: 'I-Banking'
     },
 
     SRP_Redemption_Collection: {
         MemberID: "A300002261",
-        ItemCode: "SRP008",
-        ItemDescription: "SRP Voucher 008",
-        Category: "Voucher",
+        ItemCode: "SRP001", // QA: SRP001 ; UAT: SRP008
+        ItemDescription: "SRP Prod 001", // QA: SRP Prod 001 ; UAT: SRP Voucher 008
+        Category: "e-Vouchers", // QA: e-Vouchers ; UAT: Voucher
         RedemptionSourceLoc: "SAFRA Jurong",
         Status: "Pending Payment",
         Quantity: 1,
-        PaymentMode: 'CASH'
+        PaymentMode: 'I-Banking'
     },
 
     EDC_Terminal_Management: {
@@ -27,8 +27,8 @@ const data = {
         Placement: "Trial",
         SourceChannel: "SAFRA Punggol",
         ThirdPartyVendoreID: "VD003",
-        ItemGSTGroup: "FULL",
-        FabsGroup: "Golfing Club",
+        ItemGSTGroup: "ZERO",
+        FabsGroup: "Activities",
         ClubClassification: "Fitness & Leisure",
         SMCClassification: "Fitness & Adventure-SMC",
     },
@@ -112,12 +112,12 @@ const data = {
 
     },
     SRP_Redemption_Catalogue_Management: {
-        ItemCode: "004",
-        ItemDescription: "SAFRA Voucher 004",
+        ItemCode: "AAAAA",
+        ItemDescription: "AAAAA",
         Status: "Active",
         Category: "Consignment Item",
-        PublishStartDate: "22-Jan-2023",
-        PublishEndDate: "01-Aug-2023",
+        PublishStartDate: "29-Sep-2023",
+        PublishEndDate: "01-Dec-2023",
         ExpiryCollection: 15,
         Featured: "CHECK",
         Img: "/test_images.png",

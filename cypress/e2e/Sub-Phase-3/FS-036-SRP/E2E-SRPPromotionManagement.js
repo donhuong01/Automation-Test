@@ -20,7 +20,7 @@ const { Name, Description, PromoType, Quantity, ProductCategory, ModuleType,
     const UpdatePersonalInfo = 'Update Personal Info'
     const UpdatePersonalInfoName = 'Update Personal Info ' + Math.floor(Math.random() * 100000 )
     
-    const SRPPromotionManagement = () => {
+    const SRPPromotionManagement = (MemberID, MemberType) => {
 
 describe('[TS04] FS-036 SRP Promotion Management', function () {
 
@@ -141,7 +141,7 @@ describe('[TS04] FS-036 SRP Promotion Management', function () {
 
         SRP_PromotionListing.CreateNew()
 
-        SRP_PromotionDetail.FilloutGeneralFields(UpdatePersonalInfoName, Description, UpdatePersonalInfo, Quantity, ProductCategory,
+        SRP_PromotionDetail.FilloutGeneralFieldsUpdates(UpdatePersonalInfoName, Description, UpdatePersonalInfo, Quantity, ProductCategory,
             ModuleType, ExtraPointsType, ExtraPercentage, ValidFrom, ValidTo)
 
         SRP_PromotionDetail.SourceChannel(SourceChannel)

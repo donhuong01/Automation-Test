@@ -26,7 +26,7 @@ describe('[TS06] FS-036 SRP Redemption management', function () {
 
         SRP_RedemptionDetail.VerifySRPRedemptionDetails(MemberID, ItemCode, ItemDescription, RedemptionSourceLoc)
 
-        SRP_RedemptionDetail.EnterQuantity(Quantity)
+        //SRP_RedemptionDetail.EnterQuantity(Quantity)
 
         SRP_RedemptionDetail.AddToCart()
 

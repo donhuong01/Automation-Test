@@ -27,7 +27,7 @@ class SRP_RedemptionDetail {
      * Description: This function Enter Quantity
      *****************************************************/
     EnterQuantity(Quantity) {
-
+        cy.xpath(elems_SRPREDEMPTIONDETAIL.TXT_QUANTITY).clear()
         cy.EnterText(elems_SRPREDEMPTIONDETAIL.TXT_QUANTITY, Quantity)
 
     }

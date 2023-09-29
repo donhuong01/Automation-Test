@@ -1,5 +1,6 @@
 import elems_SRPPromationListing from '../../Elements/FS-036-SRP/SRPPromationListing'
 import elems_MemberListing from '../../Elements/Membership/FS028_Membership-Admin-MaintActivities/MemberListing'
+import elems_Alerts from '../../Elements/Common/Alerts'
 
 class SRP_PromotionListing {
 
@@ -20,6 +21,7 @@ class SRP_PromotionListing {
     Delete() {
 
         cy.Click(elems_SRPPromationListing.BTN_DELETE)
+        cy.Click(elems_Alerts.BTN_YES)
 
     }
 
