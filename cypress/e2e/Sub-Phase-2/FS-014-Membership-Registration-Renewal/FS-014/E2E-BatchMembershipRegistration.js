@@ -39,7 +39,7 @@ describe('[TS13] Batch Membership Registration Details form', function () {
     const ApplicationDate = '10-Aug-2023'
 
 
-    const BatchName = 'Auto-' + Math.floor(Math.random() * 100000 * 2 ) + data.BatchMemRegDetail.BatchName
+    const BatchName = 'Autos-' + Math.floor(Math.random() * 100000 * 2 ) + data.BatchMemRegDetail.BatchName
     const BatchType = data.BatchMemRegDetail.BatchType
     const RecTalkSessionID = data.BatchMemRegDetail.RecTalkSessionID
     const MemRegTenure = data.BatchMemRegDetail.MemRegTenure
@@ -126,7 +126,7 @@ describe('[TS13] Batch Membership Registration Details form', function () {
         BatchMembershipRegistrationDetail.SaveAndNextTenure()
 
         // Shopping cart and Payments
-        ShoppingCartPayment.fillOutandApplyPaymentCompleteButton('CASH') 
+        ShoppingCartPayment.fillOutandApplyPaymentCompleteButton('I-Banking') 
 
 
         cy.visit('/membership/batchMembershipRegistrationList').wait(5000)
@@ -142,7 +142,7 @@ describe('[TS13] Batch Membership Registration Details form', function () {
 
     })
 
-    it.only('[TC02] Creating a Batch Membership Registration with Non-Member', function () {
+    it('[TC02] Creating a Batch Membership Registration with Non-Member', function () {
 
         const BatchNameNonMem = 'Auto-Batch' + Math.floor(Math.random() * 100000 * 2 ) 
 
@@ -226,7 +226,7 @@ describe('[TS13] Batch Membership Registration Details form', function () {
         
         MemRegPrincipal.verifyContactInformation({
             Handphone: data.memberregistrationprincipal.ContactInfo.Handphone,
-            // EmailAddress: data.memberregistrationprincipal.ContactInfo.EmailAddress,
+            EmailAddress: data.memberregistrationprincipal.ContactInfo.EmailAddress,
             HomeNumber: data.memberregistrationprincipal.ContactInfo.HomeNumber,
             EmergencyContact: data.memberregistrationprincipal.ContactInfo.EmergencyContact,
             })
@@ -265,7 +265,7 @@ describe('[TS13] Batch Membership Registration Details form', function () {
             BatchMembershipRegistrationDetail.SaveAndNextTenure()
 
             // Shopping cart and Payments
-            ShoppingCartPayment.fillOutandApplyPaymentCompleteButton('CASH')
+            ShoppingCartPayment.fillOutandApplyPaymentCompleteButton('I-Banking')
 
             cy.visit('/membership/batchMembershipRegistrationList').wait(5000)
             //Filter by Batch Name
@@ -387,7 +387,7 @@ describe('[TS13] Batch Membership Registration Details form', function () {
             BatchMembershipRegistrationDetail.SaveAndNextTenure()
 
             // Shopping cart and Payments
-            ShoppingCartPayment.fillOutandApplyPaymentCompleteButton('CASH')
+            ShoppingCartPayment.fillOutandApplyPaymentCompleteButton('I-Banking')
 
             cy.visit('/membership/batchMembershipRegistrationList').wait
 
@@ -404,7 +404,7 @@ describe('[TS13] Batch Membership Registration Details form', function () {
             
     })
 
-    it('[TC04] Creating a Batch Membership Registration with New Member(Defendent)', function () {
+    it.only('[TC04] Creating a Batch Membership Registration with New Member(Dependent)', function () {
 
         //filloutPersonalInformation
         const TestUser = 'Test User-' + Math.floor(Math.random() * 100000 * 2 )
@@ -419,7 +419,7 @@ describe('[TS13] Batch Membership Registration Details form', function () {
         const DateofBirth = data.memregdependent.Personal_Info.DateofBirth
         const Age = data.memregdependent.Personal_Info.Age
         const AppDate = "22-Nov-2022"
-        const PrincipalID = data.memregdependent.PrincipalID
+        const PrincipalID = data.memregdependent.Personal_Info.PrincipalID
         const PrincipalTypeCode = data.memregdependent.PrincipalTypeCode
         const MemberType = data.memregdependent.Personal_Info.MemberType
         const Nationality = data.memregdependent.Personal_Info.Nationality
@@ -607,7 +607,7 @@ describe('[TS13] Batch Membership Registration Details form', function () {
         BatchMembershipRegistrationDetail.SaveAndNextTenure()
 
         // Shopping cart and Payments
-        ShoppingCartPayment.fillOutandApplyPayment('CASH')
+        ShoppingCartPayment.fillOutandApplyPayment('I-Banking')
     
          
     })
@@ -615,6 +615,26 @@ describe('[TS13] Batch Membership Registration Details form', function () {
     it('[TC05] Search functionality and Deleting Batch Membership Registration', function () {
 
         cy.visit('/membership/batchMembershipRegistrationList')
+
+        //Verify Page Title
+        BatchMembershipRegistrationListing.verifyPageTitle('Batch Membership Registration Listing')
+
+        
+        //Click create new button
+        BatchMembershipRegistrationListing.createNew()
+
+        //Verify Page Title
+        BatchMembershipRegistrationListing.verifyPageTitle('Batch Membership Registration Detail Form')
+
+        //Fillout form
+        BatchMembershipRegistrationDetail.FillOutBatchMembershipRegistrationDetailForm(
+            BatchName, BatchType, MemRegTenure, PromationReg, 
+            MemRenewalTenure, PromationRenewal, PaymentMode 
+        )
+        //Click Save button
+        BatchMembershipRegistrationDetail.Save()
+
+        cy.wait(5000)
 
         //Verify Page Title
         BatchMembershipRegistrationListing.verifyPageTitle('Batch Membership Registration Listing')

@@ -27,7 +27,7 @@ Cypress.Commands.add('GoToWebPage', (url) => {
  *****************************************************/
 Cypress.Commands.add('Click', (locator) => {
     cy.log('------ Click : ' + locator + ' ------')
-    cy.xpath(locator).scrollIntoView()
+    cy.xpath(locator,{timeout: 30000}).scrollIntoView()
     cy.xpath(locator).click()
 })
 
@@ -109,7 +109,7 @@ Cypress.Commands.add('TickCheckBox', (locator, value) => {
 Cypress.Commands.add('ValidateElementText', (locator, expectedText) => {
     cy.log('------ Validate Element Text : ' + locator + ' ------')
     //cy.xpath(locator).scrollIntoView()
-    cy.xpath(locator, {timeout: 60000}).should('have.text', expectedText)
+    cy.xpath(locator, {timeout: 30000}).should('have.text', expectedText)
 })
 
 /*****************************************************

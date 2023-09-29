@@ -185,8 +185,8 @@ const data = {
         ContactInfo: {
             Handphone: '87126534',
             EmailAddress: 'auto' + Math.floor(Math.random() * 10000 * 50) + '@test.com',
-            HomeNumber: '12347722',
-            EmergencyContact: '+65 658 5894',
+            HomeNumber: '62347722',
+            EmergencyContact: '8658 5894',
             //Preferred COntact Mode
             SelectAll: 'check',
             Email: 'uncheck',
@@ -270,7 +270,7 @@ const data = {
             Gender: 'Male',
             DateofBirth: '18-Jan-2010',
             Age: '12',
-            PrincipalID: 'A300000002',
+            PrincipalID: 'A300000001',
             PrincipalTypeCode: 'OD',
             MemberType: 'JL',
             Nationality: 'Singaporean/PR',
@@ -292,8 +292,8 @@ const data = {
         ContactInfo: {
             Handphone: '87126534',
             EmailAddress: 'Testuser' + Math.floor(Math.random() * 100000 * 2) + '@synergyonline.com',
-            HomeNumber: '23231234',
-            EmergencyContact: '+65 658 5894',
+            HomeNumber: '63231234',
+            EmergencyContact: '87627612',
             //Preferred COntact Mode
             SelectAll: 'uncheck',
             Email: 'check',
@@ -573,7 +573,7 @@ const data = {
         PromationReg: '',
         MemRenewalTenure: '5 YRS SC',
         PromationRenewal: '',
-        PaymentMode: 'SAFRA $',
+        PaymentMode: 'I-Banking',
         Status: 'Open',
 
         InBatchRegistration: {

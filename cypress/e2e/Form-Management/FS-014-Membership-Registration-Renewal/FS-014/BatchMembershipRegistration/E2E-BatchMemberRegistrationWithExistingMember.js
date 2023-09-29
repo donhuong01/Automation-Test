@@ -404,7 +404,7 @@ const BatchMembershipRegistrationWithExistingMember = (SFS, MaritalStatus, Membe
         })
 
 
-        it.only('[TC02] Creating a Batch Membership Registration and Add Existing Member', function () {
+        it('[TC02] Creating a Batch Membership Registration and Add Existing Member', function () {
 
             cy.visit('/membership/batchMembershipRegistrationList')
 

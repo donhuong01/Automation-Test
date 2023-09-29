@@ -185,8 +185,9 @@ class BatchMembershipRegistrationDetail {
     *****************************************************/
     FillOutFormForNonMember(NRIC, DOB) {
         cy.TickRadioButton(elems_BatchMembershipRegistrationDetail.MemRegInBatchRegistration.CHK_NONMEMBER)
+        cy.TickRadioButton('//label[@for="radioNRIC"]')
         cy.EnterText(elems_BatchMembershipRegistrationDetail.MemRegInBatchRegistration.TXT_LAST4NRIC, NRIC)
-        cy.SelectDate(elems_BatchMembershipRegistrationDetail.MemRegInBatchRegistration.DATE_DOB, DOB)
+        cy.EnterDate(elems_BatchMembershipRegistrationDetail.MemRegInBatchRegistration.DATE_DOB, DOB)
     }
 
     /*****************************************************
@@ -278,13 +279,14 @@ class BatchMembershipRegistrationDetail {
     SelectMemberCategory(MemberCategory) {
 
         if (MemberCategory === "Principal") {
-            cy.Click(elems_BatchMembershipRegistrationDetail.SELECTMEMBERCATEPOPUP.RADIO_PRINCIPAL)
-            cy.Click(elems_BatchMembershipRegistrationDetail.SELECTMEMBERCATEPOPUP.BTN_SELECT)
+            //cy.Click(elems_BatchMembershipRegistrationDetail.SELECTMEMBERCATEPOPUP.RADIO_PRINCIPAL)
+            cy.Click(elems_BatchMembershipRegistrationDetail.MemRegInBatchRegistration.BTN_NEWMEMBERPRINCIPAL)
+            //cy.Click(elems_BatchMembershipRegistrationDetail.SELECTMEMBERCATEPOPUP.BTN_SELECT)
 
         } else {
-
-            cy.Click(elems_BatchMembershipRegistrationDetail.SELECTMEMBERCATEPOPUP.RADIO_DEPENDENT)
-            cy.Click(elems_BatchMembershipRegistrationDetail.SELECTMEMBERCATEPOPUP.BTN_SELECT)
+            //cy.Click(elems_BatchMembershipRegistrationDetail.SELECTMEMBERCATEPOPUP.RADIO_DEPENDENT)
+            cy.Click(elems_BatchMembershipRegistrationDetail.MemRegInBatchRegistration.BTN_NEWMEMBERDEPENDENT)
+            //cy.Click(elems_BatchMembershipRegistrationDetail.SELECTMEMBERCATEPOPUP.BTN_SELECT)
 
         }
 
@@ -477,7 +479,7 @@ class BatchMembershipRegistrationDetail {
         }
         // VerifyDate of Birth
         if (DateofBirth !== undefined) {
-             cy.SelectDate(elems_MemberRegistrationPrincipal.PERSONALINFORMATION.DATE_DATEOFBIRTH, DateofBirth)
+             cy.EnterDateSuspension(elems_MemberRegistrationPrincipal.PERSONALINFORMATION.DATE_DATEOFBIRTH, DateofBirth)
         }
 
         // Verify NS Status

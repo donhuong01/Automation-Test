@@ -165,7 +165,7 @@ class Membership_Registration_Dependent{
              }
             // Enter Date of Birth
             if(DateofBirth !== undefined){
-              cy.SelectDate(elems_MembershipRegistrationDependent.PersonalInformation.DATE_DATEOFBIRTH, DateofBirth)
+              cy.EnterDateSuspension(elems_MembershipRegistrationDependent.PersonalInformation.DATE_DATEOFBIRTH, DateofBirth)
              }
              // Verify Age
             // if(Age !== undefined){
@@ -273,7 +273,7 @@ class Membership_Registration_Dependent{
 
             cy.Click(elems_MembershipRegistrationDependent.PersonalInformation.PCK_PRINCIPALID)
             cy.wait(5000)
-            cy.SelectTableItem(elems_Picker.TBL_PICKERITEMS, 'Member ID', PrincipalID)
+            cy.SelectTableItem2(elems_Picker.TBL_PICKERITEMS, 'Member ID', PrincipalID)
             cy.wait(5000)
             cy.Click(elems_Picker.BTN_SELECT)
 
