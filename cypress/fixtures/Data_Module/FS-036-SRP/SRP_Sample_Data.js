@@ -34,21 +34,22 @@ const data = {
     },
 
     Third_Party_Vendore_Management: {
-        VendorID: 'VD003',
+        VendorID: 'V000000006', //QA V000000003; UAT VD003
         Name: 'Third-Part Vendore ' + Math.floor(Math.random() * 10000),
         MerchandiseID: "MI" + Math.floor(Math.random() * 10000),
         Status: "Open",
         ContactNO: Math.floor(Math.random() * 10056300),
-        UpdatedVendorID: 'VD003',
+        UpdatedVendorID: 'V000000007', //QA V000000003; UAT VD003
         UpdatedName: 'Third-Part Vendore ' + Math.floor(Math.random() * 10000),
         UpdatedMerchandiseID: "MI" + Math.floor(Math.random() * 10000),
         UpdatedStatus: "Open",
+        UpdatedStatusforDeleting: "Inactive",
         UpdatedContactNO: Math.floor(Math.random() * 10056300),
     },
     SAFRA_Points_Adjustment: {
         MemberID: "A30000400",
         SourceChannel: "SAFRA HQ",
-        VendorID: "VD003",
+        VendorID: "V000000003", //QA V000000003; UAT VD003
         EDCTerminal: "TID00002",
         Remarks: "Testing",
         SAFRAPoints: "500",
@@ -60,20 +61,20 @@ const data = {
         TransactionType: "Awarding",
         SRPOperationItem: 'Manual Points Adjustment',
         SourceChannel: "SAFRA HQ",
-        VendoreID: "VD002",
+        VendoreID: "V000000002", //QA V000000002; UAT VD002
         EDCTerminalID: "TID00002",
         Type: "Awarding",
         Remark: "Testing",
         Amount: 5,
     },
     SRP_Module_Setting: {
-        GrandDraw: "50",
-        AwardSAFRAPointsPerSGD: "2",
-        DeductSAFRAPointsPerSGD: "50",
+        GrandDraw: "60",
+        AwardSAFRAPointsPerSGD: "1",
+        DeductSAFRAPointsPerSGD: "60",
         EnableMember: "CHECK",
-        AwardSAFRAPointsNewMember: "42",
+        AwardSAFRAPointsNewMember: "12",
         SendRedemptionLetter: "CHECK",
-        SendReminderEmail: "22",
+        SendReminderEmail: "7",
     },
     SRP_Promotion_Management: {
         Name: 'Birthday SRP Promotion ' + Math.floor(Math.random() * 100000 ),

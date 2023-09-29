@@ -2,7 +2,7 @@ import ThirdPartyVendoreListing from '../../../page-objects/SMCMS/PageActions/FS
 import ThirdPartyVendoreDetail from '../../../page-objects/SMCMS/PageActions/FS-036-SRP/ThirdPartyVendoreDetail'
 import data from '../../../fixtures/Data_Module/FS-036-SRP/SRP_Sample_Data'
 
-const { VendorID, Name, MerchandiseID, Status, ContactNO, UpdatedContactNO, UpdatedMerchandiseID, UpdatedVendorID, UpdatedName, UpdatedStatus } = data.Third_Party_Vendore_Management
+const { VendorID, Name, MerchandiseID, Status, ContactNO, UpdatedContactNO, UpdatedMerchandiseID, UpdatedVendorID, UpdatedName, UpdatedStatus, UpdatedStatusforDeleting } = data.Third_Party_Vendore_Management
 
 const ThirdPartyVendorManagement = () => {
 
@@ -54,8 +54,18 @@ describe('[TS07] FS-036 Third Party Vendor Management', function () {
         //Verify updated item
         ThirdPartyVendoreListing.Filters(UpdatedVendorID, UpdatedName, UpdatedStatus)
 
+        //Click on newly created item in the listing form
+        ThirdPartyVendoreListing.ClickVendoreIDLink(UpdatedVendorID)
+
+        //Update the fields
+        ThirdPartyVendoreDetail.UpdateThirdPartyVendorDetail(VendorID, UpdatedName,
+            UpdatedMerchandiseID, UpdatedStatusforDeleting, UpdatedContactNO)
+
+        // Click on Save button
+        ThirdPartyVendoreDetail.Save()
+
         //Select Table item
-        ThirdPartyVendoreListing.SelectItem(UpdatedVendorID)
+        ThirdPartyVendoreListing.SelectItem(VendorID)
 
         //
         ThirdPartyVendoreListing.Delete()

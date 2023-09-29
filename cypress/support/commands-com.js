@@ -40,7 +40,7 @@ Cypress.Commands.add('Click', (locator) => {
  *****************************************************/
 Cypress.Commands.add('EnterText', (locator, text) => {
     cy.log('------ Enter Text : ' + locator + ' ------')
-    cy.xpath(locator).scrollIntoView()
+    cy.xpath(locator,{timeout: 30000}).scrollIntoView()
     cy.xpath(locator).type(text)
 })
 

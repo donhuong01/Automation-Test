@@ -284,7 +284,7 @@ beforeEach(() => {
 // })
 
 
-describe('E2E Auto Testing:FS-014 Membership: Master Registration and Renewal', () => {
+// describe('E2E Auto Testing:FS-014 Membership: Master Registration and Renewal', () => {
 
   //      MembershipRegistration(E2EData.NRIC_FOR_MEMBERSHIP_REGISTRATION) // Enter Full NRIC
   // CustomerCheckIn()
@@ -302,26 +302,26 @@ describe('E2E Auto Testing:FS-014 Membership: Master Registration and Renewal', 
 
 
   // LifeMembershipManagment(E2EData.NRIC_FOR_LIFE_MEMBERSHIP_REGISTRATION) //Add NRIC For Principal Registration
-  BatchMembershipRegistration(
+//   BatchMembershipRegistration(
 
-    //Pass Info for Existing Member MemberID and LAST4DigitsNRIC
-    E2EData.BATCH_REGISTRATION.MEMBERID_FOR_EXISTING_MEMBER,
-    E2EData.BATCH_REGISTRATION.LAST4DIGITSNRIC_FOR_EXISTING_MEMBER,
+//     //Pass Info for Existing Member MemberID and LAST4DigitsNRIC
+//     E2EData.BATCH_REGISTRATION.MEMBERID_FOR_EXISTING_MEMBER,
+//     E2EData.BATCH_REGISTRATION.LAST4DIGITSNRIC_FOR_EXISTING_MEMBER,
 
-    //Pass informstion for Non-Member Name, DOB, LAST4DigitsNRIC and Full NRIC
-    E2EData.BATCH_REGISTRATION.MEMBER_NAME_FOR_NON_MEMBER,
-    E2EData.BATCH_REGISTRATION.DOB_FOR_NON_MEMBER,
-    E2EData.BATCH_REGISTRATION.LAST4DIGITSNRIC_FOR_NON_MEMBER,
-    E2EData.BATCH_REGISTRATION.FULLNRIC_FOR_NON_MEMBER,
+//     //Pass informstion for Non-Member Name, DOB, LAST4DigitsNRIC and Full NRIC
+//     E2EData.BATCH_REGISTRATION.MEMBER_NAME_FOR_NON_MEMBER,
+//     E2EData.BATCH_REGISTRATION.DOB_FOR_NON_MEMBER,
+//     E2EData.BATCH_REGISTRATION.LAST4DIGITSNRIC_FOR_NON_MEMBER,
+//     E2EData.BATCH_REGISTRATION.FULLNRIC_FOR_NON_MEMBER,
 
-    //NRIC for New Principal
-    E2EData.BATCH_REGISTRATION.NRIC_FOR_NEW_PRINCIPAL,
+//     //NRIC for New Principal
+//     E2EData.BATCH_REGISTRATION.NRIC_FOR_NEW_PRINCIPAL,
 
-    //NRIC for New Dependent and Dependent PrincipalID
-    E2EData.BATCH_REGISTRATION.NRIC_FOR_ADDING_NEW_DEPENDENT,
-    E2EData.BATCH_REGISTRATION.PRINCIPALID_FOR_NEW_DEPENDENT)
+//     //NRIC for New Dependent and Dependent PrincipalID
+//     E2EData.BATCH_REGISTRATION.NRIC_FOR_ADDING_NEW_DEPENDENT,
+//     E2EData.BATCH_REGISTRATION.PRINCIPALID_FOR_NEW_DEPENDENT)
 
-})
+// })
 
 
 
@@ -357,7 +357,7 @@ describe('E2E Auto Testing:FS-014 Membership: Master Registration and Renewal', 
 
 // describe('E2E Auto Testing:FS-016 Interest Group: Registration and Maintenance Activities', ()=> {
 
-// InterestGroupMembershipRegistration() //Change NRIC each time after runing this code
+// InterestGroupMembershipRegistration()
 // InterestGMembershipRenewal(E2EData.MEMBERID_FOR_IG_RENEWAL) //Change NRIC each time after runing this code
 // BatchMemRegWithExistingMemUsingDefaultIG(E2EData.BATCH_MEMBER_REGISTRATION_WITH_EXISTING_MEMBER_USING_DEFUALT_IG) //Provide Active member ID //1
 // BatchMemRegWithExistingMemUsingNonDefaultIG(E2EData.BATCH_MEMBER_REGISTRATION_WITH_EXISTING_MEMBER_USING_NON_DEFUALT_IG) //Provide Active member ID //2
@@ -457,19 +457,19 @@ describe('E2E Auto Testing:FS-014 Membership: Master Registration and Renewal', 
 
 // })
 
-// describe('E2E Auto Testing:FS-036 SRP', ()=> {
+describe('E2E Auto Testing:FS-036 SRP', ()=> {
 
-//     SRPModuleSetting()
-//     SAFRAPointsAdjustment(E2EData.MEMBERID_FOR_SAFRA_POINTS_ADJUSTMENT) //Provide Active member ID
-//     SAFRAPointsTransaction(E2EData.MEMBERID_FOR_SAFRA_POINTS_TRANSACTION) //Provide Active member ID
-//     SRPRedemptionCollection(E2EData.SRP_REDEMPTION_COLLECTION) //Provide Active member ID
-//     SRPRedemptionManagement(E2EData.SRP_REDEMPTION_MANAGEMENT) //Provide Active member ID
-//     ThirdPartyVendorManagement()
-//     EDCTerminalManagement()
-//     SRPRedemptionCatalogueManagement()
-//     SRPPromotionManagement()
+    // SRPModuleSetting() //Check first the settings for UAT testing
+    // SAFRAPointsAdjustment(E2EData.MEMBERID_FOR_SAFRA_POINTS_ADJUSTMENT) //Provide Active member ID
+    // SAFRAPointsTransaction(E2EData.MEMBERID_FOR_SAFRA_POINTS_TRANSACTION) //Provide Active member ID
+    // SRPRedemptionCollection(E2EData.SRP_REDEMPTION_COLLECTION) //Provide Active member ID
+    // SRPRedemptionManagement(E2EData.SRP_REDEMPTION_MANAGEMENT) //Provide Active member ID
+    // ThirdPartyVendorManagement()
+    EDCTerminalManagement()
+    // SRPRedemptionCatalogueManagement()
+    // SRPPromotionManagement()
 
-// })
+})
 
 
 // describe('E2E Auto Testing:FS-013 & 039: In-House Sale and Merchandise', ()=> {

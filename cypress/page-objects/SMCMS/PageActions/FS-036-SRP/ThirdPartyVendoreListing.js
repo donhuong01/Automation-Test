@@ -41,7 +41,7 @@ class ThirdPartyVendoreListing {
             elems_ThirdPartyVendoreListing.VENDORID.TXT_VENDORID, VendoreID,
             elems_ThirdPartyVendoreListing.BTN_SEARCHFILTERS)
 
-        cy.EnterText(elems_ThirdPartyVendoreListing.TXT_NAME, Name)
+        // cy.EnterText(elems_ThirdPartyVendoreListing.TXT_NAME, Name)
         cy.SelectDropDownItem(elems_ThirdPartyVendoreListing.DRP_STATUS, Status)
         cy.Click(elems_ThirdPartyVendoreListing.BTN_SEARCHFILTERS)
         cy.wait(8000)

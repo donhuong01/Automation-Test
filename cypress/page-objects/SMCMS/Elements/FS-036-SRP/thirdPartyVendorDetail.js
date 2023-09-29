@@ -8,7 +8,8 @@ class elems_ThirdPartyVendoreDetail {
 
         PCK_VENDORID: '//label[text()="Vendor ID"]//following-sibling::div//button',
         TXT_VENDORID: '//input[@name="vendorId"]',
-        TXT_NAME: '//input[@name="name"]'
+        TXT_NAME: '//input[@name="name"]',
+        LBL_NAME: '//label[@for="txtName"]'
 
     }
 

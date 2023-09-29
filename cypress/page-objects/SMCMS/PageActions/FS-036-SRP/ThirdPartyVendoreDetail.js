@@ -35,7 +35,7 @@ class ThirdPartyVendoreDetail {
         cy.SelectPickerDifferentItemsWait(elems_ThirdPartyVendoreDetail.VENDORID.PCK_VENDORID, 2000,
             elems_ThirdPartyVendoreDetail.VENDORID.TXT_VENDORID, VendoreID,
             elems_ThirdPartyVendoreDetail.BTN_SEARCHFILTERS)
-        cy.EnterText(elems_ThirdPartyVendoreDetail.TXT_NAME, Name)
+        //cy.EnterText(elems_ThirdPartyVendoreDetail.TXT_NAME, Name)
         cy.EnterText(elems_ThirdPartyVendoreDetail.TXT_MERCHANTID, MerchantID)
         cy.SelectDropDownItem(elems_ThirdPartyVendoreDetail.DRP_STATUS, Status)
         cy.EnterText(elems_ThirdPartyVendoreDetail.TXT_ContactNumberAddress, ContactNumberAddress)
@@ -53,8 +53,8 @@ class ThirdPartyVendoreDetail {
         cy.SelectPickerDifferentItemsWait(elems_ThirdPartyVendoreDetail.VENDORID.PCK_VENDORID, 2000,
             elems_ThirdPartyVendoreDetail.VENDORID.TXT_VENDORID, VendoreID,
             elems_ThirdPartyVendoreDetail.BTN_SEARCHFILTERS)
-        cy.xpath(elems_ThirdPartyVendoreDetail.TXT_NAME).clear()
-        cy.EnterText(elems_ThirdPartyVendoreDetail.TXT_NAME, Name)
+        // cy.xpath(elems_ThirdPartyVendoreDetail.TXT_NAME).clear()
+        // cy.EnterText(elems_ThirdPartyVendoreDetail.TXT_NAME, Name)
         cy.xpath(elems_ThirdPartyVendoreDetail.TXT_MERCHANTID).clear()
         cy.EnterText(elems_ThirdPartyVendoreDetail.TXT_MERCHANTID, MerchantID)
         cy.SelectDropDownItem(elems_ThirdPartyVendoreDetail.DRP_STATUS, Status)
