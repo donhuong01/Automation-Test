@@ -35,6 +35,9 @@ const { IGMainSelectionBox, IGSelection, IGLocationSelection, MembershipTenure, 
 //     // Set local storage for UAT Enviroment
 //     // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
 // })
+
+//TODO to separate AutoGenerateNRIC in a separate file
+//#region AutoGenerateNRIC
 function pad(num, size) {
     var s = "0000000" + num;
     return s.substr(s.length - size);
@@ -84,6 +87,7 @@ const nricGenerator = () => {
     console.log("Generated NRIC:", generated); // Add this line for debugging
     return generated;
 };
+//#endregion
 
 const InterestGroupMembershipRegistration = () => {
 
