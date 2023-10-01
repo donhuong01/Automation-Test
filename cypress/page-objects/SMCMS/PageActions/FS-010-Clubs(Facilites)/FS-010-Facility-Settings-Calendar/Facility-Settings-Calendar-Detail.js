@@ -143,7 +143,8 @@ class FacilitySettingsCalendarDetailForm {
         // cy.SelectDate(elems_SettingsCalendarDetail.PeriodPopUp.DATE_STARTDATE, StartDate2)
         // cy.wait(10000)
         // cy.SelectDate(elems_SettingsCalendarDetail.PeriodPopUp.DATE_ENDDATE, EndDate2)
-        cy.Click(elems_SettingsCalendarDetail.PeriodPopUp.BTN_ADD)
+        cy.xpath(elems_SettingsCalendarDetail.PeriodPopUp.BTN_ADD, { timeout: 10000 }).click()
+        // cy.Click(elems_SettingsCalendarDetail.PeriodPopUp.BTN_ADD)
 
     }
     /*****************************************************
