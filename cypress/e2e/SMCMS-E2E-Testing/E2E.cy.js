@@ -260,7 +260,7 @@ beforeEach(() => {
 // FacilityOperatingPeriod()
 // FacilityTypeDetailFormManagement(E2EData.CALENDAR_NAME, E2EData.PERIODOFCALENDAR, E2EData.OPERATING_PERIOD_NAME)
 // FacilitySetupDetail()
-// FacilityBookingManagement("S6690184Z")
+// FacilityBookingManagement()
 // FacilityBookingAmendmentManagment()
 // FacilityBookingExtentionManagment() // Needs an update in Facility for extension setting
 // FacilityBookingCancellationManagment() // Needs own page action
@@ -286,22 +286,22 @@ beforeEach(() => {
 
 // describe('E2E Auto Testing:FS-014 Membership: Master Registration and Renewal', () => {
 
-  //      MembershipRegistration(E2EData.NRIC_FOR_MEMBERSHIP_REGISTRATION) // Enter Full NRIC
-  // CustomerCheckIn()
-  // MemberType()
-  // BadAddressUpdate()// Fail Need code updates
-  // MembershipRenewalAdvise()
-  // WithdrawalOfConsent(E2EData.ACTIVE_MEMBERID_FOR_WITHDRAWAL_OF_CONSENT) //Enter Member ID for Withdrawal Of Consent
-  // SourceChannel()
-  // MemberStatusReasonCode() // Not Required
-  // MassUpdateForMemberData() // Needs to update code for Approval
-  // MembershipModuleSettings()
-  //  SFSMemberRegistion(E2EData.MEMBER_REGISTRATION_WITH_SPOUSE_AND_CHILD.PRINCIPAL_NRIC,
-  //      E2EData.MEMBER_REGISTRATION_WITH_SPOUSE_AND_CHILD.CHILD_NRIC/*, E2EData.MEMBER_REGISTRATION_WITH_SPOUSE_AND_CHILD.SPOUSE_NRIC*/) //Add three NRIC's for Principal, Dependent Child, Dependent Spouse
-  // E2EMemberShipRenewal(E2EData.NRIC_FOR_MEMBERSHIP_REGISTRATION_AND_RENEWAL) //Add NRIC For Principal Registration
+//      MembershipRegistration(E2EData.NRIC_FOR_MEMBERSHIP_REGISTRATION) // Enter Full NRIC
+// CustomerCheckIn()
+// MemberType()
+// BadAddressUpdate()// Fail Need code updates
+// MembershipRenewalAdvise()
+// WithdrawalOfConsent(E2EData.ACTIVE_MEMBERID_FOR_WITHDRAWAL_OF_CONSENT) //Enter Member ID for Withdrawal Of Consent
+// SourceChannel()
+// MemberStatusReasonCode() // Not Required
+// MassUpdateForMemberData() // Needs to update code for Approval
+// MembershipModuleSettings()
+//  SFSMemberRegistion(E2EData.MEMBER_REGISTRATION_WITH_SPOUSE_AND_CHILD.PRINCIPAL_NRIC,
+//      E2EData.MEMBER_REGISTRATION_WITH_SPOUSE_AND_CHILD.CHILD_NRIC/*, E2EData.MEMBER_REGISTRATION_WITH_SPOUSE_AND_CHILD.SPOUSE_NRIC*/) //Add three NRIC's for Principal, Dependent Child, Dependent Spouse
+// E2EMemberShipRenewal(E2EData.NRIC_FOR_MEMBERSHIP_REGISTRATION_AND_RENEWAL) //Add NRIC For Principal Registration
 
 
-  // LifeMembershipManagment(E2EData.NRIC_FOR_LIFE_MEMBERSHIP_REGISTRATION) //Add NRIC For Principal Registration
+// LifeMembershipManagment(E2EData.NRIC_FOR_LIFE_MEMBERSHIP_REGISTRATION) //Add NRIC For Principal Registration
 //   BatchMembershipRegistration(
 
 //     //Pass Info for Existing Member MemberID and LAST4DigitsNRIC
@@ -457,19 +457,19 @@ beforeEach(() => {
 
 // })
 
-describe('E2E Auto Testing:FS-036 SRP', ()=> {
+describe('E2E Auto Testing:FS-036 SRP', () => {
 
-    //Always Change the ItemCode, ItemDescription, and Category data before runnning
+  //Always Change the ItemCode, ItemDescription, and Category data before runnning
 
-    // SRPModuleSetting() //Check first the settings for UAT testing
-    // SAFRAPointsAdjustment(E2EData.MEMBERID_FOR_SAFRA_POINTS_ADJUSTMENT) //Provide Active member ID
-    // SAFRAPointsTransaction(E2EData.MEMBERID_FOR_SAFRA_POINTS_TRANSACTION) //Provide Active member ID
-    // SRPRedemptionCollection(E2EData.SRP_REDEMPTION_COLLECTION) //Provide Active member ID
-    SRPRedemptionManagement(E2EData.SRP_REDEMPTION_MANAGEMENT) //Provide Active member ID
-    // ThirdPartyVendorManagement()
-    // EDCTerminalManagement()
-    // SRPRedemptionCatalogueManagement()
-    // SRPPromotionManagement(E2EData.MEMBERID_FOR_SRP_PROMOTION_MANAGEMENT, E2EData.MEMBERTYPE_FOR_SRP_PROMOTION_MANAGEMENT) //Provide Active member ID
+  // SRPModuleSetting() //Check first the settings for UAT testing
+  // SAFRAPointsAdjustment(E2EData.MEMBERID_FOR_SAFRA_POINTS_ADJUSTMENT) //Provide Active member ID
+  // SAFRAPointsTransaction(E2EData.MEMBERID_FOR_SAFRA_POINTS_TRANSACTION) //Provide Active member ID
+  // SRPRedemptionCollection(E2EData.SRP_REDEMPTION_COLLECTION) //Provide Active member ID
+  SRPRedemptionManagement(E2EData.SRP_REDEMPTION_MANAGEMENT) //Provide Active member ID
+  // ThirdPartyVendorManagement()
+  // EDCTerminalManagement()
+  // SRPRedemptionCatalogueManagement()
+  // SRPPromotionManagement(E2EData.MEMBERID_FOR_SRP_PROMOTION_MANAGEMENT, E2EData.MEMBERTYPE_FOR_SRP_PROMOTION_MANAGEMENT) //Provide Active member ID
 
 })
 
