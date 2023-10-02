@@ -159,8 +159,7 @@ const FacilityBookingManagement = () => {
 
 
             //visit facility booking listing
-            cy.visit('/facilities/bookingListing')
-            cy.wait(5000)
+            cy.visit('/facilities/bookingListing', { timeout: 30000 })
 
             // Verify Page Title
             FacilityBookingDetail.verifyPageTitle('Facility Booking Listing')
