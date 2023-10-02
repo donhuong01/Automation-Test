@@ -18,7 +18,7 @@ const data = {
     },
     FacilityBookingDetails: {
         FacilityType: 'Facility  Type 2023',
-        slot: 'Available (12:00 pm - 01:00 pm)',
+        slot: 'Available (09:00 am - 10:00 am)',
         ChargeType: 'Charge Rate-2023',
         Amount: '2',
         Reason: 'Testing',
