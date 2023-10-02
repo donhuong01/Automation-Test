@@ -31,7 +31,7 @@ class FacilityBookingDetail {
         cy.SelectPickerFilter(elems_FacilityBookingDetails.PCK_FACILITYTYPE,
             elems_FacilityBookingDetails.TXT_NAME, FacilityType,
             elems_FacilityBookingDetails.BTN_SEARCHFILTER)
-            cy.wait(2000)
+        cy.wait(2000)
 
         // Select Facility Type
         cy.Click(elems_FacilityBookingDetails.PCK_LOCATION)
@@ -43,8 +43,8 @@ class FacilityBookingDetail {
         // Select Facilities
         // cy.Click(elems_FacilityBookingDetails.PCK_LOCATION)
         cy.wait(3000)
-        cy.Click('//a[text()="3"]') //Please Comment when in UAT
-        
+        //cy.Click('//a[text()="3"]') //Please Comment when in UAT
+
         cy.Click(`//table//td[text()="${Facilites}"]//preceding-sibling::td`)
         cy.Click(elems_FacilityBookingDetails.BTN_SELECT)
         cy.wait(4000)
@@ -103,34 +103,34 @@ class FacilityBookingDetail {
      *****************************************************/
 
     SelectSlot(SlotName) {
-        if(`(//div[text()="OnHold (${SlotName})"])[1]` || `(//div[text()="Booked (${SlotName})"])[1]` || undefined ){
+        if (`(//div[text()="OnHold (${SlotName})"])[1]` || `(//div[text()="Booked (${SlotName})"])[1]` || undefined) {
             cy.Click(`(//div[text()="Available (${SlotName})"])[1]`)
             cy.wait(3000)
         }
 
-        else if(`(//div[text()="OnHold (${SlotName})"])[2]` || `(//div[text()="Booked (${SlotName})"])[2]` || undefined ){
+        else if (`(//div[text()="OnHold (${SlotName})"])[2]` || `(//div[text()="Booked (${SlotName})"])[2]` || undefined) {
             cy.Click(`(//div[text()="Available (${SlotName})"])[1]`)
             cy.wait(3000)
         }
 
-        else if(`(//div[text()="OnHold (${SlotName})"])[3]` || `(//div[text()="Booked (${SlotName})"])[3]` || undefined ){
+        else if (`(//div[text()="OnHold (${SlotName})"])[3]` || `(//div[text()="Booked (${SlotName})"])[3]` || undefined) {
             cy.Click(`(//div[text()="Available (${SlotName})"])[1]`)
             cy.wait(3000)
         }
 
-        else if(`(//div[text()="OnHold (${SlotName})"])[4]` || `(//div[text()="Booked (${SlotName})"])[4]` || undefined ){
+        else if (`(//div[text()="OnHold (${SlotName})"])[4]` || `(//div[text()="Booked (${SlotName})"])[4]` || undefined) {
             cy.Click(`(//div[text()="Available (${SlotName})"])[1]`)
             cy.wait(3000)
         }
 
-        else if(`(//div[text()="OnHold (${SlotName})"])[5]` || `(//div[text()="Booked (${SlotName})"])[5]` || undefined ){
+        else if (`(//div[text()="OnHold (${SlotName})"])[5]` || `(//div[text()="Booked (${SlotName})"])[5]` || undefined) {
             cy.Click(`(//div[text()="Available (${SlotName})"])[1]`)
             cy.wait(3000)
         }
-        else{
+        else {
             cy.log("The given time is unavailable please changed")
         }
-        
+
     }
 
     /*****************************************************
@@ -194,7 +194,7 @@ class FacilityBookingDetail {
     /*****************************************************
     * Method: SearchWithNRIC
     * Description: This function will fiter table item with nric
-    * @param {string} NRIC 
+    * @param {string} NRIC
     *****************************************************/
     SearchWithNRIC(NRIC) {
         cy.EnterText(elems_FacilityBookingListing.TXT_CUSTOMERNRIC, NRIC)
@@ -205,7 +205,7 @@ class FacilityBookingDetail {
     /*****************************************************
     * Method: SearchWithCustomerName
     * Description: This function will fiter table item with nric
-    * @param {string} CustomerName 
+    * @param {string} CustomerName
     *****************************************************/
     SearchWithCustomerName(CustomerName) {
         cy.EnterText(elems_FacilityBookingListing.TXT_CUSTOMERNAME, CustomerName)
@@ -216,9 +216,9 @@ class FacilityBookingDetail {
     /*****************************************************
      * Method: VerifyFacilityBooking
      * Description: This function will Verify Facility Booking
-     * @param {string} NRIC 
-     * @param {string} status 
-     * @param {string} RecordStatus 
+     * @param {string} NRIC
+     * @param {string} status
+     * @param {string} RecordStatus
      *****************************************************/
     VerifyFacilityBooking(/*NRIC,*/ status, RecordStatus) {
         //cy.VerifyTableEntry(elems_FacilityBookingListing.TBL_FACILTYBOOKINGLIST, "NRIC", NRIC)
