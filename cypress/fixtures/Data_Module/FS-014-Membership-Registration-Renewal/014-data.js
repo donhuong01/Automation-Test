@@ -496,7 +496,7 @@ const data = {
 
     // Mass Update For Member Data Listing
     MassUpdateForMemberDataListing: {
-        batchId: 'MS-BR-100012', // 'MS-BR-100019' 
+        batchId: 'MS-BR-100012', // 'MS-BR-100019'
         batchIdItem: 'MS-BR-100012',
         massUpdForMemData: [
             {
@@ -885,7 +885,7 @@ const data = {
             handPhone: '85658589',
             emailAddress: 'testuser',
             emergencyContact: "85 658 5893",
-            homeNumber: "81892739",
+            homeNumber: "66189273",
             homeNumber2: "61892739",
 
             preferredContactModeSelectAll: 'check',
@@ -1129,7 +1129,7 @@ const data = {
             groupTravel: 'uncheck'
         }
     },
-    //Membership Renewal Advice 
+    //Membership Renewal Advice
     memberRenewlAdvice: {
 
         Name: 'Auto-Test ' + Math.floor(Math.random() * 1000),
@@ -1195,7 +1195,7 @@ const data = {
 
 
 }
-export default data 
+export default data
 
 /*********************************************************************************************************** */
 /************************************************ QA ******************************************************* */
@@ -1700,7 +1700,7 @@ export default data
 
 //     // Mass Update For Member Data Listing
 //     MassUpdateForMemberDataListing: {
-//         batchId: 'MS-BR-100012', // 'MS-BR-100019' 
+//         batchId: 'MS-BR-100012', // 'MS-BR-100019'
 //         batchIdItem: 'MS-BR-100012',
 //         massUpdForMemData: [
 //             {
@@ -2332,7 +2332,7 @@ export default data
 //             groupTravel: 'uncheck'
 //         }
 //     },
-//     //Membership Renewal Advice 
+//     //Membership Renewal Advice
 //     memberRenewlAdvice: {
 
 //         Name: 'Auto-Test ' + Math.floor(Math.random() * 1000),
@@ -2398,4 +2398,4 @@ export default data
 
 
 // }
-// export default data 
+// export default data

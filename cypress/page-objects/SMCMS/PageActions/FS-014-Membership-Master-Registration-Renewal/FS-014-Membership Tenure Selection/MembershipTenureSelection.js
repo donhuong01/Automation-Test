@@ -13,8 +13,8 @@ class MembershipTenureSelection{
      verifyPrincipalList(principal){
 
         cy.VerifyTableEntry(
-            elems_MembershipTenureSelection.Principal.TBL_PRINCIPAL, 
-            'Name', principal.name, 
+            elems_MembershipTenureSelection.Principal.TBL_PRINCIPAL,
+            'Name', principal.name,
             'Member ID', principal.memberId
         )
 
@@ -25,7 +25,7 @@ class MembershipTenureSelection{
         )
 
         cy.VerifyTableEntry(
-            elems_MembershipTenureSelection.Principal.TBL_PRINCIPAL, 
+            elems_MembershipTenureSelection.Principal.TBL_PRINCIPAL,
             'Membership Period', principal.membershipPeriod,
             'Member ID', principal.memberId
         )
@@ -39,14 +39,14 @@ class MembershipTenureSelection{
      * @param {string} ColumnValue Column value
      *****************************************************/
     principalTenureSelection(ColumnValue, tenureSelection){
-        
+
         // Set Tenure Selection
         if(tenureSelection !== undefined && ColumnValue !== undefined){
 
             cy.TenureSelection(elems_MembershipTenureSelection.Principal.TBL_PRINCIPAL,
                 ColumnValue,  tenureSelection)
         }
-        
+
 
     }
 
@@ -59,19 +59,19 @@ class MembershipTenureSelection{
      verifyDependentList(dependent){
 
         cy.VerifyTableEntry(
-            elems_MembershipTenureSelection.Dependent.TBL_DEPENDENT, 
+            elems_MembershipTenureSelection.Dependent.TBL_DEPENDENT,
             'Name', dependent.name,
             'Member ID', dependent.memberId
         )
 
         cy.VerifyTableEntry(
-            elems_MembershipTenureSelection.Dependent.TBL_DEPENDENT, 
+            elems_MembershipTenureSelection.Dependent.TBL_DEPENDENT,
             'Member Type Code', dependent.memberTypeCode,
             'Member ID', dependent.memberId
         )
 
         cy.VerifyTableEntry(
-            elems_MembershipTenureSelection.Dependent.TBL_DEPENDENT, 
+            elems_MembershipTenureSelection.Dependent.TBL_DEPENDENT,
             'Membership Period', dependent.membershipPeriod,
             'Member ID', dependent.memberId
         )
@@ -83,10 +83,10 @@ class MembershipTenureSelection{
      *
      * @param {string} memberId Dependent Member ID
      * @param {string} tenureSelection Tenure Selection
-     * @param {string} ColumnValue target column 
+     * @param {string} ColumnValue target column
      *****************************************************/
      dependentTenureSelection(ColumnValue, tenureSelection){
-        
+
         cy.TenureSelection(elems_MembershipTenureSelection.Dependent.TBL_DEPENDENT,
             ColumnValue,  tenureSelection)
     }
@@ -101,16 +101,16 @@ class MembershipTenureSelection{
 
         // Tick Checkbox of Member ID
         cy.SelectTableItem(elems_MembershipTenureSelection.Dependent.TBL_DEPENDENT,'Name', name)
-        
-        
-        
-        
+
+
+
+
         // if(name !== undefined ){
         //     cy.SelectTableItem2(
         //         elems_MembershipTenureSelection.Dependent.TBL_DEPENDENT,
         //         // 'Member ID', memberId,
-        //         'Name', name, 
-               
+        //         'Name', name,
+
         //     )
         // }
      }
@@ -126,8 +126,8 @@ class MembershipTenureSelection{
                 cy.SelectTableItem(
                     elems_MembershipTenureSelection.Principal.TBL_PRINCIPAL,
                     // 'Member ID', memberId,
-                    'Name', name, 
-                   
+                    'Name', name,
+
                 )
             }
          }
@@ -140,7 +140,7 @@ class MembershipTenureSelection{
 
         // Click Add to Cart button
         cy.Click(elems_MembershipTenureSelection.BTN_ADDTOCART)
-        cy.wait(7000) // Change it to 15000 when in UAT
+        cy.wait(15000) // Change it to 15000 when in UAT
         // Verify Redirection Page
         cy.ValidateElementText(elems_PageHeader.LBL_PAGETITLE, 'Shopping Cart')
     }
@@ -148,7 +148,7 @@ class MembershipTenureSelection{
     /*****************************************************
      * Method: cancel
      * Description: Click Cancel button
-     * 
+     *
      * @param {string} expectedPage Expected Page
      *****************************************************/
      cancel(expectedPage){

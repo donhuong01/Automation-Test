@@ -10,7 +10,7 @@ const data = {
 
     HolidayDates: {
         HolidayName1: 'Chinese New Year Day 1',
-        HolidayName2: 'Chrismis Day',
+        HolidayName2: 'Christmas Day',
         HoildayDate1: '18-Feb-2022',
         HoildayDate2: '24-Dec-2023',
 
@@ -18,7 +18,7 @@ const data = {
     },
     FacilityBookingDetails: {
         FacilityType: 'Facility  Type 2023',
-        slot: 'Available (12:00 pm - 01:00 pm)',
+        slot: 'Available (09:00 am - 10:00 am)',
         ChargeType: 'Charge Rate-2023',
         Amount: '2',
         Reason: 'Testing',
@@ -38,12 +38,12 @@ const data = {
     },
 
     Period: {
-        PeriodName1: '2022 Term 1 Sch Day',
-        PeriodStartDate1: '31-Dec-2022',
-        PeriodEndDate1: '12-Mar-2023',
-        PeriodName2: '2022 Term 2 Sch Day',
-        PeriodStartDate2: '22-Mar-2022',
-        PeriodEndDate2: '28-May-2023',
+        PeriodName1: '2023 Term 1 Sch Day',
+        PeriodStartDate1: '03-Jan-2023',
+        PeriodEndDate1: '20-Mar-2024',
+        PeriodName2: '2023 Term 2 Sch Day',
+        PeriodStartDate2: '26-Jun-2023',
+        PeriodEndDate2: '11-Sep-2024',
 
         Description: 'Test Period Description'
     },
@@ -236,11 +236,11 @@ const data = {
         AccessMode: 'Online',
         CustomerCategory: 'All Customer Category',
         Status: 'Pending Approval',
-        
+
         //Charge Rate Tab
-        StartDate:'09-Jan-2023',
-        EndDate:'30-Jun-2023',
-        ChargeRateLocation:'All Locations',
+        StartDate: '09-Jan-2023',
+        EndDate: '30-Jun-2023',
+        ChargeRateLocation: 'All Locations',
         ChargeTypeName: 'Booking Fee',
         Transaction: 'Booking',
         Calculation: 'Per Booking',
@@ -252,11 +252,11 @@ const data = {
     },
     CategorySection: {
 
-        Category:"SWIMMING POOL",
-        LifestyleGroup:"Entertainment",
-        FABSGroup:"IG Activities",
-        ClubClassification:"Family & Enrichment",
-        SMCClassification:"Family & Enrichment-SMC"
+        Category: "SWIMMING POOL",
+        LifestyleGroup: "Entertainment",
+        FABSGroup: "IG Activities",
+        ClubClassification: "Family & Enrichment",
+        SMCClassification: "Family & Enrichment-SMC"
     }
 
 }
