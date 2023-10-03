@@ -52,7 +52,7 @@ Cypress.Commands.add('EnterText', (locator, text) => {
  *****************************************************/
 Cypress.Commands.add('SelectDropDownItem', (locator, item) => {
     cy.log('------ Select Drop Down Item : ' + locator + ' ------')
-    cy.xpath(locator).scrollIntoView()
+    cy.xpath(locator, {timeout: 30000}).scrollIntoView()
     cy.xpath(locator + '//span[@class="k-icon k-i-arrow-s"]').click()
     cy.wait(1000)
     // cy.xpath(locator).invoke('attr', 'aria-owns').then(value => {
