@@ -2,9 +2,9 @@ const data = {
 
     SRP_Redemption_Managment: {
         MemberID: "A300001959",
-        ItemCode: "SRP001", // QA: SRP001 ; UAT: 006
-        ItemDescription: "SRP Prod 001", // QA: SRP Prod 001 ; UAT: SRP Voucher 006
-        Category: "e-Vouchers", // QA: e-Vouchers ; UAT: Consignment Item
+        ItemCode: "SRP014", // QA: SRP014 ; UAT: 006
+        ItemDescription: "SRP 014", // QA: SRP 014 ; UAT: SRP Voucher 006
+        Category: "MemberShip Item", // QA: MemberShip Item ; UAT: Consignment Item
         RedemptionSourceLoc: "SAFRA Jurong",
         Status: "Pending Payment",
         Quantity: 1,
@@ -13,9 +13,9 @@ const data = {
 
     SRP_Redemption_Collection: {
         MemberID: "A300002261",
-        ItemCode: "SRP001", // QA: SRP001 ; UAT: SRP008
-        ItemDescription: "SRP Prod 001", // QA: SRP Prod 001 ; UAT: SRP Voucher 008
-        Category: "e-Vouchers", // QA: e-Vouchers ; UAT: Voucher
+        ItemCode: "SRP014", // QA: SRP014 ; UAT: SRP008
+        ItemDescription: "SRP 014", // QA: SRP 014 ; UAT: SRP Voucher 008
+        Category: "MemberShip Item", // QA: MemberShip Item  ; UAT: Voucher
         RedemptionSourceLoc: "SAFRA Jurong",
         Status: "Pending Payment",
         Quantity: 1,
