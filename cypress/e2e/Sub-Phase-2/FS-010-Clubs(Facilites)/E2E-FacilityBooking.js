@@ -37,7 +37,7 @@ const FacilityBookingManagement = () => {
 
         it('[TC01] Creating and verifying Facility Booking', function () {
 
-            // ///////////////////////////////CUSTOMER CREATION////////////////////////////////////////
+            //#region customer Creation
 
             //Enable SFS
             // cy.visit('/membership/moduleSettings')
@@ -93,8 +93,9 @@ const FacilityBookingManagement = () => {
 
             CustomerCreation.save();
             cy.wait(8000)
+            //#endregion
 
-            ///////////////////////////////PRINCIPAL REGISTRATION////////////////////////////////////////
+            //#region Principal Registration
 
             cy.Click(elems_Landing.SAFRA_Member)
             cy.Click(elems_Landing.Membership_Registration)
@@ -126,11 +127,10 @@ const FacilityBookingManagement = () => {
 
             MemRegPrincipal.SaveAndNextPrincipal()
             cy.wait(8000)
+            //#endregion
 
-            ///////////////////////////////////TENURE SELECTION////////////////////////////////////////////////////////////
+            //#region Tenure Selection
 
-
-            // Membership Tenure Selection
             MemTenureSelect.principalTenureSelection(PrincipalName, '10 Years')
             cy.wait(8000)
 
@@ -143,7 +143,7 @@ const FacilityBookingManagement = () => {
 
             // Wait for 3 minites
             cy.wait(15000)
-
+            //#endregion
 
             // })
 
@@ -156,7 +156,7 @@ const FacilityBookingManagement = () => {
             //     cy.EnterText(elems_CustomerCheckInPage.TXT_MEMBERID, 'A300000078') //Change Member ID for now
             //     cy.Click(elems_CustomerCheckInPage.BTN_CHECKIN)
             //     cy.wait(7000)
-
+            //#endregion
 
             //visit facility booking listing
             cy.visit('/facilities/bookingListing', { timeout: 30000 })
@@ -201,11 +201,11 @@ const FacilityBookingManagement = () => {
             // verify page title booking list
             FacilityBookingDetail.verifyPageTitle('Customer Landing')
 
-            //wait for 2 minut
+            //wait for 2 minute
             cy.wait(30000)
 
             // visit facility booking listing
-            cy.visit('/facilities/bookingListing')
+            cy.visit('/facilities/bookingListing', { timeout: 50000 })
 
             // Verify Page Title
             FacilityBookingDetail.verifyPageTitle('Facility Booking Listing')
