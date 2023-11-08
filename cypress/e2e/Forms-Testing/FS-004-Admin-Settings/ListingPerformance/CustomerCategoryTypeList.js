@@ -1,7 +1,7 @@
-const ListingPositionListing = () => {
-    it('Position Listing Performance', function () {
+const CustomerCategoryTypeList = () => {
+    it('CustomerCategoryType List', function () {
         const t0 = performance.now(); // Set t0 before the cy.visit
-        cy.visit('/admin/smcmsPositionList');
+        cy.visit('/admin/customerCategoryTypeListing');
         cy.get("div[class='page-title'] h2").then(() => {
             cy.get('.k-loading-image', { timeout: 30000 }).should('not.exist').then(() => {
                 const t1 = performance.now();
@@ -13,4 +13,4 @@ const ListingPositionListing = () => {
     });
 }
 
-export default ListingPositionListing
+export default CustomerCategoryTypeList
