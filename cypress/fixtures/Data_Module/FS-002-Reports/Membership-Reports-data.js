@@ -6,15 +6,15 @@ const data = {
 
     //FS-014
     BAD_ADDRESS:{
-        EXPECTEDPG: 'Report Viewer - ReportMembership.BadAddressMembers',
+        EXPECTEDPG: 'Report Viewer - Bad Address Members',
     },
 
     DOCUMENTARY_PROOF_OPERATIONAL: {
-        EXPECTEDPG: 'Report Viewer - ReportMembership.DocumentaryProofOperational',   
+        EXPECTEDPG: 'Report Viewer - Documentary Proof Operational',   
     },
 
     DOCUMENTARY_PROOF_VERIFIED: {
-        EXPECTEDPG: 'Report Viewer - ReportMembership.DocumentaryProofVerified',
+        EXPECTEDPG: 'Report Viewer - Documentary Proof Verified',
         DOCU_PROOF: '',
         START_DATE: '',
         END_DATE: ''
@@ -26,14 +26,14 @@ const data = {
 
     //FS-025
     VIP_APPOINTMENT: {
-        EXPECTEDPG: 'Report Viewer - ReportMembership.VIPAppointmentTerm',
+        EXPECTEDPG: 'Report Viewer - VIP Appointment Term',
         EXPIRYFROM: '',
         EXPIRYTO: ''
     },
 
     //FS-034
     CUSTOMER_MARKTING: {
-        EXPECTEDPG: 'Report Viewer - ReportMembership.CustomerMarketingProfile',
+        EXPECTEDPG: 'Report Viewer - Customer Marketing Profile',
         CONSENT: '',
         MEMBERSHIP: '',
         CONTACTMODE: '',
@@ -48,11 +48,11 @@ const data = {
 
     //FS-032
     LUCKYDRAW_TRACKING: {
-        EXPECTEDPG: 'Report Viewer - ReportMembership.LuckyDrawTracking',
+        EXPECTEDPG: 'Report Viewer - Lucky Draw Tracking',
     },
 
     LUCKYDRAW_WINNER: {
-        EXPECTEDPG: 'Report Viewer - ReportMembership.LuckyDrawWinner',
+        EXPECTEDPG: 'Report Viewer - Lucky Draw Winner',
     },
 
     //FS-026

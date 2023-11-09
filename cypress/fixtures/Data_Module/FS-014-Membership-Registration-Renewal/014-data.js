@@ -1061,11 +1061,11 @@ const data = {
             myMailbox: "SGPost"
         },
         ContactInformation: {
-            handPhone: '+65 658 5896',
+            handPhone: '8658 5896',
             emailAddress: 'testuser',
-            emergencyContact: "+65 658 5893",
+            emergencyContact: "8658 5893",
             conentInformationServiceNotification: 'check',
-            homeNumber: "12232323",
+            homeNumber: "6223 2323",
 
             preferredContactModeSelectAll: 'check',
             preferredContactModeEmail: 'uncheck',

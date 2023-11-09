@@ -20,7 +20,7 @@ import elems_PageHeader from '../../../../page-objects/SMCMS/Elements/Common/Pag
 import elems_CustomerCheckInPage from '../../../../page-objects/SMCMS/Elements/Membership/FS014_Membership-Master-Registration-Renewal/CustomerCheckInPage'
 import Commons from '../../../../page-objects/SMCMS/PageActions/Common/Common'
 
-const SFSMemberRegistion = (CustomerNRICFull, DepChildNRICFull/*, DepSouseNRICFull*/) => {
+const SFSMemberRegistion = (CustomerNRICFull, DepChildNRICFull, DepSouseNRICFull) => {
 
     
 
@@ -44,7 +44,7 @@ describe('[TS07] SFS Member Registration]', function (){
     
     //For Principal Creation
     // const PrincipalName = data.CustomerCreationPrincipal.RegistrationInformation.name + UserID
-    const PrincipalName = 'Etest1'//'SFS User ' + UserID //
+    const PrincipalName = 'Etest2'+UserID//'SFS User ' + UserID //
     const PrincipalEmail = PrincipalName+"@test.com"//data.CustomerCreationPrincipal.ContactInformation.emailAddress + UserID + "@test.com" //'safraonlineuser014@gmail.com'//
     // const CustomerNRIC = '691J'           //To be changed Each time 
 
@@ -54,7 +54,7 @@ describe('[TS07] SFS Member Registration]', function (){
     //For Dependent Child 
     const UserIDDep = Math.floor(Math.random() * 10000 )
     // const DepChildName = data.CustomerCreationDependentChild.RegistrationInformation.name + UserIDDep
-    const DepChildName = 'EtestC1'//'SFS User - C' + UserIDDep //
+    const DepChildName = 'EtestC2'+UserID//'SFS User - C' + UserIDDep //
     const DepChildEmail = DepChildName+"@test.com"//data.CustomerCreationDependentChild.ContactInformation.emailAddress + UserIDDep + "@test.com" //'safraonlineuser014-C@gmail.com'//
     // const DepChildNRIC = '167D'            //To be changed Each time 
     // const DepChildNRICFull = 'S7296807G'   //To be changed Each time 
@@ -62,7 +62,7 @@ describe('[TS07] SFS Member Registration]', function (){
     //For Dependent Spouse
     const UserIDSpouse = Math.floor(Math.random() * 10000 )
     // const DepSouseName = data.CustomerCreationDependentSpouse.RegistrationInformation.name + UserIDSpouse
-    const DepSouseName = 'EtestS1' + UserIDSpouse //'TestuserQA98 - S'//
+    const DepSouseName = 'EtestS2' + UserIDSpouse+UserID //'TestuserQA98 - S'//
     const DepSouseEmail = data.CustomerCreationDependentSpouse.ContactInformation.emailAddress + UserIDSpouse + "@synergyonline.com" //'safraonlineuser014-S@gmail.com'//
     // const DepSouseNRIC = '319Z'             //To be changed Each time 
     // const DepSouseNRICFull = 'S3170144I'    //To be changed Each time 
@@ -89,7 +89,7 @@ describe('[TS07] SFS Member Registration]', function (){
     
         CustomerCreation.fillOutRegistrationInfo({
             name: PrincipalName,
-            DOB: data.CustomerCreationPrincipal.RegistrationInformation.DOB,
+            // DOB: data.CustomerCreationPrincipal.RegistrationInformation.DOB,
             gender:data.CustomerCreationPrincipal.RegistrationInformation.gender,
             /* profilePicture: "DP.png" */
         });
@@ -224,7 +224,7 @@ describe('[TS07] SFS Member Registration]', function (){
         
         MemberRegDependent.fillsoutContactInformation({
             Handphone:data.CustomerCreationDependentChild.ContactInformation.handPhone, 
-            // EmailAddress:DepChildEmail, 
+            EmailAddress:DepChildEmail, 
             // HomeNumber:data.CustomerCreationDependentChild.ContactInformation.homeNumber, 
             // EmergencyContact:data.CustomerCreationDependentChild.ContactInformation.emergencyContact
         })    
@@ -279,61 +279,61 @@ describe('[TS07] SFS Member Registration]', function (){
         MemRegPrincipal.SaveAndNext()
         cy.wait(10000)
 
-        // //Adding Dependent spouse 
-        // MemRegPrincipal.AddDependent()
-        // cy.wait(10000)
+        //Adding Dependent spouse 
+        MemRegPrincipal.AddDependent()
+        cy.wait(10000)
         
-        // //Adding Spouse
-        // MemberRegDependent.fillsoutPersonalInformationDep(
-        //     data.CustomerCreationDependentSpouse.RegistrationInformation.MemberCategory, 
-        //     data.CustomerCreationDependentSpouse.RegistrationInformation.DependentType, 
-        //     DepSouseName, //Extra
-        //     DepSouseName, 
-        //     DepSouseNRICFull, 
-        //     data.CustomerCreationDependentSpouse.RegistrationInformation.gender, 
-        //     data.CustomerCreationDependentSpouse.RegistrationInformation.DateofBirth,
-        //     data.CustomerCreationDependentSpouse.RegistrationInformation.Age,
-        //     undefined, //Extra
-        //     data.CustomerCreationDependentSpouse.RegistrationInformation.PrincipalType, 
-        //     data.CustomerCreationDependentSpouse.RegistrationInformation.MemberType, 
-        //     data.CustomerCreationDependentSpouse.RegistrationInformation.Nationality,
-        //     data.CustomerCreationDependentSpouse.RegistrationInformation.MaritalStatus,
-        //     data.CustomerCreationDependentSpouse.RegistrationInformation.CardType,
-        //     data.CustomerCreationDependentSpouse.RegistrationInformation.InterestinDBSCard,
-        //     data.CustomerCreationDependentSpouse.RegistrationInformation.AllowtoRedeemSAFRAPoints,
-        //     data.CustomerCreationDependentChild.RegistrationInformation.ProfilePicture
-        // ) 
+        //Adding Spouse
+        MemberRegDependent.fillsoutPersonalInformationDep(
+            data.CustomerCreationDependentSpouse.RegistrationInformation.MemberCategory, 
+            data.CustomerCreationDependentSpouse.RegistrationInformation.DependentType, 
+            DepSouseName, //Extra
+            DepSouseName, 
+            DepSouseNRICFull, 
+            data.CustomerCreationDependentSpouse.RegistrationInformation.gender, 
+            data.CustomerCreationDependentSpouse.RegistrationInformation.DateofBirth,
+            data.CustomerCreationDependentSpouse.RegistrationInformation.Age,
+            undefined, //Extra
+            data.CustomerCreationDependentSpouse.RegistrationInformation.PrincipalType, 
+            data.CustomerCreationDependentSpouse.RegistrationInformation.MemberType, 
+            data.CustomerCreationDependentSpouse.RegistrationInformation.Nationality,
+            data.CustomerCreationDependentSpouse.RegistrationInformation.MaritalStatus,
+            data.CustomerCreationDependentSpouse.RegistrationInformation.CardType,
+            data.CustomerCreationDependentSpouse.RegistrationInformation.InterestinDBSCard,
+            data.CustomerCreationDependentSpouse.RegistrationInformation.AllowtoRedeemSAFRAPoints,
+            data.CustomerCreationDependentChild.RegistrationInformation.ProfilePicture
+        ) 
         
-        // MemberRegDependent.fillsoutContactInformation({
-        //     Handphone:data.CustomerCreationDependentSpouse.ContactInformation.handPhone, 
-        //     EmailAddress:DepSouseEmail, //Extra
-        //     HomeNumber:data.CustomerCreationDependentSpouse.ContactInformation.homeNumber, 
-        //     EmergencyContact:data.CustomerCreationDependentSpouse.ContactInformation.emergencyContact
-        // })    
+        MemberRegDependent.fillsoutContactInformation({
+            Handphone:data.CustomerCreationDependentSpouse.ContactInformation.handPhone, 
+            EmailAddress:DepSouseEmail, //Extra
+            HomeNumber:data.CustomerCreationDependentSpouse.ContactInformation.homeNumber, 
+            EmergencyContact:data.CustomerCreationDependentSpouse.ContactInformation.emergencyContact
+        })    
 
-        // MemberRegDependent.filloutPreferredContactMode({
-        //     SelectAll: data.CustomerCreationDependentSpouse.ContactInformation.preferredContactModeSelectAll, 
-        //     Email: data.CustomerCreationDependentSpouse.ContactInformation.preferredContactModeEmail, 
-        //     Mail: data.CustomerCreationDependentSpouse.ContactInformation.preferredContactModeMail, 
-        //     SMS: data.CustomerCreationDependentSpouse.ContactInformation.preferredContactModeSMS, 
-        //     VoiceCall: data.CustomerCreationDependentSpouse.ContactInformation.preferredContactModeVoiceCall, 
-        //     PushNotification: data.CustomerCreationDependentSpouse.ContactInformation.preferredContactModePushNotification
+        MemberRegDependent.filloutPreferredContactMode({
+            SelectAll: data.CustomerCreationDependentSpouse.ContactInformation.preferredContactModeSelectAll, 
+            Email: data.CustomerCreationDependentSpouse.ContactInformation.preferredContactModeEmail, 
+            Mail: data.CustomerCreationDependentSpouse.ContactInformation.preferredContactModeMail, 
+            SMS: data.CustomerCreationDependentSpouse.ContactInformation.preferredContactModeSMS, 
+            VoiceCall: data.CustomerCreationDependentSpouse.ContactInformation.preferredContactModeVoiceCall, 
+            PushNotification: data.CustomerCreationDependentSpouse.ContactInformation.preferredContactModePushNotification
+        })
+
+        MemberRegDependent.filloutConsentInformation({
+            MarketingConsent: data.CustomerCreationDependentSpouse.ContactInformation.consentInformationMarketing, 
+            ServiceNotificationConsent: data.CustomerCreationDependentSpouse.ContactInformation.consentInformationServiceNotification, 
+            TransactionalConsent: data.CustomerCreationDependentSpouse.ContactInformation.consentInformationTransactional
+        })
+
+        // MemberRegDependent.fillOutPreferredSafraClubs({
+        //     safraJurong:data.CustomerCreationDependentSpouse.InterestAreaInformation.clubJurong, 
+        //     safraPunggol:data.CustomerCreationDependentSpouse.InterestAreaInformation.clubPunggol, 
+        //     safraToaPayoh:data.CustomerCreationDependentSpouse.InterestAreaInformation.clubPayoh, 
+        //     safraMtFaber:data.CustomerCreationDependentSpouse.InterestAreaInformation.clubFaber, 
+        //     safraTampines:data.CustomerCreationDependentSpouse.InterestAreaInformation.clubTampines, 
+        //     safraYishun:data.CustomerCreationDependentSpouse.InterestAreaInformation.clubYishun
         // })
-
-        // MemberRegDependent.filloutConsentInformation({
-        //     MarketingConsent: data.CustomerCreationDependentSpouse.ContactInformation.consentInformationMarketing, 
-        //     ServiceNotificationConsent: data.CustomerCreationDependentSpouse.ContactInformation.consentInformationServiceNotification, 
-        //     TransactionalConsent: data.CustomerCreationDependentSpouse.ContactInformation.consentInformationTransactional
-        // })
-
-        // // MemberRegDependent.fillOutPreferredSafraClubs({
-        // //     safraJurong:data.CustomerCreationDependentSpouse.InterestAreaInformation.clubJurong, 
-        // //     safraPunggol:data.CustomerCreationDependentSpouse.InterestAreaInformation.clubPunggol, 
-        // //     safraToaPayoh:data.CustomerCreationDependentSpouse.InterestAreaInformation.clubPayoh, 
-        // //     safraMtFaber:data.CustomerCreationDependentSpouse.InterestAreaInformation.clubFaber, 
-        // //     safraTampines:data.CustomerCreationDependentSpouse.InterestAreaInformation.clubTampines, 
-        // //     safraYishun:data.CustomerCreationDependentSpouse.InterestAreaInformation.clubYishun
-        // // })
         // MemberRegDependent.fillOutSafraBrands({
         //     energyOneGym: data.CustomerCreationDependentSpouse.InterestAreaInformation.brandEnergyOneGym, 
         //     kidzAmazeSplshIndrPlayGrnd:data.CustomerCreationDependentSpouse.InterestAreaInformation.brandKidzAmaza, 
@@ -359,15 +359,15 @@ describe('[TS07] SFS Member Registration]', function (){
         // })
     
 
-        // MemRegPrincipal.SaveAndNext()
-        // cy.wait(15000)
+        MemRegPrincipal.SaveAndNext()
+        cy.wait(15000)
         MemRegPrincipal.SaveAndNext()
         cy.wait(6000)
         MemTenureSelect.principalTenureSelection(PrincipalName, '5 Years')
         MemTenureSelect.dependentTenureSelection(DepChildName, '5 Years')
-        // MemTenureSelect.dependentTenureSelection(DepSouseName, '10 Years')
+        MemTenureSelect.dependentTenureSelection(DepSouseName, '5 Years')
 
-        MemTenureSelect.selectDependent(DepChildName)
+        // MemTenureSelect.selectDependent(DepChildName)
         // MemTenureSelect.selectDependent(DepSouseName)
 
         MemTenureSelect.addToCart()

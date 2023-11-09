@@ -24,7 +24,7 @@ const MemModuleSettings = new MembershipModuleSetting()
 
 const UserID = Math.floor(Math.random() * 100000)
 
-const PrincipalName = "LD Test 011" //Customerdata.CustomerCreationPrincipal.RegistrationInformation.name + UserID //
+const PrincipalName =  Customerdata.CustomerCreationPrincipal.RegistrationInformation.name + UserID // "LDTest011"//
 const PrincipalEmail = PrincipalName+"@test.com" //Customerdata.CustomerCreationPrincipal.ContactInformation.emailAddress //"safraonlineuser009@gmail.com"//
 // const CustomerNRIC = '415D'
 // const CustomerNRICFull = 'S0309415D'
@@ -43,14 +43,14 @@ describe('[TS01] Membership Registration Management',function(){
 
         ///////////////////////////////CUSTOMER CREATION////////////////////////////////////////
         
-            //Enable SFS
-            cy.visit('/membership/moduleSettings')
-            cy.wait(2000)
-            cy.SelectPickerItem('//a[text()="Change"]', 'SAFRA Jurong')
-            cy.wait(5000)
+            // //Enable SFS
+            // cy.visit('/membership/moduleSettings')
+            // cy.wait(2000)
+            // cy.SelectPickerItem('//a[text()="Change"]', 'SAFRA Jurong')
+            // cy.wait(5000)
             
-            MemModuleSettings.SFSActivate('CHECK')
-            cy.wait(5000)
+            // MemModuleSettings.SFSActivate('CHECK')
+            // cy.wait(5000)
             
             cy.visit('/membership/customerCheckin')
             cy.wait(5000)
