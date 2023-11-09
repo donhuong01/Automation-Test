@@ -60,9 +60,9 @@ class CustomerCreation {
             cy.EnterText(elems_CustomerCreation.ContactInformation.TXT_EMERGENCYCONTACT, emergencyContact);
         }
 
-        if (homeNumber !== undefined) {
-            cy.EnterText(elems_CustomerCreation.ContactInformation.TXT_HOMENUMBER, homeNumber);
-        }
+        // if (homeNumber !== undefined) {
+        //     cy.EnterText(elems_CustomerCreation.ContactInformation.TXT_HOMENUMBER, homeNumber);
+        // }
 
         if (preferredContactModeSelectAll !== undefined) {
             cy.TickCheckBox(elems_CustomerCreation.ContactInformation.PreferredContactMode.CHK_SELECTALL, preferredContactModeSelectAll);

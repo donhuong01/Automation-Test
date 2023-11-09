@@ -27,8 +27,8 @@ Cypress.Commands.add('GoToWebPage', (url) => {
  *****************************************************/
 Cypress.Commands.add('Click', (locator) => {
     cy.log('------ Click : ' + locator + ' ------')
-    cy.xpath(locator,{timeout: 30000}).scrollIntoView()
-    cy.xpath(locator,{timeout: 30000}).click({timeout: 30000})
+    cy.xpath(locator, { timeout: 30000 }).scrollIntoView()
+    cy.xpath(locator, { timeout: 30000 }).click({ timeout: 30000 })
 })
 
 /*****************************************************
@@ -40,8 +40,8 @@ Cypress.Commands.add('Click', (locator) => {
  *****************************************************/
 Cypress.Commands.add('EnterText', (locator, text) => {
     cy.log('------ Enter Text : ' + locator + ' ------')
-    cy.xpath(locator,{timeout: 30000}).scrollIntoView()
-    cy.xpath(locator,{timeout: 30000}).type(text,{timeout: 30000})
+    cy.xpath(locator, { timeout: 30000 }).scrollIntoView()
+    cy.xpath(locator, { timeout: 30000 }).type(text, { timeout: 30000 })
 })
 
 /*****************************************************
@@ -109,7 +109,7 @@ Cypress.Commands.add('TickCheckBox', (locator, value) => {
 Cypress.Commands.add('ValidateElementText', (locator, expectedText) => {
     cy.log('------ Validate Element Text : ' + locator + ' ------')
     //cy.xpath(locator).scrollIntoView()
-    cy.xpath(locator, {timeout: 30000}).should('have.text', expectedText)
+    cy.xpath(locator, { timeout: 30000 }).should('have.text', expectedText)
 })
 
 /*****************************************************
@@ -1183,8 +1183,8 @@ Cypress.Commands.add('ClickTableDropDownButton', (locator, targetColumn, textVal
  *****************************************************/
 Cypress.Commands.add("SelectPickerFilter", (locator, textField, item, searchButton) => {
     cy.log('------ SelectPickerFilter : ' + locator + ' ------')
-    cy.xpath(locator).scrollIntoView()
-    cy.xpath(locator).click()
+    cy.xpath(locator, { timeout: 30000 }).scrollIntoView()
+    cy.xpath(locator, { timeout: 30000 }).click()
     cy.xpath(textField).type(item)
     cy.Click(searchButton)
     cy.wait(3000)
