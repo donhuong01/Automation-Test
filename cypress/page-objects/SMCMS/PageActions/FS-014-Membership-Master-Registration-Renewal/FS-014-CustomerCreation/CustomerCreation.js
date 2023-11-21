@@ -241,7 +241,7 @@ class CustomerCreation {
 
     save() {
         cy.Click(elems_CustomerCreation.BTN_CREATENEW);
-        cy.wait(8000)
+        cy.wait(5000)
         cy.ValidateElementText(elems_PageHeader.LBL_PAGETITLE, "Customer Landing");
     }
 

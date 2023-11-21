@@ -140,7 +140,7 @@ class MembershipTenureSelection{
 
         // Click Add to Cart button
         cy.Click(elems_MembershipTenureSelection.BTN_ADDTOCART)
-        cy.wait(15000) // Change it to 15000 when in UAT
+        cy.wait(5000) // Change it to 15000 when in UAT
         // Verify Redirection Page
         cy.ValidateElementText(elems_PageHeader.LBL_PAGETITLE, 'Shopping Cart')
     }

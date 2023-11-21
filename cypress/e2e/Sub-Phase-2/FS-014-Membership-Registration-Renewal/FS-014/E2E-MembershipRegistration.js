@@ -24,7 +24,7 @@ const MemModuleSettings = new MembershipModuleSetting()
 
 const UserID = Math.floor(Math.random() * 100000)
 
-const PrincipalName =  Customerdata.CustomerCreationPrincipal.RegistrationInformation.name + UserID // "LDTest011"//
+const PrincipalName =  "TestReceipt28"//Customerdata.CustomerCreationPrincipal.RegistrationInformation.name + UserID // 
 const PrincipalEmail = PrincipalName+"@test.com" //Customerdata.CustomerCreationPrincipal.ContactInformation.emailAddress //"safraonlineuser009@gmail.com"//
 // const CustomerNRIC = '415D'
 // const CustomerNRICFull = 'S0309415D'
@@ -100,10 +100,9 @@ describe('[TS01] Membership Registration Management',function(){
             CustomerCreation.save();
         
         ///////////////////////////////PRINCIPAL REGISTRATION////////////////////////////////////////
-            cy.wait(5000)
             cy.Click(elems_Landing.SAFRA_Member)
             cy.Click(elems_Landing.Membership_Registration)
-            cy.wait(20000)
+            cy.wait(3000)
         
             MemRegPrincipal.verifyPersonalInformation({
                 MemberCategory: data.memberregistrationprincipal.Personal_Info.MemberCategory,
@@ -131,7 +130,7 @@ describe('[TS01] Membership Registration Management',function(){
             
             MemRegPrincipal.SaveAndNextPrincipal()
             //cy.wait(15000) //QA
-            cy.wait(8000) //UAT 
+            cy.wait(3000) //UAT 
             ///////////////////////////////////TENURE SELECTION////////////////////////////////////////////////////////////
         
         
@@ -144,7 +143,7 @@ describe('[TS01] Membership Registration Management',function(){
             
         
             // Shopping cart and Payments
-            ShoppingCart.fillOutandApplyPayment('CSO-CASH')
+            ShoppingCart.fillOutandApplyPayment('CASH')
             
             // Wait for 3 minites
             //cy.wait(25000) //QA

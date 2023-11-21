@@ -235,6 +235,45 @@ class FacilityTypeDetailForm {
         cy.IncreaseFieldValue(elems_FacilityTypeSetupDetailForm.DETAILSTAB.TXT_SLOTLENGTH, SlotLength)
     }
 
+
+    /*****************************************************
+     * Method: UpdateBookingSection
+     * Description: Update This function fillOut Facility type detail Form(Booking section)
+     * @param {string} BookingQuote
+     * @param {string} AccessMode
+     * @param {string} CustomerCategoryDialog
+     * @param {string} TypeOfTiming
+     * @param {string} SlotLength
+     * Author fshahzada
+     *****************************************************/
+    UpdateBookingSection( AccessMode, CustomerCategoryDialog) {
+
+
+        cy.Click(elems_FacilityTypeSetupDetailForm.DETAILSTAB.BTN_EDITACCESSMODES)
+        cy.Click('(//*[local-name()="svg"])[17]')
+        cy.wait(3000)
+
+        cy.SelectPickerDifferentItemsSeachBTN(
+            elems_FacilityTypeSetupDetailForm.DETAILSTAB.BTN_ADDACCESSMODE,
+            elems_FacilityTypeSetupDetailForm.DETAILSTAB.TXT_ACCESSMODE,
+            AccessMode,
+            elems_FacilityTypeSetupDetailForm.DETAILSTAB.BTN_SEARCHFILTERSACCESSMODE,
+
+        )
+
+
+        cy.Click(elems_FacilityTypeSetupDetailForm.DETAILSTAB.BTN_EDITCUSTOMERCATEGORIES)
+        cy.Click('(//*[local-name()="svg"])[18]')
+        cy.SelectPickerDifferentItemsSeachBTN(
+            elems_FacilityTypeSetupDetailForm.BTN_ADDCUSTOMERCATEGORYBOOKING,
+            elems_FacilityTypeSetupDetailForm.DETAILSTAB.TXT_CUSTOMERCATEGORYPOPUP,
+            CustomerCategoryDialog,
+            elems_FacilityTypeSetupDetailForm.DETAILSTAB.BTN_SEARCHFILTERSCUSTOMERCATEGORYSIALOG,
+
+        )
+    }
+
+
     /*****************************************************
      * Method: AddHorizon
      * Description: This function fillOut Facility type detail Form(Horizon section)
@@ -254,6 +293,36 @@ class FacilityTypeDetailForm {
          cy.EnterText(elems_FacilityTypeSetupDetailForm.DETAILSTAB.TXT_HORIZONATTIME,'01:00 AM')
          cy.wait(1000)
     }
+
+    /*****************************************************
+     * Method: AddAccessMode
+     * Description: This function fillOut Facility type detail Form(Horizon section)
+     * @param {string} AccessMode
+     * @param {string} CustomerCategory
+     * Author fshahzada
+     *****************************************************/
+    AddAccessMode(AccessMode, CustomerCategory, Hours, Days, DaysAndTime){
+        cy.Click('(//*[local-name()="svg"])[20]')
+        cy.Click(elems_FacilityTypeSetupDetailForm.DETAILSTAB.BTN_ADDHORIZON)
+        cy.SelectDropDownItem(elems_FacilityTypeSetupDetailForm.DETAILSTAB.DRP_ACCESSMODE,AccessMode)
+        cy.wait(1000)
+        cy.SelectDropDownItem(elems_FacilityTypeSetupDetailForm.DETAILSTAB.DRP_CUSTOMERCATEGORY,CustomerCategory)
+        cy.wait(1000)
+        cy.TickCheckBox(elems_FacilityTypeSetupDetailForm.DETAILSTAB.CHK_ENABLEHORIZONE,'check')
+        if (Hours === "Yes"){
+            cy.EnterText(elems_FacilityTypeSetupDetailForm.DETAILSTAB.TXT_HORIZONHOURBEFORE,'2')
+        }
+        if(Days === "Yes"){
+            cy.EnterText(elems_FacilityTypeSetupDetailForm.DETAILSTAB.TXT_HORIZONATCURRENTDAYS,'3')
+        }
+        if(DaysAndTime === "Yes"){
+            cy.EnterText(elems_FacilityTypeSetupDetailForm.DETAILSTAB.TXT_HORIZONATTIME,'01:00 AM')
+        }
+        cy.wait(1000)
+   }
+
+
+
 
     /*****************************************************
      * Method: BookingTimingRestriction
@@ -665,6 +734,24 @@ class FacilityTypeDetailForm {
         cy.EnterText(elems_PendingTaskDetail.TXTAREA_REMARK, Remarks)
 
         cy.Click(elems_PendingTaskDetail.BTN_SUBMIT)
+
+        
+    }
+
+
+    /*****************************************************
+     * Method: ClearSaveData
+     * Description: Clear Inputted Data
+     * Author: rdacpano
+     *****************************************************/
+    ClearSaveData() {
+        cy.Click(elems_FacilityTypeSetupDetailForm.DETAILSTAB.BTN_EDITACCESSMODES)
+        cy.wait(3000)
+        cy.Click('(//*[local-name()="svg"])[17]')
+        // cy.Click(elems_FacilityTypeSetupDetailForm.DETAILSTAB.BTN_EDITACCESSMODES)
+        cy.Click(elems_FacilityTypeSetupDetailForm.DETAILSTAB.BTN_EDITCUSTOMERCATEGORIES)
+        cy.wait(3000)
+        cy.Click('(//*[local-name()="svg"])[17]')
 
         
     }

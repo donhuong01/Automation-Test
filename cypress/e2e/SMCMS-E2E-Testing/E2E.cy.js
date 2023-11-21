@@ -191,10 +191,15 @@ import E2EData from '../SMCMS-E2E-Testing/E2EDataConfigUAT'
 import login from '../../fixtures/login'
 import FacilityGroupBookingBallot from '../Sub-Phase-2/FS-010-Clubs(Facilites)/E2E-FacilityGroupBookingBallot'
 
+//NRIC Generator
+import { nricGenerator } from '../../support/nricGenerator'
+
+const CustomerNRICFull = nricGenerator('S', 43)
+
 beforeEach(() => {
 
   // Set local storage for QA Enviroment
-  cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
+  // cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
 
   /****************************
    * Requestor Testing - Erik *
@@ -206,17 +211,17 @@ beforeEach(() => {
    * Admin Testing - Hung *
    ************************/
   // Set local storage for UAT Enviroment
-  // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
+  cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
 
   //Select Channel
-  cy.visit('/membership/customerCheckin')
-  cy.SelectPickerItem('//a[text()="Change"]', 'SAFRA Jurong')
+  // cy.visit('/membership/customerCheckin')
+  // cy.SelectPickerItem('//a[text()="Change"]', 'SAFRA Jurong')
 })
 
 
 // describe('E2E Auto Testing:FS-001 Admin: System Login', () => {
 
-// OnlineAccountAccess()
+//     OnlineAccountAccess()
 //     SMCMSPostion()
 //     SMCMSRole()
 //     SMCMSUser()
@@ -224,7 +229,7 @@ beforeEach(() => {
 
 //  describe('E2E Auto Testing:FS-002 Reports', () => {
 
-//      IG_Report()
+// IG_Report()
 // E1_Report()
 // Accommodation_Report()
 // MemberCards_Report()
@@ -241,14 +246,14 @@ beforeEach(() => {
 
 // describe('E2E Auto Testing:FS-004 Admin: Settings', () => {
 
-//     CustomerCategoryType()
-//     CustomerCategory()
-//     CodeType()
-//     CodeSetMaster()
-//     DocumentTemplate()
-//     ApplicationSetting() //Not Required //Changed Font Siz to - 4 (14pt)
-//     NotificationMessageTemplate() //Not Required
-//     AnnouncementPortalNotification() //Not Required
+    // CustomerCategoryType()
+    // CustomerCategory()
+    // CodeType()
+    // CodeSetMaster()
+    //  DocumentTemplate()
+    // ApplicationSetting() //Not Required //Changed Font Siz to - 4 (14pt)
+    // NotificationMessageTemplate() //Not Required
+    // AnnouncementPortalNotification() //Not Required
 // })
 
 
@@ -286,7 +291,7 @@ beforeEach(() => {
 
 // describe('E2E Auto Testing:FS-014 Membership: Master Registration and Renewal', () => {
 
-//      MembershipRegistration(E2EData.NRIC_FOR_MEMBERSHIP_REGISTRATION) // Enter Full NRIC
+//  MembershipRegistration(CustomerNRICFull) // Enter Full NRIC
 // CustomerCheckIn()
 // MemberType()
 // BadAddressUpdate()// Fail Need code updates
@@ -355,7 +360,7 @@ beforeEach(() => {
 
 
 
-// describe('E2E Auto Testing:FS-016 Interest Group: Registration and Maintenance Activities', ()=> {
+describe('E2E Auto Testing:FS-016 Interest Group: Registration and Maintenance Activities', ()=> {
 
 // InterestGroupMembershipRegistration()
 // InterestGMembershipRenewal(E2EData.MEMBERID_FOR_IG_RENEWAL) //Change NRIC each time after runing this code
@@ -364,8 +369,8 @@ beforeEach(() => {
 // InterestGroupDeactivation()
 // InterestGroupConversion(E2EData.MEMBER_NAME_FOR_IG_CONVERSION ) //Please Provide Active Member Name
 // InterestGroupDeferment(E2EData.MEMBER_NAME_FOR_IG_DEFERMENT) //Please Provide Active Member Name
-// InterestGMembershipTermination(E2EData.MEMBERID_AND_NAME_FOR_IG_TERMINATION.MEMBERID, E2EData.MEMBERID_AND_NAME_FOR_IG_TERMINATION.MEMBERNAME) // Provide MemberId and Member Name
-// IGMembershipReinstatement(E2EData.MEMBERID_FOR_IG_REINSTATEMENT.MEMBERID, E2EData.MEMBERID_FOR_IG_REINSTATEMENT.MEMBERNAME)
+InterestGMembershipTermination(E2EData.MEMBERID_AND_NAME_FOR_IG_TERMINATION.MEMBERID, E2EData.MEMBERID_AND_NAME_FOR_IG_TERMINATION.MEMBERNAME) // Provide MemberId and Member Name
+IGMembershipReinstatement(E2EData.MEMBERID_FOR_IG_REINSTATEMENT.MEMBERID, E2EData.MEMBERID_FOR_IG_REINSTATEMENT.MEMBERNAME)
 // InterestGMembershipReverse(E2EData.MEMBER_NAME_FOR_IG_REVERSAL) //Provide Member Name
 // InterestGMembershipwaiver(E2EData.MEMBER_NAME_FOR_IG_WAIVER)  //Provide Member Name
 // InterestGroupManagement()
@@ -373,7 +378,7 @@ beforeEach(() => {
 // InterestGroupMainManagements()
 // //IG Renewal Advice
 
-// })
+})
 
 
 

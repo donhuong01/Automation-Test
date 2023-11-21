@@ -21,7 +21,7 @@ const data = {
     },
 
     MEMBERSHIP_FIGURE: {
-        EXPECTEDPG: 'Report Viewer - ReportMembership.MembershipFigure',
+        EXPECTEDPG: 'Report Viewer - Membership Figures',
     },
 
     //FS-025

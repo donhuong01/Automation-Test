@@ -9,7 +9,7 @@ const data = {
     ClubClassification: 'Fitness & Leisure',
     LifeStyleGroup: 'Clubbing/Pubbing',
     SMCClassification: 'Fitness & Adventure-SMC',
-    OwnerEmail: 'rdacpano@synergyonline.com',
+    OwnerEmail: 'htran@synergyonline.com',
 
     LocationName: 'SAFRA Jurong',
 
