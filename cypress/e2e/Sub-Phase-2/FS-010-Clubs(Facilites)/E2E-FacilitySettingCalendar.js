@@ -81,15 +81,15 @@ const FacilitySettingsCalendar = () => {
 
             FacilitySettingsCalendarDetailForm.DeleteSelectedPeriod(PeriodName1)
 
-            FacilitySettingsCalendarDetailForm.VerifyNotificationMessage('Item(s) removed.')
+            FacilitySettingsCalendarDetailForm.VerifyNotificationMessage('Item(s) removed successfully.')
 
             //clear notification
-            cy.xpath('//div[@class="notification__message" and text()="Item(s) removed."]', { timeout: 10000 }).click()
+            cy.xpath('//div[@class="notification__message" and text()="Item(s) removed successfully."]', { timeout: 10000 }).click()
             FacilitySettingsCalendarDetailForm.DeleteSelectedPeriod(PeriodName1)
 
-            FacilitySettingsCalendarDetailForm.VerifyNotificationMessage('Item(s) removed.')
+            FacilitySettingsCalendarDetailForm.VerifyNotificationMessage('Item(s) removed successfully.')
             //clear notification
-            cy.xpath('//div[@class="notification__message" and text()="Item(s) removed."]', { timeout: 10000 }).click()
+            cy.xpath('//div[@class="notification__message" and text()="Item(s) removed successfully."]', { timeout: 10000 }).click()
 
             // FacilitySettingsCalendarDetailForm.AddPeriods(PeriodName2, PeriodStartDate2, PeriodEndDate2)
 
