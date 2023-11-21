@@ -116,10 +116,10 @@ describe('Facility Type Detail Form', function () {
         cy.visit('/facilities/facilityTypeListing');
         cy.wait(5000)
 
-        //verify page title 
+        //verify page title
         FacilityTypeDetailForm.VerifyPageTitle('Facility Type Listing')
 
-        // verify facility 
+        // verify facility
         FacilityTypeDetailForm.VerifyFacility(FacilityName)
         cy.wait(2000)
 
@@ -127,7 +127,7 @@ describe('Facility Type Detail Form', function () {
         FacilityTypeDetailForm.ClickTableItem(FacilityName)
         cy.wait(2000)
 
-        //verify page title 
+        //verify page title
         FacilityTypeDetailForm.VerifyPageTitle('Facility Type Detail')
 
         cy.wait(1000)
@@ -146,7 +146,7 @@ describe('Facility Type Detail Form', function () {
         FacilityTypeDetailForm.RemoveCalendar(CalenderName)
 
         //verify Notification Msg
-        FacilityTypeDetailForm.NotificationMsg('Item(s) removed.')
+        FacilityTypeDetailForm.NotificationMsg('Item(s) removed successfully')
 
         //Add Calendar
         FacilityTypeDetailForm.AddCalendar(CalenderName)
@@ -196,7 +196,7 @@ describe('Facility Type Detail Form', function () {
         //amendment admin fee product
         FacilityTypeDetailForm.AmendmentAdminFeeProduct(ProductName)
 
-        // Extention admin fee product 
+        // Extention admin fee product
         FacilityTypeDetailForm.ExtentionAdminFeeProduct(ProductName)
 
         //Reservation Amin Fee Product
@@ -214,10 +214,10 @@ describe('Facility Type Detail Form', function () {
         FacilityTypeDetailForm.NotificationMsg('Submit for Approval success.')
         cy.wait(5000)
 
-        //verify page title 
+        //verify page title
         FacilityTypeDetailForm.VerifyPageTitle('Facility Type Listing')
 
-        // verify facility 
+        // verify facility
         FacilityTypeDetailForm.VerifyFacility(FacilityName, Status)
         cy.wait(50000)
 

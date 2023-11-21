@@ -81,7 +81,7 @@ describe('[TS02] Facility Settings - Calendar Detail Form', function () {
 
         FacilitySettingsCalendarDetailForm.DeleteSelectedPeriod(PeriodName1)
 
-        FacilitySettingsCalendarDetailForm.VerifyNotificationMessage('Item(s) removed.')
+        FacilitySettingsCalendarDetailForm.VerifyNotificationMessage('Item(s) removed successfully.')
 
         // FacilitySettingsCalendarDetailForm.SaveAsDraft()
 
@@ -110,7 +110,7 @@ describe('[TS02] Facility Settings - Calendar Detail Form', function () {
 
         FacilitySettingsCalendarDetailForm.DeleteSelectedDates(HolidayName1)
 
-        FacilitySettingsCalendarDetailForm.VerifyNotificationMessage('Item(s) removed.')
+        FacilitySettingsCalendarDetailForm.VerifyNotificationMessage('Item(s) removed successfully.')
 
         FacilitySettingsCalendarDetailForm.SubmitForApproval()
         cy.wait(5000)

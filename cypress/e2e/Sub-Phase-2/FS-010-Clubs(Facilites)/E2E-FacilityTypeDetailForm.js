@@ -158,7 +158,7 @@ const FacilityTypeDetailFormManagement = (CalenderName, PeriodOfCalendar, Operat
             FacilityTypeDetailForm.RemoveCalendar(CalenderName)
 
             //verify Notification Msg
-            FacilityTypeDetailForm.NotificationMsg('Item(s) removed.')
+            FacilityTypeDetailForm.NotificationMsg('Item(s) removed successfully.')
 
             //Add Calendar
             FacilityTypeDetailForm.AddCalendar(CalenderName)
