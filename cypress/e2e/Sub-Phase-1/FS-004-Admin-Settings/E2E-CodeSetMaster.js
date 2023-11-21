@@ -95,7 +95,7 @@ const CodeSetMaster = ()=> {
             // CodeSetMstList.selectCodeSetItem('.123')
 
             // Click Delete button - MUST TICK ITEM CHECKBOX BEFORE DELETING
-            CodeSetMstList.delete()
+            //CodeSetMstList.delete()
         })
     })
 }

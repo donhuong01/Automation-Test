@@ -144,7 +144,7 @@ class ShoppingCartPayments {
      *****************************************************/
     fillOutandApplyPayment(PaymentMode) {
 
-        cy.wait(5000)
+        cy.wait(3000)
         cy.SelectDropDownItem(elems_SMCMSShoppingCartAndPayment.Payments.DRP_PAYMENTMODE, PaymentMode)
 
         cy.xpath(elems_SMCMSShoppingCartAndPayment.Payments.LBL_REMAININGBALANCE).then($balance => {

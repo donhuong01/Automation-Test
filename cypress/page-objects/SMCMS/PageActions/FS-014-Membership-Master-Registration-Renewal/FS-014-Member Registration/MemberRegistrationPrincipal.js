@@ -1259,7 +1259,7 @@ class MemberRegistrationPrincipal {
     SaveAndNextPrincipal() {
         //  cy.click(elems_MemberRegistrationPrincipal.BTN_SAVEANDNEXT)
         cy.xpath(elems_MemberRegistrationPrincipal.BTN_SAVEANDNEXT).first().click()
-        cy.wait(5000)
+        cy.wait(3000)
         //cy.visit('https://qa-smcms-fe.azurewebsites.net/membershipregistrationprincipal') // Not actual URL
         //  cy.ValidateElementText(elems_PageHeader.LBL_PAGETITLE, 'Membership Tenure Selection')
     }

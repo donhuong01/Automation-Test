@@ -105,7 +105,7 @@ describe('[TS02] FS-016 Interest Group Main Management', function () {
         // InterestGroupDetail.VarifyTableItemStatus(IGName, 'Pending Approval')
 
         //Wait for Approval Email
-        cy.wait(250000) 
+        cy.wait(5000) 
         
         cy.wait('@ID')
         cy.get('@ID').then(xhr => {

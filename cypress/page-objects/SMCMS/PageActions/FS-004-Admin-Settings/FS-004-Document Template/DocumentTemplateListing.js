@@ -92,6 +92,9 @@ class DocumentTemplateListing {
      selectTemplate(templateItem){
 
         // Ticks Checkbox beside item
+        
+
+
         cy.SelectTableItem(
             elems_DocumentTemplateListing.TBL_DOCTEMPLATELISTING, 
             'Template Name', templateItem
