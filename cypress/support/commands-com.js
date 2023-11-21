@@ -52,7 +52,7 @@ Cypress.Commands.add('EnterText', (locator, text) => {
  *****************************************************/
 Cypress.Commands.add('SelectDropDownItem', (locator, item) => {
     cy.log('------ Select Drop Down Item : ' + locator + ' ------')
-    cy.xpath(locator, {timeout: 30000}).scrollIntoView()
+    cy.xpath(locator, { timeout: 30000 }).scrollIntoView()
     cy.xpath(locator + '//span[@class="k-icon k-i-arrow-s"]').click()
     cy.wait(1000)
     // cy.xpath(locator).invoke('attr', 'aria-owns').then(value => {
@@ -328,7 +328,7 @@ Cypress.Commands.add("VerifyElementText", (locator, expectedValue) => {
     cy.log('------ VerifyElementText : ' + locator + ' ------');
 
     // Verify Element from <div> <span> <button> <label> <p> <a>
-    cy.xpath(locator).invoke('text').then((elementValue) => {
+    cy.xpath(locator, { timeout: 30000 }).invoke('text').then((elementValue) => {
         if (elementValue.length <= 0) {
             //Element value is not found.
             verifyInputFieldText();
@@ -907,9 +907,10 @@ Cypress.Commands.add('EnterTextInTable', (locator, rowRef, colRef, Text) => {
  *****************************************************/
 Cypress.Commands.add('SelectFirstDropdownInPopupTable', (locator, colref, Value) => {
 
-    cy.xpath(locator + `//tr//td[${colref}]` + '//span[@class="k-icon k-i-arrow-s"]').click()
-    cy.wait(3000)
-    cy.xpath(`//li[text()="${Value}"]`).click()
+    cy.xpath(locator + `//tr//td[${colref}]` + '//span[@class="k-icon k-i-arrow-s"]', { timeout: 30000 }).click()
+    cy.log(`Selecting ${Value}`)
+    cy.xpath(`//li[text()="${Value}"]`, { timeout: 4000 }).click()
+    cy.wait(2000);
 
 })
 

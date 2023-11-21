@@ -35,7 +35,6 @@ describe('E2E Auto Testing:FS-004 Admin Setting', () => {
     ApprovalWorkflowList();
     PendingTaskList();
     LoginHistoryList();
-    PendingTaskList();
     UserActionsList();
     AnnouncementPortalNotificationList();
     DocumentTemplateList();
