@@ -1,5 +1,5 @@
 const data = {
-    Name: 'E1-Test-Auto-2',
+    Name: 'E1-Test-Auto-3',
     Code: 'ETA',
     IGMain: 'MOVIEMAX',
     SubcategoryType: 'E1 Silver',
