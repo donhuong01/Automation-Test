@@ -18,6 +18,8 @@ describe('CustomerCheckin', function () {
             cy.wait(5000) // Wait 5 secs
 
         })
+
+            
    
         it('Checkin with Member ID', function() {   
         
@@ -33,6 +35,7 @@ describe('CustomerCheckin', function () {
             cy.wait(5000)    
             //Click cancel
             memberinfo.cancel(checkin_expectedPg)
+            
         })
 
         it('Checkin with NRIC', function() { 

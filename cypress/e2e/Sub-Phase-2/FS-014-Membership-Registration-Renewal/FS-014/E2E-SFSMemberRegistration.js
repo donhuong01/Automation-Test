@@ -13,7 +13,7 @@ import MemberListingPage from '../../../../page-objects/SMCMS/PageActions/FS-028
 import MemberRegistrationDependent from '../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Member Registration/MembershipRegistrationDependent'
 import CustomerCreationPage from '../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-CustomerCreation/CustomerCreation'
 import MembershipModuleSetting from '../../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-14-Membership Module Setting/MembershipModuleSetting'
-
+import Customerdata from '../../../../fixtures/Data_Module/CustomerCreationData'
 import data from '../../../../fixtures/Data_Module/FS-014-Membership-Registration-Renewal/014-data'
 import elems_Landing from '../../../../page-objects/SMCMS/Elements/Common/Customer_LandingPage'
 import elems_PageHeader from '../../../../page-objects/SMCMS/Elements/Common/PageHeader'
@@ -40,30 +40,34 @@ describe('[TS07] SFS Member Registration]', function (){
     
    
     //Random IDs generation for Principal and Dependents
-    const UserID = Math.floor(Math.random() * 10000 * 2 )
-    
+    const UserID = Math.floor(Math.random()*100000)
+   
+    const PrincipalName =  Customerdata.CustomerCreationPrincipal.RegistrationInformation.name + UserID // "TestReceipt49"//
+    const PrincipalEmail = PrincipalName+"@test.com" //Customerdata.CustomerCreationPrincipal.ContactInformation.emailAddress //"safraonlineuser009@gmail.com"//
+
+
     //For Principal Creation
-    // const PrincipalName = data.CustomerCreationPrincipal.RegistrationInformation.name + UserID
-    const PrincipalName = 'Etest2'+UserID//'SFS User ' + UserID //
-    const PrincipalEmail = PrincipalName+"@test.com"//data.CustomerCreationPrincipal.ContactInformation.emailAddress + UserID + "@test.com" //'safraonlineuser014@gmail.com'//
+    // const PrincipalName = data.CustomerCreationPrincipal.RegistrationInformation.name+UserID
+    // //const PrincipalName = 'Etest2'+UserID//'SFS User ' + UserID //
+    // const PrincipalEmail = PrincipalName.replace(/^\s+|\s+$/gm)+"@test.com"//data.CustomerCreationPrincipal.ContactInformation.emailAddress + UserID + "@test.com" //'safraonlineuser014@gmail.com'//
     // const CustomerNRIC = '691J'           //To be changed Each time 
 
     // const CustomerNRICFull = 'S0419691J'  //To be changed Each time 
     const CustomerNRIC = CustomerNRICFull.substr(CustomerNRICFull.length - 4);
 
     //For Dependent Child 
-    const UserIDDep = Math.floor(Math.random() * 10000 )
-    // const DepChildName = data.CustomerCreationDependentChild.RegistrationInformation.name + UserIDDep
-    const DepChildName = 'EtestC2'+UserID//'SFS User - C' + UserIDDep //
-    const DepChildEmail = DepChildName+"@test.com"//data.CustomerCreationDependentChild.ContactInformation.emailAddress + UserIDDep + "@test.com" //'safraonlineuser014-C@gmail.com'//
+    const UserIDDep = Math.floor(Math.random() * 10000)
+    const DepChildName = Customerdata.CustomerCreationPrincipal.RegistrationInformation.name + UserIDDep
+    // const DepChildName = 'EtestC2'+UserID//'SFS User - C' + UserIDDep //
+    const DepChildEmail = DepChildName.replace(/^\s+|\s+$/gm)+"@test.com"//data.CustomerCreationDependentChild.ContactInformation.emailAddress + UserIDDep + "@test.com" //'safraonlineuser014-C@gmail.com'//
     // const DepChildNRIC = '167D'            //To be changed Each time 
     // const DepChildNRICFull = 'S7296807G'   //To be changed Each time 
     
     //For Dependent Spouse
-    const UserIDSpouse = Math.floor(Math.random() * 10000 )
-    // const DepSouseName = data.CustomerCreationDependentSpouse.RegistrationInformation.name + UserIDSpouse
-    const DepSouseName = 'EtestS2' + UserIDSpouse+UserID //'TestuserQA98 - S'//
-    const DepSouseEmail = data.CustomerCreationDependentSpouse.ContactInformation.emailAddress + UserIDSpouse + "@synergyonline.com" //'safraonlineuser014-S@gmail.com'//
+    const UserIDSpouse = Math.floor(Math.random() * 10000)
+    const DepSouseName = Customerdata.CustomerCreationPrincipal.RegistrationInformation.name + UserIDSpouse
+    // const DepSouseName = 'EtestS2' + UserIDSpouse+UserID //'TestuserQA98 - S'//
+    const DepSouseEmail = DepSouseName.replace(/^\s+|\s+$/gm)+"@test.com" //'safraonlineuser014-S@gmail.com'//
     // const DepSouseNRIC = '319Z'             //To be changed Each time 
     // const DepSouseNRICFull = 'S3170144I'    //To be changed Each time 
 
@@ -71,13 +75,13 @@ describe('[TS07] SFS Member Registration]', function (){
     it('[TC01] Customer Creation and SFS Principal Registration with Child and Spouse', function () {
     
         //Enable SFS
-        cy.visit('/membership/moduleSettings')
-        cy.wait(5000)
+        // cy.visit('/membership/moduleSettings')
+        // cy.wait(5000)
         
-        cy.SelectPickerItem('//a[text()="Change"]', 'SAFRA HQ')
+        // cy.SelectPickerItem('//a[text()="Change"]', 'SAFRA HQ')
 
-        MemModuleSettings.SFSActivate('CHECK')
-        cy.wait(5000)
+        // MemModuleSettings.SFSActivate('CHECK')
+        // cy.wait(5000)
         
         cy.visit('/membership/customerCheckin')
         cy.wait(5000)
@@ -277,11 +281,11 @@ describe('[TS07] SFS Member Registration]', function (){
         // })
 
         MemRegPrincipal.SaveAndNext()
-        cy.wait(10000)
+        cy.wait(7000)
 
         //Adding Dependent spouse 
         MemRegPrincipal.AddDependent()
-        cy.wait(10000)
+        cy.wait(3000)
         
         //Adding Spouse
         MemberRegDependent.fillsoutPersonalInformationDep(
@@ -360,9 +364,9 @@ describe('[TS07] SFS Member Registration]', function (){
     
 
         MemRegPrincipal.SaveAndNext()
-        cy.wait(15000)
+        cy.wait(7000)
         MemRegPrincipal.SaveAndNext()
-        cy.wait(6000)
+        cy.wait(3000)
         MemTenureSelect.principalTenureSelection(PrincipalName, '5 Years')
         MemTenureSelect.dependentTenureSelection(DepChildName, '5 Years')
         MemTenureSelect.dependentTenureSelection(DepSouseName, '5 Years')

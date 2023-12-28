@@ -195,6 +195,10 @@ import FacilityGroupBookingBallot from '../Sub-Phase-2/FS-010-Clubs(Facilites)/E
 import { nricGenerator } from '../../support/nricGenerator'
 
 const CustomerNRICFull = nricGenerator('S', 43)
+const DepCustomerNRICFull = nricGenerator('S', 43)
+const Dep2CustomerNRICFull = nricGenerator('S', 43)
+const Dep3CustomerNRICFull = nricGenerator('S', 43)
+
 
 beforeEach(() => {
 
@@ -289,9 +293,9 @@ beforeEach(() => {
 // })
 
 
-// describe('E2E Auto Testing:FS-014 Membership: Master Registration and Renewal', () => {
+describe('E2E Auto Testing:FS-014 Membership: Master Registration and Renewal', () => {
 
- MembershipRegistration(CustomerNRICFull) // Enter Full NRIC
+//  MembershipRegistration(CustomerNRICFull) // Enter Full NRIC
 // CustomerCheckIn()
 // MemberType()
 // BadAddressUpdate()// Fail Need code updates
@@ -301,12 +305,11 @@ beforeEach(() => {
 // MemberStatusReasonCode() // Not Required
 // MassUpdateForMemberData() // Needs to update code for Approval
 // MembershipModuleSettings()
-//  SFSMemberRegistion(E2EData.MEMBER_REGISTRATION_WITH_SPOUSE_AND_CHILD.PRINCIPAL_NRIC,
-//      E2EData.MEMBER_REGISTRATION_WITH_SPOUSE_AND_CHILD.CHILD_NRIC/*, E2EData.MEMBER_REGISTRATION_WITH_SPOUSE_AND_CHILD.SPOUSE_NRIC*/) //Add three NRIC's for Principal, Dependent Child, Dependent Spouse
-// E2EMemberShipRenewal(E2EData.NRIC_FOR_MEMBERSHIP_REGISTRATION_AND_RENEWAL) //Add NRIC For Principal Registration
+//  SFSMemberRegistion(CustomerNRICFull,DepCustomerNRICFull, Dep2CustomerNRICFull) //Add three NRIC's for Principal, Dependent Child, Dependent Spouse
+// E2EMemberShipRenewal(CustomerNRICFull) //Add NRIC For Principal Registration
 
 
-// LifeMembershipManagment(E2EData.NRIC_FOR_LIFE_MEMBERSHIP_REGISTRATION) //Add NRIC For Principal Registration
+// LifeMembershipManagment(CustomerNRICFull) //Add NRIC For Principal Registration
 //   BatchMembershipRegistration(
 
 //     //Pass Info for Existing Member MemberID and LAST4DigitsNRIC
@@ -326,7 +329,7 @@ beforeEach(() => {
 //     E2EData.BATCH_REGISTRATION.NRIC_FOR_ADDING_NEW_DEPENDENT,
 //     E2EData.BATCH_REGISTRATION.PRINCIPALID_FOR_NEW_DEPENDENT)
 
-// })
+})
 
 
 
@@ -362,7 +365,7 @@ beforeEach(() => {
 
 // describe('E2E Auto Testing:FS-016 Interest Group: Registration and Maintenance Activities', ()=> {
 
-InterestGroupMembershipRegistration()
+// InterestGroupMembershipRegistration()
 // InterestGMembershipRenewal(CustomerNRICFull) //Change NRIC each time after runing this code
 // BatchMemRegWithExistingMemUsingDefaultIG(E2EData.BATCH_MEMBER_REGISTRATION_WITH_EXISTING_MEMBER_USING_DEFUALT_IG) //Provide Active member ID //1
 // BatchMemRegWithExistingMemUsingNonDefaultIG(E2EData.BATCH_MEMBER_REGISTRATION_WITH_EXISTING_MEMBER_USING_NON_DEFUALT_IG) //Provide Active member ID //2

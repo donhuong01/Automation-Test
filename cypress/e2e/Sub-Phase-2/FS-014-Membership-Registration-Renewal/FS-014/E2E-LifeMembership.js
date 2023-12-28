@@ -37,11 +37,11 @@ describe('[TS06] Life Membership Management',function(){
         const CustomerNRIC = CustomerNRICFull.substr(CustomerNRICFull.length - 4);
 
         //Enable SFS
-        cy.visit('/membership/moduleSettings')
-        cy.wait(8000)
+        // cy.visit('/membership/moduleSettings')
+        // cy.wait(8000)
         
-        MemModuleSettings.SFSActivate('CHECK')
-        cy.wait(5000)
+        // MemModuleSettings.SFSActivate('CHECK')
+        // cy.wait(5000)
         
                 
         /////////////////////////////CUSTOMER CREATION////////////////////////////////////////
@@ -57,7 +57,7 @@ describe('[TS06] Life Membership Management',function(){
         
             CustomerCreation.fillOutRegistrationInfo({
                 name: PrincipalName,
-                DOB: Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB,
+                // DOB: Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB,
                 gender:Customerdata.CustomerCreationPrincipal.RegistrationInformation.gender,
                 /* profilePicture: "DP.png" */
             });
@@ -71,7 +71,7 @@ describe('[TS06] Life Membership Management',function(){
             });
         
             CustomerCreation.fillOutContactInformation({
-                handPhone: '63230126',
+                handPhone: '83230126',
                 emailAddress: PrincipalEmail,
                 emergencyContact: Customerdata.CustomerCreationPrincipal.ContactInformation.emergencyContact,
                 homeNumber: Customerdata.CustomerCreationPrincipal.ContactInformation.homeNumber,
@@ -136,7 +136,9 @@ describe('[TS06] Life Membership Management',function(){
 
             // Approval workflow
             LifeMembership.ApprovalWorkFlow('M-MER', 'Membership Exception Approval Workflow', 'Approve', 'Testing Remark')
-
+            
+            //Wait and click Shopping Cart button
+            cy.wait(8000)
             LifeMembership.ShoppinCart()
 
             // Shopping cart and Payments

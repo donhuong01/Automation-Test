@@ -51,6 +51,26 @@ class MembershipTenureSelection{
     }
 
     /*****************************************************
+     * Method: TenureSelectionRenewal   
+     * Description: Add Tenure Selection to Principal Member
+     *
+     * @param {string} tenureSelection Tenure Selection
+     * @param {string} ColumnValue Column value
+     *****************************************************/
+    TenureSelectionRenewal(ColumnValue, tenureSelection){
+
+        // Set Tenure Selection
+        if(tenureSelection !== undefined && ColumnValue !== undefined){
+
+            cy.TenureSelectionBatch(elems_MembershipTenureSelection.Principal.TBL_PRINCIPAL,
+                ColumnValue,  tenureSelection)
+        }
+
+
+    }
+
+
+    /*****************************************************
      * Method: verifyDependentList
      * Description: Verify Dependent List Item
      *

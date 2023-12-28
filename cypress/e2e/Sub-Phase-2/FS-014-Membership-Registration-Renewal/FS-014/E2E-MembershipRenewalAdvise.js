@@ -102,6 +102,9 @@ const MembershipRenewalAdvise = ()=> {
     
             // Verify Page Title
             memRenewSetDetail.verifyPageTitle('Membership Renewal Advice Setting Listing')
+
+            // Click last page
+            cy.Click('//span[@class="k-icon k-i-arrow-end-right"]')
            
             // Click on table item
             memRenewSetDetail.ClickonItem(Name)
@@ -129,6 +132,9 @@ const MembershipRenewalAdvise = ()=> {
     
             // Verify Page Title
             memRenewSetDetail.verifyPageTitle('Membership Renewal Advice Setting Listing')
+
+            // Click last page
+            cy.Click('//span[@class="k-icon k-i-arrow-end-right"]')
            
             // Click on table item
             memRenewSetDetail.ClickonItem(Name)

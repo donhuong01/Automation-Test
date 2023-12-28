@@ -7,29 +7,29 @@ const data = {
 
     checkin_memberID: {
         type: 'MEMBERID',
-        value1: 'A300002700'
+        value1: 'A300001493'
     },
     checkin_NRIC: {
         type: 'NRIC',
-        value1: '912B',
-        value2: '06-Jul-1980',
+        value1: '838C',
+        value2: '01-Jan-1983',
     },
     checkin_email: {
         type: 'EMAIL',
-        value1: 'TestuserQA83@test.com', //A300002657
+        value1: 'test@test.com', //A300002657
     },
     checkin_mobile: {
         type: 'MOBILENUMBER',
-        value1: '1122-3344',
-        value2: 'A300002700'
+        value1: '82345644',
+        value2: 'A300001493'
     },
     checkin_scancard: {
         type: 'SCANECARD',
-        value1: 'A300002700_3DA4F788839DE16D26F7865886038183AECEF073A605371439FCA067A95E8F15',
+        value1: 'A300001493_3DA4F788839DE16D26F7865886038183AECEF073A605371439FCA067A95E8F15',
     },
     checkin_swipecard: {
         type: 'SWIPECARD',
-        value1: '%A8008980001869402^LEE CHOON CHIEH ^2508^A300002700^019801221000000?;8008980001869402=2508201000005500011?',
+        value1: '%A8008980001869402^LEE CHOON CHIEH ^2508^A300001493^019801221000000?;8008980001869402=2508201000005500011?',
     },
 
     //Membership Tenure Selection
@@ -870,7 +870,7 @@ const data = {
 
     CustomerCreationPrincipal: {
         RegistrationInformation: {
-            name: 'Test User ',
+            name: 'TestUser ',
             DOB: '18-Aug-1980',
             gender: 'Male'
         },

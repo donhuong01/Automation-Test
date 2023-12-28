@@ -44,11 +44,11 @@ describe('[TS01] Membership Renewal Management',function(){
         ///////////////////////////////CUSTOMER CREATION////////////////////////////////////////
         
             //Enable SFS
-            cy.visit('/membership/moduleSettings')
-            cy.wait(5000)
+            // cy.visit('/membership/moduleSettings')
+            // cy.wait(5000)
             
-            MemModuleSettings.SFSActivate('CHECK')
-            cy.wait(5000)
+            // MemModuleSettings.SFSActivate('CHECK')
+            // cy.wait(5000)
             
             cy.visit('/membership/customerCheckin')
             cy.wait(5000)
@@ -61,7 +61,7 @@ describe('[TS01] Membership Renewal Management',function(){
         
             CustomerCreation.fillOutRegistrationInfo({
                 name: PrincipalName,
-                DOB: Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB,
+                // DOB: Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB,
                 gender:Customerdata.CustomerCreationPrincipal.RegistrationInformation.gender,
                 /* profilePicture: "DP.png" */
             });
@@ -75,10 +75,10 @@ describe('[TS01] Membership Renewal Management',function(){
             });
         
             CustomerCreation.fillOutContactInformation({
-                handPhone: '56585896',
+                handPhone: '86585896',
                 emailAddress: PrincipalEmail,
                 emergencyContact: Customerdata.CustomerCreationPrincipal.ContactInformation.emergencyContact,
-                homeNumber: '56585896',
+                homeNumber: '66585896',
         
                 // Preferred Contact Mode
                 // preferredContactModeSelectAll: Customerdata.CustomerCreationPrincipal.ContactInformation.preferredContactModeSelectAll,
@@ -143,7 +143,7 @@ describe('[TS01] Membership Renewal Management',function(){
             ShoppingCart.fillOutandApplyPayment('CASH')
             
             // Wait for 3 minites
-            cy.wait(20000)
+            cy.wait(5000)
             
             //Verify New Created Member Reason Code
             MembershipRenewal.VerifyMemberStatus(PrincipalName, CustomerNRIC, 'New')
@@ -158,10 +158,10 @@ describe('[TS01] Membership Renewal Management',function(){
             MembershipRenewal.ClickMemberShipRenewal()
 
             // Membership Tenure Selection
-            MemTenureSelect.principalTenureSelection(PrincipalName,'1 Year')
+            MemTenureSelect.TenureSelectionRenewal(PrincipalName,'1 Year')
 
             // Select Principal
-            MemTenureSelect.SelectPrincipal(PrincipalName)
+            //MemTenureSelect.SelectPrincipal(PrincipalName)
 
             // Click on add to cart
             MemTenureSelect.addToCart()
