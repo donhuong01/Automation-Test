@@ -149,6 +149,17 @@ class Commons {
         cy.wait(wait)
     }
 
+     /*****************************************************
+     * Method: ClickLastPage
+     * Description: This function Click on Add To Cart button
+    *****************************************************/
+     ClickLastPage() {
+
+        cy.Click('//span[@class="k-icon k-i-arrow-end-right"]')
+        cy.wait(2000)
+    }
+
+    
 }
 
 export default Commons

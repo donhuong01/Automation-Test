@@ -105,6 +105,8 @@ describe('[TS02] FS-016 Interest Group Management', function () {
 
         InterestGroupDetail.SaveAsDraft()
 
+        InterestGroupDetail.Cancel()
+
         InterestGroupDetail.VarifyTableItemStatus(IGName, 'Draft')
 
         //Click the Interest Group Name Link of the newly created item

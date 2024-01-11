@@ -35,9 +35,9 @@ describe('[TS01] FS-015 E1 Gym Setup Management ', function () {
 
         InterestGroupDetail.SaveAsDraft()
 
-        InterestGroupListing.FilterWithName(Name)
+        // InterestGroupListing.FilterWithName(Name)
 
-        InterestGroupListing.ClickTableLink(Name)
+        // InterestGroupListing.ClickTableLink(Name)
 
         InterestGroupDetail.ClickChargeRateTab()
 
@@ -48,6 +48,8 @@ describe('[TS01] FS-015 E1 Gym Setup Management ', function () {
         InterestGroupDetail.ProductMasterInformation(ProductName)
 
         InterestGroupDetail.SaveAsDraft()
+
+        InterestGroupDetail.Cancel()
 
         InterestGroupListing.FilterWithName(Name)
 
