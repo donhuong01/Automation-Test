@@ -6,7 +6,7 @@ class MembershipRenewal {
   /*****************************************************
   * Method: verify PageTitle
   * Description: Verify Membership Renewal Advise Setting Detail Form
-  * @param {string} ExpectedPg 
+  * @param {string} ExpectedPg
    *****************************************************/
   verifyPageTitle(ExpectedPg) {
     cy.ValidateElementText(elems_PageHeader.LBL_PAGETITLE, ExpectedPg)
@@ -25,7 +25,7 @@ class MembershipRenewal {
     cy.EnterText(elems_MemberListing.TXT_NAME, Name)
     cy.EnterText(elems_MemberListing.TXT_NRIC, NRIC)
     cy.Click(elems_MemberListing.BTN_SEARCHFILTER)
-    cy.wait(10000)
+    cy.get('.k-loading-image', { timeout: 30000 }).should('not.exist');
 
     cy.VerifyTableEntry(elems_MemberListing.TBL_MEMBERLISTING,
       'Reason Code', ReasonCode)
@@ -35,7 +35,7 @@ class MembershipRenewal {
 
   /*****************************************************
   * Method: GoHome
-  * Description: Click SAFRA Logo 
+  * Description: Click SAFRA Logo
    *****************************************************/
   GoHome() {
 
@@ -58,7 +58,7 @@ class MembershipRenewal {
   /*****************************************************
  * Method: MemberShipRenewal
  * Description: Click ClickMemberShipRenewal
- * @param {string}  
+ * @param {string}
   *****************************************************/
   ClickMemberShipRenewal() {
 
