@@ -965,6 +965,34 @@ Cypress.Commands.add("EnterDate", (locator, Date) => {
 })
 
 /*****************************************************
+* Command: EnterDate
+* Description: Type Date in the Date Picker
+*
+* @author: mfaisal
+* @param {string} locator Element locator (xpath)
+* @param {string} Date example date "10-Mar-2019"
+*****************************************************/
+Cypress.Commands.add("EnterDateCheckin", (locator, Date) => {
+    var datearr = Date.split('-')
+    var DD = datearr[0]
+    var MMM = datearr[1]
+    var YYYY = datearr[2]
+
+    // cy.log(DD)
+    // cy.log(Month)
+    // cy.log(Year)
+
+    cy.xpath(locator, { timeout: 10000 }).eq(0).click().clear({ force: true })
+        .type('{leftArrow}').wait(2000)
+        .type('{leftArrow}').wait(2000)
+        .type(DD).wait(2000)
+        .type('{rightArrow}').wait(2000)
+        .type(MMM).wait(2000)
+        .type('{rightArrow}').wait(2000)
+        .type(YYYY).wait(2000)
+})
+
+/*****************************************************
 * Command: EnterDateSuspension
 * Description: Type Date in the Date Picker
 *
