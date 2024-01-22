@@ -25,7 +25,7 @@ const MemModuleSettings = new MembershipModuleSetting()
 
 
 
-const UserID = Math.floor(Math.random() * 100000 )
+const UserID = Math.floor(Math.random() * 100000)
 
 const PrincipalName = Customerdata.CustomerCreationPrincipal.RegistrationInformation.name + UserID
 const PrincipalEmail = Customerdata.CustomerCreationPrincipal.ContactInformation.emailAddress
@@ -34,38 +34,38 @@ const PrincipalEmail = Customerdata.CustomerCreationPrincipal.ContactInformation
 const E2EMemberShipRenewal = (CustomerNRICFull) => {
 
 
-describe('[TS01] Membership Renewal Management',function(){
+    describe('[TS01] Membership Renewal Management', function () {
 
 
-    it('[TC01] Membership Creation and Principal Registration', function () {
+        it('[TC01] Membership Creation and Principal Registration', function () {
 
-       const CustomerNRIC = CustomerNRICFull.substr(CustomerNRICFull.length - 4);
+            const CustomerNRIC = CustomerNRICFull.substr(CustomerNRICFull.length - 4);
 
-        ///////////////////////////////CUSTOMER CREATION////////////////////////////////////////
-        
+            ///////////////////////////////CUSTOMER CREATION////////////////////////////////////////
+
             //Enable SFS
             // cy.visit('/membership/moduleSettings')
             // cy.wait(5000)
-            
+
             // MemModuleSettings.SFSActivate('CHECK')
             // cy.wait(5000)
-            
+
             cy.visit('/membership/customerCheckin')
             cy.wait(5000)
             cy.Click(elems_CustomerCheckInPage.RBTN_NRIC)
-            cy.EnterDate(elems_CustomerCheckInPage.DATE_DATEOFBIRTH, Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB)
+            cy.EnterDateCheckin(elems_CustomerCheckInPage.DATE_DATEOFBIRTH, Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB)
             cy.EnterText(elems_CustomerCheckInPage.TXT_LAST4DIGITSNRIC, CustomerNRIC)
             cy.Click(elems_CustomerCheckInPage.BTN_CHECKIN)
             cy.wait(2000)
             cy.Click(elems_CustomerCheckInPage.BTN_CREATNEW)
-        
+
             CustomerCreation.fillOutRegistrationInfo({
                 name: PrincipalName,
                 // DOB: Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB,
-                gender:Customerdata.CustomerCreationPrincipal.RegistrationInformation.gender,
+                gender: Customerdata.CustomerCreationPrincipal.RegistrationInformation.gender,
                 /* profilePicture: "DP.png" */
             });
-        
+
             CustomerCreation.fillOutAddressInformation({
                 postalCode: Customerdata.CustomerCreationPrincipal.AddressInformation.postalCode,
                 address: Customerdata.CustomerCreationPrincipal.AddressInformation.address,
@@ -73,13 +73,13 @@ describe('[TS01] Membership Renewal Management',function(){
                 POBOx: Customerdata.CustomerCreationPrincipal.AddressInformation.POBOx,
                 myMailbox: Customerdata.CustomerCreationPrincipal.AddressInformation.myMailbox
             });
-        
+
             CustomerCreation.fillOutContactInformation({
                 handPhone: '86585896',
                 emailAddress: PrincipalEmail,
                 emergencyContact: Customerdata.CustomerCreationPrincipal.ContactInformation.emergencyContact,
                 homeNumber: '66585896',
-        
+
                 // Preferred Contact Mode
                 // preferredContactModeSelectAll: Customerdata.CustomerCreationPrincipal.ContactInformation.preferredContactModeSelectAll,
                 // preferredContactModeEmail: Customerdata.CustomerCreationPrincipal.ContactInformation.preferredContactModeEmail,
@@ -87,22 +87,22 @@ describe('[TS01] Membership Renewal Management',function(){
                 // preferredContactModeSMS: Customerdata.CustomerCreationPrincipal.ContactInformation.preferredContactModeSMS,
                 // preferredContactModeVoiceCall: Customerdata.CustomerCreationPrincipal.ContactInformation.preferredContactModeVoiceCall,
                 // preferredContactModePushNotification: Customerdata.CustomerCreationPrincipal.ContactInformation.preferredContactModePushNotification,
-        
+
                 // //Consent Information
                 // consentInformationMarketing: Customerdata.CustomerCreationPrincipal.ContactInformation.consentInformationMarketing,
                 // consentInformationServiceNotification: Customerdata.CustomerCreationPrincipal.ContactInformation.consentInformationServiceNotification,
                 // consentInformationTransactional: Customerdata.CustomerCreationPrincipal.ContactInformation.consentInformationTransactional,
             });
-        
-        
+
+
             CustomerCreation.save();
-        
-        ///////////////////////////////PRINCIPAL REGISTRATION////////////////////////////////////////
-            
+
+            ///////////////////////////////PRINCIPAL REGISTRATION////////////////////////////////////////
+
             cy.Click(elems_Landing.SAFRA_Member)
             cy.Click(elems_Landing.Membership_Registration)
             cy.wait(15000)
-        
+
             MemRegPrincipal.verifyPersonalInformation({
                 MemberCategory: data.memberregistrationprincipal.Personal_Info.MemberCategory,
                 NameOnNRIC: PrincipalName,
@@ -119,38 +119,38 @@ describe('[TS01] Membership Renewal Management',function(){
                 CardType: data.memberregistrationprincipal.Personal_Info.CardType,
                 InterestinDBSCard: data.memberregistrationprincipal.Personal_Info.InterestinDBSCard,
                 // ProfilePicture: data.memberregistrationprincipal.Personal_Info.ProfilePicture
-                })
-            
+            })
 
-            
+
+
             // MemRegPrincipal.SaveAndNext()
             // cy.wait(10000)
             // MemRegPrincipal.VerifyPageTitle('Membership Registration - Principal')
-            
+
             MemRegPrincipal.SaveAndNextPrincipal()
             cy.wait(5000)
-        
+
             ///////////////////////////////////TENURE SELECTION////////////////////////////////////////////////////////////
-        
-        
+
+
             // Membership Tenure Selection
-            MemTenureSelect.principalTenureSelection(PrincipalName,'10 Years')
-            
+            MemTenureSelect.principalTenureSelection(PrincipalName, '10 Years')
+
             // Click on add to cart
             MemTenureSelect.addToCart()
-        
+
             // Shopping cart and Payments
             ShoppingCart.fillOutandApplyPayment('CASH')
-            
+
             // Wait for 3 minites
             cy.wait(5000)
-            
+
             //Verify New Created Member Reason Code
             MembershipRenewal.VerifyMemberStatus(PrincipalName, CustomerNRIC, 'New')
 
             //Click on SAFRA Logo
             MembershipRenewal.GoHome()
-            
+
             //Click on SAFRA Member
             MembershipRenewal.ClickSAFRAMember()
 
@@ -158,14 +158,14 @@ describe('[TS01] Membership Renewal Management',function(){
             MembershipRenewal.ClickMemberShipRenewal()
 
             // Membership Tenure Selection
-            MemTenureSelect.TenureSelectionRenewal(PrincipalName,'1 Year')
+            MemTenureSelect.TenureSelectionRenewal(PrincipalName, '1 Year')
 
             // Select Principal
             //MemTenureSelect.SelectPrincipal(PrincipalName)
 
             // Click on add to cart
             MemTenureSelect.addToCart()
-        
+
             // Shopping cart and Payments
             ShoppingCart.fillOutandApplyPayment('CASH')
 
@@ -176,14 +176,14 @@ describe('[TS01] Membership Renewal Management',function(){
 
             //Verify New Created Member Reason Code
             MembershipRenewal.VerifyMemberStatus(PrincipalName, CustomerNRIC, 'Renewal')
-        
+
             //Logout
             // cy.LogoutOfSmcms()
-   
+
         })
 
-    
 
-})
+
+    })
 }
-export default E2EMemberShipRenewal ;
+export default E2EMemberShipRenewal;
