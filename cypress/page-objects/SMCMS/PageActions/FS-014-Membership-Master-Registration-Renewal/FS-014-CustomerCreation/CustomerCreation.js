@@ -10,7 +10,7 @@ class CustomerCreation {
         }
 
         if (DOB !== undefined) {
-            cy.SelectDate(elems_CustomerCreation.RegistrantInformation.DATE_DATEOFBIRTH, DOB)
+            cy.SelectDateIg(elems_CustomerCreation.RegistrantInformation.DATE_DATEOFBIRTH, DOB)
         }
 
         if (gender !== undefined) {
