@@ -983,13 +983,13 @@ Cypress.Commands.add("EnterDateCheckin", (locator, Date) => {
     // cy.log(Year)
 
     cy.xpath(locator, { timeout: 10000 }).eq(0).click().clear({ force: true })
-        .type('{leftArrow}').wait(2000)
-        .type('{leftArrow}').wait(2000)
-        .type(DD).wait(2000)
-        .type('{rightArrow}').wait(2000)
-        .type(MMM).wait(2000)
-        .type('{rightArrow}').wait(2000)
-        .type(YYYY).wait(2000)
+        .type('{leftArrow}').wait(500)
+        .type('{leftArrow}').wait(500)
+        .type(DD).wait(500)
+        .type('{rightArrow}').wait(500)
+        .type(MMM).wait(500)
+        .type('{rightArrow}').wait(500)
+        .type(YYYY).wait(500)
 })
 
 /*****************************************************
@@ -1416,4 +1416,56 @@ Cypress.Commands.add('VerifyTableEntryWaiver', (locator, targetColumn, expectedV
     cy.log('------ Verify Table Entry : ' + locator + ' ------')
     //cy.xpath(locator).scrollIntoView()
     new Table().verifyTableEntry(locator, targetColumn, expectedValue, columnReference1, rowReference1)
+})
+
+
+/*****************************************************
+ * Command: SelectDate
+ * Description: Select date from date picker
+ *
+ * @author: jricohermoso
+ * @param {string} locator Element locator (xpath)
+ * @param {string} date Date input, values should comply to the form date field's format "20-Jan-2021"
+ *****************************************************/
+Cypress.Commands.add("SelectDateIg", (locator, date) => {
+
+    let monthArray = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+    let day = date.split("-")[0];
+
+    if (day[0] == 0) {
+        let removeZero = day.substring(1);
+        day = removeZero;
+    }
+
+    let month = date.split("-")[1];
+    let monthFull = monthArray.filter((dateList => dateList.startsWith(month)));
+    let year = date.split("-")[2];
+
+    cy.log('------ SelectDate : ' + locator + ' ------');
+    cy.xpath(locator, { timeout: 1000 }).click();
+    cy.xpath(locator).scrollIntoView();
+    cy.get("button.k-calendar-title").click({ force: true });
+    cy.get(".k-calendar-navigation .k-content.k-calendar-content.k-scrollable")//.scrollTo('top');
+    cy.wait(1000);
+    let scrollY = 0;
+    let scroller = 0;
+    let searchYear = () => {
+        cy.get(".k-calendar-navigation .k-content.k-calendar-content.k-scrollable").scrollTo(0, scrollY);
+        cy.wait(1000);
+        cy.xpath("count(//ul/li/span[text()='" + year + "'])").then($count => {
+            scroller = $count;
+            if (scroller > 0) {
+                cy.xpath("//ul/li/span[text()='" + year + "']").click({ force: true });
+
+            } else {
+                scrollY += 300;
+                searchYear();
+            }
+
+        });
+    }
+    searchYear();
+    cy.get("td[title='" + year + " " + month + "'] span.k-link").click({ force: true });
+    cy.get("td[title*='" + monthFull + " " + day + ", " + year + "'] span.k-link").click({ force: true });
 })
