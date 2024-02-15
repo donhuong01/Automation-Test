@@ -52,7 +52,7 @@ const InterestGroupMembershipRegistration = () => {
             cy.visit('/membership/customerCheckin')
             cy.wait(5000)
             cy.Click(elems_CustomerCheckInPage.RBTN_NRIC)
-            cy.EnterDate(elems_CustomerCheckInPage.DATE_DATEOFBIRTH, Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB)
+            cy.EnterDateCheckin(elems_CustomerCheckInPage.DATE_DATEOFBIRTH, Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB)
             cy.log("Generated NRIC:", CustomerNRICFull)
             cy.log("trimmed", CustomerNRIC)
             cy.EnterText(elems_CustomerCheckInPage.TXT_LAST4DIGITSNRIC, CustomerNRIC)
@@ -62,7 +62,7 @@ const InterestGroupMembershipRegistration = () => {
 
             CustomerCreation.fillOutRegistrationInfo({
                 name: PrincipalName,
-                DOB: Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB,
+                // DOB: Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB,
                 gender: Customerdata.CustomerCreationPrincipal.RegistrationInformation.gender,
             });
 
@@ -146,12 +146,15 @@ const InterestGroupMembershipRegistration = () => {
 
             // IGMembershipRegistration.AddWaiver('Registration')
 
-            cy.wait(2000)
+            IGMembershipRegistration.PopulateAdditionalFields("Test");
             MemTenureSelect.addToCart()
 
             ShoppingCart.fillOutandApplyPayment('CASH')
 
-            cy.wait(15000)
+            // Wait for the loading image to disappear
+            cy.get('.k-loading-image', { timeout: 30000 }).should('not.exist')
+            cy.ValidateElementText(elems_Landing.CustomerLanding_Header, "Customer Landing")
+
 
             IGMembershipRegistration.VerifyItemInIGMemListingTBL(PrincipalName)
             //Logout
