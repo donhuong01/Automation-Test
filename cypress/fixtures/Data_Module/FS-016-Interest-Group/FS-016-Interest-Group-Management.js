@@ -17,8 +17,8 @@ const Data = {
     IGMembershipRegistration: {
         CustomerNRICFull: 'S6797328C',
         NRICLast4Digit: '328C',
-        IGMainSelectionBox: "QA Test IG Main 1",
-        IGSelection: "IG Detail Test 1",
+        IGMainSelectionBox: "IG Main QA Testing 1",
+        IGSelection: "Test IG Details",
         IGLocationSelection: "All Locations",
         MembershipTenure: "5",
         EffectiveDate: "26-May-2023",

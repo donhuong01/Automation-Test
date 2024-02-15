@@ -13,13 +13,17 @@ class elems_IGMembershipRegistration {
     static BTN_DOWNLOADTERMCONDITION = '//button[text()="Download Terms and Conditions"]'
     static CHK_AGRETERMCONDITION = '//input[@id="chkAgreeWithTerms"]'
     static BTN_DOWNLOADIDENTITYWIAVER = '//button[text()="Download Indemnity Waiver"]'
-    static CHK_AGREIDENTITYWIAVER = '//input[@id="chkAgreewithIndemnity"]' 
+    static CHK_AGREIDENTITYWIAVER = '//input[@id="chkAgreewithIndemnity"]'
     static TXT_CUSTOMERCATEGNAME = '//input[@id="txtCustomerName"]'
     static BTN_SEARCHFILTER = '//button[@form="formFilter"]'
     static DATE_DEFENDMONTH = '//input[@id="dtpDefermentEndMonth"]'
     static TXT_DEFERMENTREASON = '//textarea[@id="areaDefermentReason"]'
     static LBL_STATUS = '//label[@for="lblStatus"]'
     static CHK_CALCULATDETAIL = '//input[@id="checkCalcualtePayment"]'
+
+    static TXT_ADDITIONALFIELDS = "//h3[text()='Additional Fields']/following-sibling::div//textarea"
+
+
 
 
     static BTN_ADDWIAVER = '//button[text()="Add Waiver Off"]'

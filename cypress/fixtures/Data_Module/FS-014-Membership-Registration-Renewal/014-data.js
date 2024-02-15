@@ -165,7 +165,7 @@ const data = {
             Gender: 'Male',
             DateofBirth: '01-Jan-1982',
             Age: '41',
-            NSStatus: 'SAF Regular DXO',
+            NSStatus: 'SAF Regular/DXO',
             NSRank: 'Officer',
             MemberType: 'AS',
             Nationality: 'Singaporean/PR',
