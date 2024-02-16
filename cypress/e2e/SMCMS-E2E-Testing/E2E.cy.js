@@ -233,17 +233,17 @@ beforeEach(() => {
 
 //  describe('E2E Auto Testing:FS-002 Reports', () => {
 
-// IG_Report()
-// E1_Report()
-// Accommodation_Report()
-// MemberCards_Report()
-// Membership_Report()
+Accommodation_Report()
+AdminSetting_Report()
+E1_Report()
+// Facility_Report()
 // Gifts_Report()
+// IG_Report()
+Membership_Report()
+MemberCards_Report()
+// Reports_Payments()
 // InHouseMerchandise_Report()
 // SRP_Report()
-// Reports_Payments()
-// AdminSetting_Report()
-// Facility_Report()
 
 //  })
 
@@ -254,7 +254,7 @@ beforeEach(() => {
     // CustomerCategory()
     // CodeType()
     // CodeSetMaster()
-    //  DocumentTemplate()
+    //// DocumentTemplate() // Don't run unless important
     // ApplicationSetting() //Not Required //Changed Font Siz to - 4 (14pt)
     // NotificationMessageTemplate() //Not Required
     // AnnouncementPortalNotification() //Not Required
