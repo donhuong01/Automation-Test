@@ -64,7 +64,7 @@ VerifyPageTitle(PageTitle)
         cy.EnterText(elems_SMCMSUserDetail.TXT_POSITION,Name)
         cy.Click(elems_SMCMSUserDetail.BTN_SEARCH)
         cy.wait(2000)
-        cy.SelectTableItem('//table','Name',Name)
+        cy.SelectTableItem('//h3[text()="Positions"]/parent::div//table','Name',Name)
         cy.Click(elems_SMCMSUserDetail.BTN_REMOVEPOSITION)    
     }
 

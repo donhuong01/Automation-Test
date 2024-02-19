@@ -204,7 +204,7 @@ const Dep3CustomerNRICFull = nricGenerator('S', 43)
 beforeEach(() => {
 
   // Set local storage for QA Enviroment
-  // cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
+  cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
 
   /****************************
    * Requestor Testing - Erik *
@@ -216,7 +216,7 @@ beforeEach(() => {
    * Admin Testing - Hung *
    ************************/
   // Set local storage for UAT Enviroment
-  cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
+  // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
 
   //Select Channel
   cy.visit('/membership/customerCheckin')
@@ -226,28 +226,28 @@ beforeEach(() => {
 
 // describe('E2E Auto Testing:FS-001 Admin: System Login', () => {
 
-//     OnlineAccountAccess()
-//     SMCMSPostion()
-//     SMCMSRole()
-//     SMCMSUser()
+    // OnlineAccountAccess()
+    // SMCMSPostion()
+    // SMCMSRole()
+    // SMCMSUser() //Change User Depending on Environment
 // })
 
-//  describe('E2E Auto Testing:FS-002 Reports', () => {
+ describe('E2E Auto Testing:FS-002 Reports', () => {
 
-// Accommodation_Report()
-// AdminSetting_Report()
-// E1_Report()
-// Facility_Report()
-// Gifts_Report()
-// IG_Report()
-// Membership_Report()
-// MemberCards_Report()
-// Reports_Payments()
-// InHouseMerchandise_Report()
-// SRP_Report()
-// Promotion_Report()
+  Accommodation_Report()
+  AdminSetting_Report()
+  E1_Report()
+  Facility_Report()
+  Gifts_Report()
+  // IG_Report()
+  // Membership_Report()
+  // MemberCards_Report()
+  // Reports_Payments()
+  // InHouseMerchandise_Report()
+  // SRP_Report()
+  // Promotion_Report()
 
-//  })
+ })
 
 
 // describe('E2E Auto Testing:FS-004 Admin: Settings', () => {

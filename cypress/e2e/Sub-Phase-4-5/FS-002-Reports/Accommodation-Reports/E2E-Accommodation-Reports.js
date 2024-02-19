@@ -5,7 +5,7 @@ const Accommodation_Reports = new Reports_Accommodation ()
 
 const Accommodation_Report = () => {
 
-describe("E1 Accommodation Verification",function(){
+describe("Accommodation Verification",function(){
 
     it('Checking functionallity and Verification on Accommodation Charge Rate Listing', function(){
         Accommodation_Reports.verifyAccommodationChargeRateListing
