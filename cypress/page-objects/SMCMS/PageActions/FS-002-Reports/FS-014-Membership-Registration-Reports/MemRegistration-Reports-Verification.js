@@ -69,6 +69,54 @@ class Reports_MembershipMasters {
         //cy.Click(elems_MembershipMasters.BTN_EXPORT)
         }
 
+    /*****************************************************
+     * Method: Checking functionallity and Verification on 
+               Membership Transaction
+     * Description: This function verifies the page
+    *****************************************************/
+        verifyMembershipTransaction(expectedPg){
+        cy.visit('/report?reportId=ReportMembership.MembershipTransaction')
+        cy.wait(2000)
+        cy.ValidateElementText(elems_MembershipMasters.LBL_PAGE, expectedPg)
+    
+        // cy.Click(elems_MembershipMasters.BTN_GENERATE)
+        // cy.wait(5000)
+        //cy.ValidateElementText('//div[@data-id="table1_1"]')
+        //cy.Click(elems_MembershipMasters.BTN_EXPORT)
+        }
+
+    /*****************************************************
+     * Method: Checking functionallity and Verification on 
+               Membership Revenue
+     * Description: This function verifies the page
+    *****************************************************/
+        verifyMembershipRevenue(expectedPg){
+        cy.visit('/report?reportId=ReportMembership.MembershipRevenue')
+        cy.wait(2000)
+        cy.ValidateElementText(elems_MembershipMasters.LBL_PAGE, expectedPg)
+    
+        // cy.Click(elems_MembershipMasters.BTN_GENERATE)
+        // cy.wait(5000)
+        //cy.ValidateElementText('//div[@data-id="table1_1"]')
+        //cy.Click(elems_MembershipMasters.BTN_EXPORT)
+        }
+
+    /*****************************************************
+     * Method: Checking functionallity and Verification on 
+               Membership Renewal
+     * Description: This function verifies the page
+    *****************************************************/
+        verifyMembershipRenewal(expectedPg){
+        cy.visit('/report?reportId=ReportMembership.MembershipRenewal')
+        cy.wait(2000)
+        cy.ValidateElementText(elems_MembershipMasters.LBL_PAGE, expectedPg)
+    
+        // cy.Click(elems_MembershipMasters.BTN_GENERATE)
+        // cy.wait(5000)
+        //cy.ValidateElementText('//div[@data-id="table1_1"]')
+        //cy.Click(elems_MembershipMasters.BTN_EXPORT)
+        }
+
 }
 
 export default Reports_MembershipMasters

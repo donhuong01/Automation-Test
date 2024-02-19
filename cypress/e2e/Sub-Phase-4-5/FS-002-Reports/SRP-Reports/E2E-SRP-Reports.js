@@ -126,6 +126,20 @@ describe("SRP Verification",function(){
         )
     })
 
+    it('Checking functionallity and Verification on Member Total Points Detail', function(){
+        SRP_Reported.verifyMemberTotalPointsDetail
+        (
+            data.MEMBER_TOTAL_POINTS_DETAIL.EXPECTEDPG
+        )
+    })
+
+    it('Checking functionallity and Verification on SAFRA Point Transaction', function(){
+        SRP_Reported.verifySAFRApointTransaction
+        (
+            data.POINT_TRANSACTION.EXPECTEDPG
+        )
+    })
+
 
 
 })

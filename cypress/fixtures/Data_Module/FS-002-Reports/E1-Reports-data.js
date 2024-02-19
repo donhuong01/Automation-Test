@@ -125,6 +125,15 @@ const data = {
         TERMINATION_DATE_FROM: '01-Oct-2019',
         TERMINATION_DATE_TO: '04-Dec-2023'
     },
+
+    // E1 Membership Deferment Listing 
+    DEFERMENT_LISTING: {
+        E1MAIN: 'Energy One Gym',
+        E1: 'E1 Gym Silver',
+        EXPECTEDPG: "Report Viewer - Energy One Membership Deferment",
+        TERMINATION_DATE_FROM: '01-Oct-2019',
+        TERMINATION_DATE_TO: '04-Dec-2023'
+    },
 }   
 
 export default data

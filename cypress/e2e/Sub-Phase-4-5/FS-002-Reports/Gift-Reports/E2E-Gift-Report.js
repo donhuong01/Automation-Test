@@ -48,6 +48,34 @@ const Gifts_Report = () => {
                 data.INVENTORY_TRANSACTION.EXPECTEDPG
             }
         })
+
+        it('Checking functionallity and Verification on Gift Collection', function(){
+            Gifts_Reports.verifyGiftCollection
+            {
+                data.GIFT_COLLECTION.EXPECTEDPG
+            }
+        })
+
+        it('Checking functionallity and Verification on Gift Redemption Letter', function(){
+            Gifts_Reports.verifyGiftRedemptionLetter
+            {
+                data.GIFT_REDEMPTION_LETTER.EXPECTEDPG
+            }
+        })
+
+        it('Checking functionallity and Verification on Gift Redemption Letter Address', function(){
+            Gifts_Reports.verifyGiftRedemptionLetterAddress
+            {
+                data.GIFT_REDEMPTION_LETTER_ADDRESS.EXPECTEDPG
+            }
+        })
+
+        it('Checking functionallity and Verification on Transactions With Gift', function(){
+            Gifts_Reports.verifyTransactionsWithGift
+            {
+                data.TRANSACTIONS_WITH_GIFT.EXPECTEDPG
+            }
+        })
         
     })
 

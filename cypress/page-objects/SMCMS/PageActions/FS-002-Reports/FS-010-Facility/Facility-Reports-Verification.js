@@ -205,6 +205,46 @@ class Report_Facility {
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_FacilityReports.BTN_EXPORT)
     }
+
+    /*****************************************************
+    * Method: Checking functionallity and Verification on 
+              Booking By Home Team
+    * Description: This function verifies the page
+   *****************************************************/
+        verifyBookingbyHomeTeam(expectedPg, facilityType, startDate, endDate) {
+        cy.visit('/report?reportId=ReportFacility.BookingByHomeTeam')
+        cy.wait(2000)
+        cy.ValidateElementText(elems_FacilityReports.LBL_PAGE, expectedPg)
+
+        // cy.SelectPickerItem(elems_FacilityReports.PCK_FACILITYTYPE, facilityType)
+        // cy.EnterDate(elems_FacilityReports.TXT_STARTDATE, startDate)
+        // cy.EnterDate(elems_FacilityReports.TXT_ENDDATE, endDate)
+    
+        // cy.Click(elems_FacilityReports.BTN_GENERATE)
+        // cy.wait(5000)
+        //cy.ValidateElementText('//div[@data-id="table1_1"]')
+        //cy.Click(elems_FacilityReports.BTN_EXPORT)
+    }
+
+    /*****************************************************
+    * Method: Checking functionallity and Verification on 
+              Booking Tracking
+    * Description: This function verifies the page
+   *****************************************************/
+        verifyBookingTracking(expectedPg, facilityType, startDate, endDate) {
+        cy.visit('/report?reportId=ReportFacility.BookingTracking')
+        cy.wait(2000)
+        cy.ValidateElementText(elems_FacilityReports.LBL_PAGE, expectedPg)
+
+        // cy.SelectPickerItem(elems_FacilityReports.PCK_FACILITYTYPE, facilityType)
+        // cy.EnterDate(elems_FacilityReports.TXT_STARTDATE, startDate)
+        // cy.EnterDate(elems_FacilityReports.TXT_ENDDATE, endDate)
+    
+        // cy.Click(elems_FacilityReports.BTN_GENERATE)
+        // cy.wait(5000)
+        //cy.ValidateElementText('//div[@data-id="table1_1"]')
+        //cy.Click(elems_FacilityReports.BTN_EXPORT)
+    }
       
 }
 

@@ -24,6 +24,18 @@ const data = {
         EXPECTEDPG: 'Report Viewer - Membership Figures',
     },
 
+    MEMBERSHIP_TRANSACTION: {
+        EXPECTEDPG: 'Report Viewer - ReportMembership.MembershipTransaction',
+    },
+
+    MEMBERSHIP_REVENUE: {
+        EXPECTEDPG: 'Report Viewer - Membership Revenue',
+    },
+
+    MEMBERSHIP_RENEWAL: {
+        EXPECTEDPG: 'Report Viewer - ReportMembership.MembershipRenewal',
+    },
+
     //FS-025
     VIP_APPOINTMENT: {
         EXPECTEDPG: 'Report Viewer - VIP Appointment Term',

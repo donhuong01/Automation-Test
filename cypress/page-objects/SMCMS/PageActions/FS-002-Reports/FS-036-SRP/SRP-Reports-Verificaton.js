@@ -13,7 +13,7 @@ class SRP_Reports {
     cy.ValidateElementText(elems_MemberCard.LBL_PAGE, expectedPg)
 
     // cy.Click(elems_MemberCard.BTN_GENERATE)
-        cy.wait(2000)
+      //  cy.wait(2000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_MemberCard.BTN_EXPORT)
     }
@@ -29,7 +29,7 @@ class SRP_Reports {
     cy.ValidateElementText(elems_MemberCard.LBL_PAGE, expectedPg)
 
     // cy.Click(elems_MemberCard.BTN_GENERATE)
-        cy.wait(2000)
+       // cy.wait(2000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_MemberCard.BTN_EXPORT)
     }
@@ -45,7 +45,7 @@ class SRP_Reports {
     cy.ValidateElementText(elems_MemberCard.LBL_PAGE, expectedPg)
 
     // cy.Click(elems_MemberCard.BTN_GENERATE)
-        cy.wait(2000)
+       // cy.wait(2000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_MemberCard.BTN_EXPORT)
     }
@@ -61,7 +61,7 @@ class SRP_Reports {
     cy.ValidateElementText(elems_MemberCard.LBL_PAGE, expectedPg)
 
     // cy.Click(elems_MemberCard.BTN_GENERATE)
-        cy.wait(2000)
+       // cy.wait(2000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_MemberCard.BTN_EXPORT)
     }
@@ -77,7 +77,7 @@ class SRP_Reports {
     cy.ValidateElementText(elems_MemberCard.LBL_PAGE, expectedPg)
 
     // cy.Click(elems_MemberCard.BTN_GENERATE)
-        cy.wait(2000)
+        //cy.wait(2000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_MemberCard.BTN_EXPORT)
     }
@@ -93,7 +93,7 @@ class SRP_Reports {
     cy.ValidateElementText(elems_MemberCard.LBL_PAGE, expectedPg)
 
     // cy.Click(elems_MemberCard.BTN_GENERATE)
-        cy.wait(2000)
+       // cy.wait(2000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_MemberCard.BTN_EXPORT)
     }
@@ -109,7 +109,7 @@ class SRP_Reports {
     cy.ValidateElementText(elems_MemberCard.LBL_PAGE, expectedPg)
 
     // cy.Click(elems_MemberCard.BTN_GENERATE)
-        cy.wait(2000)
+       // cy.wait(2000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_MemberCard.BTN_EXPORT)
     }
@@ -125,7 +125,7 @@ class SRP_Reports {
         cy.ValidateElementText(elems_MemberCard.LBL_PAGE, expectedPg)
     
         // cy.Click(elems_MemberCard.BTN_GENERATE)
-            cy.wait(2000)
+           // cy.wait(2000)
             //cy.ValidateElementText('//div[@data-id="table1_1"]')
             //cy.Click(elems_MemberCard.BTN_EXPORT)
         }
@@ -141,7 +141,7 @@ class SRP_Reports {
     cy.ValidateElementText(elems_MemberCard.LBL_PAGE, expectedPg)
 
     // cy.Click(elems_MemberCard.BTN_GENERATE)
-        cy.wait(2000)
+       // cy.wait(2000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_MemberCard.BTN_EXPORT)
     }
@@ -157,7 +157,7 @@ class SRP_Reports {
     cy.ValidateElementText(elems_MemberCard.LBL_PAGE, expectedPg)
 
     // cy.Click(elems_MemberCard.BTN_GENERATE)
-        cy.wait(2000)
+       // cy.wait(2000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_MemberCard.BTN_EXPORT)
     }
@@ -173,7 +173,7 @@ class SRP_Reports {
     cy.ValidateElementText(elems_MemberCard.LBL_PAGE, expectedPg)
 
     // cy.Click(elems_MemberCard.BTN_GENERATE)
-        cy.wait(2000)
+       // cy.wait(2000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_MemberCard.BTN_EXPORT)
     }
@@ -189,7 +189,7 @@ class SRP_Reports {
     cy.ValidateElementText(elems_MemberCard.LBL_PAGE, expectedPg)
 
     // cy.Click(elems_MemberCard.BTN_GENERATE)
-        cy.wait(2000)
+       // cy.wait(2000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_MemberCard.BTN_EXPORT)
     }
@@ -205,7 +205,7 @@ class SRP_Reports {
     cy.ValidateElementText(elems_MemberCard.LBL_PAGE, expectedPg)
 
     // cy.Click(elems_MemberCard.BTN_GENERATE)
-        cy.wait(2000)
+        //cy.wait(2000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_MemberCard.BTN_EXPORT)
     }
@@ -221,7 +221,7 @@ class SRP_Reports {
     cy.ValidateElementText(elems_MemberCard.LBL_PAGE, expectedPg)
 
     // cy.Click(elems_MemberCard.BTN_GENERATE)
-        cy.wait(2000)
+        //cy.wait(2000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_MemberCard.BTN_EXPORT)
     }
@@ -237,7 +237,7 @@ class SRP_Reports {
     cy.ValidateElementText(elems_MemberCard.LBL_PAGE, expectedPg)
 
     // cy.Click(elems_MemberCard.BTN_GENERATE)
-        cy.wait(2000)
+        //cy.wait(2000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_MemberCard.BTN_EXPORT)
     }
@@ -253,7 +253,7 @@ class SRP_Reports {
     cy.ValidateElementText(elems_MemberCard.LBL_PAGE, expectedPg)
 
     // cy.Click(elems_MemberCard.BTN_GENERATE)
-        cy.wait(2000)
+        //cy.wait(2000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_MemberCard.BTN_EXPORT)
     }
@@ -265,14 +265,46 @@ class SRP_Reports {
     *************************************************************/
     verifyUncollectedExpiryListing(expectedPg){
     cy.visit('/report?reportId=ReportSRP.UncollectedExpiryRedeemedStock')
-    cy.wait(2000)
+    //cy.wait(2000)
     cy.ValidateElementText(elems_MemberCard.LBL_PAGE, expectedPg)
 
     // cy.Click(elems_MemberCard.BTN_GENERATE)
-        cy.wait(2000)
+        //cy.wait(2000)
         //cy.ValidateElementText('//div[@data-id="table1_1"]')
         //cy.Click(elems_MemberCard.BTN_EXPORT)
     }
+
+    /*************************************************************
+     * Method: Checking functionallity and Verification on 
+               Member Total Points Detail
+     * Description: This function verifies the page
+    *************************************************************/
+        verifyMemberTotalPointsDetail(expectedPg){
+        cy.visit('/report?reportId=ReportSRP.MemberTotalPointsDetail')
+        cy.wait(2000)
+        cy.ValidateElementText(elems_MemberCard.LBL_PAGE, expectedPg)
+    
+        // cy.Click(elems_MemberCard.BTN_GENERATE)
+            //cy.wait(2000)
+            //cy.ValidateElementText('//div[@data-id="table1_1"]')
+            //cy.Click(elems_MemberCard.BTN_EXPORT)
+        }
+
+    /*************************************************************
+     * Method: Checking functionallity and Verification on 
+               SAFRA Point Transaction
+     * Description: This function verifies the page
+    *************************************************************/
+        verifySAFRApointTransaction(expectedPg){
+        cy.visit('/report?reportId=ReportSRP.PointTransaction')
+        cy.wait(2000)
+        cy.ValidateElementText(elems_MemberCard.LBL_PAGE, expectedPg)
+    
+        // cy.Click(elems_MemberCard.BTN_GENERATE)
+            //cy.wait(2000)
+            //cy.ValidateElementText('//div[@data-id="table1_1"]')
+            //cy.Click(elems_MemberCard.BTN_EXPORT)
+        }
 
 }
 

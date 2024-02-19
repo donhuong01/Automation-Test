@@ -105,7 +105,21 @@ const Facility_Report = () => {
             )
         })
 
+        it('Checking functionallity and Verification on Facility Booking By Home Team', function(){
+            Reports_Facility.verifyBookingbyHomeTeam
+            (
+                data.BOOKING_BY_HOME_TEAM.EXPECTEDPG,
 
+            )
+        })
+
+        it('Checking functionallity and Verification on Booking Tracking', function(){
+            Reports_Facility.verifyBookingTracking
+            (
+                data.BOOKING_TRACKING.EXPECTEDPG,
+
+            )
+        })
     })
 
 

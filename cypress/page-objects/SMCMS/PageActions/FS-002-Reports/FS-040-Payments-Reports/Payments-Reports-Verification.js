@@ -111,6 +111,25 @@ class Payment_Reports {
     //cy.Click(elems_Payment.BTN_EXPORT)
     }
 
+    /*****************************************************
+     * Method: Checking functionallity and Verification on 
+               Internet Receipt
+     * Description: This function verifies the page
+    *****************************************************/
+    verifyInternetReceipt(expectedPg, /*sourceChannel, startDate, endDate*/){
+    cy.visit('/report?reportId=ReportPayment.InternetReceipt')
+    cy.wait(2000)
+    cy.ValidateElementText(elems_Payment.LBL_PAGE, expectedPg)
+    
+    // cy.SelectPickerItem(elems_Payment.PCK_SOURCECHANNEL, sourceChannel)
+    // cy.EnterText(elems_Payment.TXT_TDATEFROM, startDate)
+    // cy.EnterText(elems_Payment.TXT_TDATETO, endDate)
+
+    // cy.Click(elems_Payment.BTN_GENERATE)
+    cy.wait(2000)
+    //cy.ValidateElementText('//div[@data-id="table1_1"]')
+    //cy.Click(elems_Payment.BTN_EXPORT)
+    }
 
 }
 

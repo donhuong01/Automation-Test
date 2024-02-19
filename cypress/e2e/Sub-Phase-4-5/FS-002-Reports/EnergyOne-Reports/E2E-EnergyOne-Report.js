@@ -154,6 +154,13 @@ describe("E1 Reports Verification",function(){
         )
     })
 
+    it('Checking functionallity and Verification on E1 Membership Deferment Listing ', function(){
+        E1_Reports.verifyE1MembershipDefermentListing
+        (
+            data.DEFERMENT_LISTING.EXPECTEDPG,
+        )
+    })
+
 })
 
 }

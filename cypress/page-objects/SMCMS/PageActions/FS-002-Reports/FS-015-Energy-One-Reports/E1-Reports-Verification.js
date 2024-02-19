@@ -338,6 +338,29 @@ class Reports_E1 {
         //cy.Click(elems_E1MembershipTerminationListing.BTN_EXPORT)
     }
 
+    /*****************************************************
+     * Method: Checking functionallity and Verification on 
+               E1 Membership Deferment Listing 
+     * Description: This function verifies the page
+    *****************************************************/
+        verifyE1MembershipDefermentListing(expectedPg, e1Main, e1, terminationDatefrom, terminationDateto ){
+        cy.visit('/report?reportId=ReportE1.MembershipDefermentListing')
+        cy.wait(2000)
+        cy.ValidateElementText(elems_E1MembershipTerminationListing.LBL_PAGE, expectedPg)
+        
+        // cy.SelectPickerItem(elems_E1MembershipTerminationListing.PCK_ENERGYONEMAIN, e1Main)
+        // cy.wait(2000)
+        // cy.SelectPickerItem(elems_E1MembershipTerminationListing.PCK_ENERGYONE, e1)
+        
+        // cy.EnterDate(elems_E1MembershipTerminationListing.TXT_TERMINATIONDATEFROM, terminationDatefrom)
+        // cy.EnterDate(elems_E1MembershipTerminationListing.TXT_TERMINATIONDATETO, terminationDateto)
+        
+        // cy.Click(elems_E1MembershipTerminationListing.BTN_GENERATE)
+        // cy.wait(5000)
+        //cy.ValidateElementText('//div[@data-id="table1_1"]')
+        //cy.Click(elems_E1MembershipTerminationListing.BTN_EXPORT)
+    }
+
 
 
 

@@ -8,12 +8,12 @@ const data = {
 
     //Booking Amendment Listing
     BOOKING_AMENDMENT: {
-        EXPECTEDPG: 'Report Viewer - ReportFacility.BookingAmendmentListing'
+        EXPECTEDPG: 'Report Viewer - Facility Booking Amendment'
     },
 
     //Booking Cancellation Listing
     BOOKING_Cancellation: {
-        EXPECTEDPG: 'Report Viewer - ReportFacility.BookingCancellationListing',
+        EXPECTEDPG: 'Report Viewer - Facility Booking Cancellation',
         FACILITYTYPE: '',
         FACILITY: '',
         NRIC: '',
@@ -23,22 +23,22 @@ const data = {
 
     //Booking Extension Listing
     BOOKING_EXTENSION: {
-        EXPECTEDPG: 'Report Viewer - ReportFacility.BookingExtensionListing'
+        EXPECTEDPG: 'Report Viewer - Facility Booking Extension'
     },
 
     //Booking Listing Inactive
     BOOKING_INACTIVE: {
-        EXPECTEDPG: 'Report Viewer - ReportFacility.BookingListingInactive'
+        EXPECTEDPG: 'Report Viewer - Facility Booking Inactive'
     },
 
     //Booking Listing
     BOOKING_LISTING: {
-        EXPECTEDPG: 'Report Viewer - ReportFacility.BookingListing'
+        EXPECTEDPG: 'Report Viewer - Facility Booking Listing'
     },
 
     //Booking Listing Summary
     BOOKING_SUMMARY: {
-        EXPECTEDPG: 'Report Viewer - ReportFacility.BookingListingSummary',
+        EXPECTEDPG: 'Report Viewer - Facility Booking Summary',
         FACILITYTYPE: '',
         STARTDATE: '',
         ENDDATE: '',
@@ -46,12 +46,12 @@ const data = {
 
     //Closure Listing
     CLOSURE_LISTING: {
-        EXPECTEDPG: 'Report Viewer - ReportFacility.ClosureListing'
+        EXPECTEDPG: 'Report Viewer - Facility Closure'
     },
 
     //Group Booking Listing
     GROUP_BOOKING: {
-        EXPECTEDPG: 'Report Viewer - ReportFacility.GroupBookingListing',
+        EXPECTEDPG: 'Report Viewer - Facility Group Booking',
         FACILITYTYPE: '',
         FACILITY: '',
         NRIC: '',
@@ -61,12 +61,12 @@ const data = {
 
     //Group Booking Ballot Listing
     GROUP_BOOKING_BALLOT: {
-        EXPECTEDPG: 'Report Viewer - ReportFacility.GroupBookingBallotListing'
+        EXPECTEDPG: 'Report Viewer - Facility Group Booking Ballot'
     },
 
     //Reservation Listing
     RESERVATION_LISTING: {
-        EXPECTEDPG: 'Report Viewer - ReportFacility.ReservationListing',
+        EXPECTEDPG: 'Report Viewer - Facility Reservation',
         FACILITYTYPE: '',
         FACILITY: '',
         NRIC: '',
@@ -76,7 +76,23 @@ const data = {
 
     //Facility Utilization Listing
     UTILIZATION_LISTING: {
-        EXPECTEDPG: 'Report Viewer - ReportFacility.UtilizationListing',
+        EXPECTEDPG: 'Report Viewer - Facility Utilization',
+        FACILITYTYPE: '',
+        STARTDATE: '',
+        ENDDATE: '',
+    },
+
+    //Facility Booking By Home Team
+    BOOKING_BY_HOME_TEAM: {
+        EXPECTEDPG: 'Report Viewer - Facility Booking By Home Team',
+        FACILITYTYPE: '',
+        STARTDATE: '',
+        ENDDATE: '',
+    },
+
+    //Booking Tracking
+    BOOKING_TRACKING: {
+        EXPECTEDPG: 'Report Viewer - ReportFacility.BookingTracking',
         FACILITYTYPE: '',
         STARTDATE: '',
         ENDDATE: '',

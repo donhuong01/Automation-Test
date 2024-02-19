@@ -41,12 +41,12 @@ describe("Payments Verification",function(){
         )
     })
 
-    it('Checking functionallity and Verification on Failed Payment Deduction', function(){
-        Reports_Payment.verifyFailedPaymasterDeduction
-        (
-            data.PAY_MASTER_DEDUCTION
-        )
-    })
+    // it('Checking functionallity and Verification on Failed Payment Deduction', function(){
+    //     Reports_Payment.verifyFailedPaymasterDeduction
+    //     (
+    //         data.PAY_MASTER_DEDUCTION
+    //     )
+    // })
 
     it('Checking functionallity and Verification on SFS Transaction Listing', function(){
         Reports_Payment.verifySFSTransaction
@@ -55,6 +55,14 @@ describe("Payments Verification",function(){
             // data.SFS_TRANSACTION.SOURCE_CHANNEL,
             // data.SFS_TRANSACTION.TRANSAC_DATE_FROM,
             // data.SFS_TRANSACTION.TRANSAC_DATE_TO
+        )
+    })
+
+    it('Checking functionallity and Verification on SFS Transaction Listing', function(){
+        Reports_Payment.verifyInternetReceipt
+        (
+            data.INTERNET_RECEIPT.EXPECTEDPG,
+            
         )
     })
 

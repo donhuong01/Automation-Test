@@ -48,12 +48,28 @@ describe("Membership Reports Verification",function(){
         )
     })
 
-    it('Checking functionallity and Verification on Membership Figure Listing', function(){
-        MembershipMasters_Reports.verifyMembershipFigure
+    it('Checking functionallity and Verification on Membership Transaction', function(){
+        MembershipMasters_Reports.verifyMembershipTransaction
         (
-           data.MEMBERSHIP_FIGURE.EXPECTEDPG
+           data.MEMBERSHIP_TRANSACTION.EXPECTEDPG
         )
     })
+
+    it('Checking functionallity and Verification on Membership Revenue', function(){
+        MembershipMasters_Reports.verifyMembershipRevenue
+        (
+           data.MEMBERSHIP_REVENUE.EXPECTEDPG
+        )
+    })
+
+    it('Checking functionallity and Verification on Membership Renewal', function(){
+        MembershipMasters_Reports.verifyMembershipRenewal
+        (
+           data.MEMBERSHIP_RENEWAL.EXPECTEDPG
+        )
+    })
+
+
 
 
 

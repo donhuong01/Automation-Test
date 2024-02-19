@@ -17,6 +17,7 @@ import Reports_Payments from '../Sub-Phase-4-5/FS-002-Reports/Payments-Reports/E
 import AdminSetting_Report from '../Sub-Phase-4-5/FS-002-Reports/AdminSetting-Reports/E2E-AdminSetting-Reports'
 import Facility_Report from '../Sub-Phase-4-5/FS-002-Reports/Facility-Reports/E2E-Facility-Report'
 import Membership_Report from '../Sub-Phase-4-5/FS-002-Reports/Membership-Reports/E2E-Membership-Reports'
+import Promotion_Report from '../Sub-Phase-4-5/FS-002-Reports/Promotion-Reports/E2E-Promotion-Report'
 
 //FS - 004 Admin Settings
 import ApplicationSetting from '../Sub-Phase-1/FS-004-Admin-Settings/E2E-ApplicationSettings'
@@ -233,17 +234,18 @@ beforeEach(() => {
 
 //  describe('E2E Auto Testing:FS-002 Reports', () => {
 
-Accommodation_Report()
-AdminSetting_Report()
-E1_Report()
+// Accommodation_Report()
+// AdminSetting_Report()
+// E1_Report()
 // Facility_Report()
 // Gifts_Report()
 // IG_Report()
-Membership_Report()
-MemberCards_Report()
+// Membership_Report()
+// MemberCards_Report()
 // Reports_Payments()
 // InHouseMerchandise_Report()
 // SRP_Report()
+// Promotion_Report()
 
 //  })
 
@@ -293,7 +295,7 @@ MemberCards_Report()
 // })
 
 
-describe('E2E Auto Testing:FS-014 Membership: Master Registration and Renewal', () => {
+// describe('E2E Auto Testing:FS-014 Membership: Master Registration and Renewal', () => {
 
 //  MembershipRegistration(CustomerNRICFull) // Enter Full NRIC
 // CustomerCheckIn()
@@ -329,7 +331,7 @@ describe('E2E Auto Testing:FS-014 Membership: Master Registration and Renewal', 
 //     E2EData.BATCH_REGISTRATION.NRIC_FOR_ADDING_NEW_DEPENDENT,
 //     E2EData.BATCH_REGISTRATION.PRINCIPALID_FOR_NEW_DEPENDENT)
 
-})
+// })
 
 
 
