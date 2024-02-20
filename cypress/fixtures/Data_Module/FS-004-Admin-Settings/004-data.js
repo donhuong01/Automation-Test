@@ -1,7 +1,7 @@
 const data = {
     CustomerCategoryDetail: {
         CustomerCategoryNumber: 'CTC-2010-00001',
-        Name: 'IG A2 ' + Math.floor(Math.random() * 1000),
+        Name: 'IG A3 ' + Math.floor(Math.random() * 1000),
         BelongsUnder: 'All Customer Category',
         CustomerCategoryType: 'Root Category',
         D365ID: '67890123-2222-2222-2345-678901234567'
@@ -33,7 +33,7 @@ const data = {
 
         Name: 'Code Type2 ' + Math.floor(Math.random() * 1000),
         BelongUnder: 'Sub Category',
-        UpdatedName: 'Code Type2',
+        UpdatedName: 'Code Type2'  + Math.floor(Math.random() * 1000),
         UpdatedBelongsUnder: 'Root Category'
 
     },
@@ -43,7 +43,7 @@ const data = {
     },
 
     CodeTypeDetail: {
-        Name: 'TestAutomate',
+        Name: 'TestAutomate' + Math.floor(Math.random() * 1000),
         belongUnder: 'ActivityEventCategoryGroup'
     },
 
@@ -65,13 +65,13 @@ const data = {
             marketingConsent: 'Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).',
             marketingConsentStyleProperty: 'Marketing Consent',
             marketingConsentStyleValue: 'Underline',
-            marketingCosentFontStyle: 'Font Size',
+            marketingCosentFontStyle: '4 (14pt)',
             marketingCosentFontValue: '4 (14pt)',
 
             CommunicationConsent: 'It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,',
             CommunicationConsentStyleProperty: 'Communication Consent',
             CommunicationConsentStyleValue: 'Bold',
-            CommunicationConsentFontStyle: 'Font Size',
+            CommunicationConsentFontStyle: '4 (14pt)',
             CommunicationConsentFontValue: '4 (14pt)',
 
 

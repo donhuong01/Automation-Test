@@ -31,11 +31,12 @@ class CodeTypeListingForm{
 
         cy.EnterText(elems_CodeTypeListing.TXT_MEMBERID, CodeType)
         cy.Click('//button[@form="formFiltersCodeType"]')
-        // cy.wait(5000)
-        cy.SelectTableItem(
-          elems_CodeTypeListing.TBL_CODETYPE,
-               'Code Type', CodeType,
-        )
+        //cy.wait(5000)
+        cy.TickSpecificTableItem(CodeType)
+        // cy.SelectTableItem(
+        //   elems_CodeTypeListing.TBL_CODETYPE,
+        //        'Code Type', CodeType,
+        // )
 
        }
 

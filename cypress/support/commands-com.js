@@ -169,6 +169,23 @@ Cypress.Commands.add('SelectTableItem2', (locator, columnReference1, rowReferenc
 })
 
 /*****************************************************
+ * Command: TickSpecificTableItem
+ * Description: Tick Specific Item on Table
+ * Author: RDacpano
+ *
+ * @param {string} Value Value of the specific item
+ *****************************************************/
+Cypress.Commands.add('TickSpecificTableItem', (Value) => {
+    cy.log('------ Tick Specific Table Item : ' + Value + ' ------')
+    cy.contains('td', Value)
+      .scrollIntoView()  
+      .siblings()                           
+      .click()
+   
+})
+
+
+/*****************************************************
  * Command: ClickTableLink
  * Description: Clicks a link on a table
  *

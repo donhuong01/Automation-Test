@@ -232,13 +232,13 @@ beforeEach(() => {
     // SMCMSUser() //Change User Depending on Environment
 // })
 
- describe('E2E Auto Testing:FS-002 Reports', () => {
+//  describe('E2E Auto Testing:FS-002 Reports', () => {
 
-  Accommodation_Report()
-  AdminSetting_Report()
-  E1_Report()
-  Facility_Report()
-  Gifts_Report()
+//   Accommodation_Report()
+//   AdminSetting_Report()
+//   E1_Report()
+//   Facility_Report()
+//   Gifts_Report()
   // IG_Report()
   // Membership_Report()
   // MemberCards_Report()
@@ -247,7 +247,7 @@ beforeEach(() => {
   // SRP_Report()
   // Promotion_Report()
 
- })
+//  })
 
 
 // describe('E2E Auto Testing:FS-004 Admin: Settings', () => {
@@ -295,9 +295,9 @@ beforeEach(() => {
 // })
 
 
-// describe('E2E Auto Testing:FS-014 Membership: Master Registration and Renewal', () => {
+describe('E2E Auto Testing:FS-014 Membership: Master Registration and Renewal', () => {
 
-//  MembershipRegistration(CustomerNRICFull) // Enter Full NRIC
+ MembershipRegistration(CustomerNRICFull) // Enter Full NRIC
 // CustomerCheckIn()
 // MemberType()
 // BadAddressUpdate()// Fail Need code updates
@@ -331,7 +331,7 @@ beforeEach(() => {
 //     E2EData.BATCH_REGISTRATION.NRIC_FOR_ADDING_NEW_DEPENDENT,
 //     E2EData.BATCH_REGISTRATION.PRINCIPALID_FOR_NEW_DEPENDENT)
 
-// })
+})
 
 
 

@@ -30,9 +30,10 @@ class CustomerCategoryTypeListing{
         cy.EnterText(elems_CustomerCategoryTypeListing.TXT_CUSTOMERCATEGORYTYPE, CustomerCategory)
         cy.Click(elems_CustomerCategoryTypeListing.BTN_SEARCH)
         cy.wait(5000)
-        cy.SelectTableItem(
-             elems_CustomerCategoryTypeListing.TBL_CUSTOMERCATEGORYTYPE,
-             'Customer Category Type Name', CustomerCategory)
+        cy.TickSpecificTableItem(CustomerCategory)
+        //cy.SelectTableItem(
+        //     elems_CustomerCategoryTypeListing.TBL_CUSTOMERCATEGORYTYPE,
+        //     'Customer Category Type Name', CustomerCategory)
 
     }
 

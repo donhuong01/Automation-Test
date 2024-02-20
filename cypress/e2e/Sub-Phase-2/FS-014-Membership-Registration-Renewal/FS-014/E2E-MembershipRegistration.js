@@ -143,7 +143,7 @@ const MembershipRegistration = (CustomerNRICFull) => {
 
 
             // Shopping cart and Payments
-            ShoppingCart.fillOutandApplyPayment('CSO-CSHCRD')
+            ShoppingCart.fillOutandApplyPayment('CSO-CASH')
 
             // Wait for 3 minites
             //cy.wait(25000) //QA

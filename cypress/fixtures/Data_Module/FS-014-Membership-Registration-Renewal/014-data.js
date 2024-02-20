@@ -171,7 +171,7 @@ const data = {
             Nationality: 'Singaporean/PR',
             MaritalStatus: 'Married',
             CardType: 'SAFRA Classic Card',
-            InterestinDBSCard: 'SAFRA DBS Credit Card',
+            InterestinDBSCard: 'N/A',
             ProfilePicture: 'test_images.png'
         },
 
