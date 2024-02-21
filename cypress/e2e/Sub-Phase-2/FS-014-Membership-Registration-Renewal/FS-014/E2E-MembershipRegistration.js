@@ -52,14 +52,14 @@ const MembershipRegistration = (CustomerNRICFull) => {
             // MemModuleSettings.SFSActivate('CHECK')
             // cy.wait(5000)
 
-            cy.visit('/membership/customerCheckin')
-            cy.wait(5000)
+            cy.visit('/membership/customerCheckin', { timeout: 30000 })
+
             cy.Click(elems_CustomerCheckInPage.RBTN_NRIC)
             cy.EnterDateSuspension(elems_CustomerCheckInPage.DATE_DATEOFBIRTH, Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB)
             cy.EnterText(elems_CustomerCheckInPage.TXT_LAST4DIGITSNRIC, LAST4NRIC)
-            cy.Click(elems_CustomerCheckInPage.BTN_CHECKIN)
-            cy.wait(2000)
-            cy.Click(elems_CustomerCheckInPage.BTN_CREATNEW)
+            cy.Click(elems_CustomerCheckInPage.BTN_CHECKIN, { timeout: 30000 })
+
+            cy.Click(elems_CustomerCheckInPage.BTN_CREATNEW, { timeout: 30000 })
 
             CustomerCreation.fillOutRegistrationInfo({
                 name: PrincipalName,
@@ -143,7 +143,7 @@ const MembershipRegistration = (CustomerNRICFull) => {
 
 
             // Shopping cart and Payments
-            ShoppingCart.fillOutandApplyPayment('CSO-CASH')
+            ShoppingCart.fillOutandApplyPayment('CASH')
 
             // Wait for 3 minites
             //cy.wait(25000) //QA
