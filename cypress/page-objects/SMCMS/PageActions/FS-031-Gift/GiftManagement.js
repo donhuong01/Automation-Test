@@ -95,9 +95,25 @@ class GiftManagement {
      *****************************************************/
     FilloutGiftManagementDetailFrom(RedemptionType, PublishDateFrom, PublishDateTo, ExpiryCollection, Price, GiftCategory, UploadFile, Status) {
 
+        function formatDate(date) {
+            var day = date.getDate();
+            var month = date.toLocaleString('default', { month: 'short' });
+            var year = date.getFullYear();
+            return `${day}-${month}-${year}`;
+        }
+
+        var today = new Date();
+        var formattedDate = formatDate(today);
+        console.log(formattedDate);
+
+        var future = new Date();
+        future.setDate(future.getDate() + 5); // Add 5 days to today
+        var futureFormattedDate = formatDate(future);
+        console.log(futureFormattedDate);
+
         cy.SelectDropDownItem(elems_GiftManagement.DetailForm.DRP_REDEMPTIONTYPE, RedemptionType)
-        cy.EnterDate(elems_GiftManagement.DetailForm.DATE_PUBLISHDATEFROM, PublishDateFrom)
-        cy.EnterDate(elems_GiftManagement.DetailForm.DATE_PUBLISHDATETO, PublishDateTo)
+        cy.EnterDate(elems_GiftManagement.DetailForm.DATE_PUBLISHDATEFROM, formattedDate)
+        cy.EnterDate(elems_GiftManagement.DetailForm.DATE_PUBLISHDATETO, futureFormattedDate)
         cy.EnterText(elems_GiftManagement.DetailForm.TXT_EXPIRYCOLLECTION, ExpiryCollection)
         cy.EnterText(elems_GiftManagement.DetailForm.TXT_PRICE, Price)
         cy.SelectDropDownItem(elems_GiftManagement.DetailForm.DRP_GIFTCATEGORY, GiftCategory)
