@@ -59,6 +59,7 @@ class elems_MemberRegistrationPrincipal {
 
     static INTERESTEDAREAINFORMATION = {
         PREFREEREDSAFRACLUBS: {
+            CHK_SAFRACHOA: '//input[@id="checkSafraChoaChuKung"]',
             CHK_SAFRAJURONG: '//input[@id="checkSafraJurong"]',
             CHK_SAFRAPUNGGOL: '//input[@id="checkSafraPunggol"]',
             CHK_SAFRATOAPAYOH: '//input[@id="checkSafraToaPayoh"]',
@@ -98,7 +99,7 @@ class elems_MemberRegistrationPrincipal {
             CHK_SAFRACOMPSPORTSCLUB: '//input[@id="checkCompetitive"]',
             CHK_SAFRADIGMECLUB: '//input[@id="checkDmc"]',
             CHK_SAFRAENTREPRENEURSCLUB: '//input[@id="checkEntrepreneursClub"]',
-            CHK_FUSE: '//input[@id="checkEntrepreneursClub"]',
+            CHK_FUSE: '//input[@id="checkFuse"]',
             CHK_SAFRAGOLFINGSECTION: '//input[@id="checkGolfing"]',
             CHK_SAFRAMOVIEMAX: '//input[@id="checkMovieMax"]',
             CHK_SAFRAPHOTOGRAPHICCLUB: '//input[@id="checkPhotographic"]',

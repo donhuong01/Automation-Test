@@ -48,7 +48,7 @@ class elems_PromotionDetail {
         BTN_SAVE: '//button[text()="Save"]',
         BTN_CANCEL: '//button[text()="Cancel"]',
         TAB_BENEFITITEM: '//button[text()="Benefit Item"]',
-        TXT_FIXEDDOLLAR: '//input[@id="numFixedDollarValueToDiscount"]',
+        TXT_FIXEDDOLLAR: '//input[@id="numfixedValueAmountToDiscount"]', //input[@id="numFixedDollarValueToDiscount"]
         TXT_FIXEDDOLLARTOCHARGETOCUSTOMER: '//input[@id="numFixedDollarRateToChargeToCustomer"]',
         TXT_APPICABLEFREEPERIODINMONTH: '//input[@id="numApplicableFreePeriodInMonth"]',
         PCK_GIFT: '//label[@for="pckGiftItem"]/following-sibling::div//button'

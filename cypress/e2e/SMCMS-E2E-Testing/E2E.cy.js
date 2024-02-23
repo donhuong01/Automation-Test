@@ -55,6 +55,7 @@ import AccommodatiomReservationManagement from '../Form-Management/FS-012-Accomm
 //FS - 014 Membership Registration & Renewal
 import CustomerCheckIn from '../Sub-Phase-2/FS-014-Membership-Registration-Renewal/FS-014/E2E-CustomerCheckin'
 import MembershipRegistration from '../Sub-Phase-2/FS-014-Membership-Registration-Renewal/FS-014/E2E-MembershipRegistration'
+import MembershipPrincipalRegistration from '../Sub-Phase-2/FS-014-Membership-Registration-Renewal/FS-014/E2E-MembershipPrincipalRegistration'
 import SourceChannel from '../Sub-Phase-2/FS-014-Membership-Registration-Renewal/FS-014/E2E-SourceChannel'
 import MassUpdateForMemberData from '../Sub-Phase-2/FS-014-Membership-Registration-Renewal/FS-014/E2E-MassUpdateForMemberData'
 import MembershipModuleSettings from '../Sub-Phase-2/FS-014-Membership-Registration-Renewal/FS-014/E2E-MembershipModuleSetting'
@@ -216,7 +217,7 @@ beforeEach(() => {
    * Admin Testing - Hung *
    ************************/
   // Set local storage for UAT Enviroment
-  // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
+  //  cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
 
   //Select Channel
   cy.visit('/membership/customerCheckin')
@@ -290,28 +291,29 @@ beforeEach(() => {
 //    AccommodationClosureManagement() // Need to add accommodation on page action
 //    AccommodatiomBookingManagement(E2EData.ACCOMMODATION_BOOKING_MANAGEMENT.SAFRA_MEMBERID, E2EData.ACCOMMODATION_BOOKING_MANAGEMENT.GEUSTID) //Pass SAFRA MemberID and Guest ID
 //    AccommodatiomReservationManagement(E2EData.ACCOMMODATION_RESERVATION_MANAGEMENT.SAFRA_MEMBERID) //Pass SAFRA MemberID
-// Update the booking,  no available slots when running
+// // Update the booking,  no available slots when running
 
 // })
 
 
 describe('E2E Auto Testing:FS-014 Membership: Master Registration and Renewal', () => {
 
- MembershipRegistration(CustomerNRICFull) // Enter Full NRIC
-// CustomerCheckIn()
-// MemberType()
-// BadAddressUpdate()// Fail Need code updates
-// MembershipRenewalAdvise()
-// WithdrawalOfConsent(E2EData.ACTIVE_MEMBERID_FOR_WITHDRAWAL_OF_CONSENT) //Enter Member ID for Withdrawal Of Consent
-// SourceChannel()
-// MemberStatusReasonCode() // Not Required
-// MassUpdateForMemberData() // Needs to update code for Approval
-// MembershipModuleSettings()
-//  SFSMemberRegistion(CustomerNRICFull,DepCustomerNRICFull, Dep2CustomerNRICFull) //Add three NRIC's for Principal, Dependent Child, Dependent Spouse
-// E2EMemberShipRenewal(CustomerNRICFull) //Add NRIC For Principal Registration
+//  MembershipRegistration(CustomerNRICFull) // Quick Testing on Membership Registration
+//  MembershipPrincipalRegistration(CustomerNRICFull,DepCustomerNRICFull, Dep2CustomerNRICFull) // Full Testing on Membership Registration
+//  CustomerCheckIn()
+ MemberType()
+//  BadAddressUpdate()// Fail Need code updates
+//  MembershipRenewalAdvise()
+ WithdrawalOfConsent(E2EData.ACTIVE_MEMBERID_FOR_WITHDRAWAL_OF_CONSENT) //Enter Member ID for Withdrawal Of Consent
+ SourceChannel()
+//  MemberStatusReasonCode() // Not Required
+//  MassUpdateForMemberData() // Needs to update code for Approval
+//  MembershipModuleSettings()
+ SFSMemberRegistion(CustomerNRICFull,DepCustomerNRICFull, Dep2CustomerNRICFull) //Add three NRIC's for Principal, Dependent Child, Dependent Spouse
+ E2EMemberShipRenewal(CustomerNRICFull) //Add NRIC For Principal Registration
 
 
-// LifeMembershipManagment(CustomerNRICFull) //Add NRIC For Principal Registration
+LifeMembershipManagment(CustomerNRICFull) //Add NRIC For Principal Registration
 //   BatchMembershipRegistration(
 
 //     //Pass Info for Existing Member MemberID and LAST4DigitsNRIC
@@ -392,7 +394,7 @@ describe('E2E Auto Testing:FS-014 Membership: Master Registration and Renewal', 
 //  VolunteerAppointment()
 // VolunteerAppointmentType()
 // VIPAppointmentType()
-// VolunteerAppointmentTermRegistration() //
+// VolunteerAppointmentTermRegistration() 
 //     VIPAppointmentTermRegistration() //Update the the Type in Registration
 // })
 
@@ -469,7 +471,7 @@ describe('E2E Auto Testing:FS-014 Membership: Master Registration and Renewal', 
 
 // describe('E2E Auto Testing:FS-036 SRP', () => {
 
-//   Always Change the ItemCode, ItemDescription, and Category data before runnning
+//   //Always Change the ItemCode, ItemDescription, and Category data before runnning
 
 //   SRPModuleSetting() //Check first the settings for UAT testing
 //   SAFRAPointsAdjustment(E2EData.MEMBERID_FOR_SAFRA_POINTS_ADJUSTMENT) //Provide Active member ID
@@ -504,13 +506,13 @@ describe('E2E Auto Testing:FS-014 Membership: Master Registration and Renewal', 
 
 // describe('E2E Auto Testing:FS-042 Promotion', ()=> {
 
-// PromotionforE1Gym(E2EData.MEMBERID_FOR_E1_RENEWAL_PROMOTION.MEMBER_ID) //Provide Active Member
-// PrommotionForFacilityandFacilityType(E2EData.MEMBERID_FOR_FACILITY_PROMOTION.MEMBER_ID) //Provide Active Member
-// PromotionforInHouseMerchandise (E2EData.MEMBERID_FOR_INHOUSE_MERCHANDISE_PROMOTION.MEMBERID) //Provide Active Member
-// PromotionforInterestGroup(E2EData.MEMBERID_FOR_INTERESTG_PROMOTION.MEMBERID) //Provide Active Member
-// PromoUtilization()
-// Promotion()
-// PromotionforMembership(E2EData.FULLNRIC_FOR_MEMBERSHIP_PROMOTION.FULLNRIC) //Provide New NRIC
+//   PromotionforE1Gym(E2EData.MEMBERID_FOR_E1_RENEWAL_PROMOTION.MEMBER_ID) //Provide Active Member
+//   PrommotionForFacilityandFacilityType(E2EData.MEMBERID_FOR_FACILITY_PROMOTION.MEMBER_ID) //Provide Active Member
+//   PromotionforInHouseMerchandise (E2EData.MEMBERID_FOR_INHOUSE_MERCHANDISE_PROMOTION.MEMBERID) //Provide Active Member
+//   PromotionforInterestGroup(E2EData.MEMBERID_FOR_INTERESTG_PROMOTION.MEMBERID) //Provide Active Member
+//   PromoUtilization()
+//   Promotion()
+//   PromotionforMembership(E2EData.FULLNRIC_FOR_MEMBERSHIP_PROMOTION.FULLNRIC) //Provide New NRIC
 // })
 
 

@@ -735,14 +735,14 @@ class Membership_Registration_Dependent{
             }
     
             // Set SAFRA Photographic Club Checkbox
-            if(safraPhotoClub !== undefined){
-                cy.TickCheckBox(elems_MembershipRegistrationDependent.InterestAreaInformation.InterestGroupsAndMicroClubs.CHK_SAFRAPHOTOGRAPHICCLUB, safraPhotoClub)
-            }
+            // if(safraPhotoClub !== undefined){
+            //     cy.TickCheckBox(elems_MembershipRegistrationDependent.InterestAreaInformation.InterestGroupsAndMicroClubs.CHK_SAFRAPHOTOGRAPHICCLUB, safraPhotoClub)
+            // }
     
             // Set SAFRA Running Club Checkbox
-            if(safraRunningClub !== undefined){
-                cy.TickCheckBox(elems_MembershipRegistrationDependent.InterestAreaInformation.InterestGroupsAndMicroClubs.CHK_SAFRAPHOTOGRAPHICCLUB, safraRunningClub)
-            }
+            // if(safraRunningClub !== undefined){
+            //     cy.TickCheckBox(elems_MembershipRegistrationDependent.InterestAreaInformation.InterestGroupsAndMicroClubs.CHK_SAFRAPHOTOGRAPHICCLUB, safraRunningClub)
+            // }
     
             // Set SAFRA Shooting Club Checkbox
             if(safraShootingClub !== undefined){

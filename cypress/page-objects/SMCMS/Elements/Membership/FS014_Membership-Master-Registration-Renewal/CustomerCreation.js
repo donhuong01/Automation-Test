@@ -47,6 +47,7 @@ class elems_CustomerCreation {
 
     static InterestAreaInformation = {
         PreferredSafraClubs : {
+            CHK_SAFRACHOA : '//input[@id="checkSafraChoaChuKung"]',
             CHK_SAFRAJURONG : '//input[@id="checkSafraJurong"]',
             CHK_SAFRAPUNGGOL : '//input[@id="checkSafraPunggol"]',
             CHK_SAFRATOAPAYOH : '//input[@id="checkSafraToaPayoh"]',

@@ -46,7 +46,10 @@ class CustomerCreation {
     }
 
 
-    fillOutContactInformation({ handPhone, emailAddress, emergencyContact, homeNumber, preferredContactModeSelectAll, preferredContactModeEmail, preferredContactModeMail, preferredContactModeSMS, preferredContactModeVoiceCall, preferredContactModePushNotification, consentInformationMarketing, consentInformationServiceNotification, consentInformationTransactional }) {
+    fillOutContactInformation({ handPhone, emailAddress, emergencyContact, homeNumber, preferredContactModeSelectAll, preferredContactModeEmail, 
+        preferredContactModeMail, preferredContactModeSMS, preferredContactModeVoiceCall, preferredContactModePushNotification, 
+        consentInformationMarketing, consentInformationServiceNotification, consentInformationTransactional, preferredContactModeWhatsApp }) {
+
         if (handPhone !== undefined) {
             cy.EnterText(elems_CustomerCreation.ContactInformation.TXT_HANDPHONE, handPhone);
         }
@@ -82,6 +85,10 @@ class CustomerCreation {
         if (preferredContactModePushNotification !== undefined) {
             cy.TickCheckBox(elems_CustomerCreation.ContactInformation.PreferredContactMode.CHK_PUSHNOTIFICATION, preferredContactModePushNotification);
         }
+        if (preferredContactModeWhatsApp !== undefined) {
+            cy.TickCheckBox(elems_CustomerCreation.ContactInformation.PreferredContactMode.CHK_WHATSAPP, preferredContactModeWhatsApp);
+        }
+
 
         if (consentInformationMarketing !== undefined) {
             cy.TickCheckBox(elems_CustomerCreation.ContactInformation.ConsentInformation.CHK_MARKETINGCONSENT, consentInformationMarketing);
@@ -95,7 +102,10 @@ class CustomerCreation {
         }
     }
 
-    fillOutInterestAreaInformation({ clubJurong, clubPunggol, clubPayoh, clubFaber, clubTampines, clubYishun, brandEnergyOneGym, brandKidzAmaza, brandFINS, interestedAllEvents, interestedAllPeaks, interestedFitness, interestedLifelong, interestedLeisure, interestedTravel, interestedChild, interestedFood, interestedShopping, interestedMotoring, interestedHealth, interestedSAFRAPOINTS, SAFRANewsletter, groupAdventure, groupBitez, groupCommService, groupCompetitive, groupDigimedia, groupEntrep, groupFuse, groupGolf, groupMovie, groupPhotograph, groupRunning, groupShooting, groupSocialBadminton, groupTech, groupTravel }) {
+    fillOutInterestAreaInformation({ clubChoa, clubJurong, clubPunggol, clubPayoh, clubFaber, clubTampines, clubYishun, brandEnergyOneGym, brandKidzAmaza, brandFINS, interestedAllEvents, interestedAllPeaks, interestedFitness, interestedLifelong, interestedLeisure, interestedTravel, interestedChild, interestedFood, interestedShopping, interestedMotoring, interestedHealth, interestedSAFRAPOINTS, SAFRANewsletter, groupAdventure, groupBitez, groupCommService, groupCompetitive, groupDigimedia, groupEntrep, groupFuse, groupGolf, groupMovie, groupPhotograph, groupRunning, groupShooting, groupSocialBadminton, groupTech, groupTravel }) {
+        if (clubChoa !== undefined) {
+            cy.TickCheckBox(elems_CustomerCreation.InterestAreaInformation.PreferredSafraClubs.CHK_SAFRACHOA, clubChoa)
+        }
         if (clubJurong !== undefined) {
             cy.TickCheckBox(elems_CustomerCreation.InterestAreaInformation.PreferredSafraClubs.CHK_SAFRAJURONG, clubJurong)
         }
@@ -176,7 +186,7 @@ class CustomerCreation {
         }
 
         if (SAFRANewsletter !== undefined) {
-            cy.TickCheckBox(elems_CustomerCreation.InterestAreaInformation.SafraNewsletter.CHK_ENSMAN, SAFRANewsletter)
+            cy.TickCheckBox('//input[@id="checkkEnsman"]', SAFRANewsletter)
         }
 
         if (groupAdventure !== undefined) {
@@ -214,9 +224,9 @@ class CustomerCreation {
             cy.TickCheckBox(elems_CustomerCreation.InterestAreaInformation.InterestGroupsAndMicroClubs.CHK_SAFRAMOVIEMAX, groupMovie)
         }
 
-        if (groupPhotograph !== undefined) {
-            cy.TickCheckBox(elems_CustomerCreation.InterestAreaInformation.InterestGroupsAndMicroClubs.CHK_SAFRAPHOTOGRAPHICCLUB, groupPhotograph)
-        }
+        // if (groupPhotograph !== undefined) {
+        //     cy.TickCheckBox(elems_CustomerCreation.InterestAreaInformation.InterestGroupsAndMicroClubs.CHK_SAFRAPHOTOGRAPHICCLUB, groupPhotograph)
+        // }
 
         if (groupRunning !== undefined) {
             cy.TickCheckBox(elems_CustomerCreation.InterestAreaInformation.InterestGroupsAndMicroClubs.CHK_SAFRARUNNINGCLUB, groupRunning)

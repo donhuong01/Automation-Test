@@ -99,6 +99,56 @@ Cypress.Commands.add('TickCheckBox', (locator, value) => {
 })
 
 /*****************************************************
+ * Command: VerifyTickCheckBox
+ * Description: Checks of Unchecks a check box
+ *
+ * @param {string} locator Element Locator
+ * @param {binary} expectedvalue Value: true=Checked
+ *                                      false=Unchecked
+ *****************************************************/
+Cypress.Commands.add('VerifyTickCheckBox', (locator, expectedvalue) => {
+    cy.log('------ Checks Checkbox : ' + locator + ' ------' + expectedvalue)
+ 
+    cy.xpath(locator).scrollIntoView().should('exist')
+
+    if (expectedvalue == 'check') {
+        cy.xpath(locator).should('be.checked')
+    }
+    else {
+        cy.xpath(locator).should('not.be.checked')
+    }
+    // else {
+    //     throw new Error("cy.TickCheckBox error on 'value' argument./n\
+    //                         Accepted 'value' values: UNCHECK")
+    // }
+
+//     if (expectedvalue !== 'check') {
+//         // Verify that the checkbox is checked
+//         cy.xpath(locator).should('be.checked');
+    
+//     }
+
+//     else if (expectedvalue !== 'uncheck'){
+//         // Verify that the checkbox is unchecked
+//         cy.xpath(locator).should('not.be.checked');
+//   } 
+
+        // Conditionally verify based on the state of the checkbox
+        // if (expectedvalue == "CHECK") {
+        //   // Verify that the checkbox is checked
+        //   cy.wrap($checkbox).should('be.checked');
+        // } else {
+        //   // Verify that the checkbox is unchecked
+        //   cy.wrap($checkbox).should('not.be.checked');
+        // }
+     
+    
+
+})
+
+
+
+/*****************************************************
  * Command: ValidateElementText
  * Description: Validate element text value by supplying
  * an expected text value
