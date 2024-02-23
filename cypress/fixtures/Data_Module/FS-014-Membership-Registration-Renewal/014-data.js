@@ -7,29 +7,29 @@ const data = {
 
     checkin_memberID: {
         type: 'MEMBERID',
-        value1: 'A300001493'
+        value1: 'A300005639'//QA 
     },
     checkin_NRIC: {
         type: 'NRIC',
-        value1: '838C',
-        value2: '01-Jan-1983',
+        value1: '980Z',//QA
+        value2: '18-Aug-1980',
     },
     checkin_email: {
         type: 'EMAIL',
-        value1: 'test@test.com', //A300002657
+        value1: 'Auto-User2225941520@test.com', ///QA
     },
     checkin_mobile: {
         type: 'MOBILENUMBER',
-        value1: '82345644',
-        value2: 'A300001493'
+        value1: '88888889',//QA
+        value2: 'A300005639'
     },
     checkin_scancard: {
         type: 'SCANECARD',
-        value1: 'A300001493_3DA4F788839DE16D26F7865886038183AECEF073A605371439FCA067A95E8F15',
+        value1: 'A300005639_3DA4F788839DE16D26F7865886038183AECEF073A605371439FCA067A95E8F15',//QA
     },
     checkin_swipecard: {
         type: 'SWIPECARD',
-        value1: '%A8008980001869402^LEE CHOON CHIEH ^2508^A300001493^019801221000000?;8008980001869402=2508201000005500011?',
+        value1: '%A8008980001869402^LEE CHOON CHIEH ^2508^A300005639^019801221000000?;8008980001869402=2508201000005500011?',//QA
     },
 
     //Membership Tenure Selection
@@ -889,11 +889,12 @@ const data = {
             homeNumber2: "67419445",
 
             preferredContactModeSelectAll: 'check',
-            preferredContactModeEmail: 'uncheck',
-            preferredContactModeMail: 'uncheck',
-            preferredContactModeSMS: 'uncheck',
-            preferredContactModeVoiceCall: 'uncheck',
-            preferredContactModePushNotification: 'uncheck',
+            preferredContactModeEmail: 'check',
+            preferredContactModeMail: 'check',
+            preferredContactModeSMS: 'check',
+            preferredContactModeVoiceCall: 'check',
+            preferredContactModePushNotification: 'check',
+            preferredContactModeWhatsApp: 'check',
 
             //Consent Information
             consentInformationMarketing: 'check',
@@ -903,7 +904,8 @@ const data = {
         },
         InterestAreaInformation: {
             //Preferred SAFRA clubs
-            clubFaber: 'check',
+            clubChoa: 'check',
+            clubFaber: 'uncheck',
             clubPayoh: 'uncheck',
             clubTampines: 'uncheck',
             clubYishun: 'uncheck',
@@ -949,6 +951,7 @@ const data = {
             groupTech: 'check',
             groupTravel: 'uncheck'
         }
+       
     },
 
     CustomerCreationDependentChild: {
@@ -972,7 +975,7 @@ const data = {
             handPhone: '85 658 5896',
             emailAddress: 'testuser',
             emergencyContact: "85 658 5893",
-            homeNumber: "82112342",
+            homeNumber: "62112342",
 
             preferredContactModeSelectAll: 'check',
             preferredContactModeEmail: 'uncheck',

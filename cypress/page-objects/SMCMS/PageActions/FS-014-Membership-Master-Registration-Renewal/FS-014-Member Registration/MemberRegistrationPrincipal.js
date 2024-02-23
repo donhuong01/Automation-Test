@@ -701,23 +701,23 @@ class MemberRegistrationPrincipal {
             cy.UploadFile(elems_MemberRegistrationPrincipal.PERSONALINFORMATION.UPL_SELECTFILES, ProfilePicture)
         }
 
-        // Error Handling
-        if (NameOnNRIC === undefined
-            && NameOnCard === undefined
-            && Nric === undefined
-            && Gender === undefined
-            && DateofBirth === undefined
-            && NSStatus === undefined
-            && NSRank === undefined
-            && Nationality === undefined
-            && MaritalStatus === undefined
-            && InterestinDBSCard === undefined
-            && ProfilePicture === undefined
+        // // Error Handling
+        // if (NameOnNRIC === undefined
+        //     && NameOnCard === undefined
+        //     && Nric === undefined
+        //     && Gender === undefined
+        //     && DateofBirth === undefined
+        //     && NSStatus === undefined
+        //     && NSRank === undefined
+        //     && Nationality === undefined
+        //     && MaritalStatus === undefined
+        //     && InterestinDBSCard === undefined
+        //     && ProfilePicture === undefined
 
-        ) {
-            throw new Error("MemberRegistrationPrincipal.PersonalInformation Error!!./n\
-                             Please provide at least one argument.")
-        }
+        // ) {
+        //     throw new Error("MemberRegistrationPrincipal.PersonalInformation Error!!./n\
+        //                      Please provide at least one argument.")
+        // }
 
     }
 
@@ -743,15 +743,15 @@ class MemberRegistrationPrincipal {
             cy.EnterText(elems_MemberRegistrationPrincipal.ADDRESSINFORMATION.TXT_MAILBOX, MyMailbox)
         }
         // Error Handling
-        if (PostalCode === undefined
-            && UnitNumber === undefined
-            && POBOX === undefined
-            && MyMailbox === undefined
+        // if (PostalCode === undefined
+        //     && UnitNumber === undefined
+        //     && POBOX === undefined
+        //     && MyMailbox === undefined
 
-        ) {
-            throw new Error("MemberRegistrationPrincipal.AddressInformationError!!./n\
-                         Please provide at least one argument.")
-        }
+        // ) {
+        //     throw new Error("MemberRegistrationPrincipal.AddressInformationError!!./n\
+        //                  Please provide at least one argument.")
+        // }
     }
     verifyContactInformation({ Handphone, EmailAddress, HomeNumber, EmergencyContact }) {
         // Verify in Handphone
@@ -774,84 +774,81 @@ class MemberRegistrationPrincipal {
             cy.xpath(elems_MemberRegistrationPrincipal.CONTACTINFORMATION.TXT_EMERGENCYCONTACT).clear()
             cy.EnterText(elems_MemberRegistrationPrincipal.CONTACTINFORMATION.TXT_EMERGENCYCONTACT, EmergencyContact)
         }
-        // Error Handling
-        if (Handphone === undefined
-            && EmailAddress === undefined
-            && HomeNumber === undefined
-            && EmergencyContact === undefined
+        // // Error Handling
+        // if (Handphone === undefined
+        //     && EmailAddress === undefined
+        //     && HomeNumber === undefined
+        //     && EmergencyContact === undefined
 
 
-        ) {
-            throw new Error("MemberRegistrationPrincipal.AddressInformationError!!./n\
-                         Please provide at least one argument.")
-        }
+        // ) {
+        //     throw new Error("MemberRegistrationPrincipal.AddressInformationError!!./n\
+        //                  Please provide at least one argument.")
+        // }
     }
     verifyPreferredContactMode({ SelectAll, Email, Mail, SMS, VoiceCall, PushNotification, WhatsApp }) {
         //Verify in SelectAll
-        if (SelectAll !== undefined) {
-            cy.TickCheckBox(elems_MemberRegistrationPrincipal.CONTACTINFORMATION.CHK_SELECTALL, SelectAll)
-        }
+      
+            cy.VerifyTickCheckBox(elems_MemberRegistrationPrincipal.CONTACTINFORMATION.CHK_SELECTALL, SelectAll)
+
         //Verify in Email
-        if (Email !== undefined) {
-            cy.TickCheckBox(elems_MemberRegistrationPrincipal.CONTACTINFORMATION.CHK_EMAIL, Email)
-        }
+       
+            cy.VerifyTickCheckBox(elems_MemberRegistrationPrincipal.CONTACTINFORMATION.CHK_EMAIL, Email)
+     
         //Verify in Mail
-        if (Mail !== undefined) {
-            cy.TickCheckBox(elems_MemberRegistrationPrincipal.CONTACTINFORMATION.CHK_MAIL, Mail)
-        }
+    
+            cy.VerifyTickCheckBox(elems_MemberRegistrationPrincipal.CONTACTINFORMATION.CHK_MAIL, Mail)
+    
         //Verify in SMS
-        if (SMS !== undefined) {
-            cy.TickCheckBox(elems_MemberRegistrationPrincipal.CONTACTINFORMATION.CHK_SMS, SMS)
-        }
+      
+            cy.VerifyTickCheckBox(elems_MemberRegistrationPrincipal.CONTACTINFORMATION.CHK_SMS, SMS)
+        
         //Verify in VoiceCall
-        if (VoiceCall !== undefined) {
-            cy.TickCheckBox(elems_MemberRegistrationPrincipal.CONTACTINFORMATION.CHK_VOICECALL, VoiceCall)
-        }
+        
+            cy.VerifyTickCheckBox(elems_MemberRegistrationPrincipal.CONTACTINFORMATION.CHK_VOICECALL, VoiceCall)
+        
         //Verify in PushNotification
-        if (PushNotification !== undefined) {
-            cy.TickCheckBox(elems_MemberRegistrationPrincipal.CONTACTINFORMATION.CHK_PUSHNOTIFICATION, PushNotification)
-        }
+    
+            cy.VerifyTickCheckBox(elems_MemberRegistrationPrincipal.CONTACTINFORMATION.CHK_PUSHNOTIFICATION, PushNotification)
+        
         //Verify in WhatsApp
-        if (WhatsApp !== undefined) {
-            cy.TickCheckBox(elems_MemberRegistrationPrincipal.CONTACTINFORMATION.CHK_WHATSAPP, WhatsApp)
-        }
+      
+            cy.VerifyTickCheckBox(elems_MemberRegistrationPrincipal.CONTACTINFORMATION.CHK_WHATSAPP, WhatsApp)
+
         // Error Handling
-        if (SelectAll === undefined
-            && Email === undefined
-            && Mail === undefined
-            && SMS === undefined
-            && VoiceCall === undefined
-            && PushNotification === undefined
-            && WhatsApp === undefined
-
-
-        ) {
-            throw new Error("MemberRegistrationPrincipal.PreferredContactMode!!./n\
-                         Please provide at least one argument.")
-        }
+        // if (SelectAll === undefined
+        //     && Email === undefined
+        //     && Mail === undefined
+        //     && SMS === undefined
+        //     && VoiceCall === undefined
+        //     && PushNotification === undefined
+        //     && WhatsApp === undefined) 
+        
+        // {
+        //     throw Error("MemberRegistrationPrincipal.PreferredContactMode!!./n\
+        //                  Please provide at least one argument.")
+        // }
+        
     }
     verifyConsentInformation({ MarketingConsent, ServiceNotificationConsent, TransactionalConsent }) {
         //Verify in MarketingConsent
-        if (MarketingConsent !== undefined) {
-            cy.TickCheckBox(elems_MemberRegistrationPrincipal.CONTACTINFORMATION.CHK_MARKETINGCONSENT, MarketingConsent)
-        }
+        cy.VerifyTickCheckBox(elems_MemberRegistrationPrincipal.CONTACTINFORMATION.CHK_MARKETINGCONSENT, MarketingConsent)
+    
         //Verify in ServiceNotification
-        if (ServiceNotificationConsent !== undefined) {
-            cy.TickCheckBox(elems_MemberRegistrationPrincipal.CONTACTINFORMATION.CHK_SERVICENOTIFICATIONCONSENT, ServiceNotificationConsent)
-        }
+        cy.VerifyTickCheckBox(elems_MemberRegistrationPrincipal.CONTACTINFORMATION.CHK_SERVICENOTIFICATIONCONSENT, ServiceNotificationConsent)
+        
         //Verify in TransactionalConsent
-        if (TransactionalConsent !== undefined) {
-            cy.TickCheckBox(elems_MemberRegistrationPrincipal.CONTACTINFORMATION.CHK_TRANSACTIONALCONSENT, TransactionalConsent)
-        }
+        cy.VerifyTickCheckBox(elems_MemberRegistrationPrincipal.CONTACTINFORMATION.CHK_TRANSACTIONALCONSENT, TransactionalConsent)
+        
 
         // Error Handling
-        if (MarketingConsent === undefined
-            && ServiceNotificationConsent === undefined
-            && TransactionalConsent === undefined
-        ) {
-            throw new Error("MemberRegistrationPrincipaln.ConsentInformation!!./n\
-                             Please provide at least one argument.")
-        }
+        // if (MarketingConsent === undefined
+        //     && ServiceNotificationConsent === undefined
+        //     && TransactionalConsent === undefined
+        // ) {
+        //     throw new Error("MemberRegistrationPrincipaln.ConsentInformation!!./n\
+        //                      Please provide at least one argument.")
+        // }
     }
     /*****************************************************
 * Method: verifyProofDocument
@@ -907,49 +904,52 @@ class MemberRegistrationPrincipal {
      * @param {string} safraTampines SAFRA Tampines Checkbox Setting
      * @param {string} safraYishun SAFRA Yishun Checkbox Setting
      *****************************************************/
-    verifyPreferredSafraClubs({ safraJurong, safraPunggol, safraToaPayoh, safraMtFaber, safraTampines, safraYishun }) {
+    verifyPreferredSafraClubs({ safraChoa, safraJurong, safraPunggol, safraToaPayoh, safraMtFaber, safraTampines, safraYishun }) {
 
+         // Set SAFRA Choa Chu kang Checkbox
+    
+            cy.VerifyTickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.PREFREEREDSAFRACLUBS.CHK_SAFRACHOA, safraChoa)
+   
         // Set SAFRA Jurong Checkbox
-        if (safraJurong !== undefined) {
-            cy.TickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.PREFREEREDSAFRACLUBS.CHK_SAFRAJURONG, safraJurong)
-        }
+      
+            cy.VerifyTickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.PREFREEREDSAFRACLUBS.CHK_SAFRAJURONG, safraJurong)
+    
 
         // Set SAFRA Punggol Checkbox Checkbox
-        if (safraPunggol !== undefined) {
-            cy.TickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.PREFREEREDSAFRACLUBS.CHK_SAFRAPUNGGOL, safraPunggol)
-        }
+      
+            cy.VerifyTickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.PREFREEREDSAFRACLUBS.CHK_SAFRAPUNGGOL, safraPunggol)
+  
 
         // Set SAFRA Toa Payoh Checkbox
-        if (safraToaPayoh !== undefined) {
-            cy.TickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.PREFREEREDSAFRACLUBS.CHK_SAFRATOAPAYOH, safraToaPayoh)
-        }
+      
+            cy.VerifyTickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.PREFREEREDSAFRACLUBS.CHK_SAFRATOAPAYOH, safraToaPayoh)
+     
 
         // Set SAFRA Mt Faber Checkbox
-        if (safraMtFaber !== undefined) {
-            cy.TickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.PREFREEREDSAFRACLUBS.CHK_SAFRAMTFABER, safraMtFaber)
-        }
+    
+            cy.VerifyTickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.PREFREEREDSAFRACLUBS.CHK_SAFRAMTFABER, safraMtFaber)
+   
 
         // Set SAFRA Tampines Checkbox
-        if (safraTampines !== undefined) {
-            cy.TickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.PREFREEREDSAFRACLUBS.CHK_SAFRATAMPINES, safraTampines)
-        }
+      
+            cy.VerifyTickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.PREFREEREDSAFRACLUBS.CHK_SAFRATAMPINES, safraTampines)
+
 
         // Set SAFRA Yishun Checkbox
-        if (safraYishun !== undefined) {
-            cy.TickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.PREFREEREDSAFRACLUBS.CHK_SAFRATAMPINES, safraYishun)
-        }
+    
+            cy.VerifyTickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.PREFREEREDSAFRACLUBS.CHK_SAFRATAMPINES, safraYishun)
 
         // Error Handling
-        if (safraJurong === undefined
-            && safraPunggol === undefined
-            && safraToaPayoh === undefined
-            && safraMtFaber === undefined
-            && safraTampines === undefined
-            && safraYishun === undefined
-        ) {
-            throw new Error("MemberRegistrationPrincipal.fillOutPreferredSafraClubs Error!!./n\
-                             Please provide at least one argument.")
-        }
+        // if (safraJurong === undefined
+        //     && safraPunggol === undefined
+        //     && safraToaPayoh === undefined
+        //     && safraMtFaber === undefined
+        //     && safraTampines === undefined
+        //     && safraYishun === undefined
+        // ) {
+        //     throw new Error("MemberRegistrationPrincipal.fillOutPreferredSafraClubs Error!!./n\
+        //                      Please provide at least one argument.")
+        // }
 
     }
 
@@ -964,28 +964,28 @@ class MemberRegistrationPrincipal {
     verifySafraBrands({ energyOneGym, kidzAmazeSplshIndrPlayGrnd, finsSwimSchool }) {
 
         // Set Energy One Gtm Checkbox
-        if (energyOneGym !== undefined) {
-            cy.TickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.SAFRABRANDS.CHK_ENERGYONEGYM, energyOneGym)
-        }
+     
+            cy.VerifyTickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.SAFRABRANDS.CHK_ENERGYONEGYM, energyOneGym)
+  
 
         // Set Kidz Amaze/Splash Indoor Playground Checkbox Checkbox
-        if (kidzAmazeSplshIndrPlayGrnd !== undefined) {
-            cy.TickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.SAFRABRANDS.CHK_KIDSAMAZESPLSHINDLAYG, kidzAmazeSplshIndrPlayGrnd)
-        }
+       
+            cy.VerifyTickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.SAFRABRANDS.CHK_KIDSAMAZESPLSHINDLAYG, kidzAmazeSplshIndrPlayGrnd)
+   
 
         // Set FINS Swim School Checkbox
-        if (finsSwimSchool !== undefined) {
-            cy.TickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.SAFRABRANDS.CHK_FINSSWIMSCHOOL, finsSwimSchool)
-        }
+       
+            cy.VerifyTickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.SAFRABRANDS.CHK_FINSSWIMSCHOOL, finsSwimSchool)
+    
 
         // Error Handling
-        if (energyOneGym === undefined
-            && kidzAmazeSplshIndrPlayGrnd === undefined
-            && finsSwimSchool === undefined
-        ) {
-            throw new Error("MemberRegistrationPrincipal.fillOutSafraBrands Error!!./n\
-                             Please provide at least one argument.")
-        }
+        // if (energyOneGym === undefined
+        //     && kidzAmazeSplshIndrPlayGrnd === undefined
+        //     && finsSwimSchool === undefined
+        // ) {
+        //     throw new Error("MemberRegistrationPrincipal.fillOutSafraBrands Error!!./n\
+        //                      Please provide at least one argument.")
+        // }
 
     }
 
@@ -1011,86 +1011,85 @@ class MemberRegistrationPrincipal {
     }) {
 
         // verify All Events and Activities Checkbox
-        if (allEventsAndActivities !== undefined) {
-            cy.TickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.IAMINTERESTEDIN.CHK_ALLEVENTSANDACTIVITIES, allEventsAndActivities)
-        }
+       
+            cy.VerifyTickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.IAMINTERESTEDIN.CHK_ALLEVENTSANDACTIVITIES, allEventsAndActivities)
+      
 
         // verify All Peaks and Promotions Checkbox
-        if (allPeaksAndPromos !== undefined) {
-            cy.TickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.IAMINTERESTEDIN.CHK_ALLPEAKSANDPROMOTIONS, allPeaksAndPromos)
-        }
+    
+            cy.VerifyTickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.IAMINTERESTEDIN.CHK_ALLPEAKSANDPROMOTIONS, allPeaksAndPromos)
+    
 
         // verify Fitness & Adventure Checkbox
-        if (fitnessAndAdventure !== undefined) {
-            cy.TickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.IAMINTERESTEDIN.CHK_FITNESSANDADVENTURE, fitnessAndAdventure)
-        }
+    
+            cy.VerifyTickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.IAMINTERESTEDIN.CHK_FITNESSANDADVENTURE, fitnessAndAdventure)
 
         // verify Child Enrichment/Activitie Checkbox
-        if (childEnrichmentActivities !== undefined) {
-            cy.TickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.IAMINTERESTEDIN.CHK_CHILDENRICHMENTACTIVITIES, childEnrichmentActivities)
-        }
+      
+            cy.VerifyTickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.IAMINTERESTEDIN.CHK_CHILDENRICHMENTACTIVITIES, childEnrichmentActivities)
+   
 
         // verify Lifelong Learning Checkbox
-        if (lifeLongLearning !== undefined) {
-            cy.TickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.IAMINTERESTEDIN.CHK_LIFELONGLEARNING, lifeLongLearning)
-        }
+       
+            cy.VerifyTickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.IAMINTERESTEDIN.CHK_LIFELONGLEARNING, lifeLongLearning)
+      
 
         // verify Leisure & Entertainment Checkbox
-        if (leisureAndEntrtnmnt !== undefined) {
-            cy.TickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.IAMINTERESTEDIN.CHK_LEISUREANDENTERTAINMENT, leisureAndEntrtnmnt)
-        }
+       
+            cy.VerifyTickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.IAMINTERESTEDIN.CHK_LEISUREANDENTERTAINMENT, leisureAndEntrtnmnt)
+     
 
         // verify Food & Beverages Checkbox
-        if (foodAndBeverages !== undefined) {
-            cy.TickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.IAMINTERESTEDIN.CHK_FOODANDBEVERAGES, foodAndBeverages)
-        }
+       
+            cy.VerifyTickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.IAMINTERESTEDIN.CHK_FOODANDBEVERAGES, foodAndBeverages)
+     
 
         // verify Shopping & Groceries Checkbox
-        if (shoppingAndGroceries !== undefined) {
-            cy.TickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.IAMINTERESTEDIN.CHK_SHOPPINGANDGROCERIES, shoppingAndGroceries)
-        }
+      
+            cy.VerifyTickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.IAMINTERESTEDIN.CHK_SHOPPINGANDGROCERIES, shoppingAndGroceries)
+
 
         // verify Travel Checkbox
-        if (travel !== undefined) {
-            cy.TickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.IAMINTERESTEDIN.CHK_TRAVEL, travel)
-        }
+       
+            cy.VerifyTickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.IAMINTERESTEDIN.CHK_TRAVEL, travel)
+   
 
         // verify Motoring Checkbox
-        if (motoring !== undefined) {
-            cy.TickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.IAMINTERESTEDIN.CHK_MOTORING, motoring)
-        }
+    
+            cy.VerifyTickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.IAMINTERESTEDIN.CHK_MOTORING, motoring)
+     
 
         // verify Health & Beauty Checkbox
-        if (healthAndBeauty !== undefined) {
-            cy.TickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.IAMINTERESTEDIN.CHK_HEALTHANDBEAUTY, healthAndBeauty)
-        }
+      
+            cy.VerifyTickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.IAMINTERESTEDIN.CHK_HEALTHANDBEAUTY, healthAndBeauty)
+ 
 
         // verify SAFRAPOINTS Rewards Programme Checkbox
-        if (safraPtsRewardsProgramme !== undefined) {
-            cy.TickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.IAMINTERESTEDIN.CHK_SAFRAPOINTSREWARDPROGRAMME, safraPtsRewardsProgramme)
-        }
-        if (ensman !== undefined) {
-            cy.TickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.SAFRANEWSLETTER.CHK_ENSMAN, ensman)
-        }
+       
+            cy.VerifyTickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.IAMINTERESTEDIN.CHK_SAFRAPOINTSREWARDPROGRAMME, safraPtsRewardsProgramme)
+   
+    
+            cy.VerifyTickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.SAFRANEWSLETTER.CHK_ENSMAN, ensman)
+     
 
         // Error Handling
-        if (allEventsAndActivities === undefined
-            && allPeaksAndPromos === undefined
-            && fitnessAndAdventure === undefined
-            && childEnrichmentActivities === undefined
-            && lifeLongLearning === undefined
-            && leisureAndEntrtnmnt === undefined
-            && foodAndBeverages === undefined
-            && shoppingAndGroceries === undefined
-            && travel === undefined
-            && motoring === undefined
-            && healthAndBeauty === undefined
-            && safraPtsRewardsProgramme === undefined
-            && ensman === undefined
-        ) {
-            throw new Error("MemberRegistrationPrincipal.fillOutIamInterestedIn Error!!./n\
-                             Please provide at least one argument.")
-        }
+        // if (allEventsAndActivities === undefined
+        //     && allPeaksAndPromos === undefined
+        //     && fitnessAndAdventure === undefined
+        //     && childEnrichmentActivities === undefined
+        //     && lifeLongLearning === undefined
+        //     && leisureAndEntrtnmnt === undefined
+        //     && foodAndBeverages === undefined
+        //     && shoppingAndGroceries === undefined
+        //     && travel === undefined
+        //     && motoring === undefined
+        //     && healthAndBeauty === undefined
+        //     && safraPtsRewardsProgramme === undefined
+        //     && ensman === undefined
+        // ) {
+        //     throw new Error("MemberRegistrationPrincipal.fillOutIamInterestedIn Error!!./n\
+        //                      Please provide at least one argument.")
+        // }
 
     }
 
@@ -1143,100 +1142,100 @@ class MemberRegistrationPrincipal {
     }) {
 
         // verify SAFRA Adventure Club Checkbox
-        if (safraAdventureClub !== undefined) {
-            cy.TickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.INTERESTGROUPSMICROCLUBS.CHK_SAFRAADVENTURECLUB, safraAdventureClub)
-        }
+   
+            cy.VerifyTickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.INTERESTGROUPSMICROCLUBS.CHK_SAFRAADVENTURECLUB, safraAdventureClub)
+ 
 
         // verify Bitez (F&B) Checkbox
-        if (bitezFandB !== undefined) {
-            cy.TickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.INTERESTGROUPSMICROCLUBS.CHK_BITEZ, bitezFandB)
-        }
+       
+            cy.VerifyTickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.INTERESTGROUPSMICROCLUBS.CHK_BITEZ, bitezFandB)
+       
 
         // verify SAFRA Community Services Club Checkbox
-        if (safraCommSrvcsClub !== undefined) {
-            cy.TickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.INTERESTGROUPSMICROCLUBS.CHK_SAFRACOMSECLUB, safraCommSrvcsClub)
-        }
+     
+            cy.VerifyTickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.INTERESTGROUPSMICROCLUBS.CHK_SAFRACOMSECLUB, safraCommSrvcsClub)
+       
 
         // verify SAFRA Competitive Sports Club Checkbox
-        if (safraCompSportsClub !== undefined) {
-            cy.TickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.INTERESTGROUPSMICROCLUBS.CHK_SAFRACOMPSPORTSCLUB, safraCompSportsClub)
-        }
+   
+            cy.VerifyTickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.INTERESTGROUPSMICROCLUBS.CHK_SAFRACOMPSPORTSCLUB, safraCompSportsClub)
+     
 
         // verify SAFRA Digital Media Club Checkbox
-        if (safraDigitalMediaClub !== undefined) {
-            cy.TickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.INTERESTGROUPSMICROCLUBS.CHK_SAFRADIGMECLUB, safraDigitalMediaClub)
-        }
+       
+            cy.VerifyTickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.INTERESTGROUPSMICROCLUBS.CHK_SAFRADIGMECLUB, safraDigitalMediaClub)
+  
 
         // verify SAFRA Entrepreneurs Club Checkbox
-        if (safraEntrpnrsClub !== undefined) {
-            cy.TickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.INTERESTGROUPSMICROCLUBS.CHK_SAFRAENTREPRENEURSCLUB, safraEntrpnrsClub)
-        }
+       
+            cy.VerifyTickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.INTERESTGROUPSMICROCLUBS.CHK_SAFRAENTREPRENEURSCLUB, safraEntrpnrsClub)
+     
 
         // verify Fuse (Entertainment) Checkbox
-        if (fuseEntrtnmnt !== undefined) {
-            cy.TickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.INTERESTGROUPSMICROCLUBS.CHK_FUSE, fuseEntrtnmnt)
-        }
+       
+            cy.VerifyTickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.INTERESTGROUPSMICROCLUBS.CHK_FUSE, fuseEntrtnmnt)
+      
 
         // verify SAFRA Golfing Section Checkbox
-        if (safraGolfingSection !== undefined) {
-            cy.TickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.INTERESTGROUPSMICROCLUBS.CHK_SAFRAGOLFINGSECTION, safraGolfingSection)
-        }
+    
+            cy.VerifyTickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.INTERESTGROUPSMICROCLUBS.CHK_SAFRAGOLFINGSECTION, safraGolfingSection)
+
 
         // verify SAFRA MovieMax Checkbox
-        if (safraMovieMax !== undefined) {
-            cy.TickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.INTERESTGROUPSMICROCLUBS.CHK_SAFRAMOVIEMAX, safraMovieMax)
-        }
+     
+            cy.VerifyTickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.INTERESTGROUPSMICROCLUBS.CHK_SAFRAMOVIEMAX, safraMovieMax)
+    
 
-        // verify SAFRA Photographic Club Checkbox
-        if (safraPhotoClub !== undefined) {
-            cy.TickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.INTERESTGROUPSMICROCLUBS.CHK_SAFRAPHOTOGRAPHICCLUB, safraPhotoClub)
-        }
+        // // verify SAFRA Photographic Club Checkbox
+       
+        //     cy.VerifyTickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.INTERESTGROUPSMICROCLUBS.CHK_SAFRAPHOTOGRAPHICCLUB, safraPhotoClub)
+  
 
         // verify SAFRA Running Club Checkbox
-        if (safraRunningClub !== undefined) {
-            cy.TickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.INTERESTGROUPSMICROCLUBS.CHK_SAFRAPHOTOGRAPHICCLUB, safraRunningClub)
-        }
+       
+            cy.VerifyTickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.INTERESTGROUPSMICROCLUBS.CHK_SAFRARUNNINGCLUB, safraRunningClub)
+     
 
         // verify SAFRA Shooting Club Checkbox
-        if (safraShootingClub !== undefined) {
-            cy.TickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.INTERESTGROUPSMICROCLUBS.CHK_SAFRASHOOTINGCLUB, safraShootingClub)
-        }
+       
+            cy.VerifyTickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.INTERESTGROUPSMICROCLUBS.CHK_SAFRASHOOTINGCLUB, safraShootingClub)
+      
 
         // verifySAFRA Social Badmintion Club Checkbox
-        if (safraSocialBadmntnClub !== undefined) {
-            cy.TickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.INTERESTGROUPSMICROCLUBS.CHK_SAFRASOCBADCLUB, safraSocialBadmntnClub)
-        }
+     
+            cy.VerifyTickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.INTERESTGROUPSMICROCLUBS.CHK_SAFRASOCBADCLUB, safraSocialBadmntnClub)
+     
 
         // verify SAFRA Tech Club Checkbox
-        if (safraTechClub !== undefined) {
-            cy.TickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.INTERESTGROUPSMICROCLUBS.CHK_SAFRATECHCLUB, safraTechClub)
-        }
+       
+            cy.VerifyTickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.INTERESTGROUPSMICROCLUBS.CHK_SAFRATECHCLUB, safraTechClub)
+ 
 
         // verify SAFRA Travel Club Checkbox
-        if (safraTravelClub !== undefined) {
-            cy.TickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.INTERESTGROUPSMICROCLUBS.CHK_SAFRATRAVELCLUB, safraTravelClub)
-        }
+       
+            cy.VerifyTickCheckBox(elems_MemberRegistrationPrincipal.INTERESTEDAREAINFORMATION.INTERESTGROUPSMICROCLUBS.CHK_SAFRATRAVELCLUB, safraTravelClub)
+     
 
-        // Error Handling
-        if (safraAdventureClub === undefined
-            && bitezFandB === undefined
-            && safraCommSrvcsClub === undefined
-            && safraCompSportsClub === undefined
-            && safraDigitalMediaClub === undefined
-            && safraEntrpnrsClub === undefined
-            && fuseEntrtnmnt === undefined
-            && safraGolfingSection === undefined
-            && safraMovieMax === undefined
-            && safraPhotoClub === undefined
-            && safraRunningClub === undefined
-            && safraShootingClub === undefined
-            && safraSocialBadmntnClub === undefined
-            && safraTechClub === undefined
-            && safraTravelClub === undefined
-        ) {
-            throw new Error("MemberRegistrationPrincipal.fillOutInterestGrpsAndMicroClubs Error!!./n\
-                             Please provide at least one argument.")
-        }
+        // // Error Handling
+        // if (safraAdventureClub === undefined
+        //     && bitezFandB === undefined
+        //     && safraCommSrvcsClub === undefined
+        //     && safraCompSportsClub === undefined
+        //     && safraDigitalMediaClub === undefined
+        //     && safraEntrpnrsClub === undefined
+        //     && fuseEntrtnmnt === undefined
+        //     && safraGolfingSection === undefined
+        //     && safraMovieMax === undefined
+        //     && safraPhotoClub === undefined
+        //     && safraRunningClub === undefined
+        //     && safraShootingClub === undefined
+        //     && safraSocialBadmntnClub === undefined
+        //     && safraTechClub === undefined
+        //     && safraTravelClub === undefined
+        // ) {
+        //     throw new Error("MemberRegistrationPrincipal.fillOutInterestGrpsAndMicroClubs Error!!./n\
+        //                      Please provide at least one argument.")
+        // }
 
 
     }
@@ -1307,11 +1306,11 @@ class MemberRegistrationPrincipal {
             cy.ValidateElementText(elems_PageHeader.LBL_PAGETITLE, 'Membership Registration - Principal')
         }
 
-        // Error Handling
-        if (Name === undefined) {
-            throw new Error("MemberRegistrationPrincipal.selectNameItem Error!!./n\
-                             Please select at least one item.")
-        }
+        // // Error Handling
+        // if (Name === undefined) {
+        //     throw new Error("MemberRegistrationPrincipal.selectNameItem Error!!./n\
+        //                      Please select at least one item.")
+        // }
     }
 
     /*****************************************************

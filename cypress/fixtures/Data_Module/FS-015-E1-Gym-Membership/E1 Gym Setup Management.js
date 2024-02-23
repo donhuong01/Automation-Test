@@ -1,7 +1,7 @@
 const data = {
     Name: 'E1-Test-Auto-'+ Math.floor(Math.random() * 1001),
     Code: 'ETA',
-    IGMain: 'MOVIEMAX',
+    IGMain: 'RCD E1 test', //MOVIEMAX
     SubcategoryType: 'E1 Silver',
     PublishingDate: '01-Jan-2024',
     EndDate: '30-Dec-2024',
