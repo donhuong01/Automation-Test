@@ -228,10 +228,10 @@ Cypress.Commands.add('SelectTableItem2', (locator, columnReference1, rowReferenc
 Cypress.Commands.add('TickSpecificTableItem', (Value) => {
     cy.log('------ Tick Specific Table Item : ' + Value + ' ------')
     cy.contains('td', Value)
-      .scrollIntoView()  
-      .siblings()                           
-      .click()
-   
+        .scrollIntoView()
+        .siblings()
+        .click()
+
 })
 
 
@@ -1078,13 +1078,13 @@ Cypress.Commands.add("EnterDateSuspension", (locator, Date) => {
     // cy.log(Year)
 
     cy.xpath(locator).eq(0).clear({ force: true })
-        .type('{rightArrow}').wait(2000)
-        .type('{rightArrow}').wait(2000)
-        .type(YYYY).wait(2000)
-        .type('{leftArrow}').wait(2000)
-        .type(MMM).wait(2000)
-        .type('{leftArrow}').wait(2000)
-        .type(DD).wait(2000)
+        .type('{rightArrow}', { timeout: 2000 })
+        .type('{rightArrow}', { timeout: 2000 })
+        .type(YYYY, { timeout: 2000 })
+        .type('{leftArrow}', { timeout: 2000 })
+        .type(MMM, { timeout: 2000 })
+        .type('{leftArrow}', { timeout: 2000 })
+        .type(DD, { timeout: 2000 })
 
 })
 
