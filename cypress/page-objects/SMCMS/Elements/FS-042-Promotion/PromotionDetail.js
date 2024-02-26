@@ -60,11 +60,11 @@ class elems_PromotionDetail {
         TAB_PROMOTIONCRIERIA: '//button[text()="Promotion Criteria"]',
         TXT_APPLICABLEAGERANGEFORCUSTOMERFROM: '//input[@id="numApplicableAgeRangeForCustomerFrom"]',
         TXT_APPLICABLEAGERANGEFORCUSTOMERTO: '//input[@id="numApplicableAgeRangeForCustomerTo"]',
-        BTN_ADDAPPLICABLECUSCATEG: '//h3[text()="Applicable Customer Categories"]/following-sibling::div//button[text()="Add"]',
+        BTN_ADDAPPLICABLECUSCATEG: '//h3[text()="Applicable Customer Categories"]/following-sibling::div//button[text()="Add Customer Category"]',
         TXT_CUSTOMERCATEGORYNAME: '//input[@id="txtCustomerCategoryName"]',
-        BTN_ADDAPPLICBLEMEMBERID: '//h3[text()="Applicable Member ID"]/following-sibling::div//button[text()="Add"]',
+        BTN_ADDAPPLICBLEMEMBERID: '//h3[text()="Applicable Member ID"]/following-sibling::div//button[text()="Add Member"]',
         TXT_MEMBERID: '//input[@id="txtMemberId"]',
-        BTN_ADDAPPLICABLESOURCECHANNEL: '//h3[text()="Applicable Source Channel"]/following-sibling::div//button[text()="Add"]',
+        BTN_ADDAPPLICABLESOURCECHANNEL: '//h3[text()="Applicable Source Channel"]/following-sibling::div//button[text()="Add Source Channel"]',
         TXT_SOURCECHANNELNAME: '//input[@id="txtName"]',
 
 

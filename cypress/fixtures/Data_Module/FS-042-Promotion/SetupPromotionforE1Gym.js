@@ -31,8 +31,8 @@ const data = [
 
         // Please Provid data E1 Renewal
         MemberId: 'A300001836',
-        E1Membership: 'G1000000024',
-        RenewalTerm: '36'
+        E1Membership: 'G1000000118',
+        RenewalTerm: '3'
 
     },
 

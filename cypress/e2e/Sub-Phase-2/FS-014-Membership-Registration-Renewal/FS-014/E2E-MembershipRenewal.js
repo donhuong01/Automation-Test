@@ -134,7 +134,7 @@ const E2EMemberShipRenewal = (CustomerNRICFull) => {
 
 
             // Membership Tenure Selection
-            MemTenureSelect.principalTenureSelection(PrincipalName, '10 Years')
+            MemTenureSelect.principalTenureSelection(PrincipalName, '5 Years')
 
             // Click on add to cart
             MemTenureSelect.addToCart()
@@ -158,7 +158,7 @@ const E2EMemberShipRenewal = (CustomerNRICFull) => {
             MembershipRenewal.ClickMemberShipRenewal()
 
             // Membership Tenure Selection
-            MemTenureSelect.TenureSelectionRenewal(PrincipalName, '1 Year')
+            MemTenureSelect.TenureSelectionRenewal(PrincipalName, '5 Years')
 
             // Select Principal
             //MemTenureSelect.SelectPrincipal(PrincipalName)

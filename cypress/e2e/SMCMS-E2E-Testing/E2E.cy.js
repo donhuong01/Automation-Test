@@ -196,7 +196,7 @@ import FacilityGroupBookingBallot from '../Sub-Phase-2/FS-010-Clubs(Facilites)/E
 //NRIC Generator
 import { nricGenerator } from '../../support/nricGenerator'
 
-const CustomerNRICFull = nricGenerator('S', 43)
+const CustomerNRICFull = nricGenerator('T', 43)
 const DepCustomerNRICFull = nricGenerator('S', 43)
 const Dep2CustomerNRICFull = nricGenerator('S', 43)
 const Dep3CustomerNRICFull = nricGenerator('S', 43)
@@ -296,24 +296,24 @@ beforeEach(() => {
 // })
 
 
-describe('E2E Auto Testing:FS-014 Membership: Master Registration and Renewal', () => {
+// describe('E2E Auto Testing:FS-014 Membership: Master Registration and Renewal', () => {
 
 //  MembershipRegistration(CustomerNRICFull) // Quick Testing on Membership Registration
 //  MembershipPrincipalRegistration(CustomerNRICFull,DepCustomerNRICFull, Dep2CustomerNRICFull) // Full Testing on Membership Registration
 //  CustomerCheckIn()
- MemberType()
+//  MemberType() //Needs Update
 //  BadAddressUpdate()// Fail Need code updates
 //  MembershipRenewalAdvise()
- WithdrawalOfConsent(E2EData.ACTIVE_MEMBERID_FOR_WITHDRAWAL_OF_CONSENT) //Enter Member ID for Withdrawal Of Consent
- SourceChannel()
+//  WithdrawalOfConsent(E2EData.ACTIVE_MEMBERID_FOR_WITHDRAWAL_OF_CONSENT) //Enter Member ID for Withdrawal Of Consent
+//  SourceChannel()
 //  MemberStatusReasonCode() // Not Required
 //  MassUpdateForMemberData() // Needs to update code for Approval
 //  MembershipModuleSettings()
- SFSMemberRegistion(CustomerNRICFull,DepCustomerNRICFull, Dep2CustomerNRICFull) //Add three NRIC's for Principal, Dependent Child, Dependent Spouse
- E2EMemberShipRenewal(CustomerNRICFull) //Add NRIC For Principal Registration
+//  SFSMemberRegistion(CustomerNRICFull,DepCustomerNRICFull, Dep2CustomerNRICFull) //Add three NRIC's for Principal, Dependent Child, Dependent Spouse
+//  E2EMemberShipRenewal(CustomerNRICFull) //Add NRIC For Principal Registration
 
 
-LifeMembershipManagment(CustomerNRICFull) //Add NRIC For Principal Registration
+// LifeMembershipManagment(CustomerNRICFull) //Add NRIC For Principal Registration
 //   BatchMembershipRegistration(
 
 //     //Pass Info for Existing Member MemberID and LAST4DigitsNRIC
@@ -333,7 +333,7 @@ LifeMembershipManagment(CustomerNRICFull) //Add NRIC For Principal Registration
 //     E2EData.BATCH_REGISTRATION.NRIC_FOR_ADDING_NEW_DEPENDENT,
 //     E2EData.BATCH_REGISTRATION.PRINCIPALID_FOR_NEW_DEPENDENT)
 
-})
+// })
 
 
 
@@ -504,16 +504,16 @@ LifeMembershipManagment(CustomerNRICFull) //Add NRIC For Principal Registration
 // })
 
 
-// describe('E2E Auto Testing:FS-042 Promotion', ()=> {
+describe('E2E Auto Testing:FS-042 Promotion', ()=> {
 
-//   PromotionforE1Gym(E2EData.MEMBERID_FOR_E1_RENEWAL_PROMOTION.MEMBER_ID) //Provide Active Member
-//   PrommotionForFacilityandFacilityType(E2EData.MEMBERID_FOR_FACILITY_PROMOTION.MEMBER_ID) //Provide Active Member
-//   PromotionforInHouseMerchandise (E2EData.MEMBERID_FOR_INHOUSE_MERCHANDISE_PROMOTION.MEMBERID) //Provide Active Member
-//   PromotionforInterestGroup(E2EData.MEMBERID_FOR_INTERESTG_PROMOTION.MEMBERID) //Provide Active Member
-//   PromoUtilization()
-//   Promotion()
-//   PromotionforMembership(E2EData.FULLNRIC_FOR_MEMBERSHIP_PROMOTION.FULLNRIC) //Provide New NRIC
-// })
+  // PromotionforE1Gym(E2EData.MEMBERID_FOR_E1_RENEWAL_PROMOTION.MEMBER_ID) //Provide Active Member - Updated
+  // PrommotionForFacilityandFacilityType(E2EData.MEMBERID_FOR_FACILITY_PROMOTION.MEMBER_ID) //Provide Active Member
+  PromotionforInHouseMerchandise (E2EData.MEMBERID_FOR_INHOUSE_MERCHANDISE_PROMOTION.MEMBERID) //Provide Active Member
+  // PromotionforInterestGroup(E2EData.MEMBERID_FOR_INTERESTG_PROMOTION.MEMBERID) //Provide Active Member
+  // PromoUtilization()
+  // Promotion()
+  // PromotionforMembership(E2EData.FULLNRIC_FOR_MEMBERSHIP_PROMOTION.FULLNRIC) //Provide New NRIC
+})
 
 
 

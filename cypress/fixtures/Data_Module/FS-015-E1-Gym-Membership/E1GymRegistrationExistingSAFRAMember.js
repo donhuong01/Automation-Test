@@ -27,7 +27,7 @@ const data = [
         DependencyType: 'Principal',
         category: 'AS',
         PreferredClubHouse: 'SAFRA Jurong',
-        EffectiveDate: '24-May-2023',
+        EffectiveDate: '23-Feb-2024',
         Terms: '3',
         AddWaiver: 'No'       //Yes or No
     },

@@ -32,9 +32,9 @@ describe('CustomerCheckin', function () {
             checkin.checkIn({type,value1,value2,expectedPage})
             cy.wait(3000)
             cy.url().should('include', '/membership/memberInformation')
-            cy.wait(5000)    
-            //Click cancel
-            memberinfo.cancel(checkin_expectedPg)
+            //cy.wait(2000)    
+            // Logout
+            cy.LogoutOfSmcms()
             
         })
 
@@ -48,8 +48,10 @@ describe('CustomerCheckin', function () {
 
             checkin.checkIn({type,value1,value2,expectedPage})
             //Click cancel
-            cy.wait(5000)  
-            memberinfo.cancel(checkin_expectedPg)    
+            cy.wait(2000)  
+            //memberinfo.cancel(checkin_expectedPg)    
+            // Logout
+            cy.LogoutOfSmcms()
         })
     
             //checkin with Email Address
@@ -63,8 +65,9 @@ describe('CustomerCheckin', function () {
             checkin.checkIn({type,value1,value2,expectedPage})
             cy.wait(5000)
             //Click cancel
-            memberinfo.cancel(checkin_expectedPg)
-        
+            //memberinfo.cancel(checkin_expectedPg)
+            // Logout
+            cy.LogoutOfSmcms()
         })
    
             //checkin with Mobile number
@@ -80,7 +83,9 @@ describe('CustomerCheckin', function () {
             cy.wait(5000)
 
             //Click cancel
-            memberinfo.cancel(checkin_expectedPg)
+            //memberinfo.cancel(checkin_expectedPg)
+            // Logout
+            cy.LogoutOfSmcms()
         })
              //checkin with Scan e-card
         it('Checkin with Scan e-card',function(){
@@ -94,7 +99,9 @@ describe('CustomerCheckin', function () {
             cy.wait(5000)
 
             //Click cancel
-            memberinfo.cancel(checkin_expectedPg)
+            //memberinfo.cancel(checkin_expectedPg)
+            // Logout
+            cy.LogoutOfSmcms()
         })
             //checkin with Swipe card
         it('Checkin with Swipe card',function(){
@@ -108,7 +115,8 @@ describe('CustomerCheckin', function () {
             cy.wait(5000)
 
             //Click cancel
-            memberinfo.cancel(checkin_expectedPg)
+            //memberinfo.cancel(checkin_expectedPg)// Logout
+            cy.LogoutOfSmcms()
         })
 
     })

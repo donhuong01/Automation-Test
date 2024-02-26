@@ -78,8 +78,8 @@ class LifeMembership {
         cy.wait(8000)
         cy.xpath(elems_PageHeader.BTN_SHOPPINGCART).click({force: true})
         cy.wait(8000)
-        cy.xpath('//span[text()="Standard"]')
-        cy.Click('//span[text()="Standard"]')
+        cy.xpath('(//span[@class="k-input"])[1]') ////span[text()="Standard"]
+        cy.Click('(//span[@class="k-input"])[1]') ////span[text()="Standard"]
          cy.xpath('//ul//li').contains('A-').click()
       
       

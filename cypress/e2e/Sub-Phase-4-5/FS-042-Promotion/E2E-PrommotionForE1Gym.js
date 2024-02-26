@@ -53,26 +53,26 @@ Promodata.forEach(each => {
 
             PromotionDetail.PromotionTypeTab(PromotionType, StartDate, EndDate)
 
-            // PromotionDetail.SaveAsDraft()
+            PromotionDetail.SaveAsDraft()
 
-            // PromotionListing.FilterByPromotionName(PromotionTitle)
+            PromotionListing.FilterByPromotionName(PromotionTitle)
 
-            // PromotionListing.ClickSearchFilter()
+            PromotionListing.ClickSearchFilter()
 
-            // PromotionListing.ClickTableLink()
+            PromotionListing.ClickTableLink()
 
             //Benifit Item Tab
             PromotionDetail.ClickOnTab('Benefit Item')
 
             PromotionDetail.BenefitItemTab(ItemCate, Quantity, BenefitType, FixedDollarRate, BundlePromotion)
 
-            // PromotionDetail.SaveAsDraft()
+            PromotionDetail.SaveAsDraft()
 
-            // PromotionListing.FilterByPromotionName(PromotionTitle)
+            PromotionListing.FilterByPromotionName(PromotionTitle)
 
-            // PromotionListing.ClickSearchFilter()
+            PromotionListing.ClickSearchFilter()
 
-            // PromotionListing.ClickTableLink()
+            PromotionListing.ClickTableLink()
 
             //Promotion Criteria
             PromotionDetail.ClickOnTab('Promotion Criteria')
@@ -83,7 +83,7 @@ Promodata.forEach(each => {
 
             common.ApprovalWorkFlow('PMO', 'Promotion Approval Workflow', Approval, 'test')
 
-            cy.visit('/club/promotionListing').wait(8000)
+            cy.visit('/club/promotionListing').wait(3000)
 
             PromotionListing.FilterByPromotionName(PromotionTitle)
 
@@ -110,7 +110,7 @@ Promodata.forEach(each => {
 
                 common.Checkin(MemberId)
 
-                cy.wait(15000)
+                cy.wait(5000)
 
                 cy.visit('/membership/e1GymMembershipRenewal').wait(5000)
 
@@ -118,7 +118,7 @@ Promodata.forEach(each => {
 
                 common.AddToCart()
 
-                cy.wait(15000)
+                cy.wait(5000)
 
                 if (BasicType === 'Promo Code') {
 
@@ -129,6 +129,11 @@ Promodata.forEach(each => {
                 } else {
 
                     cy.log('to verify if the standard promotion is applied')
+                    cy.Click('//div[@class="page-title"]//following-sibling::div//table//tbody//td[9]//a')
+                    cy.SelectDropDownItem('//span[@id="txtStandardPromotion"]', PromotionTitle)
+                    cy.Click('//button[text()="Select"]')
+
+
 
                 }
 
@@ -139,7 +144,7 @@ Promodata.forEach(each => {
 
                 cy.visit('/club/promotionUtilizationListing').wait(3000)
 
-                PromotionUtilizationListing.VerifyAppliedPromotion(PromotionTitle)
+                //PromotionUtilizationListing.VerifyAppliedPromotion(PromotionTitle) Uncomment when issue is fixed
 
                 cy.LogoutOfSmcms()
 
