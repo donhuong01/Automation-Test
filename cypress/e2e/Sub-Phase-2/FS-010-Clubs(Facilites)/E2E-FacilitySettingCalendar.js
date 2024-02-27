@@ -36,6 +36,7 @@ const FacilitySettingsCalendar = () => {
 
             FacilitySettingsCalendarListingForm.CreateNew()
             FacilitySettingsCalendarDetailForm.EnterCalendarName(CalendarName)
+            FacilitySettingsCalendarDetailForm.AddHolidayDates(HolidayName1, HolidayDate1)
             FacilitySettingsCalendarDetailForm.SaveAsDraft()
             cy.wait(3000)
             FacilitySettingsCalendarListingForm.FillOutSettingCalendarForm(CalendarName, DraftStatus, RecordStatus)

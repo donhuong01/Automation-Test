@@ -108,7 +108,7 @@ Cypress.Commands.add('TickCheckBox', (locator, value) => {
  *****************************************************/
 Cypress.Commands.add('VerifyTickCheckBox', (locator, expectedvalue) => {
     cy.log('------ Checks Checkbox : ' + locator + ' ------' + expectedvalue)
- 
+
     cy.xpath(locator).scrollIntoView().should('exist')
 
     if (expectedvalue == 'check') {
@@ -122,27 +122,27 @@ Cypress.Commands.add('VerifyTickCheckBox', (locator, expectedvalue) => {
     //                         Accepted 'value' values: UNCHECK")
     // }
 
-//     if (expectedvalue !== 'check') {
-//         // Verify that the checkbox is checked
-//         cy.xpath(locator).should('be.checked');
-    
-//     }
+    //     if (expectedvalue !== 'check') {
+    //         // Verify that the checkbox is checked
+    //         cy.xpath(locator).should('be.checked');
 
-//     else if (expectedvalue !== 'uncheck'){
-//         // Verify that the checkbox is unchecked
-//         cy.xpath(locator).should('not.be.checked');
-//   } 
+    //     }
 
-        // Conditionally verify based on the state of the checkbox
-        // if (expectedvalue == "CHECK") {
-        //   // Verify that the checkbox is checked
-        //   cy.wrap($checkbox).should('be.checked');
-        // } else {
-        //   // Verify that the checkbox is unchecked
-        //   cy.wrap($checkbox).should('not.be.checked');
-        // }
-     
-    
+    //     else if (expectedvalue !== 'uncheck'){
+    //         // Verify that the checkbox is unchecked
+    //         cy.xpath(locator).should('not.be.checked');
+    //   }
+
+    // Conditionally verify based on the state of the checkbox
+    // if (expectedvalue == "CHECK") {
+    //   // Verify that the checkbox is checked
+    //   cy.wrap($checkbox).should('be.checked');
+    // } else {
+    //   // Verify that the checkbox is unchecked
+    //   cy.wrap($checkbox).should('not.be.checked');
+    // }
+
+
 
 })
 
@@ -1024,11 +1024,11 @@ Cypress.Commands.add("EnterDate", (locator, Date) => {
     // cy.log(Year)
 
     cy.xpath(locator, { timeout: 10000 }).eq(0).clear({ force: true })
-        .type(DD).wait(2000)
-        .type('{rightArrow}').wait(2000)
-        .type(MMM).wait(2000)
-        .type('{rightArrow}').wait(2000)
-        .type(YYYY).wait(2000)
+        .type(DD, { timeout: 2000 })
+        .type('{rightArrow}', { timeout: 2000 })
+        .type(MMM, { timeout: 2000 })
+        .type('{rightArrow}', { timeout: 2000 })
+        .type(YYYY, { timeout: 2000 })
 })
 
 /*****************************************************
