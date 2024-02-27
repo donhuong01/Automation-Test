@@ -186,11 +186,19 @@ class PromotionDetail {
             cy.Click(elems_PromotionDetail.BenefitItem.RADIO_ALL)
         }
         cy.TickCheckBox(elems_PromotionDetail.BenefitItem.CHK_ISMAINITEM, 'CHECK')
+
         if (BenefitType === 'Discount') {
-            cy.Click(elems_PromotionDetail.BenefitItem.RADIO_FIXEDPRICE)
-            cy.EnterText(elems_PromotionDetail.BenefitItem.TXT_FIXEDDOLLAR, FixedDollarRate)
+            cy.Click(elems_PromotionDetail.BenefitItem.RADIO_PERCENTAGE)
+            cy.EnterText(elems_PromotionDetail.BenefitItem.TXT_PERCENTAGE, FixedDollarRate)
+            cy.EnterText(elems_PromotionDetail.BenefitItem.TXT_PERCENTAGE, FixedDollarRate)
+
         } else if (BenefitType === 'Fixed Dollar Rate') {
-            cy.EnterText(elems_PromotionDetail.BenefitItem.TXT_FIXEDDOLLARTOCHARGETOCUSTOMER, FixedDollarRate)
+            cy.Click(elems_PromotionDetail.BenefitItem.RADIO_FIXEDPRICE)
+            for(let i = 0; i < FixedDollarRate; i++){
+                cy.Click('(//span[@title="Increase value"])[6]')
+
+            }
+            
         } else if (BenefitType === 'Waiver') {
             cy.EnterText(elems_PromotionDetail.BenefitItem.TXT_APPICABLEFREEPERIODINMONTH, 4)
         } else {

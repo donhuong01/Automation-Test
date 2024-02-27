@@ -14,6 +14,7 @@ class elems_MerchandiseInHouseSalePurcahse {
    static TXT_QUANTITYOFSETSINHOUSE = '//input[@id="txtInHouseQuantityOfSets"]'
    static TXT_QUANTITYOFSETSMERCHANDISE = '//input[@id="txtMerchandiseQuantityOfSets"]'
    static TXT_COLLECTIONAMOUNT = '//input[@id="txtCollectionAmount"]'
+   static TXT_TRANSACTIONDATE = '//input[@id="dtpTransactionDate"]'
 
 }
 

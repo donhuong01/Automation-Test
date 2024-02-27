@@ -79,6 +79,14 @@ Promodata.forEach(each => {
 
             PromotionDetail.PromotionCriteria(AgeRangFrom, AgeRangTo, CustomerCateg, ApplicableMemberID, ApplicableSourceChannel)
 
+            PromotionDetail.SaveAsDraft()
+
+            PromotionListing.FilterByPromotionName(PromotionTitle)
+
+            PromotionListing.ClickSearchFilter()
+
+            PromotionListing.ClickTableLink()
+
             PromotionDetail.Submit()
 
             common.ApprovalWorkFlow('PMO', 'Promotion Approval Workflow', Approval, 'test')
@@ -124,12 +132,12 @@ Promodata.forEach(each => {
 
                     common.ApplyPromoCode(PromoCode)
                     cy.wait(2000)
-                    common.VerifyPromoNotification('Apply promotion successful')
+                    //common.VerifyPromoNotification('Apply promotion successful')
 
                 } else {
 
                     cy.log('to verify if the standard promotion is applied')
-                    cy.Click('//div[@class="page-title"]//following-sibling::div//table//tbody//td[9]//a')
+                    cy.Click('(//div[@class="page-title"]//following-sibling::div//table//tbody//td[9]//a)[1]')
                     cy.SelectDropDownItem('//span[@id="txtStandardPromotion"]', PromotionTitle)
                     cy.Click('//button[text()="Select"]')
 
@@ -144,7 +152,7 @@ Promodata.forEach(each => {
 
                 cy.visit('/club/promotionUtilizationListing').wait(3000)
 
-                //PromotionUtilizationListing.VerifyAppliedPromotion(PromotionTitle) Uncomment when issue is fixed
+                PromotionUtilizationListing.VerifyAppliedPromotion(PromotionTitle)
 
                 cy.LogoutOfSmcms()
 

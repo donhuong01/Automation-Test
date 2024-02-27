@@ -91,5 +91,16 @@ class InHouseSaleAndMerchandiseItemPurchase {
 
     }
 
+    /*****************************************************
+       * Method: Enter Transaction Date
+       * Description: This function Enter Transaction Date
+       * @param {string} Value
+       ***************************************************/
+    EnterTransactionDate(Value) {
+        cy.xpath(elems_MerchandiseInHouseSalePurcahse.TXT_TRANSACTIONDATE).clear()
+        cy.EnterDate(elems_MerchandiseInHouseSalePurcahse.TXT_TRANSACTIONDATE, Value)
+
+    }
+
 }
 export default new InHouseSaleAndMerchandiseItemPurchase

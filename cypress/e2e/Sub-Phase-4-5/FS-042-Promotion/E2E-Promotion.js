@@ -4,15 +4,15 @@ import data from '../../../fixtures/Data_Module/FS-042-Promotion/data'
 import login from '../../../fixtures/login'
 import Common from '../../../page-objects/SMCMS/PageActions/Common/Common'
 
-beforeEach(() => {
+// beforeEach(() => {
 
-    // Set local storage for QA Enviroment
-    cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
+//     // Set local storage for QA Enviroment
+//     cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
 
-    // Set local storage for UAT Enviroment
-    // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
+//     // Set local storage for UAT Enviroment
+//     // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
 
-})
+// })
 
 const common = new Common()
 
@@ -54,11 +54,11 @@ data.forEach(data => {
 
             PromotionDetail.SaveAsDraft()
 
-            // PromotionListing.FilterByPromotionName(PromotionTitle)
+            PromotionListing.FilterByPromotionName(PromotionTitle)
 
-            // PromotionListing.ClickSearchFilter()
+            PromotionListing.ClickSearchFilter()
 
-            // PromotionListing.ClickTableLink()
+            PromotionListing.ClickTableLink()
 
             //Benifit Item Tab
             PromotionDetail.ClickOnTab('Benefit Item')
@@ -67,16 +67,24 @@ data.forEach(data => {
 
             PromotionDetail.SaveAsDraft()
 
-            // PromotionListing.FilterByPromotionName(PromotionTitle)
+            PromotionListing.FilterByPromotionName(PromotionTitle)
 
-            // PromotionListing.ClickSearchFilter()
+            PromotionListing.ClickSearchFilter()
 
-            // PromotionListing.ClickTableLink()
+            PromotionListing.ClickTableLink()
 
             //Promotion Criteria
             PromotionDetail.ClickOnTab('Promotion Criteria')
 
             PromotionDetail.PromotionCriteria(AgeRangFrom, AgeRangTo, CustomerCateg, ApplicableMemberID, ApplicableSourceChannel)
+
+            PromotionDetail.SaveAsDraft()
+
+            PromotionListing.FilterByPromotionName(PromotionTitle)
+
+            PromotionListing.ClickSearchFilter()
+
+            PromotionListing.ClickTableLink()
 
             PromotionDetail.Submit()
 
@@ -104,25 +112,25 @@ data.forEach(data => {
 
             }
 
-            if (Approval === 'Approve' || Approval === 'Query') {
+            // if (Approval === 'Approve' || Approval === 'Query') {
 
-                PromotionListing.ClickTableLink()
+            //     PromotionListing.ClickTableLink()
 
-                PromotionDetail.SaveAsDraft()
+            //     PromotionDetail.SaveAsDraft()
 
-                PromotionListing.FilterByPromotionName(PromotionTitle)
+            //     PromotionListing.FilterByPromotionName(PromotionTitle)
 
-                PromotionListing.ClickSearchFilter()
+            //     PromotionListing.ClickSearchFilter()
 
-                PromotionListing.SelectTableItem(PromotionTitle)
+            //     PromotionListing.SelectTableItem(PromotionTitle)
 
-                PromotionListing.ClickDelete()
+            //     PromotionListing.ClickDelete()
 
-            } else {
+            // } else {
 
-                cy.log('Item with status Reject can not be deleted')
+            //     cy.log('Item with status Reject can not be deleted')
 
-            }
+            // }
 
         })
 

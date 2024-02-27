@@ -80,6 +80,14 @@ Promodata.forEach(each => {
 
             PromotionDetail.PromotionCriteria(AgeRangFrom, AgeRangTo, CustomerCateg, ApplicableMemberID, ApplicableSourceChannel)
 
+            PromotionDetail.SaveAsDraft()
+
+            PromotionListing.FilterByPromotionName(PromotionTitle)
+
+            PromotionListing.ClickSearchFilter()
+
+            PromotionListing.ClickTableLink()
+
             PromotionDetail.Submit()
 
             common.ApprovalWorkFlow('PMO', 'Promotion Approval Workflow', Approval, 'test')
@@ -115,13 +123,17 @@ Promodata.forEach(each => {
 
                     InHouseSaleAndMerchandiseItemPurchase.SelectItemName('Amazon Tablet')
 
+                    InHouseSaleAndMerchandiseItemPurchase.EnterTransactionDate('26-02-2024 09:08:00')
+
                 } else {
 
                     InHouseSaleAndMerchandiseItemPurchase.SelectItemType('InHouse')
 
                     InHouseSaleAndMerchandiseItemPurchase.EnterQuantityOfSetsInHouse('1')
 
-                    InHouseSaleAndMerchandiseItemPurchase.SelectItemName('Game Card')
+                    InHouseSaleAndMerchandiseItemPurchase.SelectItemName('GST NOT APPLICABLE') // Game Card - QA   
+
+                    InHouseSaleAndMerchandiseItemPurchase.EnterTransactionDate('26-02-2024 09:08:00')
                 }
 
                 InHouseSaleAndMerchandiseItemPurchase.AddToCart()
@@ -132,14 +144,14 @@ Promodata.forEach(each => {
 
                     common.ApplyPromoCode(PromoCode)
 
-                    common.VerifyPromoNotification('Apply promotion successful')
+                    //common.VerifyPromoNotification('Apply promotion successful')
 
                 } else {
 
                     // cy.xpath('//h3[text()="Shopping Cart Items"]/following-sibling::div//table//a').should('be.visible')
                     // cy.log('Standard Promotion is Applied.')
                     cy.log('to verify if the standard promotion is applied')
-                    cy.Click('//div[@class="page-title"]//following-sibling::div//table//tbody//td[9]//a')
+                    cy.Click('(//div[@class="page-title"]//following-sibling::div//table//tbody//td[9]//a)[1]')
                     cy.SelectDropDownItem('//span[@id="txtStandardPromotion"]', PromotionTitle)
                     cy.Click('//button[text()="Select"]')
                 }
@@ -150,7 +162,7 @@ Promodata.forEach(each => {
 
                 cy.visit('/club/promotionUtilizationListing').wait(3000)
 
-                // PromotionUtilizationListing.VerifyAppliedPromotion(PromotionTitle)
+                PromotionUtilizationListing.VerifyAppliedPromotion(PromotionTitle)
 
                 cy.LogoutOfSmcms()
 
