@@ -41,6 +41,7 @@ class elems_PromotionDetail {
         DRP_ITEMCATEGORY: '//span[@id="drpItemCategory"]',
         TXT_QUANTITY: '//input[@id="txtQuantity"]',
         DRP_BENEFITTYPE: '//span[@id="drpBenefitType"]',
+        RADIO_PERCENTAGE: '//label[text()="Percentage"]/preceding-sibling::input',
         RADIO_FIXEDPRICE: '//label[text()="Fixed Value"]/preceding-sibling::input',
         RADIO_ALL: '//input[@name="itemOption"]//following-sibling::label[text()="All"]',
         RADIO_SPECIFICITEM: '//input[@name="itemOption"]//following-sibling::label[text()="Specific Item"]',
@@ -48,7 +49,8 @@ class elems_PromotionDetail {
         BTN_SAVE: '//button[text()="Save"]',
         BTN_CANCEL: '//button[text()="Cancel"]',
         TAB_BENEFITITEM: '//button[text()="Benefit Item"]',
-        TXT_FIXEDDOLLAR: '//input[@id="numfixedValueAmountToDiscount"]', //input[@id="numFixedDollarValueToDiscount"]
+        TXT_FIXEDDOLLAR: '//input[@id="numfixedValueAmountToDiscount"]', //input[@id="numFixedDollarValueToDiscount"] 
+        TXT_PERCENTAGE: '//input[@id="numPercentageAmountToDiscount"]',
         TXT_FIXEDDOLLARTOCHARGETOCUSTOMER: '//input[@id="numFixedDollarRateToChargeToCustomer"]',
         TXT_APPICABLEFREEPERIODINMONTH: '//input[@id="numApplicableFreePeriodInMonth"]',
         PCK_GIFT: '//label[@for="pckGiftItem"]/following-sibling::div//button'

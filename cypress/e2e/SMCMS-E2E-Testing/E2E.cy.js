@@ -221,7 +221,7 @@ beforeEach(() => {
 
   //Select Channel
   cy.visit('/membership/customerCheckin')
-  cy.SelectPickerItem('//a[text()="Change"]', 'SAFRA HQ')
+  cy.SelectPickerItem('//a[text()="Change"]', 'SAFRA Jurong')
 })
 
 
@@ -506,13 +506,13 @@ beforeEach(() => {
 
 describe('E2E Auto Testing:FS-042 Promotion', ()=> {
 
-  // PromotionforE1Gym(E2EData.MEMBERID_FOR_E1_RENEWAL_PROMOTION.MEMBER_ID) //Provide Active Member - Updated
+  // PromotionforE1Gym(E2EData.MEMBERID_FOR_E1_RENEWAL_PROMOTION.MEMBER_ID) //Provide Active Member 
   // PrommotionForFacilityandFacilityType(E2EData.MEMBERID_FOR_FACILITY_PROMOTION.MEMBER_ID) //Provide Active Member
-  PromotionforInHouseMerchandise (E2EData.MEMBERID_FOR_INHOUSE_MERCHANDISE_PROMOTION.MEMBERID) //Provide Active Member
+  // PromotionforInHouseMerchandise (E2EData.MEMBERID_FOR_INHOUSE_MERCHANDISE_PROMOTION.MEMBERID) //Provide Active Member
   // PromotionforInterestGroup(E2EData.MEMBERID_FOR_INTERESTG_PROMOTION.MEMBERID) //Provide Active Member
   // PromoUtilization()
-  // Promotion()
-  // PromotionforMembership(E2EData.FULLNRIC_FOR_MEMBERSHIP_PROMOTION.FULLNRIC) //Provide New NRIC
+  Promotion()
+  // PromotionforMembership(CustomerNRICFull) 
 })
 
 

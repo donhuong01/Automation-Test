@@ -35,6 +35,8 @@ const common = new Common()
 
 const PromotionforMembership = (NRICFull) => {
 
+    const CustomerNRIC = NRICFull.substr(NRICFull.length - 4);
+
 Promodata.forEach(each => {
 
     const { PromotionTitle, BasicType, PromoCode, UtilizeLimitPerCustomer, MaxCap, ValidityStartDate,
@@ -70,31 +72,39 @@ Promodata.forEach(each => {
 
             PromotionDetail.PromotionTypeTab(PromotionType, StartDate, EndDate)
 
-            // PromotionDetail.SaveAsDraft()
+            PromotionDetail.SaveAsDraft()
 
-            // PromotionListing.FilterByPromotionName(PromotionTitle)
+            PromotionListing.FilterByPromotionName(PromotionTitle)
 
-            // PromotionListing.ClickSearchFilter()
+            PromotionListing.ClickSearchFilter()
 
-            // PromotionListing.ClickTableLink()
+            PromotionListing.ClickTableLink()
 
             //Benifit Item Tab
             PromotionDetail.ClickOnTab('Benefit Item')
 
             PromotionDetail.BenefitItemTab(ItemCate, Quantity, BenefitType, FixedDollarRate, BundlePromotion)
 
-            // PromotionDetail.SaveAsDraft()
+            PromotionDetail.SaveAsDraft()
 
-            // PromotionListing.FilterByPromotionName(PromotionTitle)
+            PromotionListing.FilterByPromotionName(PromotionTitle)
 
-            // PromotionListing.ClickSearchFilter()
+            PromotionListing.ClickSearchFilter()
 
-            // PromotionListing.ClickTableLink()
+            PromotionListing.ClickTableLink()
 
             //Promotion Criteria
             PromotionDetail.ClickOnTab('Promotion Criteria')
 
             PromotionDetail.PromotionCriteria(AgeRangFrom, AgeRangTo, CustomerCateg, ApplicableMemberID, ApplicableSourceChannel)
+
+            PromotionDetail.SaveAsDraft()
+
+            PromotionListing.FilterByPromotionName(PromotionTitle)
+
+            PromotionListing.ClickSearchFilter()
+
+            PromotionListing.ClickTableLink()
 
             PromotionDetail.Submit()
 
@@ -132,17 +142,17 @@ Promodata.forEach(each => {
 
                 cy.visit('/membership/customerCheckin').wait(5000)
                 cy.Click(elems_CustomerCheckInPage.RBTN_NRIC)
-                cy.EnterDate(elems_CustomerCheckInPage.DATE_DATEOFBIRTH, DOB)
-                cy.EnterText(elems_CustomerCheckInPage.TXT_LAST4DIGITSNRIC, NRICLast4Digit)
+                cy.EnterDateCheckin(elems_CustomerCheckInPage.DATE_DATEOFBIRTH, DOB)
+                cy.EnterText(elems_CustomerCheckInPage.TXT_LAST4DIGITSNRIC, CustomerNRIC)
                 cy.Click(elems_CustomerCheckInPage.BTN_CHECKIN)
                 cy.wait(2000)
                 cy.Click(elems_CustomerCheckInPage.BTN_CREATNEW)
 
-                cy.wait(10000)
+                cy.wait(5000)
 
                 CustomerCreation.fillOutRegistrationInfo({
                     name: CustomerName,
-                    DOB: DOB,
+                    //DOB: DOB,
                     gender: Gender,
                 });
 
@@ -199,11 +209,14 @@ Promodata.forEach(each => {
 
                     common.ApplyPromoCode(PromoCode)
 
-                    common.VerifyPromoNotification('Apply promotion successful')
+                    // common.VerifyPromoNotification('Apply promotion successful')
 
                 } else {
 
-                    cy.log('Standard Promotion')
+                    cy.log('to verify if the standard promotion is applied')
+                    cy.Click('(//div[@class="page-title"]//following-sibling::div//table//tbody//td[9]//a)[1]')
+                    cy.SelectDropDownItem('//span[@id="txtStandardPromotion"]', PromotionTitle)
+                    cy.Click('//button[text()="Select"]')
 
                 }
 

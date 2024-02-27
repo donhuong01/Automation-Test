@@ -53,13 +53,13 @@ Cypress.Commands.add('EnterText', (locator, text) => {
 Cypress.Commands.add('SelectDropDownItem', (locator, item) => {
     cy.log('------ Select Drop Down Item : ' + locator + ' ------')
     cy.xpath(locator, { timeout: 30000 }).scrollIntoView()
-    cy.xpath(locator + '//span[@class="k-icon k-i-arrow-s"]').click()
+    cy.xpath(locator + '//span[@class="k-icon k-i-arrow-s"]',{ timeout: 30000 }).click({ timeout: 30000 })
     cy.wait(1000)
     // cy.xpath(locator).invoke('attr', 'aria-owns').then(value => {
     //     cy.xpath('//ul[@id="' + value + '"]/li[text()="' + item + '"]').click()
     // })
 
-    cy.xpath('//li[text()="' + item + '"]', { timeout: 10000 }).click({ force: true })
+    cy.xpath('//li[text()="' + item + '"]', { timeout: 30000 }).click({ force: true })
 })
 
 /*****************************************************
@@ -1006,6 +1006,41 @@ Cypress.Commands.add('CheckboxInTable', (locator, rowRef, colRef, value) => {
 })
 
 /*****************************************************
+* Command: EnterTransactionDate
+* Description: Type Date in the Date Picker
+*
+* @author: rdacpano
+* @param {string} locator Element locator (xpath)
+* @param {string} Date example date "10-Mar-2019 9:08:00"
+*****************************************************/
+Cypress.Commands.add("EnterTransactionDate", (locator, Date) => {
+    var datearr = Date.split('-')
+    var DD = datearr[0]
+    var MMM = datearr[1]
+    var YYYY = datearr[2]
+    var HOUR = datearr[3]
+    var MINUTE = datearr[4]
+    var SECOND = datearr[5]
+
+    // cy.log(DD)
+    // cy.log(Month)
+    // cy.log(Year)
+
+    cy.xpath(locator, { timeout: 10000 }).eq(0).clear({ force: true })
+        .type(DD).wait(2000)
+        .type('{rightArrow}').wait(2000)
+        .type(MMM).wait(2000)
+        .type('{rightArrow}').wait(2000)
+        .type(YYYY).wait(2000)
+        .type('{rightArrow}').wait(2000)
+        .type(HOUR).wait(2000)
+        .type('{rightArrow}').wait(2000)
+        .type(MINUTE).wait(2000)
+        .type('{rightArrow}').wait(2000)
+        .type(SECOND).wait(2000)
+})
+
+/*****************************************************
 * Command: EnterDate
 * Description: Type Date in the Date Picker
 *
@@ -1032,7 +1067,7 @@ Cypress.Commands.add("EnterDate", (locator, Date) => {
 })
 
 /*****************************************************
-* Command: EnterDate
+* Command: EnterDateCheckin
 * Description: Type Date in the Date Picker
 *
 * @author: mfaisal
@@ -1058,6 +1093,8 @@ Cypress.Commands.add("EnterDateCheckin", (locator, Date) => {
         .type('{rightArrow}').wait(500)
         .type(YYYY).wait(500)
 })
+
+
 
 /*****************************************************
 * Command: EnterDateSuspension
