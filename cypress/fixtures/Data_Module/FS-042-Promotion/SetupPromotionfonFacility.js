@@ -171,37 +171,37 @@ const data = [
 
 
 
-    // //Setup Promo Code for Facility on Paid Period with ALL Item Option, Discount, All Customer Category.
-    // {
-    //     PromotionTitle: 'Promo-Facility' + Math.floor(Math.random() * 100098),
-    //     BasicType: 'Promo Code',
-    //     PromoCode: 'PFac' + Math.floor(Math.random() * 100098),
-    //     UtilizeLimitPerCustomer: '99',
-    //     MaxCap: '99',
-    //     ValidityStartDate: '15-Feb-2023',
-    //     ValidityExpiryDate: '20-Feb-2051',
-    //     Remark: 'Test',
+    //Setup Promo Code for Facility on Paid Period with ALL Item Option, Discount, All Customer Category.
+    {
+        PromotionTitle: 'Promo-Facility' + Math.floor(Math.random() * 100098),
+        BasicType: 'Promo Code',
+        PromoCode: 'PFac' + Math.floor(Math.random() * 100098),
+        UtilizeLimitPerCustomer: '99',
+        MaxCap: '99',
+        ValidityStartDate: '15-Feb-2023',
+        ValidityExpiryDate: '20-Feb-2051',
+        Remark: 'Test',
 
-    //     PromotionType: 'Paid Period',
-    //     StartDate: '15-Feb-2023',
-    //     EndDate: '15-Feb-2050',
-    //     ItemCate: 'Facility',
-    //     Quantity: '99',
-    //     BenefitType: 'Discount',
-    //     FixedDollarRate: '6',
-    //     AgeRangFrom: '10',
-    //     AgeRangTo: '80',
-    //     CustomerCateg: 'All Customer Category',
-    //     ApplicableMemberID: '',
-    //     ApplicableSourceChannel: 'SAFRA Jurong',
-    //     Approval: 'Approve',
-    //     BundlePromotion: 'No',
-    //     MemberId: 'A300002417',
-    //     FacilityType: '2023 FA',
-    //     location: 'SAFRA Jurong',
-    //     FacilitySetup: 'FA-2023',
-    //     BookingSlot: 'Available (06:00 am - 07:00 am)'
-    // },
+        PromotionType: 'Paid Period',
+        StartDate: '15-Feb-2023',
+        EndDate: '15-Feb-2050',
+        ItemCate: 'Facility',
+        Quantity: '99',
+        BenefitType: 'Discount',
+        FixedDollarRate: '6',
+        AgeRangFrom: '10',
+        AgeRangTo: '80',
+        CustomerCateg: 'All Customer Category',
+        ApplicableMemberID: '',
+        ApplicableSourceChannel: 'SAFRA Jurong',
+        Approval: 'Approve',
+        BundlePromotion: 'No',
+        MemberId: 'A300002417',
+        FacilityType: 'Facility Type 2024', // 2023 FA
+        location: 'SAFRA Jurong',
+        FacilitySetup: 'Group Ballot 2023', // FA-2023
+        BookingSlot: 'Available (09:00 am - 09:30 am)'
+    },
 
 
     // //Setup Promo Code for Facility on Book Period with ALL Item Option, Discount, All Customer Category.
