@@ -270,10 +270,13 @@ class Membership_Registration_Dependent{
     *****************************************************/     
      SelectPrincipalID(PrincipalID)
         {   
-
+            //cy.SelectPickerItem(elems_MembershipRegistrationDependent.PersonalInformation.PCK_PRINCIPALID, PrincipalID)
             cy.Click(elems_MembershipRegistrationDependent.PersonalInformation.PCK_PRINCIPALID)
             cy.wait(5000)
-            cy.SelectTableItem2(elems_Picker.TBL_PICKERITEMS, 'Member ID', PrincipalID)
+            cy.EnterText('//div[@role="dialog"]//label/parent::div//input[@name="memberId"]', PrincipalID)
+            cy.Click('//button[text()="Search Filters"]')
+            cy.TickSpecificTableItem(PrincipalID)
+            //cy.SelectTableItem2(elems_Picker.TBL_PICKERITEMS, 'Member ID', PrincipalID)
             cy.wait(5000)
             cy.Click(elems_Picker.BTN_SELECT)
 

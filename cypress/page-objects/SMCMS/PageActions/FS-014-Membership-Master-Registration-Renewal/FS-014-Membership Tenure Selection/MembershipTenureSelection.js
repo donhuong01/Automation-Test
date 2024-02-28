@@ -69,6 +69,43 @@ class MembershipTenureSelection{
 
     }
 
+    /*****************************************************
+     * Method: TenureSelectionBatchPri   
+     * Description: Add Tenure Selection to Principal Member
+     *
+     * @param {string} tenureSelection Tenure Selection
+     * @param {string} ColumnValue Column value
+     *****************************************************/
+    TenureSelectionBatchPri(ColumnValue, tenureSelection){
+
+        // Set Tenure Selection
+        if(tenureSelection !== undefined && ColumnValue !== undefined){
+
+            cy.TenureSelectionBatch(elems_MembershipTenureSelection.Principal.TBL_PRINCIPAL,
+                ColumnValue,  tenureSelection)
+        }
+
+
+    }
+
+    /*****************************************************
+     * Method: TenureSelectionBatchDep   
+     * Description: Add Tenure Selection to Principal Member
+     *
+     * @param {string} tenureSelection Tenure Selection
+     * @param {string} ColumnValue Column value
+     *****************************************************/
+    TenureSelectionBatchDep(ColumnValue, tenureSelection){
+
+        // Set Tenure Selection
+        if(tenureSelection !== undefined && ColumnValue !== undefined){
+
+            cy.TenureSelectionBatch(elems_MembershipTenureSelection.Dependent.TBL_DEPENDENT,
+                ColumnValue,  tenureSelection)
+        }
+
+
+    }
 
     /*****************************************************
      * Method: verifyDependentList

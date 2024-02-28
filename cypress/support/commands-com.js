@@ -230,6 +230,7 @@ Cypress.Commands.add('TickSpecificTableItem', (Value) => {
     cy.contains('td', Value)
         .scrollIntoView()
         .siblings()
+        .first()
         .click()
 
 })

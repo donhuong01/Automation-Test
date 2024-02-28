@@ -968,7 +968,7 @@ const data = {
             MaritalStatus: 'Single',
             CardType: 'SAFRA Classic Card',
             InterestinDBSCard: 'N/A',
-            AllowtoRedeemSAFRAPoints: 'uncheck',
+            AllowtoRedeemSAFRAPoints: 'check',
             //ProfilePicture: 'test_images.png'
         },
         ContactInformation: {
@@ -1054,7 +1054,7 @@ const data = {
             MaritalStatus: 'Married',
             CardType: 'SAFRA Classic Card',
             InterestinDBSCard: 'N/A',
-            AllowtoRedeemSAFRAPoints: 'uncheck',
+            AllowtoRedeemSAFRAPoints: 'check',
         },
         AddressInformation: {
             postalCode: '569933',

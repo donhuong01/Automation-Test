@@ -48,7 +48,7 @@ class elems_BatchMembershipRegistrationDetail {
         BTN_CANCEL: '//button[text()="Cancel"]',
 
         CHK_EXISTINGMEMBER: '//input[@id="radioExistingMember"]',
-        TXT_MEMBERID: '//input[@id="txtMemberId"]',
+        TXT_MEMBERID: '//input[@id="txtmemberID"]',
         TXT_NRIC: '//input[@id="txtNric"]',
 
         CHK_NONMEMBER: '//input[@id="radioNonMember"]',
