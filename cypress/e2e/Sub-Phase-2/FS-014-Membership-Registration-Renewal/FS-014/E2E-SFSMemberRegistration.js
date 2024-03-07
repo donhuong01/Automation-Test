@@ -75,13 +75,13 @@ const SFSMemberRegistion = (CustomerNRICFull, DepChildNRICFull, DepSouseNRICFull
         it('[TC01] Customer Creation and SFS Principal Registration with Child and Spouse', function () {
 
             //Enable SFS
-            // cy.visit('/membership/moduleSettings')
-            // cy.wait(5000)
+            cy.visit('/membership/moduleSettings')
+            cy.wait(5000)
 
-            // cy.SelectPickerItem('//a[text()="Change"]', 'SAFRA HQ')
+            //cy.SelectPickerItem('//a[text()="Change"]', 'SAFRA HQ')
 
-            // MemModuleSettings.SFSActivate('CHECK')
-            // cy.wait(5000)
+            MemModuleSettings.SFSActivate('CHECK')
+            cy.wait(5000)
 
             cy.visit('/membership/customerCheckin')
             cy.wait(5000)

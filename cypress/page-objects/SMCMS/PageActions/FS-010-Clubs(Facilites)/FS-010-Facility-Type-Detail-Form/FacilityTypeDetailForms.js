@@ -201,7 +201,7 @@ class FacilityTypeDetailForm {
      * @param {string} SlotLength
      * Author fshahzada
      *****************************************************/
-    BookingSection(BookingQuote, AccessMode, CustomerCategoryDialog, TypeOfTiming, SlotLength) {
+    BookingSection(BookingQuote, AccessMode, CustomerCategoryDialog, TypeOfTiming, SlotLength, OneCustomerCan) {
 
 
         cy.Click(elems_FacilityTypeSetupDetailForm.DETAILSTAB.BTN_EDITACCESSMODES)
@@ -233,6 +233,8 @@ class FacilityTypeDetailForm {
 
         cy.SelectDropDownItem(elems_FacilityTypeSetupDetailForm.DETAILSTAB.DRP_TYPEOFTIMING, TypeOfTiming)
         cy.IncreaseFieldValue(elems_FacilityTypeSetupDetailForm.DETAILSTAB.TXT_SLOTLENGTH, SlotLength)
+        cy.IncreaseFieldValue(elems_FacilityTypeSetupDetailForm.DETAILSTAB.TXT_ONE_CUSTOMER_CAN, OneCustomerCan)
+
     }
 
 
@@ -249,8 +251,8 @@ class FacilityTypeDetailForm {
     UpdateBookingSection( AccessMode, CustomerCategoryDialog) {
 
 
-        cy.Click(elems_FacilityTypeSetupDetailForm.DETAILSTAB.BTN_EDITACCESSMODES)
-        cy.Click('(//*[local-name()="svg"])[17]')
+        //cy.Click(elems_FacilityTypeSetupDetailForm.DETAILSTAB.BTN_EDITACCESSMODES)
+        // cy.Click('(//*[local-name()="svg"])[17]')
         cy.wait(3000)
 
         cy.SelectPickerDifferentItemsSeachBTN(
@@ -261,16 +263,15 @@ class FacilityTypeDetailForm {
 
         )
 
+        // cy.Click(elems_FacilityTypeSetupDetailForm.DETAILSTAB.BTN_EDITCUSTOMERCATEGORIES)
+        // cy.Click('(//*[local-name()="svg"])[18]')
+        // cy.SelectPickerDifferentItemsSeachBTN(
+        //     elems_FacilityTypeSetupDetailForm.BTN_ADDCUSTOMERCATEGORYBOOKING,
+        //     elems_FacilityTypeSetupDetailForm.DETAILSTAB.TXT_CUSTOMERCATEGORYPOPUP,
+        //     CustomerCategoryDialog,
+        //     elems_FacilityTypeSetupDetailForm.DETAILSTAB.BTN_SEARCHFILTERSCUSTOMERCATEGORYSIALOG,
 
-        cy.Click(elems_FacilityTypeSetupDetailForm.DETAILSTAB.BTN_EDITCUSTOMERCATEGORIES)
-        cy.Click('(//*[local-name()="svg"])[18]')
-        cy.SelectPickerDifferentItemsSeachBTN(
-            elems_FacilityTypeSetupDetailForm.BTN_ADDCUSTOMERCATEGORYBOOKING,
-            elems_FacilityTypeSetupDetailForm.DETAILSTAB.TXT_CUSTOMERCATEGORYPOPUP,
-            CustomerCategoryDialog,
-            elems_FacilityTypeSetupDetailForm.DETAILSTAB.BTN_SEARCHFILTERSCUSTOMERCATEGORYSIALOG,
-
-        )
+        // )
     }
 
 

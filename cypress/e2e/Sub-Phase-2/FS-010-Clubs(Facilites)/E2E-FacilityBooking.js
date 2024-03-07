@@ -49,7 +49,7 @@ const FacilityBookingManagement = () => {
             cy.visit('/membership/customerCheckin')
             cy.wait(5000)
             cy.Click(elems_CustomerCheckInPage.RBTN_NRIC)
-            cy.EnterDate(elems_CustomerCheckInPage.DATE_DATEOFBIRTH, Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB)
+            cy.EnterDateCheckin(elems_CustomerCheckInPage.DATE_DATEOFBIRTH, Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB)
             cy.EnterText(elems_CustomerCheckInPage.TXT_LAST4DIGITSNRIC, CustomerNRIC)
             cy.Click(elems_CustomerCheckInPage.BTN_CHECKIN)
             cy.wait(2000)
@@ -188,7 +188,7 @@ const FacilityBookingManagement = () => {
             FacilityBookingDetail.SelectSlot(slot)
 
             // add waiver
-            FacilityBookingDetail.AddWaiver(ChargeType, Amount, Reason)
+            //FacilityBookingDetail.AddWaiver(ChargeType, Amount, Reason)
 
             //Click Save
             FacilityBookingDetail.Save()

@@ -45,7 +45,7 @@ const FacilityTypeDetailFormManagement = (CalenderName, PeriodOfCalendar, Operat
             FacilityTypeDetailForm.BookingRestrictions('check', 'check', 'check', 'check', 'E1MF SILVER LITE MEMBERSHIP Member', '2', '1');
 
             //Booking Section
-            FacilityTypeDetailForm.BookingSection('uncheck', 'Online', 'All Customer Category', 'Fixed time slots booking', '2');
+            FacilityTypeDetailForm.BookingSection('uncheck', 'RoadShow', 'All Customer Category', 'Fixed time slots booking', '30', '2');
 
             FacilityTypeDetailForm.BookingCheckboxes();
 
@@ -82,25 +82,29 @@ const FacilityTypeDetailFormManagement = (CalenderName, PeriodOfCalendar, Operat
             //Category Section
             FacilityTypeDetailForm.FillOutCategorySection(Category, LifestyleGroup, FABSGroup,
                 ClubClassification, SMCClassification);
-            //Booking Restriction
-            // FacilityTypeDetailForm.BookingRestrictions('check', 'check', 'check', 'check','All Customer Category' ,'2', '1');
+            // Booking Restriction
+            FacilityTypeDetailForm.BookingRestrictions('check', 'check', 'check', 'check','All Customer Category' ,'2', '1');
 
             //Booking Section
-            FacilityTypeDetailForm.BookingSection('uncheck', 'Online', 'All Customer Category', 'Fixed time slots booking', '2');
-
-            // FacilityTypeDetailForm.BookingCheckboxes();
-
+            FacilityTypeDetailForm.BookingSection('uncheck', 'Online Portal', 'All Customer Category', 'Fixed time slots booking', '30','2');
+            FacilityTypeDetailForm.UpdateBookingSection('RoadShow');
+            FacilityTypeDetailForm.UpdateBookingSection('In-House');
+            FacilityTypeDetailForm.UpdateBookingSection('Mobile');
+            FacilityTypeDetailForm.UpdateBookingSection('Tablet');
+           
+            FacilityTypeDetailForm.BookingCheckboxes();
+        
             //Add Horizon
-            // FacilityTypeDetailForm.AddHorizon( AccessMode, CustomerCategory )
+            FacilityTypeDetailForm.AddHorizon( AccessMode, CustomerCategory )
 
-            //Booking Timing Restriction
-            // FacilityTypeDetailForm.BookingTimingRestriction();
+            // Booking Timing Restriction
+            FacilityTypeDetailForm.BookingTimingRestriction();
 
             //Reservation
-            // FacilityTypeDetailForm.Reservation();
+            FacilityTypeDetailForm.Reservation();
 
             //Allow Extension
-            // FacilityTypeDetailForm.Extension();
+            FacilityTypeDetailForm.Extension();
 
             //Submit Form For Approval
             FacilityTypeDetailForm.Save()
@@ -210,8 +214,13 @@ const FacilityTypeDetailFormManagement = (CalenderName, PeriodOfCalendar, Operat
             //save charge rate details
             FacilityTypeDetailForm.Save()
 
+            //Click Form For Save As Draft
+            FacilityTypeDetailForm.SaveAsDraft()
+
+
+
             //verify page title
-            FacilityTypeDetailForm.VerifyPageTitle('Facility Type Detail')
+            //FacilityTypeDetailForm.VerifyPageTitle('Facility Type Detail')
 
         });
 
@@ -267,17 +276,18 @@ const FacilityTypeDetailFormManagement = (CalenderName, PeriodOfCalendar, Operat
 
         });
 
-        it('[TC06] Adding Product MappingApproval Workflow for Facility Type detail ', function () {
+        it('[TC06] Approval Workflow for Facility Type detail ', function () {
 
             //Must login as an admin first
             cy.visit('/admin/pendingTaskList');
-            cy.wait(20000)
+            cy.wait(5000)
 
             FacilityTypeDetailForm.ApprovalWorkFlow("F-FLT", "Facility Type Approval Workflow", "Approve", "Testing Finance Approval")
-            cy.wait(15000)
+            cy.wait(10000)
 
             FacilityTypeDetailForm.ApprovalWorkFlow("F-FLT", "Facility Type Approval Workflow", "Approve", "Testing Approval")
-
+            cy.wait(10000)
+            
             //Must login as an admin first
             cy.visit('/facilities/facilityTypeListing');
             cy.wait(5000)

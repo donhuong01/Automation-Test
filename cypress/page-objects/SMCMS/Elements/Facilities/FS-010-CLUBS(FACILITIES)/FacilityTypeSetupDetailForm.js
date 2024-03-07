@@ -59,6 +59,7 @@ class elems_FacilityTypeSetupDetailForm {
         BTN_ADDQUOTA: '//button[text()="Add Quota"]',
         DRP_TYPEOFTIMING: '//span[@id="drpTypeOfTiming"]',
         TXT_SLOTLENGTH: '//input[@id="txtOneSlotLengthInMinutes"]',
+        TXT_ONE_CUSTOMER_CAN: '//input[@id="txtMaxNumOfFacilitiesAllowedToBookAtSameTime"]',
 
         // Booking Timing Restrict
         NUM_NONPEAKMINSLOT: '//td[text()="Non Peak"]//following-sibling::td[1]',

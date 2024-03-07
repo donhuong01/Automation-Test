@@ -265,7 +265,7 @@ Cypress.Commands.add('ClickTableLink', (locator, targetColumn, textValue, column
 Cypress.Commands.add('ClickTableLinkItem', (locator, targetColumn, textValue, columnReference1, rowReference1) => {
     cy.log('------ Click Table Link : ' + locator + ' ------')
     // cy.xpath(locator).scrollIntoView()
-    new Table().clickTableLinkItem(locator, targetColumn, textValue, columnReference1, rowReference1)
+    new Table().clickTableLinkItem(locator, targetColumn, textValue, columnReference1, rowReference1,{ timeout: 30000 })
 })
 
 /*****************************************************

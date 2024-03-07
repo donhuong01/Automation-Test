@@ -192,9 +192,11 @@ const E2EData = {
 
 
    // FS -010 FACILITY
-   CALENDAR_NAME: '2023 Calendar.',
-   PERIODOFCALENDAR: 'School Term I',
-   OPERATING_PERIOD_NAME: 'JR - BBQ Sch Day',
+   CALENDAR_NAME: 'SP 2024',//UAT - '2023 Calendar.'
+   PERIODOFCALENDAR: 'SP 2024 Period', //School Term I',
+   OPERATING_PERIOD_NAME: '2023 1st Period',//'JR - BBQ Sch Day',
+
+   FACILITY_TYPE: 'Auto-Test 72',//Facility Type 2024',
 
 
    // FS-031 Gift Redemption Management

@@ -37,7 +37,7 @@ class FacilityDetailForm {
         cy.SelectPickerDifferentItemsWait(
             elems_FacilityDetailFormDetailTab.DETAILSTAB.BTN_FACILITYTYPE, 3000,
             elems_FacilityDetailFormDetailTab.DETAILSTAB.TXT_FACILITYTYPEPOPUP,
-            FacilityType, '//div[text()="Select Facility Type"]/parent::*/following-sibling::div[@class="k-window-content k-dialog-content"]//button')
+            FacilityType, '//div[text()="Select Facility Type"]/parent::*/following-sibling::div[@class="k-window-content k-dialog-content"]//button[text()="Search Filters"]')
 
         cy.Click(elems_FacilityDetailFormDetailTab.DETAILSTAB.BTN_LOCATION)
         cy.SelectTableItem(elems_Picker.TBL_PICKERITEMS, 'Location Name', Location)

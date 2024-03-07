@@ -17,12 +17,12 @@ const data = {
 
     },
     FacilityBookingDetails: {
-        FacilityType: 'Facility  Type 2023',
-        slot: 'Available (09:00 am - 10:00 am)',
+        FacilityType: 'Auto-Test 72',//'Facility  Type 2023',
+        slot: 'Available (09:30 am - 10:30 am)',
         ChargeType: 'Charge Rate-2023',
         Amount: '2',
         Reason: 'Testing',
-        FacilityName: 'Auto-Test 450',
+        FacilityName: 'Auto-Test 7065',
         Location: 'SAFRA Jurong',
     },
 
@@ -75,9 +75,9 @@ const data = {
                     ignoreRenderSlotLength: 'uncheck'
                 },
                 {
-                    startTime: '8:30 AM',
+                    startTime: '9:00 PM',
                     row: 3,
-                    endTime: '10:00 AM',
+                    endTime: '10:00 PM',
                     typeOfPeakPeriod: 'Super Holiday',
                     isClosedForBooking: 'uncheck',
                     ignoreRenderSlotLength: 'check'
@@ -149,7 +149,7 @@ const data = {
                 FacilityName: 'Auto-Test ' + Math.floor(Math.random() * 10000),
                 ActivationDate: '18-Jan-2023',
                 UploadPhotos: 'Sample_Images.jpeg',
-                FacilityType: 'Facility  Type 2023',
+                FacilityType: 'Facility Type 2024',
                 Location: 'SAFRA Jurong',
                 FormatsAllowed: 'check',
                 ResourceName: 'Auto-Test-Resource ' + Math.floor(Math.random() * 1000),
@@ -233,13 +233,13 @@ const data = {
         CalenderName: 'Calendar 2023',
         ChargeRateName: 'Testing CR',
         Location: 'SAFRA Jurong',
-        AccessMode: 'Online',
+        AccessMode: 'RoadShow',
         CustomerCategory: 'All Customer Category',
         Status: 'Pending Approval',
 
         //Charge Rate Tab
         StartDate: '09-Jan-2023',
-        EndDate: '30-Jun-2023',
+        EndDate: '30-Dec-2024',
         ChargeRateLocation: 'All Locations',
         ChargeTypeName: 'Booking Fee',
         Transaction: 'Booking',

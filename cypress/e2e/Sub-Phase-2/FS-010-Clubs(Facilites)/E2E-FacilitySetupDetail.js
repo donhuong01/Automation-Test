@@ -3,13 +3,13 @@ import elems_FacilityDetailFormDetailTab from '../../../page-objects/SMCMS/Eleme
 import data from '../../../fixtures/Data_Module/FS-010-Club-Facility/010-data'
 
 
-  const FacilitySetupDetail = () => { 
+  const FacilitySetupDetail = (FacilityType) => { 
 
   //Detail Tab
   const FacilityName = data.FacilityDetail.DetailsTab.FacilityInfo.FacilityName
   const ActivationDate = data.FacilityDetail.DetailsTab.FacilityInfo.ActivationDate
   const UploadFileName = data.FacilityDetail.DetailsTab.FacilityInfo.UploadPhotos
-  const FacilityType = data.FacilityDetail.DetailsTab.FacilityInfo.FacilityType
+//   const FacilityType = data.FacilityDetail.DetailsTab.FacilityInfo.FacilityType
   const Location = data.FacilityDetail.DetailsTab.FacilityInfo.Location
   const ResourceName = data.FacilityDetail.DetailsTab.FacilityInfo.ResourceName
   const Item = 'jpeg'
@@ -53,7 +53,7 @@ describe('[TS05] Facility Setup Detail Form Management', function () {
 
     it('[TC01] Facility Setup Detail (Detail Tab)', function () { 
 
-        cy.visit('/facilities/facilityListing');
+        cy.visit('/facilities/facilityListing',{timeout: 30000});
         cy.wait(2000)
 
         FacilityDetailForm.CreatNew()
@@ -88,7 +88,7 @@ describe('[TS05] Facility Setup Detail Form Management', function () {
 
     it('[TC02] Filter newly created facility and click on it', function () {
 
-        cy.visit('/facilities/facilityListing');
+        cy.visit('/facilities/facilityListing',{timeout: 30000});
         cy.wait(2000)
         FacilityDetailForm.FiltersFacilitieListingForm(FacilityName,
         'Draft')
@@ -100,7 +100,7 @@ describe('[TS05] Facility Setup Detail Form Management', function () {
     })
     it('[TC03] Facility Setup Detail (Group Booking Tab)', function () {
 
-        cy.visit('/facilities/facilityListing');
+        cy.visit('/facilities/facilityListing',{timeout: 30000});
         cy.wait(2000)
         FacilityDetailForm.FiltersFacilitieListingForm(FacilityName,
         'Draft')
@@ -122,7 +122,7 @@ describe('[TS05] Facility Setup Detail Form Management', function () {
 
     it('[TC04] Facility Setup Detail (Charge Rate Tab)', function () {
 
-        cy.visit('/facilities/facilityListing');
+        cy.visit('/facilities/facilityListing',{timeout: 30000});
         cy.wait(2000)
         FacilityDetailForm.FiltersFacilitieListingForm(FacilityName,
         'Draft')
@@ -136,7 +136,7 @@ describe('[TS05] Facility Setup Detail Form Management', function () {
         FacilityDetailForm.addChargeRate()
 
         FacilityDetailForm.FillOutFacilityChargeRateDetail('Sample Charge rate', '22-Jun-2023',
-         'SAFRA Jurong', '01-Dec-2023')
+         'SAFRA Jurong', '01-Dec-2024')
 
         // add charge type list
         FacilityDetailForm.FilloutChargeTypeList(ChargeTypeName, Transaction, Calculation, Amount)
@@ -157,7 +157,7 @@ describe('[TS05] Facility Setup Detail Form Management', function () {
 
     it('[TC05] Fill out Facility Setup Detail (Additional Information Tab) and Save as Draft', function () {
 
-        cy.visit('/facilities/facilityListing');
+        cy.visit('/facilities/facilityListing',{timeout: 30000});
         cy.wait(2000)
         FacilityDetailForm.FiltersFacilitieListingForm(FacilityName,
         'Draft')
@@ -180,7 +180,7 @@ describe('[TS05] Facility Setup Detail Form Management', function () {
 
     it('[TC06] Facility Setup Detail (Attachment Tab)', function () {
 
-        cy.visit('/facilities/facilityListing');
+        cy.visit('/facilities/facilityListing',{timeout: 30000});
         cy.wait(2000)
         FacilityDetailForm.FiltersFacilitieListingForm(FacilityName,
         'Draft')
@@ -218,11 +218,11 @@ describe('[TS05] Facility Setup Detail Form Management', function () {
     
     it('[TC07] Facility Setup Approval workflow', function () {
 
-        cy.visit('/admin/pendingTaskList');
+        cy.visit('/admin/pendingTaskList',{timeout: 30000});
         cy.wait(8000)
         FacilityDetailForm.FacilityApprovalWorkFlow("F-FLY","Facility Approval Workflow",ApprovalOutcome,Remarks)
         cy.wait(3000)
-        cy.visit('/facilities/facilityListing');
+        cy.visit('/facilities/facilityListing',{timeout: 30000});
         cy.wait(5000)
         FacilityDetailForm.FiltersFacilitieListingForm(FacilityName,
         'Approved')

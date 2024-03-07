@@ -271,8 +271,8 @@ beforeEach(() => {
 // FacilitySettingCalendarSettings()
 // FacilityOperatingPeriod()
 // FacilityTypeDetailFormManagement(E2EData.CALENDAR_NAME, E2EData.PERIODOFCALENDAR, E2EData.OPERATING_PERIOD_NAME)
-// FacilitySetupDetail()
-// FacilityBookingManagement()
+// FacilitySetupDetail(E2EData.FACILITY_TYPE)
+FacilityBookingManagement()
 // FacilityBookingAmendmentManagment()
 // FacilityBookingExtentionManagment() // Needs an update in Facility for extension setting
 // FacilityBookingCancellationManagment() // Needs own page action
@@ -296,7 +296,7 @@ beforeEach(() => {
 // })
 
 
-describe('E2E Auto Testing:FS-014 Membership: Master Registration and Renewal', () => {
+// describe('E2E Auto Testing:FS-014 Membership: Master Registration and Renewal', () => {
 
 //  MembershipRegistration(CustomerNRICFull) // Quick Testing on Membership Registration
 //  MembershipPrincipalRegistration(CustomerNRICFull,DepCustomerNRICFull, Dep2CustomerNRICFull) // Full Testing on Membership Registration
@@ -314,26 +314,26 @@ describe('E2E Auto Testing:FS-014 Membership: Master Registration and Renewal', 
 
 
 // LifeMembershipManagment(CustomerNRICFull) //Add NRIC For Principal Registration
-  BatchMembershipRegistration(
+//   BatchMembershipRegistration(
 
-    //Pass Info for Existing Member MemberID and LAST4DigitsNRIC
-    E2EData.BATCH_REGISTRATION.MEMBERID_FOR_EXISTING_MEMBER,
-    E2EData.BATCH_REGISTRATION.LAST4DIGITSNRIC_FOR_EXISTING_MEMBER,
+//     //Pass Info for Existing Member MemberID and LAST4DigitsNRIC
+//     E2EData.BATCH_REGISTRATION.MEMBERID_FOR_EXISTING_MEMBER,
+//     E2EData.BATCH_REGISTRATION.LAST4DIGITSNRIC_FOR_EXISTING_MEMBER,
 
-    //Pass informstion for Non-Member Name, DOB, LAST4DigitsNRIC and Full NRIC
-    E2EData.BATCH_REGISTRATION.MEMBER_NAME_FOR_NON_MEMBER,
-    E2EData.BATCH_REGISTRATION.DOB_FOR_NON_MEMBER,
-    E2EData.BATCH_REGISTRATION.LAST4DIGITSNRIC_FOR_NON_MEMBER,
-    DepCustomerNRICFull,
+//     //Pass informstion for Non-Member Name, DOB, LAST4DigitsNRIC and Full NRIC
+//     E2EData.BATCH_REGISTRATION.MEMBER_NAME_FOR_NON_MEMBER,
+//     E2EData.BATCH_REGISTRATION.DOB_FOR_NON_MEMBER,
+//     E2EData.BATCH_REGISTRATION.LAST4DIGITSNRIC_FOR_NON_MEMBER,
+//     DepCustomerNRICFull,
 
-    //NRIC for New Principal
-    CustomerNRICFull,
+//     //NRIC for New Principal
+//     CustomerNRICFull,
 
-    //NRIC for New Dependent and Dependent PrincipalID
-    Dep2CustomerNRICFull,
-    E2EData.BATCH_REGISTRATION.PRINCIPALID_FOR_NEW_DEPENDENT)
+//     //NRIC for New Dependent and Dependent PrincipalID
+//     Dep2CustomerNRICFull,
+//     E2EData.BATCH_REGISTRATION.PRINCIPALID_FOR_NEW_DEPENDENT)
 
-})
+// })
 
 
 
@@ -395,7 +395,7 @@ describe('E2E Auto Testing:FS-014 Membership: Master Registration and Renewal', 
 // VolunteerAppointmentType()
 // VIPAppointmentType()
 // VolunteerAppointmentTermRegistration() 
-//     VIPAppointmentTermRegistration() //Update the the Type in Registration
+    // VIPAppointmentTermRegistration() //Update the the Type in Registration
 // })
 
 
