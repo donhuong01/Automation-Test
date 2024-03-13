@@ -126,23 +126,23 @@ const FacilityBookingManagement = () => {
             // MemRegPrincipal.VerifyPageTitle('Membership Registration - Principal')
 
             MemRegPrincipal.SaveAndNextPrincipal()
-            cy.wait(8000)
+            cy.wait(5000)
             //#endregion
 
             //#region Tenure Selection
 
             MemTenureSelect.principalTenureSelection(PrincipalName, '10 Years')
-            cy.wait(8000)
+            cy.wait(5000)
 
             // Click on add to cart
             MemTenureSelect.addToCart()
-            cy.wait(8000)
+            cy.wait(5000)
 
             // Shopping cart and Payments
             ShoppingCart.fillOutandApplyPayment('CASH')
 
             // Wait for 3 minites
-            cy.wait(15000)
+            cy.wait(30000)
             //#endregion
 
             // })
@@ -170,8 +170,6 @@ const FacilityBookingManagement = () => {
             // Click Create New button
             FacilityBookingDetail.CreateNew()
 
-            cy.wait(4000)
-
             // Verify Page Title
             FacilityBookingDetail.verifyPageTitle('Facility Booking Details')
 
@@ -191,9 +189,12 @@ const FacilityBookingManagement = () => {
             //FacilityBookingDetail.AddWaiver(ChargeType, Amount, Reason)
 
             //Click Save
-            FacilityBookingDetail.Save()
+            //FacilityBookingDetail.Save()
 
-            cy.wait(10000)
+            // Click on add to cart
+            MemTenureSelect.addToCart()
+
+            cy.wait(8000)
 
             //add payment
             FacilityBookingDetail.fillOutandApplyPayment('CASH')
@@ -214,7 +215,7 @@ const FacilityBookingManagement = () => {
             //FacilityBookingDetail.SearchWithNRIC(CustomerNRIC)
 
             //Filter with nric
-            FacilityBookingDetail.SearchWithCustomerName(CustomerNRICFull) //Change Customer Name based on Member ID
+            // FacilityBookingDetail.SearchWithCustomerName(PrincipalName) //Change Customer Name based on Member ID
 
 
             // //verify facility booking

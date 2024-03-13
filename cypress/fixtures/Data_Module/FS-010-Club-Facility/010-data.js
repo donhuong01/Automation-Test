@@ -18,7 +18,7 @@ const data = {
     },
     FacilityBookingDetails: {
         FacilityType: 'Auto-Test 72',//'Facility  Type 2023',
-        slot: 'Available (09:30 am - 10:30 am)',
+        slot: '12:00 pm - 12:30 pm',
         ChargeType: 'Charge Rate-2023',
         Amount: '2',
         Reason: 'Testing',

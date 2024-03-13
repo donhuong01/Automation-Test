@@ -32,7 +32,7 @@ class elems_FacilityBookingExtension {
     TXT_CUSTOMERNAME: '//input[@name="customerName"]',
     LBL_CUSTOMERCATEGORY: '//label[@for="lblCustomerCategory"]',
     TBL_RESOURCES: '//h3[text()="Resources"]/following-sibling::div//table',
-    BTN_FILTERBOOKING: '//input[@name="customerName"]/parent::div/parent::div/parent::div/following-sibling::div//button',
+    BTN_FILTERBOOKING: '//input[@name="customerName"]/parent::div/parent::div/parent::div/following-sibling::div//button[text()="Search Filters"]',
     BTN_ADDWAIVEROFF: '//button[text()="Add Waiver Off"]',
     DRP_CHARGETYPE: '//span[@id="drpChargeType"]',
     TXT_AMOUNT: '//input[@id="txtAmount"]',

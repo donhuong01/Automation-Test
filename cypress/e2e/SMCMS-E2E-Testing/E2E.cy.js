@@ -272,7 +272,7 @@ beforeEach(() => {
 // FacilityOperatingPeriod()
 // FacilityTypeDetailFormManagement(E2EData.CALENDAR_NAME, E2EData.PERIODOFCALENDAR, E2EData.OPERATING_PERIOD_NAME)
 // FacilitySetupDetail(E2EData.FACILITY_TYPE)
-FacilityBookingManagement()
+// FacilityBookingManagement()
 // FacilityBookingAmendmentManagment()
 // FacilityBookingExtentionManagment() // Needs an update in Facility for extension setting
 // FacilityBookingCancellationManagment() // Needs own page action
@@ -309,7 +309,7 @@ FacilityBookingManagement()
 //  MemberStatusReasonCode() // Not Required
 //  MassUpdateForMemberData() // Needs to update code for Approval
 //  MembershipModuleSettings()
-//  SFSMemberRegistion(CustomerNRICFull,DepCustomerNRICFull, Dep2CustomerNRICFull) //Add three NRIC's for Principal, Dependent Child, Dependent Spouse
+ SFSMemberRegistion(CustomerNRICFull,DepCustomerNRICFull, Dep2CustomerNRICFull) //Add three NRIC's for Principal, Dependent Child, Dependent Spouse
 //  E2EMemberShipRenewal(CustomerNRICFull) //Add NRIC For Principal Registration
 
 
@@ -390,12 +390,12 @@ FacilityBookingManagement()
 
 
 //  describe('E2E Auto Testing:FS-025 Membership: VIP Volunteer Veteran League', ()=> {
-// VolunteerCommittee()
-//  VolunteerAppointment()
-// VolunteerAppointmentType()
-// VIPAppointmentType()
-// VolunteerAppointmentTermRegistration() 
-    // VIPAppointmentTermRegistration() //Update the the Type in Registration
+    // VolunteerCommittee()
+    // VolunteerAppointment()
+    // VolunteerAppointmentType()
+    // VIPAppointmentType()
+      // VolunteerAppointmentTermRegistration() 
+      // VIPAppointmentTermRegistration() //Update the the Type in Registration
 // })
 
 

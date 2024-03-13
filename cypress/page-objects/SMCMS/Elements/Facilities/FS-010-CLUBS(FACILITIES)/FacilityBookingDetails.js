@@ -7,6 +7,7 @@ class elems_FacilityBookingDetails{
     static TXT_NAME = '//input[@name="name"]'
     static BTN_SEARCHFILTER = '//button[text()="Search Filters"]'
     static BTN_SELECT = '//button[text()="Select"]'
+    static BTN_ADDTOCART = '//button[text()="Add to Cart"]'
     
     static LBL_FACILITYTYPE = '//label[@for="lblFacilityType"]'
     static LBL_LOCATION = '//label[@for="lblLocation"]'

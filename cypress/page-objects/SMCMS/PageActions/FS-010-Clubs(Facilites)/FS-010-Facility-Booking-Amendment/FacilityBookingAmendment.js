@@ -117,9 +117,9 @@ class FacilityBookingAmendment {
         // cy.xpath(`(//div[text()="${slot}"])[1]`).click()
         // cy.xpath('(//div[@class="k-event-template k-event-template"])[1]').should('have.at', 'Available (').click()
         // cy.xpath('//div[@class="k-event-template k-event-template"]')
-        cy.xpath('(//div[contains(text(),"Available (")])[1]').click({ force: true })
+        cy.xpath('(//div[contains(text(),"Available (")])[2]').click({ force: true })
         cy.wait(2000)
-        cy.xpath('(//div[contains(text(),"Available (")])[1]').click({ force: true })
+        cy.xpath('(//div[contains(text(),"Available (")])[2]').click({ force: true })
 
     }
 

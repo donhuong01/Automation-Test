@@ -103,33 +103,42 @@ class FacilityBookingDetail {
      *****************************************************/
 
     SelectSlot(SlotName) {
-        if (`(//div[text()="OnHold (${SlotName})"])[1]` || `(//div[text()="Booked (${SlotName})"])[1]` || undefined) {
-            cy.Click(`(//div[text()="Available (${SlotName})"])[1]`)
-            cy.wait(3000)
-        }
 
-        else if (`(//div[text()="OnHold (${SlotName})"])[2]` || `(//div[text()="Booked (${SlotName})"])[2]` || undefined) {
-            cy.Click(`(//div[text()="Available (${SlotName})"])[1]`)
+      
             cy.wait(3000)
-        }
+            cy.xpath('(//div[contains(text(),"Available (")])[2]').click({ force: true })
+            cy.wait(2000)
+            //cy.xpath('(//div[contains(text(),"Available (")])[2]').click({ force: true })
+    
+  
 
-        else if (`(//div[text()="OnHold (${SlotName})"])[3]` || `(//div[text()="Booked (${SlotName})"])[3]` || undefined) {
-            cy.Click(`(//div[text()="Available (${SlotName})"])[1]`)
-            cy.wait(3000)
-        }
+        // if (`(//div[text()="OnHold (${SlotName})"])[1]` || `(//div[text()="Booked (${SlotName})"])[1]` || undefined) {
+        //     cy.Click(`(//div[text()="Available (${SlotName})"])[1]`)
+        //     cy.wait(3000)
+        // }
 
-        else if (`(//div[text()="OnHold (${SlotName})"])[4]` || `(//div[text()="Booked (${SlotName})"])[4]` || undefined) {
-            cy.Click(`(//div[text()="Available (${SlotName})"])[1]`)
-            cy.wait(3000)
-        }
+        // else if (`(//div[text()="OnHold (${SlotName})"])[2]` || `(//div[text()="Booked (${SlotName})"])[2]` || undefined) {
+        //     cy.Click(`(//div[text()="Available (${SlotName})"])[1]`)
+        //     cy.wait(3000)
+        // }
 
-        else if (`(//div[text()="OnHold (${SlotName})"])[5]` || `(//div[text()="Booked (${SlotName})"])[5]` || undefined) {
-            cy.Click(`(//div[text()="Available (${SlotName})"])[1]`)
-            cy.wait(3000)
-        }
-        else {
-            cy.log("The given time is unavailable please changed")
-        }
+        // else if (`(//div[text()="OnHold (${SlotName})"])[3]` || `(//div[text()="Booked (${SlotName})"])[3]` || undefined) {
+        //     cy.Click(`(//div[text()="Available (${SlotName})"])[1]`)
+        //     cy.wait(3000)
+        // }
+
+        // else if (`(//div[text()="OnHold (${SlotName})"])[4]` || `(//div[text()="Booked (${SlotName})"])[4]` || undefined) {
+        //     cy.Click(`(//div[text()="Available (${SlotName})"])[1]`)
+        //     cy.wait(3000)
+        // }
+
+        // else if (`(//div[text()="OnHold (${SlotName})"])[5]` || `(//div[text()="Booked (${SlotName})"])[5]` || undefined) {
+        //     cy.Click(`(//div[text()="Available (${SlotName})"])[1]`)
+        //     cy.wait(3000)
+        // }
+        // else {
+        //     cy.log("The given time is unavailable please changed")
+        // }
 
     }
 
@@ -157,6 +166,16 @@ class FacilityBookingDetail {
     * Description: This function clicks on Save button
     *****************************************************/
     Save() {
+
+        cy.Click(elems_FacilityBookingDetails.BTN_SAVE)
+        cy.wait(10000)
+    }
+
+    /*****************************************************
+    * Method: Add to Cart
+    * Description: This function clicks on Save button
+    *****************************************************/
+    AddtoCart() {
 
         cy.Click(elems_FacilityBookingDetails.BTN_SAVE)
         cy.wait(10000)

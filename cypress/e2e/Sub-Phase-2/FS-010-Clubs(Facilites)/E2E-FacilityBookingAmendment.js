@@ -10,11 +10,11 @@ const FacilityBookingAmendmentManagment = () => {
     describe('Facility Booking Extention Management', function () {
 
         const type = 'MEMBERID'
-        const value1 = 'A300002763'
-        const value2 = '867F'
+        const value1 = 'A300005764'
+        const value2 = '406Z'
         const expectedPage = 'Member Information'
-        const CustomerName = 'Jayson Teng';
-        const BookingNum = 'F-BOK-20230424-000589'
+        const CustomerName = 'TestUser 870';
+        const BookingNum = 'F-BOK-20240307-000011'
         const AmendmentType = 'Replacement Slot';
         const Reason = 'Amend Slot 2022'
         const check = 'check'
@@ -64,8 +64,10 @@ const FacilityBookingAmendmentManagment = () => {
 
             // FacilityBookingAmendment.fillOutandApplyPayment('CASH')
 
-            // cy.visit('/facilities/bookingAmendmentListing')
-            // cy.wait(3000)
+            cy.visit('/facilities/bookingAmendmentListing')
+            
+            cy.Click('//input[@id="chkIncludeGroupBookingRecordsInResult"]')
+            cy.wait(3000)
 
             FacilityBookingAmendment.VerifyFacilityAmendment(CustomerName, 'Confirmed')
 
@@ -109,7 +111,7 @@ const FacilityBookingAmendmentManagment = () => {
             FacilityBookingAmendment.FilloutAmendmentInfo("Amend Resource 2022", check)
 
             //select available slot 
-            FacilityBookingAmendment.AddResource(ResourceName)
+            //FacilityBookingAmendment.AddResource(ResourceName)
 
             //click submit button
             FacilityBookingAmendment.Submit()
@@ -118,7 +120,9 @@ const FacilityBookingAmendmentManagment = () => {
 
             // FacilityBookingAmendment.fillOutandApplyPayment('CASH')
 
-            // cy.visit('/facilities/bookingAmendmentListing')
+            cy.visit('/facilities/bookingAmendmentListing')
+
+            cy.Click('//input[@id="chkIncludeGroupBookingRecordsInResult"]')
             cy.wait(3000)
 
             FacilityBookingAmendment.VerifyFacilityAmendment(CustomerName, 'Confirmed')
@@ -173,7 +177,10 @@ const FacilityBookingAmendmentManagment = () => {
             // //filout apply payment
             // FacilityBookingAmendment.fillOutandApplyPayment("CASH")
 
-            // cy.visit('/facilities/bookingAmendmentListing')
+            cy.visit('/facilities/bookingAmendmentListing')
+
+            cy.Click('//input[@id="chkIncludeGroupBookingRecordsInResult"]')
+            cy.wait(3000)
 
             FacilityBookingAmendment.VerifyFacilityAmendment(CustomerName, 'Confirmed')
 
