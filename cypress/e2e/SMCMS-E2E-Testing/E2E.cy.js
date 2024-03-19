@@ -291,25 +291,25 @@ beforeEach(() => {
 //    AccommodationClosureManagement() // Need to add accommodation on page action
 //    AccommodatiomBookingManagement(E2EData.ACCOMMODATION_BOOKING_MANAGEMENT.SAFRA_MEMBERID, E2EData.ACCOMMODATION_BOOKING_MANAGEMENT.GEUSTID) //Pass SAFRA MemberID and Guest ID
 //    AccommodatiomReservationManagement(E2EData.ACCOMMODATION_RESERVATION_MANAGEMENT.SAFRA_MEMBERID) //Pass SAFRA MemberID
-// // Update the booking,  no available slots when running
+// // // Update the booking,  no available slots when running
 
 // })
 
 
-// describe('E2E Auto Testing:FS-014 Membership: Master Registration and Renewal', () => {
+describe('E2E Auto Testing:FS-014 Membership: Master Registration and Renewal', () => {
 
-//  MembershipRegistration(CustomerNRICFull) // Quick Testing on Membership Registration
+ MembershipRegistration(CustomerNRICFull) // Quick Testing on Membership Registration
 //  MembershipPrincipalRegistration(CustomerNRICFull,DepCustomerNRICFull, Dep2CustomerNRICFull) // Full Testing on Membership Registration
 //  CustomerCheckIn()
-//  MemberType() //Needs Update
-//  BadAddressUpdate()// Fail Need code updates
+//  MemberType() //Needs to do in manual test since it always has duplicate
+//  BadAddressUpdate()//Needs to do in manual test
 //  MembershipRenewalAdvise()
 //  WithdrawalOfConsent(E2EData.ACTIVE_MEMBERID_FOR_WITHDRAWAL_OF_CONSENT) //Enter Member ID for Withdrawal Of Consent
 //  SourceChannel()
-//  MemberStatusReasonCode() // Not Required
-//  MassUpdateForMemberData() // Needs to update code for Approval
-//  MembershipModuleSettings()
- SFSMemberRegistion(CustomerNRICFull,DepCustomerNRICFull, Dep2CustomerNRICFull) //Add three NRIC's for Principal, Dependent Child, Dependent Spouse
+// // MemberStatusReasonCode() // Needs to do in manual test since it may affect current data
+//  MassUpdateForMemberData() 
+// // MembershipModuleSettings() // Needs to check settings data before running on UAT
+//  SFSMemberRegistion(CustomerNRICFull,DepCustomerNRICFull, Dep2CustomerNRICFull) //Add three NRIC's for Principal, Dependent Child, Dependent Spouse
 //  E2EMemberShipRenewal(CustomerNRICFull) //Add NRIC For Principal Registration
 
 
@@ -333,7 +333,7 @@ beforeEach(() => {
 //     Dep2CustomerNRICFull,
 //     E2EData.BATCH_REGISTRATION.PRINCIPALID_FOR_NEW_DEPENDENT)
 
-// })
+})
 
 
 
@@ -355,7 +355,7 @@ beforeEach(() => {
 // E1GYMMembershipWaiver(E2EData.ACTIVE_MEMBERID_FOR_E1GYM_WAIVER) //Provide Active member ID
 // E1GYMMembershipReversal(E2EData.MEMBERID_FOR_E1GYM_REVERSAL) //Enter Member ID
 
-// E1GYMSetupManagement() //Needs an update on unique name
+// E1GYMSetupManagement() 
 // E1GYMMembershipModuleSettings()
 // E1GYMMembershipAndChargeRateSetup()
 //    E1GYMMembershipRenewalAdvise()

@@ -20,7 +20,7 @@ const data = {
     },
     checkin_mobile: {
         type: 'MOBILENUMBER',
-        value1: '88888889',//QA
+        value1: '88888826',//QA
         value2: 'A300005639'
     },
     checkin_scancard: {
@@ -95,9 +95,9 @@ const data = {
         Code: 'ITZY' + + Math.floor(Math.random() * 10000 * 50),
         Description: 'Sample Description',
         MembershipType: 'OD',
-        ServiceStatus: 'SAFVC Active',
-        Rank: 'C2D',
-        MinYears: '2',
+        ServiceStatus: 'VETERAN',
+        Rank: 'SAF Volunteer',
+        MinYears: '3',
         MaxYears: '5',
         MaxCapYears: '8',
         Remark: 'Sample Data',
@@ -184,7 +184,8 @@ const data = {
         },
         ContactInfo: {
             Handphone: '87126534',
-            EmailAddress: 'auto' + Math.floor(Math.random() * 10000 * 50) + '@test.com',
+            EmailAddress: Math.floor(Math.random() * 100000 * 50) + '@autotest.com',
+            EmailAddress2: Math.floor(Math.random() * 1000100 * 50) + '@autotest.com',
             HomeNumber: '62347722',
             EmergencyContact: '8658 5894',
             //Preferred COntact Mode
@@ -291,7 +292,7 @@ const data = {
         },
         ContactInfo: {
             Handphone: '87126534',
-            EmailAddress: 'Testuser' + Math.floor(Math.random() * 100000 * 2) + '@synergyonline.com',
+            EmailAddress: 'Testusers' + Math.floor(Math.random() * 100000 * 3) + '@synergyonline.com',
             HomeNumber: '63231234',
             EmergencyContact: '87627612',
             //Preferred COntact Mode

@@ -85,7 +85,7 @@ describe('[TS16] Bad Address Update', function () {
              //Upload file
              BadAddressDtl.filloutBadAddressUpdateDetail({
 
-                uploadFile : 'Automation Test Forms.xlsx',
+                uploadFile : 'bad-address-test.xlsx',
                 
             })
 

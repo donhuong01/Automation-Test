@@ -368,7 +368,7 @@ describe('[TS13] Batch Membership Registration Details form', function () {
         
         MemRegPrincipal.verifyContactInformation({
             Handphone: data.memberregistrationprincipal.ContactInfo.Handphone,
-            EmailAddress: data.memberregistrationprincipal.ContactInfo.EmailAddress,
+            EmailAddress: data.memberregistrationprincipal.ContactInfo.EmailAddress2,
             HomeNumber: data.memberregistrationprincipal.ContactInfo.HomeNumber,
             EmergencyContact: data.memberregistrationprincipal.ContactInfo.EmergencyContact,
             })

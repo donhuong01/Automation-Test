@@ -75,7 +75,7 @@ class LifeMembership {
       ShoppinCart() {
         
         cy.visit('/membership/customerLandingPage')
-        cy.wait(8000)
+        cy.wait(3000)
         cy.xpath(elems_PageHeader.BTN_SHOPPINGCART).click({force: true})
         cy.wait(8000)
         cy.xpath('(//span[@class="k-input"])[1]') ////span[text()="Standard"]
