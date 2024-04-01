@@ -22,7 +22,7 @@ class Table {
         if (columnReference1 === undefined && rowReference1 === undefined && columnReference2 === undefined && rowReference2 === undefined) {
             cy.xpath(locator + '//thead//th').then(($columnHeaderElements) => {
                 let columnHeaderIndex = Cypress._.map($columnHeaderElements, 'innerText').indexOf(targetColumn) + 1
-                cy.xpath(Misc.TABLE_LOADING).should('not.exist')
+                cy.xpath(Misc.TABLE_LOADING, { timeout: 30000 }).should('not.exist')
                 cy.xpath(locator + '//tbody//td[' + columnHeaderIndex + ']').should(($columnItems) => {
                     let columnItemTexts = Cypress._.map($columnItems, 'innerText')
                     let columnItemIndex = Cypress._.map($columnItems, 'innerText').indexOf(expectedValue)
@@ -35,7 +35,7 @@ class Table {
             cy.xpath(locator + '//thead//th').then(($columnHeaderElements) => {
                 let targetColumnIndex = Cypress._.map($columnHeaderElements, 'innerText').indexOf(targetColumn) + 1
                 let columnReference1Index = Cypress._.map($columnHeaderElements, 'innerText').indexOf(columnReference1) + 1
-                cy.xpath(Misc.TABLE_LOADING).should('not.exist')
+                cy.xpath(Misc.TABLE_LOADING, { timeout: 30000 }).should('not.exist')
                 cy.xpath(locator + '//tbody/tr/td[' + columnReference1Index + ']').then(($referenceColumn1Items) => {
                     let targetRowIndex = Cypress._.map($referenceColumn1Items, 'innerText').indexOf(rowReference1) + 1
                     cy.xpath(locator + '//tbody/tr[' + targetRowIndex + ']/td[' + targetColumnIndex + ']').should('have.text', expectedValue)
@@ -78,19 +78,19 @@ class Table {
     selectTableItem(locator, columnReference1, rowReference1, columnReference2, rowReference2) {
         // Select all items when columnReference1 = ALL and other references are undefined
         if (columnReference1.toUpperCase() === 'ALL' && rowReference1 === undefined && columnReference2 === undefined && rowReference2 === undefined) {
-            cy.xpath(locator + '//thead//th/input').click()
+            cy.xpath(locator + '//thead//th/input', { timeout: 30000 }).click()
 
         }
         // Selects first item if columnReference1 = FIRST and other references are undefined
         else if (columnReference1.toUpperCase() === 'FIRST' && rowReference1 === undefined && columnReference2 === undefined && rowReference2 === undefined) {
-            cy.xpath(locator + '//tbody/tr[1]/td[1]/input').click()
+            cy.xpath(locator + '//tbody/tr[1]/td[1]/input', { timeout: 30000 }).click()
         }
         // Select Table Entry when 1 Column/Row References are supplied
         else if (columnReference1 !== undefined && rowReference1 !== undefined && columnReference2 === undefined && rowReference2 === undefined) {
-            cy.xpath(locator + '//thead//th').then(($columnHeaderElements) => {
+            cy.xpath(locator + '//thead//th', { timeout: 30000 }).then(($columnHeaderElements) => {
                 let columnReference1Index = Cypress._.map($columnHeaderElements, 'innerText').indexOf(columnReference1) + 1
-                cy.xpath(Misc.TABLE_LOADING).should('not.exist')
-                cy.xpath(locator + '//tbody//td[' + columnReference1Index + ']').then(($referenceColumn1Items) => {
+                cy.xpath(Misc.TABLE_LOADING, { timeout: 30000 }).should('not.exist')
+                cy.xpath(locator + '//tbody//td[' + columnReference1Index + ']', { timeout: 30000 }).then(($referenceColumn1Items) => {
                     let targetRowIndex = Cypress._.map($referenceColumn1Items, item => item.innerText.trim()).indexOf(item => item.innerText.trim()) + 1
                     if (targetRowIndex === 0)
                         targetRowIndex += 1;

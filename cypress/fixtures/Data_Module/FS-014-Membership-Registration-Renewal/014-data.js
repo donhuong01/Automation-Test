@@ -5,31 +5,33 @@ const data = {
     checkin_expectedPg: "Customer Check-In",
     meminfo_expectedPg: 'Member Information',
 
+    
+
     checkin_memberID: {
         type: 'MEMBERID',
-        value1: 'A300005639'//QA 
+        value1: 'A300008703'//QA - A300005639 //UAT - A300008703 
     },
     checkin_NRIC: {
         type: 'NRIC',
-        value1: '980Z',//QA
-        value2: '18-Aug-1980',
+        value1: '628A',//QA - 980Z //UAT - 628A
+        value2: '17-Aug-1980',//QA - 18-Aug-1980 //UAT - 17-Aug-1980
     },
     checkin_email: {
         type: 'EMAIL',
-        value1: 'Auto-User2225941520@test.com', ///QA
+        value1: 'Auto-User3091177306@test.com', //QA - Auto-User2225941520@test.com //UAT - Auto-User3091177306@test.com
     },
     checkin_mobile: {
         type: 'MOBILENUMBER',
         value1: '88888826',//QA
-        value2: 'A300005639'
+        value2: 'A300005639'// QA - A300005639 //UAT - A300008703
     },
     checkin_scancard: {
         type: 'SCANECARD',
-        value1: 'A300005639_3DA4F788839DE16D26F7865886038183AECEF073A605371439FCA067A95E8F15',//QA
+        value1: 'A300008703_3DA4F788839DE16D26F7865886038183AECEF073A605371439FCA067A95E8F15',//QA
     },
     checkin_swipecard: {
         type: 'SWIPECARD',
-        value1: '%A8008980001869402^LEE CHOON CHIEH ^2508^A300005639^019801221000000?;8008980001869402=2508201000005500011?',//QA
+        value1: '%A8008980001869402^LEE CHOON CHIEH ^2508^A300008703^019801221000000?;8008980001869402=2508201000005500011?',//QA
     },
 
     //Membership Tenure Selection
@@ -96,7 +98,7 @@ const data = {
         Description: 'Sample Description',
         MembershipType: 'OD',
         ServiceStatus: 'VETERAN',
-        Rank: 'SAF Volunteer',
+        Rank: 'C2D',
         MinYears: '3',
         MaxYears: '5',
         MaxCapYears: '8',
@@ -529,14 +531,14 @@ const data = {
     MembershipModuleSetting: {
 
         DocumentaryProofSetting: {
-            MaximumAllowedFile: '999996',
+            MaximumAllowedFile: '9,000',
             AutoDeleteCheckBox: 'check',
-            FirstNotification: '1',
-            SecondNotification: '2',
-            ThirdNotification: '3',
-            FinalNotification: '4',
-            TerminationAfterApplicationDate: '27',
-            DocumentaryProofUpload: 'link 2022'
+            FirstNotification: '20',
+            SecondNotification: '50',
+            ThirdNotification: '80',
+            FinalNotification: '100',
+            TerminationAfterApplicationDate: '150',
+            DocumentaryProofUpload: 'www.safra.sg'
         },
 
 
@@ -548,11 +550,11 @@ const data = {
 
         SfsSetting: {
             SfsActivation: 'check',
-            AdminFeeChargeItem: '10 YRS SC',
+            AdminFeeChargeItem: '5 YRS SC',
 
             AdminFeeChargeItemFilters: {
-                NameFilter: '10 YRS SC',
-                DescriptionFilter: '10 YRS SC',
+                NameFilter: '5 YRS SC',
+                DescriptionFilter: '5 YRS SC',
                 CardTypeFilter: 'SAFRA Classic Card',
                 StatusFilter: 'Active'
             }

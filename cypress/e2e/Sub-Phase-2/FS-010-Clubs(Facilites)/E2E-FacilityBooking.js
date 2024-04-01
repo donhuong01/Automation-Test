@@ -191,6 +191,8 @@ const FacilityBookingManagement = () => {
             //Click Save
             //FacilityBookingDetail.Save()
 
+            cy.wait(30000)
+
             // Click on add to cart
             MemTenureSelect.addToCart()
 

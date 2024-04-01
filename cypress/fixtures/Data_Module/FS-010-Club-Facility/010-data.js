@@ -17,24 +17,32 @@ const data = {
 
     },
     FacilityBookingDetails: {
-        FacilityType: 'Auto-Test 72',//'Facility  Type 2023',
+        FacilityType: 'QA-DemoType2024',//'Auto-Test 72',//'Facility  Type 2023',
         slot: '12:00 pm - 12:30 pm',
         ChargeType: 'Charge Rate-2023',
         Amount: '2',
         Reason: 'Testing',
-        FacilityName: 'Auto-Test 7065',
-        Location: 'SAFRA Jurong',
+        FacilityName: 'QA-Demo-Facility-2024',
+        Location: 'SAFRA HQ',
     },
 
     FacilityGroupBookingDetails: {
-        FacilityType: 'Facility  Type 2023',
+        FacilityType: 'QA-DemoType2024',
         slot: '09:00 am - 10:00 am',
         slot2: '03:00 pm - 04:00 pm',
         ChargeType: 'Charge Rate-2023',
         Amount: '2',
         Reason: 'Testing',
-        FacilityName: 'Group Ballot 2023',
-        Location: 'SAFRA Jurong',
+        FacilityName: 'QA-Demo-Facility-2024',
+        Location: 'SAFRA HQ',
+           // FacilityType: 'Facility  Type 2023',
+        // slot: '09:00 am - 10:00 am',
+        // slot2: '03:00 pm - 04:00 pm',
+        // ChargeType: 'Charge Rate-2023',
+        // Amount: '2',
+        // Reason: 'Testing',
+        // FacilityName: 'Group Ballot 2023',
+        // Location: 'SAFRA Jurong',
     },
 
     Period: {
@@ -120,20 +128,20 @@ const data = {
     },
 
     // Facility General Settings
-    FacilityBookingReminder: 0,
+    FacilityBookingReminder: '1',
     BookingEarn: 'check',
-    GroupBooking: 'uncheck',
+    GroupBooking: 'check',
     ReservationEarn: 'check',
 
-    NumOfPhotoGraphs: '1',
-    MaximumFileSize: '1000',
+    NumOfPhotoGraphs: '2',
+    MaximumFileSize: '10000',
 
     FormatAllowed: 'png',
     TransferButton: 'Transfer To',
 
     CancellationNotAllowedMonths: '1',
-    CancellationNotAllowedDays: '30',
-    DataBackUp: '0',
+    CancellationNotAllowedDays: '3',
+    DataBackUp: '30',
 
     ProductMappingTab: {
 

@@ -205,7 +205,7 @@ const Dep3CustomerNRICFull = nricGenerator('S', 43)
 beforeEach(() => {
 
   // Set local storage for QA Enviroment
-  cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
+  // cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
 
   /****************************
    * Requestor Testing - Erik *
@@ -217,20 +217,20 @@ beforeEach(() => {
    * Admin Testing - Hung *
    ************************/
   // Set local storage for UAT Enviroment
-  //  cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
+   cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
 
   //Select Channel
   cy.visit('/membership/customerCheckin')
-  cy.SelectPickerItem('//a[text()="Change"]', 'SAFRA Jurong')
+  cy.SelectPickerItem('//a[text()="Change"]', 'SAFRA HQ')
 })
 
 
 // describe('E2E Auto Testing:FS-001 Admin: System Login', () => {
 
-    // OnlineAccountAccess()
-    // SMCMSPostion()
-    // SMCMSRole()
-    // SMCMSUser() //Change User Depending on Environment
+//     OnlineAccountAccess()
+//     SMCMSPostion()
+//     SMCMSRole()
+//     SMCMSUser() //Change User Depending on Environment
 // })
 
 //  describe('E2E Auto Testing:FS-002 Reports', () => {
@@ -257,7 +257,7 @@ beforeEach(() => {
     // CustomerCategory()
     // CodeType()
     // CodeSetMaster()
-    //// DocumentTemplate() // Don't run unless important
+    // DocumentTemplate() // Don't run unless important
     // ApplicationSetting() //Not Required //Changed Font Siz to - 4 (14pt)
     // NotificationMessageTemplate() //Not Required
     // AnnouncementPortalNotification() //Not Required
@@ -265,7 +265,7 @@ beforeEach(() => {
 
 
 // This module need minor updates
-//  describe('E2E Auto Testing:FS-010 Facility', ()=> {
+ describe('E2E Auto Testing:FS-010 Facility', ()=> {
 // FacilityGeneralSettingDtl()
 // FacilitySettingsCalendar()
 // FacilitySettingCalendarSettings()
@@ -278,8 +278,8 @@ beforeEach(() => {
 // FacilityBookingCancellationManagment() // Needs own page action
 // FacilityGroupBooking(E2EData.FACILITY_GROUP_BOOKING.SAFRA_MEMBER, E2EData.FACILITY_GROUP_BOOKING.SAFRA_RELATED_MEMBER,
 // E2EData.FACILITY_GROUP_BOOKING.SAFRA_GUEST) //Pass Active Safra Member ID - 1.Safra Member 2. SAFRARelatedMemberships 3. Guest Member
-// FacilityGroupBookingBallot("A300002855", "A300003031") // Recheck again tomorrow morning
-  // })
+FacilityGroupBookingBallot("A300002855", "A300003031") // Recheck again tomorrow morning
+  })
 
 
 // describe('E2E Auto Testing:FS-012 Accommodation', ()=> {
@@ -296,9 +296,9 @@ beforeEach(() => {
 // })
 
 
-describe('E2E Auto Testing:FS-014 Membership: Master Registration and Renewal', () => {
+// describe('E2E Auto Testing:FS-014 Membership', () => {
 
- MembershipRegistration(CustomerNRICFull) // Quick Testing on Membership Registration
+//  MembershipRegistration(CustomerNRICFull) // Quick Testing on Membership Registration
 //  MembershipPrincipalRegistration(CustomerNRICFull,DepCustomerNRICFull, Dep2CustomerNRICFull) // Full Testing on Membership Registration
 //  CustomerCheckIn()
 //  MemberType() //Needs to do in manual test since it always has duplicate
@@ -306,9 +306,9 @@ describe('E2E Auto Testing:FS-014 Membership: Master Registration and Renewal', 
 //  MembershipRenewalAdvise()
 //  WithdrawalOfConsent(E2EData.ACTIVE_MEMBERID_FOR_WITHDRAWAL_OF_CONSENT) //Enter Member ID for Withdrawal Of Consent
 //  SourceChannel()
-// // MemberStatusReasonCode() // Needs to do in manual test since it may affect current data
+// MemberStatusReasonCode() // Needs to do in manual test since it may affect current data
 //  MassUpdateForMemberData() 
-// // MembershipModuleSettings() // Needs to check settings data before running on UAT
+// MembershipModuleSettings() // Needs to check settings data before running on UAT
 //  SFSMemberRegistion(CustomerNRICFull,DepCustomerNRICFull, Dep2CustomerNRICFull) //Add three NRIC's for Principal, Dependent Child, Dependent Spouse
 //  E2EMemberShipRenewal(CustomerNRICFull) //Add NRIC For Principal Registration
 
@@ -333,7 +333,7 @@ describe('E2E Auto Testing:FS-014 Membership: Master Registration and Renewal', 
 //     Dep2CustomerNRICFull,
 //     E2EData.BATCH_REGISTRATION.PRINCIPALID_FOR_NEW_DEPENDENT)
 
-})
+// })
 
 
 
@@ -424,12 +424,12 @@ describe('E2E Auto Testing:FS-014 Membership: Master Registration and Renewal', 
 // E2EData.SFS_BATCH_TERMINATION_IDS.MEMBERID3) //Provide Active member ID's
 // BatchMemDefermentRequest(E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERNAME1, E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERID1,
 // E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERNAME2, E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERID2)
-// BatchMembershipWaiver(E2EData.TWO_NRICS_FOR_BATCH_MEMBERSHIP_WAIVER.NRIC1, E2EData.TWO_NRICS_FOR_BATCH_MEMBERSHIP_WAIVER.NRIC2) // Enter 2 NRIC's for Member Registration
-// MemDefermentRequest(E2EData.NRIC_FOR_MEMBERSHIP_DEFERMENT_REQUEST) //Change NRIC before runing this function
-// MembershipResignationManagement(E2EData.NRIC_FOR_MEMBERSHIP_RESIGNATION_MANAGEMENT) //Change NRIC before runing this function
-// MembershipExpulsionAndReinstatment(E2EData.NRIC_FOR_MEMBERSHIP_EXPULSION_AND_REINSTATEMENT) //Change NRIC before runing this function
-//     //Membership Transaction Cancellation
-//     //Membership Adjustment
+// BatchMembershipWaiver(CustomerNRICFull, DepCustomerNRICFull) // Enter 2 NRIC's for Member Registration
+// MemDefermentRequest(CustomerNRICFull) //Change NRIC before runing this function
+// MembershipResignationManagement( CustomerNRICFull) //Change NRIC before runing this function
+// MembershipExpulsionAndReinstatment(DepCustomerNRICFull) //Change NRIC before runing this function
+    //Membership Transaction Cancellation
+    //Membership Adjustment
 // })
 
 

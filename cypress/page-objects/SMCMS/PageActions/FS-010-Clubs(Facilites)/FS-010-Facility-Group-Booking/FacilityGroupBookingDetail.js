@@ -43,7 +43,7 @@ class FacilityGroupBookingDetail {
      *****************************************************/
     SelectFacilityType(FacilityType) {
 
-        cy.SelectPickerItem(elems_FacilityGroupBookingDetail.PCK_FACILITYTYPE, "Facility Type", FacilityType)
+        cy.SelectPickerItem(elems_FacilityGroupBookingDetail.PCK_FACILITYTYPE, FacilityType)
 
     }
 
@@ -54,8 +54,10 @@ class FacilityGroupBookingDetail {
      *****************************************************/
      SelectAvailableSlot(SlotName) {
 
-        cy.Click(`(//div[text()="${SlotName}"])[1]`)
-        cy.wait(3000)
+        // cy.Click(`(//div[text()="${SlotName}"])[1]`)
+        // cy.wait(3000)
+            cy.xpath('(//div[contains(text(),"Available (")])[2]').click({ force: true })
+            cy.wait(2000)
     }
     /*****************************************************
      * Method: Facility

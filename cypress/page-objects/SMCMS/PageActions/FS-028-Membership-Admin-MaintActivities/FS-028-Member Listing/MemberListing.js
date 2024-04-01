@@ -12,7 +12,7 @@ class MemberListingPage {
         }
 
         cy.Click(elems_MemberListing.BTN_SEARCHFILTER);
-        cy.wait(4000)
+        cy.wait(15000)
         cy.VerifyTableEntry(elems_MemberListing.TBL_MEMBERLISTING, "Name", Name)
         cy.VerifyTableEntry(elems_MemberListing.TBL_MEMBERLISTING, "NRIC (Last 4 digits)", NRIC)
         cy.VerifyTableEntry(elems_MemberListing.TBL_MEMBERLISTING, "Reason Code", ReasonCode)
@@ -25,7 +25,7 @@ class MemberListingPage {
         }
 
         cy.Click(elems_MemberListing.BTN_SEARCHFILTER);
-        cy.wait(4000)
+        cy.wait(15000)
         cy.VerifyTableEntryDeferment(elems_MemberListing.TBL_MEMBERLISTING, "Member ID", MemberID)
     }
 

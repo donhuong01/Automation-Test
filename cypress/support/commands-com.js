@@ -175,14 +175,15 @@ Cypress.Commands.add('ValidateElementText', (locator, expectedText) => {
  *****************************************************/
 Cypress.Commands.add('VerifyTableEntry', (locator, targetColumn, expectedValue, columnReference1, rowReference1) => {
     cy.log('------ Verify Table Entry : ' + locator + ' ------')
-    cy.xpath(locator).first().scrollIntoView()
-    new Table().verifyTableEntry(locator, targetColumn, expectedValue, columnReference1, rowReference1)
+    cy.xpath(locator, { timeout: 30000 }).first().scrollIntoView({ timeout: 30000 })
+    new Table().verifyTableEntry(locator, targetColumn, expectedValue, columnReference1, rowReference1), { timeout: 30000 }
 })
 
 
 Cypress.Commands.add('VerifyFilterEntryInTable', (locator, targetColumn, expectedValue, columnReference1, rowReference1) => {
     cy.log('------ Verify Table Entry : ' + locator + ' ------')
-    cy.xpath(locator).scrollIntoView()
+    cy.xpath(locator, { timeout: 30000 }).scrollIntoView({ timeout: 30000 })
+    cy.wait(6000)
     new Table().selectTableItem(locator, targetColumn, expectedValue, 'FIRST')
 })
 

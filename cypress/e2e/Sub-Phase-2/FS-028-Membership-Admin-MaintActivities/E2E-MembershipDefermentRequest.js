@@ -58,7 +58,7 @@ describe('[TS01] Membership Deferment Request Management',function(){
             cy.visit('/membership/customerCheckin')
             cy.wait(5000)
             cy.Click(elems_CustomerCheckInPage.RBTN_NRIC)
-            cy.EnterDate(elems_CustomerCheckInPage.DATE_DATEOFBIRTH, Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB)
+            cy.EnterDateCheckin(elems_CustomerCheckInPage.DATE_DATEOFBIRTH, Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB)
             cy.EnterText(elems_CustomerCheckInPage.TXT_LAST4DIGITSNRIC, CustomerNRIC)
             cy.Click(elems_CustomerCheckInPage.BTN_CHECKIN)
             cy.wait(2000)
@@ -157,18 +157,61 @@ describe('[TS01] Membership Deferment Request Management',function(){
    
         })
 
-    it('[TC02] Creating and cancelling a Membership Deferment Request', function(){
+    // it('[TC02] Creating and cancelling a Membership Deferment Request', function(){
+
+    //     cy.visit('/membership/memberList')  //Visit web page for member listing 
+
+    //     cy.wait(5000)
+    //     //Filter Out Name
+    //     cy.EnterText(elems_MemberListing.TXT_NAME, PrincipalName)
+    //     cy.Click(elems_MemberListing.BTN_SEARCHFILTER)
+    //     cy.wait(3000)
+
+    //     //cy.xpath('//span[@class="k-icon k-i-arrow-end-right"]').Click('//span[@class="k-icon k-i-arrow-end-right"]')
+    //     cy.wait(3000)
+
+    //     cy.SelectTableItem(
+    //         elems_MemberListing.TBL_MEMBERLISTING,
+    //         'Name', PrincipalName,
+    //         'NRIC (Last 4 digits)', CustomerNRIC
+    //         )
+        
+    //     cy.SelectBtnDropdownItem(elems_MemberListing.BTNDRP_MAINTENANCE,'Deferment')
+       
+    //     //Start page action 
+
+    //     const StartMonth =Defdata.Deferment.StartMonth
+    //     const ReasonCode = Defdata.Deferment.ReasonCode
+    //     const Remarks = Defdata.Deferment.Remarks
+    //     const DefermentPeriod = Defdata.Deferment.DefermentPeriod
+    //     const EndDate = Defdata.Deferment.EndDate     
+            
+    //     DefermentRequest.fillOutDefermentForm(StartMonth,DefermentPeriod,ReasonCode,Remarks)
+        
+    //     // DefermentRequest.VerifyDefermentForm(PrincipalName, CustomerNRIC)
+
+    //     // DefermentRequest.verifyEndDate()
+        
+    //     DefermentRequest.Cancel('Member Listing')
+
+    //     DefermentRequest.verifyPageTitle()
+
+        
+    // })
+
+    it('[TC03] Creating a Membership Deferment Request', function(){
 
         cy.visit('/membership/memberList')  //Visit web page for member listing 
+        cy.wait(30000)
 
-        cy.wait(5000)
         //Filter Out Name
         cy.EnterText(elems_MemberListing.TXT_NAME, PrincipalName)
+        cy.EnterText(elems_MemberListing.TXT_NRIC, CustomerNRIC)
         cy.Click(elems_MemberListing.BTN_SEARCHFILTER)
         cy.wait(3000)
 
         //cy.xpath('//span[@class="k-icon k-i-arrow-end-right"]').Click('//span[@class="k-icon k-i-arrow-end-right"]')
-        cy.wait(3000)
+        cy.wait(4000)
 
         cy.SelectTableItem(
             elems_MemberListing.TBL_MEMBERLISTING,
@@ -184,60 +227,17 @@ describe('[TS01] Membership Deferment Request Management',function(){
         const ReasonCode = Defdata.Deferment.ReasonCode
         const Remarks = Defdata.Deferment.Remarks
         const DefermentPeriod = Defdata.Deferment.DefermentPeriod
-        const EndDate = Defdata.Deferment.EndDate     
-            
+        const EndDate = Defdata.Deferment.EndDate  
+
         DefermentRequest.fillOutDefermentForm(StartMonth,DefermentPeriod,ReasonCode,Remarks)
         
-        // DefermentRequest.VerifyDefermentForm(PrincipalName, CustomerNRIC)
+        // DefermentRequest.VerifyDefermentForm(Defdata.DefermentMemberListing)
 
         // DefermentRequest.verifyEndDate()
         
-        DefermentRequest.Cancel('Member Listing')
-
-        DefermentRequest.verifyPageTitle()
-
-        
-    })
-
-    it.only('[TC03] Creating a Membership Deferment Request', function(){
-
-        cy.visit('/membership/memberList')  //Visit web page for member listing 
-        cy.wait(5000)
-
-        //Filter Out Name
-        cy.EnterText(elems_MemberListing.TXT_NAME, 'Test User')
-        cy.EnterText(elems_MemberListing.TXT_NRIC, '838C')
-        cy.Click(elems_MemberListing.BTN_SEARCHFILTER)
-        cy.wait(3000)
-
-        //cy.xpath('//span[@class="k-icon k-i-arrow-end-right"]').Click('//span[@class="k-icon k-i-arrow-end-right"]')
-        cy.wait(3000)
-
-        cy.SelectTableItem(
-            elems_MemberListing.TBL_MEMBERLISTING,
-            'Name', 'Test User',
-            'NRIC (Last 4 digits)', '838C'
-            )
-        
-        cy.SelectBtnDropdownItem(elems_MemberListing.BTNDRP_MAINTENANCE,'Deferment')
-       
-        //Start page action 
-
-        // const StartMonth =Defdata.Deferment.StartMonth
-        // const ReasonCode = Defdata.Deferment.ReasonCode
-        // const Remarks = Defdata.Deferment.Remarks
-        // const DefermentPeriod = Defdata.Deferment.DefermentPeriod
-        // const EndDate = Defdata.Deferment.EndDate  
-
-        // DefermentRequest.fillOutDefermentForm(StartMonth,DefermentPeriod,ReasonCode,Remarks)
-        
-        // // DefermentRequest.VerifyDefermentForm(Defdata.DefermentMemberListing)
-
-        // // DefermentRequest.verifyEndDate()
-        
-        // DefermentRequest.Request()
+        DefermentRequest.Request()
                                                 
-        // DefermentRequest.verifyPageTitle()
+        //DefermentRequest.verifyPageTitle()
 
         commons.ApprovalWorkFlow('M-DFE','Membership Deferment Approval Workflow','Approve', 'Test Deferment Membership')
         

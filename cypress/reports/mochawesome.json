@@ -1,14 +1,14 @@
 {
   "stats": {
     "suites": 2,
-    "tests": 1,
+    "tests": 5,
     "passes": 0,
     "pending": 0,
-    "failures": 1,
-    "start": "2024-03-19T01:40:18.348Z",
-    "end": "2024-03-19T01:42:59.631Z",
-    "duration": 161283,
-    "testsRegistered": 1,
+    "failures": 5,
+    "start": "2024-04-01T01:14:43.495Z",
+    "end": "2024-04-01T01:24:31.916Z",
+    "duration": 588421,
+    "testsRegistered": 5,
     "passPercent": 0,
     "pendingPercent": 0,
     "other": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "b49d971a-ec34-4845-b8fa-07f56ffd825b",
+      "uuid": "d2e5676a-03e0-4763-8d19-3977781a8226",
       "title": "",
       "fullFile": "cypress\\e2e\\SMCMS-E2E-Testing\\E2E.cy.js",
       "file": "cypress\\e2e\\SMCMS-E2E-Testing\\E2E.cy.js",
@@ -27,8 +27,8 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "8f5e0e11-f4bd-4573-bcd8-ea0b33d8ada2",
-          "title": "E2E Auto Testing:FS-014 Membership: Master Registration and Renewal",
+          "uuid": "b85b9ecb-71a5-4bce-8df4-388ccaa502dd",
+          "title": "E2E Auto Testing:FS-010 Facility",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
@@ -36,32 +36,120 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "8b2361a4-8bbb-4776-b075-8c101337c625",
-              "title": "[TS06] Life Membership Management",
+              "uuid": "0ad238bc-c4f8-43e7-98d1-6079e6a12a14",
+              "title": "[TS-13] FS-010 Facility Group Booking Ballot",
               "fullFile": "",
               "file": "",
               "beforeHooks": [],
               "afterHooks": [],
               "tests": [
                 {
-                  "title": "[TC01] First Membership Creation and Principal Registration",
-                  "fullTitle": "E2E Auto Testing:FS-014 Membership: Master Registration and Renewal [TS06] Life Membership Management [TC01] First Membership Creation and Principal Registration",
+                  "title": "[TC03] Create New Group Booking Ballot and Cancel",
+                  "fullTitle": "E2E Auto Testing:FS-010 Facility [TS-13] FS-010 Facility Group Booking Ballot [TC03] Create New Group Booking Ballot and Cancel",
                   "timedOut": null,
-                  "duration": 161081,
+                  "duration": 54706,
                   "state": "failed",
                   "speed": null,
                   "pass": false,
                   "fail": true,
                   "pending": false,
-                  "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Failed screenshot\",\n        \"value\": \"\\\\E2E.cy.js\\\\E2E Auto TestingFS-014 Membership Master Registration and Renewal -- [TS06] Life Membership Management -- [TC01] First Membership Creation and Principal Registration (failed).png\"\n      }\n    ]\n  ]\n}",
-                  "code": "const CustomerNRIC = CustomerNRICFull.substr(CustomerNRICFull.length - 4);\n//Enable SFS\n// cy.visit('/membership/moduleSettings')\n// cy.wait(8000)\n// MemModuleSettings.SFSActivate('CHECK')\n// cy.wait(5000)\n/////////////////////////////CUSTOMER CREATION////////////////////////////////////////\ncy.visit('/membership/customerCheckin');\ncy.wait(5000);\ncy.Click(_CustomerCheckInPage.default.RBTN_NRIC);\ncy.EnterDateCheckin(_CustomerCheckInPage.default.DATE_DATEOFBIRTH, _CustomerCreationData.default.CustomerCreationPrincipal.RegistrationInformation.DOB);\ncy.EnterText(_CustomerCheckInPage.default.TXT_LAST4DIGITSNRIC, CustomerNRIC);\ncy.Click(_CustomerCheckInPage.default.BTN_CHECKIN);\ncy.wait(2000);\ncy.Click(_CustomerCheckInPage.default.BTN_CREATNEW);\nCustomerCreation.fillOutRegistrationInfo({\n  name: PrincipalName,\n  // DOB: Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB,\n  gender: _CustomerCreationData.default.CustomerCreationPrincipal.RegistrationInformation.gender\n  /* profilePicture: \"DP.png\" */\n});\nCustomerCreation.fillOutAddressInformation({\n  postalCode: _CustomerCreationData.default.CustomerCreationPrincipal.AddressInformation.postalCode,\n  address: _CustomerCreationData.default.CustomerCreationPrincipal.AddressInformation.address,\n  unitNumber: _CustomerCreationData.default.CustomerCreationPrincipal.AddressInformation.unitNumber,\n  POBOx: _CustomerCreationData.default.CustomerCreationPrincipal.AddressInformation.POBOx,\n  myMailbox: _CustomerCreationData.default.CustomerCreationPrincipal.AddressInformation.myMailbox\n});\nCustomerCreation.fillOutContactInformation({\n  handPhone: '83230126',\n  emailAddress: PrincipalEmail,\n  emergencyContact: _CustomerCreationData.default.CustomerCreationPrincipal.ContactInformation.emergencyContact,\n  homeNumber: _CustomerCreationData.default.CustomerCreationPrincipal.ContactInformation.homeNumber,\n  // Preferred Contact Mode\n  preferredContactModeSelectAll: _CustomerCreationData.default.CustomerCreationPrincipal.ContactInformation.preferredContactModeSelectAll,\n  preferredContactModeEmail: _CustomerCreationData.default.CustomerCreationPrincipal.ContactInformation.preferredContactModeEmail,\n  preferredContactModeMail: _CustomerCreationData.default.CustomerCreationPrincipal.ContactInformation.preferredContactModeMail,\n  preferredContactModeSMS: _CustomerCreationData.default.CustomerCreationPrincipal.ContactInformation.preferredContactModeSMS,\n  preferredContactModeVoiceCall: _CustomerCreationData.default.CustomerCreationPrincipal.ContactInformation.preferredContactModeVoiceCall,\n  preferredContactModePushNotification: _CustomerCreationData.default.CustomerCreationPrincipal.ContactInformation.preferredContactModePushNotification,\n  //Consent Information\n  consentInformationMarketing: _CustomerCreationData.default.CustomerCreationPrincipal.ContactInformation.consentInformationMarketing,\n  consentInformationServiceNotification: _CustomerCreationData.default.CustomerCreationPrincipal.ContactInformation.consentInformationServiceNotification,\n  consentInformationTransactional: _CustomerCreationData.default.CustomerCreationPrincipal.ContactInformation.consentInformationTransactional\n});\nCustomerCreation.save();\ncy.wait(15000);\n///////////////////////////////PRINCIPAL REGISTRATION////////////////////////////////////////\ncy.Click(_Customer_LandingPage.default.SAFRA_Member);\ncy.Click(_Customer_LandingPage.default.Membership_Registration);\ncy.wait(15000);\nMemRegPrincipal.verifyPersonalInformation({\n  MemberCategory: _data.default.memberregistrationprincipal.Personal_Info.MemberCategory,\n  NameOnNRIC: PrincipalName,\n  NameOnCard: PrincipalName,\n  Nric: CustomerNRICFull,\n  Gender: _data.default.memberregistrationprincipal.Personal_Info.Gender,\n  DateofBirth: _data.default.memberregistrationprincipal.Personal_Info.DateofBirth,\n  Age: _data.default.memberregistrationprincipal.Personal_Info.Age,\n  NSStatus: 'SAF NSMan',\n  NSRank: 'Officer',\n  MemberType: 'OD',\n  Nationality: _data.default.memberregistrationprincipal.Personal_Info.Nationality,\n  MaritalStatus: _data.default.memberregistrationprincipal.Personal_Info.MaritalStatus,\n  CardType: _data.default.memberregistrationprincipal.Personal_Info.CardType,\n  InterestinDBSCard: _data.default.memberregistrationprincipal.Personal_Info.InterestinDBSCard\n  // ProfilePicture: data.memberregistrationprincipal.Personal_Info.ProfilePicture\n});\n_LifeMebership.default.ClickLifeMembershipCheckBox();\nMemRegPrincipal.SaveAndNextPrincipal();\ncy.wait(15000);\n///////////////////////////////////TENURE SELECTION////////////////////////////////////////////////////////////\n// Membership Tenure Selection\nMemTenureSelect.principalTenureSelection(PrincipalName, '5 Years');\n//Click on Submit button\n_LifeMebership.default.Submit();\n// Approval workflow\n_LifeMebership.default.ApprovalWorkFlow('M-MER', 'Membership Exception Approval Workflow', 'Approve', 'Testing Remark');\n//Wait and click Shopping Cart button\ncy.wait(8000);\n_LifeMebership.default.ShoppinCart();\n// Shopping cart and Payments\n_LifeMebership.default.fillOutandApplyPayment('CASH');\n// cy.wait(200000)\n// Verify Member Reason code\n_LifeMebership.default.VerifyMemberReasonCode(PrincipalName, CustomerNRIC, \"LF\");\n//Logout\n// cy.LogoutOfSmcms()",
+                  "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Failed screenshot\",\n        \"value\": \"\\\\E2E.cy.js\\\\E2E Auto TestingFS-010 Facility -- [TS-13] FS-010 Facility Group Booking Ballot -- [TC03] Create New Group Booking Ballot and Cancel (failed).png\"\n      }\n    ]\n  ]\n}",
+                  "code": "common.Checkin(SAFRAMember2);\ncy.visit('/facilities/groupBookingList');\ncy.wait(5000);\n// Verify Page Title \n_FacilityBookingDetail.default.verifyPageTitle('Facility Group Booking Listing Form');\n// // Verify Page Title \n// FacilityBookingDetail.verifyPageTitle('Facility Booking Listing')\n// Click Create New button \n_FacilityBookingDetail.default.CreateNew();\ncy.wait(4000);\n// Verify Page Title \n_FacilityBookingDetail.default.verifyPageTitle('Facility Group Booking Detail');\n//Filout Facility Booking detail form\n_FacilityBookingDetail.default.CreateNewFaciltyBooking(FacilityType, Location, FacilityName);\n//select facility name\n// FacilityBookingDetail.SelectFacilities(FacilityName)\n//verify booking info\n//FacilityBookingDetail.VerifyBookingInfo(FacilityType, Location)\n// select slot\n_FacilityBookingDetail.default.SelectSlot(slot);\n// add waiver\n//FacilityBookingDetail.AddWaiver(ChargeType, Amount, Reason)\n//Click Save\n_FacilityBookingDetail.default.Cancel();",
                   "err": {
-                    "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `(//div[contains(@class,\"k-appbar-section Header_cart__f0chI\")]//a)[3]`, but never found it.",
-                    "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `(//div[contains(@class,\"k-appbar-section Header_cart__f0chI\")]//a)[3]`, but never found it.\n    at LifeMembership.ShoppinCart (webpack:///./cypress/page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-014-Life Membreship/LifeMebership.js:79:11)\n    at Context.eval (webpack:///./cypress/e2e/Sub-Phase-2/FS-014-Membership-Registration-Renewal/FS-014/E2E-LifeMembership.js:142:27)",
+                    "message": "AssertionError: Timed out retrying after 30000ms: expected '<h2>' to have text 'Facility Group Booking Detail', but the text was 'Facility Group Booking Listing Form'",
+                    "estack": "AssertionError: Timed out retrying after 30000ms: expected '<h2>' to have text 'Facility Group Booking Detail', but the text was 'Facility Group Booking Listing Form'\n    at Context.eval (webpack:///./cypress/support/commands-com.js:162:42)",
+                    "diff": "- 'Facility Group Booking Listing Form'\n+ 'Facility Group Booking Detail'\n"
+                  },
+                  "uuid": "f207c919-87d4-4771-a111-232f4118b69f",
+                  "parentUUID": "0ad238bc-c4f8-43e7-98d1-6079e6a12a14",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "[TC01] Create New Group Booking Ballot with Successful Items",
+                  "fullTitle": "E2E Auto Testing:FS-010 Facility [TS-13] FS-010 Facility Group Booking Ballot [TC01] Create New Group Booking Ballot with Successful Items",
+                  "timedOut": null,
+                  "duration": 107811,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Failed screenshot\",\n        \"value\": \"\\\\E2E.cy.js\\\\E2E Auto TestingFS-010 Facility -- [TS-13] FS-010 Facility Group Booking Ballot -- [TC01] Create New Group Booking Ballot with Successful Items (failed).png\"\n      }\n    ]\n  ]\n}",
+                  "code": "common.Checkin(SAFRAMember1);\ncy.visit('/facilities/groupBookingList');\ncy.wait(5000);\n// Verify Page Title \n_FacilityBookingDetail.default.verifyPageTitle('Facility Group Booking Listing Form');\n// // Verify Page Title \n// FacilityBookingDetail.verifyPageTitle('Facility Booking Listing')\n// Click Create New button \n_FacilityBookingDetail.default.CreateNew();\ncy.wait(4000);\n// Verify Page Title \n_FacilityBookingDetail.default.verifyPageTitle('Facility Group Booking Detail');\n//Filout Facility Booking detail form\n_FacilityBookingDetail.default.CreateNewFaciltyBooking(FacilityType, Location, FacilityName);\n//select facility name\n// FacilityBookingDetail.SelectFacilities(FacilityName)\n//verify booking info\n//FacilityBookingDetail.VerifyBookingInfo(FacilityType, Location)\n// select slot\n_FacilityBookingDetail.default.SelectSlot(slot);\n// add waiver\n//FacilityBookingDetail.AddWaiver(ChargeType, Amount, Reason)\n//Click Save\n_FacilityBookingDetail.default.Save();\ncy.wait(10000);\ncy.visit('/facilities/groupBookingBallotListing');\n_FacilityGroupBookingBallotListing.default.VerifyPageTitle(\"Facility Group Booking Ballot Listing\");\n_FacilityGroupBookingBallotListing.default.CreateNew();\n_FacilityGroupBookingBallotDetail.default.VerifyPageTitle(\"Facility Group Booking Ballot Details\");\n_FacilityGroupBookingBallotDetail.default.SelectFacility(\"Group Ballot 2023\");\n//cy.ValidateElementText('//td[text()=\"Successful\"]', \"Successful\")\n_FacilityGroupBookingBallotDetail.default.Save();\ncy.wait(3000);\ncy.visit('/facilities/groupBookingBallotListing');\n_FacilityGroupBookingBallotDetail.default.ShoppinCart();\nShoppingCart.fillOutandApplyPayment('CASH');\ncy.wait(5000);\ncy.visit('/facilities/groupBookingBallotListing');\n_FacilityGroupBookingBallotListing.default.VerifyPageTitle(\"Facility Group Booking Ballot Listing\");\ncy.wait(3000);\ncy.visit('/facilities/groupBookingList');\ncy.wait(3000);\n_FacilityGroupBookingBallotListing.default.FilterByFacility(FacilityName);\n_FacilityGroupBookingBallotListing.default.VerifyTableConfirmed();\n//Logout\n// cy.LogoutOfSmcms()\n// cy.wait(3000)",
+                  "err": {
+                    "message": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because the page updated while this command was executing. Cypress tried to locate elements based on this query:\n\n> <input#eb980471-2fe3-460e-b397-5acc20a4e758.k-checkbox>\n\nWe initially found matching element(s), but while waiting for them to become actionable, they disappeared from the page. Common situations why this happens:\n  - Your JS framework re-rendered asynchronously\n  - Your app code reacted to an event firing and removed the element\n\nYou can typically solve this by breaking up a chain. For example, rewrite:\n\n> `cy.get('button').click().click()`\n\nto\n\n> `cy.get('button').as('btn').click()`\n> `cy.get('@btn').click()`\n\nhttps://on.cypress.io/element-has-detached-from-dom",
+                    "estack": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because the page updated while this command was executing. Cypress tried to locate elements based on this query:\n\n> <input#eb980471-2fe3-460e-b397-5acc20a4e758.k-checkbox>\n\nWe initially found matching element(s), but while waiting for them to become actionable, they disappeared from the page. Common situations why this happens:\n  - Your JS framework re-rendered asynchronously\n  - Your app code reacted to an event firing and removed the element\n\nYou can typically solve this by breaking up a chain. For example, rewrite:\n\n> `cy.get('button').click().click()`\n\nto\n\n> `cy.get('button').as('btn').click()`\n> `cy.get('@btn').click()`\n\nhttps://on.cypress.io/element-has-detached-from-dom\n    at retryActionability (https://uat-smcms.safra.sg/__cypress/runner/cypress_runner.js:140453:82)\n    at tryCatcher (https://uat-smcms.safra.sg/__cypress/runner/cypress_runner.js:18744:23)\n    at Promise.attempt.Promise.try (https://uat-smcms.safra.sg/__cypress/runner/cypress_runner.js:16018:29)\n    at whenStable (https://uat-smcms.safra.sg/__cypress/runner/cypress_runner.js:156574:65)\n    at <unknown> (https://uat-smcms.safra.sg/__cypress/runner/cypress_runner.js:156015:14)\n    at tryCatcher (https://uat-smcms.safra.sg/__cypress/runner/cypress_runner.js:18744:23)\n    at Promise._settlePromiseFromHandler (https://uat-smcms.safra.sg/__cypress/runner/cypress_runner.js:16679:31)\n    at Promise._settlePromise (https://uat-smcms.safra.sg/__cypress/runner/cypress_runner.js:16736:18)\n    at Promise._settlePromise0 (https://uat-smcms.safra.sg/__cypress/runner/cypress_runner.js:16781:10)\n    at Promise._settlePromises (https://uat-smcms.safra.sg/__cypress/runner/cypress_runner.js:16861:18)\n    at Promise._fulfill (https://uat-smcms.safra.sg/__cypress/runner/cypress_runner.js:16805:18)\n    at <unknown> (https://uat-smcms.safra.sg/__cypress/runner/cypress_runner.js:18419:46)\nFrom Your Spec Code:\n    at Table.selectTableItem (webpack:///./cypress/support/libraries/lib_table.js:86:80)\n    at Context.eval (webpack:///./cypress/support/commands-com.js:640:16)",
                     "diff": null
                   },
-                  "uuid": "40dfe1b6-fa18-43c7-91de-4e2e3597498d",
-                  "parentUUID": "8b2361a4-8bbb-4776-b075-8c101337c625",
+                  "uuid": "dcecda31-41e5-4a4d-8e12-a95de0006ce6",
+                  "parentUUID": "0ad238bc-c4f8-43e7-98d1-6079e6a12a14",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "[TC02] Create New Group Booking Ballot with Unsuccessful Items",
+                  "fullTitle": "E2E Auto Testing:FS-010 Facility [TS-13] FS-010 Facility Group Booking Ballot [TC02] Create New Group Booking Ballot with Unsuccessful Items",
+                  "timedOut": null,
+                  "duration": 152052,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Failed screenshot\",\n        \"value\": \"\\\\E2E.cy.js\\\\E2E Auto TestingFS-010 Facility -- [TS-13] FS-010 Facility Group Booking Ballot -- [TC02] Create New Group Booking Ballot with Unsuccessful Items (failed).png\"\n      }\n    ]\n  ]\n}",
+                  "code": "/******************** \n   1st Member Login\n********************/\ncommon.Checkin(SAFRAMember1);\ncy.visit('/facilities/groupBookingList');\ncy.wait(5000);\n// Verify Page Title \n_FacilityBookingDetail.default.verifyPageTitle('Facility Group Booking Listing Form');\n// // Verify Page Title \n// FacilityBookingDetail.verifyPageTitle('Facility Booking Listing')\n// Click Create New button \n_FacilityBookingDetail.default.CreateNew();\ncy.wait(4000);\n// Verify Page Title \n_FacilityBookingDetail.default.verifyPageTitle('Facility Group Booking Detail');\n//Filout Facility Booking detail form\n_FacilityBookingDetail.default.CreateNewFaciltyBooking(FacilityType, Location, FacilityName);\n//select facility name\n// FacilityBookingDetail.SelectFacilities(FacilityName)\n//verify booking info\n//FacilityBookingDetail.VerifyBookingInfo(FacilityType, Location)\n// select slot\n_FacilityBookingDetail.default.SelectSlot(slot2);\n// add waiver\n//FacilityBookingDetail.AddWaiver(ChargeType, Amount, Reason)\n//Click Save\n_FacilityBookingDetail.default.Save();\ncy.wait(3000);\n//Logout\ncy.LogoutOfSmcms();\ncy.wait(5000);\n/******************** \n   2nd Member Login\n********************/\ncommon.Checkin(SAFRAMember2);\ncy.wait(3000);\ncy.visit('/facilities/groupBookingList');\ncy.wait(5000);\n// Verify Page Title \n_FacilityBookingDetail.default.verifyPageTitle('Facility Group Booking Listing Form');\n// // Verify Page Title \n// FacilityBookingDetail.verifyPageTitle('Facility Booking Listing')\n// Click Create New button \n_FacilityBookingDetail.default.CreateNew();\ncy.wait(4000);\n// Verify Page Title \n_FacilityBookingDetail.default.verifyPageTitle('Facility Group Booking Detail');\n//Filout Facility Booking detail form\n_FacilityBookingDetail.default.CreateNewFaciltyBooking(FacilityType, Location, FacilityName);\n//select facility name\n// FacilityBookingDetail.SelectFacilities(FacilityName)\n//verify booking info\n//FacilityBookingDetail.VerifyBookingInfo(FacilityType, Location)\n// select slot\n_FacilityBookingDetail.default.SelectSlot(slot2);\n// add waiver\n//FacilityBookingDetail.AddWaiver(ChargeType, Amount, Reason)\n//Click Save\n_FacilityBookingDetail.default.Save();\ncy.wait(10000);\ncy.visit('/facilities/groupBookingBallotListing');\n_FacilityGroupBookingBallotListing.default.VerifyPageTitle(\"Facility Group Booking Ballot Listing\");\n_FacilityGroupBookingBallotListing.default.CreateNew();\n_FacilityGroupBookingBallotDetail.default.VerifyPageTitle(\"Facility Group Booking Ballot Details\");\n_FacilityGroupBookingBallotDetail.default.SelectFacility(\"Group Ballot 2023\");\ncy.wait(5000);\n// cy.ValidateElementText('//td[text()=\"Unsuccessful\"]', \"Unsuccessful\")\n// cy.Click('//button[text()=\"Set as Successful\"]')\n_FacilityGroupBookingBallotDetail.default.Save();\ncy.wait(3000);\n_FacilityGroupBookingBallotDetail.default.ShoppinCart();\nShoppingCart.fillOutandApplyPayment('CASH');\ncy.wait(5000);\ncy.visit('/facilities/groupBookingBallotListing');\n_FacilityGroupBookingBallotListing.default.VerifyPageTitle(\"Facility Group Booking Ballot Listing\");\ncy.wait(3000);\ncy.visit('/facilities/groupBookingList');\ncy.wait(3000);\n_FacilityGroupBookingBallotListing.default.FilterByFacility(FacilityName);\n_FacilityGroupBookingBallotListing.default.VerifyTableConfirmed();\ncy.wait(3000);\n_FacilityGroupBookingBallotListing.default.VerifyTableUnsuccessful();\n//Logout\n// cy.wait(3000)\n// cy.LogoutOfSmcms()\n// cy.wait(3000)",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 30000ms: expected '<h2>' to have text 'Facility Group Booking Detail', but the text was 'Facility Group Booking Listing Form'",
+                    "estack": "AssertionError: Timed out retrying after 30000ms: expected '<h2>' to have text 'Facility Group Booking Detail', but the text was 'Facility Group Booking Listing Form'\n    at Context.eval (webpack:///./cypress/support/commands-com.js:162:42)",
+                    "diff": "- 'Facility Group Booking Listing Form'\n+ 'Facility Group Booking Detail'\n"
+                  },
+                  "uuid": "41898ad0-4d0f-4624-a62a-b7caf6fd2af4",
+                  "parentUUID": "0ad238bc-c4f8-43e7-98d1-6079e6a12a14",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "[TC01] Create New Group Booking Ballot with Successful Items",
+                  "fullTitle": "E2E Auto Testing:FS-010 Facility [TS-13] FS-010 Facility Group Booking Ballot [TC01] Create New Group Booking Ballot with Successful Items",
+                  "timedOut": null,
+                  "duration": 111199,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Failed screenshot\",\n        \"value\": \"\\\\E2E.cy.js\\\\E2E Auto TestingFS-010 Facility -- [TS-13] FS-010 Facility Group Booking Ballot -- [TC01] Create New Group Booking Ballot with Successful Items (failed) (1).png\"\n      }\n    ]\n  ]\n}",
+                  "code": "common.Checkin(SAFRAMember1);\ncy.visit('/facilities/groupBookingList');\ncy.wait(5000);\n// Verify Page Title \n_FacilityBookingDetail.default.verifyPageTitle('Facility Group Booking Listing Form');\n// // Verify Page Title \n// FacilityBookingDetail.verifyPageTitle('Facility Booking Listing')\n// Click Create New button \n_FacilityBookingDetail.default.CreateNew();\ncy.wait(4000);\n// Verify Page Title \n_FacilityBookingDetail.default.verifyPageTitle('Facility Group Booking Detail');\n//Filout Facility Booking detail form\n_FacilityBookingDetail.default.CreateNewFaciltyBooking(FacilityType, Location, FacilityName);\n//select facility name\n// FacilityBookingDetail.SelectFacilities(FacilityName)\n//verify booking info\n//FacilityBookingDetail.VerifyBookingInfo(FacilityType, Location)\n// select slot\n_FacilityBookingDetail.default.SelectSlot(slot);\n// add waiver\n//FacilityBookingDetail.AddWaiver(ChargeType, Amount, Reason)\n//Click Save\n_FacilityBookingDetail.default.Save();\ncy.wait(10000);\ncy.visit('/facilities/groupBookingBallotListing');\n_FacilityGroupBookingBallotListing.default.VerifyPageTitle(\"Facility Group Booking Ballot Listing\");\n_FacilityGroupBookingBallotListing.default.CreateNew();\n_FacilityGroupBookingBallotDetail.default.VerifyPageTitle(\"Facility Group Booking Ballot Details\");\n_FacilityGroupBookingBallotDetail.default.SelectFacility(\"Group Ballot 2023\");\n//cy.ValidateElementText('//td[text()=\"Successful\"]', \"Successful\")\n_FacilityGroupBookingBallotDetail.default.Save();\ncy.wait(3000);\ncy.visit('/facilities/groupBookingBallotListing');\n_FacilityGroupBookingBallotDetail.default.ShoppinCart();\nShoppingCart.fillOutandApplyPayment('CASH');\ncy.wait(5000);\ncy.visit('/facilities/groupBookingBallotListing');\n_FacilityGroupBookingBallotListing.default.VerifyPageTitle(\"Facility Group Booking Ballot Listing\");\ncy.wait(3000);\ncy.visit('/facilities/groupBookingList');\ncy.wait(3000);\n_FacilityGroupBookingBallotListing.default.FilterByFacility(FacilityName);\n_FacilityGroupBookingBallotListing.default.VerifyTableConfirmed();\n//Logout\n// cy.LogoutOfSmcms()\n// cy.wait(3000)",
+                  "err": {
+                    "message": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because the page updated while this command was executing. Cypress tried to locate elements based on this query:\n\n> <input#8e921be4-1fcf-444f-a520-035f2a6a3cd0.k-checkbox>\n\nWe initially found matching element(s), but while waiting for them to become actionable, they disappeared from the page. Common situations why this happens:\n  - Your JS framework re-rendered asynchronously\n  - Your app code reacted to an event firing and removed the element\n\nYou can typically solve this by breaking up a chain. For example, rewrite:\n\n> `cy.get('button').click().click()`\n\nto\n\n> `cy.get('button').as('btn').click()`\n> `cy.get('@btn').click()`\n\nhttps://on.cypress.io/element-has-detached-from-dom",
+                    "estack": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because the page updated while this command was executing. Cypress tried to locate elements based on this query:\n\n> <input#8e921be4-1fcf-444f-a520-035f2a6a3cd0.k-checkbox>\n\nWe initially found matching element(s), but while waiting for them to become actionable, they disappeared from the page. Common situations why this happens:\n  - Your JS framework re-rendered asynchronously\n  - Your app code reacted to an event firing and removed the element\n\nYou can typically solve this by breaking up a chain. For example, rewrite:\n\n> `cy.get('button').click().click()`\n\nto\n\n> `cy.get('button').as('btn').click()`\n> `cy.get('@btn').click()`\n\nhttps://on.cypress.io/element-has-detached-from-dom\n    at retryActionability (https://uat-smcms.safra.sg/__cypress/runner/cypress_runner.js:140453:82)\n    at tryCatcher (https://uat-smcms.safra.sg/__cypress/runner/cypress_runner.js:18744:23)\n    at Promise.attempt.Promise.try (https://uat-smcms.safra.sg/__cypress/runner/cypress_runner.js:16018:29)\n    at whenStable (https://uat-smcms.safra.sg/__cypress/runner/cypress_runner.js:156574:65)\n    at <unknown> (https://uat-smcms.safra.sg/__cypress/runner/cypress_runner.js:156015:14)\n    at tryCatcher (https://uat-smcms.safra.sg/__cypress/runner/cypress_runner.js:18744:23)\n    at Promise._settlePromiseFromHandler (https://uat-smcms.safra.sg/__cypress/runner/cypress_runner.js:16679:31)\n    at Promise._settlePromise (https://uat-smcms.safra.sg/__cypress/runner/cypress_runner.js:16736:18)\n    at Promise._settlePromise0 (https://uat-smcms.safra.sg/__cypress/runner/cypress_runner.js:16781:10)\n    at Promise._settlePromises (https://uat-smcms.safra.sg/__cypress/runner/cypress_runner.js:16861:18)\n    at Promise._fulfill (https://uat-smcms.safra.sg/__cypress/runner/cypress_runner.js:16805:18)\n    at <unknown> (https://uat-smcms.safra.sg/__cypress/runner/cypress_runner.js:18419:46)\nFrom Your Spec Code:\n    at Table.selectTableItem (webpack:///./cypress/support/libraries/lib_table.js:86:80)\n    at Context.eval (webpack:///./cypress/support/commands-com.js:640:16)",
+                    "diff": null
+                  },
+                  "uuid": "b5ef3e2d-2d20-4d58-b5e3-24fc464f818f",
+                  "parentUUID": "0ad238bc-c4f8-43e7-98d1-6079e6a12a14",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "[ST] Create New Group Automatic Booking Ballot with Unsuccessful and Successful Items",
+                  "fullTitle": "E2E Auto Testing:FS-010 Facility [TS-13] FS-010 Facility Group Booking Ballot [ST] Create New Group Automatic Booking Ballot with Unsuccessful and Successful Items",
+                  "timedOut": null,
+                  "duration": 162174,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Failed screenshot\",\n        \"value\": \"\\\\E2E.cy.js\\\\E2E Auto TestingFS-010 Facility -- [TS-13] FS-010 Facility Group Booking Ballot -- [ST] Create New Group Automatic Booking Ballot with Unsuccessful and Successful Items (failed).png\"\n      }\n    ]\n  ]\n}",
+                  "code": "/******************** \n   1st Member Login\n********************/\ncommon.Checkin(SAFRAMember1);\ncy.visit('/facilities/groupBookingList');\ncy.wait(5000);\n// Verify Page Title \n_FacilityBookingDetail.default.verifyPageTitle('Facility Group Booking Listing Form');\n// // Verify Page Title \n// FacilityBookingDetail.verifyPageTitle('Facility Booking Listing')\n// Click Create New button \n_FacilityBookingDetail.default.CreateNew();\ncy.wait(4000);\n// Verify Page Title \n_FacilityBookingDetail.default.verifyPageTitle('Facility Group Booking Detail');\n//Filout Facility Booking detail form\n_FacilityBookingDetail.default.CreateNewFaciltyBooking(FacilityType, Location, FacilityName);\n//select facility name\n// FacilityBookingDetail.SelectFacilities(FacilityName)\n//verify booking info\n//FacilityBookingDetail.VerifyBookingInfo(FacilityType, Location)\n// select slot\n_FacilityBookingDetail.default.SelectSlot(slot2);\n// add waiver\n//FacilityBookingDetail.AddWaiver(ChargeType, Amount, Reason)\n//Click Save\n_FacilityBookingDetail.default.Save();\ncy.wait(3000);\n//Logout\ncy.LogoutOfSmcms();\ncy.wait(5000);\n/******************** \n   2nd Member Login\n********************/\ncommon.Checkin(SAFRAMember2);\ncy.wait(3000);\ncy.visit('/facilities/groupBookingList');\ncy.wait(5000);\n// Verify Page Title \n_FacilityBookingDetail.default.verifyPageTitle('Facility Group Booking Listing Form');\n// // Verify Page Title \n// FacilityBookingDetail.verifyPageTitle('Facility Booking Listing')\n// Click Create New button \n_FacilityBookingDetail.default.CreateNew();\ncy.wait(4000);\n// Verify Page Title \n_FacilityBookingDetail.default.verifyPageTitle('Facility Group Booking Detail');\n//Filout Facility Booking detail form\n_FacilityBookingDetail.default.CreateNewFaciltyBooking(FacilityType, Location, FacilityName);\n//select facility name\n// FacilityBookingDetail.SelectFacilities(FacilityName)\n//verify booking info\n//FacilityBookingDetail.VerifyBookingInfo(FacilityType, Location)\n// select slot\n_FacilityBookingDetail.default.SelectSlot(slot2);\n// add waiver\n//FacilityBookingDetail.AddWaiver(ChargeType, Amount, Reason)\n//Click Save\n_FacilityBookingDetail.default.Save();\ncy.wait(10000);\ncy.visit('/facilities/groupBookingBallotListing');\n_FacilityGroupBookingBallotListing.default.VerifyPageTitle(\"Facility Group Booking Ballot Listing\");\n_FacilityGroupBookingBallotListing.default.CreateNew();\n_FacilityGroupBookingBallotDetail.default.VerifyPageTitle(\"Facility Group Booking Ballot Details\");\n_FacilityGroupBookingBallotDetail.default.SelectFacility(\"Group Ballot 2023\");\ncy.wait(5000);\n// cy.ValidateElementText('//td[text()=\"Unsuccessful\"]', \"Unsuccessful\")\n// cy.Click('//button[text()=\"Set as Successful\"]')\n_FacilityGroupBookingBallotDetail.default.Save();\ncy.wait(3000);\ncy.ValidateElementText('//td[text()=\"Successful\"]', \"Successful\");\ncy.ValidateElementText('//td[text()=\"Unsuccessful\"]', \"Unsuccessful\");\n//  FacilityGroupBookingBallotDetail.ShoppinCart()\n//  ShoppingCart.fillOutandApplyPayment('CASH')\n//  cy.wait(5000)\n//  cy.visit('/facilities/groupBookingBallotListing')\n//  FacilityGroupBookingBallotListing.VerifyPageTitle(\"Facility Group Booking Ballot Listing\")\n//  cy.wait(3000)\ncy.visit('/facilities/groupBookingList');\ncy.wait(3000);\n_FacilityGroupBookingBallotListing.default.FilterByFacility(FacilityName);\n_FacilityGroupBookingBallotListing.default.VerifyTableConfirmed();\ncy.wait(3000);\n_FacilityGroupBookingBallotListing.default.VerifyTableUnsuccessful();\n//Logout\n// cy.wait(3000)\n// cy.LogoutOfSmcms()\n// cy.wait(3000)",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 30000ms: expected '<h2>' to have text 'Facility Group Booking Detail', but the text was 'Facility Group Booking Listing Form'",
+                    "estack": "AssertionError: Timed out retrying after 30000ms: expected '<h2>' to have text 'Facility Group Booking Detail', but the text was 'Facility Group Booking Listing Form'\n    at Context.eval (webpack:///./cypress/support/commands-com.js:162:42)",
+                    "diff": "- 'Facility Group Booking Listing Form'\n+ 'Facility Group Booking Detail'\n"
+                  },
+                  "uuid": "e51f4d8a-3137-4b8d-bf00-0c115eb736ed",
+                  "parentUUID": "0ad238bc-c4f8-43e7-98d1-6079e6a12a14",
                   "isHook": false,
                   "skipped": false
                 }
@@ -69,11 +157,15 @@
               "suites": [],
               "passes": [],
               "failures": [
-                "40dfe1b6-fa18-43c7-91de-4e2e3597498d"
+                "f207c919-87d4-4771-a111-232f4118b69f",
+                "dcecda31-41e5-4a4d-8e12-a95de0006ce6",
+                "41898ad0-4d0f-4624-a62a-b7caf6fd2af4",
+                "b5ef3e2d-2d20-4d58-b5e3-24fc464f818f",
+                "e51f4d8a-3137-4b8d-bf00-0c115eb736ed"
               ],
               "pending": [],
               "skipped": [],
-              "duration": 161081,
+              "duration": 587942,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000

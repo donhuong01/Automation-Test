@@ -26,7 +26,7 @@ const FacilityGroupBooking = (SAFRAMember,SAFRARelatedMemberships,GeustOfSAFAR) 
 
 describe('[TS-07] FS-010 Facility Group Booking', function () {
 
-    it('[TC01] Creating Facility Group Booking - SAFRA Members', function () {
+    it.only('[TC01] Creating Facility Group Booking - SAFRA Members', function () {
 
         common.Checkin(SAFRAMember)
 
@@ -38,9 +38,9 @@ describe('[TS-07] FS-010 Facility Group Booking', function () {
 
         FacilityGroupBookingDetail.VerifyPageTitle("Facility Group Booking Detail")
 
-        FacilityGroupBookingDetail.SelectFacilityType("Type 2023")
+        FacilityGroupBookingDetail.SelectFacilityType("QA-DemoType2024")
 
-        FacilityGroupBookingDetail.SelectLocationAndFacility("SAFRA Jurong", "Auto-Test 5066")
+        FacilityGroupBookingDetail.SelectLocationAndFacility("SAFRA HQ", "QA-Demo-Facility-2024")
 
         FacilityGroupBookingDetail.SelectAvailableSlot("Available (09:00 am - 10:00 am)")
 
@@ -63,9 +63,9 @@ describe('[TS-07] FS-010 Facility Group Booking', function () {
 
         FacilityGroupBookingDetail.VerifyPageTitle("Facility Group Booking Detail")
 
-        FacilityGroupBookingDetail.SelectFacilityType("Type 2023")
+        FacilityGroupBookingDetail.SelectFacilityType("QA-DemoType2024")
 
-        FacilityGroupBookingDetail.SelectLocationAndFacility("SAFRA Jurong", "Auto-Test 5066")
+        FacilityGroupBookingDetail.SelectLocationAndFacility("SAFRA HQ", "QA-Demo-Facility-2024")
 
         FacilityGroupBookingDetail.SelectAvailableSlot("Available (09:00 am - 10:00 am)")
 
@@ -88,9 +88,9 @@ describe('[TS-07] FS-010 Facility Group Booking', function () {
 
         FacilityGroupBookingDetail.VerifyPageTitle("Facility Group Booking Detail")
 
-        FacilityGroupBookingDetail.SelectFacilityType("Type 2023")
+        FacilityGroupBookingDetail.SelectFacilityType("QA-DemoType2024")
 
-        FacilityGroupBookingDetail.SelectLocationAndFacility("SAFRA Jurong", "Auto-Test 5066")
+        FacilityGroupBookingDetail.SelectLocationAndFacility("SAFRA HQ", "QA-Demo-Facility-2024")
 
         FacilityGroupBookingDetail.SelectAvailableSlot("Available (09:00 am - 10:00 am)")
 

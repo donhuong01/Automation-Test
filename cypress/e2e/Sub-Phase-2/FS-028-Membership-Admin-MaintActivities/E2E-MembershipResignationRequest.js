@@ -59,7 +59,7 @@ describe('[TS01] Membership Resignation Request Management',function(){
             cy.visit('/membership/customerCheckin')
             cy.wait(5000)
             cy.Click(elems_CustomerCheckInPage.RBTN_NRIC)
-            cy.EnterDate(elems_CustomerCheckInPage.DATE_DATEOFBIRTH, Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB)
+            cy.EnterDateCheckin(elems_CustomerCheckInPage.DATE_DATEOFBIRTH, Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB)
             cy.EnterText(elems_CustomerCheckInPage.TXT_LAST4DIGITSNRIC, CustomerNRIC)
             cy.Click(elems_CustomerCheckInPage.BTN_CHECKIN)
             cy.wait(2000)
@@ -81,10 +81,10 @@ describe('[TS01] Membership Resignation Request Management',function(){
             });
          
             CustomerCreation.fillOutContactInformation({
-                handPhone: '565821' + Math.floor(Math.random() * 1000),
+                handPhone: '865821' + Math.floor(Math.random() * 1000),
                 emailAddress: PrincipalEmail,
-                emergencyContact: Customerdata.CustomerCreationPrincipal.ContactInformation.emergencyContact,
-                homeNumber: '56582' + Math.floor(Math.random() * 1000),
+                // emergencyContact: Customerdata.CustomerCreationPrincipal.ContactInformation.emergencyContact,
+                // homeNumber: '56582' + Math.floor(Math.random() * 1000),
         
                 // Preferred Contact Mode
                 preferredContactModeSelectAll: Customerdata.CustomerCreationPrincipal.ContactInformation.preferredContactModeSelectAll,

@@ -133,6 +133,10 @@ const FacilityOperatingPeriod = () => {
 
             common.ApprovalWorkFlow('F-OPD', 'Facility Operating Period Approval Workflow', 'Approve', 'Testing Facility Operating Period Approval Workflow')
 
+            cy.wait(5000)
+
+            common.ApprovalWorkFlow('F-OPD', 'Facility Operating Period Approval Workflow', 'Approve', 'Testing Facility Operating Period Approval Workflow')
+
             cy.visit('/facilities/operatingPeriodListing')
             cy.wait(5000)
 
