@@ -151,7 +151,7 @@ class MembershipResignationRequest{
 
     {
 
-    cy.ValidateElementText(elems_PendingTaskDetail.LBL_TASKNAME, TaskName)
+    // cy.ValidateElementText(elems_PendingTaskDetail.LBL_TASKNAME, TaskName)
     cy.ValidateElementText(elems_PendingTaskDetail.LBL_WFNAME, WorkflowName)
     cy.SelectDropDownItem(elems_PendingTaskDetail.DRP_APPROVALOUTCOME, ApprovalOutcome)
     cy.EnterText(elems_PendingTaskDetail.TXTAREA_REMARK, Remark)

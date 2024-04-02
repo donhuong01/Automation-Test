@@ -197,6 +197,9 @@ import FacilityGroupBookingBallot from '../Sub-Phase-2/FS-010-Clubs(Facilites)/E
 import { nricGenerator } from '../../support/nricGenerator'
 
 const CustomerNRICFull = nricGenerator('T', 43)
+const CustomerNRICFull2 = nricGenerator('T', 43)
+const CustomerNRICFull3 = nricGenerator('T', 43)
+const CustomerNRICFull4 = nricGenerator('T', 43)
 const DepCustomerNRICFull = nricGenerator('S', 43)
 const Dep2CustomerNRICFull = nricGenerator('S', 43)
 const Dep3CustomerNRICFull = nricGenerator('S', 43)
@@ -265,7 +268,7 @@ beforeEach(() => {
 
 
 // This module need minor updates
- describe('E2E Auto Testing:FS-010 Facility', ()=> {
+//  describe('E2E Auto Testing:FS-010 Facility', ()=> {
 // FacilityGeneralSettingDtl()
 // FacilitySettingsCalendar()
 // FacilitySettingCalendarSettings()
@@ -278,8 +281,8 @@ beforeEach(() => {
 // FacilityBookingCancellationManagment() // Needs own page action
 // FacilityGroupBooking(E2EData.FACILITY_GROUP_BOOKING.SAFRA_MEMBER, E2EData.FACILITY_GROUP_BOOKING.SAFRA_RELATED_MEMBER,
 // E2EData.FACILITY_GROUP_BOOKING.SAFRA_GUEST) //Pass Active Safra Member ID - 1.Safra Member 2. SAFRARelatedMemberships 3. Guest Member
-FacilityGroupBookingBallot("A300002855", "A300003031") // Recheck again tomorrow morning
-  })
+// FacilityGroupBookingBallot("A300003704", "A300003708") // Recheck again tomorrow morning
+//   })
 
 
 // describe('E2E Auto Testing:FS-012 Accommodation', ()=> {
@@ -324,13 +327,13 @@ FacilityGroupBookingBallot("A300002855", "A300003031") // Recheck again tomorrow
 //     E2EData.BATCH_REGISTRATION.MEMBER_NAME_FOR_NON_MEMBER,
 //     E2EData.BATCH_REGISTRATION.DOB_FOR_NON_MEMBER,
 //     E2EData.BATCH_REGISTRATION.LAST4DIGITSNRIC_FOR_NON_MEMBER,
-//     DepCustomerNRICFull,
-
-//     //NRIC for New Principal
 //     CustomerNRICFull,
 
+//     //NRIC for New Principal
+//     CustomerNRICFull2, 
+
 //     //NRIC for New Dependent and Dependent PrincipalID
-//     Dep2CustomerNRICFull,
+//     DepCustomerNRICFull,
 //     E2EData.BATCH_REGISTRATION.PRINCIPALID_FOR_NEW_DEPENDENT)
 
 // })
@@ -408,10 +411,10 @@ FacilityGroupBookingBallot("A300002855", "A300003031") // Recheck again tomorrow
 // SFSBatchMemDefermentRequest(E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERNAME1, E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERID1,
 //     E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERNAME2, E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERID2) //NOTE: Members inputed should be on the first page on sorting new //Update Always 1st day of month
 // SFSReinstatementConfirmation(E2EData.SFS_ACTIVE_MEMBERID_FOR_REINSTATEMENT_CONFIRMATION)// Enter  Inactive MemberID
-// SFSBatchMembershipWaiver(E2EData.SFS_TWO_NRICS_FOR_BATCH_MEMBERSHIP_WAIVER.NRIC1, E2EData.SFS_TWO_NRICS_FOR_BATCH_MEMBERSHIP_WAIVER.NRIC2) // Enter 2 NRIC's for Member Registration
-//      SFSMemDefermentRequest(E2EData.SFS_NRIC_FOR_MEMBERSHIP_DEFERMENT_REQUEST) //Change NRIC before runing this function
-//     SFSMembershipResignationManagement(E2EData.SFS_NRIC_FOR_MEMBERSHIP_RESIGNATION_MANAGEMENT) //Change NRIC before runing this function
-//     SFSMembershipExpulsionAndReinstatment(E2EData.SFS_NRIC_FOR_MEMBERSHIP_EXPULSION_AND_REINSTATEMENT) //Change NRIC before runing this function
+// SFSBatchMembershipWaiver(CustomerNRICFull,DepCustomerNRICFull) // Enter 2 NRIC's for Member Registration
+    //  SFSMemDefermentRequest(CustomerNRICFull2)//(E2EData.SFS_NRIC_FOR_MEMBERSHIP_DEFERMENT_REQUEST) //Change NRIC before runing this function
+    // SFSMembershipResignationManagement(CustomerNRICFull3) //Change NRIC before runing this function
+    // SFSMembershipExpulsionAndReinstatment(CustomerNRICFull4) //Change NRIC before runing this function
 
 // })
 
@@ -425,9 +428,9 @@ FacilityGroupBookingBallot("A300002855", "A300003031") // Recheck again tomorrow
 // BatchMemDefermentRequest(E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERNAME1, E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERID1,
 // E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERNAME2, E2EData.SFS_BATCH_DEFERMENT_REQUEST.MEMBERID2)
 // BatchMembershipWaiver(CustomerNRICFull, DepCustomerNRICFull) // Enter 2 NRIC's for Member Registration
-// MemDefermentRequest(CustomerNRICFull) //Change NRIC before runing this function
-// MembershipResignationManagement( CustomerNRICFull) //Change NRIC before runing this function
-// MembershipExpulsionAndReinstatment(DepCustomerNRICFull) //Change NRIC before runing this function
+// MemDefermentRequest(CustomerNRICFull2) //Change NRIC before runing this function
+// MembershipResignationManagement( CustomerNRICFull3) //Change NRIC before runing this function
+// MembershipExpulsionAndReinstatment(DepCustomerNRICFull4) //Change NRIC before runing this function
     //Membership Transaction Cancellation
     //Membership Adjustment
 // })

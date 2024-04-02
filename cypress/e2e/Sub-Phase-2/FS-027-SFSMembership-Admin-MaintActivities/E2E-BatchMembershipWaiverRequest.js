@@ -20,8 +20,9 @@ import CustomerCreationPage from '../../../page-objects/SMCMS/PageActions/FS-014
 import Customerdata from '../../../fixtures/Data_Module/CustomerCreationData'
 import elems_CustomerCheckInPage from '../../../page-objects/SMCMS/Elements/Membership/FS014_Membership-Master-Registration-Renewal/CustomerCheckInPage'
 import MembershipModuleSetting from '../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-14-Membership Module Setting/MembershipModuleSetting'
-
-
+import elems_PendingTaskDetail from "../../../page-objects/SMCMS/Elements/Admin/FS004_Admin-Settings/PendingTaskDetail"
+import elems_PendingTaskListing from "../../../page-objects/SMCMS/Elements/Admin/FS004_Admin-Settings/PendingTaskListing"
+import elems_Picker from "../../../page-objects/SMCMS/Elements/Common/Picker"
 
 //Page definition
 const MemRegPrincipal = new MemberRegistrationPrincipal()
@@ -75,7 +76,7 @@ describe('Batch Membership Waiver Request management',function(){
             cy.visit('/membership/customerCheckin')
             cy.wait(5000)
             cy.Click(elems_CustomerCheckInPage.RBTN_NRIC)
-            cy.EnterDate(elems_CustomerCheckInPage.DATE_DATEOFBIRTH, Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB)
+            cy.EnterDateCheckin(elems_CustomerCheckInPage.DATE_DATEOFBIRTH, Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB)
             cy.EnterText(elems_CustomerCheckInPage.TXT_LAST4DIGITSNRIC, CustomerNRIC)
             cy.Click(elems_CustomerCheckInPage.BTN_CHECKIN)
             cy.wait(2000)
@@ -182,7 +183,7 @@ describe('Batch Membership Waiver Request management',function(){
             cy.visit('/membership/customerCheckin')
             cy.wait(5000)
             cy.Click(elems_CustomerCheckInPage.RBTN_NRIC)
-            cy.EnterDate(elems_CustomerCheckInPage.DATE_DATEOFBIRTH, Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB)
+            cy.EnterDateCheckin(elems_CustomerCheckInPage.DATE_DATEOFBIRTH, Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB)
             cy.EnterText(elems_CustomerCheckInPage.TXT_LAST4DIGITSNRIC, CustomerNRIC2)
             cy.Click(elems_CustomerCheckInPage.BTN_CHECKIN)
             cy.wait(2000)
@@ -292,9 +293,15 @@ describe('Batch Membership Waiver Request management',function(){
         const WaiverPeriod = dataWaiver.Waiver.WaiverPeriod
         const EndDate = dataWaiver.Waiver.EndDate   
 
-        cy.intercept('POST', 'https://api.qa-smcms.safra.sg/v2/adminapi/membership/batch-membership-waiver-requests').as('ID')
+        // cy.intercept('POST', 'https://api.qa-smcms.safra.sg/v2/adminapi/membership/batch-membership-waiver-requests').as('ID')
         cy.wait(10000)
         cy.visit('/membership/memberList?pageNumber=1&pageSize=20')  //Visit web page for member listing 
+
+        //Filter Out Member
+        cy.wait(5000)
+        cy.EnterText(elems_MemberListing.TXT_NAME, 'Auto-User')
+        cy.Click(elems_MemberListing.BTN_SEARCHFILTER)
+        cy.wait(3000)
 
         // Waiver.FilterbyNameAndNRIC(PrincipalName, CustomerNRIC)
         cy.wait(5000)
@@ -302,9 +309,12 @@ describe('Batch Membership Waiver Request management',function(){
 
         // Waiver.VerifyMemberInListing(CustomerNRIC)
         // Waiver.VerifyMemberInListing(CustomerNRIC2)
+
+        cy.TickSpecificTableItem(PrincipalName)
+        cy.TickSpecificTableItem(PrincipalName2)
         
-        Waiver.SelectTableLinkItem(PrincipalName)
-        Waiver.SelectTableLinkItem(PrincipalName2)
+        // Waiver.SelectTableLinkItem(PrincipalName)
+        // Waiver.SelectTableLinkItem(PrincipalName2)
 
         /*cy.SelectTableItem(
             elems_MemberListing.TBL_MEMBERLISTING,
@@ -329,21 +339,34 @@ describe('Batch Membership Waiver Request management',function(){
         // const Id = xhr.response.body.value
 
          //cy.wait(300000)
-         //cy.visit(`/admin/pendingTaskDetails?id=${Id}`).as('MemID')
+         cy.visit('/admin/pendingTaskList')
+        cy.wait(5000)
+        cy.EnterText(elems_PendingTaskListing.TXT_TASKID, 'M-WAV')
+        cy.EnterText(elems_PendingTaskListing.TXT_WORKFLOWNAME, 'Batch Membership Waiver Approval Workflow')
+
+        //Click on Filter button
+        cy.Click(elems_PendingTaskListing.BTN_SEARCH)
+        cy.wait(5000)
+
+        //Click on Table item
+        cy.xpath('(//h2[text()="Pending Task Listing"]/ancestor::div//table//tr["Task ID"]//td//a)[1]').click({ force: true })
+        // cy.ClickTableLinkItem(elems_PendingTaskListing.TBL_PENDINGTASKLISTING, "Task ID", TaskID)
+
+        cy.wait(5000)
          
 
         // Select Approval Outcome
-        //cy.SelectDropDownItem(elems_PendingTaskDetail.DRP_APPROVALOUTCOME, "Approve")
-        //   //Enter Remark
-         //cy.EnterText(elems_PendingTaskDetail.TXTAREA_REMARK, 'Testing')
+        cy.SelectDropDownItem(elems_PendingTaskDetail.DRP_APPROVALOUTCOME, "Approve")
+          //Enter Remark
+         cy.EnterText(elems_PendingTaskDetail.TXTAREA_REMARK, 'Testing')
 
-        //   //Click on Save button
-        //   cy.Click(elems_PendingTaskDetail.BTN_SAVE)
-        //   cy.wait(1000)
-        //   cy.ValidateElementText(elems_Picker.MSG_NOTIFICATION, 'Record has been saved successfully.')
-        // })
+          //Click on Save button
+          cy.Click(elems_PendingTaskDetail.BTN_SUBMIT)
+          cy.wait(1000)
+          cy.ValidateElementText(elems_Picker.MSG_NOTIFICATION, 'Record has been saved successfully.')
+        })
         
-    })
+    // })
 
 
 

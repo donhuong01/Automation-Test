@@ -33,6 +33,7 @@ describe('[TS01] Batch Membership Deferment Request Management',function(){
         //Filter Out New
         cy.wait(5000)
         cy.xpath(elems_MemberListing.DRP_STATUSREASONCODE)
+        cy.SelectDropDownItem(elems_MemberListing.DRP_STATUS,'Active')
         cy.SelectDropDownItem(elems_MemberListing.DRP_STATUSREASONCODE,'New')
         cy.SelectDropDownItem(elems_MemberListing.DRP_SFSSTATUS,'Active')
        
@@ -40,16 +41,20 @@ describe('[TS01] Batch Membership Deferment Request Management',function(){
 
         cy.wait(3000)
 
-        cy.SelectTableItem(
-            elems_MemberListing.TBL_MEMBERLISTING,
-            'Name', Name1,
-            'Member ID', MemberID1
-            )
-        cy.SelectTableItem(
-            elems_MemberListing.TBL_MEMBERLISTING,
-            'Name', Name2,
-            'Member ID', MemberID2
-            )
+        // Select Members to Terminate
+        cy.TickSpecificTableItem(MemberID1)
+        cy.TickSpecificTableItem(MemberID2)
+
+        // cy.SelectTableItem(
+        //     elems_MemberListing.TBL_MEMBERLISTING,
+        //     'Name', Name1,
+        //     'Member ID', MemberID1
+        //     )
+        // cy.SelectTableItem(
+        //     elems_MemberListing.TBL_MEMBERLISTING,
+        //     'Name', Name2,
+        //     'Member ID', MemberID2
+        //     )
         
         cy.SelectDropDownItem(elems_MemberListing.BTNDRP_MAINTENANCE,'Deferment')
        
@@ -82,21 +87,28 @@ describe('[TS01] Batch Membership Deferment Request Management',function(){
 
         //Filter Out New
         cy.wait(5000)
+        cy.SelectDropDownItem(elems_MemberListing.DRP_STATUS,'Active')
         cy.SelectDropDownItem(elems_MemberListing.DRP_STATUSREASONCODE,'New')
+        cy.SelectDropDownItem(elems_MemberListing.DRP_SFSSTATUS,'Active')
+       
         cy.Click(elems_MemberListing.BTN_SEARCHFILTER)
 
         cy.wait(3000)
+        
+        // Select Members to Terminate
+        cy.TickSpecificTableItem(MemberID1)
+        cy.TickSpecificTableItem(MemberID2)
 
-        cy.SelectTableItem(
-            elems_MemberListing.TBL_MEMBERLISTING,
-            'Name', Name1,
-            'Member ID', MemberID1
-            )
-        cy.SelectTableItem(
-            elems_MemberListing.TBL_MEMBERLISTING,
-            'Name', Name2,
-            'Member ID', MemberID2
-            )
+        // cy.SelectTableItem(
+        //     elems_MemberListing.TBL_MEMBERLISTING,
+        //     'Name', Name1,
+        //     'Member ID', MemberID1
+        //     )
+        // cy.SelectTableItem(
+        //     elems_MemberListing.TBL_MEMBERLISTING,
+        //     'Name', Name2,
+        //     'Member ID', MemberID2
+        //     )
         
         cy.SelectDropDownItem(elems_MemberListing.BTNDRP_MAINTENANCE,'Deferment')
        

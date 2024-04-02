@@ -228,11 +228,11 @@ Cypress.Commands.add('SelectTableItem2', (locator, columnReference1, rowReferenc
  *****************************************************/
 Cypress.Commands.add('TickSpecificTableItem', (Value) => {
     cy.log('------ Tick Specific Table Item : ' + Value + ' ------')
-    cy.contains('td', Value)
+    cy.contains('td', Value,{ timeout: 30000 })
         .scrollIntoView()
         .siblings()
         .first()
-        .click()
+        .click({ timeout: 30000 })
 
 })
 

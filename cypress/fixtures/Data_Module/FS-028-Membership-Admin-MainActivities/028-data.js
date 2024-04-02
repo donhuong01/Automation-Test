@@ -17,8 +17,8 @@ const data = {
         ReasonCode: 'OTHERS',
         Remarks: 'Deferment Please',
         DefermentPeriod: '1',
-        StartMonth: '01-Apr-2024',
-        EndDate: '01-May-2024'
+        StartMonth: '01-Nov-2024',
+        EndDate: '01-Dec-2024'
 
     },
     DefermentMemberListing: {
@@ -106,7 +106,7 @@ const data = {
         MemberId1: 'A300000431',
         MemberId2: 'A300000337',
         NRIC1: '611J',
-        NRIC2: '	975A'
+        NRIC2: '975A'
     },
     // Membership Resignation Request
     MemberResignationRequest: {
@@ -114,7 +114,7 @@ const data = {
         ReasonCode: "NOT USING FACILITIES",
         Remark: "Test Resign",
         Status: "New",
-        TaskName: "MEM_RESIGNATION_WF",
+        TaskName: "M-RSN",
         WorkflowName: "Membership Resignation Approval Workflow",
         ApprovalOutcome: "Approve"
 

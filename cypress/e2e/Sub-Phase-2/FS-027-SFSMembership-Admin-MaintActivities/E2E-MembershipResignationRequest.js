@@ -18,7 +18,9 @@ import Customerdata from '../../../fixtures/Data_Module/CustomerCreationData'
 import elems_CustomerCheckInPage from '../../../page-objects/SMCMS/Elements/Membership/FS014_Membership-Master-Registration-Renewal/CustomerCheckInPage'
 import MembershipResignationRequest from '../../../page-objects/SMCMS/PageActions/FS-028-Membership-Admin-MaintActivities/FS-028-Membership Admin MaintActivities/MembershipResignationRequest'
 import MembershipModuleSetting from '../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-14-Membership Module Setting/MembershipModuleSetting'
-
+import elems_PendingTaskDetail from "../../../page-objects/SMCMS/Elements/Admin/FS004_Admin-Settings/PendingTaskDetail"
+import elems_PendingTaskListing from "../../../page-objects/SMCMS/Elements/Admin/FS004_Admin-Settings/PendingTaskListing"
+import elems_Picker from "../../../page-objects/SMCMS/Elements/Common/Picker"
 
 //Page definition
 const MemRegPrincipal = new MemberRegistrationPrincipal()
@@ -60,7 +62,7 @@ describe('[TS01] Membership Resignation Request Management',function(){
             cy.visit('/membership/customerCheckin')
             cy.wait(5000)
             cy.Click(elems_CustomerCheckInPage.RBTN_NRIC)
-            cy.EnterDate(elems_CustomerCheckInPage.DATE_DATEOFBIRTH, Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB)
+            cy.EnterDateCheckin(elems_CustomerCheckInPage.DATE_DATEOFBIRTH, Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB)
             cy.EnterText(elems_CustomerCheckInPage.TXT_LAST4DIGITSNRIC, CustomerNRIC)
             cy.Click(elems_CustomerCheckInPage.BTN_CHECKIN)
             cy.wait(2000)
@@ -82,10 +84,10 @@ describe('[TS01] Membership Resignation Request Management',function(){
             });
          
             CustomerCreation.fillOutContactInformation({
-                handPhone: '56582' + Math.floor(Math.random() * 1000),
+                handPhone: '8638 4892',//'86582' + Math.floor(Math.random() * 1000),
                 emailAddress: PrincipalEmail,
-                emergencyContact: Customerdata.CustomerCreationPrincipal.ContactInformation.emergencyContact,
-                homeNumber: '56582' + Math.floor(Math.random() * 1000),
+                //emergencyContact: Customerdata.CustomerCreationPrincipal.ContactInformation.emergencyContact,
+                //homeNumber: '86582' + Math.floor(Math.random() * 1000),
         
                 // Preferred Contact Mode
                 preferredContactModeSelectAll: Customerdata.CustomerCreationPrincipal.ContactInformation.preferredContactModeSelectAll,
@@ -150,7 +152,7 @@ describe('[TS01] Membership Resignation Request Management',function(){
             ShoppingCart.fillOutandApplyPayment('CASH')
             
             // Wait for 4.1 minites
-            cy.wait(20000)
+            cy.wait(5000)
             
             //Logout
             cy.LogoutOfSmcms()
@@ -176,15 +178,41 @@ describe('[TS01] Membership Resignation Request Management',function(){
             MembershipResignationRequests.Request()
             
             // Filter and select item from pending listing form
-            MembershipResignationRequests.ApprovalWorkFlow(WorkflowName)
+            // MembershipResignationRequests.ApprovalWorkFlow(WorkflowName)
 
-            // FillOut Pending Task Detail form
-            MembershipResignationRequests.FillOutPendingTaskDetail(TaskName, WorkflowName, ApprovalOutcome, Remark)
+            // // FillOut Pending Task Detail form
+            // MembershipResignationRequests.FillOutPendingTaskDetail(/*TaskName,*/ WorkflowName, ApprovalOutcome, Remark)
 
-            // Click on Save button
-            MembershipResignationRequests.Save()
-            cy.wait(20000)
+            // // Click on Save button
+            // MembershipResignationRequests.Save()
+            // cy.wait(20000)
     
+            cy.visit('/admin/pendingTaskList')
+            cy.wait(5000)
+            cy.EnterText(elems_PendingTaskListing.TXT_TASKID, 'M-RSN')
+            cy.EnterText(elems_PendingTaskListing.TXT_WORKFLOWNAME, WorkflowName)
+      
+            //Click on Filter button
+            cy.Click(elems_PendingTaskListing.BTN_SEARCH)
+            cy.wait(5000)
+      
+            //Click on Table item
+            cy.xpath('(//h2[text()="Pending Task Listing"]/ancestor::div//table//tr["Task ID"]//td//a)[1]').click({ force: true })
+            // cy.ClickTableLinkItem(elems_PendingTaskListing.TBL_PENDINGTASKLISTING, "Task ID", TaskID)
+      
+            cy.wait(5000)
+             
+      
+            // Select Approval Outcome
+            cy.SelectDropDownItem(elems_PendingTaskDetail.DRP_APPROVALOUTCOME, "Approve")
+              //Enter Remark
+             cy.EnterText(elems_PendingTaskDetail.TXTAREA_REMARK, 'Testing')
+      
+              //Click on Save button
+              cy.Click(elems_PendingTaskDetail.BTN_SUBMIT)
+              cy.wait(1000)
+              cy.ValidateElementText(elems_Picker.MSG_NOTIFICATION, 'Record has been saved successfully.')
+
             // Fillout Membership Resignation Request form
             // MembershipResignationRequests.fillOutDefermentForm(CustomerNRIC, PrincipalName,  ResignType, ReasonCode, Remark, "Resign")
            
