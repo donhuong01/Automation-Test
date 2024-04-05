@@ -1,7 +1,7 @@
 const data = {
 
     IGMainNumber: '',
-    IGName: 'IG Main testing' + Math.floor(Math.random() * 1000),
+    IGName: 'z-IG Main testing' + Math.floor(Math.random() * 1000),
     Code: 'SMCMS06',
     MainCategory: 'TEST',
     IGCategoryGroup: 'INTEREST GROUP CATEGORY',
@@ -33,12 +33,12 @@ const data = {
     ReversalItemCode: 'IG Prod 001',
 
     IGDetail: {
-        IGName: "SAFRA BITEZ" + Math.floor(Math.random() * 1000),
+        IGName: "Auto-IG-Test" + Math.floor(Math.random() * 1000),
         Code: "SMCS01",
-        IGMain: "Badminton Social Group",
+        IGMain: "IG Main QA Testing 1",
         SubCatType: "BITEZ",
         PublishDate: "29-Sep-2022",
-        EndDate: "29-Nov-2022",
+        EndDate: "29-Nov-2050",
         MemType: "Main",
 
         //Registration

@@ -196,7 +196,7 @@ import FacilityGroupBookingBallot from '../Sub-Phase-2/FS-010-Clubs(Facilites)/E
 //NRIC Generator
 import { nricGenerator } from '../../support/nricGenerator'
 
-const CustomerNRICFull = nricGenerator('T', 43)
+const CustomerNRICFull = nricGenerator('T', 42)
 const CustomerNRICFull2 = nricGenerator('T', 43)
 const CustomerNRICFull3 = nricGenerator('T', 43)
 const CustomerNRICFull4 = nricGenerator('T', 43)
@@ -370,14 +370,14 @@ beforeEach(() => {
 
 
 
-// describe('E2E Auto Testing:FS-016 Interest Group: Registration and Maintenance Activities', ()=> {
+describe('E2E Auto Testing:FS-016 Interest Group: Registration and Maintenance Activities', ()=> {
 
 // InterestGroupMembershipRegistration()
 // InterestGMembershipRenewal(CustomerNRICFull) //Change NRIC each time after runing this code
 // BatchMemRegWithExistingMemUsingDefaultIG(E2EData.BATCH_MEMBER_REGISTRATION_WITH_EXISTING_MEMBER_USING_DEFUALT_IG) //Provide Active member ID //1
 // BatchMemRegWithExistingMemUsingNonDefaultIG(E2EData.BATCH_MEMBER_REGISTRATION_WITH_EXISTING_MEMBER_USING_NON_DEFUALT_IG) //Provide Active member ID //2
-// InterestGroupDeactivation()
-// InterestGroupConversion(E2EData.MEMBER_NAME_FOR_IG_CONVERSION ) //Please Provide Active Member Name
+// InterestGroupDeactivation(E2EData.IG_DEACTIAVATION) //Change Sample IG 
+// InterestGroupConversion(E2EData.MEMBER_NAME_FOR_IG_CONVERSION ) //Please Provide IG Active Member Name
 // InterestGroupDeferment(E2EData.MEMBER_NAME_FOR_IG_DEFERMENT) //Please Provide Active Member Name
 // InterestGMembershipTermination(E2EData.MEMBERID_AND_NAME_FOR_IG_TERMINATION.MEMBERID, E2EData.MEMBERID_AND_NAME_FOR_IG_TERMINATION.MEMBERNAME) // Provide MemberId and Member Name
 // IGMembershipReinstatement(E2EData.MEMBERID_FOR_IG_REINSTATEMENT.MEMBERID, E2EData.MEMBERID_FOR_IG_REINSTATEMENT.MEMBERNAME)
@@ -385,10 +385,10 @@ beforeEach(() => {
 // InterestGMembershipwaiver(E2EData.MEMBER_NAME_FOR_IG_WAIVER)  //Provide Member Name
 // InterestGroupManagement()
 // InterestGroupMembershipManagment()
-// InterestGroupMainManagements()
+InterestGroupMainManagements()
 // //IG Renewal Advice
 
-// })
+})
 
 
 

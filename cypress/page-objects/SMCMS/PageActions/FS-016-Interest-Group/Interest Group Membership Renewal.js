@@ -11,8 +11,18 @@ class IGMembershipRenewal {
     *****************************************************/
     ClickOnBox(BoxText) {
 
-        cy.Click(`//div[@class="Tiles_tile__3Ogq5"]//p[text()= "${BoxText}"]`)
-        cy.wait(3000)
+        if (BoxText === "SAFRA Jurong") {
+
+            cy.Click(`(//p[text()= "${BoxText}"])[2]`)
+            cy.wait(8000)
+        }
+        else {
+
+            cy.Click(`//p[text()= "${BoxText}"]`)
+            cy.wait(8000)
+        }
+        // cy.Click(`//div[@class="Tiles_tile__3Ogq5"]//p[text()= "${BoxText}"]`)
+        // cy.wait(3000)
 
     }
 
@@ -119,7 +129,8 @@ class IGMembershipRenewal {
     *****************************************************/
     ViewTransactionHistory(CustomerName) {
 
-        cy.SelectTableItem(elems_IGMemberListing.TBL_IGGROUPMEMBERLIST, 'Customer Name', CustomerName)
+        cy.TickSpecificTableItem(CustomerName)
+        //cy.SelectTableItem(elems_IGMemberListing.TBL_IGGROUPMEMBERLIST, 'Customer Name', CustomerName)
         cy.Click(elems_IGMemberListing.BTN_VIEWTRANSACTIONHISTORY)
 
     }

@@ -51,9 +51,9 @@ describe('FS-016 Batch Interest Group Membership Registration', function () {
 
         BatchIGRegistration.AddIGRegistration()
 
-        IGMembershipRegistration.ClickOnBox('Badminton Social Group')
+        IGMembershipRegistration.ClickOnBox('IG Main QA Testing 1')
 
-        IGMembershipRegistration.ClickOnBox('BITEZ')
+        IGMembershipRegistration.ClickOnBox('Test IG Details')
 
         IGMembershipRegistration.ClickOnBox('All Locations')
 
@@ -63,7 +63,9 @@ describe('FS-016 Batch Interest Group Membership Registration', function () {
 
         IGMembershipRegistration.AgreeWithTermCondition()
 
-        // IGMembershipRegistration.AgreewithIndemnityWaiver()
+        IGMembershipRegistration.AgreewithIndemnityWaiver()
+
+        IGMembershipRegistration.PopulateAdditionalFields("Test");
 
         MembershiptenureSelection.addToCart()
 

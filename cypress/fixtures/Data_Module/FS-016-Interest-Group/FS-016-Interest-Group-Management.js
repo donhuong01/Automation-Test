@@ -1,17 +1,17 @@
 const Data = {
 
     IGMembershipListing: {
-        IGMian: 'QA Test IG Main 1',
-        InterestGroup: 'IG Detail Test 1',
-        IGMembershipID: 'G1000000108',
-        SAFRAMembershipID: 'LD test 1',
-        Status: 'Active',
-        CustomerName: 'LD test 1',
-        ExpiryDateFrom: '05-Jun-2023',
-        ExpiryDateTo: '05-Dec-2024',
-        InitialJoinDate: '05-Jun-2023',
-        ExpiryDate: '05-Dec-2024',
-        MembershipStatusReason: 'New'
+        IGMian: 'IG Main QA Testing 1',
+        InterestGroup: 'Test IG Details',
+        IGMembershipID: 'G1000000503',
+        SAFRAMembershipID: 'A300006812',
+        Status: 'InActive',
+        CustomerName: 'Test User 649E',
+        ExpiryDateFrom: '02-Jan-2024',
+        ExpiryDateTo: '17-Mar-2024',
+        InitialJoinDate: '02-Feb-2024',
+        ExpiryDate: '17-Feb-2024',
+        MembershipStatusReason: 'Term Expired'
 
     },
     IGMembershipRegistration: {
@@ -77,7 +77,7 @@ const Data = {
 
     IGMembershipDeactivation: {
         IGName: 'SAFRA BITEZ331',
-        DeactivationDate: '26-May-2023',
+        DeactivationDate: '04-Apr-2024',
         DReason: 'Deactivate',
         Status: 'Deactivated'
     },

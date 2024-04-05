@@ -71,8 +71,8 @@ const InterestGMembershipRenewal = (CustomerNRICFull) => {
             CustomerCreation.fillOutContactInformation({
                 handPhone: '86585896',
                 emailAddress: PrincipalEmail,
-                emergencyContact: Customerdata.CustomerCreationPrincipal.ContactInformation.emergencyContact,
-                homeNumber: '56585896',
+                // emergencyContact: Customerdata.CustomerCreationPrincipal.ContactInformation.emergencyContact,
+                // homeNumber: '56585896',
 
             });
 
@@ -132,7 +132,7 @@ const InterestGMembershipRenewal = (CustomerNRICFull) => {
             IGMembershipRenewal.SelectMembershipTerm()
             IGMembershipRenewal.SelectMembershipTerm()
 
-            IGMembershipRenewal.MembershipEffectiveDate('29-Nov-2023')
+            IGMembershipRenewal.MembershipEffectiveDate('03-Apr-2023')
 
             IGMembershipRenewal.AgreeWithTermCondition('CHECK')
             IGMembershipRegistration.AgreewithIndemnityWaiver("CHECK")
@@ -165,7 +165,9 @@ const InterestGMembershipRenewal = (CustomerNRICFull) => {
 
             cy.visit('/membership/interestGroupMembershipListing')
 
-            cy.wait(3000)
+            cy.wait(60000)
+
+            cy.Click('//a[@class="k-link k-pager-nav k-pager-last"]')
 
             IGMembershipRenewal.ViewTransactionHistory(PrincipalName)
 

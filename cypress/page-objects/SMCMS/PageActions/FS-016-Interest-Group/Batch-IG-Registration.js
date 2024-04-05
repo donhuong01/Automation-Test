@@ -44,7 +44,7 @@ class BatchIGRegistration {
         cy.Click(elems_BatchMembershipRegistrationDetail.BatchInformation.PCK_IG)
         cy.Click(`//td[text()="${IG}"]//preceding-sibling::td`)
         cy.Click(elems_Picker.BTN_SELECT)
-        cy.EnterDate(elems_BatchMembershipRegistrationDetail.BatchInformation.DATE_IGEFFECTIVEDATE, EffectiveDate)
+        cy.EnterDateCheckin(elems_BatchMembershipRegistrationDetail.BatchInformation.DATE_IGEFFECTIVEDATE, EffectiveDate)
         // cy.xpath(elems_BatchMembershipRegistrationDetail.BatchInformation.TXT_IGTERM).clear()
         cy.EnterText(elems_BatchMembershipRegistrationDetail.BatchInformation.TXT_IGTERM, Term)
         cy.Click(elems_BatchMembershipRegistrationDetail.BatchInformation.PCK_IGLOCATION)

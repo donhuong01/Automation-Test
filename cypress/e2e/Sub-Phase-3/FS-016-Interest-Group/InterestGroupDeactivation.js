@@ -14,7 +14,7 @@ const common = new Common
 //     // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
 // })
 
-const InterestGroupDeactivation = ()=> {
+const InterestGroupDeactivation = (IGName) => {
 
 describe('FS-016 Interest Group Deactivation', function () {
 
@@ -23,9 +23,9 @@ describe('FS-016 Interest Group Deactivation', function () {
         cy.visit('/membership/interestGroupListing')
         cy.wait(2000)
 
-        InterestGroupListing.FilterWithName(Data.IGMembershipDeactivation.IGName)
+        InterestGroupListing.FilterWithName(IGName)
 
-        InterestGroupListing.SelectTableEntry(Data.IGMembershipDeactivation.IGName)
+        InterestGroupListing.SelectTableEntry(IGName)
 
         InterestGroupListing.Deactivate()
 
@@ -38,7 +38,7 @@ describe('FS-016 Interest Group Deactivation', function () {
         cy.visit('/membership/interestGroupListing')
         cy.wait(2000)
 
-        InterestGroupListing.FilterWithName(Data.IGMembershipDeactivation.IGName)
+        InterestGroupListing.FilterWithName(IGName)
 
         InterestGroupListing.VerifyStatus(Data.IGMembershipDeactivation.Status)
 

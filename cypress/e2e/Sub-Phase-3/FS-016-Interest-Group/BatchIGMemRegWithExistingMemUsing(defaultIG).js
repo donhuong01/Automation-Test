@@ -44,7 +44,9 @@ describe('FS-016 Batch Interest Group Membership Registration', function () {
 
         IGMembershipRegistration.AgreeWithTermCondition()
 
-        // IGMembershipRegistration.AgreewithIndemnityWaiver()
+        IGMembershipRegistration.AgreewithIndemnityWaiver()
+
+        IGMembershipRegistration.PopulateAdditionalFields("Test");
 
         MembershiptenureSelection.addToCart()
 

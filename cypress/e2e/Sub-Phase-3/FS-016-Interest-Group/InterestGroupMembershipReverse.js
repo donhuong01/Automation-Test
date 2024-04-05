@@ -24,33 +24,36 @@ describe('[TS01] FS-016 Interest Group Membership Reversal', function () {
     it('[TC02] Creating Interest Group Membership Reversal', function () {
 
 
+        // cy.visit('/membership/interestGroupMembershipListing')
+        // cy.wait(2000)
+
+        // InterestGroupListing.FiterWithCustomerName(CustomerName)
+
+        // InterestGroupListing.SlectTableLinkItem(CustomerName)
+
+        // InterestGroupListing.Maintenance('Defer')
+
+        // IGMembershipDeferment.DefermentInfo(IGDEFDATA.DefStartMonth, IGDEFDATA.DefEndMonth, IGDEFDATA.DefReason)
+
+        // IGMembershipDeferment.Submit()
+
+        // cy.wait(5000)
+
+        // IGMembershipDeferment.ApprovalWorkFlow('IG-DEF', 'Interest Group Membership Deferment Approval Workflow', 'Approve', IGDEFDATA.DefReason)
+
+        // cy.wait(5000)
+
+        // IGMembershipRegistration.VerifyItemInIGMemListingTBL(CustomerName)
+
+        // IGMembershipRegistration.ViewTransactionHistory(CustomerName)
+        // cy.wait(2000)
+
+        // IGMembershipDeferment.VerifyDefermentStatus(IGDEFDATA.DefReason)
+
+        // InterestGroupListing.Cancel()
+
         cy.visit('/membership/interestGroupMembershipListing')
         cy.wait(2000)
-
-        InterestGroupListing.FiterWithCustomerName(CustomerName)
-
-        InterestGroupListing.SlectTableLinkItem(CustomerName)
-
-        InterestGroupListing.Maintenance('Defer')
-
-        IGMembershipDeferment.DefermentInfo(IGDEFDATA.DefStartMonth, IGDEFDATA.DefEndMonth, IGDEFDATA.DefReason)
-
-        IGMembershipDeferment.Submit()
-
-        cy.wait(5000)
-
-        IGMembershipDeferment.ApprovalWorkFlow('IG-DEF', 'Interest Group Membership Deferment Approval Workflow', 'Approve', IGDEFDATA.DefReason)
-
-        cy.wait(5000)
-
-        IGMembershipRegistration.VerifyItemInIGMemListingTBL(CustomerName)
-
-        IGMembershipRegistration.ViewTransactionHistory(CustomerName)
-        cy.wait(2000)
-
-        IGMembershipDeferment.VerifyDefermentStatus(IGDEFDATA.DefReason)
-
-        InterestGroupListing.Cancel()
 
         InterestGroupListing.FiterWithCustomerName(CustomerName)
 

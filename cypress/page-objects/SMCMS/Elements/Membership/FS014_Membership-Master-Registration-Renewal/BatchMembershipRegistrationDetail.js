@@ -18,7 +18,7 @@ class elems_BatchMembershipRegistrationDetail {
         BTN_SEARCHFILTERS: "//button[text()='Search Filters']",
         PCK_IG: '//label[@for="pckInterestGroup"]/following-sibling::div//button',
         DATE_IGEFFECTIVEDATE: '//input[@id="pckInterestGroupMembershipEffectiveDate"]',
-        TXT_IGTERM: '//span[@title="Increase value"]',
+        TXT_IGTERM: '//input[@id="InterestGroupMembershipTerm"]',//span[@title="Increase value"]',
         PCK_IGLOCATION: '//label[@for="pckInterestGroupLocation"]//following-sibling::div//button',
         BTN_IGREGDEFAULTIG: '//button[@id="interestGroupAddDefaultIG"]',
         BTN_ADDIGREGISTRATION: '//button[@id="interestGroupAddIGRegistration"]',

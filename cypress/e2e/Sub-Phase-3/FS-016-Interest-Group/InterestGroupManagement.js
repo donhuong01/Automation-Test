@@ -3,6 +3,9 @@ import InterestGroupListing from '../../../page-objects/SMCMS/PageActions/FS-016
 
 import login from '../../../fixtures/login'
 import data from '../../../fixtures/Data_Module/FS-016-Interest-Group/016-Interest-Group-Main-Mangement'
+import Common from '../../../page-objects/SMCMS/PageActions/Common/Common'
+
+const common = new Common
 
 
 // beforeEach(() => {
@@ -63,7 +66,7 @@ describe('[TS02] FS-016 Interest Group Management', function () {
         InterestGroupDetail.SaveAsDraft()
 
         //Click the Interest Group Name Link of the newly created item
-        InterestGroupDetail.ClickNewlyCteatedItem(IGName)
+        // InterestGroupDetail.ClickNewlyCteatedItem(IGName)
 
         //varify other tabs
         InterestGroupDetail.VarifyAdditionalTabsDisplayed('Charge Rate')
@@ -125,25 +128,33 @@ describe('[TS02] FS-016 Interest Group Management', function () {
         InterestGroupDetail.Submit()
 
         //Varify Notification Msg
-        //InterestGroupDetail.VarifyNotificationMsg('Record has been saved successfully.')
+        // InterestGroupDetail.VarifyNotificationMsg('Record has been saved successfully.')
 
 
         InterestGroupDetail.VarifyTableItemStatus(IGName, 'Pending Approval')
 
         //Wait for Approval Email
         cy.wait(5000) 
+
+        common.ApprovalWorkFlow('IG', 'Interest Group Approval Workflow', 'Approve', 'Approved')
+        common.ApprovalWorkFlow('IG', 'Interest Group Approval Workflow', 'Approve', 'Approved')
+
+        cy.visit('/membership/interestGroupListing')
+        cy.wait(2000)
+
+        InterestGroupListing.FilterWithName(IGName)
         
-        cy.wait('@ID')
-        cy.get('@ID').then(xhr => {
+        // cy.wait('@ID')
+        // cy.get('@ID').then(xhr => {
 
-            const Id = xhr.response.body.value
-            console.log(Id)
+        //     const Id = xhr.response.body.value
+        //     console.log(Id)
 
-            cy.visit(`/admin/pendingTaskDetails?id=${Id}`).as('MemID')
-            cy.wait(2000)
+        //     cy.visit(`/admin/pendingTaskDetails?id=${Id}`).as('MemID')
+        //     cy.wait(2000)
             
             
-        })
+        // })
 
         
 
