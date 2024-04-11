@@ -103,7 +103,7 @@ describe('[TS02] FS-031 Gift Redemption Management', function () {
 
     })
 
-    it('[TC04] To be able to test collecting gift/bulk collecting gift.', function () {
+    it('[TC04] To be able to test refunding gift/bulk collecting gift.', function () {
 
 
         cy.visit('/membership/giftRedemptionTransactionListing')

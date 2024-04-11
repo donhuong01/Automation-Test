@@ -38,7 +38,7 @@ class Table {
                 cy.xpath(Misc.TABLE_LOADING, { timeout: 30000 }).should('not.exist')
                 cy.xpath(locator + '//tbody/tr/td[' + columnReference1Index + ']').then(($referenceColumn1Items) => {
                     let targetRowIndex = Cypress._.map($referenceColumn1Items, 'innerText').indexOf(rowReference1) + 1
-                    cy.xpath(locator + '//tbody/tr[' + targetRowIndex + ']/td[' + targetColumnIndex + ']').should('have.text', expectedValue)
+                    cy.xpath(locator + '//tbody/tr[' + targetRowIndex + ']/td[' + targetColumnIndex + ']', { timeout: 30000 }).should('have.text', expectedValue)
                 })
             })
 

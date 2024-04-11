@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2024-04-04T11:14:43.394Z",
-    "end": "2024-04-04T11:17:57.453Z",
-    "duration": 194059,
+    "start": "2024-04-11T09:48:04.914Z",
+    "end": "2024-04-11T09:49:10.560Z",
+    "duration": 65646,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "1b8e4743-eab4-49e1-b424-194e9b42c153",
+      "uuid": "eca29566-e2d6-429d-a8e6-5096b2eae1b8",
       "title": "",
       "fullFile": "cypress\\e2e\\SMCMS-E2E-Testing\\E2E.cy.js",
       "file": "cypress\\e2e\\SMCMS-E2E-Testing\\E2E.cy.js",
@@ -27,8 +27,8 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "f3b347b8-a0d4-4d21-9eab-3f96afe63768",
-          "title": "E2E Auto Testing:FS-016 Interest Group: Registration and Maintenance Activities",
+          "uuid": "ca1447ac-0b38-4df4-bdc1-769c3cbe7bd7",
+          "title": "E2E Auto Testing:FS-015 Energy One: Gym Membership and Maintenance Activities",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
@@ -36,40 +36,40 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "d4c2cb60-5771-4978-88ca-ead54a170772",
-              "title": "[TS02] FS-016 Interest Group Main Management",
+              "uuid": "4a25bbb8-14fd-4870-9fca-1f92bf02411e",
+              "title": "FS-015 E1 GYM Membership Registration",
               "fullFile": "",
               "file": "",
               "beforeHooks": [],
               "afterHooks": [],
               "tests": [
                 {
-                  "title": "[TC01] Creating New Interest Group Main",
-                  "fullTitle": "E2E Auto Testing:FS-016 Interest Group: Registration and Maintenance Activities [TS02] FS-016 Interest Group Main Management [TC01] Creating New Interest Group Main",
+                  "title": "Cancellation of E1 Gym Membership before Payment",
+                  "fullTitle": "E2E Auto Testing:FS-015 Energy One: Gym Membership and Maintenance Activities FS-015 E1 GYM Membership Registration Cancellation of E1 Gym Membership before Payment",
                   "timedOut": null,
-                  "duration": 193578,
+                  "duration": 65561,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
                   "fail": false,
                   "pending": false,
                   "context": null,
-                  "code": "cy.intercept('PUT', 'https://api.uat-smcms.safra.sg/v2/adminapi/interest-group/interest-group-mains/charge-rate').as('ID');\ncy.visit('/membership/interestGroupMainListing');\ncy.wait(2000);\n//click on create new button\n_InterestGroupMainManagement.default.CreateNew();\n//verify interest group main number\n// InterestGroupMainManagement.VerifyIGMainNumber(IGMainNumber)\n//Fill Out Interest Group Main Information\n_InterestGroupMainManagement.default.FilloutIGMainInformation(IGName, Code, MainCategory, IGCategoryGroup, FABSGroup, ClubClassification, LifeStyleGroup, SMCClassification, OwnerEmail);\n//Add location \n_InterestGroupMainManagement.default.AddLocation(LocationName);\n//Remove Location \n// InterestGroupMainManagement.RemoveLocation()\n// //Add Location Again\n// InterestGroupMainManagement.AddLocation(LocationName)\n//FillOut Approver Option Field\n_InterestGroupMainManagement.default.AddApproverOption(ApproverOption, ApproverEmail);\n//Click save as draft button\n_InterestGroupMainManagement.default.SaveAsDraft();\n//Click IG Main cancel\n_InterestGroupMainManagement.default.Cancel();\n//Filter listing using status and verify table item status\n_InterestGroupMainManagement.default.FilterWithStatus(Status);\n//Click on the last page\ncommon.ClickLastPage();\n//click on newly created item\n_InterestGroupMainManagement.default.ClickIGTableLink(IGName);\n//Click charge rate tab\n_InterestGroupMainManagement.default.ClickChargeRateTab();\n//Click add charge type\n_InterestGroupMainManagement.default.ClickAddChargeType();\n//Fillout field for charge type list\n_InterestGroupMainManagement.default.FilloutChargeTypeFields(ChargeName, TransactionType, CalculationType, AmmountType);\n//click on add customer category and select cud stomer category\n_InterestGroupMainManagement.default.AddCustomerCategory(CustomerCategoryName);\n//Fillout product info\n_InterestGroupMainManagement.default.FilloutProductInformation(RegItemCode, RenewalItemCode, DefermentItemCode, ReinstatementItemCode, TerminationItemCode, WaiverItemCode, ReversalItemCode);\n//click on save as draft\n// InterestGroupMainManagement.SaveAsDraft()\n//click on submit button\n_InterestGroupMainManagement.default.Submit();\n//Aprroval work flow\n// cy.visit('/membership/interestGroupMainListing')\n//filter item and varify status\n_InterestGroupMainManagement.default.FilterWithStatus(\"Pending Approval\");\n//click the item that was approved\n// InterestGroupMainManagement.ClickIGTableLink(IGName)\n// Click Submit Button\n// InterestGroupMainManagement.Submit()\n//Varify Notification Msg\n// InterestGroupMainManagement.VarifyNotificationMsg('Record has been saved successfully.')\n// InterestGroupDetail.VarifyTableItemStatus(IGName, 'Pending Approval')\n//Wait for Approval Email\n// cy.wait(5000) \n// cy.wait('@ID')\n// cy.get('@ID').then(xhr => {\n//     const Id = xhr.response.body.value.id\n//     console.log(Id)\n//     cy.log(Id)\n//     cy.visit(`/admin/pendingTaskDetails?id=${Id}`).as('MemID')\n//     cy.wait(2000)\n// })\ncommon.ApprovalWorkFlow('IG', 'Interest Group Main Approval Workflow', 'Approve', 'Approved');\ncy.visit('/membership/interestGroupMainListing');\n//Filter listing using status and verify table item status\n_InterestGroupMainManagement.default.FilterWithStatus('Approved');\n//Click on the last page\ncommon.ClickLastPage();\n//Verify Approved IG Main\n_InterestGroupMainManagement.default.VerifyTableEntries(IGName, 'Approved');\n//Click view interest group button\n// InterestGroupMainManagement.ViewInterestGroup()\n// //click create new button\n// InterestGroupMainManagement.CreateNew()\n// //verify interest group main number\n// // InterestGroupMainManagement.VerifyIGMainNumber(IGMainNumber)\n// //Fill Out Interest Group Main Information\n// InterestGroupMainManagement.FilloutIGMainInformation(IGName, Code, MainCategory, IGCategoryGroup, FABSGroup,\n//     ClubClassification, LifeStyleGroup, SMCClassification, OwnerEmail)\n// //Add location \n// InterestGroupMainManagement.AddLocation(LocationName)\n// //Remove Location \n// InterestGroupMainManagement.RemoveLocation()\n// //Add Location Again\n// InterestGroupMainManagement.AddLocation(LocationName)\n// //FillOut Approver Option Field\n// InterestGroupMainManagement.AddApproverOption(ApproverOption, ApproverEmail)\n// //Click save as draft button\n// InterestGroupMainManagement.SaveAsDraft()\n// //Filter listing using status and verify table item status\n// InterestGroupMainManagement.FilterWithStatus(Status)\n// //click on newly created item\n// InterestGroupMainManagement.ClickIGTableLink(Name)\n// //Click charge rate tab\n// InterestGroupMainManagement.ClickChargeRateTab()\n// //Click add charge type\n// InterestGroupMainManagement.ClickAddChargeType()\n// //Fillout field for charge type list\n// InterestGroupMainManagement.FilloutChargeTypeFields(ChargeName, TransactionType, CalculationType, AmmountType)\n// //click on add customer category and select customer category\n// InterestGroupMainManagement.AddCustomerCategory(CustomerCategoryName)\n// //Fillout product info\n// InterestGroupMainManagement.FilloutProductInformation(RegItemCode, RenewalItemCode, DefermentItemCode, ReinstatementItemCode,\n//     TerminationItemCode, WaiverItemCode, ReversalItemCode)\n// //click on save as draft\n// InterestGroupMainManagement.SaveAsDraft()\n// //click on submit button\n// InterestGroupMainManagement.Submit()\n// //Wait for the item to be rejected by the approver\n// cy.visit('/membership/interestGroupMainListing')\n// //filter item and varify status\n// InterestGroupMainManagement.FilterWithStatus(Status)\n// //click on cr eate new button\n// InterestGroupMainManagement.CreateNew()\n// //verify interest group main number\n// // InterestGroupMainManagement.VerifyIGMainNumber(IGMainNumber)\n// //Fill Out Interest Group Main Information\n// InterestGroupMainManagement.FilloutIGMainInformation(IGName, Code, MainCategory, IGCategoryGroup, FABSGroup,\n//     ClubClassification, LifeStyleGroup, SMCClassification, OwnerEmail)\n// //Add location \n// InterestGroupMainManagement.AddLocation(LocationName)\n// //Remove Location \n// InterestGroupMainManagement.RemoveLocation()\n// //Add Location Again\n// InterestGroupMainManagement.AddLocation(LocationName)\n// //FillOut Approver Option Field\n// InterestGroupMainManagement.AddApproverOption(ApproverOption, ApproverEmail)\n// //Click save as draft button\n// InterestGroupMainManagement.SaveAsDraft()\n// //Filter listing using status and verify table item status\n// InterestGroupMainManagement.FilterWithStatus(Status)\n// //click on newly created item\n// InterestGroupMainManagement.ClickIGTableLink(Name)\n// //Click charge rate tab\n// InterestGroupMainManagement.ClickChargeRateTab()\n// //Click add charge type\n// InterestGroupMainManagement.ClickAddChargeType()\n// //Fillout field for charge type list\n// InterestGroupMainManagement.FilloutChargeTypeFields(ChargeName, TransactionType, CalculationType, AmmountType)\n// //click on add customer category and select customer category\n// InterestGroupMainManagement.AddCustomerCategory(CustomerCategoryName)\n// //Fillout product info\n// InterestGroupMainManagement.FilloutProductInformation(RegItemCode, RenewalItemCode, DefermentItemCode, ReinstatementItemCode,\n//     TerminationItemCode, WaiverItemCode, ReversalItemCode)\n// //click on save as draft\n// InterestGroupMainManagement.SaveAsDraft()\n// //click on submit button\n// InterestGroupMainManagement.Submit()\n// //Wait for the item to be queried by requestor's  PIC  approver or Specific approver\n// cy.visit('/membership/interestGroupMainListing')\n// //filter item and varify status\n// InterestGroupMainManagement.FilterWithStatus(Status)",
+                  "code": "common.Checkin(MemberId);\ncy.visit('/membership/e1GymMembershipMainSelection').wait(8000);\n_E1GymMembershipRegistration.default.ClickOnBox(E1GymMemMainSelection);\n_E1GymMembershipRegistration.default.ClickOnBox(E1GymMembershipSelection);\n_E1GymMembershipRegistration.default.ClickOnBox(LocationSelection);\ncy.wait(5000);\n_E1GymMembershipRegistration.default.SelectDepandencyType(DependencyType);\n_E1GymMembershipRegistration.default.MembershipInfo(PreferredClubHouse, EffectiveDate, Terms);\n// E1GymMembershipRegistration.FillOutOtherInfo()\n_E1GymMembershipRegistration.default.AddToCart();\ncommon.ResetCart();\ncy.visit('/membership/e1GymMembershipList').wait(5000);\n_E1GymMembershipRegistration.default.FilterByCustomerName(CustomerName);\ncommon.VerifyNoRecordMsg();\n//Logout\ncy.LogoutOfSmcms();",
                   "err": {},
-                  "uuid": "49c147e6-15b7-488e-9356-82d14688020b",
-                  "parentUUID": "d4c2cb60-5771-4978-88ca-ead54a170772",
+                  "uuid": "3a3e3620-5dbe-428b-a721-132e4f3fcf19",
+                  "parentUUID": "4a25bbb8-14fd-4870-9fca-1f92bf02411e",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "49c147e6-15b7-488e-9356-82d14688020b"
+                "3a3e3620-5dbe-428b-a721-132e4f3fcf19"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 193578,
+              "duration": 65561,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000

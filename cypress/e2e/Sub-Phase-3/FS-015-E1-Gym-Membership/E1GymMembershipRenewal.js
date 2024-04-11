@@ -19,7 +19,7 @@ describe('[TS01] E1 Gym Membership Renewal Management', function () {
 
         cy.visit('/membership/e1GymMembershipRenewal').wait(3000)
 
-        E1GymMembershipRenewal.FilloutMembershipRenewalInfo(E1Membership, '6')
+        E1GymMembershipRenewal.FilloutMembershipRenewalInfo(E1Membership, '3')
 
         common.AddToCart()
         cy.wait(7000)

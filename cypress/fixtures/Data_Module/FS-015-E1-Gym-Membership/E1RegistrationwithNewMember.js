@@ -3,16 +3,16 @@ const data = [
     // E1 Gym Membership Registration for Non-member/New Customer for Maximum term
     {
         NRICLast4Digit: '',
-        NRICFull: 'S2350911C',
-        E1GymMemMainSelection: 'Test E1 Main',
-        E1GymMembershipSelection: 'Test E1 Detail',
-        LocationSelection: 'All Locations',
+        NRICFull: 'S8405286H',
+        E1GymMemMainSelection: 'QAE1MAIN2024',
+        E1GymMembershipSelection: 'QAE12024',
+        LocationSelection: 'SAFRA HQ',
         DependencyType: 'Principal',
         category: 'All Customer Category',
         PreferredClubHouse: 'All Locations',
-        EffectiveDate: '28-Mar-2023',
+        EffectiveDate: '11-Apr-2024',
         Terms: '3',
-        AddWaiver: 'No' // Yes or no
+        AddWaiver: 'Yes' // Yes or no
     },
     // E1 Gym Membership Registration for Non-member/New Customer for Manimum term
     // {

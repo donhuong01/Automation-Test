@@ -5,7 +5,7 @@ const data = [
         MemberId: 'A300001821',         // provide existing active member id
         CustomerName: 'Hiren Leen',
         E1Membership: 'G1000000045',
-        RenewalTerm: '6',      // Provide minimum term
+        RenewalTerm: '3',      // Provide minimum term
 
     },
 

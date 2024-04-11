@@ -34,7 +34,7 @@ Data.forEach(each => {
 
             cy.visit('/membership/customerCheckin').wait(5000)
             cy.Click(elems_CustomerCheckInPage.RBTN_NRIC)
-            cy.EnterDate(elems_CustomerCheckInPage.DATE_DATEOFBIRTH, DOB)
+            cy.EnterDateCheckin(elems_CustomerCheckInPage.DATE_DATEOFBIRTH, DOB)
             cy.EnterText(elems_CustomerCheckInPage.TXT_LAST4DIGITSNRIC, NRICLast4Digit)
             cy.Click(elems_CustomerCheckInPage.BTN_CHECKIN)
             cy.wait(2000)
@@ -42,7 +42,7 @@ Data.forEach(each => {
 
             CustomerCreation.fillOutRegistrationInfo({
                 name: CustomerName,
-                DOB: DOB,
+                // DOB: DOB,
                 gender: Gender,
             });
 
@@ -57,13 +57,13 @@ Data.forEach(each => {
             CustomerCreation.fillOutContactInformation({
                 handPhone: Customerdata.CustomerCreationPrincipal.ContactInformation.handPhone,
                 emailAddress: "test" + Math.floor(Math.random() * 100000) + "@test.com",
-                emergencyContact: Customerdata.CustomerCreationPrincipal.ContactInformation.emergencyContact,
-                homeNumber: Customerdata.CustomerCreationPrincipal.ContactInformation.homeNumber,
+                // emergencyContact: Customerdata.CustomerCreationPrincipal.ContactInformation.emergencyContact,
+                // homeNumber: Customerdata.CustomerCreationPrincipal.ContactInformation.homeNumber,
 
             });
 
             CustomerCreation.save();
-            cy.wait(50000)
+            cy.wait(5000)
 
             // cy.Click(elems_Landing.SAFRA_Member)
             // cy.Click(elems_Landing.Membership_Registration)

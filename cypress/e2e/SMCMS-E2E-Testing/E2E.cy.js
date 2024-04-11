@@ -294,7 +294,7 @@ beforeEach(() => {
 //    AccommodationClosureManagement() // Need to add accommodation on page action
 //    AccommodatiomBookingManagement(E2EData.ACCOMMODATION_BOOKING_MANAGEMENT.SAFRA_MEMBERID, E2EData.ACCOMMODATION_BOOKING_MANAGEMENT.GEUSTID) //Pass SAFRA MemberID and Guest ID
 //    AccommodatiomReservationManagement(E2EData.ACCOMMODATION_RESERVATION_MANAGEMENT.SAFRA_MEMBERID) //Pass SAFRA MemberID
-// // // Update the booking,  no available slots when running
+// // Update the booking,  no available slots when running
 
 // })
 
@@ -340,7 +340,7 @@ beforeEach(() => {
 
 
 
-// describe('E2E Auto Testing:FS-015 Energy One: Gym Membership and Maintenance Activities', ()=> {
+describe('E2E Auto Testing:FS-015 Energy One: Gym Membership and Maintenance Activities', ()=> {
 
 // E1GYMMembershipRegistrationWithExistingMember(E2EData.ENTER_MEMBERID_AND_NAME_E1GYM_REG_WITH_EXISTING_MEMBET.MEMBERID,
 //    E2EData.ENTER_MEMBERID_AND_NAME_E1GYM_REG_WITH_EXISTING_MEMBET.MEMBERNAME) // Enter MemberID and Member Name
@@ -351,7 +351,7 @@ beforeEach(() => {
 
 // E1GYMMembershipRegistrationWithNonMember()
 // E1GymMembershipCancellationBeforePayment(E2EData.MEMBERID_FOR_CANCELLATION_BEFORE_PAYMENT)//Provide Active member ID
-// E1GYMMembershipConversion(E2EData.MEMBERID_FOR_E1GYM_CONVERSION) // Enter Member ID
+E1GYMMembershipConversion(E2EData.MEMBERID_FOR_E1GYM_CONVERSION) // Enter Member ID
 // E1GYMMembershipDeferment(E2EData.E1_GYMID_FOR_E1GYM_DEFERMENT) // Enter E1 Gym Membership ID ok //Needs an active
 // E1GYMMembershipTermination(E2EData.ACTIVE_MEMBERID_FOR_E1GYM_TERMINATION) //Provide Active member ID //Needs an Active
 // E1GYMMembershipReinstatement(E2EData.INACTIVE_MEMBERID_FOR_E1GYM_REINSTATMENT) //Enter Member ID //Theres add to cart
@@ -365,12 +365,12 @@ beforeEach(() => {
 //   E1GYMMembershipDataManagement(E2EData.E1GYMMembershipDataManagement.MEMBERID,
 //                              E2EData.E1GYMMembershipDataManagement.E1_GYM_MEMBERSHIPID) //Provide MemberID and E1GymMemberhipID
 
-// })
+})
 
 
 
 
-describe('E2E Auto Testing:FS-016 Interest Group: Registration and Maintenance Activities', ()=> {
+// describe('E2E Auto Testing:FS-016 Interest Group: Registration and Maintenance Activities', ()=> {
 
 // InterestGroupMembershipRegistration()
 // InterestGMembershipRenewal(CustomerNRICFull) //Change NRIC each time after runing this code
@@ -385,20 +385,20 @@ describe('E2E Auto Testing:FS-016 Interest Group: Registration and Maintenance A
 // InterestGMembershipwaiver(E2EData.MEMBER_NAME_FOR_IG_WAIVER)  //Provide Member Name
 // InterestGroupManagement()
 // InterestGroupMembershipManagment()
-InterestGroupMainManagements()
+// InterestGroupMainManagements()
 // //IG Renewal Advice
 
-})
+// })
 
 
 
 //  describe('E2E Auto Testing:FS-025 Membership: VIP Volunteer Veteran League', ()=> {
-    // VolunteerCommittee()
-    // VolunteerAppointment()
-    // VolunteerAppointmentType()
-    // VIPAppointmentType()
-      // VolunteerAppointmentTermRegistration() 
-      // VIPAppointmentTermRegistration() //Update the the Type in Registration
+//     VolunteerCommittee()
+//     VolunteerAppointment()
+//     VolunteerAppointmentType()
+//     VIPAppointmentType()
+//       VolunteerAppointmentTermRegistration() 
+//       VIPAppointmentTermRegistration() //Update the the Type in Registration
 // })
 
 
@@ -491,7 +491,7 @@ InterestGroupMainManagements()
 
 // describe('E2E Auto Testing:FS-013 & 039: In-House Sale and Merchandise', ()=> {
 
-//InHouseSaleAndMerchandiseItemManagement()
+// InHouseSaleAndMerchandiseItemManagement()
 // InHouseSaleAndMerchandisePurchase(E2EData.MEMBERID_FOR_MERCHANDISE_PUECHASE, E2EData.MEMBERID_FOR_INHOUSE_PUECHASE) //Enter Machandise and In-House sale Member IDs
 // InHouseSaleAndMerchandiseTransactionAdjustment(E2EData.MEMBERID_FOR_MERCHANDISE_TRANSACTION_ADJUSTMENT, E2EData.MEMBERID_FOR_INHOUSE_TRANSACTION_ADJUSTMENT) //Enter Machandise and In-House sale Member IDs
 // InHouseSaleAndMerchandiseTransactionConcellation(E2EData.MEMBERID_FOR_MERCHANDISE_TRANSACTION_CONCELLATION, E2EData.MEMBERID_FOR_INHOUSE_TRANSACTION_CONCELLATION)
