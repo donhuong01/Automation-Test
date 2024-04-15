@@ -2,8 +2,9 @@ import elems_InterestGroupMainListing from '../../Elements/Interest Group/Intere
 import elems_PageHeader from '../../Elements/Common/PageHeader'
 import elems_Alerts from '../../Elements/Common/Alerts'
 import elems_Picker from '../../Elements/Common/Picker'
+import Commons from '../Common/Common'
 
-
+const common = new Commons()
 class InterestGroupMainListing {
 
     /*****************************************************
@@ -83,11 +84,15 @@ class InterestGroupMainListing {
     *****************************************************/
     FilterValueByStatus(Name, BussinessType, Status) {
 
+        cy.SelectDropDownItem(elems_InterestGroupMainListing.DRP_STATUS, BussinessType)
         cy.SelectDropDownItem(elems_InterestGroupMainListing.DRP_STATUS, Status)
         cy.Click(elems_InterestGroupMainListing.BTN_SEARCHFILTER)
-        cy.VerifyTableEntry(elems_InterestGroupMainListing.TBL_IGGROUPMAINLIST, 'Name', Name)
+        common.ClickLastPage()
+       cy.VerifyTableEntry(elems_InterestGroupMainListing.TBL_IGGROUPMAINLIST, 'Name', Name)
         cy.VerifyTableEntry(elems_InterestGroupMainListing.TBL_IGGROUPMAINLIST, 'Status', Status)
         cy.VerifyTableEntry(elems_InterestGroupMainListing.TBL_IGGROUPMAINLIST, 'Business Type', BussinessType)
+
+
 
     }
 

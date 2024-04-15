@@ -8,7 +8,7 @@ const data = [
     // },
     {
         MemberID: 'A300001815',
-        WaiverPeriod: '3',
+        WaiverPeriod: '1',
         WaiverReason: 'waiver',
         ApprovalOption: 'Approve'
     },

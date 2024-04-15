@@ -5,8 +5,8 @@ const data = [
     {
         GeneratedFor: 'Via Email',
         Description: 'E1RenAdvice' + Math.floor(Math.random() * 23829),
-        MainMembership: 'Test E1 Main',
-        E1GymMembership: 'Test E1 Detail',
+        MainMembership: 'QAE1MAIN2024',
+        E1GymMembership: 'QAE12024',
         ExpiryDateFrom: '03-Feb-2023',
         ExpiryDateTo: '23-Dec-2023',
         MembershipStatus: 'Active',
@@ -19,8 +19,8 @@ const data = [
     {
         GeneratedFor: 'Via Mail Merge',
         Description: 'E1RenAdvice' + Math.floor(Math.random() * 23829),
-        MainMembership: 'Test E1 Main',
-        E1GymMembership: "Test E1 Detail",
+        MainMembership: 'QAE1MAIN2024',//'Test E1 Main',
+        E1GymMembership: 'QAE12024', //"Test E1 Detail",
         ExpiryDateFrom: '03-Feb-2023',
         ExpiryDateTo: '23-Dec-2023',
         MembershipStatus: 'Active',

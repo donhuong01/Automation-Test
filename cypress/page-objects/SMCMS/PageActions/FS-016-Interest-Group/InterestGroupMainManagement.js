@@ -64,6 +64,38 @@ class InterestGroupMain {
     }
 
     /*****************************************************
+         * Method: FilloutIGMainInformation
+         * Description: Fillout Interest Group Main Details
+        *****************************************************/
+    FilloutE1MainInformation(Name, Code, MainCategory, IGGroupCategoryGroup, FabsGroup,
+        ClubClassification, LifeStyleGroup, SMCClassification, OwnerEmail) {
+
+        cy.EnterText(elems_InterestGroupMainDetail.TabInterestGroup.TXT_NAME, Name)
+        cy.EnterText(elems_InterestGroupMainDetail.TabInterestGroup.TXT_CODE, Code)
+        cy.TickRadioButton(elems_InterestGroupMainDetail.TabInterestGroup.RADIO_ENERGYONE)
+        cy.EnterText(elems_InterestGroupMainDetail.TabInterestGroup.TXT_MAINCATEGTYPE, MainCategory)
+        cy.SelectPickerDifferentItemsSeachBTN(elems_InterestGroupMainDetail.TabInterestGroup.PCK_IGCATEGGROUP,
+            elems_InterestGroupMainDetail.TabInterestGroup.TXT_IGGROUPCATEGGROUP, IGGroupCategoryGroup,
+            elems_InterestGroupMainDetail.TabInterestGroup.BTN_SEARCHFILTER)
+        cy.SelectPickerDifferentItemsSeachBTN(elems_InterestGroupMainDetail.TabInterestGroup.PCK_FABSGROUP,
+            elems_InterestGroupMainDetail.TabInterestGroup.TXT_CODESETNAME, FabsGroup,
+            elems_InterestGroupMainDetail.TabInterestGroup.BTN_SEARCHFILTER)
+        cy.SelectPickerDifferentItemsSeachBTN(elems_InterestGroupMainDetail.TabInterestGroup.PCK_CLUBCLASSIFICATION,
+            elems_InterestGroupMainDetail.TabInterestGroup.TXT_CODESETNAME, ClubClassification,
+            elems_InterestGroupMainDetail.TabInterestGroup.BTN_SEARCHFILTER)
+        cy.SelectPickerDifferentItemsSeachBTN(elems_InterestGroupMainDetail.TabInterestGroup.PCK_LIFESTYLEGROUP,
+            elems_InterestGroupMainDetail.TabInterestGroup.TXT_CODESETNAME, LifeStyleGroup,
+            elems_InterestGroupMainDetail.TabInterestGroup.BTN_SEARCHFILTER)
+        cy.SelectPickerDifferentItemsSeachBTN(elems_InterestGroupMainDetail.TabInterestGroup.PCK_SMCCLASSIFICATION,
+            elems_InterestGroupMainDetail.TabInterestGroup.TXT_CODESETNAME, SMCClassification,
+            elems_InterestGroupMainDetail.TabInterestGroup.BTN_SEARCHFILTER)
+        cy.SelectPickerDifferentItemsSeachBTN(elems_InterestGroupMainDetail.TabInterestGroup.PCK_OWNER,
+            elems_InterestGroupMainDetail.TabInterestGroup.TXT_LOGINEMAIL, OwnerEmail,
+            elems_InterestGroupMainDetail.TabInterestGroup.BTN_SEARCHFILTER)
+
+    }
+
+    /*****************************************************
      * Method: AddLocation
      * Description: This function add location
     *****************************************************/

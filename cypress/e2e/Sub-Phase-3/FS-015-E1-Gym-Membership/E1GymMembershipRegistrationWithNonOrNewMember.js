@@ -17,13 +17,14 @@ const MemTenureSelect = new MembershipTenureSelection()
 const ShoppingCart = new ShoppingCartPayments()
 const CustomerCreation = new CustomerCreationPage()
 
-const E1GYMMembershipRegistrationWithNonMember = ()=> {
+const E1GYMMembershipRegistrationWithNonMember = (NRICFull2)=> {
 
 Data.forEach(each => {
 
     const { NRICFull, E1GymMemMainSelection, E1GymMembershipSelection, LocationSelection, DependencyType, category, PreferredClubHouse, EffectiveDate, Terms, AddWaiver } = each
 
     const NRICLast4Digit = NRICFull.substr(NRICFull.length - 4);
+    const NRICLast4Digit2 = NRICFull2.substr(NRICFull2.length - 4);
 
     describe('FS-015 E1 GYM Membership Registration', function () {
         const Gender = 'Male'
@@ -35,7 +36,7 @@ Data.forEach(each => {
             cy.visit('/membership/customerCheckin').wait(5000)
             cy.Click(elems_CustomerCheckInPage.RBTN_NRIC)
             cy.EnterDateCheckin(elems_CustomerCheckInPage.DATE_DATEOFBIRTH, DOB)
-            cy.EnterText(elems_CustomerCheckInPage.TXT_LAST4DIGITSNRIC, NRICLast4Digit)
+            cy.EnterText(elems_CustomerCheckInPage.TXT_LAST4DIGITSNRIC, NRICLast4Digit2)
             cy.Click(elems_CustomerCheckInPage.BTN_CHECKIN)
             cy.wait(2000)
             cy.Click(elems_CustomerCheckInPage.BTN_CREATNEW)

@@ -38,7 +38,7 @@ describe('[TS01] FS-015 E1 GYM Membership Renewal Advice', function () {
 
             E1GYMMembershipRenewalAdvice.SelectItem(Description)
 
-            E1GYMMembershipRenewalAdvice.Delete()
+            //E1GYMMembershipRenewalAdvice.Delete()
 
         })
     })

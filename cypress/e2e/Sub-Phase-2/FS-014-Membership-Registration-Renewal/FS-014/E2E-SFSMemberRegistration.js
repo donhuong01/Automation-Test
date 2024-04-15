@@ -202,87 +202,6 @@ const SFSMemberRegistion = (CustomerNRICFull, DepChildNRICFull, DepSouseNRICFull
                 ProfilePicture: data.memberregistrationprincipal.Personal_Info.ProfilePicture
             })
 
-            //Adding Dependent Child
-            MemRegPrincipal.AddDependent()
-
-
-            MemberRegDependent.fillsoutPersonalInformationDep(
-                data.CustomerCreationDependentChild.RegistrationInformation.MemberCategory,
-                data.CustomerCreationDependentChild.RegistrationInformation.DependentType,
-                DepChildName, //Extra
-                DepChildName,
-                DepChildNRICFull,
-                data.CustomerCreationDependentChild.RegistrationInformation.Gender,
-                data.CustomerCreationDependentChild.RegistrationInformation.DateofBirth,
-                data.CustomerCreationDependentChild.RegistrationInformation.Age,
-                undefined, //Extra
-                data.CustomerCreationDependentChild.RegistrationInformation.PrincipalType,
-                data.CustomerCreationDependentChild.RegistrationInformation.MemberType,
-                data.CustomerCreationDependentChild.RegistrationInformation.Nationality,
-                data.CustomerCreationDependentChild.RegistrationInformation.MaritalStatus,
-                data.CustomerCreationDependentChild.RegistrationInformation.CardType,
-                data.CustomerCreationDependentChild.RegistrationInformation.InterestinDBSCard,
-                data.CustomerCreationDependentChild.RegistrationInformation.AllowtoRedeemSAFRAPoints,
-                data.CustomerCreationDependentChild.RegistrationInformation.ProfilePicture
-            )
-
-            MemberRegDependent.fillsoutContactInformation({
-                Handphone: data.CustomerCreationDependentChild.ContactInformation.handPhone,
-                EmailAddress: DepChildEmail,
-                // HomeNumber:data.CustomerCreationDependentChild.ContactInformation.homeNumber,
-                // EmergencyContact:data.CustomerCreationDependentChild.ContactInformation.emergencyContact
-            })
-
-            MemberRegDependent.filloutPreferredContactMode({
-                SelectAll: data.CustomerCreationDependentChild.ContactInformation.preferredContactModeSelectAll,
-                // Email: data.CustomerCreationDependentChild.ContactInformation.preferredContactModeEmail,
-                // Mail: data.CustomerCreationDependentChild.ContactInformation.preferredContactModeMail,
-                // SMS: data.CustomerCreationDependentChild.ContactInformation.preferredContactModeSMS,
-                // VoiceCall: data.CustomerCreationDependentChild.ContactInformation.preferredContactModeVoiceCall,
-                // PushNotification: data.CustomerCreationDependentChild.ContactInformation.preferredContactModePushNotification
-            })
-
-            // MemberRegDependent.filloutConsentInformation({
-            //     MarketingConsent: data.CustomerCreationDependentChild.ContactInformation.consentInformationMarketing,
-            //     ServiceNotificationConsent: data.CustomerCreationDependentChild.ContactInformation.consentInformationServiceNotification,
-            //     TransactionalConsent: data.CustomerCreationDependentChild.ContactInformation.consentInformationTransactional
-            // })
-
-            // MemberRegDependent.fillOutPreferredSafraClubs({
-            //     safraJurong:data.CustomerCreationDependentChild.InterestAreaInformation.clubJurong,
-            //     safraPunggol:data.CustomerCreationDependentChild.InterestAreaInformation.clubPunggol,
-            //     // safraToaPayoh:data.CustomerCreationDependentChild.InterestAreaInformation.clubPayoh,
-            //     safraMtFaber:data.CustomerCreationDependentChild.InterestAreaInformation.clubFaber,
-            //     safraTampines:data.CustomerCreationDependentChild.InterestAreaInformation.clubTampines,
-            //     safraYishun:data.CustomerCreationDependentChild.InterestAreaInformation.clubYishun
-            // })
-            // MemberRegDependent.fillOutSafraBrands({
-            //     energyOneGym: data.CustomerCreationDependentChild.InterestAreaInformation.brandEnergyOneGym,
-            //     kidzAmazeSplshIndrPlayGrnd:data.CustomerCreationDependentChild.InterestAreaInformation.brandKidzAmaza,
-            //     finsSwimSchool:data.CustomerCreationDependentChild.InterestAreaInformation.brandFINS
-            // })
-
-            // MemberRegDependent.fillOutInterestGrpsAndMicroClubs({
-            //     safraAdventureClub:data.CustomerCreationDependentChild.InterestAreaInformation.groupAdventure,
-            //     bitezFandB:data.CustomerCreationDependentChild.InterestAreaInformation.groupBitez,
-            //     safraCommSrvcsClub:data.CustomerCreationDependentChild.InterestAreaInformation.groupCommService,
-            //     safraCompSportsClub:data.CustomerCreationDependentChild.InterestAreaInformation.groupCompetitive,
-            //     safraDigitalMediaClub:data.CustomerCreationDependentChild.InterestAreaInformation.groupDigimedia,
-            //     safraEntrpnrsClub:data.CustomerCreationDependentChild.InterestAreaInformation.groupEntrep,
-            //     fuseEntrtnmnt:data.CustomerCreationDependentChild.InterestAreaInformation.groupFuse,
-            //     safraGolfingSection:data.CustomerCreationDependentChild.InterestAreaInformation.groupGolf,
-            //     safraMovieMax:data.CustomerCreationDependentChild.InterestAreaInformation.groupMovie,
-            //     safraPhotoClub:data.CustomerCreationDependentChild.InterestAreaInformation.groupPhotograph,
-            //     safraRunningClub:data.CustomerCreationDependentChild.InterestAreaInformation.groupRunning,
-            //     safraShootingClub:data.CustomerCreationDependentChild.InterestAreaInformation.groupShooting,
-            //     safraSocialBadmntnClub:data.CustomerCreationDependentChild.InterestAreaInformation.groupSocialBadminton,
-            //     safraTechClub:data.CustomerCreationDependentChild.InterestAreaInformation.groupTech,
-            //     safraTravelClub:data.CustomerCreationDependentChild.InterestAreaInformation.groupTravel
-            // })
-
-            MemRegPrincipal.SaveAndNext()
-            cy.wait(7000)
-
             //Adding Dependent spouse
             MemRegPrincipal.AddDependent()
             cy.wait(3000)
@@ -362,14 +281,98 @@ const SFSMemberRegistion = (CustomerNRICFull, DepChildNRICFull, DepSouseNRICFull
             //     safraTravelClub:data.CustomerCreationDependentSpouse.InterestAreaInformation.groupTravel
             // })
 
-
             MemRegPrincipal.SaveAndNext()
             cy.wait(7000)
+
+             //Adding Dependent Child
+             MemRegPrincipal.AddDependent()
+
+
+             MemberRegDependent.fillsoutPersonalInformationDep(
+                 data.CustomerCreationDependentChild.RegistrationInformation.MemberCategory,
+                 data.CustomerCreationDependentChild.RegistrationInformation.DependentType,
+                 DepChildName, //Extra
+                 DepChildName,
+                 DepChildNRICFull,
+                 data.CustomerCreationDependentChild.RegistrationInformation.Gender,
+                 data.CustomerCreationDependentChild.RegistrationInformation.DateofBirth,
+                 data.CustomerCreationDependentChild.RegistrationInformation.Age,
+                 undefined, //Extra
+                 data.CustomerCreationDependentChild.RegistrationInformation.PrincipalType,
+                 data.CustomerCreationDependentChild.RegistrationInformation.MemberType,
+                 data.CustomerCreationDependentChild.RegistrationInformation.Nationality,
+                 data.CustomerCreationDependentChild.RegistrationInformation.MaritalStatus,
+                 data.CustomerCreationDependentChild.RegistrationInformation.CardType,
+                 data.CustomerCreationDependentChild.RegistrationInformation.InterestinDBSCard,
+                 data.CustomerCreationDependentChild.RegistrationInformation.AllowtoRedeemSAFRAPoints,
+                 data.CustomerCreationDependentChild.RegistrationInformation.ProfilePicture
+             )
+ 
+             MemberRegDependent.fillsoutContactInformation({
+                 Handphone: data.CustomerCreationDependentChild.ContactInformation.handPhone,
+                 EmailAddress: DepChildEmail,
+                 // HomeNumber:data.CustomerCreationDependentChild.ContactInformation.homeNumber,
+                 // EmergencyContact:data.CustomerCreationDependentChild.ContactInformation.emergencyContact
+             })
+ 
+             MemberRegDependent.filloutPreferredContactMode({
+                 SelectAll: data.CustomerCreationDependentChild.ContactInformation.preferredContactModeSelectAll,
+                 // Email: data.CustomerCreationDependentChild.ContactInformation.preferredContactModeEmail,
+                 // Mail: data.CustomerCreationDependentChild.ContactInformation.preferredContactModeMail,
+                 // SMS: data.CustomerCreationDependentChild.ContactInformation.preferredContactModeSMS,
+                 // VoiceCall: data.CustomerCreationDependentChild.ContactInformation.preferredContactModeVoiceCall,
+                 // PushNotification: data.CustomerCreationDependentChild.ContactInformation.preferredContactModePushNotification
+             })
+ 
+             // MemberRegDependent.filloutConsentInformation({
+             //     MarketingConsent: data.CustomerCreationDependentChild.ContactInformation.consentInformationMarketing,
+             //     ServiceNotificationConsent: data.CustomerCreationDependentChild.ContactInformation.consentInformationServiceNotification,
+             //     TransactionalConsent: data.CustomerCreationDependentChild.ContactInformation.consentInformationTransactional
+             // })
+ 
+             // MemberRegDependent.fillOutPreferredSafraClubs({
+             //     safraJurong:data.CustomerCreationDependentChild.InterestAreaInformation.clubJurong,
+             //     safraPunggol:data.CustomerCreationDependentChild.InterestAreaInformation.clubPunggol,
+             //     // safraToaPayoh:data.CustomerCreationDependentChild.InterestAreaInformation.clubPayoh,
+             //     safraMtFaber:data.CustomerCreationDependentChild.InterestAreaInformation.clubFaber,
+             //     safraTampines:data.CustomerCreationDependentChild.InterestAreaInformation.clubTampines,
+             //     safraYishun:data.CustomerCreationDependentChild.InterestAreaInformation.clubYishun
+             // })
+             // MemberRegDependent.fillOutSafraBrands({
+             //     energyOneGym: data.CustomerCreationDependentChild.InterestAreaInformation.brandEnergyOneGym,
+             //     kidzAmazeSplshIndrPlayGrnd:data.CustomerCreationDependentChild.InterestAreaInformation.brandKidzAmaza,
+             //     finsSwimSchool:data.CustomerCreationDependentChild.InterestAreaInformation.brandFINS
+             // })
+ 
+             // MemberRegDependent.fillOutInterestGrpsAndMicroClubs({
+             //     safraAdventureClub:data.CustomerCreationDependentChild.InterestAreaInformation.groupAdventure,
+             //     bitezFandB:data.CustomerCreationDependentChild.InterestAreaInformation.groupBitez,
+             //     safraCommSrvcsClub:data.CustomerCreationDependentChild.InterestAreaInformation.groupCommService,
+             //     safraCompSportsClub:data.CustomerCreationDependentChild.InterestAreaInformation.groupCompetitive,
+             //     safraDigitalMediaClub:data.CustomerCreationDependentChild.InterestAreaInformation.groupDigimedia,
+             //     safraEntrpnrsClub:data.CustomerCreationDependentChild.InterestAreaInformation.groupEntrep,
+             //     fuseEntrtnmnt:data.CustomerCreationDependentChild.InterestAreaInformation.groupFuse,
+             //     safraGolfingSection:data.CustomerCreationDependentChild.InterestAreaInformation.groupGolf,
+             //     safraMovieMax:data.CustomerCreationDependentChild.InterestAreaInformation.groupMovie,
+             //     safraPhotoClub:data.CustomerCreationDependentChild.InterestAreaInformation.groupPhotograph,
+             //     safraRunningClub:data.CustomerCreationDependentChild.InterestAreaInformation.groupRunning,
+             //     safraShootingClub:data.CustomerCreationDependentChild.InterestAreaInformation.groupShooting,
+             //     safraSocialBadmntnClub:data.CustomerCreationDependentChild.InterestAreaInformation.groupSocialBadminton,
+             //     safraTechClub:data.CustomerCreationDependentChild.InterestAreaInformation.groupTech,
+             //     safraTravelClub:data.CustomerCreationDependentChild.InterestAreaInformation.groupTravel
+             // })
+ 
+             MemRegPrincipal.SaveAndNext()
+             cy.wait(7000)
+
             MemRegPrincipal.SaveAndNext()
             cy.wait(3000)
             MemTenureSelect.principalTenureSelection(PrincipalName, '5 Years')
-            MemTenureSelect.dependentTenureSelection(DepChildName, '5 Years')
             MemTenureSelect.dependentTenureSelection(DepSouseName, '5 Years')
+            MemTenureSelect.dependentTenureSelection(DepChildName, '5 Years')
+            
+            
+            
 
             // MemTenureSelect.selectDependent(DepChildName)
             // MemTenureSelect.selectDependent(DepSouseName)

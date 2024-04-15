@@ -1,6 +1,6 @@
 const data = {
 
-    Name: 'E1 Main Test',
+    Name: 'z-Test E1 Main'+ Math.floor(Math.random() * 1000),
     Code: 'EMT',
     MainCategory: 'Sport',
     IGGroupCategoryGroup: 'INTEREST GROUP CATEGORY',
@@ -24,7 +24,7 @@ const data = {
     TerminationItemCode: 'SRP Prod 006',
     WaiverItemCode: 'SRP Prod 002',
     ReversalItemCode: 'SRP Prod 001',
-    BussinessType: 'Normal'
+    BussinessType: 'Energy One'
 
 }
 export default data

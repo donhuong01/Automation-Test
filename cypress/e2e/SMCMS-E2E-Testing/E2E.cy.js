@@ -81,7 +81,7 @@ import E1GYMMembershipRenewal from '../Sub-Phase-3/FS-015-E1-Gym-Membership/E1Gy
 import E1GYMMembershipRegistrationWithExistingMember from '../Sub-Phase-3/FS-015-E1-Gym-Membership/E1GymMembershipRegistrationWithExistingMember'
 import E1GYMMembershipRegistrationWithNonMember from '../Sub-Phase-3/FS-015-E1-Gym-Membership/E1GymMembershipRegistrationWithNonOrNewMember'
 import E1GYMSetupManagement from '../Sub-Phase-3/FS-015-E1-Gym-Membership/E1 Gym Setup Management'
-import E1GYMMembershipAndChargeRateSetup from '../Sub-Phase-3/FS-015-E1-Gym-Membership/FS-015 E1 GYM Membership And Charge Rate Setup'
+import E1GYMMainSetup from '../Sub-Phase-3/FS-015-E1-Gym-Membership/FS-015 E1 GYM Membership And Charge Rate Setup'
 import E1GYMMembershipRenewalAdvise from '../Sub-Phase-3/FS-015-E1-Gym-Membership/FS-015 E1 GYM Membership Renewal Advice'
 import E1GYMMembershipDataManagement from '../Sub-Phase-3/FS-015-E1-Gym-Membership/FS-015 E1 GYM Membership Data Management'
 import E1GYMMembershipModuleSettings from '../Sub-Phase-3/FS-015-E1-Gym-Membership/E1GymMembershipModuleSettings'
@@ -349,9 +349,9 @@ describe('E2E Auto Testing:FS-015 Energy One: Gym Membership and Maintenance Act
 //     E2EData.ENTER_MEMBERID_NAME_AND_E1GYMID_FOR_RENEWAL.MEMBERNAME,
 //     E2EData.ENTER_MEMBERID_NAME_AND_E1GYMID_FOR_RENEWAL.E1GYM_MEMBERSHIP_ID)
 
-// E1GYMMembershipRegistrationWithNonMember()
+// E1GYMMembershipRegistrationWithNonMember(CustomerNRICFull)
 // E1GymMembershipCancellationBeforePayment(E2EData.MEMBERID_FOR_CANCELLATION_BEFORE_PAYMENT)//Provide Active member ID
-E1GYMMembershipConversion(E2EData.MEMBERID_FOR_E1GYM_CONVERSION) // Enter Member ID
+// E1GYMMembershipConversion(E2EData.MEMBERID_FOR_E1GYM_CONVERSION) // Enter Member ID
 // E1GYMMembershipDeferment(E2EData.E1_GYMID_FOR_E1GYM_DEFERMENT) // Enter E1 Gym Membership ID ok //Needs an active
 // E1GYMMembershipTermination(E2EData.ACTIVE_MEMBERID_FOR_E1GYM_TERMINATION) //Provide Active member ID //Needs an Active
 // E1GYMMembershipReinstatement(E2EData.INACTIVE_MEMBERID_FOR_E1GYM_REINSTATMENT) //Enter Member ID //Theres add to cart
@@ -360,10 +360,10 @@ E1GYMMembershipConversion(E2EData.MEMBERID_FOR_E1GYM_CONVERSION) // Enter Member
 
 // E1GYMSetupManagement() 
 // E1GYMMembershipModuleSettings()
-// E1GYMMembershipAndChargeRateSetup()
-//    E1GYMMembershipRenewalAdvise()
-//   E1GYMMembershipDataManagement(E2EData.E1GYMMembershipDataManagement.MEMBERID,
-//                              E2EData.E1GYMMembershipDataManagement.E1_GYM_MEMBERSHIPID) //Provide MemberID and E1GymMemberhipID
+// E1GYMMainSetup()
+  //  E1GYMMembershipRenewalAdvise()
+  E1GYMMembershipDataManagement(E2EData.E1GYMMembershipDataManagement.MEMBERID,
+                             E2EData.E1GYMMembershipDataManagement.E1_GYM_MEMBERSHIPID) //Provide MemberID and E1GymMemberhipID
 
 })
 
