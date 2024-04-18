@@ -89,13 +89,13 @@ class Commons {
         cy.visit('https://login-uat-smcms.safra.sg')
         cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
         cy.visit('/admin/pendingTaskList')
-        cy.wait(10000)
+        cy.wait(5000)
         cy.EnterText(elems_PendingTaskListing.TXT_TASKID, TaskID)
         cy.EnterText(elems_PendingTaskListing.TXT_WORKFLOWNAME, WorkFlowName)
 
         //Click on Filter button
         cy.Click(elems_PendingTaskListing.BTN_SEARCH)
-        cy.wait(10000)
+        cy.wait(5000)
 
         //Click on Table item
         cy.xpath('(//h2[text()="Pending Task Listing"]/ancestor::div//table//tr["Task ID"]//td//a)[1]').click({ force: true })

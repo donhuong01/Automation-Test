@@ -178,6 +178,9 @@ class InterestGroupDetail {
         cy.SelectPickerDifferentItemsWait(elems_InterestGroupDetail.TabInterestGroup.CUSTOMERCATEGORY.BTN_ADDCUSTOMERCATEGORY, 5000,
             elems_InterestGroupDetail.TabInterestGroup.CUSTOMERCATEGORY.TXT_CUTOMERCATEGNAME, CustomerCategName,
             elems_InterestGroupDetail.TabInterestGroup.CUSTOMERCATEGORY.BTN_SEARCHFILTER)
+        cy.TickCheckBox('(//h3[text()="Customer Category Access Mode List"]/following-sibling::div//input)[1]', 'CHECK')
+        cy.TickCheckBox('(//h3[text()="Customer Category Access Mode List"]/following-sibling::div//input)[2]', 'CHECK')
+
     }
     /*****************************************************
      * Method: AddLocation
@@ -244,6 +247,23 @@ class InterestGroupDetail {
     }
 
     /*****************************************************
+     * Method: FilloutCargeType2
+     * Description:This function fillout charge type
+     * @param {string} ChargeName
+     * @param {string} TransactionType
+     * @param {string} CalculationType
+     * @param {string} AmountType
+    ****************************************************/
+    FilloutCargeType2(ChargeName, TransactionType, CalculationType, AmountType) {
+        cy.Click(elems_InterestGroupDetail.TabChargeRate.BTN_ADDCHARGETYPE)
+        cy.EnterText(elems_InterestGroupDetail.TabChargeRate.TXT_CHARGENAME2, ChargeName)
+        cy.SelectDropDownItem(elems_InterestGroupDetail.TabChargeRate.DRP_TRANSACTIONTYPE2, TransactionType)
+        cy.SelectDropDownItem(elems_InterestGroupDetail.TabChargeRate.DRP_CALCULATIONTYPE2, CalculationType)
+        cy.SelectDropDownItem(elems_InterestGroupDetail.TabChargeRate.DRP_AMOUNTTYPE2, AmountType)
+
+    }
+
+    /*****************************************************
      * Method: ChargeRateCustomerCategory
      * Description:This function add charge rate customer category
      * @param {string} CustomerCategoryName
@@ -253,7 +273,8 @@ class InterestGroupDetail {
         cy.SelectPickerDifferentItemsWait(elems_InterestGroupDetail.TabChargeRate.BTN_ADDCUSTOMERCATEGORY, 5000,
             elems_InterestGroupDetail.TabChargeRate.TXT_CUSTOMERCATEGORYNAME, CustomerCategoryName,
             elems_InterestGroupDetail.TabInterestGroup.CUSTOMERCATEGORY.BTN_SEARCHFILTER)
-        cy.EnterText(elems_InterestGroupDetail.TabChargeRate.TXT_CUSTOMERCATEGORY, '5')
+        cy.EnterText(elems_InterestGroupDetail.TabChargeRate.TXT_CUSTOMERCATEGORY, '97.2')
+        cy.EnterText(elems_InterestGroupDetail.TabChargeRate.TXT_CUSTOMERCATEGORY2, '97.2')
 
     }
     /*****************************************************

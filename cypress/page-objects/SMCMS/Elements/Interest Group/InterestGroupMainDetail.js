@@ -58,6 +58,7 @@ class elems_InterestGroupMainDetail {
     BTN_ADDCHARGETYPE: '//button[text()="Add Charge Type"]',
     BTN_DELETECHARGERATELIST: '(//h3[text()="Charge Rate List"]/parent::div//table//tbody//tr//td)[1]',
     TXT_CHARGENAME: '//h3[text()="Charge Type List"]/parent::div//table//tr//td//input',
+    TXT_CHARGERATEAMMOUNT: '//h3[text()="Charge Rate List"]/parent::div//table//tr//td//input',
     DRP_TRANSACTIONTYPE: '(//h3[text()="Charge Type List"]/parent::div//table//tr//td//span[@class="k-widget k-dropdown"])[1]',
     DRP_CALCULATIONTYPE: '(//h3[text()="Charge Type List"]/parent::div//table//tr//td//span[@class="k-widget k-dropdown"])[2]',
     DRP_AMOUNTTYPE: '(//h3[text()="Charge Type List"]/parent::div//table//tr//td//span[@class="k-widget k-dropdown"])[3]',

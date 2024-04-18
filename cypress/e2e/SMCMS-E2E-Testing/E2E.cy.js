@@ -287,15 +287,12 @@ beforeEach(() => {
 
 // describe('E2E Auto Testing:FS-012 Accommodation', ()=> {
 
-//    AccommodatiomSettingGeneral()
-//    AccommodationSettingOperatingPeriod()
-//    AccommodationTypeManagement()
-//    AccommodationSetupManagement()
-//    AccommodationClosureManagement() // Need to add accommodation on page action
-//    AccommodatiomBookingManagement(E2EData.ACCOMMODATION_BOOKING_MANAGEMENT.SAFRA_MEMBERID, E2EData.ACCOMMODATION_BOOKING_MANAGEMENT.GEUSTID) //Pass SAFRA MemberID and Guest ID
-//    AccommodatiomReservationManagement(E2EData.ACCOMMODATION_RESERVATION_MANAGEMENT.SAFRA_MEMBERID) //Pass SAFRA MemberID
-// // Update the booking,  no available slots when running
-
+  //  AccommodatiomSettingGeneral()
+  //  AccommodationSettingOperatingPeriod()
+  //  AccommodationTypeManagement()
+   AccommodationSetupManagement()
+  //  AccommodationClosureManagement() // Need to add accommodation on page action
+  //  AccommodatiomBookingManagement(E2EData.ACCOMMODATION_BOOKING_MANAGEMENT.SAFRA_MEMBERID, E2EData.ACCOMMODATION_BOOKING_MANAGEMENT.GEUSTID) //Pass SAFRA MemberID and Guest ID
 // })
 
 
@@ -340,7 +337,7 @@ beforeEach(() => {
 
 
 
-describe('E2E Auto Testing:FS-015 Energy One: Gym Membership and Maintenance Activities', ()=> {
+// describe('E2E Auto Testing:FS-015 Energy One: Gym Membership and Maintenance Activities', ()=> {
 
 // E1GYMMembershipRegistrationWithExistingMember(E2EData.ENTER_MEMBERID_AND_NAME_E1GYM_REG_WITH_EXISTING_MEMBET.MEMBERID,
 //    E2EData.ENTER_MEMBERID_AND_NAME_E1GYM_REG_WITH_EXISTING_MEMBET.MEMBERNAME) // Enter MemberID and Member Name
@@ -358,14 +355,14 @@ describe('E2E Auto Testing:FS-015 Energy One: Gym Membership and Maintenance Act
 // E1GYMMembershipWaiver(E2EData.ACTIVE_MEMBERID_FOR_E1GYM_WAIVER) //Provide Active member ID
 // E1GYMMembershipReversal(E2EData.MEMBERID_FOR_E1GYM_REVERSAL) //Enter Member ID
 
+// E1GYMMainSetup()
 // E1GYMSetupManagement() 
 // E1GYMMembershipModuleSettings()
-// E1GYMMainSetup()
   //  E1GYMMembershipRenewalAdvise()
-  E1GYMMembershipDataManagement(E2EData.E1GYMMembershipDataManagement.MEMBERID,
-                             E2EData.E1GYMMembershipDataManagement.E1_GYM_MEMBERSHIPID) //Provide MemberID and E1GymMemberhipID
+//   E1GYMMembershipDataManagement(E2EData.E1GYMMembershipDataManagement.MEMBERID,
+//                              E2EData.E1GYMMembershipDataManagement.E1_GYM_MEMBERSHIPID) //Provide MemberID and E1GymMemberhipID
 
-})
+// })
 
 
 

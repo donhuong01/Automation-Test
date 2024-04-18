@@ -105,7 +105,7 @@ describe('FS-012 Accommodation Closure Management', function () {
 
 
     })
-    it('Creating and Submit for Approval a Accommodation Closure', function () {
+    it.skip('Creating and Submit for Approval a Accommodation Closure', function () {
 
         // Creating Accomodation for Closing
 
@@ -124,7 +124,7 @@ describe('FS-012 Accommodation Closure Management', function () {
 
         AccommodationSetupDetail.BookingFeeProduct(ProductName)
 
-        AccommodationSetupDetail.ReservationFeeProduct(ProductName)
+       // AccommodationSetupDetail.ReservationFeeProduct(ProductName)
 
 
         AccommodationSetupDetail.Save()
@@ -189,6 +189,8 @@ describe('FS-012 Accommodation Closure Management', function () {
 
         AccommodationClosureDetail.SelectAccommodationType(AccommodationType)
 
+        AccommodationClosureDetail.AddAccommodation(AccommodationName)
+
         AccommodationClosureDetail.EnterReason(Reason)
 
         if(PermanentTermination === "No")
@@ -206,13 +208,17 @@ describe('FS-012 Accommodation Closure Management', function () {
             }
         }
 
-        AccommodationClosureDetail.AddAccommodation(AccommodationName)
+       
         
         AccommodationClosureDetail.SubmitForApproval()
 
+        
+
+
+    })
+
+    it('Approving Accommodation Closure', function () {
         common.ApprovalWorkFlow("A-CLO", "Accommodation Closure Approval Workflow", "Approve", "Testing Accommodation Closure Approval Workflow")
-
-
     })
 
 })

@@ -1,12 +1,12 @@
 const data = {
 
     AccommodationSettingGeneral: {
-        NumOfPhotoUpload: '1',
-        MaxSize: '100',
+        NumOfPhotoUpload: '3',
+        MaxSize: '300',
         CancellationIsNotAllowedInMonth: '1',
         CancellationIsNotAllowedInDay: '30',
-        AccoTransactionCancelAfter: '10',
-        AccoBookingNotificationBeforeStart: '1'
+        AccoTransactionCancelAfter: '3',
+        AccoBookingNotificationBeforeStart: '5'
     },
     AccomodationSettingOperatingPeriod: {
         OperatingPeriodName: 'Auto-test' + Math.floor(Math.random() * 12340),
@@ -17,7 +17,7 @@ const data = {
         FABSGroup: 'Contest',
         ClubClassification: 'Fitness & Leisure',
         SMCClassification: 'Fitness & Adventure-SMC',
-        AccessMode: 'Online',
+        AccessMode: 'Online Portal',
         CustomerCateName: 'All Customer Category',
         CustomerCateg: 'All Customer Category',
         EnableHorizone: 'CHECK',
@@ -40,14 +40,14 @@ const data = {
         PermitTemplateCode: 'Accommodation Permit Template',
         AuthorisationPermit: 'Accommodation Authorization Permit template',
         ChargeRateName: 'Accommodation',
-        StartDate: '01-Feb-2023',
-        location: 'SAFRA Jurong',
-        EndDate: '30-Dec-2023',
+        StartDate: '01-Feb-2024',
+        location: 'SAFRA HQ',
+        EndDate: '30-Dec-2024',
         TransactionType: 'Booking',
         CalculationType: 'Per Booking',
         AmountType: 'Fixed Value',
-        CalendarName: '2023 Calendar',
-        OperatingPeriodName: '2023 Operating Period',
+        CalendarName: 'QA-DEMO-Calendar-2024',
+        OperatingPeriodName: 'QA-DEMO-OP-2024',
         BookingAdminFeeProduct: 'SRP Prod 001',
         ReservationAdminFeeProduct: 'SRP Prod 002',
         CancellationAdminFeeProduct: 'SRP Prod 003',
@@ -55,15 +55,15 @@ const data = {
 
     AccommodationSetup: {
 
-        AccommodationName: 'Auto-Acco' + Math.floor(Math.random() * 100),
-        ActivationDate: '21-Feb-2023',
-        AccommodationType: 'Accomm Type Test',
+        AccommodationName: 'Auto-Acco' + Math.floor(Math.random() * 101230),
+        ActivationDate: '21-Feb-2024',
+        AccommodationType: 'Accommodation Test 1',
         MaximumOccupancy: '5',
-        ProductName: 'Resource',
+        ProductName: 'Villa Prod 01',
         ChargeRateName: 'Booking',
-        StartDate: '21-Feb-2023',
+        StartDate: '21-Feb-2024',
         location: 'SAFRA Jurong',
-        EndDate: '21-Dec-2023',
+        EndDate: '21-Dec-2024',
         ChargeName: 'Booking',
         TransactionType: 'Booking',
         CalculationType: 'Per Booking',
@@ -73,18 +73,19 @@ const data = {
         SpecialRemark: 'Special Remarks',
         ContactPersonInfo: 'Testing Info',
         IndemnityText: 'Indemnity Text',
-        TermConditionText: 'Term and Conditions'
+        TermConditionText: 'Term and Conditions',
+        UploadFile: 'Test sample.pdf'
     },
 
     // Data for Accommodation Closre
     AccommodationClosure: {
 
-        AccommodationType: 'Accomm Type Test',
+        AccommodationType: 'Auto-Accomodation78',
         Reason: 'Testing Accommodation ',
         PermanentTermination:'Yes',
-        StartDate: '13-Apr-2023',
+        StartDate: '15-May-2023',
         StartTime:'12:00 AM',
-        EndDate:'30-Apr-2023',
+        EndDate:'30-May-2023',
         EndTime:'12:00 AM',
 
         //Add Recuring Date

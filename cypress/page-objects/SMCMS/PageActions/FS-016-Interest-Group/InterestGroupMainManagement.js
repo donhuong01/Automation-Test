@@ -75,7 +75,7 @@ class InterestGroupMain {
         cy.TickRadioButton(elems_InterestGroupMainDetail.TabInterestGroup.RADIO_ENERGYONE)
         cy.EnterText(elems_InterestGroupMainDetail.TabInterestGroup.TXT_MAINCATEGTYPE, MainCategory)
         cy.SelectPickerDifferentItemsSeachBTN(elems_InterestGroupMainDetail.TabInterestGroup.PCK_IGCATEGGROUP,
-            elems_InterestGroupMainDetail.TabInterestGroup.TXT_IGGROUPCATEGGROUP, IGGroupCategoryGroup,
+            elems_InterestGroupMainDetail.TabInterestGroup.TXT_CODESETNAME, IGGroupCategoryGroup,
             elems_InterestGroupMainDetail.TabInterestGroup.BTN_SEARCHFILTER)
         cy.SelectPickerDifferentItemsSeachBTN(elems_InterestGroupMainDetail.TabInterestGroup.PCK_FABSGROUP,
             elems_InterestGroupMainDetail.TabInterestGroup.TXT_CODESETNAME, FabsGroup,
@@ -224,6 +224,7 @@ class InterestGroupMain {
         cy.SelectPickerDifferentItemsSeachBTN(elems_InterestGroupMainDetail.TabChargeRate.BTN_ADDCUSTOMERCATEG,
             elems_InterestGroupMainDetail.TabChargeRate.TXT_CUSTOMERCATEGORYNAME, CustomerCategoryName,
             elems_InterestGroupMainDetail.TabInterestGroup.BTN_SEARCHFILTER)
+        cy.EnterText(elems_InterestGroupMainDetail.TabChargeRate.TXT_CHARGERATEAMMOUNT, '97.2')
     }
 
 

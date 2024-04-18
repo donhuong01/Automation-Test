@@ -9,9 +9,9 @@ const common = new Commons
 // const MemberID = 'A300000279'
 // const GuestMember = 'A300001457'
 
-const  Location = 'SAFRA Jurong'
-const  AccommodatioType = 'Accomm Type Test'
-const  AccommodatioName = 'Accomm 2023'
+const  Location = 'SAFRA HQ'
+const  AccommodatioType = 'NewAccTypeQA-2024'
+const  AccommodatioName = 'NewAccSetupQA-2024'
 
 const AccommodatiomBookingManagement = (MemberID, GuestMember) => {
 
@@ -35,9 +35,9 @@ describe('[TS-08] FS-012 Accommodation Booking', function () {
         AccommodationBookingDetail.SelectAvailableSlot("Available")
         
 
-        AccommodationBookingDetail.TermsAndCondition("Yes")
+        // AccommodationBookingDetail.TermsAndCondition("Yes")
 
-        AccommodationBookingDetail.IdemnityWaiver("Yes")
+        // AccommodationBookingDetail.IdemnityWaiver("Yes")
         
         AccommodationBookingDetail.Submit()
 
@@ -85,9 +85,9 @@ describe('[TS-08] FS-012 Accommodation Booking', function () {
         AccommodationBookingDetail.SelectAvailableSlot("Available")
         
 
-        AccommodationBookingDetail.TermsAndCondition("Yes")
+        // AccommodationBookingDetail.TermsAndCondition("Yes")
 
-        AccommodationBookingDetail.IdemnityWaiver("Yes")
+        // AccommodationBookingDetail.IdemnityWaiver("Yes")
         
         AccommodationBookingDetail.Submit()
 

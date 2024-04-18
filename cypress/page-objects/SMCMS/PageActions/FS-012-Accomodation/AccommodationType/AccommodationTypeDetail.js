@@ -134,14 +134,14 @@ class AccommodationTypeDetail {
      * Method: FilloutQuota
      * Description: This function Fillout Quota Section
      *****************************************************/
-    FilloutQuota(CustomerCateg, PeakEnableQouta, PeakQoutaFor, PeakMaximumSlotHour, NonPeakEnableQouta, NonPeakQoutaFor, NonPeakMaximumSlotHour) {
+    FilloutQuota(CustomerCateg, /*PeakEnableQouta, PeakQoutaFor, PeakMaximumSlotHour,*/ NonPeakEnableQouta, NonPeakQoutaFor, NonPeakMaximumSlotHour) {
 
         cy.Click(elems_AccommodationTypeDetail.QUOTA.BTN_ADDQUOTA)
         cy.wait(3000)
         cy.SelectDropDownItem(elems_AccommodationTypeDetail.QUOTA.DRP_CUSTOMERCATEGORY, CustomerCateg)
 
-        cy.TickCheckBox(elems_AccommodationTypeDetail.QUOTA.CHK_NONPEAKENABLEQOUTA, NonPeakEnableQouta)
         cy.SelectDropDownItem('(//h3[text()="Quota"]/parent::div//table//td//span[@class="k-widget k-dropdown"])[3]', NonPeakQoutaFor)
+        cy.TickCheckBox(elems_AccommodationTypeDetail.QUOTA.CHK_NONPEAKENABLEQOUTA, NonPeakEnableQouta)
         cy.EnterText(elems_AccommodationTypeDetail.QUOTA.TXT_NONPEAKMAXIMUMSLOTHOUR, NonPeakMaximumSlotHour)
 
 
@@ -182,7 +182,7 @@ class AccommodationTypeDetail {
 
         cy.TickCheckBox(elems_AccommodationTypeDetail.CHK_ENABLESLOTNUMBER, EnableSlotNo)
         cy.EnterText(elems_AccommodationTypeDetail.TXT_MAXNOOFACCOMODATION, MaxNoOFAccommodation)
-        cy.EnterText(elems_AccommodationTypeDetail.TXT_ARESERVATIONCANBEHOLD, AReservationCanBeHold)
+        // cy.EnterText(elems_AccommodationTypeDetail.TXT_ARESERVATIONCANBEHOLD, AReservationCanBeHold)
         // cy.TickCheckBox(elems_AccommodationTypeDetail.CHK_ALLOWRESERVATION, AllowReservation)
         // cy.TickCheckBox(elems_AccommodationTypeDetail.CHK_SENDNOTIFICATIONWHENRESERVATIONEXPIRED, SendNotification)
 
@@ -351,14 +351,14 @@ class AccommodationTypeDetail {
          * Method: ProductMappingTab
          * Description: This function 
          *****************************************************/
-    ProductMappingTab(BookingAdminFeeProduct, ReservationAdminFeeProduct, CancellationAdminFeeProduct) {
+    ProductMappingTab(BookingAdminFeeProduct, /*ReservationAdminFeeProduct,*/ CancellationAdminFeeProduct) {
 
         cy.SelectPickerDifferentItemsWait(elems_AccommodationTypeDetail.PCK_BOOKINGADMINFEEPRODUCT, 5000,
             elems_AccommodationTypeDetail.TXT_PRODUCTNAME, BookingAdminFeeProduct,
             '//div[@class="k-window-content k-dialog-content"]//button[text()="Search Filters"]')
-        cy.SelectPickerDifferentItemsWait(elems_AccommodationTypeDetail.PCK_RESERVETIONADMINFEE, 5000,
-            elems_AccommodationTypeDetail.TXT_PRODUCTNAME, ReservationAdminFeeProduct,
-            '//div[@class="k-window-content k-dialog-content"]//button[text()="Search Filters"]')
+        // cy.SelectPickerDifferentItemsWait(elems_AccommodationTypeDetail.PCK_RESERVETIONADMINFEE, 5000,
+        //     elems_AccommodationTypeDetail.TXT_PRODUCTNAME, ReservationAdminFeeProduct,
+        //     '//div[@class="k-window-content k-dialog-content"]//button[text()="Search Filters"]')
         cy.SelectPickerDifferentItemsWait(elems_AccommodationTypeDetail.PCK_CANCELLATIONADMINFEEPRODUCT, 5000,
             elems_AccommodationTypeDetail.TXT_PRODUCTNAME, CancellationAdminFeeProduct,
             '//div[@class="k-window-content k-dialog-content"]//button[text()="Search Filters"]')

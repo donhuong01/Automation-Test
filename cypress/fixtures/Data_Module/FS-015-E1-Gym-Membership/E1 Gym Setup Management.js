@@ -1,18 +1,21 @@
 const data = {
-    Name: 'E1-Test-Auto-'+ Math.floor(Math.random() * 1001),
-    Code: 'ETA',
-    IGMain: 'RCD E1 Test 01',//'RCD E1 test', //MOVIEMAX
-    SubcategoryType: 'E1 Silver',
+    Name: 'E1MF NSF',//'E1-Test-Auto-'+ Math.floor(Math.random() * 1001),
+    Code: 'E1MFNSF',
+    IGMain: 'E1MF NSF NEW',//'RCD E1 test', //MOVIEMAX
+    TermLength: '1',
+    SubcategoryType: 'E1MF NSF',
+    location: 'SAFRA Mt Faber',
+    CustomerCategName: 'SAFRA Member',
+
     PublishingDate: '01-Jan-2024',
     EndDate: '30-Dec-2024',
     MembershipTpe: 'Term',
     MinAge: '10',
-    MaxAge: '70',
+    MaxAge: '90',
     IsAgeRequired: 'CHECK',
     IsIGeCardApplicable: 'CHECK',
     IsAllowUserView: 'CHECK',
     IsAllowFloating: 'CHECK',
-    TermLength: '1',
     TermLengthType: 'Month',
     OnlineDisplay: '1',
     MinRegTerm: '1',
@@ -20,12 +23,10 @@ const data = {
     MinRangeBypass: '12',
     MaxRangeBypass: '25',
     AccessMode1: 'Online',
-    CustomerCategName: 'IG A2',
-    location: 'SAFRA HQ',
-    ChargeName: 'Admin fee',
+    ChargeName: 'Registration fee',
     TransactionType: 'Registration',
     CalculationType: 'Per Registration',
     AmountType: 'Fixed Value',
-    ProductName: 'IG Prod 001',
+    ProductName: 'SOL000005681',//IG Prod 001
 }
 export default data

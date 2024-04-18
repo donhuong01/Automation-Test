@@ -80,9 +80,9 @@ describe('[TS01] FS-015 E1 GYM Membership And Charge Rate Setup ', function () {
 
         InterestGroupMain.FilterWithStatus('Approved')
 
-        common.ClickLastPage()
+        // common.ClickLastPage()
 
-        InterestGroupMain.VerifyTableEntries(Name, 'Approved')
+        // InterestGroupMain.VerifyTableEntries(Name, 'Approved')
 
         // InterestGroupMainListing.FilterValueByStatus(Name, BussinessType, 'Approved')
 

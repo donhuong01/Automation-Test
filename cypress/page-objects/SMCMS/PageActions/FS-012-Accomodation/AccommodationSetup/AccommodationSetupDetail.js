@@ -44,7 +44,7 @@ class AccommodationSetupDetail {
         cy.EnterDate(elems_AccommodationSetupDetail.DetailTab.DATE_ACTIVATIONDATE, ActivationDate)
         cy.SelectPickerDifferentItemsWait(elems_AccommodationSetupDetail.DetailTab.PCK_ACCOMMODATIONTYPE, 4000,
             elems_AccommodationSetupDetail.DetailTab.TXT_ACCOMMODATIONTYPE, AccommodationType,
-            '//h3[text()="Accommodation Information"]/..//button[text()="Search Filters"]')
+            '(//button[text()="Search Filters"])[2]')
         cy.EnterText(elems_AccommodationSetupDetail.DetailTab.TXT_MAXIMUMACCUPANCY, MaximumOccupancy)
     }
     /*****************************************************

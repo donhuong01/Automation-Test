@@ -26,7 +26,8 @@ const { AccommodationName,
     SpecialRemark,
     ContactPersonInfo,
     IndemnityText,
-    TermConditionText } = data.AccommodationSetup
+    TermConditionText,
+    UploadFile } = data.AccommodationSetup
 
 const AccommodationSetupManagement = () =>{
 
@@ -49,7 +50,7 @@ describe('FS-012 Accommodation Setup Management', function () {
 
         AccommodationSetupDetail.BookingFeeProduct(ProductName)
 
-        AccommodationSetupDetail.ReservationFeeProduct(ProductName)
+        //AccommodationSetupDetail.ReservationFeeProduct(ProductName)
 
 
         AccommodationSetupDetail.Save()
@@ -76,7 +77,7 @@ describe('FS-012 Accommodation Setup Management', function () {
 
         AccommodationSetupDetail.SaveAsDraft()
 
-        AccommodationSetupListing.FilterWithAccommodationName(AccommodationName)
+        AccommodationSetupListing.FilterWithAccommodationName(AccommodationName) //'Auto-Acco70902'
 
         AccommodationSetupListing.VerifyItemStatus('Draft', 'Inactive')
 
@@ -87,6 +88,25 @@ describe('FS-012 Accommodation Setup Management', function () {
         // AccommodationSetupDetail.ClickAdditionalInformationTab()
 
         // AccommodationSetupDetail.FilloutOtherInformation(Description, SpecialRemark, ContactPersonInfo, IndemnityText, TermConditionText)
+
+        // AccommodationSetupDetail.SaveAsDraft()
+
+        // AccommodationSetupListing.FilterWithAccommodationName(AccommodationName)
+
+        // AccommodationSetupListing.VerifyItemStatus('Draft', 'Inactive')
+
+        // AccommodationSetupListing.ClickAccommodationNoLink()
+
+
+        //Attachemnts
+
+        AccommodationSetupListing.FacilityDetailFormAttachmentTab(UploadFile)
+
+        AccommodationSetupListing.VerifyUploadedFileInTable(UploadFile)
+
+        AccommodationSetupListing.RemoveFile(UploadFile)
+
+        AccommodationSetupListing.FacilityDetailFormAttachmentTab(UploadFile)
 
 
         // Approval 

@@ -43,7 +43,9 @@ describe('[TS01] FS-015 E1 Gym Setup Management ', function () {
 
         InterestGroupDetail.FilloutCargeType(ChargeName, TransactionType, CalculationType, AmountType)
 
-        InterestGroupDetail.ChargeRateCustomerCategory('AS')
+        InterestGroupDetail.FilloutCargeType2('Renewal fee', 'Renewal', 'Per Registration', 'Fixed Value')
+
+        InterestGroupDetail.ChargeRateCustomerCategory('All Customer Category')
 
         InterestGroupDetail.ProductMasterInformation(ProductName)
 
@@ -67,7 +69,7 @@ describe('[TS01] FS-015 E1 Gym Setup Management ', function () {
 
         InterestGroupListing.SelectTableEntry(Name)
 
-        InterestGroupListing.Delete()
+        // InterestGroupListing.Delete()
 
 
     })
