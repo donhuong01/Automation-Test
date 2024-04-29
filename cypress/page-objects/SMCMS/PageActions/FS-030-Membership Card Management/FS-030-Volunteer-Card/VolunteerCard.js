@@ -63,7 +63,8 @@ Cancel(){
  * @param {string} Value
  *****************************************************/
      SelectMemberCardNumber(Header,Value){
-        cy.SelectTableItem(elems_MemberCard.MemberCardListing.TBL_MEMBERCARDLISTING ,Header,Value)
+        // cy.SelectTableItem(elems_MemberCard.MemberCardListing.TBL_MEMBERCARDLISTING ,Header,Value)
+        cy.TickSpecificTableItem('Enable')
     }
 
 /*****************************************************

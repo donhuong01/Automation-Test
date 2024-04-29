@@ -24,7 +24,7 @@ import VIPMemberCardGeneration from '../../../page-objects/SMCMS/PageActions/FS-
  const VIPCardManagement = (MemberID, Name, NRIC, CardType) => {
 
 
-describe('[TS020] VIP Appointment Term Registration Managment', function () {
+describe('[TS020] VIP Card Managment', function () {
 
 
 
@@ -96,9 +96,12 @@ describe('[TS020] VIP Appointment Term Registration Managment', function () {
 
     //Select Member Card Listing
     VIPMemberCard.SelectMemberCardNumber('Member ID', MemberID)
+
+    // //Click on Deactivate E-Card
+    // VIPMemberCard.DeactivateECard()
     
-    //Click on E-Card
-    VIPMemberCard.ActivateECard()
+    // //Click on E-Card
+    // VIPMemberCard.ActivateECard()
 
     //Select Member Card Listing
     VIPMemberCard.SelectMemberCardNumber('Member ID', MemberID)

@@ -12,10 +12,10 @@ const common = new Common()
 beforeEach(() => {
 
     // Set local storage for QA Enviroment
-    cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
+    // cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
 
     // Set local storage for UAT Enviroment
-    // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
+    cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
 })
 
 const PromotionforE1Gym = (MemberId) => {
@@ -27,7 +27,7 @@ Promodata.forEach(each => {
         BenefitType, FixedDollarRate, AgeRangFrom, AgeRangTo, CustomerCateg, ApplicableMemberID,
         ApplicableSourceChannel, Approval, BundlePromotion,  E1Membership, RenewalTerm } = each
 
-    describe('SP4-FS042_TS01 Promotion Setup and Management', function () {
+    describe('SP4-FS042_TS01 E1 Promotion Setup and Management', function () {
 
         it(`[TC01] Creating New ${BasicType} Promotion for E1 Gym Membership On ${PromotionType}`, function () {
 
@@ -137,7 +137,7 @@ Promodata.forEach(each => {
                 } else {
 
                     cy.log('to verify if the standard promotion is applied')
-                    cy.Click('(//div[@class="page-title"]//following-sibling::div//table//tbody//td[9]//a)[1]')
+                    cy.xpath('(//div[@class="page-title"]//following-sibling::div//table//tbody//td//a)[1]',{timeout: 30000}).click({ force: true })
                     cy.SelectDropDownItem('//span[@id="txtStandardPromotion"]', PromotionTitle)
                     cy.Click('//button[text()="Select"]')
 

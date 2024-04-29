@@ -290,7 +290,7 @@ beforeEach(() => {
   //  AccommodatiomSettingGeneral()
   //  AccommodationSettingOperatingPeriod()
   //  AccommodationTypeManagement()
-   AccommodationSetupManagement()
+  //  AccommodationSetupManagement()
   //  AccommodationClosureManagement() // Need to add accommodation on page action
   //  AccommodatiomBookingManagement(E2EData.ACCOMMODATION_BOOKING_MANAGEMENT.SAFRA_MEMBERID, E2EData.ACCOMMODATION_BOOKING_MANAGEMENT.GEUSTID) //Pass SAFRA MemberID and Guest ID
 // })
@@ -390,11 +390,11 @@ beforeEach(() => {
 
 
 //  describe('E2E Auto Testing:FS-025 Membership: VIP Volunteer Veteran League', ()=> {
-//     VolunteerCommittee()
-//     VolunteerAppointment()
-//     VolunteerAppointmentType()
-//     VIPAppointmentType()
-//       VolunteerAppointmentTermRegistration() 
+    // VolunteerCommittee()
+    // VolunteerAppointment()
+    // VolunteerAppointmentType()
+    // VIPAppointmentType()
+      // VolunteerAppointmentTermRegistration() 
 //       VIPAppointmentTermRegistration() //Update the the Type in Registration
 // })
 
@@ -445,13 +445,13 @@ beforeEach(() => {
 //  describe('E2E Auto Testing:FS-030 Membership: Card Management', ()=> {
 
 //     VolunteerCardManagement(E2EData.MEMBERID_VOLUNTERR_CARD_MANAGEMENT, E2EData.MEMBER_NAME_VOLUNTERR_CARD_MANAGEMENT,
-//                             E2EData.LAST4DIGITNRIC_VOLUNTERR_CARD_MANAGEMENT, E2EData.CARD_TYPE_VOLUNTERR_CARD_MANAGEMENT) //Enter MemberID, Name, Last 4 digist of NRIC and Card Type
+//                             E2EData.LAST4DIGITNRIC_VOLUNTERR_CARD_MANAGEMENT, E2EData.CARD_TYPE_VOLUNTERR_CARD_MANAGEMENT) //Enter Active MemberID, Name, Last 4 digist of NRIC and Card Type
 
 //     SAFRACardManagement(E2EData.MEMBERID_SAFRA_CARD_MANAGEMENT, E2EData.MEMBER_NAME_SAFRA_CARD_MANAGEMENT,
-//                         E2EData.LAST4DIGITNRIC_SAFRA_CARD_MANAGEMENT, E2EData.CARD_TYPE_SAFRA_CARD_MANAGEMENT) //Enter MemberID, Name, Last 4 digist of NRIC and Card Type
+//                         E2EData.LAST4DIGITNRIC_SAFRA_CARD_MANAGEMENT, E2EData.CARD_TYPE_SAFRA_CARD_MANAGEMENT) //Enter Active MemberID, Name, Last 4 digist of NRIC and Card Type
 
 //     VIPCardManagement(E2EData.MEMBERID_VIP_CARD_MANAGEMENT, E2EData.MEMBER_NAME_VIP_CARD_MANAGEMENT,
-//                       E2EData.LAST4DIGITNRIC_VIP_CARD_MANAGEMENT, E2EData.CARD_TYPE_VIP_CARD_MANAGEMENT) //Enter MemberID, Name, Last 4 digist of NRIC and Card Type
+//                       E2EData.LAST4DIGITNRIC_VIP_CARD_MANAGEMENT, E2EData.CARD_TYPE_VIP_CARD_MANAGEMENT) //Enter Active MemberID, Name, Last 4 digist of NRIC and Card Type
 
 //  })
 
@@ -504,16 +504,19 @@ beforeEach(() => {
 // })
 
 
-// describe('E2E Auto Testing:FS-042 Promotion', ()=> {
+describe('E2E Auto Testing:FS-042 Promotion', ()=> {
 
   // PromotionforE1Gym(E2EData.MEMBERID_FOR_E1_RENEWAL_PROMOTION.MEMBER_ID) //Provide Active Member 
   // PrommotionForFacilityandFacilityType(E2EData.MEMBERID_FOR_FACILITY_PROMOTION.MEMBER_ID) //Provide Active Member
   // PromotionforInHouseMerchandise (E2EData.MEMBERID_FOR_INHOUSE_MERCHANDISE_PROMOTION.MEMBERID) //Provide Active Member
   // PromotionforInterestGroup(E2EData.MEMBERID_FOR_INTERESTG_PROMOTION.MEMBERID) //Provide Active Member
-  // PromoUtilization()
-  // Promotion()
   // PromotionforMembership(CustomerNRICFull) 
-// })
+  // PromoUtilization()
+  Promotion()
+
+
+  // New Multiple Bundle Promotion
+})
 
 
 

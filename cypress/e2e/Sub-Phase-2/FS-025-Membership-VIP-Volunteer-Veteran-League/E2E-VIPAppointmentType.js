@@ -55,6 +55,7 @@ describe('[TS01] VIP Appointment Type Managment', function () {
         cy.visit('/membership/vipAppointmentTypeListing')
             
             VIPAppTypeListing.VerifyFormTitle('VIP Appointment Type Listing')
+            cy.Click('//span[@class="k-icon k-i-arrow-end-right"]')
             VIPAppTypeListing.VerifyNewlyCreatedItem(AppointmentID,Description)
 
         
@@ -65,6 +66,7 @@ describe('[TS01] VIP Appointment Type Managment', function () {
         cy.visit('/membership/vipAppointmentTypeListing')
     
         VIPAppTypeListing.VerifyFormTitle('VIP Appointment Type Listing')
+        cy.Click('//span[@class="k-icon k-i-arrow-end-right"]')
         VIPAppTypeListing.Delete(AppointmentID,Description)
         VIPAppTypeListing.DelConfirmYes()
         VIPAppDetail.VerifySuccessMSG('Record has been deleted successfully.')

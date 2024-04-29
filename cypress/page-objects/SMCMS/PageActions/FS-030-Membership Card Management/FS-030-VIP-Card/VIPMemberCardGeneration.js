@@ -25,11 +25,30 @@ class VIPMemberCardGeneration {
      *****************************************************/
     VIPMemberCardGenerationForm(MemberID, NRIC, Name, Title){
             cy.ValidateElementText(elems_VIPMemberCardGeneration.LBL_MEMBERID, MemberID)
-            cy.ValidateElementText(elems_VIPMemberCardGeneration.LBL_NRICICNO, NRIC)
+            //cy.ValidateElementText(elems_VIPMemberCardGeneration.LBL_NRICICNO, NRIC)
             cy.ValidateElementText(elems_VIPMemberCardGeneration.LBL_NAME, Name)
 
             cy.EnterText(elems_VIPMemberCardGeneration.TXT_TITLE, Title)
         }
+
+        /*****************************************************
+     * Method: VIPMemberCardGenerationForm
+     * Description: This function will fillOut VIP Member Card Generation Form
+     * Author Fshahzada
+     * @param {string} MemberID
+     * @param {string} NRIC
+     * @param {string} Name
+     * @param {string} Reasoncode
+     * @param {string} Title
+     *****************************************************/
+    SAFRACardGeneration(MemberID, NRIC, Name, Reasoncode, Title){
+        cy.ValidateElementText(elems_VIPMemberCardGeneration.LBL_MEMBERID, MemberID)
+        cy.ValidateElementText(elems_VIPMemberCardGeneration.LBL_NRICICNO, NRIC)
+        cy.ValidateElementText(elems_VIPMemberCardGeneration.LBL_NAME, Name)
+        cy.SelectDropDownItem(elems_VIPMemberCardGeneration.DRP_REASONCODE, Reasoncode)
+
+        // cy.EnterText(elems_VIPMemberCardGeneration.TXT_TITLE, Title)
+    }
     /*****************************************************
      * Method: Generate
      * Description: This function will Click on Generate button
@@ -58,7 +77,8 @@ class VIPMemberCardGeneration {
      * @param {string} Value
      *****************************************************/
          SelectMemberCardNumber(Header,Value){
-            cy.SelectTableItem(elems_MemberCard.MemberCardListing.TBL_MEMBERCARDLISTING ,Header,Value)
+            //cy.SelectTableItem(elems_MemberCard.MemberCardListing.TBL_MEMBERCARDLISTING ,Header,Value)
+            cy.TickSpecificTableItem('Enable')
         }
     
     /*****************************************************

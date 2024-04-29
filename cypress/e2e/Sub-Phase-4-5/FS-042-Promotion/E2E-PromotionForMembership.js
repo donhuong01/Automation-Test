@@ -45,7 +45,7 @@ Promodata.forEach(each => {
         ApplicableSourceChannel, Approval, BundlePromotion,  NRICLast4Digit } = each
 
 
-    describe('SP4-FS042_TS01 Promotion Setup and Management', function () {
+    describe('SP4-FS042_TS01 Membership Promotion Setup and Management', function () {
 
         it(`[TC01] Creating New PromoCode for Membership On ${PromotionType}`, function () {
 
@@ -214,7 +214,7 @@ Promodata.forEach(each => {
                 } else {
 
                     cy.log('to verify if the standard promotion is applied')
-                    cy.Click('(//div[@class="page-title"]//following-sibling::div//table//tbody//td[9]//a)[1]')
+                    cy.xpath('(//div[@class="page-title"]//following-sibling::div//table//tbody//td//a)[1]',{timeout: 30000}).click({ force: true })
                     cy.SelectDropDownItem('//span[@id="txtStandardPromotion"]', PromotionTitle)
                     cy.Click('//button[text()="Select"]')
 

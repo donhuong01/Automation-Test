@@ -23,19 +23,19 @@ const data={
     },
 VIPMemberCardGeneration: {
     Title: "Testing Title 2",
-    ECard:"Inactive",
+    ECard:"Active",
     PhysicalCard:"Inactive",
     CardType:"SAFRA Classic Card",
-    CardCategory:"SAFRAMember",
+    CardCategory:"SAFRAMember VIP",
     MemberCategory:"Principal"
 },
 VolunteerMemberCardGeneration: {
-    ECard:"Inactive",
+    ECard:"Active",
     PhysicalCard:"Inactive",
     CardType:"SAFRA DBS Credit Card",
-    CardCategory:"SAFRAMember",
+    CardCategory:"SAFRAMember Volunteer",
     MemberCategory:"Principal",
-    CardStatus:"Disable"
+    CardStatus:"Enable"
 },
 VolAppointmentTermRegistration: {
 
@@ -45,8 +45,8 @@ VolAppointmentTermRegistration: {
     MemberName:'Test User S4539621E',
     AppointmentTypeID:'ACC_YS_CHAIR',
     Type:'Terminated',
-    StartDate:'19-Jun-2022',
-    EndDate:'31-Oct-2023',
+    StartDate:'23-Apr-2024',
+    EndDate:'31-Oct-2025',
 },
 
 //SAFRA Card Generation
@@ -55,12 +55,13 @@ SAFRACardGeneration: {
     MemberID:'A300000483',
     Name:'Test User 11220',
     NRIC:'911G',
-    ECard:"Inactive",
+    ECard:"Active",
     PhysicalCard:"Inactive",
     CardType:"SAFRA Classic Card",
     CardCategory:"SAFRAMember",
     MemberCategory:"Principal",
-    CardStatus:"Enable"
+    CardStatus:"Enable",
+    Title: "Testing Title 2",
    
 },
 

@@ -51,7 +51,8 @@ it('[TC03] Select table entry and Click on Create New button in the Volunteer Ap
     //Verify page title 
     VolunteerListing.verifyPageTitle('Volunteer Appointment Listing')
     //Select table entry
-    VolunteerListing.SelectTableEntry('Appointment Code', apponitmentCode)
+    cy.TickSpecificTableItem(apponitmentCode)
+    //VolunteerListing.SelectTableEntry('Appointment Code', apponitmentCode)
     //Click Create New button
     VolunteerListing.createNew()
     //Verify page title 
@@ -71,7 +72,7 @@ it('[TC04] Select table entry and click on Delete button Volunteer Appointment L
     //Verify page title 
     VolunteerListing.verifyPageTitle('Volunteer Appointment Listing')
     //Select table entry
-    VolunteerListing.SelectTableEntry('Appointment Code', apponitmentCode)
+    cy.TickSpecificTableItem(apponitmentCode)
     //Click on Delete button
     VolunteerListing.delete()  
     //Click on Yes button in the confirmation popup

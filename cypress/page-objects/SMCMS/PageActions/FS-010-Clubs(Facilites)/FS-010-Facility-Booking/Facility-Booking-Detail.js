@@ -177,7 +177,7 @@ class FacilityBookingDetail {
     *****************************************************/
     AddtoCart() {
 
-        cy.Click(elems_FacilityBookingDetails.BTN_SAVE)
+        cy.Click(elems_FacilityBookingDetails.BTN_ADDTOCART)
         cy.wait(10000)
     }
 

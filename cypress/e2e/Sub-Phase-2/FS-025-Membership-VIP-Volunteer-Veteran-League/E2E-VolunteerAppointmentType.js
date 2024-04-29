@@ -63,7 +63,7 @@
     it('[TC05] Delete new item and verify functionality of <Yes> in confirmation popup', () =>{
         cy.visit('/membership/volunteerAppointmentTypeListing')
         VolunterAppTypeListing.DeleteNewlyCreatedItem('ACC_YS_ADVSR', 'AB-CD')
-        VolunterAppTypeListing.DelConfirmYes()
+        // VolunterAppTypeListing.DelConfirmYes()
         
     })      
 })

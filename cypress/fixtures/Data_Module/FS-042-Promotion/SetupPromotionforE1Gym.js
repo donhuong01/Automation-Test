@@ -4,37 +4,37 @@ const data = [
 
 
     //Setup Standard Promo for Energy One on Paid Period with ALL Item Option, Discount, All Customer Category.
-    {
-        PromotionTitle: 'Promo-E1' + Math.floor(Math.random() * 100098),
-        BasicType: 'Standard',
-        PromoCode: 'PE1' + Math.floor(Math.random() * 100098),
-        UtilizeLimitPerCustomer: '99',
-        MaxCap: '99',
-        ValidityStartDate: '15-Feb-2023',
-        ValidityExpiryDate: '20-Feb-2051',
-        Remark: 'Test',
+    // {
+    //     PromotionTitle: 'Promo-E1' + Math.floor(Math.random() * 100098),
+    //     BasicType: 'Standard',
+    //     PromoCode: 'PE1' + Math.floor(Math.random() * 100098),
+    //     UtilizeLimitPerCustomer: '99',
+    //     MaxCap: '99',
+    //     ValidityStartDate: '15-Feb-2023',
+    //     ValidityExpiryDate: '25-Apr-2024',
+    //     Remark: 'Test',
 
-        PromotionType: 'Paid Period',
-        StartDate: '15-Feb-2023',
-        EndDate: '15-Feb-2050',
-        ItemCate: 'Energy One',
-        Quantity: '99',
-        BenefitType: 'Discount',
-        FixedDollarRate: '6',
-        AgeRangFrom: '10',
-        AgeRangTo: '80',
-        CustomerCateg: 'All Customer Category',
-        ApplicableMemberID: '',
-        ApplicableSourceChannel: 'SAFRA Jurong',
-        Approval: 'Approve',
-        BundlePromotion: 'No',
+    //     PromotionType: 'Paid Period',
+    //     StartDate: '15-Feb-2023',
+    //     EndDate: '25-Apr-2024',
+    //     ItemCate: 'Energy One',
+    //     Quantity: '99',
+    //     BenefitType: 'Discount',
+    //     FixedDollarRate: '6',
+    //     AgeRangFrom: '10',
+    //     AgeRangTo: '80',
+    //     CustomerCateg: 'AS', //All Customer Category
+    //     ApplicableMemberID: '',
+    //     ApplicableSourceChannel: 'SAFRA HQ',
+    //     Approval: 'Approve',
+    //     BundlePromotion: 'No',
 
-        // Please Provid data E1 Renewal
-        MemberId: 'A300001836',
-        E1Membership: 'G1000000155',
-        RenewalTerm: '3'
+    //     // Please Provid data E1 Renewal
+    //     MemberId: 'A300001836',
+    //     E1Membership: 'G1000000485',
+    //     RenewalTerm: '3'
 
-    },
+    // },
 
 
     // //Setup Standard Promo for Energy One on Book Period with ALL Item Option, Discount, All Customer Category.
@@ -184,12 +184,12 @@ const data = [
         UtilizeLimitPerCustomer: '99',
         MaxCap: '99',
         ValidityStartDate: '15-Feb-2023',
-        ValidityExpiryDate: '20-Feb-2051',
+        ValidityExpiryDate: '25-Apr-2024',
         Remark: 'Test',
 
         PromotionType: 'Paid Period',
         StartDate: '15-Feb-2023',
-        EndDate: '15-Feb-2050',
+        EndDate: '25-Apr-2024',
         ItemCate: 'Energy One',
         Quantity: '99',
         BenefitType: 'Discount',
@@ -198,13 +198,13 @@ const data = [
         AgeRangTo: '80',
         CustomerCateg: 'All Customer Category',
         ApplicableMemberID: '',
-        ApplicableSourceChannel: 'SAFRA Jurong',
+        ApplicableSourceChannel: 'SAFRA HQ',
         Approval: 'Approve',
         BundlePromotion: 'No',
 
         // Please Provid data E1 Renewal
         MemberId: 'A300001836',
-        E1Membership: 'G1000000155',
+        E1Membership: 'G1000000485',
         RenewalTerm: '3'
     },
 

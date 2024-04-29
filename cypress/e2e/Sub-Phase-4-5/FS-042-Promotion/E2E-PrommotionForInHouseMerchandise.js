@@ -27,7 +27,7 @@ Promodata.forEach(each => {
         BenefitType, FixedDollarRate, AgeRangFrom, AgeRangTo, CustomerCateg, ApplicableMemberID,
         ApplicableSourceChannel, Approval, BundlePromotion } = each
 
-    describe('SP4-FS042_TS01 Promotion Setup and Management', function () {
+    describe('SP4-FS042_TS01 InHouse and Merchandise Promotion Setup and Management', function () {
 
         it(`[TC01] Creating New ${BasicType} Promotion for ${ItemCate} On ${PromotionType}`, function () {
 
@@ -121,9 +121,9 @@ Promodata.forEach(each => {
 
                     InHouseSaleAndMerchandiseItemPurchase.EnterQuantityOfSetsMerchandise('1')
 
-                    InHouseSaleAndMerchandiseItemPurchase.SelectItemName('Amazon Tablet')
+                    InHouseSaleAndMerchandiseItemPurchase.SelectItemName('GST NOT APPLICABLE')
 
-                    InHouseSaleAndMerchandiseItemPurchase.EnterTransactionDate('26-02-2024 09:08:00')
+                    //InHouseSaleAndMerchandiseItemPurchase.EnterTransactionDate('26-04-2024 09:08:00')
 
                 } else {
 
@@ -131,9 +131,9 @@ Promodata.forEach(each => {
 
                     InHouseSaleAndMerchandiseItemPurchase.EnterQuantityOfSetsInHouse('1')
 
-                    InHouseSaleAndMerchandiseItemPurchase.SelectItemName('GST NOT APPLICABLE') // Game Card - QA   
+                    InHouseSaleAndMerchandiseItemPurchase.SelectItemName('GST NOT APPLICABLE - IH') // Game Card - QA   
 
-                    InHouseSaleAndMerchandiseItemPurchase.EnterTransactionDate('26-02-2024 09:08:00')
+                    InHouseSaleAndMerchandiseItemPurchase.EnterTransactionDate('26-04-2024 09:08:00')
                 }
 
                 InHouseSaleAndMerchandiseItemPurchase.AddToCart()
@@ -151,7 +151,7 @@ Promodata.forEach(each => {
                     // cy.xpath('//h3[text()="Shopping Cart Items"]/following-sibling::div//table//a').should('be.visible')
                     // cy.log('Standard Promotion is Applied.')
                     cy.log('to verify if the standard promotion is applied')
-                    cy.Click('(//div[@class="page-title"]//following-sibling::div//table//tbody//td[9]//a)[1]')
+                    cy.xpath('(//div[@class="page-title"]//following-sibling::div//table//tbody//td//a)[1]',{timeout: 30000}).click({ force: true })
                     cy.SelectDropDownItem('//span[@id="txtStandardPromotion"]', PromotionTitle)
                     cy.Click('//button[text()="Select"]')
                 }
