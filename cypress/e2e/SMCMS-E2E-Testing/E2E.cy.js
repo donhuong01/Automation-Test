@@ -230,10 +230,10 @@ beforeEach(() => {
 
 // describe('E2E Auto Testing:FS-001 Admin: System Login', () => {
 
-//     OnlineAccountAccess()
-//     SMCMSPostion()
-//     SMCMSRole()
-//     SMCMSUser() //Change User Depending on Environment
+    // OnlineAccountAccess()
+    // SMCMSPostion()
+    // SMCMSRole()
+    // SMCMSUser() //Change User Depending on Environment
 // })
 
 //  describe('E2E Auto Testing:FS-002 Reports', () => {
@@ -277,11 +277,11 @@ beforeEach(() => {
 // FacilitySetupDetail(E2EData.FACILITY_TYPE)
 // FacilityBookingManagement()
 // FacilityBookingAmendmentManagment()
-// FacilityBookingExtentionManagment() // Needs an update in Facility for extension setting
-// FacilityBookingCancellationManagment() // Needs own page action
+// FacilityBookingExtentionManagment() // Check tomorrow
+// FacilityBookingCancellationManagment() // Check tomorrow
 // FacilityGroupBooking(E2EData.FACILITY_GROUP_BOOKING.SAFRA_MEMBER, E2EData.FACILITY_GROUP_BOOKING.SAFRA_RELATED_MEMBER,
 // E2EData.FACILITY_GROUP_BOOKING.SAFRA_GUEST) //Pass Active Safra Member ID - 1.Safra Member 2. SAFRARelatedMemberships 3. Guest Member
-// FacilityGroupBookingBallot("A300003704", "A300003708") // Recheck again tomorrow morning
+// FacilityGroupBookingBallot("A100000115", "A100007416") // Recheck again tomorrow morning
 //   })
 
 
@@ -296,44 +296,44 @@ beforeEach(() => {
 // })
 
 
-// describe('E2E Auto Testing:FS-014 Membership', () => {
+describe('E2E Auto Testing:FS-014 Membership', () => {
 
 //  MembershipRegistration(CustomerNRICFull) // Quick Testing on Membership Registration
 //  MembershipPrincipalRegistration(CustomerNRICFull,DepCustomerNRICFull, Dep2CustomerNRICFull) // Full Testing on Membership Registration
 //  CustomerCheckIn()
 //  MemberType() //Needs to do in manual test since it always has duplicate
-//  BadAddressUpdate()//Needs to do in manual test
+//  BadAddressUpdate()
 //  MembershipRenewalAdvise()
 //  WithdrawalOfConsent(E2EData.ACTIVE_MEMBERID_FOR_WITHDRAWAL_OF_CONSENT) //Enter Member ID for Withdrawal Of Consent
 //  SourceChannel()
 // MemberStatusReasonCode() // Needs to do in manual test since it may affect current data
 //  MassUpdateForMemberData() 
 // MembershipModuleSettings() // Needs to check settings data before running on UAT
-//  SFSMemberRegistion(CustomerNRICFull,DepCustomerNRICFull, Dep2CustomerNRICFull) //Add three NRIC's for Principal, Dependent Child, Dependent Spouse
+ SFSMemberRegistion(CustomerNRICFull,DepCustomerNRICFull, Dep2CustomerNRICFull) //Add three NRIC's for Principal, Dependent Child, Dependent Spouse
 //  E2EMemberShipRenewal(CustomerNRICFull) //Add NRIC For Principal Registration
 
 
 // LifeMembershipManagment(CustomerNRICFull) //Add NRIC For Principal Registration
-//   BatchMembershipRegistration(
+  // BatchMembershipRegistration(
 
-//     //Pass Info for Existing Member MemberID and LAST4DigitsNRIC
-//     E2EData.BATCH_REGISTRATION.MEMBERID_FOR_EXISTING_MEMBER,
-//     E2EData.BATCH_REGISTRATION.LAST4DIGITSNRIC_FOR_EXISTING_MEMBER,
+  //   //Pass Info for Existing Member MemberID and LAST4DigitsNRIC
+  //   E2EData.BATCH_REGISTRATION.MEMBERID_FOR_EXISTING_MEMBER,
+  //   E2EData.BATCH_REGISTRATION.LAST4DIGITSNRIC_FOR_EXISTING_MEMBER,
 
-//     //Pass informstion for Non-Member Name, DOB, LAST4DigitsNRIC and Full NRIC
-//     E2EData.BATCH_REGISTRATION.MEMBER_NAME_FOR_NON_MEMBER,
-//     E2EData.BATCH_REGISTRATION.DOB_FOR_NON_MEMBER,
-//     E2EData.BATCH_REGISTRATION.LAST4DIGITSNRIC_FOR_NON_MEMBER,
-//     CustomerNRICFull,
+  //   //Pass informstion for Non-Member Name, DOB, LAST4DigitsNRIC and Full NRIC
+  //   E2EData.BATCH_REGISTRATION.MEMBER_NAME_FOR_NON_MEMBER,
+  //   E2EData.BATCH_REGISTRATION.DOB_FOR_NON_MEMBER,
+  //   E2EData.BATCH_REGISTRATION.LAST4DIGITSNRIC_FOR_NON_MEMBER,
+  //   CustomerNRICFull,
 
-//     //NRIC for New Principal
-//     CustomerNRICFull2, 
+  //   //NRIC for New Principal
+  //   CustomerNRICFull2, 
 
-//     //NRIC for New Dependent and Dependent PrincipalID
-//     DepCustomerNRICFull,
-//     E2EData.BATCH_REGISTRATION.PRINCIPALID_FOR_NEW_DEPENDENT)
+  //   //NRIC for New Dependent and Dependent PrincipalID
+  //   DepCustomerNRICFull,
+  //   E2EData.BATCH_REGISTRATION.PRINCIPALID_FOR_NEW_DEPENDENT)
 
-// })
+})
 
 
 
@@ -504,7 +504,7 @@ beforeEach(() => {
 // })
 
 
-describe('E2E Auto Testing:FS-042 Promotion', ()=> {
+// describe('E2E Auto Testing:FS-042 Promotion', ()=> {
 
   // PromotionforE1Gym(E2EData.MEMBERID_FOR_E1_RENEWAL_PROMOTION.MEMBER_ID) //Provide Active Member 
   // PrommotionForFacilityandFacilityType(E2EData.MEMBERID_FOR_FACILITY_PROMOTION.MEMBER_ID) //Provide Active Member
@@ -512,11 +512,11 @@ describe('E2E Auto Testing:FS-042 Promotion', ()=> {
   // PromotionforInterestGroup(E2EData.MEMBERID_FOR_INTERESTG_PROMOTION.MEMBERID) //Provide Active Member
   // PromotionforMembership(CustomerNRICFull) 
   // PromoUtilization()
-  Promotion()
+  // Promotion()
 
 
   // New Multiple Bundle Promotion
-})
+// })
 
 
 

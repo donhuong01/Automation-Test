@@ -185,9 +185,9 @@ class CustomerCreation {
             cy.TickCheckBox(elems_CustomerCreation.InterestAreaInformation.IAmInterestedIn.CHK_SAFRAPOINTSREWARDPROGRAMME, interestedSAFRAPOINTS)
         }
 
-        if (SAFRANewsletter !== undefined) {
-            cy.TickCheckBox('//input[@id="checkkEnsman"]', SAFRANewsletter)
-        }
+        // if (SAFRANewsletter !== undefined) {
+        //     cy.TickCheckBox('//input[@id="checkkEnsman"]', SAFRANewsletter)
+        // }
 
         if (groupAdventure !== undefined) {
             cy.TickCheckBox(elems_CustomerCreation.InterestAreaInformation.InterestGroupsAndMicroClubs.CHK_SAFRAADVENTURECLUB, groupAdventure)

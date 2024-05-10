@@ -72,7 +72,7 @@ describe('[TS-13] FS-010 Facility Group Booking Ballot', function () {
 
     })
 
-    it('[TC01] Create New Group Booking Ballot with Successful Items', function () {
+    it.only('[TC01] Create New Group Booking Ballot with Successful Items', function () {
 
         common.Checkin(SAFRAMember1)
 
@@ -122,9 +122,9 @@ describe('[TS-13] FS-010 Facility Group Booking Ballot', function () {
 
         FacilityGroupBookingBallotDetail.VerifyPageTitle("Facility Group Booking Ballot Details")
 
-        FacilityGroupBookingBallotDetail.SelectFacility("Group Ballot 2023")
+        FacilityGroupBookingBallotDetail.SelectFacility(FacilityName)
 
-        //cy.ValidateElementText('//td[text()="Successful"]', "Successful")
+        cy.ValidateElementText('(//td[text()="Successful"])[1]', "Successful")
 
         FacilityGroupBookingBallotDetail.Save()
 
@@ -264,7 +264,7 @@ describe('[TS-13] FS-010 Facility Group Booking Ballot', function () {
 
         FacilityGroupBookingBallotDetail.VerifyPageTitle("Facility Group Booking Ballot Details")
 
-        FacilityGroupBookingBallotDetail.SelectFacility("Group Ballot 2023")
+        FacilityGroupBookingBallotDetail.SelectFacility(FacilityName)
 
         cy.wait(5000)
 
@@ -359,7 +359,7 @@ describe('[TS-13] FS-010 Facility Group Booking Ballot', function () {
 
         FacilityGroupBookingBallotDetail.VerifyPageTitle("Facility Group Booking Ballot Details")
 
-        FacilityGroupBookingBallotDetail.SelectFacility("Group Ballot 2023")
+        FacilityGroupBookingBallotDetail.SelectFacility(FacilityName)
 
         //cy.ValidateElementText('//td[text()="Successful"]', "Successful")
 

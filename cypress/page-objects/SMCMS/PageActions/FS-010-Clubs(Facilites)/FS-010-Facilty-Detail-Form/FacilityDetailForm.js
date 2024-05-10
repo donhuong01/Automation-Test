@@ -608,10 +608,10 @@ class FacilityDetailForm {
         cy.EnterDate(elems_FacilityDetailFormDetailTab.CHARGERATE.DATE_STARTDATE, StartDate)
         // cy.EnterText(elems_FacilityDetailFormDetailTab.CHARGERATE.PCK_LOCATION, )
 
-        cy.Click(elems_FacilityDetailFormDetailTab.CHARGERATE.PCK_LOCATION)
-        cy.EnterText(elems_FacilityDetailFormDetailTab.DETAILSTAB.TXT_LOCATIONPOPUP, Location)
-        cy.SelectTableItem(elems_Picker.TBL_PICKERITEMS, 'Location Name', Location)
-        cy.Click(elems_Picker.BTN_SELECT)
+        // cy.Click(elems_FacilityDetailFormDetailTab.CHARGERATE.PCK_LOCATION)
+        // cy.EnterText(elems_FacilityDetailFormDetailTab.DETAILSTAB.TXT_LOCATIONPOPUP, Location)
+        // cy.SelectTableItem(elems_Picker.TBL_PICKERITEMS, 'Location Name', Location)
+        // cy.Click(elems_Picker.BTN_SELECT)
 
         cy.EnterDate(elems_FacilityDetailFormDetailTab.CHARGERATE.DATE_ENDDATE, EndDate)
     }

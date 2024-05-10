@@ -7,16 +7,16 @@ const checkin = new CustomerCheckInPage()
 
 const FacilityBookingAmendmentManagment = () => {
 
-    describe('Facility Booking Extention Management', function () {
+    describe('Facility Booking Amendment Management', function () {
 
         const type = 'MEMBERID'
-        const value1 = 'A300005764'
-        const value2 = '406Z'
+        const value1 = 'A300019774'
+        const value2 = '267G'
         const expectedPage = 'Member Information'
-        const CustomerName = 'TestUser 870';
-        const BookingNum = 'F-BOK-20240307-000011'
+        const CustomerName = 'TestUser 747';
+        const BookingNum = 'F-BOK-20240509-000035'
         const AmendmentType = 'Replacement Slot';
-        const Reason = 'Amend Slot 2022'
+        const Reason = 'Amend Slot 2024'
         const check = 'check'
         const slot = "Available (10:00 am - 11:00 am)"
         const ResourceName = 'Resource C'

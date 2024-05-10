@@ -125,6 +125,7 @@ class FacilityGroupBookingBallotListing {
         cy.wait(4000)
 
         cy.ValidateElementText('(//td[7][1])[1]', 'Confirmed')
+       
 
         cy.wait(3000)
     }
@@ -138,6 +139,7 @@ class FacilityGroupBookingBallotListing {
         cy.wait(4000)
 
         cy.ValidateElementText('(//td[7][1])[2]', 'Unsuccessful')
+      
 
         cy.wait(3000)
     }

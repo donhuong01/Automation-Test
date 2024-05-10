@@ -24,7 +24,7 @@ const MemModuleSettings = new MembershipModuleSetting()
 
 const UserID = Math.floor(Math.random() * 100000)
 
-const PrincipalName = Customerdata.CustomerCreationPrincipal.RegistrationInformation.name + UserID // "TestReceipt49"//
+const PrincipalName = "TestQA06"//Customerdata.CustomerCreationPrincipal.RegistrationInformation.name + UserID // 
 const PrincipalEmail = PrincipalName + "@test.com" //Customerdata.CustomerCreationPrincipal.ContactInformation.emailAddress //"safraonlineuser009@gmail.com"//
 // const CustomerNRIC = '415D'
 // const CustomerNRICFull = 'S0309415D'
@@ -135,7 +135,7 @@ const MembershipRegistration = (CustomerNRICFull) => {
 
 
             // Membership Tenure Selection
-            MemTenureSelect.principalTenureSelection(PrincipalName, '5 Years')
+            MemTenureSelect.principalTenureSelection(PrincipalName, '2 Years')
             // cy.wait(30000)
 
             // Click on add to cart

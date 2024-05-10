@@ -285,8 +285,8 @@ const FacilityTypeDetailFormManagement = (CalenderName, PeriodOfCalendar, Operat
             FacilityTypeDetailForm.ApprovalWorkFlow("F-FLT", "Facility Type Approval Workflow", "Approve", "Testing Finance Approval")
             cy.wait(10000)
 
-            FacilityTypeDetailForm.ApprovalWorkFlow("F-FLT", "Facility Type Approval Workflow", "Approve", "Testing Approval")
-            cy.wait(10000)
+            // FacilityTypeDetailForm.ApprovalWorkFlow("F-FLT", "Facility Type Approval Workflow", "Approve", "Testing Approval")
+            // cy.wait(10000)
             
             //Must login as an admin first
             cy.visit('/facilities/facilityTypeListing');

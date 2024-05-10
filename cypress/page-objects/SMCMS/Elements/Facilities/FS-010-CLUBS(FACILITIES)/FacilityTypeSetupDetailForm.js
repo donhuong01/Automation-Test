@@ -34,7 +34,7 @@ class elems_FacilityTypeSetupDetailForm {
         TXT_CUSTOMCATEGORYNAME: '//input[@id="txtCustomerCategoryName"]',
         TBL_CUTOMCATEGORY: '//h3[text()="Customer Category"]//following-sibling::div//table',
         CHK_ADDITIONALNRICGROUPNRIC: '//input[@id="chkNricRequiredGroupBooking"]',
-        NUM_NUMOFNRICBOOKINGGROUOP: '//input[@id="normalRequireCustomerCategory"]',
+        NUM_NUMOFNRICBOOKINGGROUOP: '//input[@id="groupNumberofAdditionalNRIC"]',
         CHK_CUSTOMCATEGORYGB: '//input[@id="groupRequireCustomerCategory"]',
         BTN_ADDCUSTOMERCATEGORYGB: '//h3[text()=" Customer Category"]//following-sibling::button[@class="k-button link-button"]',
         TBL_AddCUSTOMERCATEGORY: '//h3[text()="Customer Category"]//following-sibling::div//table',

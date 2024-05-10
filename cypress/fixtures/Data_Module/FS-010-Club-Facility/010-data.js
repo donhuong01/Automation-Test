@@ -17,23 +17,23 @@ const data = {
 
     },
     FacilityBookingDetails: {
-        FacilityType: 'QA-DemoType2024',//'Auto-Test 72',//'Facility  Type 2023',
+        FacilityType: 'Automation Testing 2024',//'Auto-Test 72',//'Facility  Type 2023',
         slot: '12:00 pm - 12:30 pm',
         ChargeType: 'Charge Rate-2023',
         Amount: '2',
         Reason: 'Testing',
-        FacilityName: 'QA-Demo-Facility-2024',
+        FacilityName: 'Automation Testing Facility 2024',
         Location: 'SAFRA HQ',
     },
 
     FacilityGroupBookingDetails: {
-        FacilityType: 'QA-DemoType2024',
+        FacilityType: 'Automation Testing 2024',
         slot: '09:00 am - 10:00 am',
         slot2: '03:00 pm - 04:00 pm',
         ChargeType: 'Charge Rate-2023',
         Amount: '2',
         Reason: 'Testing',
-        FacilityName: 'QA-Demo-Facility-2024',
+        FacilityName: 'Automation Testing Facility 2024',
         Location: 'SAFRA HQ',
            // FacilityType: 'Facility  Type 2023',
         // slot: '09:00 am - 10:00 am',
@@ -59,7 +59,7 @@ const data = {
     // Operating Period Detail
     OperatingPeriodDetail: {
         operatingPeriodName: '1st Period 2022',
-        Status: 'Pending Approval',
+        Status: 'Draft',
         RecordStatus: 'Inactive',
 
         addOperatingHours: {
@@ -214,9 +214,9 @@ const data = {
 
         ProductMappingTab: {
 
-            ProductNumber: 'PROD113',
-            ProductName: 'Product 3',
-            SearchName: 'Product 3',
+            ProductNumber: 'FAC_20240419',
+            ProductName: 'Facility Product_with Tax',
+            SearchName: 'Facility Product_with Tax',
         },
 
         AdditionalInfoTab: {
@@ -255,7 +255,7 @@ const data = {
         Amount: 'Fixed Value',
         CategoryName: 'All Customer Category',
         CategoryNumber: '10',
-        ProductName: 'Product 3',
+        ProductName: 'Facility Product_with Tax',
 
     },
     CategorySection: {

@@ -76,7 +76,7 @@ describe('[TS05] Facility Setup Detail Form Management', function () {
         // FacilityDetailForm.AddExistingResource(ResourceName)
 
 
-        FacilityDetailForm.FacilityDetailFormProductMappingTabBookingfeeAndReservationFee(ProductName, 'Product 2')
+        FacilityDetailForm.FacilityDetailFormProductMappingTabBookingfeeAndReservationFee(ProductName, 'Facility Product_with Tax')
 
         FacilityDetailForm.Save()
 
@@ -136,7 +136,7 @@ describe('[TS05] Facility Setup Detail Form Management', function () {
         FacilityDetailForm.addChargeRate()
 
         FacilityDetailForm.FillOutFacilityChargeRateDetail('Sample Charge rate', '22-Jun-2023',
-         'SAFRA Jurong', '01-Dec-2024')
+         /*'SAFRA Jurong',*/ '01-Dec-2024')
 
         // add charge type list
         FacilityDetailForm.FilloutChargeTypeList(ChargeTypeName, Transaction, Calculation, Amount)

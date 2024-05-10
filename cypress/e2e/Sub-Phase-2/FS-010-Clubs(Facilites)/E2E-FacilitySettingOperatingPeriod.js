@@ -80,8 +80,8 @@ const FacilityOperatingPeriod = () => {
             // Save Operating Hours Popup Changes
             OperPrdDtl.saveOperatingHour()
 
-            //Click Submit for Approval button
-            OperPrdDtl.submitForApproval()
+            //Click Save as Draft button
+            OperPrdDtl.saveAsDraft()
 
         })
 
@@ -169,6 +169,7 @@ const FacilityOperatingPeriod = () => {
             FacilitySettingsOperatingPeriodList.DeleteItem(OperatingPeriodName, ApprovedStatus)
 
             FacilitySettingsOperatingPeriodList.VerifyDeleteNotification()
+            cy.wait(5000)
         })
     })
 

@@ -27,13 +27,18 @@ class FacilityBookingDetail {
 
     CreateNewFaciltyBooking(FacilityType, LocationName, Facilites) {
 
-        // Select Location
+        // Select Facility Type
+        // cy.Click(elems_FacilityBookingDetails.PCK_FACILITYTYPE)
+        // cy.wait(3000)
+        // cy.Click(`//table//td[text()="${FacilityType}"]//preceding-sibling::td`)
+        // cy.Click(elems_FacilityBookingDetails.BTN_SELECT)
+        // cy.wait(4000)
         cy.SelectPickerFilter(elems_FacilityBookingDetails.PCK_FACILITYTYPE,
             elems_FacilityBookingDetails.TXT_NAME, FacilityType,
             elems_FacilityBookingDetails.BTN_SEARCHFILTER)
         cy.wait(2000)
 
-        // Select Facility Type
+        // Select Location
         cy.Click(elems_FacilityBookingDetails.PCK_LOCATION)
         cy.wait(3000)
         cy.Click(`//table//td[text()="${LocationName}"]//preceding-sibling::td`)

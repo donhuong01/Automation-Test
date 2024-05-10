@@ -146,7 +146,7 @@ class FacilityTypeDetailForm {
         if (NormalBooking === 'check') {
 
             cy.TickCheckBox(elems_FacilityTypeSetupDetailForm.DETAILSTAB.CHK_ADDITIONALNRICNORMALBOOKING, 'check')
-            cy.xpath(elems_FacilityTypeSetupDetailForm.DETAILSTAB.NUM_NUMOFADDITIONALNRIC).clear()
+            //cy.xpath(elems_FacilityTypeSetupDetailForm.DETAILSTAB.NUM_NUMOFADDITIONALNRIC).clear()
             cy.EnterText(elems_FacilityTypeSetupDetailForm.DETAILSTAB.NUM_NUMOFADDITIONALNRIC, NumOfAdditionalNRIC)
 
             if (NormalCustomerCategory === 'check') {
@@ -167,7 +167,8 @@ class FacilityTypeDetailForm {
 
         if (GroupBooking === 'check') {
             cy.TickCheckBox(elems_FacilityTypeSetupDetailForm.DETAILSTAB.CHK_ADDITIONALNRICGROUPNRIC, 'check')
-            cy.xpath(elems_FacilityTypeSetupDetailForm.DETAILSTAB.NUM_NUMOFNRICBOOKINGGROUOP).type(NumOfNRICBookingGroup)
+            //cy.xpath(elems_FacilityTypeSetupDetailForm.DETAILSTAB.NUM_NUMOFNRICBOOKINGGROUOP).type(NumOfNRICBookingGroup)
+            cy.EnterText(elems_FacilityTypeSetupDetailForm.DETAILSTAB.NUM_NUMOFNRICBOOKINGGROUOP, NumOfAdditionalNRIC)
 
             if (GroupCustomerCategory === 'check') {
                 cy.TickCheckBox(elems_FacilityTypeSetupDetailForm.DETAILSTAB.CHK_CUSTOMCATEGORYGB, 'check')

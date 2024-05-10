@@ -1,14 +1,14 @@
 {
   "stats": {
     "suites": 2,
-    "tests": 2,
-    "passes": 2,
+    "tests": 1,
+    "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2024-04-25T09:59:03.589Z",
-    "end": "2024-04-25T10:03:23.113Z",
-    "duration": 259524,
-    "testsRegistered": 2,
+    "start": "2024-05-10T03:52:31.078Z",
+    "end": "2024-05-10T03:56:13.885Z",
+    "duration": 222807,
+    "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "94250a93-e038-4f17-bbf3-92eaa37a8348",
+      "uuid": "7d75af87-5f34-4184-98ae-790268840118",
       "title": "",
       "fullFile": "cypress\\e2e\\SMCMS-E2E-Testing\\E2E.cy.js",
       "file": "cypress\\e2e\\SMCMS-E2E-Testing\\E2E.cy.js",
@@ -27,8 +27,8 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "25337de0-301b-41ac-ad50-4dbe8de85d30",
-          "title": "E2E Auto Testing:FS-042 Promotion",
+          "uuid": "155bb6db-dabc-4ea4-a9be-85fc4b6bd6e7",
+          "title": "E2E Auto Testing:FS-010 Facility",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
@@ -36,59 +36,40 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "90055341-7c2e-4e3f-9f61-09af189a3b5e",
-              "title": "SP4-FS042_TS01 Membership Promotion Setup and Management",
+              "uuid": "5bb14cc2-a3e0-4249-9cea-b4e2529a559c",
+              "title": "[TS-13] FS-010 Facility Group Booking Ballot",
               "fullFile": "",
               "file": "",
               "beforeHooks": [],
               "afterHooks": [],
               "tests": [
                 {
-                  "title": "[TC01] Creating New PromoCode for Membership On Paid Period",
-                  "fullTitle": "E2E Auto Testing:FS-042 Promotion SP4-FS042_TS01 Membership Promotion Setup and Management [TC01] Creating New PromoCode for Membership On Paid Period",
+                  "title": "[TC01] Create New Group Booking Ballot with Successful Items",
+                  "fullTitle": "E2E Auto Testing:FS-010 Facility [TS-13] FS-010 Facility Group Booking Ballot [TC01] Create New Group Booking Ballot with Successful Items",
                   "timedOut": null,
-                  "duration": 142284,
+                  "duration": 222650,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
                   "fail": false,
                   "pending": false,
                   "context": null,
-                  "code": "cy.visit('/club/promotionListing').wait(3000);\n//Click on Create New button\n_PromotionListing.default.CreateNew();\n_PromotionDetail.default.FillOuPromotionDetailSection(PromotionTitle, BasicType, PromoCode, UtilizeLimitPerCustomer, MaxCap, ValidityStartDate, ValidityExpiryDate, Remark);\n_PromotionDetail.default.SaveAsDraft();\n// PromotionListing.FilterByPromotionName(PromotionTitle)\n// PromotionListing.ClickSearchFilter()\n// PromotionListing.ClickTableLink()\ncy.wait(4000);\n//Promotion Type Tab\n_PromotionDetail.default.ClickOnTab('Promotion Type'); //pass the text of the related button \n_PromotionDetail.default.PromotionTypeTab(PromotionType, StartDate, EndDate);\n_PromotionDetail.default.SaveAsDraft();\n_PromotionListing.default.FilterByPromotionName(PromotionTitle);\n_PromotionListing.default.ClickSearchFilter();\n_PromotionListing.default.ClickTableLink();\n//Benifit Item Tab\n_PromotionDetail.default.ClickOnTab('Benefit Item');\n_PromotionDetail.default.BenefitItemTab(ItemCate, Quantity, BenefitType, FixedDollarRate, BundlePromotion);\n_PromotionDetail.default.SaveAsDraft();\n_PromotionListing.default.FilterByPromotionName(PromotionTitle);\n_PromotionListing.default.ClickSearchFilter();\n_PromotionListing.default.ClickTableLink();\n//Promotion Criteria\n_PromotionDetail.default.ClickOnTab('Promotion Criteria');\n_PromotionDetail.default.PromotionCriteria(AgeRangFrom, AgeRangTo, CustomerCateg, ApplicableMemberID, ApplicableSourceChannel);\n_PromotionDetail.default.SaveAsDraft();\n_PromotionListing.default.FilterByPromotionName(PromotionTitle);\n_PromotionListing.default.ClickSearchFilter();\n_PromotionListing.default.ClickTableLink();\n_PromotionDetail.default.Submit();\ncommon.ApprovalWorkFlow('PMO', 'Promotion Approval Workflow', Approval, 'test');\ncy.visit('/club/promotionListing').wait(8000);\n_PromotionListing.default.FilterByPromotionName(PromotionTitle);\n_PromotionListing.default.ClickSearchFilter();\nif (Approval === 'Approve') {\n  _PromotionListing.default.VerifyStatusWorkflowStatus('Active', 'Approved');\n} else if (Approval === 'Reject') {\n  _PromotionListing.default.VerifyStatusWorkflowStatus('Inactive', 'Rejected');\n} else {\n  _PromotionListing.default.VerifyStatusWorkflowStatus('Inactive', 'Query');\n}",
+                  "code": "common.Checkin(SAFRAMember1);\ncy.visit('/facilities/groupBookingList');\ncy.wait(5000);\n// Verify Page Title \n_FacilityBookingDetail.default.verifyPageTitle('Facility Group Booking Listing Form');\n// // Verify Page Title \n// FacilityBookingDetail.verifyPageTitle('Facility Booking Listing')\n// Click Create New button \n_FacilityBookingDetail.default.CreateNew();\ncy.wait(4000);\n// Verify Page Title \n_FacilityBookingDetail.default.verifyPageTitle('Facility Group Booking Detail');\n//Filout Facility Booking detail form\n_FacilityBookingDetail.default.CreateNewFaciltyBooking(FacilityType, Location, FacilityName);\n//select facility name\n// FacilityBookingDetail.SelectFacilities(FacilityName)\n//verify booking info\n//FacilityBookingDetail.VerifyBookingInfo(FacilityType, Location)\n// select slot\n_FacilityBookingDetail.default.SelectSlot(slot);\n// add waiver\n//FacilityBookingDetail.AddWaiver(ChargeType, Amount, Reason)\n//Click Save\n_FacilityBookingDetail.default.Save();\ncy.wait(10000);\ncy.visit('/facilities/groupBookingBallotListing');\n_FacilityGroupBookingBallotListing.default.VerifyPageTitle(\"Facility Group Booking Ballot Listing\");\n_FacilityGroupBookingBallotListing.default.CreateNew();\n_FacilityGroupBookingBallotDetail.default.VerifyPageTitle(\"Facility Group Booking Ballot Details\");\n_FacilityGroupBookingBallotDetail.default.SelectFacility(FacilityName);\ncy.ValidateElementText('(//td[text()=\"Successful\"])[1]', \"Successful\");\n_FacilityGroupBookingBallotDetail.default.Save();\ncy.wait(3000);\ncy.visit('/facilities/groupBookingBallotListing');\n_FacilityGroupBookingBallotDetail.default.ShoppinCart();\nShoppingCart.fillOutandApplyPayment('CASH');\ncy.wait(5000);\ncy.visit('/facilities/groupBookingBallotListing');\n_FacilityGroupBookingBallotListing.default.VerifyPageTitle(\"Facility Group Booking Ballot Listing\");\ncy.wait(3000);\ncy.visit('/facilities/groupBookingList');\ncy.wait(3000);\n_FacilityGroupBookingBallotListing.default.FilterByFacility(FacilityName);\n_FacilityGroupBookingBallotListing.default.VerifyTableConfirmed();\n//Logout\n// cy.LogoutOfSmcms()\n// cy.wait(3000)",
                   "err": {},
-                  "uuid": "8568041b-029d-4245-a1b5-fefb125474c6",
-                  "parentUUID": "90055341-7c2e-4e3f-9f61-09af189a3b5e",
-                  "isHook": false,
-                  "skipped": false
-                },
-                {
-                  "title": "Apply Promotion to Membership Registration",
-                  "fullTitle": "E2E Auto Testing:FS-042 Promotion SP4-FS042_TS01 Membership Promotion Setup and Management Apply Promotion to Membership Registration",
-                  "timedOut": null,
-                  "duration": 117021,
-                  "state": "passed",
-                  "speed": "slow",
-                  "pass": true,
-                  "fail": false,
-                  "pending": false,
-                  "context": null,
-                  "code": "const Gender = 'Male';\nconst CustomerName = 'Customer-' + Math.floor(Math.random() * 124453);\nconst DOB = '12-Jan-1970';\ncy.visit('/membership/customerCheckin').wait(5000);\ncy.Click(_CustomerCheckInPage.default.RBTN_NRIC);\ncy.EnterDateCheckin(_CustomerCheckInPage.default.DATE_DATEOFBIRTH, DOB);\ncy.EnterText(_CustomerCheckInPage.default.TXT_LAST4DIGITSNRIC, CustomerNRIC);\ncy.Click(_CustomerCheckInPage.default.BTN_CHECKIN);\ncy.wait(2000);\ncy.Click(_CustomerCheckInPage.default.BTN_CREATNEW);\ncy.wait(5000);\nCustomerCreation.fillOutRegistrationInfo({\n  name: CustomerName,\n  //DOB: DOB,\n  gender: Gender\n});\nCustomerCreation.fillOutAddressInformation({\n  postalCode: _CustomerCreationData.default.CustomerCreationPrincipal.AddressInformation.postalCode,\n  address: _CustomerCreationData.default.CustomerCreationPrincipal.AddressInformation.address,\n  unitNumber: _CustomerCreationData.default.CustomerCreationPrincipal.AddressInformation.unitNumber,\n  POBOx: _CustomerCreationData.default.CustomerCreationPrincipal.AddressInformation.POBOx,\n  myMailbox: _CustomerCreationData.default.CustomerCreationPrincipal.AddressInformation.myMailbox\n});\nCustomerCreation.fillOutContactInformation({\n  handPhone: _CustomerCreationData.default.CustomerCreationPrincipal.ContactInformation.handPhone,\n  emailAddress: \"test\" + Math.floor(Math.random() * 1000) + \"@test.com\",\n  emergencyContact: _CustomerCreationData.default.CustomerCreationPrincipal.ContactInformation.emergencyContact,\n  homeNumber: _CustomerCreationData.default.CustomerCreationPrincipal.ContactInformation.homeNumber\n});\nCustomerCreation.save();\ncy.wait(10000);\ncy.Click(_Customer_LandingPage.default.SAFRA_Member);\ncy.Click(_Customer_LandingPage.default.Membership_Registration);\ncy.wait(5000);\nMemRegPrincipal.verifyPersonalInformation({\n  MemberCategory: _data.default.memberregistrationprincipal.Personal_Info.MemberCategory,\n  NameOnNRIC: CustomerName,\n  NameOnCard: CustomerName,\n  Nric: NRICFull,\n  Gender: Gender,\n  DateofBirth: DOB,\n  Age: _data.default.memberregistrationprincipal.Personal_Info.Age,\n  NSStatus: _data.default.memberregistrationprincipal.Personal_Info.NSStatus,\n  NSRank: _data.default.memberregistrationprincipal.Personal_Info.NSRank,\n  MemberType: _data.default.memberregistrationprincipal.Personal_Info.MemberType,\n  Nationality: _data.default.memberregistrationprincipal.Personal_Info.Nationality,\n  MaritalStatus: _data.default.memberregistrationprincipal.Personal_Info.MaritalStatus,\n  CardType: _data.default.memberregistrationprincipal.Personal_Info.CardType,\n  InterestinDBSCard: _data.default.memberregistrationprincipal.Personal_Info.InterestinDBSCard\n});\nMemRegPrincipal.SaveAndNextPrincipal();\ncy.wait(5000);\nMemTenureSelect.principalTenureSelection(CustomerName, '10 Years');\nMemTenureSelect.addToCart();\ncy.wait(10000);\nif (BasicType === 'Promo Code') {\n  common.ApplyPromoCode(PromoCode);\n  // common.VerifyPromoNotification('Apply promotion successful')\n} else {\n  cy.log('to verify if the standard promotion is applied');\n  cy.xpath('(//div[@class=\"page-title\"]//following-sibling::div//table//tbody//td//a)[1]', {\n    timeout: 30000\n  }).click({\n    force: true\n  });\n  cy.SelectDropDownItem('//span[@id=\"txtStandardPromotion\"]', PromotionTitle);\n  cy.Click('//button[text()=\"Select\"]');\n}\nShoppingCart.fillOutandApplyPayment('CASH');\n// Now Veriry Promotion In Promotion Utilization Listing\ncy.visit('/club/promotionUtilizationListing').wait(5000);\n_PromotionUtilizationListing.default.VerifyAppliedPromotion(PromotionTitle);\ncy.LogoutOfSmcms();",
-                  "err": {},
-                  "uuid": "78eb20f8-b7eb-4a2b-94f0-513407da6a62",
-                  "parentUUID": "90055341-7c2e-4e3f-9f61-09af189a3b5e",
+                  "uuid": "ca9f525a-e434-40a8-9a55-e1766a159b37",
+                  "parentUUID": "5bb14cc2-a3e0-4249-9cea-b4e2529a559c",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "8568041b-029d-4245-a1b5-fefb125474c6",
-                "78eb20f8-b7eb-4a2b-94f0-513407da6a62"
+                "ca9f525a-e434-40a8-9a55-e1766a159b37"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 259305,
+              "duration": 222650,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000

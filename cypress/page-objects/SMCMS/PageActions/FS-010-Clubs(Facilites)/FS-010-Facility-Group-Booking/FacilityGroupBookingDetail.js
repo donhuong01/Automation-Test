@@ -68,7 +68,8 @@ class FacilityGroupBookingDetail {
     SelectLocationAndFacility(Location, Facilities) {
 
         cy.Click(elems_FacilityGroupBookingDetail.PCK_LOCATION)
-        cy.SelectTableItem(elems_Picker.TBL_PICKERITEMS, "Location Name", Location)
+        cy.TickSpecificTableItem(Location)
+        //cy.SelectTableItem(elems_Picker.TBL_PICKERITEMS, "Location Name", Location)
         cy.Click(elems_Picker.BTN_SELECT)
         cy.wait(3000)
 

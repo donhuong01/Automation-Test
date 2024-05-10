@@ -152,6 +152,8 @@ describe('[TS02] SMCMS Role Management', function () {
             //Click delete button
             SMCMSRoleList.delete()
 
+            cy.wait(5000)
+
             //Click Yes button
             // SMCMSRoleList.ClickYesInDeletePopUp()
 

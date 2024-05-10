@@ -236,6 +236,21 @@ Cypress.Commands.add('TickSpecificTableItem', (Value) => {
 
 })
 
+/*****************************************************
+ * Command: ValidateLastElement
+ * Description: Validate Last Specific Item on Table
+ * Author: RDacpano
+ *
+ * @param {string} Value Value of the specific item
+ *****************************************************/
+Cypress.Commands.add('ValidateLastElement', (Value) => {
+    cy.log('------ Validate Last Table Item : ' + Value + ' ------')
+    cy.contains('td', Value,{ timeout: 30000 })
+        .scrollIntoView()
+        .siblings()
+        .last()
+})
+
 
 /*****************************************************
  * Command: ClickTableLink
@@ -1318,13 +1333,13 @@ Cypress.Commands.add('ClickTableDropDownButton', (locator, targetColumn, textVal
  *****************************************************/
 Cypress.Commands.add("SelectPickerFilter", (locator, textField, item, searchButton) => {
     cy.log('------ SelectPickerFilter : ' + locator + ' ------')
-    cy.xpath(locator, { timeout: 30000 }).scrollIntoView()
+    cy.xpath(locator, { timeout: 30000 }).scrollIntoView({ timeout: 30000 })
     cy.xpath(locator, { timeout: 30000 }).click()
     cy.xpath(textField).type(item)
-    cy.Click(searchButton)
-    cy.wait(3000)
+    cy.Click(searchButton,{ timeout: 30000 })
+    //cy.wait(3000)
     new Table().selectTableItem(Picker.TBL_PICKERITEMS, 'FIRST')
-    cy.Click(Picker.BTN_SELECT);
+    cy.Click(Picker.BTN_SELECT, { timeout: 30000 });
 })
 
 /*****************************************************

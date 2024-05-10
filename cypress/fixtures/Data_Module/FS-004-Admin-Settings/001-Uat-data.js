@@ -92,7 +92,7 @@ const data = {
 
     // SMCMS User Listing
     clickLoginEmail: {
-        LoginEmail: 'fshahzada@synergyonline.com', //'EKyaw@synergyonline.com',
+        LoginEmail: 'EKyaw@synergyonline.com', //'fshahzada@synergyonline.com',
         Position: 'Accommodation Viewer',
         PositionList: 'Accommodation Viewer',
         Status: 'Active',
@@ -100,11 +100,11 @@ const data = {
         LastLoginDate: '03/07/2022 01:33:38'
     },
     enabledemail: {
-        LoginEmail: 'fshahzada@synergyonline.com',//'htran@synergyonline.com',
+        LoginEmail: 'EKyaw@synergyonline.com',//'htran@synergyonline.com',
         Status: 'Active'
     },
     disabledemail: {
-        LoginEmail: 'fshahzada@synergyonline.com',//'htran@synergyonline.com',
+        LoginEmail: 'EKyaw@synergyonline.com',//'htran@synergyonline.com',
         Status: 'Disabled'
 
     },

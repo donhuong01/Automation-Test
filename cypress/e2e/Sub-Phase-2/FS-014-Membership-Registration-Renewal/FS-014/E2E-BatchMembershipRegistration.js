@@ -405,7 +405,7 @@ describe('[TS13] Batch Membership Registration Details form', function () {
             
     })
 
-    it('[TC04] Creating a Batch Membership Registration with New Member(Dependent)', function () {
+    it.only('[TC04] Creating a Batch Membership Registration with New Member(Dependent)', function () {
 
         //filloutPersonalInformation
         const TestUser = 'Test User-' + Math.floor(Math.random() * 100000 * 2 )
@@ -608,7 +608,7 @@ describe('[TS13] Batch Membership Registration Details form', function () {
         BatchMembershipRegistrationDetail.SaveAndNextTenure()
 
         // Shopping cart and Payments
-        ShoppingCartPayment.fillOutandApplyPayment('I-Banking')
+        ShoppingCartPayment.fillOutandApplyPaymentCompleteButton('I-Banking')
     
          
     })

@@ -13,8 +13,8 @@ const data = {
     },
     checkin_NRIC: {
         type: 'NRIC',
-        value1: '628A',//QA - 980Z //UAT - 628A
-        value2: '17-Aug-1980',//QA - 18-Aug-1980 //UAT - 17-Aug-1980
+        value1: '539E',//QA - 980Z //UAT - 628A
+        value2: '21-Jun-1983',//QA - 18-Aug-1980 //UAT - 17-Aug-1980
     },
     checkin_email: {
         type: 'EMAIL',
@@ -493,7 +493,7 @@ const data = {
     BadAddressUpdateDetail: {
 
         batchId: '-',
-        uploadFile: 'bad-address-test.xlsx',
+        uploadFile: 'bad-address-update.xlsx',
         status: '-'
     },
 
@@ -545,12 +545,12 @@ const data = {
         RenewalAdvice: {
             EnableRenewalAdvice: 'check',
             MonthsBeforeSendingRenewal: '3',
-            ERenewalPrefixUrl: 'prefix 2022'
+            ERenewalPrefixUrl: 'https://ptwebresponsive.safra.sg/dt/erenewal'
         },
 
         SfsSetting: {
             SfsActivation: 'check',
-            AdminFeeChargeItem: '5 YRS SC',
+            AdminFeeChargeItem: '5 YRS CC',
 
             AdminFeeChargeItemFilters: {
                 NameFilter: '5 YRS SC',

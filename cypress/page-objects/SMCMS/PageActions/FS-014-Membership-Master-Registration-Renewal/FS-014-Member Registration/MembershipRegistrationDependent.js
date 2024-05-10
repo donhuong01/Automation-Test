@@ -722,10 +722,10 @@ class Membership_Registration_Dependent{
                 cy.TickCheckBox(elems_MembershipRegistrationDependent.InterestAreaInformation.InterestGroupsAndMicroClubs.CHK_SAFRAENTREPRENEURSCLUB, safraEntrpnrsClub)
             }
     
-            // Set Fuse (Entertainment) Checkbox
-            if(fuseEntrtnmnt !== undefined){
-                cy.TickCheckBox(elems_MembershipRegistrationDependent.InterestAreaInformation.InterestGroupsAndMicroClubs.CHK_FUSE, fuseEntrtnmnt)
-            }
+            // // Set Fuse (Entertainment) Checkbox
+            // if(fuseEntrtnmnt !== undefined){
+            //     cy.TickCheckBox(elems_MembershipRegistrationDependent.InterestAreaInformation.InterestGroupsAndMicroClubs.CHK_FUSE, fuseEntrtnmnt)
+            // }
     
             // Set SAFRA Golfing Section Checkbox
             if(safraGolfingSection !== undefined){

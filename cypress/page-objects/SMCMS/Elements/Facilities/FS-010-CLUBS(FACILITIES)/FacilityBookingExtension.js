@@ -26,8 +26,10 @@ class elems_FacilityBookingExtension {
 
   static FACILITYBOOKINGEXTENSIONDETAIL = {
     BTN_SUBMIT: '//button[@form="formBookingExtension"]',
+    BTN_SUBMIT2: '//button[text()="Submit"]',
     BTN_CANCEL: '//button[text()="Cancel"]',
     PCK_FACILITYBOOKING: '//h3[text()="Extension Information"]/following-sibling::div//input/following-sibling::button',
+    PCK_FACILITYBOOKING2: '//label[@for="facilityBooking"]/following-sibling::div//input/following-sibling::button',
     TXT_BOOKINGNO: '//input[@name="bookingNumber"]',
     TXT_CUSTOMERNAME: '//input[@name="customerName"]',
     LBL_CUSTOMERCATEGORY: '//label[@for="lblCustomerCategory"]',

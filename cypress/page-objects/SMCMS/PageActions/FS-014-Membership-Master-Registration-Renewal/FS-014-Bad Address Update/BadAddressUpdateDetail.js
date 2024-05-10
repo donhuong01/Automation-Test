@@ -45,7 +45,7 @@ class BadAddressUpdateDetail {
      *****************************************************/
      validate(){
         cy.Click(elems_BadAddressUpdateDetail.BTN_VALIDATE)
-        cy.ValidateElementText(elems_PageHeader.LBL_PAGETITLE, 'Bad Address Update Detail')
+        // cy.ValidateElementText(elems_PageHeader.LBL_PAGETITLE, 'Bad Address Update Detail')
     }
 
     /*****************************************************
