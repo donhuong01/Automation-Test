@@ -5,16 +5,16 @@ const Promotions_Report = new Promotion_Reports ()
 
 const Promotion_Report = () => {
 
-describe("Promotion Verification",function(){
+describe("Promotion Access Checking",function(){
 
-    it('Checking functionallity and Verification on Bundle Promotion', function(){
+    it('Checking Access on Bundle Promotion', function(){
         Promotions_Report.verifyBundlePromotion
         (
             data.BUNDLE_PROMOTION.EXPECTEDPG
         )
     })
 
-    it('Checking functionallity and Verification on Bundle Promotion Detail', function(){
+    it('Checking Access on Bundle Promotion Detail', function(){
         Promotions_Report.verifyBundlePromotionDetail
         (
             data.BUNDLE_PROMOTION_DETAIl.EXPECTEDPG,

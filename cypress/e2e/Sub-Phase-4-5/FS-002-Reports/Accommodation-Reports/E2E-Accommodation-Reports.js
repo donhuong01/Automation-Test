@@ -7,7 +7,7 @@ const Accommodation_Report = () => {
 
 describe("Accommodation Verification",function(){
 
-    it('Checking functionallity and Verification on Accommodation Charge Rate Listing', function(){
+    it('Checking Access on Accommodation Charge Rate Listing', function(){
         Accommodation_Reports.verifyAccommodationChargeRateListing
         (
             data.ACCOM_CHARGE_RATE.EXPECTEDPG,
@@ -20,7 +20,7 @@ describe("Accommodation Verification",function(){
         )
     })
 
-    it('Checking functionallity and Verification on Accomodation Listing', function(){
+    it('Checking Access on Accomodation Listing', function(){
         Accommodation_Reports.verifyAccommodationListing
         (
            data.ACCOM_LISTING.EXPECTEDPG,
@@ -31,7 +31,7 @@ describe("Accommodation Verification",function(){
         )
     })
 
-    it('Checking functionallity and Verification on Accomodation Occupancy Listing', function(){
+    it('Checking Access on Accomodation Occupancy Listing', function(){
         Accommodation_Reports.verifyAccommodationOccupancyListing
         (
            data.ACCOM_OCCUPANCY.EXPECTEDPG,
@@ -41,7 +41,7 @@ describe("Accommodation Verification",function(){
         )
     })
 
-    it('Checking functionallity and Verification on Accomodation Operating Period Listing', function(){
+    it('Checking Access on Accomodation Operating Period Listing', function(){
         Accommodation_Reports.verifyAccommodationOperatingPeriodListing
         (
            data.ACCOM_OPERATING_PERIOD.EXPECTEDPG,
@@ -50,7 +50,7 @@ describe("Accommodation Verification",function(){
         )
     })
 
-    it('Checking functionallity and Verification on Accomodation Booking Listing', function(){
+    it('Checking Access on Accomodation Booking Listing', function(){
         Accommodation_Reports.verifyAccommodationBookingListing
         (
             data.ACCOM_BOOKING.EXPECTEDPG,
@@ -58,7 +58,7 @@ describe("Accommodation Verification",function(){
         )
     })
 
-    // it('Checking functionallity and Verification on Accomodation Reservation Listing', function(){
+    // it('Checking Access on Accomodation Reservation Listing', function(){
     //     Accommodation_Reports.verifyAccommodationReservationListing
     //     (
     //         data.ACCOM_RESERVATION.EXPECTEDPG,
@@ -66,21 +66,21 @@ describe("Accommodation Verification",function(){
     //     )
     // })
 
-    it('Checking functionallity and Verification on Accomodation Booking Cancellation Listing', function(){
+    it('Checking Access on Accomodation Booking Cancellation Listing', function(){
         Accommodation_Reports.verifyBookingCancellationListing
         (
             data.ACCOM_BOOKING_CANCELLATION.EXPECTEDPG,
         )
     })
 
-    it('Checking functionallity and Verification on Accomodation Closure Listing', function(){
+    it('Checking Access on Accomodation Closure Listing', function(){
         Accommodation_Reports.verifyClosureListing
         (
             data.ACCOM_CLOSURE.EXPECTEDPG,
         )
     })
 
-    it('Checking functionallity and Verification on Accomodation Type Listing', function(){
+    it('Checking Access on Accomodation Type Listing', function(){
         Accommodation_Reports.verifyTypeListing
         (
             data.ACCOM_TYPE.EXPECTEDPG,

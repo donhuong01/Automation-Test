@@ -40,7 +40,7 @@ const { IGMainSelectionBox, IGSelection, IGLocationSelection, MembershipTenure, 
 
 const InterestGroupMembershipRegistration = () => {
 
-    const CustomerNRICFull = nricGenerator('S', 43)
+    const CustomerNRICFull = nricGenerator('T', 43)
 
     const CustomerNRIC = CustomerNRICFull.substr(CustomerNRICFull.length - 4);
 
@@ -144,9 +144,11 @@ const InterestGroupMembershipRegistration = () => {
 
             IGMembershipRegistration.AgreewithIndemnityWaiver(AgreeWithIndemnityWaiver)
 
+            cy.EnterText('//input[@id="idundefined"]', 'Test')
+
             // IGMembershipRegistration.AddWaiver('Registration')
 
-            IGMembershipRegistration.PopulateAdditionalFields("Test");
+            // IGMembershipRegistration.PopulateAdditionalFields("Test");
             MemTenureSelect.addToCart()
 
             ShoppingCart.fillOutandApplyPayment('CASH')

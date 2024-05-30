@@ -2,26 +2,26 @@ const Data = {
 
     IGMembershipListing: {
         IGMian: 'IG Main QA Testing 1',
-        InterestGroup: 'Test IG Details',
-        IGMembershipID: 'G1000000503',
-        SAFRAMembershipID: 'A300006812',
+        InterestGroup: 'Test IG Details - Main',
+        IGMembershipID: 'G1000000578',
+        SAFRAMembershipID: 'A300003718',
         Status: 'InActive',
-        CustomerName: 'Test User 649E',
+        CustomerName: 'Test User 597',
         ExpiryDateFrom: '02-Jan-2024',
         ExpiryDateTo: '17-Mar-2024',
-        InitialJoinDate: '02-Feb-2024',
-        ExpiryDate: '17-Feb-2024',
-        MembershipStatusReason: 'Term Expired'
+        InitialJoinDate: '04-Apr-2024',
+        ExpiryDate: '28-May-2025',
+        MembershipStatusReason: 'Deferred'
 
     },
     IGMembershipRegistration: {
         CustomerNRICFull: 'S6797328C',
         NRICLast4Digit: '328C',
         IGMainSelectionBox: "IG Main QA Testing 1",
-        IGSelection: "Test IG Details",
+        IGSelection: "Test IG Details - Term",
         IGLocationSelection: "All Locations",
-        MembershipTenure: "5",
-        EffectiveDate: "26-May-2023",
+        MembershipTenure: "3",
+        EffectiveDate: "21-May-2024",
         AgreeWithTermAndCondition: "CHECK",
         AgreeWithIndemnityWaiver: "CHECK",
 
@@ -41,7 +41,7 @@ const Data = {
         CalculatePayment: 'CHECK',
         Maintenace: 'Terminate',
         TerminatedBy: 'Customer',
-        TerminationDate: '30-Jun-2023',  //Must be the last day of the current month
+        TerminationDate: '31-May-2024',  //Must be the last day of the current month
         TerminationReason: 'Termination',
         CustomerName: 'Test User 46',
         Status: 'InActive',

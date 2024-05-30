@@ -107,7 +107,7 @@ const InterestGMembershipRenewal = (CustomerNRICFull) => {
 
             MemTenureSelect.addToCart()
 
-            ShoppingCart.fillOutandApplyPayment('CSO-CSHCRD')
+            ShoppingCart.fillOutandApplyPayment('CASH')
 
             //     cy.wait(9000)
 
@@ -123,7 +123,7 @@ const InterestGMembershipRenewal = (CustomerNRICFull) => {
 
             IGMembershipRenewal.ClickOnBox("IG Main QA Testing 1")
 
-            IGMembershipRenewal.ClickOnBox('Test IG Details')
+            IGMembershipRenewal.ClickOnBox('Test IG Details - Term')
 
             IGMembershipRenewal.ClickOnBox('All Locations')
 
@@ -132,18 +132,20 @@ const InterestGMembershipRenewal = (CustomerNRICFull) => {
             IGMembershipRenewal.SelectMembershipTerm()
             IGMembershipRenewal.SelectMembershipTerm()
 
-            IGMembershipRenewal.MembershipEffectiveDate('03-Apr-2023')
+            IGMembershipRenewal.MembershipEffectiveDate('21-May-2023')
 
             IGMembershipRenewal.AgreeWithTermCondition('CHECK')
             IGMembershipRegistration.AgreewithIndemnityWaiver("CHECK")
 
-            IGMembershipRegistration.AddWaiver('Registrations')
+            IGMembershipRegistration.AddWaiver('Registration Admin')
 
-            IGMembershipRegistration.PopulateAdditionalFields("Test");
+            cy.EnterText('//input[@id="idundefined"]', 'Test')
+            
+            //IGMembershipRegistration.PopulateAdditionalFields("Test");
 
             MemTenureSelect.addToCart()
 
-            ShoppingCart.fillOutandApplyPayment('CSO-CSHCRD')
+            ShoppingCart.fillOutandApplyPayment('CASH')
 
             cy.wait(15000)
 
@@ -155,7 +157,7 @@ const InterestGMembershipRenewal = (CustomerNRICFull) => {
 
             IGMembershipRenewal.SelectIGMembership('G1000000')
 
-            IGMembershipRenewal.SelectRenewalTerm('8')
+            IGMembershipRenewal.SelectRenewalTerm('5')
 
             IGMembershipRenewal.Submit()
 

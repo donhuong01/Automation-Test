@@ -57,6 +57,7 @@ describe('[TS03] Code Type Management',function(){
         
         //Filter by code type
         CodeTypeListingForm.codeSetMasterListingFilterbyCodeType(data.CodeTypeDetail.Name)
+        cy.wait(7000)
     
         //Click on delete button and verify delete notification in code type listing form
         //CodeTypeListingForm.Delete(data.CodeTypeDetail.Name)

@@ -70,7 +70,7 @@ class E1GymMembershipRegistration {
     AddWiaver() {
 
         cy.Click(elems_E1GymMembershipRegistaration.BTN_ADDWAIVEROFF)
-        cy.SelectDropDownItem(elems_E1GymMembershipRegistaration.DRP_CHARGETYPE, 'Registration Fee')
+        cy.SelectDropDownItem(elems_E1GymMembershipRegistaration.DRP_CHARGETYPE, 'Admin Fee Registration')
         cy.EnterText(elems_E1GymMembershipRegistaration.TXT_AMOUNT, 3)
         cy.EnterText(elems_E1GymMembershipRegistaration.TXT_REASON, 'Test')
         cy.Click(elems_E1GymMembershipRegistaration.BTN_CONFIRM)

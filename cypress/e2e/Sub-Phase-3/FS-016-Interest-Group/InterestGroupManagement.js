@@ -30,7 +30,7 @@ const InterestGroupManagement = () =>{
 describe('[TS02] FS-016 Interest Group Management', function () {
 
 
-    it('[TC01] Creating New Interest Group and click cancel button', function () {
+    it('[TC01] Creating New Interest Group and Approving', function () {
 
         cy.intercept('POST', 'https://api.uat-smcms.safra.sg/v2/adminapi/interest-group/interest-groups/membership-tag').as('ID')
 
@@ -76,6 +76,10 @@ describe('[TS02] FS-016 Interest Group Management', function () {
 
         //fillout charge type
         InterestGroupDetail.FilloutCargeType(ChargeName, TransactionType, CalculationType, AmountType)
+
+        //
+        //fillout charge type
+        InterestGroupDetail.FilloutCargeType2("Renewal Fee", "Renewal", CalculationType, AmountType)
 
         //Add customer category charge list
         InterestGroupDetail.ChargeRateCustomerCategory(CustomerCate)

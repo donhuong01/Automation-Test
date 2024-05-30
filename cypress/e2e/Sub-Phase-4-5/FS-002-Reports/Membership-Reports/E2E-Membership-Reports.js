@@ -18,27 +18,27 @@ const SFS_Reports = new Reports_SFS()
 
 const Membership_Report = () => {
 
-describe("Membership Reports Verification",function(){
+describe("Membership Reports Access checking",function(){
 
     /******************************************************
     *                     FS 014                          *
     ******************************************************/
 
-    it('Checking functionallity and Verification on Bad Address Members Listing', function(){   
+    it('Checking Access on Bad Address Members Listing', function(){   
         MembershipMasters_Reports.verifyBadAddressListing
         (
            data.BAD_ADDRESS.EXPECTEDPG
         )
     })
 
-    it('Checking functionallity and Verification on Documentary Proof Operational Listing', function(){
+    it('Checking Access on Documentary Proof Operational Listing', function(){
         MembershipMasters_Reports.verifyDocumentaryProofOperationalListing
         (
            data.DOCUMENTARY_PROOF_OPERATIONAL.EXPECTEDPG
         )
     })
 
-    it('Checking functionallity and Verification on Documentary Proof Verified Listing', function(){
+    it('Checking Access on Documentary Proof Verified Listing', function(){
         MembershipMasters_Reports.verifyDocumentaryProofVerifiedListing
         (
            data.DOCUMENTARY_PROOF_VERIFIED.EXPECTEDPG,
@@ -48,21 +48,21 @@ describe("Membership Reports Verification",function(){
         )
     })
 
-    it('Checking functionallity and Verification on Membership Transaction', function(){
+    it('Checking Access on Membership Transaction', function(){
         MembershipMasters_Reports.verifyMembershipTransaction
         (
            data.MEMBERSHIP_TRANSACTION.EXPECTEDPG
         )
     })
 
-    it('Checking functionallity and Verification on Membership Revenue', function(){
+    it('Checking Access on Membership Revenue', function(){
         MembershipMasters_Reports.verifyMembershipRevenue
         (
            data.MEMBERSHIP_REVENUE.EXPECTEDPG
         )
     })
 
-    it('Checking functionallity and Verification on Membership Renewal', function(){
+    it('Checking Access on Membership Renewal', function(){
         MembershipMasters_Reports.verifyMembershipRenewal
         (
            data.MEMBERSHIP_RENEWAL.EXPECTEDPG
@@ -77,7 +77,7 @@ describe("Membership Reports Verification",function(){
     *                     FS 025                          *
     ******************************************************/
 
-    it('Checking functionallity and Verification on VIP Appointment Term Listing', function(){
+    it('Checking Access on VIP Appointment Term Listing', function(){
         MembershipVIPs_Reports.verifyVIPAppointmentTermListing
         (
            data.VIP_APPOINTMENT.EXPECTEDPG,
@@ -90,7 +90,7 @@ describe("Membership Reports Verification",function(){
     *                     FS 034                          *
     ******************************************************/
 
-    it('Checking functionallity and Verification on Customer Marketing Profile Listing', function(){
+    it('Checking Access on Customer Marketing Profile Listing', function(){
         CustomerMarketing_Reports.verifyCustomerMarketingProfile
         (
            data.CUSTOMER_MARKTING.EXPECTEDPG,
@@ -106,7 +106,7 @@ describe("Membership Reports Verification",function(){
     /******************************************************
     *                     FS 030                          *
     ******************************************************/
-    it('Checking functionallity and Verification on DBS Billing Listing', function(){
+    it('Checking Access on DBS Billing Listing', function(){
         MemberCards_Reports.verifyDBSBilling
         {
             data.DBS_BILLING.EXPECTEDPG
@@ -116,14 +116,14 @@ describe("Membership Reports Verification",function(){
     /******************************************************
     *                     FS 032                          *
     ******************************************************/
-    it('Checking functionallity and Verification on Lucky Draw Tracking Listing', function(){
+    it('Checking Access on Lucky Draw Tracking Listing', function(){
         LuckyDraw_Reports.verifyLuckyDrawTracking
         {
             data.LUCKYDRAW_TRACKING.EXPECTEDPG
         }
     })
 
-    it('Checking functionallity and Verification on Lucky Draw Winner Listing', function(){
+    it('Checking Access on Lucky Draw Winner Listing', function(){
         LuckyDraw_Reports.verifyLuckyDrawWinner
         {
             data.LUCKYDRAW_WINNER.EXPECTEDPG
@@ -133,21 +133,21 @@ describe("Membership Reports Verification",function(){
     /******************************************************
     *                     FS 026                         *
     ******************************************************/
-    it('Checking functionallity and Verification on NSF Reconciliation Listing', function(){
+    it('Checking Access on NSF Reconciliation Listing', function(){
         NSF_Reports.verifyNSFReconciliation
         {
             data.NSF_RECONCILIATION.EXPECTEDPG
         }
     })
 
-    it('Checking functionallity and Verification on NSF Summary Listing', function(){
+    it('Checking Access on NSF Summary Listing', function(){
         NSF_Reports.verifyNSFSummary
         {
             data.NSF_SUMMARY.EXPECTEDPG
         }
     })
 
-    it('Checking functionallity and Verification on Failed Paymaster Deduction Listing', function(){
+    it('Checking Access on Failed Paymaster Deduction Listing', function(){
         NSF_Reports.verifyFailedPaymasterDeduction
         {
             data.FAILED_PAYMASTER.EXPECTEDPG
@@ -158,7 +158,7 @@ describe("Membership Reports Verification",function(){
     *                     FS 027                         *
     ******************************************************/
 
-    it('Checking functionallity and Verification on Transaction By Principal Listing', function(){
+    it('Checking Access on Transaction By Principal Listing', function(){
         SFS_Reports.verifyTransactionByPrinicpal
         {
             data.TRANSACTION_PRINCIPAL.EXPECTEDPG

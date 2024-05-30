@@ -1,7 +1,7 @@
 const data = {
-    Name: 'E1MF NSF',//'E1-Test-Auto-'+ Math.floor(Math.random() * 1001),
+    Name: 'E1-Test-Auto-'+ Math.floor(Math.random() * 1001), //'E1MF NSF',//
     Code: 'E1MFNSF',
-    IGMain: 'E1MF NSF NEW',//'RCD E1 test', //MOVIEMAX
+    IGMain: 'RCD E1 test 01', //'E1MF NSF NEW',//MOVIEMAX
     TermLength: '1',
     SubcategoryType: 'E1MF NSF',
     location: 'SAFRA Mt Faber',

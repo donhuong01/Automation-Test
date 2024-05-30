@@ -26,7 +26,7 @@ const data = {
         IGMAIN: 'Badminton Social Group',
         IG: 'Badminton Training.',
         DEACTIVATEDATE: '25-May-2023',
-        EXPECTEDPG_DEACTIVATION: 'Report Viewer - Interest Group Membership Deactivation',
+        EXPECTEDPG_DEACTIVATION: 'Report Viewer - Interest Group Deactivation',
     },
 
     //IG Deferment Summary

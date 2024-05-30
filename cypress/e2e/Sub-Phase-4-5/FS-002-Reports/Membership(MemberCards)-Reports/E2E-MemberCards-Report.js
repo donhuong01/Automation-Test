@@ -5,16 +5,16 @@ const MemberCards_Reports = new Reports_MemberCards ()
 
 const MemberCards_Report = () => {
 
-describe("Member Cards Verification",function(){
+describe("Member Cards access checking",function(){
 
-    it('Checking functionallity and Verification on Identity User Matrix Listing', function(){
+    it('Checking Access on Identity User Matrix Listing', function(){
         MemberCards_Reports.verifyIdentifyUserMatrix
         (
             data.IDENTITY_USER_MATRIX.EXPECTEDPG
         )
     })
 
-    it('Checking functionallity and Verification on Member Card Listing', function(){
+    it('Checking Access on Member Card Listing', function(){
         MemberCards_Reports.verifyMemberCard
         (
             data.MEMBER_CARD.EXPECTEDPG,

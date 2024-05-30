@@ -238,18 +238,18 @@ beforeEach(() => {
 
 //  describe('E2E Auto Testing:FS-002 Reports', () => {
 
-//   Accommodation_Report()
-//   AdminSetting_Report()
-//   E1_Report()
-//   Facility_Report()
-//   Gifts_Report()
+  // Accommodation_Report()
+  // AdminSetting_Report()
+  // E1_Report()
+  // Facility_Report()
+  // Gifts_Report()
   // IG_Report()
   // Membership_Report()
   // MemberCards_Report()
   // Reports_Payments()
   // InHouseMerchandise_Report()
   // SRP_Report()
-  // Promotion_Report()
+//   Promotion_Report()
 
 //  })
 
@@ -263,7 +263,7 @@ beforeEach(() => {
     // DocumentTemplate() // Don't run unless important
     // ApplicationSetting() //Not Required //Changed Font Siz to - 4 (14pt)
     // NotificationMessageTemplate() //Not Required
-    // AnnouncementPortalNotification() //Not Required
+//     AnnouncementPortalNotification() //Not Required
 // })
 
 
@@ -296,7 +296,7 @@ beforeEach(() => {
 // })
 
 
-describe('E2E Auto Testing:FS-014 Membership', () => {
+// describe('E2E Auto Testing:FS-014 Membership', () => {
 
 //  MembershipRegistration(CustomerNRICFull) // Quick Testing on Membership Registration
 //  MembershipPrincipalRegistration(CustomerNRICFull,DepCustomerNRICFull, Dep2CustomerNRICFull) // Full Testing on Membership Registration
@@ -309,7 +309,7 @@ describe('E2E Auto Testing:FS-014 Membership', () => {
 // MemberStatusReasonCode() // Needs to do in manual test since it may affect current data
 //  MassUpdateForMemberData() 
 // MembershipModuleSettings() // Needs to check settings data before running on UAT
- SFSMemberRegistion(CustomerNRICFull,DepCustomerNRICFull, Dep2CustomerNRICFull) //Add three NRIC's for Principal, Dependent Child, Dependent Spouse
+//  SFSMemberRegistion(CustomerNRICFull,DepCustomerNRICFull, Dep2CustomerNRICFull) //Add three NRIC's for Principal, Dependent Child, Dependent Spouse
 //  E2EMemberShipRenewal(CustomerNRICFull) //Add NRIC For Principal Registration
 
 
@@ -333,7 +333,7 @@ describe('E2E Auto Testing:FS-014 Membership', () => {
   //   DepCustomerNRICFull,
   //   E2EData.BATCH_REGISTRATION.PRINCIPALID_FOR_NEW_DEPENDENT)
 
-})
+// })
 
 
 
@@ -367,7 +367,7 @@ describe('E2E Auto Testing:FS-014 Membership', () => {
 
 
 
-// describe('E2E Auto Testing:FS-016 Interest Group: Registration and Maintenance Activities', ()=> {
+describe('E2E Auto Testing:FS-016 Interest Group: Registration and Maintenance Activities', ()=> {
 
 // InterestGroupMembershipRegistration()
 // InterestGMembershipRenewal(CustomerNRICFull) //Change NRIC each time after runing this code
@@ -382,10 +382,10 @@ describe('E2E Auto Testing:FS-014 Membership', () => {
 // InterestGMembershipwaiver(E2EData.MEMBER_NAME_FOR_IG_WAIVER)  //Provide Member Name
 // InterestGroupManagement()
 // InterestGroupMembershipManagment()
-// InterestGroupMainManagements()
+InterestGroupMainManagements()
 // //IG Renewal Advice
 
-// })
+})
 
 
 

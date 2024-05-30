@@ -53,7 +53,7 @@ describe('FS-016 Batch Interest Group Membership Registration', function () {
 
         IGMembershipRegistration.ClickOnBox('IG Main QA Testing 1')
 
-        IGMembershipRegistration.ClickOnBox('Test IG Details')
+        IGMembershipRegistration.ClickOnBox('Test IG Details - Main')
 
         IGMembershipRegistration.ClickOnBox('All Locations')
 
@@ -65,7 +65,9 @@ describe('FS-016 Batch Interest Group Membership Registration', function () {
 
         IGMembershipRegistration.AgreewithIndemnityWaiver()
 
-        IGMembershipRegistration.PopulateAdditionalFields("Test");
+        cy.EnterText('//textarea[@id="idundefined"]', 'Test')
+
+        // IGMembershipRegistration.PopulateAdditionalFields("Test");
 
         MembershiptenureSelection.addToCart()
 

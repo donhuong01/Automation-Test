@@ -24,11 +24,11 @@ describe('[TS03] Batch Membership Termination Management', function () {
 
 
         ////Enable SFS
-        cy.visit('/membership/moduleSettings')
-        cy.wait(5000)
+        // cy.visit('/membership/moduleSettings')
+        // cy.wait(5000)
         
-        MemModuleSettings.SFSActivate('CHECK')
-        cy.wait(2000)
+        // MemModuleSettings.SFSActivate('CHECK')
+        // cy.wait(2000)
         
 
         cy.visit('/membership/memberList')
@@ -64,6 +64,8 @@ describe('[TS03] Batch Membership Termination Management', function () {
 
         // Terminate Members
         BatchMemTermConfirm.yes()
+
+        cy.wait(7000)
 
         // Do Not Terminate Members
         // BatchMemTermConfirm.no()

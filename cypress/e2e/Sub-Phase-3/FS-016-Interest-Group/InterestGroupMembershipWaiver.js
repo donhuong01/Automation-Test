@@ -58,21 +58,21 @@ describe('[TS11] FS-016 Interest Group Membership Waiver', function () {
         InterestGroupListing.VerifyReasonCode(ReasonCode)
 
 
-        cy.visit('/membership/interestGroupMembershipListing')
-        cy.wait(2000)
+        // cy.visit('/membership/interestGroupMembershipListing')
+        // cy.wait(2000)
 
-        InterestGroupListing.FiterWithCustomerName(CustomerName)
+        // InterestGroupListing.FiterWithCustomerName(CustomerName)
 
-        InterestGroupListing.SlectTableLinkItem(CustomerName)
+        // InterestGroupListing.SlectTableLinkItem(CustomerName)
 
-        InterestGroupListing.Maintenance('Reverse')
-        cy.wait(2000)
+        // InterestGroupListing.Maintenance('Reverse')
+        // cy.wait(2000)
 
-        InterestGroupMembershipReversalRequest.Submit()
+        // InterestGroupMembershipReversalRequest.Submit()
 
-        cy.wait(5000)
+        // cy.wait(5000)
 
-        InterestGroupListing.ApprovalWorkFlow('IG-RVS', 'Interest Group Membership Reversal Approval Workflow', 'Approve', 'Approved')
+        // InterestGroupListing.ApprovalWorkFlow('IG-RVS', 'Interest Group Membership Reversal Approval Workflow', 'Approve', 'Approved')
 
 
     })

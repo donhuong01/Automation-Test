@@ -4,22 +4,22 @@ const data = {
     IGName: 'z-IG Main testing' + Math.floor(Math.random() * 1000),
     Code: 'SMCMS06',
     MainCategory: 'TEST',
-    IGCategoryGroup: 'INTEREST GROUP CATEGORY',
+    IGCategoryGroup: 'EDUCATIONAL/ENRICHMENT & CURRENT AFFAIRS',
     FABSGroup: 'Contest',
     ClubClassification: 'Fitness & Leisure',
     LifeStyleGroup: 'Clubbing/Pubbing',
     SMCClassification: 'Fitness & Adventure-SMC',
     OwnerEmail: 'htran@synergyonline.com',
 
-    LocationName: 'SAFRA Jurong',
+    LocationName: 'SAFRA HQ',
 
     ApproverOption: 'PIC of the requestor',
     ApproverEmail: 'HTran@synergyonline.com',
     Status: 'Draft',
 
-    ChargeName: 'Registration Fee',
-    TransactionType: 'Registration',
-    CalculationType: 'Per Term',
+    ChargeName: 'Registration Admin Fee',
+    TransactionType: 'Registration Admin',
+    CalculationType: 'Per Registration',
     AmmountType: 'Fixed Value',
 
     CustomerCategoryName: 'Associate',

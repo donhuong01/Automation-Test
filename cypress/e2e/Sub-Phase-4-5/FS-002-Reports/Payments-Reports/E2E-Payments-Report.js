@@ -5,16 +5,16 @@ const Reports_Payment = new Payment_Reports ()
 
 const Reports_Payments = () => {
 
-describe("Payments Verification",function(){
+describe("Payments Access Checking",function(){
 
-    it('Checking functionallity and Verification on Receipt Listing', function(){
+    it('Checking Access on Receipt Listing', function(){
         Reports_Payment.verifyReceiptListing
         (
             data.RECEIPT.EXPECTEDPG
         )
     })
 
-    it('Checking functionallity and Verification on IBG Deduction Listing', function(){
+    it('Checking Access on IBG Deduction Listing', function(){
         Reports_Payment.verifyIBGDeduction
         (
             data.IBG_DEDUCT.EXPECTEDPG,
@@ -23,7 +23,7 @@ describe("Payments Verification",function(){
         )
     })
 
-    it('Checking functionallity and Verification on PAYM Deduction Listing', function(){
+    it('Checking Access on PAYM Deduction Listing', function(){
         Reports_Payment.verifyPAYMDeduction
         (
             data.PAYM_DEDUCT.EXPECTEDPG,
@@ -32,7 +32,7 @@ describe("Payments Verification",function(){
         )
     })
 
-    it('Checking functionallity and Verification on CC Deduction Listing', function(){
+    it('Checking Access on CC Deduction Listing', function(){
         Reports_Payment.verifyCCDeduction
         (
             data.CC_DEDUCT.EXPECTEDPG,
@@ -41,14 +41,14 @@ describe("Payments Verification",function(){
         )
     })
 
-    // it('Checking functionallity and Verification on Failed Payment Deduction', function(){
+    // it('Checking Access on Failed Payment Deduction', function(){
     //     Reports_Payment.verifyFailedPaymasterDeduction
     //     (
     //         data.PAY_MASTER_DEDUCTION
     //     )
     // })
 
-    it('Checking functionallity and Verification on SFS Transaction Listing', function(){
+    it('Checking Access on SFS Transaction Listing', function(){
         Reports_Payment.verifySFSTransaction
         (
             data.SFS_TRANSACTION.EXPECTEDPG,
@@ -58,7 +58,7 @@ describe("Payments Verification",function(){
         )
     })
 
-    it('Checking functionallity and Verification on SFS Transaction Listing', function(){
+    it('Checking Access on Internet Receipt Listing', function(){
         Reports_Payment.verifyInternetReceipt
         (
             data.INTERNET_RECEIPT.EXPECTEDPG,

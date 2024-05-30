@@ -8,7 +8,7 @@ const E1_Report = () => {
 
 describe("E1 Reports Verification",function(){
 
-    it('Checking functionallity and Verification on E1 Membership Listing Address', function(){
+    it('Checking Access on on E1 Membership Listing Address', function(){
         E1_Reports.verifyE1MembershipListingAddress
         (
             data.MEM_LISTING_ADDRESS.EXPECTEDPG,
@@ -20,7 +20,7 @@ describe("E1 Reports Verification",function(){
         )
     })
 
-    it('Checking functionallity and Verification on E1 Membership Listing', function(){
+    it('Checking Access on on E1 Membership Listing', function(){
         E1_Reports.verifyE1MembershipListing
         (
             data.MEM_LISTING.EXPECTEDPG,
@@ -32,7 +32,7 @@ describe("E1 Reports Verification",function(){
         )
     })
 
-    it('Checking functionallity and Verification on E1 Membership Listing Email', function(){
+    it('Checking Access on on E1 Membership Listing Email', function(){
         E1_Reports.verifyE1MembershipListingEmail
         (
             data.MEM_LISTING_EMAIL.EXPECTEDPG,
@@ -44,7 +44,7 @@ describe("E1 Reports Verification",function(){
         )
     })
 
-    it('Checking functionallity and Verification on E1 Membership Listing Mobile', function(){
+    it('Checking Access on on E1 Membership Listing Mobile', function(){
         E1_Reports.verifyE1MembershipListingMobile
         (
             data.MEM_LISTING_MOBILE.EXPECTEDPG,
@@ -55,7 +55,7 @@ describe("E1 Reports Verification",function(){
         )
     })
 
-    it('Checking functionallity and Verification on E1 Membership Paying Listing', function(){
+    it('Checking Access on on E1 Membership Paying Listing', function(){
         E1_Reports.verifyE1MembershipPayingListing
         (
             data.PAYING_LISTING.EXPECTEDPG,
@@ -66,7 +66,7 @@ describe("E1 Reports Verification",function(){
         )
     })
 
-    it('Checking functionallity and Verification on E1 Membership Paying Listing Email', function(){
+    it('Checking Access on on E1 Membership Paying Listing Email', function(){
         E1_Reports.verifyE1MembershipPayingListingEmail
         (
             data.PAYING_LISTING_EMAIL.EXPECTEDPG,
@@ -77,7 +77,7 @@ describe("E1 Reports Verification",function(){
         )
     })
 
-    it('Checking functionallity and Verification on E1 Membership Paying Listing Mobile', function(){
+    it('Checking Access on on E1 Membership Paying Listing Mobile', function(){
         E1_Reports.verifyE1MembershipPayingListingMobile
         (
             data.PAYING_LISTING_MOBILE.EXPECTEDPG,
@@ -88,7 +88,7 @@ describe("E1 Reports Verification",function(){
         )
     })
 
-    it('Checking functionallity and Verification on E1 Membership Registration Listing', function(){
+    it('Checking Access on on E1 Membership Registration Listing', function(){
         E1_Reports.verifyE1MembershipRegistrationListing
         (
             data.REGISTRATION_LISTING.EXPECTEDPG,
@@ -99,7 +99,7 @@ describe("E1 Reports Verification",function(){
         )
     })
 
-    it('Checking functionallity and Verification on E1 Membership Registration Mobile Listing', function(){
+    it('Checking Access on on E1 Membership Registration Mobile Listing', function(){
         E1_Reports.verifyE1MembershipRegistrationListingMobile
         (
             data.REGISTRATION_LISTING_MOBILE.EXPECTEDPG,
@@ -110,7 +110,7 @@ describe("E1 Reports Verification",function(){
         )
     })
 
-    it('Checking functionallity and Verification on E1 Membership Reinstatement Listing', function(){
+    it('Checking Access on on E1 Membership Reinstatement Listing', function(){
         E1_Reports.verifyE1MembershipReinstatementListing
         (
             data.REINSTATEMENT_LISTING.EXPECTEDPG,
@@ -121,7 +121,7 @@ describe("E1 Reports Verification",function(){
         )
     })
 
-    it('Checking functionallity and Verification on E1 Membership Renewal Listing', function(){
+    it('Checking Access on on E1 Membership Renewal Listing', function(){
         E1_Reports.verifyE1MembershipRenewalListing
         (
             data.RENEWAL_LISTING.EXPECTEDPG,
@@ -132,7 +132,7 @@ describe("E1 Reports Verification",function(){
         )
     })
 
-    it('Checking functionallity and Verification on E1 Membership Renewal Listing Mobile', function(){
+    it('Checking Access on on E1 Membership Renewal Listing Mobile', function(){
         E1_Reports.verifyE1MembershipRenewalListingMobile
         (
             data.RENEWAL_LISTING_MOBILE.EXPECTEDPG,
@@ -143,7 +143,7 @@ describe("E1 Reports Verification",function(){
         )
     })
 
-    it('Checking functionallity and Verification on E1 Membership Termination Listing ', function(){
+    it('Checking Access on on E1 Membership Termination Listing ', function(){
         E1_Reports.verifyE1MembershipTerminationListing
         (
             data.TERMINATION_LISTING.EXPECTEDPG,
@@ -154,7 +154,7 @@ describe("E1 Reports Verification",function(){
         )
     })
 
-    it('Checking functionallity and Verification on E1 Membership Deferment Listing ', function(){
+    it('Checking Access on on E1 Membership Deferment Listing ', function(){
         E1_Reports.verifyE1MembershipDefermentListing
         (
             data.DEFERMENT_LISTING.EXPECTEDPG,

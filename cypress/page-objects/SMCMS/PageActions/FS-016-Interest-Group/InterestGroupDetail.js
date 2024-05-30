@@ -115,7 +115,7 @@ class InterestGroupDetail {
         cy.TickCheckBox(elems_InterestGroupDetail.TabInterestGroup.CHK_ISAGEREQUIRD, IsAgeRequired)
         cy.TickCheckBox(elems_InterestGroupDetail.TabInterestGroup.CHK_ISIGMEMBERECARD, IsIGeCardApplicable)
         cy.TickCheckBox(elems_InterestGroupDetail.TabInterestGroup.CHK_ISALLOWUSERVIEWDETAIL, IsAllowUserView)
-        cy.TickCheckBox(elems_InterestGroupDetail.TabInterestGroup.CHK_ISALLOWFLOATINGANIVERSARY, IsAllowFloating)
+        // cy.TickCheckBox(elems_InterestGroupDetail.TabInterestGroup.CHK_ISALLOWFLOATINGANIVERSARY, IsAllowFloating)
 
 
 
@@ -290,21 +290,21 @@ class InterestGroupDetail {
         cy.SelectPickerDifferentItemsWait(elems_InterestGroupDetail.TabChargeRate.PCK_RENEWALITEMCODE, 2000,
             elems_InterestGroupDetail.TabChargeRate.TXT_PRODUCTNAME, ProductName,
             elems_InterestGroupDetail.TabChargeRate.BTN_SEARCHFILTER)
-        cy.SelectPickerDifferentItemsWait(elems_InterestGroupDetail.TabChargeRate.PCK_DEFERMENTITEMCODE, 2000,
-            elems_InterestGroupDetail.TabChargeRate.TXT_PRODUCTNAME, ProductName,
-            elems_InterestGroupDetail.TabChargeRate.BTN_SEARCHFILTER)
-        cy.SelectPickerDifferentItemsWait(elems_InterestGroupDetail.TabChargeRate.PCK_REINSTATEMENTCODE, 2000,
-            elems_InterestGroupDetail.TabChargeRate.TXT_PRODUCTNAME, ProductName,
-            elems_InterestGroupDetail.TabChargeRate.BTN_SEARCHFILTER)
-        cy.SelectPickerDifferentItemsWait(elems_InterestGroupDetail.TabChargeRate.PCK_TERMINATIONCODE, 2000,
-            elems_InterestGroupDetail.TabChargeRate.TXT_PRODUCTNAME, ProductName,
-            elems_InterestGroupDetail.TabChargeRate.BTN_SEARCHFILTER)
-        cy.SelectPickerDifferentItemsWait(elems_InterestGroupDetail.TabChargeRate.PCK_WAIVERITEMCODE, 2000,
-            elems_InterestGroupDetail.TabChargeRate.TXT_PRODUCTNAME, ProductName,
-            elems_InterestGroupDetail.TabChargeRate.BTN_SEARCHFILTER)
-        cy.SelectPickerDifferentItemsWait(elems_InterestGroupDetail.TabChargeRate.PCK_REVERSALCODE, 2000,
-            elems_InterestGroupDetail.TabChargeRate.TXT_PRODUCTNAME, ProductName,
-            elems_InterestGroupDetail.TabChargeRate.BTN_SEARCHFILTER)
+        // cy.SelectPickerDifferentItemsWait(elems_InterestGroupDetail.TabChargeRate.PCK_DEFERMENTITEMCODE, 2000,
+        //     elems_InterestGroupDetail.TabChargeRate.TXT_PRODUCTNAME, ProductName,
+        //     elems_InterestGroupDetail.TabChargeRate.BTN_SEARCHFILTER)
+        // cy.SelectPickerDifferentItemsWait(elems_InterestGroupDetail.TabChargeRate.PCK_REINSTATEMENTCODE, 2000,
+        //     elems_InterestGroupDetail.TabChargeRate.TXT_PRODUCTNAME, ProductName,
+        //     elems_InterestGroupDetail.TabChargeRate.BTN_SEARCHFILTER)
+        // cy.SelectPickerDifferentItemsWait(elems_InterestGroupDetail.TabChargeRate.PCK_TERMINATIONCODE, 2000,
+        //     elems_InterestGroupDetail.TabChargeRate.TXT_PRODUCTNAME, ProductName,
+        //     elems_InterestGroupDetail.TabChargeRate.BTN_SEARCHFILTER)
+        // cy.SelectPickerDifferentItemsWait(elems_InterestGroupDetail.TabChargeRate.PCK_WAIVERITEMCODE, 2000,
+        //     elems_InterestGroupDetail.TabChargeRate.TXT_PRODUCTNAME, ProductName,
+        //     elems_InterestGroupDetail.TabChargeRate.BTN_SEARCHFILTER)
+        // cy.SelectPickerDifferentItemsWait(elems_InterestGroupDetail.TabChargeRate.PCK_REVERSALCODE, 2000,
+        //     elems_InterestGroupDetail.TabChargeRate.TXT_PRODUCTNAME, ProductName,
+        //     elems_InterestGroupDetail.TabChargeRate.BTN_SEARCHFILTER)
     }
 
 

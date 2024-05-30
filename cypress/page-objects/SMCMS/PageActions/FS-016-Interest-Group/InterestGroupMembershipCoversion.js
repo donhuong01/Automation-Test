@@ -37,7 +37,7 @@ class InterestGroupMembershipConversion {
             // if (DestinationIG === 'BITEZ') {
             //     cy.SelectTableItem(elems_IGMembershipConversion.TBL_SELECTDESTINATIONIG, 'Name', "BITEX")
             // } else {
-                cy.TickSpecificTableItem("Auto-IG-Test493")
+                cy.TickSpecificTableItem("Test IG Details - Main")
             // }
     
             cy.Click(elems_IGMembershipConversion.BTN_SELECT)

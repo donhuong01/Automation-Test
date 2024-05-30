@@ -14,8 +14,8 @@ const data = {
     OwnerEmail: 'HTran@synergyonline.com',
     ApproverOption: 'E1 Manager',
     ApproverEmail: 'HTran@synergyonline.com',
-    ChargeName: 'Registration',
-    TransactionType: 'Registration',
+    ChargeName: 'Admin Registration',
+    TransactionType: 'Registration Admin',
     CalculationType: 'Per Registration',
     AmmountType: 'Fixed Value',
     RegItemCode: 'SOL000005681', //SOL000005681 //SRP Prod 001

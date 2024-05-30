@@ -193,7 +193,7 @@ class IGMembershipRegistration {
 
         cy.Click(elems_IGMembershipRegistration.BTN_ADDWIAVER)
         cy.SelectDropDownItem(elems_IGMembershipRegistration.DRP_CHARGETYPE, ChargeType)
-        cy.EnterText(elems_IGMembershipRegistration.TXT_AMOUNT, '10')
+        cy.EnterText(elems_IGMembershipRegistration.TXT_AMOUNT, '1')
         cy.EnterText(elems_IGMembershipRegistration.TXT_REASON, 'Waive')
         cy.Click(elems_IGMembershipRegistration.BTN_CONFIRM)
     }

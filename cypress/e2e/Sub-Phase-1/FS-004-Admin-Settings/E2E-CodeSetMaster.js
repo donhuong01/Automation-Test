@@ -92,6 +92,8 @@ const CodeSetMaster = ()=> {
             cy.wait(1000)
             // Select item to delete
             CodeSetMstList.selectCodeSetItem(data.CodeSetMasterListing.codeSetName)
+
+            cy.wait(7000)
             // CodeSetMstList.selectCodeSetItem('.123')
 
             // Click Delete button - MUST TICK ITEM CHECKBOX BEFORE DELETING

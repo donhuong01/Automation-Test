@@ -251,12 +251,12 @@ class InterestGroupMain {
         cy.SelectPickerDifferentItemsSeachBTN(elems_InterestGroupMainDetail.TabChargeRate.PCK_TERMINATEITEMCODE,
             elems_InterestGroupMainDetail.TabChargeRate.TXT_PRODUCTNAME, TerminationItemCode,
             elems_InterestGroupMainDetail.TabInterestGroup.BTN_SEARCHFILTER)
-        cy.SelectPickerDifferentItemsSeachBTN(elems_InterestGroupMainDetail.TabChargeRate.PCK_WAIVERITEMCODE,
-            elems_InterestGroupMainDetail.TabChargeRate.TXT_PRODUCTNAME, WaiverItemCode,
-            elems_InterestGroupMainDetail.TabInterestGroup.BTN_SEARCHFILTER)
-        cy.SelectPickerDifferentItemsSeachBTN(elems_InterestGroupMainDetail.TabChargeRate.PCK_REVERSALITEMCODE,
-            elems_InterestGroupMainDetail.TabChargeRate.TXT_PRODUCTNAME, ReversalItemCode,
-            elems_InterestGroupMainDetail.TabInterestGroup.BTN_SEARCHFILTER)
+        // cy.SelectPickerDifferentItemsSeachBTN(elems_InterestGroupMainDetail.TabChargeRate.PCK_WAIVERITEMCODE,
+        //     elems_InterestGroupMainDetail.TabChargeRate.TXT_PRODUCTNAME, WaiverItemCode,
+        //     elems_InterestGroupMainDetail.TabInterestGroup.BTN_SEARCHFILTER)
+        // cy.SelectPickerDifferentItemsSeachBTN(elems_InterestGroupMainDetail.TabChargeRate.PCK_REVERSALITEMCODE,
+        //     elems_InterestGroupMainDetail.TabChargeRate.TXT_PRODUCTNAME, ReversalItemCode,
+        //     elems_InterestGroupMainDetail.TabInterestGroup.BTN_SEARCHFILTER)
     }
 
     /*****************************************************

@@ -2,14 +2,14 @@
   "stats": {
     "suites": 2,
     "tests": 1,
-    "passes": 1,
+    "passes": 0,
     "pending": 0,
-    "failures": 0,
-    "start": "2024-05-10T03:52:31.078Z",
-    "end": "2024-05-10T03:56:13.885Z",
-    "duration": 222807,
+    "failures": 1,
+    "start": "2024-05-24T07:26:57.344Z",
+    "end": "2024-05-24T07:27:36.065Z",
+    "duration": 38721,
     "testsRegistered": 1,
-    "passPercent": 100,
+    "passPercent": 0,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "7d75af87-5f34-4184-98ae-790268840118",
+      "uuid": "3ca0ea6c-c847-4092-912e-6b7e7601219b",
       "title": "",
       "fullFile": "cypress\\e2e\\SMCMS-E2E-Testing\\E2E.cy.js",
       "file": "cypress\\e2e\\SMCMS-E2E-Testing\\E2E.cy.js",
@@ -27,8 +27,8 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "155bb6db-dabc-4ea4-a9be-85fc4b6bd6e7",
-          "title": "E2E Auto Testing:FS-010 Facility",
+          "uuid": "b9d7779b-0c10-4fcd-b185-58a0e10df609",
+          "title": "E2E Auto Testing:FS-016 Interest Group: Registration and Maintenance Activities",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
@@ -36,40 +36,44 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "5bb14cc2-a3e0-4249-9cea-b4e2529a559c",
-              "title": "[TS-13] FS-010 Facility Group Booking Ballot",
+              "uuid": "fca9181c-0e7d-46f2-9b18-3b126667e223",
+              "title": "[TS02] FS-016 Interest Group Main Management",
               "fullFile": "",
               "file": "",
               "beforeHooks": [],
               "afterHooks": [],
               "tests": [
                 {
-                  "title": "[TC01] Create New Group Booking Ballot with Successful Items",
-                  "fullTitle": "E2E Auto Testing:FS-010 Facility [TS-13] FS-010 Facility Group Booking Ballot [TC01] Create New Group Booking Ballot with Successful Items",
+                  "title": "[TC01] Creating New Interest Group Main",
+                  "fullTitle": "E2E Auto Testing:FS-016 Interest Group: Registration and Maintenance Activities [TS02] FS-016 Interest Group Main Management [TC01] Creating New Interest Group Main",
                   "timedOut": null,
-                  "duration": 222650,
-                  "state": "passed",
-                  "speed": "slow",
-                  "pass": true,
-                  "fail": false,
+                  "duration": 38610,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
                   "pending": false,
-                  "context": null,
-                  "code": "common.Checkin(SAFRAMember1);\ncy.visit('/facilities/groupBookingList');\ncy.wait(5000);\n// Verify Page Title \n_FacilityBookingDetail.default.verifyPageTitle('Facility Group Booking Listing Form');\n// // Verify Page Title \n// FacilityBookingDetail.verifyPageTitle('Facility Booking Listing')\n// Click Create New button \n_FacilityBookingDetail.default.CreateNew();\ncy.wait(4000);\n// Verify Page Title \n_FacilityBookingDetail.default.verifyPageTitle('Facility Group Booking Detail');\n//Filout Facility Booking detail form\n_FacilityBookingDetail.default.CreateNewFaciltyBooking(FacilityType, Location, FacilityName);\n//select facility name\n// FacilityBookingDetail.SelectFacilities(FacilityName)\n//verify booking info\n//FacilityBookingDetail.VerifyBookingInfo(FacilityType, Location)\n// select slot\n_FacilityBookingDetail.default.SelectSlot(slot);\n// add waiver\n//FacilityBookingDetail.AddWaiver(ChargeType, Amount, Reason)\n//Click Save\n_FacilityBookingDetail.default.Save();\ncy.wait(10000);\ncy.visit('/facilities/groupBookingBallotListing');\n_FacilityGroupBookingBallotListing.default.VerifyPageTitle(\"Facility Group Booking Ballot Listing\");\n_FacilityGroupBookingBallotListing.default.CreateNew();\n_FacilityGroupBookingBallotDetail.default.VerifyPageTitle(\"Facility Group Booking Ballot Details\");\n_FacilityGroupBookingBallotDetail.default.SelectFacility(FacilityName);\ncy.ValidateElementText('(//td[text()=\"Successful\"])[1]', \"Successful\");\n_FacilityGroupBookingBallotDetail.default.Save();\ncy.wait(3000);\ncy.visit('/facilities/groupBookingBallotListing');\n_FacilityGroupBookingBallotDetail.default.ShoppinCart();\nShoppingCart.fillOutandApplyPayment('CASH');\ncy.wait(5000);\ncy.visit('/facilities/groupBookingBallotListing');\n_FacilityGroupBookingBallotListing.default.VerifyPageTitle(\"Facility Group Booking Ballot Listing\");\ncy.wait(3000);\ncy.visit('/facilities/groupBookingList');\ncy.wait(3000);\n_FacilityGroupBookingBallotListing.default.FilterByFacility(FacilityName);\n_FacilityGroupBookingBallotListing.default.VerifyTableConfirmed();\n//Logout\n// cy.LogoutOfSmcms()\n// cy.wait(3000)",
-                  "err": {},
-                  "uuid": "ca9f525a-e434-40a8-9a55-e1766a159b37",
-                  "parentUUID": "5bb14cc2-a3e0-4249-9cea-b4e2529a559c",
+                  "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Failed screenshot\",\n        \"value\": \"\\\\E2E.cy.js\\\\E2E Auto TestingFS-016 Interest Group Registration and Maintenance Activities -- [TS02] FS-016 Interest Group Main Management -- [TC01] Creating New Interest Group Main (failed).png\"\n      }\n    ]\n  ]\n}",
+                  "code": "cy.intercept('PUT', 'https://api.uat-smcms.safra.sg/v2/adminapi/interest-group/interest-group-mains/charge-rate').as('ID');\ncy.visit('/membership/interestGroupMainListing');\ncy.wait(2000);\n//click on create new button\n_InterestGroupMainManagement.default.CreateNew();\n//verify interest group main number\n// InterestGroupMainManagement.VerifyIGMainNumber(IGMainNumber)\n//Fill Out Interest Group Main Information\n_InterestGroupMainManagement.default.FilloutIGMainInformation(IGName, Code, MainCategory, IGCategoryGroup, FABSGroup, ClubClassification, LifeStyleGroup, SMCClassification, OwnerEmail);\n//Add location \n_InterestGroupMainManagement.default.AddLocation(LocationName);\n//Remove Location \n// InterestGroupMainManagement.RemoveLocation()\n// //Add Location Again\n// InterestGroupMainManagement.AddLocation(LocationName)\n//FillOut Approver Option Field\n_InterestGroupMainManagement.default.AddApproverOption(ApproverOption, ApproverEmail);\n//Click save as draft button\n_InterestGroupMainManagement.default.SaveAsDraft();\n//Click IG Main cancel\n_InterestGroupMainManagement.default.Cancel();\n//Filter listing using status and verify table item status\n_InterestGroupMainManagement.default.FilterWithStatus(Status);\n//Click on the last page\ncommon.ClickLastPage();\n//click on newly created item\n_InterestGroupMainManagement.default.ClickIGTableLink(IGName);\n//Click charge rate tab\n_InterestGroupMainManagement.default.ClickChargeRateTab();\n//Click add charge type\n_InterestGroupMainManagement.default.ClickAddChargeType();\n//Fillout field for charge type list\n_InterestGroupMainManagement.default.FilloutChargeTypeFields(ChargeName, TransactionType, CalculationType, AmmountType);\n//click on add customer category and select cud stomer category\n_InterestGroupMainManagement.default.AddCustomerCategory(CustomerCategoryName);\n//Fillout product info\n_InterestGroupMainManagement.default.FilloutProductInformation(RegItemCode, RenewalItemCode, DefermentItemCode, ReinstatementItemCode, TerminationItemCode, WaiverItemCode, ReversalItemCode);\n//click on save as draft\n// InterestGroupMainManagement.SaveAsDraft()\n//click on submit button\n_InterestGroupMainManagement.default.Submit();\n//Aprroval work flow\n// cy.visit('/membership/interestGroupMainListing')\n//filter item and varify status\n_InterestGroupMainManagement.default.FilterWithStatus(\"Pending Approval\");\n//click the item that was approved\n// InterestGroupMainManagement.ClickIGTableLink(IGName)\n// Click Submit Button\n// InterestGroupMainManagement.Submit()\n//Varify Notification Msg\n// InterestGroupMainManagement.VarifyNotificationMsg('Record has been saved successfully.')\n// InterestGroupDetail.VarifyTableItemStatus(IGName, 'Pending Approval')\n//Wait for Approval Email\n// cy.wait(5000) \n// cy.wait('@ID')\n// cy.get('@ID').then(xhr => {\n//     const Id = xhr.response.body.value.id\n//     console.log(Id)\n//     cy.log(Id)\n//     cy.visit(`/admin/pendingTaskDetails?id=${Id}`).as('MemID')\n//     cy.wait(2000)\n// })\ncommon.ApprovalWorkFlow('IG', 'Interest Group Main Approval Workflow', 'Approve', 'Approved');\ncy.visit('/membership/interestGroupMainListing');\n//Filter listing using status and verify table item status\n_InterestGroupMainManagement.default.FilterWithStatus('Approved');\n//Click on the last page\ncommon.ClickLastPage();\n//Verify Approved IG Main\n_InterestGroupMainManagement.default.VerifyTableEntries(IGName, 'Approved');\n//Click view interest group button\n// InterestGroupMainManagement.ViewInterestGroup()\n// //click create new button\n// InterestGroupMainManagement.CreateNew()\n// //verify interest group main number\n// // InterestGroupMainManagement.VerifyIGMainNumber(IGMainNumber)\n// //Fill Out Interest Group Main Information\n// InterestGroupMainManagement.FilloutIGMainInformation(IGName, Code, MainCategory, IGCategoryGroup, FABSGroup,\n//     ClubClassification, LifeStyleGroup, SMCClassification, OwnerEmail)\n// //Add location \n// InterestGroupMainManagement.AddLocation(LocationName)\n// //Remove Location \n// InterestGroupMainManagement.RemoveLocation()\n// //Add Location Again\n// InterestGroupMainManagement.AddLocation(LocationName)\n// //FillOut Approver Option Field\n// InterestGroupMainManagement.AddApproverOption(ApproverOption, ApproverEmail)\n// //Click save as draft button\n// InterestGroupMainManagement.SaveAsDraft()\n// //Filter listing using status and verify table item status\n// InterestGroupMainManagement.FilterWithStatus(Status)\n// //click on newly created item\n// InterestGroupMainManagement.ClickIGTableLink(Name)\n// //Click charge rate tab\n// InterestGroupMainManagement.ClickChargeRateTab()\n// //Click add charge type\n// InterestGroupMainManagement.ClickAddChargeType()\n// //Fillout field for charge type list\n// InterestGroupMainManagement.FilloutChargeTypeFields(ChargeName, TransactionType, CalculationType, AmmountType)\n// //click on add customer category and select customer category\n// InterestGroupMainManagement.AddCustomerCategory(CustomerCategoryName)\n// //Fillout product info\n// InterestGroupMainManagement.FilloutProductInformation(RegItemCode, RenewalItemCode, DefermentItemCode, ReinstatementItemCode,\n//     TerminationItemCode, WaiverItemCode, ReversalItemCode)\n// //click on save as draft\n// InterestGroupMainManagement.SaveAsDraft()\n// //click on submit button\n// InterestGroupMainManagement.Submit()\n// //Wait for the item to be rejected by the approver\n// cy.visit('/membership/interestGroupMainListing')\n// //filter item and varify status\n// InterestGroupMainManagement.FilterWithStatus(Status)\n// //click on cr eate new button\n// InterestGroupMainManagement.CreateNew()\n// //verify interest group main number\n// // InterestGroupMainManagement.VerifyIGMainNumber(IGMainNumber)\n// //Fill Out Interest Group Main Information\n// InterestGroupMainManagement.FilloutIGMainInformation(IGName, Code, MainCategory, IGCategoryGroup, FABSGroup,\n//     ClubClassification, LifeStyleGroup, SMCClassification, OwnerEmail)\n// //Add location \n// InterestGroupMainManagement.AddLocation(LocationName)\n// //Remove Location \n// InterestGroupMainManagement.RemoveLocation()\n// //Add Location Again\n// InterestGroupMainManagement.AddLocation(LocationName)\n// //FillOut Approver Option Field\n// InterestGroupMainManagement.AddApproverOption(ApproverOption, ApproverEmail)\n// //Click save as draft button\n// InterestGroupMainManagement.SaveAsDraft()\n// //Filter listing using status and verify table item status\n// InterestGroupMainManagement.FilterWithStatus(Status)\n// //click on newly created item\n// InterestGroupMainManagement.ClickIGTableLink(Name)\n// //Click charge rate tab\n// InterestGroupMainManagement.ClickChargeRateTab()\n// //Click add charge type\n// InterestGroupMainManagement.ClickAddChargeType()\n// //Fillout field for charge type list\n// InterestGroupMainManagement.FilloutChargeTypeFields(ChargeName, TransactionType, CalculationType, AmmountType)\n// //click on add customer category and select customer category\n// InterestGroupMainManagement.AddCustomerCategory(CustomerCategoryName)\n// //Fillout product info\n// InterestGroupMainManagement.FilloutProductInformation(RegItemCode, RenewalItemCode, DefermentItemCode, ReinstatementItemCode,\n//     TerminationItemCode, WaiverItemCode, ReversalItemCode)\n// //click on save as draft\n// InterestGroupMainManagement.SaveAsDraft()\n// //click on submit button\n// InterestGroupMainManagement.Submit()\n// //Wait for the item to be queried by requestor's  PIC  approver or Specific approver\n// cy.visit('/membership/interestGroupMainListing')\n// //filter item and varify status\n// InterestGroupMainManagement.FilterWithStatus(Status)",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//label[text()=\"Interest Group Category Group\"]/following-sibling::input`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//label[text()=\"Interest Group Category Group\"]/following-sibling::input`, but never found it.\n    at Context.eval (webpack:///./cypress/support/commands-com.js:1483:7)",
+                    "diff": null
+                  },
+                  "uuid": "3a50d53e-855e-444e-8b07-7ef029b7a8ad",
+                  "parentUUID": "fca9181c-0e7d-46f2-9b18-3b126667e223",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
-              "passes": [
-                "ca9f525a-e434-40a8-9a55-e1766a159b37"
+              "passes": [],
+              "failures": [
+                "3a50d53e-855e-444e-8b07-7ef029b7a8ad"
               ],
-              "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 222650,
+              "duration": 38610,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000

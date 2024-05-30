@@ -54,6 +54,7 @@ const CustomerCategory = () => {
             cy.visit('/admin/customerCategoryListing')
             cy.wait(5000)
             CustomerCatListing.FilterAndClickItem(data.UpdateDetail.Name)
+            cy.wait(7000)
             //CustomerCatListing.ClickDelete(data.DeleteListing.CustomerCategoryName, data.DeleteListing.D365ID)
             // CustomerCatListing.ClickDeleteInDeleteConfirmationPopup()
             // CustomerCatListing.ValidateDeletedItem(Name, D365ID)

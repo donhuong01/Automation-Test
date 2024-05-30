@@ -46,7 +46,8 @@ describe('FS-016 Batch Interest Group Membership Registration', function () {
 
         IGMembershipRegistration.AgreewithIndemnityWaiver()
 
-        IGMembershipRegistration.PopulateAdditionalFields("Test");
+        cy.EnterText('//input[@id="idundefined"]', 'Test')
+        //IGMembershipRegistration.PopulateAdditionalFields("Test");
 
         MembershiptenureSelection.addToCart()
 
