@@ -99,8 +99,8 @@ class elems_CustomerCreation {
             CHK_SAFRATRAVELCLUB : '//input[@id="checkTravelClub"]'
         }
     }
-    static BTN_CREATENEW = '//button[text()="Create New"]'
-    static BTN_CANCEL = '//button[text()="Cancel"]'
+    static BTN_CREATENEW = '//span[text()="Create New"]'
+    static BTN_CANCEL = '//span[text()="Cancel"]'
 }
 
 export default elems_CustomerCreation

@@ -24,8 +24,8 @@ const MemModuleSettings = new MembershipModuleSetting()
 
 const UserID = Math.floor(Math.random() * 100000)
 
-const PrincipalName = "Test OD 05"//Customerdata.CustomerCreationPrincipal.RegistrationInformation.name + UserID // 
-const PrincipalEmail = PrincipalName.replace(/\s/g, '') +"@test.com"//Customerdata.CustomerCreationPrincipal.ContactInformation.emailAddress //"safraonlineuser009@gmail.com"//
+const PrincipalName = Customerdata.CustomerCreationPrincipal.RegistrationInformation.name + UserID // "Test OD 05"//
+const PrincipalEmail = Customerdata.CustomerCreationPrincipal.ContactInformation.emailAddress //PrincipalName.replace(/\s/g, '') +"@test.com"//"safraonlineuser009@gmail.com"//
 // const CustomerNRIC = '415D'
 // const CustomerNRICFull = 'S0309415D'
 
@@ -143,7 +143,7 @@ const MembershipRegistration = (CustomerNRICFull) => {
 
 
             // Shopping cart and Payments
-            ShoppingCart.fillOutandApplyPayment('CASH')
+            ShoppingCart.fillOutandApplyPayment('CSO-CASH')
 
             // Wait for 3 minites
             //cy.wait(25000) //QA

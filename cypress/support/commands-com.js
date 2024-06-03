@@ -53,13 +53,13 @@ Cypress.Commands.add('EnterText', (locator, text) => {
 Cypress.Commands.add('SelectDropDownItem', (locator, item) => {
     cy.log('------ Select Drop Down Item : ' + locator + ' ------')
     cy.xpath(locator, { timeout: 30000 }).scrollIntoView()
-    cy.xpath(locator + '//span[@class="k-icon k-i-arrow-s"]',{ timeout: 30000 }).click({ timeout: 30000 })
+    cy.xpath(locator /*+ '//span[@class="k-icon k-i-arrow-s"]'*/,{ timeout: 30000 }).click({ timeout: 30000 })
     cy.wait(1000)
     // cy.xpath(locator).invoke('attr', 'aria-owns').then(value => {
     //     cy.xpath('//ul[@id="' + value + '"]/li[text()="' + item + '"]').click()
     // })
 
-    cy.xpath('//li[text()="' + item + '"]', { timeout: 30000 }).click({ force: true })
+    cy.xpath('(//span[text()="' + item + '"])[1]', { timeout: 30000 }).click({ force: true })
 })
 
 /*****************************************************
@@ -297,7 +297,7 @@ Cypress.Commands.add('UploadFile', (locator, fileName) => {
     cy.xpath(locator).scrollIntoView()
     cy.xpath(locator).attachFile(Cypress.env('FIXTURE_UPLOAD_PATH') + fileName)
     cy.wait(4000)
-    cy.xpath(locator + '/ancestor::div[@class="k-widget k-upload"]//span[@class="k-file-name"]').should('have.text', fileName)
+    cy.xpath(locator + '/ancestor::div[@class="k-upload"]//span[@class="k-file-name"]').should('have.text', fileName)
 })
 
 /*****************************************************
@@ -1408,8 +1408,8 @@ Cypress.Commands.add("EnterTime", (locator, Time) => {
  *****************************************************/
 Cypress.Commands.add("TenureSelection", (locator, columnValue, TenureDuration) => {
 
-    cy.Click(`${locator}//tr[contains(@class, "k-master-row")]//td[text()="${columnValue.toUpperCase()}"]//following-sibling::td//span[@class="k-dropdown-wrap"]`)
-    cy.Click(`//li[text()="${TenureDuration}"]`)
+    cy.Click(`${locator}//tr[contains(@class, "k-master-row")]//td[text()="${columnValue.toUpperCase()}"]//following-sibling::td//span[@class="k-dropdownlist k-picker k-picker-md k-rounded-md k-picker-solid"]`)
+    cy.Click(`//span[text()="${TenureDuration}"]`)
 
     //(`${locator}//tr[contains(@class, "k-master-row")]//td[text()="${columnValue}"]//following-sibling::td//span[@class="k-dropdown-wrap"]`)})   , {matchCase}
 })

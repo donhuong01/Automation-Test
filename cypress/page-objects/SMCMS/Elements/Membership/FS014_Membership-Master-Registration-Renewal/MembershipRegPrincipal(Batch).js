@@ -1,7 +1,7 @@
 class elems_MemberRegistrationPrincipal {
     // static BTN_SAVEANDNEXT = '//button[@form="formMembershipRegistrationDependent"]'
-    static BTN_SAVEANDNEXT = '//button[text()="Save and Next"]'
-    static BTN_CANCEL = '//button[text()="Cancel"]'
+    static BTN_SAVEANDNEXT = '//span[text()="Save and Next"]'
+    static BTN_CANCEL = '//span[text()="Cancel"]'
 
     static PERSONALINFORMATION = {
         LBL_MEMBERCATEGORY: '//label[@for="lblMemberCategory"]',

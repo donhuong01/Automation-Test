@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2024-05-24T07:26:57.344Z",
-    "end": "2024-05-24T07:27:36.065Z",
-    "duration": 38721,
+    "start": "2024-06-03T09:51:21.618Z",
+    "end": "2024-06-03T09:51:57.966Z",
+    "duration": 36348,
     "testsRegistered": 1,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "3ca0ea6c-c847-4092-912e-6b7e7601219b",
+      "uuid": "3f0d0fdf-3739-4811-818f-47cbaaa363cd",
       "title": "",
       "fullFile": "cypress\\e2e\\SMCMS-E2E-Testing\\E2E.cy.js",
       "file": "cypress\\e2e\\SMCMS-E2E-Testing\\E2E.cy.js",
@@ -27,8 +27,8 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "b9d7779b-0c10-4fcd-b185-58a0e10df609",
-          "title": "E2E Auto Testing:FS-016 Interest Group: Registration and Maintenance Activities",
+          "uuid": "e634c707-12ba-476f-9d8b-15f7586becf3",
+          "title": "E2E Auto Testing:FS-014 Membership",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
@@ -36,32 +36,32 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "fca9181c-0e7d-46f2-9b18-3b126667e223",
-              "title": "[TS02] FS-016 Interest Group Main Management",
+              "uuid": "698d0154-36f9-4020-a64e-541cb88762e9",
+              "title": "[TS01] Membership Registration Management",
               "fullFile": "",
               "file": "",
               "beforeHooks": [],
               "afterHooks": [],
               "tests": [
                 {
-                  "title": "[TC01] Creating New Interest Group Main",
-                  "fullTitle": "E2E Auto Testing:FS-016 Interest Group: Registration and Maintenance Activities [TS02] FS-016 Interest Group Main Management [TC01] Creating New Interest Group Main",
+                  "title": "[TC01] Membership Creation and Principal Registration",
+                  "fullTitle": "E2E Auto Testing:FS-014 Membership [TS01] Membership Registration Management [TC01] Membership Creation and Principal Registration",
                   "timedOut": null,
-                  "duration": 38610,
+                  "duration": 36282,
                   "state": "failed",
                   "speed": null,
                   "pass": false,
                   "fail": true,
                   "pending": false,
-                  "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Failed screenshot\",\n        \"value\": \"\\\\E2E.cy.js\\\\E2E Auto TestingFS-016 Interest Group Registration and Maintenance Activities -- [TS02] FS-016 Interest Group Main Management -- [TC01] Creating New Interest Group Main (failed).png\"\n      }\n    ]\n  ]\n}",
-                  "code": "cy.intercept('PUT', 'https://api.uat-smcms.safra.sg/v2/adminapi/interest-group/interest-group-mains/charge-rate').as('ID');\ncy.visit('/membership/interestGroupMainListing');\ncy.wait(2000);\n//click on create new button\n_InterestGroupMainManagement.default.CreateNew();\n//verify interest group main number\n// InterestGroupMainManagement.VerifyIGMainNumber(IGMainNumber)\n//Fill Out Interest Group Main Information\n_InterestGroupMainManagement.default.FilloutIGMainInformation(IGName, Code, MainCategory, IGCategoryGroup, FABSGroup, ClubClassification, LifeStyleGroup, SMCClassification, OwnerEmail);\n//Add location \n_InterestGroupMainManagement.default.AddLocation(LocationName);\n//Remove Location \n// InterestGroupMainManagement.RemoveLocation()\n// //Add Location Again\n// InterestGroupMainManagement.AddLocation(LocationName)\n//FillOut Approver Option Field\n_InterestGroupMainManagement.default.AddApproverOption(ApproverOption, ApproverEmail);\n//Click save as draft button\n_InterestGroupMainManagement.default.SaveAsDraft();\n//Click IG Main cancel\n_InterestGroupMainManagement.default.Cancel();\n//Filter listing using status and verify table item status\n_InterestGroupMainManagement.default.FilterWithStatus(Status);\n//Click on the last page\ncommon.ClickLastPage();\n//click on newly created item\n_InterestGroupMainManagement.default.ClickIGTableLink(IGName);\n//Click charge rate tab\n_InterestGroupMainManagement.default.ClickChargeRateTab();\n//Click add charge type\n_InterestGroupMainManagement.default.ClickAddChargeType();\n//Fillout field for charge type list\n_InterestGroupMainManagement.default.FilloutChargeTypeFields(ChargeName, TransactionType, CalculationType, AmmountType);\n//click on add customer category and select cud stomer category\n_InterestGroupMainManagement.default.AddCustomerCategory(CustomerCategoryName);\n//Fillout product info\n_InterestGroupMainManagement.default.FilloutProductInformation(RegItemCode, RenewalItemCode, DefermentItemCode, ReinstatementItemCode, TerminationItemCode, WaiverItemCode, ReversalItemCode);\n//click on save as draft\n// InterestGroupMainManagement.SaveAsDraft()\n//click on submit button\n_InterestGroupMainManagement.default.Submit();\n//Aprroval work flow\n// cy.visit('/membership/interestGroupMainListing')\n//filter item and varify status\n_InterestGroupMainManagement.default.FilterWithStatus(\"Pending Approval\");\n//click the item that was approved\n// InterestGroupMainManagement.ClickIGTableLink(IGName)\n// Click Submit Button\n// InterestGroupMainManagement.Submit()\n//Varify Notification Msg\n// InterestGroupMainManagement.VarifyNotificationMsg('Record has been saved successfully.')\n// InterestGroupDetail.VarifyTableItemStatus(IGName, 'Pending Approval')\n//Wait for Approval Email\n// cy.wait(5000) \n// cy.wait('@ID')\n// cy.get('@ID').then(xhr => {\n//     const Id = xhr.response.body.value.id\n//     console.log(Id)\n//     cy.log(Id)\n//     cy.visit(`/admin/pendingTaskDetails?id=${Id}`).as('MemID')\n//     cy.wait(2000)\n// })\ncommon.ApprovalWorkFlow('IG', 'Interest Group Main Approval Workflow', 'Approve', 'Approved');\ncy.visit('/membership/interestGroupMainListing');\n//Filter listing using status and verify table item status\n_InterestGroupMainManagement.default.FilterWithStatus('Approved');\n//Click on the last page\ncommon.ClickLastPage();\n//Verify Approved IG Main\n_InterestGroupMainManagement.default.VerifyTableEntries(IGName, 'Approved');\n//Click view interest group button\n// InterestGroupMainManagement.ViewInterestGroup()\n// //click create new button\n// InterestGroupMainManagement.CreateNew()\n// //verify interest group main number\n// // InterestGroupMainManagement.VerifyIGMainNumber(IGMainNumber)\n// //Fill Out Interest Group Main Information\n// InterestGroupMainManagement.FilloutIGMainInformation(IGName, Code, MainCategory, IGCategoryGroup, FABSGroup,\n//     ClubClassification, LifeStyleGroup, SMCClassification, OwnerEmail)\n// //Add location \n// InterestGroupMainManagement.AddLocation(LocationName)\n// //Remove Location \n// InterestGroupMainManagement.RemoveLocation()\n// //Add Location Again\n// InterestGroupMainManagement.AddLocation(LocationName)\n// //FillOut Approver Option Field\n// InterestGroupMainManagement.AddApproverOption(ApproverOption, ApproverEmail)\n// //Click save as draft button\n// InterestGroupMainManagement.SaveAsDraft()\n// //Filter listing using status and verify table item status\n// InterestGroupMainManagement.FilterWithStatus(Status)\n// //click on newly created item\n// InterestGroupMainManagement.ClickIGTableLink(Name)\n// //Click charge rate tab\n// InterestGroupMainManagement.ClickChargeRateTab()\n// //Click add charge type\n// InterestGroupMainManagement.ClickAddChargeType()\n// //Fillout field for charge type list\n// InterestGroupMainManagement.FilloutChargeTypeFields(ChargeName, TransactionType, CalculationType, AmmountType)\n// //click on add customer category and select customer category\n// InterestGroupMainManagement.AddCustomerCategory(CustomerCategoryName)\n// //Fillout product info\n// InterestGroupMainManagement.FilloutProductInformation(RegItemCode, RenewalItemCode, DefermentItemCode, ReinstatementItemCode,\n//     TerminationItemCode, WaiverItemCode, ReversalItemCode)\n// //click on save as draft\n// InterestGroupMainManagement.SaveAsDraft()\n// //click on submit button\n// InterestGroupMainManagement.Submit()\n// //Wait for the item to be rejected by the approver\n// cy.visit('/membership/interestGroupMainListing')\n// //filter item and varify status\n// InterestGroupMainManagement.FilterWithStatus(Status)\n// //click on cr eate new button\n// InterestGroupMainManagement.CreateNew()\n// //verify interest group main number\n// // InterestGroupMainManagement.VerifyIGMainNumber(IGMainNumber)\n// //Fill Out Interest Group Main Information\n// InterestGroupMainManagement.FilloutIGMainInformation(IGName, Code, MainCategory, IGCategoryGroup, FABSGroup,\n//     ClubClassification, LifeStyleGroup, SMCClassification, OwnerEmail)\n// //Add location \n// InterestGroupMainManagement.AddLocation(LocationName)\n// //Remove Location \n// InterestGroupMainManagement.RemoveLocation()\n// //Add Location Again\n// InterestGroupMainManagement.AddLocation(LocationName)\n// //FillOut Approver Option Field\n// InterestGroupMainManagement.AddApproverOption(ApproverOption, ApproverEmail)\n// //Click save as draft button\n// InterestGroupMainManagement.SaveAsDraft()\n// //Filter listing using status and verify table item status\n// InterestGroupMainManagement.FilterWithStatus(Status)\n// //click on newly created item\n// InterestGroupMainManagement.ClickIGTableLink(Name)\n// //Click charge rate tab\n// InterestGroupMainManagement.ClickChargeRateTab()\n// //Click add charge type\n// InterestGroupMainManagement.ClickAddChargeType()\n// //Fillout field for charge type list\n// InterestGroupMainManagement.FilloutChargeTypeFields(ChargeName, TransactionType, CalculationType, AmmountType)\n// //click on add customer category and select customer category\n// InterestGroupMainManagement.AddCustomerCategory(CustomerCategoryName)\n// //Fillout product info\n// InterestGroupMainManagement.FilloutProductInformation(RegItemCode, RenewalItemCode, DefermentItemCode, ReinstatementItemCode,\n//     TerminationItemCode, WaiverItemCode, ReversalItemCode)\n// //click on save as draft\n// InterestGroupMainManagement.SaveAsDraft()\n// //click on submit button\n// InterestGroupMainManagement.Submit()\n// //Wait for the item to be queried by requestor's  PIC  approver or Specific approver\n// cy.visit('/membership/interestGroupMainListing')\n// //filter item and varify status\n// InterestGroupMainManagement.FilterWithStatus(Status)",
+                  "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Failed screenshot\",\n        \"value\": \"\\\\E2E.cy.js\\\\E2E Auto TestingFS-014 Membership -- [TS01] Membership Registration Management -- [TC01] Membership Creation and Principal Registration (failed).png\"\n      }\n    ]\n  ]\n}",
+                  "code": "///////////////////////////////CUSTOMER CREATION////////////////////////////////////////\n// //Enable SFS\n// cy.visit('/membership/moduleSettings')\n// cy.wait(2000)\n// cy.SelectPickerItem('//a[text()=\"Change\"]', 'SAFRA Jurong')\n// cy.wait(5000)\n// MemModuleSettings.SFSActivate('CHECK')\n// cy.wait(5000)\ncy.visit('/membership/customerCheckin', {\n  timeout: 30000\n});\ncy.Click(_CustomerCheckInPage.default.RBTN_NRIC);\ncy.EnterDateSuspension(_CustomerCheckInPage.default.DATE_DATEOFBIRTH, _CustomerCreationData.default.CustomerCreationPrincipal.RegistrationInformation.DOB);\ncy.EnterText(_CustomerCheckInPage.default.TXT_LAST4DIGITSNRIC, LAST4NRIC);\ncy.Click(_CustomerCheckInPage.default.BTN_CHECKIN, {\n  timeout: 30000\n});\ncy.Click(_CustomerCheckInPage.default.BTN_CREATNEW, {\n  timeout: 30000\n});\nCustomerCreation.fillOutRegistrationInfo({\n  name: PrincipalName,\n  // DOB: Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB,\n  gender: _CustomerCreationData.default.CustomerCreationPrincipal.RegistrationInformation.gender\n  /* profilePicture: \"DP.png\" */\n});\nCustomerCreation.fillOutAddressInformation({\n  postalCode: _CustomerCreationData.default.CustomerCreationPrincipal.AddressInformation.postalCode,\n  address: _CustomerCreationData.default.CustomerCreationPrincipal.AddressInformation.address,\n  unitNumber: _CustomerCreationData.default.CustomerCreationPrincipal.AddressInformation.unitNumber,\n  POBOx: _CustomerCreationData.default.CustomerCreationPrincipal.AddressInformation.POBOx,\n  myMailbox: _CustomerCreationData.default.CustomerCreationPrincipal.AddressInformation.myMailbox\n});\nCustomerCreation.fillOutContactInformation({\n  handPhone: '86585896',\n  emailAddress: PrincipalEmail,\n  // emergencyContact: Customerdata.CustomerCreationPrincipal.ContactInformation.emergencyContact,\n  // homeNumber: '56585896',\n  // Preferred Contact Mode\n  preferredContactModeSelectAll: _CustomerCreationData.default.CustomerCreationPrincipal.ContactInformation.preferredContactModeSelectAll\n  // preferredContactModeEmail: Customerdata.CustomerCreationPrincipal.ContactInformation.preferredContactModeEmail,\n  // preferredContactModeMail: Customerdata.CustomerCreationPrincipal.ContactInformation.preferredContactModeMail,\n  // preferredContactModeSMS: Customerdata.CustomerCreationPrincipal.ContactInformation.preferredContactModeSMS,\n  // preferredContactModeVoiceCall: Customerdata.CustomerCreationPrincipal.ContactInformation.preferredContactModeVoiceCall,\n  // preferredContactModePushNotification: Customerdata.CustomerCreationPrincipal.ContactInformation.preferredContactModePushNotification,\n  // //Consent Information\n  // consentInformationMarketing: Customerdata.CustomerCreationPrincipal.ContactInformation.consentInformationMarketing,\n  // consentInformationServiceNotification: Customerdata.CustomerCreationPrincipal.ContactInformation.consentInformationServiceNotification,\n  // consentInformationTransactional: Customerdata.CustomerCreationPrincipal.ContactInformation.consentInformationTransactional,\n});\nCustomerCreation.save();\n///////////////////////////////PRINCIPAL REGISTRATION////////////////////////////////////////\ncy.Click(_Customer_LandingPage.default.SAFRA_Member);\ncy.Click(_Customer_LandingPage.default.Membership_Registration);\ncy.wait(3000);\nMemRegPrincipal.verifyPersonalInformation({\n  MemberCategory: _data.default.memberregistrationprincipal.Personal_Info.MemberCategory,\n  // NameOnNRIC: PrincipalName,\n  // NameOnCard: PrincipalName,\n  Nric: CustomerNRICFull,\n  Gender: _data.default.memberregistrationprincipal.Personal_Info.Gender,\n  // DateofBirth: data.memberregistrationprincipal.Personal_Info.DateofBirth,\n  Age: _data.default.memberregistrationprincipal.Personal_Info.Age,\n  NSStatus: _data.default.memberregistrationprincipal.Personal_Info.NSStatus,\n  NSRank: _data.default.memberregistrationprincipal.Personal_Info.NSRank,\n  MemberType: _data.default.memberregistrationprincipal.Personal_Info.MemberType,\n  Nationality: _data.default.memberregistrationprincipal.Personal_Info.Nationality,\n  MaritalStatus: _data.default.memberregistrationprincipal.Personal_Info.MaritalStatus,\n  CardType: _data.default.memberregistrationprincipal.Personal_Info.CardType,\n  InterestinDBSCard: _data.default.memberregistrationprincipal.Personal_Info.InterestinDBSCard\n  // ProfilePicture: data.memberregistrationprincipal.Personal_Info.ProfilePicture\n});\n// MemRegPrincipal.SaveAndNext()\n// cy.wait(10000)\n// MemRegPrincipal.VerifyPageTitle('Membership Registration - Principal')\nMemRegPrincipal.SaveAndNextPrincipal();\n//cy.wait(15000) //QA\ncy.wait(3000); //UAT\n///////////////////////////////////TENURE SELECTION////////////////////////////////////////////////////////////\n// Membership Tenure Selection\nMemTenureSelect.principalTenureSelection(PrincipalName, '2 Years');\n// cy.wait(30000)\n// Click on add to cart\nMemTenureSelect.addToCart();\n// Shopping cart and Payments\nShoppingCart.fillOutandApplyPayment('CSO-CASH');\n// Wait for 3 minites\n//cy.wait(25000) //QA\ncy.wait(5000); //UAT\n//Verify New Created Member Reason Code\n_MembershipRenewal.default.VerifyMemberStatus(PrincipalName, LAST4NRIC, 'New');\n// Logout\ncy.LogoutOfSmcms();",
                   "err": {
-                    "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//label[text()=\"Interest Group Category Group\"]/following-sibling::input`, but never found it.",
-                    "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `//label[text()=\"Interest Group Category Group\"]/following-sibling::input`, but never found it.\n    at Context.eval (webpack:///./cypress/support/commands-com.js:1483:7)",
+                    "message": "AssertionError: Timed out retrying after 30000ms: Expected to find element: `//button[text()=\"Check In\"]`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 30000ms: Expected to find element: `//button[text()=\"Check In\"]`, but never found it.\n    at Context.eval (webpack:///./cypress/support/commands-com.js:30:7)",
                     "diff": null
                   },
-                  "uuid": "3a50d53e-855e-444e-8b07-7ef029b7a8ad",
-                  "parentUUID": "fca9181c-0e7d-46f2-9b18-3b126667e223",
+                  "uuid": "b4c1f2a3-cc64-4e80-b000-edcce05c01b8",
+                  "parentUUID": "698d0154-36f9-4020-a64e-541cb88762e9",
                   "isHook": false,
                   "skipped": false
                 }
@@ -69,11 +69,11 @@
               "suites": [],
               "passes": [],
               "failures": [
-                "3a50d53e-855e-444e-8b07-7ef029b7a8ad"
+                "b4c1f2a3-cc64-4e80-b000-edcce05c01b8"
               ],
               "pending": [],
               "skipped": [],
-              "duration": 38610,
+              "duration": 36282,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000

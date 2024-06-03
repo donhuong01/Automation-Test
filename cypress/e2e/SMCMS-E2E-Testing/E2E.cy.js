@@ -223,8 +223,8 @@ beforeEach(() => {
    cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
 
   //Select Channel
-  cy.visit('/membership/customerCheckin')
-  cy.SelectPickerItem('//a[text()="Change"]', 'SAFRA HQ')
+  // cy.visit('/membership/customerCheckin')
+  // cy.SelectPickerItem('//a[text()="Change"]', 'SAFRA HQ')
 })
 
 
@@ -238,17 +238,17 @@ beforeEach(() => {
 
 //  describe('E2E Auto Testing:FS-002 Reports', () => {
 
-  // Accommodation_Report()
-  // AdminSetting_Report()
-  // E1_Report()
-  // Facility_Report()
-  // Gifts_Report()
-  // IG_Report()
-  // Membership_Report()
-  // MemberCards_Report()
-  // Reports_Payments()
-  // InHouseMerchandise_Report()
-  // SRP_Report()
+//   Accommodation_Report()
+//   AdminSetting_Report()
+//   E1_Report()
+//   Facility_Report()
+//   Gifts_Report()
+//   IG_Report()
+//   Membership_Report()
+//   MemberCards_Report()
+//   Reports_Payments()
+//   InHouseMerchandise_Report()
+//   SRP_Report()
 //   Promotion_Report()
 
 //  })
@@ -296,9 +296,9 @@ beforeEach(() => {
 // })
 
 
-// describe('E2E Auto Testing:FS-014 Membership', () => {
+describe('E2E Auto Testing:FS-014 Membership', () => {
 
-//  MembershipRegistration(CustomerNRICFull) // Quick Testing on Membership Registration
+ MembershipRegistration(CustomerNRICFull) // Quick Testing on Membership Registration
 //  MembershipPrincipalRegistration(CustomerNRICFull,DepCustomerNRICFull, Dep2CustomerNRICFull) // Full Testing on Membership Registration
 //  CustomerCheckIn()
 //  MemberType() //Needs to do in manual test since it always has duplicate
@@ -333,7 +333,7 @@ beforeEach(() => {
   //   DepCustomerNRICFull,
   //   E2EData.BATCH_REGISTRATION.PRINCIPALID_FOR_NEW_DEPENDENT)
 
-// })
+})
 
 
 
@@ -367,7 +367,7 @@ beforeEach(() => {
 
 
 
-describe('E2E Auto Testing:FS-016 Interest Group: Registration and Maintenance Activities', ()=> {
+// describe('E2E Auto Testing:FS-016 Interest Group: Registration and Maintenance Activities', ()=> {
 
 // InterestGroupMembershipRegistration()
 // InterestGMembershipRenewal(CustomerNRICFull) //Change NRIC each time after runing this code
@@ -382,10 +382,10 @@ describe('E2E Auto Testing:FS-016 Interest Group: Registration and Maintenance A
 // InterestGMembershipwaiver(E2EData.MEMBER_NAME_FOR_IG_WAIVER)  //Provide Member Name
 // InterestGroupManagement()
 // InterestGroupMembershipManagment()
-InterestGroupMainManagements()
+// InterestGroupMainManagements()
 // //IG Renewal Advice
 
-})
+// })
 
 
 
@@ -427,7 +427,7 @@ InterestGroupMainManagements()
 // BatchMembershipWaiver(CustomerNRICFull, DepCustomerNRICFull) // Enter 2 NRIC's for Member Registration
 // MemDefermentRequest(CustomerNRICFull2) //Change NRIC before runing this function
 // MembershipResignationManagement( CustomerNRICFull3) //Change NRIC before runing this function
-// MembershipExpulsionAndReinstatment(DepCustomerNRICFull4) //Change NRIC before runing this function
+// MembershipExpulsionAndReinstatment(CustomerNRICFull) //Change NRIC before runing this function
     //Membership Transaction Cancellation
     //Membership Adjustment
 // })
@@ -461,7 +461,7 @@ InterestGroupMainManagements()
 // describe('E2E Auto Testing:FS-031 Gift: Redemption Management', ()=> {
 
 //     GiftModuleSettings()
-//     GiftsManagement() // Always update Publishdatefrom data to current day
+      //  GiftsManagement() 
 //     GiftRedemptionTransactions()
 //     GiftRedemptionManagementInsertionAndCollection(E2EData.GRM_INSERTION_AND_COLLECTION.MEMBERID,E2EData.GRM_INSERTION_AND_COLLECTION.GIFT_NAME,E2EData.GRM_INSERTION_AND_COLLECTION.GIFT_QUANTITY) //Pass as Params 1.MemberID 2.Gift Name 3.Quantity
 //     GiftRedemptionManagementInsertionAndCancellation(E2EData.GRM_INSERTION_AND_CANCELLETION.MEMBERID,E2EData.GRM_INSERTION_AND_CANCELLETION.GIFT_NAME,E2EData.GRM_INSERTION_AND_CANCELLETION.GIFT_QUANTITY) //Pass as Params 1.MemberID 2.Gift Name 3.Quantity

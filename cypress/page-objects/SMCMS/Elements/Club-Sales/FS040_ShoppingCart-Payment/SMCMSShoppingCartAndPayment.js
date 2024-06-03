@@ -21,10 +21,10 @@ class elems_SMCMSShoppingCartAndPayment {
         LBL_TOTAL : '//label[text()="Remaining Balance:"]/parent::div//label[@for="lblRemainingBalance"]',
         DRP_PAYMENTMODE : '//span[@id="drpPaymentMode"]',
         TXT_AMOUNT : '//input[@id="txtAmount"]',
-        BTN_APPLYPAYMENT : '//button[text()="Apply Payment"]',
+        BTN_APPLYPAYMENT : '//span[text()="Apply Payment"]',
         LBL_REMAININGBALANCE : '//span[text()="Remaining Balance: "]//b',
-        BTN_PAYNOW : '//button[text()="Pay Now"]',
-        BTN_COMPLETE : '//button[text()="Complete"]'
+        BTN_PAYNOW : '//span[text()="Pay Now"]',
+        BTN_COMPLETE : '//span[text()="Complete"]'
     }
 
     static MemberInformation = {

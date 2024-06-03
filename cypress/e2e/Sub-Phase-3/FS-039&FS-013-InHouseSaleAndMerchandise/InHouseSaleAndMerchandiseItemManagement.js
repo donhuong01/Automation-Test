@@ -8,7 +8,7 @@ const common = new Common()
 
 
 const { MerchandiseItemName, InhouseItemName, LocationName, LifeStyle, FabsGroup, ClubClassification,
-    SMCClassification, ChargeName, TransactionType, CalculationType, AmountType, CategoryName, ProductNumber, Remarks, EarnSAFRAPoints } = data.InHouseSaleAndMerchandiseItemChargeSetup
+    SMCClassification, ChargeName, TransactionType, CalculationType, AmountType, CategoryName, ProductNumber, ProductNumber2, Remarks, EarnSAFRAPoints } = data.InHouseSaleAndMerchandiseItemChargeSetup
 
 const InHouseSaleAndMerchandiseItemManagement = () => {
 
@@ -70,7 +70,7 @@ describe('FS-039 & FS-013 In-House Sales and Merchandise Item Management', funct
 
         InHouseSaleAndMerchandiseItemChargeSetup.CustomerCategory(CategoryName)
 
-        InHouseSaleAndMerchandiseItemChargeSetup.ProductMasterInformation(ProductNumber, Remarks, EarnSAFRAPoints)
+        InHouseSaleAndMerchandiseItemChargeSetup.ProductMasterInformation(ProductNumber2, Remarks, EarnSAFRAPoints)
 
         InHouseSaleAndMerchandiseItemChargeSetup.SaveAsDraft()
 
