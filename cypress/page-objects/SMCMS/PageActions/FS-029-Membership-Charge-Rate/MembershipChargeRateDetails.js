@@ -60,8 +60,8 @@ class MembershipChargeRateDetail{
         {
           cy.wait(2000)
         //  cy.SelectDropDownItem(elems_MembershipChargeRateDetails.GeneralInformation.DRP_STATUS,Status)
-          cy.xpath('//span[@id="drpStatus"]//span[@class="k-input"]').click({force:true})
-          cy.xpath(`//li[text()="${Status}"]`).click({force:true})
+          cy.xpath('//span[@id="drpStatus"]//span[@class="k-input-value-text"]').click({force:true})
+          cy.xpath(`//span[text()="${Status}"]`).click({force:true})
       }
 
           // Error Handling
@@ -99,24 +99,24 @@ class MembershipChargeRateDetail{
        if(ChargeTypeName !== undefined)
           {
            cy.EnterText(
-          '//h3[text()="Charge Type List"]/parent::div//table//input[@class="k-textbox"]', ChargeTypeName)
+          '//h3[text()="Charge Type List"]/parent::div//table//input[@class="k-input"]', ChargeTypeName)
           }
         if(TransectionType !== undefined)
           {
             cy.SelectMenuInTable(
-            '//h3[@class="card-title" and contains(.,"Charge Type List")]//following-sibling::div//table[@class="k-grid-table"]',
+            '//h3[@class="card-title" and contains(.,"Charge Type List")]//following-sibling::div//table[@class="k-table k-grid-table k-table-md"]',
             '1','4',TransectionType)
           }
         if(CalculationType !== undefined)
           {
             cy.SelectMenuInTable(
-              '//h3[@class="card-title" and contains(.,"Charge Type List")]//following-sibling::div//table[@class="k-grid-table"]',
+              '//h3[@class="card-title" and contains(.,"Charge Type List")]//following-sibling::div//table[@class="k-table k-grid-table k-table-md"]',
               '1','5', CalculationType)
           }
         if(AmountType !== undefined)
          {
             cy.SelectMenuInTable(
-            '//h3[@class="card-title" and contains(.,"Charge Type List")]//following-sibling::div//table[@class="k-grid-table"]',
+            '//h3[@class="card-title" and contains(.,"Charge Type List")]//following-sibling::div//table[@class="k-table k-grid-table k-table-md"]',
             '1','6', AmountType)
          }
          // Error Handling
@@ -311,7 +311,7 @@ class MembershipChargeRateDetail{
           cy.EnterText('//input[@name="searchName"]',SearchName)
          }
          
-          cy.Click('//button[@class="k-button search-button"]')
+          cy.Click('(//button[@class="k-button k-button-md k-button-solid k-button-solid-base k-rounded-md search-button"])[1]')
           cy.SelectTableItem('//div[@role="dialog"]//table',
           'Product No.', ProductNumber)
           cy.Click('//button[text()="Select"]')
@@ -328,7 +328,7 @@ class MembershipChargeRateDetail{
          cy.SelectPickerDifferentItemsSeachBTN(elems_MembershipChargeRateDetails.AccessModeList.BTN_ADDACCESSMODE,
           elems_MembershipChargeRateDetails.AccessModeList.TXT_ACCESSMODENAME,
           AccessMode,
-          '//button[text()="Search Filters"]')
+          '//span[text()="Search Filters"]')
       }
 
     /*****************************************************
@@ -342,7 +342,7 @@ class MembershipChargeRateDetail{
          cy.SelectPickerDifferentItemsSeachBTN(elems_MembershipChargeRateDetails.ChargeRateList.BTN_ADDCUSTOMERCATEGORY,
           elems_MembershipChargeRateDetails.ChargeRateList.TXT_CUSTOMERCATEGORYNAME,
           CustomerCategoryName,
-          '//button[text()="Search Filters"]'
+          '//span[text()="Search Filters"]'
           )
          
       

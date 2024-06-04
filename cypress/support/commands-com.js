@@ -600,7 +600,7 @@ Cypress.Commands.add("IncreaseFieldValue", (locator, increaseAmount) => {
     cy.log('------ IncreaseFieldValue : ' + locator + ' ------');
 
     for (let increaseClickCount = 0; increaseClickCount < increaseAmount; increaseClickCount++) {
-        cy.xpath(locator + '/parent::span//span[@aria-label="Increase value"]').click()
+        cy.xpath(locator + '/parent::span//span//button[@aria-label="Increase value"]').click() ///parent::span//span[@aria-label="Increase value"]
     }
 })
 
@@ -1432,7 +1432,7 @@ Cypress.Commands.add("TenureSelectionBatch", (locator, columnValue, TenureDurati
 })
 
 /*****************************************************
- * Command: AddOperatingHour
+ * Command: SelectMenuInTable
  * Description: This function add operating hour
  * @param {string} tableLocator // Table locator
  * @param {string} rowRef // Row reference
@@ -1441,8 +1441,8 @@ Cypress.Commands.add("TenureSelectionBatch", (locator, columnValue, TenureDurati
  *****************************************************/
 Cypress.Commands.add('SelectMenuInTable', (tableLocator, rowRef, tdata, Value) => {
 
-    cy.xpath(tableLocator + `//tr[${rowRef}]//td[${tdata}]` + '//span[@class="k-icon k-i-arrow-s"]').click()
-    cy.xpath(`//li[text()="${Value}"]`).click()
+    cy.xpath(tableLocator + `//tr[${rowRef}]//td[${tdata}]` + '//span[@class="k-dropdownlist k-picker k-picker-md k-rounded-md k-picker-solid"]').click()
+    cy.xpath(`//span[text()="${Value}"]`).click()
 
 })
 

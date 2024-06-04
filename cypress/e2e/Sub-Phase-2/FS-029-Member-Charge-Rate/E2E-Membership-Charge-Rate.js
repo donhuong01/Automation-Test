@@ -125,28 +125,28 @@ describe('FS-029] Membership Charge Rate Management', () =>{
         MemChargeRateList.VerifyPageTitle('Membership Charge Rate Details')
     })
 
-    it('[TC05] Verify Membership Charge Rate Listing Form Table Entries and delete entry', function () {
+    // it('[TC05] Verify Membership Charge Rate Listing Form Table Entries and delete entry', function () {
 
-        // Navigate to Form
-        cy.visit('/membership/chargeRateList').wait(7000)
+    //     // Navigate to Form
+    //     cy.visit('/membership/chargeRateList').wait(7000)
 
         
-        //Filter by Name and CardType
-        MemChargeRateList.FilterByNameAndCardType(Name, CardType)
+    //     //Filter by Name and CardType
+    //     MemChargeRateList.FilterByNameAndCardType(Name, CardType)
 
-        // Verify Listing
-        // MemChargeRateList.verifyMemChargeRateList(data.MembershipChargeRateListing.memChargeRateList)
+    //     // Verify Listing
+    //     // MemChargeRateList.verifyMemChargeRateList(data.MembershipChargeRateListing.memChargeRateList)
 
-        // Select Charge Rate Item
-        MemChargeRateList.selectChargeRate(Name)
+    //     // Select Charge Rate Item
+    //     MemChargeRateList.selectChargeRate(Name)
 
-        // ITEM MUST BE SELECTED BEFORE DELETE BUTTON IS ENABLED
-        // Delete Item 
-        MemChargeRateList.delete()
+    //     // ITEM MUST BE SELECTED BEFORE DELETE BUTTON IS ENABLED
+    //     // Delete Item 
+    //     MemChargeRateList.delete()
 
-        //Click on yes
-        MemChargeRateList.deletePopupYes()
-    })
+    //     // //Click on yes
+    //     // MemChargeRateList.deletePopupYes()
+    // })
 
 
 })

@@ -6,9 +6,9 @@ class elems_BadAddressUpdateDetail {
         UPL_CANCEL : '//span[@title="Cancel"]/parent::button'
     }
     static LBL_STATUS = '//label[text()="Status"]/parent::div//label[@for="lblStatus"]'
-    static BTN_VALIDATE = '//button[text()="Validate"]'
-    static BTN_UPLOAD = '//button[text()="Upload"]'
-    static BTN_CANCEL = '//button[text()="Cancel"]'
+    static BTN_VALIDATE = '//span[text()="Validate"]'
+    static BTN_UPLOAD = '//span[text()="Upload"]'
+    static BTN_CANCEL = '//span[text()="Cancel"]'
 }
 
 export default elems_BadAddressUpdateDetail

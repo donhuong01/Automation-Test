@@ -11,12 +11,12 @@ class elems_MembershipChargeRateDetails {
     }
 
     static ChargeTypeList = {
-        BTN_ADDCHARGETYPE : '//button[text()="Add Charge Type"]',
+        BTN_ADDCHARGETYPE : '//span[text()="Add Charge Type"]',
         TBL_CHARGETYPELIST : '//h3[text()="Charge Type List"]/parent::div//table'
     }
 
     static ChargeRateList = {
-        BTN_ADDCUSTOMERCATEGORY : '//h3[text()="Charge Rate List"]/parent::div//button[text()=" Add Customer Category"]',
+        BTN_ADDCUSTOMERCATEGORY : '//h3[text()="Charge Rate List"]/parent::div//span[text()=" Add Customer Category"]',
         TBL_CHARGERATELIST : '//h3[text()="Charge Rate List"]/parent::div//table',
         TXT_CUSTOMERCATEGORYNAME : '//input[@id="txtCustomerCategoryName"]',
         BTN_SEARCHFILTERS : '//button[@form="formCustomerCategoryDialog" and @type="submit"]',
@@ -29,19 +29,19 @@ class elems_MembershipChargeRateDetails {
     }
 
     static AccessModeList = {
-        BTN_ADDACCESSMODE : '//h3[text()="Access Mode List"]/parent::div//button[text()="Add Access Mode"]',
+        BTN_ADDACCESSMODE : '//h3[text()="Access Mode List"]/parent::div//span[text()="Add Access Mode"]',
         TXT_ACCESSMODENAME : '//input[@id="txtAccessModeName"]',
         TBL_ACCESSMODELIST : '//h3[text()="Access Mode List"]/parent::div//table',
         BTN_SEARCHFILTERS : '//button[@form="formAccessModeDialog"]'
     }
 
     static CustomerCategoryAccessModeList = {
-        BTN_ADDCUSTOMERCATEGORY : '//h3[text()="Customer Category Access Mode List "]/parent::div//button[text()=" Add Customer Category"]',
+        BTN_ADDCUSTOMERCATEGORY : '//h3[text()="Customer Category Access Mode List "]/parent::div//span[text()=" Add Customer Category"]',
         TBL_CUSTMERCATEGRYACCESSMODELIST : '//h3[text()="Customer Category Access Mode List "]/parent::div//table'
     }
 
-    static BTN_SAVE = '//button[text()="Save"]'
-    static BTN_CANCEL = '//button[text()="Cancel"]'
+    static BTN_SAVE = '//span[text()="Save"]'
+    static BTN_CANCEL = '//span[text()="Cancel"]'
 }
 
 export default elems_MembershipChargeRateDetails

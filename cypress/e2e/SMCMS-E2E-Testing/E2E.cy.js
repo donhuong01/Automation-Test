@@ -296,11 +296,11 @@ beforeEach(() => {
 // })
 
 
-// describe('E2E Auto Testing:FS-014 Membership', () => {
+describe('E2E Auto Testing:FS-014 Membership', () => {
 
 //  MembershipRegistration(CustomerNRICFull) // Quick Testing on Membership Registration
 //  MembershipPrincipalRegistration(CustomerNRICFull,DepCustomerNRICFull, Dep2CustomerNRICFull) // Full Testing on Membership Registration
-//  CustomerCheckIn()
+ CustomerCheckIn()
 //  MemberType() //Needs to do in manual test since it always has duplicate
 //  BadAddressUpdate()
 //  MembershipRenewalAdvise()
@@ -333,7 +333,7 @@ beforeEach(() => {
   //   DepCustomerNRICFull,
   //   E2EData.BATCH_REGISTRATION.PRINCIPALID_FOR_NEW_DEPENDENT)
 
-// })
+})
 
 
 

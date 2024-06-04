@@ -79,7 +79,7 @@ describe('[TS16] Bad Address Update', function () {
              cy.visit('/membership/badAddressUpdateList')
              cy.wait(3000)
 
-             cy.Click('//span[@class="k-icon k-i-arrow-end-right"]')
+             cy.Click('//span[@class="k-icon k-svg-icon k-svg-i-caret-alt-to-right k-button-icon"]')
              cy.wait(5000)
         
              //click on item
@@ -95,7 +95,7 @@ describe('[TS16] Bad Address Update', function () {
             // Validate Form
             BadAddressDtl.validate()
 
-            cy.Click('//span[@class="k-icon k-i-arrow-end-right"]')
+            cy.Click('//span[@class="k-icon k-svg-icon k-svg-i-caret-alt-to-right k-button-icon"]')
             cy.wait(5000)
 
             // Verify Listing
