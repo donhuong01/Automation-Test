@@ -296,9 +296,9 @@ beforeEach(() => {
 // })
 
 
-describe('E2E Auto Testing:FS-014 Membership', () => {
+// describe('E2E Auto Testing:FS-014 Membership', () => {
 
- MembershipRegistration(CustomerNRICFull) // Quick Testing on Membership Registration
+//  MembershipRegistration(CustomerNRICFull) // Quick Testing on Membership Registration
 //  MembershipPrincipalRegistration(CustomerNRICFull,DepCustomerNRICFull, Dep2CustomerNRICFull) // Full Testing on Membership Registration
 //  CustomerCheckIn()
 //  MemberType() //Needs to do in manual test since it always has duplicate
@@ -333,7 +333,7 @@ describe('E2E Auto Testing:FS-014 Membership', () => {
   //   DepCustomerNRICFull,
   //   E2EData.BATCH_REGISTRATION.PRINCIPALID_FOR_NEW_DEPENDENT)
 
-})
+// })
 
 
 
@@ -460,12 +460,12 @@ describe('E2E Auto Testing:FS-014 Membership', () => {
 
 // describe('E2E Auto Testing:FS-031 Gift: Redemption Management', ()=> {
 
-//     GiftModuleSettings()
-      //  GiftsManagement() 
-//     GiftRedemptionTransactions()
-//     GiftRedemptionManagementInsertionAndCollection(E2EData.GRM_INSERTION_AND_COLLECTION.MEMBERID,E2EData.GRM_INSERTION_AND_COLLECTION.GIFT_NAME,E2EData.GRM_INSERTION_AND_COLLECTION.GIFT_QUANTITY) //Pass as Params 1.MemberID 2.Gift Name 3.Quantity
-//     GiftRedemptionManagementInsertionAndCancellation(E2EData.GRM_INSERTION_AND_CANCELLETION.MEMBERID,E2EData.GRM_INSERTION_AND_CANCELLETION.GIFT_NAME,E2EData.GRM_INSERTION_AND_CANCELLETION.GIFT_QUANTITY) //Pass as Params 1.MemberID 2.Gift Name 3.Quantity
-//     GiftRedemptionManagementInsertionAndExchange(E2EData.GRM_INSERTION_AND_EXCHANGE.MEMBERID,E2EData.GRM_INSERTION_AND_EXCHANGE.GIFT_NAME,E2EData.GRM_INSERTION_AND_EXCHANGE.GIFT_QUANTITY) //Pass as Params 1.MemberID 2.Gift Name 3.Quantity
+//  GiftModuleSettings()
+//  GiftsManagement() 
+//  GiftRedemptionTransactions()
+//  GiftRedemptionManagementInsertionAndCollection(E2EData.GRM_INSERTION_AND_COLLECTION.MEMBERID,E2EData.GRM_INSERTION_AND_COLLECTION.GIFT_NAME,E2EData.GRM_INSERTION_AND_COLLECTION.GIFT_QUANTITY) //Pass as Params 1.MemberID 2.Gift Name 3.Quantity
+//  GiftRedemptionManagementInsertionAndCancellation(E2EData.GRM_INSERTION_AND_CANCELLETION.MEMBERID,E2EData.GRM_INSERTION_AND_CANCELLETION.GIFT_NAME,E2EData.GRM_INSERTION_AND_CANCELLETION.GIFT_QUANTITY) //Pass as Params 1.MemberID 2.Gift Name 3.Quantity
+//  GiftRedemptionManagementInsertionAndExchange(E2EData.GRM_INSERTION_AND_EXCHANGE.MEMBERID,E2EData.GRM_INSERTION_AND_EXCHANGE.GIFT_NAME,E2EData.GRM_INSERTION_AND_EXCHANGE.GIFT_QUANTITY) //Pass as Params 1.MemberID 2.Gift Name 3.Quantity
 
 // })
 

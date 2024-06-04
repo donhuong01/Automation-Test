@@ -202,22 +202,22 @@ const E2EData = {
    // FS-031 Gift Redemption Management
    GRM_INSERTION_AND_COLLECTION: {
 
-      MEMBERID: "A300000387",
-      GIFT_NAME: "$1 MCDONALD’S GIFT CERTIFICATE",
+      MEMBERID: "A300006923",
+      GIFT_NAME: "Gift Certificate test 1",
       GIFT_QUANTITY: "1"
    },
 
    GRM_INSERTION_AND_CANCELLETION: {
 
-      MEMBERID: "A300000387",
-      GIFT_NAME: "$1 MCDONALD’S GIFT CERTIFICATE",
+      MEMBERID: "A300006923",
+      GIFT_NAME: "Gift Certificate test 1",
       GIFT_QUANTITY: "1"
    },
 
    GRM_INSERTION_AND_EXCHANGE: {
 
-      MEMBERID: "A300000387",
-      GIFT_NAME: "$1 MCDONALD’S GIFT CERTIFICATE",
+      MEMBERID: "A300006923",
+      GIFT_NAME: "Gift Certificate test 1",
       GIFT_QUANTITY: "1"
    },
 

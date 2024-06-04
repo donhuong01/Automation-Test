@@ -9,9 +9,9 @@ class  elems_PendingTaskDetail {
     static DRP_APPROVALOUTCOME = '//span[@id="drpApprovalOutcome"]'
     static LBL_STATUS = '//label[text()="Status"]/parent::div//label[@for="lblStatus"]'
     static TXTAREA_REMARK = '//textarea[@id="areaRemark"]'
-    static BTN_SAVE = '//button[text()="Save"]'
-    static BTN_SUBMIT = '//button[text()="Submit"]'
-    static BTN_CANCEL = '//button[text()="Cancel"]'
+    static BTN_SAVE = '//span[text()="Save"]'
+    static BTN_SUBMIT = '//span[text()="Submit"]'
+    static BTN_CANCEL = '//span[text()="Cancel"]'
 }
 
 export default elems_PendingTaskDetail 
