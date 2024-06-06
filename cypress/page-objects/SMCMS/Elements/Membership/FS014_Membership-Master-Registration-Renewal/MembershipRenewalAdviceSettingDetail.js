@@ -1,13 +1,14 @@
 class elems_MembershipRenewalAdviceSettingDetail{
 
-    static BTN_SAVE = '//button[text()="Save"]'
-    static BTN_CANCEL = '//button[text()="Cancel"]'
+    static BTN_SAVE = '//span[text()="Save"]'
+    static BTN_CANCEL = '//span[text()="Cancel"]'
     static TXT_NAME = '//input[@id="txtName"]'
-    static BTN_CREATENEW = '//button[text()="Create New"]'
+    static BTN_CREATENEW = '//span[text()="Create New"]'
     static TXTAREA_DESCRIPTION = '//textarea[@id="txtDescription"]'
     static DRP_MEMBERCATEGORY = '//span[@id="drpMemberCategory"]'
     static DRP_GENDER = '//span[@id="drpGender"]'
     static LST_MEMBERTYPECODE = '//input[@id="txtMemberTypeCode"]'
+    static PCK_MEMBERTYPECODE = '(//button[@class="k-button k-button-md k-button-solid k-button-solid-base k-rounded-md"])[2]'
     static DRP_MEMBERSTATUSREASON = '//span[@id="drpMemberStatusReason"]'
     static PCK_EXPIRYDATEFROM = '//input[@id="dtpExpiryDateFrom"]'
     static PCK_EXPIRYDATETO = '//input[@id="dtpExpiryDateTo"]'

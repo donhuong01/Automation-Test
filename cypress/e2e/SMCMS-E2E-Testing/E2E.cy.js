@@ -300,11 +300,11 @@ describe('E2E Auto Testing:FS-014 Membership', () => {
 
 //  MembershipRegistration(CustomerNRICFull) // Quick Testing on Membership Registration
 //  MembershipPrincipalRegistration(CustomerNRICFull,DepCustomerNRICFull, Dep2CustomerNRICFull) // Full Testing on Membership Registration
- CustomerCheckIn()
+//  CustomerCheckIn()
 //  MemberType() //Needs to do in manual test since it always has duplicate
 //  BadAddressUpdate()
 //  MembershipRenewalAdvise()
-//  WithdrawalOfConsent(E2EData.ACTIVE_MEMBERID_FOR_WITHDRAWAL_OF_CONSENT) //Enter Member ID for Withdrawal Of Consent
+ WithdrawalOfConsent(E2EData.ACTIVE_MEMBERID_FOR_WITHDRAWAL_OF_CONSENT) //Enter Member ID for Withdrawal Of Consent
 //  SourceChannel()
 // MemberStatusReasonCode() // Needs to do in manual test since it may affect current data
 //  MassUpdateForMemberData() 
@@ -436,7 +436,7 @@ describe('E2E Auto Testing:FS-014 Membership', () => {
 
 // describe('E2E Auto Testing:FS-029 Member: Charge Rate', ()=> {
 
-//    MembershipChargeRate()
+  //  MembershipChargeRate()
 
 // })
 
@@ -444,14 +444,14 @@ describe('E2E Auto Testing:FS-014 Membership', () => {
 
 //  describe('E2E Auto Testing:FS-030 Membership: Card Management', ()=> {
 
-//     VolunteerCardManagement(E2EData.MEMBERID_VOLUNTERR_CARD_MANAGEMENT, E2EData.MEMBER_NAME_VOLUNTERR_CARD_MANAGEMENT,
-//                             E2EData.LAST4DIGITNRIC_VOLUNTERR_CARD_MANAGEMENT, E2EData.CARD_TYPE_VOLUNTERR_CARD_MANAGEMENT) //Enter Active MemberID, Name, Last 4 digist of NRIC and Card Type
+    // VolunteerCardManagement(E2EData.MEMBERID_VOLUNTERR_CARD_MANAGEMENT, E2EData.MEMBER_NAME_VOLUNTERR_CARD_MANAGEMENT,
+    //                         E2EData.LAST4DIGITNRIC_VOLUNTERR_CARD_MANAGEMENT, E2EData.CARD_TYPE_VOLUNTERR_CARD_MANAGEMENT) //Enter Active MemberID, Name, Last 4 digist of NRIC and Card Type
 
-//     SAFRACardManagement(E2EData.MEMBERID_SAFRA_CARD_MANAGEMENT, E2EData.MEMBER_NAME_SAFRA_CARD_MANAGEMENT,
-//                         E2EData.LAST4DIGITNRIC_SAFRA_CARD_MANAGEMENT, E2EData.CARD_TYPE_SAFRA_CARD_MANAGEMENT) //Enter Active MemberID, Name, Last 4 digist of NRIC and Card Type
+    // SAFRACardManagement(E2EData.MEMBERID_SAFRA_CARD_MANAGEMENT, E2EData.MEMBER_NAME_SAFRA_CARD_MANAGEMENT,
+    //                     E2EData.LAST4DIGITNRIC_SAFRA_CARD_MANAGEMENT, E2EData.CARD_TYPE_SAFRA_CARD_MANAGEMENT) //Enter Active MemberID, Name, Last 4 digist of NRIC and Card Type
 
-//     VIPCardManagement(E2EData.MEMBERID_VIP_CARD_MANAGEMENT, E2EData.MEMBER_NAME_VIP_CARD_MANAGEMENT,
-//                       E2EData.LAST4DIGITNRIC_VIP_CARD_MANAGEMENT, E2EData.CARD_TYPE_VIP_CARD_MANAGEMENT) //Enter Active MemberID, Name, Last 4 digist of NRIC and Card Type
+    // VIPCardManagement(E2EData.MEMBERID_VIP_CARD_MANAGEMENT, E2EData.MEMBER_NAME_VIP_CARD_MANAGEMENT,
+    //                   E2EData.LAST4DIGITNRIC_VIP_CARD_MANAGEMENT, E2EData.CARD_TYPE_VIP_CARD_MANAGEMENT) //Enter Active MemberID, Name, Last 4 digist of NRIC and Card Type
 
 //  })
 

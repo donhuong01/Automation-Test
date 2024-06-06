@@ -45,7 +45,7 @@ describe('[TS-014] Withdrawal of Consent Form ', function () {
         cy.SelectTableItem(elems_MemberListing.TBL_MEMBERLISTING,'Member ID', ActiveMemberID)
 
         // Select Terminate Option
-        cy.SelectBtnDropdownItem(elems_MemberListing.BTNDRP_MAINTENANCE,'Withdraw')
+        cy.SelectDropDownItem(elems_MemberListing.BTNDRP_MAINTENANCE,'Withdraw')
 
         // Verify Page title
         WithdrawalOfConsentForm.verifyPageTitle('Withdrawal of Consent')
@@ -77,7 +77,7 @@ describe('[TS-014] Withdrawal of Consent Form ', function () {
         cy.SelectTableItem(elems_MemberListing.TBL_MEMBERLISTING,'Member ID', ActiveMemberID)
 
         // Select Terminate Option
-        cy.SelectBtnDropdownItem(elems_MemberListing.BTNDRP_MAINTENANCE,'Withdraw')
+        cy.SelectDropDownItem(elems_MemberListing.BTNDRP_MAINTENANCE,'Withdraw')
 
         // Verify Page title
         WithdrawalOfConsentForm.verifyPageTitle('Withdrawal of Consent')
@@ -101,7 +101,7 @@ describe('[TS-014] Withdrawal of Consent Form ', function () {
         cy.SelectTableItem(elems_MemberListing.TBL_MEMBERLISTING,'Member ID', ActiveMemberID)
             
         // Select Terminate Option
-        cy.SelectBtnDropdownItem(elems_MemberListing.BTNDRP_MAINTENANCE,'Withdraw')
+        cy.SelectDropDownItem(elems_MemberListing.BTNDRP_MAINTENANCE,'Withdraw')
 
         //Verify Member name
         WithdrawalOfConsentForm.verifyPageText("XXXXX")

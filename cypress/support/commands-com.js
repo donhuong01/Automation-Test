@@ -631,10 +631,10 @@ Cypress.Commands.add("DecreaseFieldValue", (locator, decreaseAmount) => {
 Cypress.Commands.add("SelectBtnDropdownItem", (locator, item) => {
     cy.log('------ SelectBtnDropdownItem : ' + locator + ' ------')
     cy.xpath(locator).scrollIntoView()
-    cy.xpath(locator).click()
-    cy.xpath(locator + "/ancestor::div[@class='k-widget k-split-button k-button-group k-state-focused']/button").invoke('attr', 'aria-owns').then(value => {
-        cy.xpath('//ul[@id="' + value + '"]/li[text()="' + item + '"]').click();
-    });
+    cy.xpath(locator).click() //k-widget k-split-button k-button-group k-state-focused
+    //cy.xpath(locator + "/ancestor::div[@class='k-split-button k-button-group k-rounded-md']/button[@class='k-button k-button-md k-button-solid k-button-solid-base k-rounded-md k-icon-button k-split-button-arrow']", {timeout: 30000}).invoke('attr', 'aria-owns').then(value => { 
+        cy.xpath('//span[@id="' + value + '"]/span[text()="' + item + '"]').click(); 
+    //});
 })
 
 /*****************************************************

@@ -21,9 +21,9 @@ class elems_WithdrawalOfConsent {
         CHK_MAILINGADDRESS : '//input[@id="checkMailingAddress"]'
     }
 
-    static BTN_WITHDRAW = '//button[text()="Withdraw"]'
-    static BTN_PURGEMEMBERDATA = '//button[text()="Purge Member Data"]'
-    static BTN_CANCEL = '//button[text()="Cancel"]'
+    static BTN_WITHDRAW = '//span[text()="Withdraw"]'
+    static BTN_PURGEMEMBERDATA = '//span[text()="Purge Member Data"]'
+    static BTN_CANCEL = '//span[text()="Cancel"]'
 }
 
 export default elems_WithdrawalOfConsent

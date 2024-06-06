@@ -1,7 +1,7 @@
 class elems_Picker {
 
     static TXT_ITEM = '//div[@role="dialog"]//label/parent::div//input'
-    static BTN_SEARCH = '//button[text()="Search Filters"]'
+    static BTN_SEARCH = '//span[text()="Search Filters"]'
     static BTN_SEARCHFILTERS = '//form[@id="formUserDialog"]//button[@class="k-button search-button"]'
     static TBL_PICKERITEMS = '//div[@role="dialog"]//table'
     static BTN_SELECT = '//div[@role="dialog"]//button[text()="Select"]'
