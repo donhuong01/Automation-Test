@@ -185,12 +185,12 @@ class SrcChannelDetail {
      * @param {string} paymentMethod Payment Method
      *****************************************************/
      addEligiblePaymentMethod(paymentMethod){
-        cy.Click(elems_SourceChannelDetail.ELIGIBLEPAYMENTMETHODLIST.BTN_ADDPAYMENTMETHOD)
+        //cy.Click(elems_SourceChannelDetail.ELIGIBLEPAYMENTMETHODLIST.BTN_ADDPAYMENTMETHOD)
         cy.wait(3000)
         // Choose Payment Method
         if(paymentMethod !== undefined){
-            cy.SelectPickerItem('//div[text()="Select Payment Method"]//ancestor::div//following-sibling::div[@class="k-window-content k-dialog-content"]//div//table','TT')
-            cy.SelectPickerItem(elems_SourceChannelDetail.ELIGIBLEPAYMENTMETHODLIST.BTN_ADDPAYMENTMETHOD,'TT')
+            cy.SelectPickerItem(elems_SourceChannelDetail.ELIGIBLEPAYMENTMETHODLIST.BTN_ADDPAYMENTMETHOD, paymentMethod)//div[text()="Select Payment Method"]//ancestor::div//following-sibling::div[@class="k-window-content k-dialog-content"]//div//table','TT')
+            cy.SelectPickerItem(elems_SourceChannelDetail.ELIGIBLEPAYMENTMETHODLIST.BTN_ADDPAYMENTMETHOD, paymentMethod)
             // Add Payment Method
            
         }

@@ -73,6 +73,7 @@ describe ('[TS11] Source Channel Management', ()=>{
          
           //Click On Delete Button
           SrcChaListing.Delete(Name, Type)
+          cy.wait(7000)
            //Click on 'No' Delete Confirmation Popup
           //SrcChaListing.DeleteConfirmationYes()
      })

@@ -304,8 +304,8 @@ describe('E2E Auto Testing:FS-014 Membership', () => {
 //  MemberType() //Needs to do in manual test since it always has duplicate
 //  BadAddressUpdate()
 //  MembershipRenewalAdvise()
- WithdrawalOfConsent(E2EData.ACTIVE_MEMBERID_FOR_WITHDRAWAL_OF_CONSENT) //Enter Member ID for Withdrawal Of Consent
-//  SourceChannel()
+//  WithdrawalOfConsent(E2EData.ACTIVE_MEMBERID_FOR_WITHDRAWAL_OF_CONSENT) //Enter Member ID for Withdrawal Of Consent
+ SourceChannel()
 // MemberStatusReasonCode() // Needs to do in manual test since it may affect current data
 //  MassUpdateForMemberData() 
 // MembershipModuleSettings() // Needs to check settings data before running on UAT
