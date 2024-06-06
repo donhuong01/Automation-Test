@@ -111,7 +111,7 @@ class elems_MemberRegistrationPrincipal {
         }
     }
     static DEPENDENTS = {
-        BTN_ADDDEPENDENT: '//button[text()="Add Dependent"]',
+        BTN_ADDDEPENDENT: '//span[text()="Add Dependent"]',
         TBL_DEPENDENTS: '//h3[text()="Dependents"]/ancestor::div//table'
     }
 

@@ -369,7 +369,7 @@ const SFSMemberRegistion = (CustomerNRICFull, DepChildNRICFull, DepSouseNRICFull
             cy.wait(3000)
             MemTenureSelect.principalTenureSelection(PrincipalName, '5 Years')
             MemTenureSelect.dependentTenureSelection(DepSouseName, '5 Years')
-            MemTenureSelect.dependentTenureSelection(DepChildName, '5 Years')
+            MemTenureSelect.dependentTenureSelection2(DepChildName, '5 Years')
             
             
             

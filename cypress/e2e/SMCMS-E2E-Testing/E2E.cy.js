@@ -223,8 +223,8 @@ beforeEach(() => {
    cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
 
   //Select Channel
-  // cy.visit('/membership/customerCheckin')
-  // cy.SelectPickerItem('//a[text()="Change"]', 'SAFRA HQ')
+  cy.visit('/membership/customerCheckin')
+  cy.SelectPickerItem('//a[text()="Change"]', 'SAFRA HQ')
 })
 
 
@@ -305,11 +305,11 @@ describe('E2E Auto Testing:FS-014 Membership', () => {
 //  BadAddressUpdate()
 //  MembershipRenewalAdvise()
 //  WithdrawalOfConsent(E2EData.ACTIVE_MEMBERID_FOR_WITHDRAWAL_OF_CONSENT) //Enter Member ID for Withdrawal Of Consent
- SourceChannel()
+//  SourceChannel()
 // MemberStatusReasonCode() // Needs to do in manual test since it may affect current data
 //  MassUpdateForMemberData() 
 // MembershipModuleSettings() // Needs to check settings data before running on UAT
-//  SFSMemberRegistion(CustomerNRICFull,DepCustomerNRICFull, Dep2CustomerNRICFull) //Add three NRIC's for Principal, Dependent Child, Dependent Spouse
+ SFSMemberRegistion(CustomerNRICFull,DepCustomerNRICFull, Dep2CustomerNRICFull) //Add three NRIC's for Principal, Dependent Child, Dependent Spouse
 //  E2EMemberShipRenewal(CustomerNRICFull) //Add NRIC For Principal Registration
 
 

@@ -5,7 +5,7 @@ class elems_MembershipTenureSelection {
     }
 
     static Dependent = {
-        TBL_DEPENDENT : '//div[text()="Dependent"]/parent::div//table'
+        TBL_DEPENDENT : '(//div[text()="Dependent"]/parent::div//table)[1]'
     }
 
     static BTN_ADDTOCART = '//span[text()="Add to Cart"]'

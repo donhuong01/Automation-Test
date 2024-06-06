@@ -1409,13 +1409,47 @@ Cypress.Commands.add("EnterTime", (locator, Time) => {
 Cypress.Commands.add("TenureSelection", (locator, columnValue, TenureDuration) => {
 
     cy.Click(`${locator}//tr[contains(@class, "k-master-row")]//td[text()="${columnValue.toUpperCase()}"]//following-sibling::td//span[@class="k-dropdownlist k-picker k-picker-md k-rounded-md k-picker-solid"]`)
-    cy.Click(`//span[text()="${TenureDuration}"]`)
+    cy.Click(`//span[text()="${TenureDuration}"]`, {timeout: 30000}) ////(//span[text()="'+TenureDuration+'"])[1]
 
     //(`${locator}//tr[contains(@class, "k-master-row")]//td[text()="${columnValue}"]//following-sibling::td//span[@class="k-dropdown-wrap"]`)})   , {matchCase}
 })
 
 /*****************************************************
- * Command: SelectTenureDuration
+ * Command: SelectTenureDependent
+ * Description: This function select tenure duration
+ *
+ * @author: Fshahzada
+ * @param {string} locator table locator
+ * @param {string} columnValue  target value
+ * @param {string} TenureDuration Tenure duration
+ *****************************************************/
+Cypress.Commands.add("TenureSelectionDependent", (locator, columnValue, TenureDuration) => {
+
+    cy.Click(`${locator}//tr[contains(@class, "k-master-row")]//td[text()="${columnValue.toUpperCase()}"]//following-sibling::td//span[@class="k-dropdownlist k-picker k-picker-md k-rounded-md k-picker-solid"]`)
+    cy.Click(`(//span[text()="${TenureDuration}"])[2]`, {timeout: 30000}) ////(//span[text()="'+TenureDuration+'"])[1]
+
+    //(`${locator}//tr[contains(@class, "k-master-row")]//td[text()="${columnValue}"]//following-sibling::td//span[@class="k-dropdown-wrap"]`)})   , {matchCase}
+})
+
+/*****************************************************
+ * Command: SelectTenureDependent
+ * Description: This function select tenure duration
+ *
+ * @author: Fshahzada
+ * @param {string} locator table locator
+ * @param {string} columnValue  target value
+ * @param {string} TenureDuration Tenure duration
+ *****************************************************/
+Cypress.Commands.add("TenureSelectionDependent2", (locator, columnValue, TenureDuration) => {
+
+    cy.Click(`${locator}//tr[contains(@class, "k-master-row")]//td[text()="${columnValue.toUpperCase()}"]//following-sibling::td//span[@class="k-dropdownlist k-picker k-picker-md k-rounded-md k-picker-solid"]`)
+    cy.Click(`(//span[text()="${TenureDuration}"])[3]`, {timeout: 30000}) ////(//span[text()="'+TenureDuration+'"])[1]
+
+    //(`${locator}//tr[contains(@class, "k-master-row")]//td[text()="${columnValue}"]//following-sibling::td//span[@class="k-dropdown-wrap"]`)})   , {matchCase}
+})
+
+/*****************************************************
+ * Command: SelectTenureDurationBatch
  * Description: This function select tenure duration
  *
  * @author: Fshahzada
@@ -1425,8 +1459,8 @@ Cypress.Commands.add("TenureSelection", (locator, columnValue, TenureDuration) =
  *****************************************************/
 Cypress.Commands.add("TenureSelectionBatch", (locator, columnValue, TenureDuration) => {
 
-    cy.Click(`${locator}//tr[contains(@class, "k-master-row")]//td[text()="${columnValue}"]//following-sibling::td//span[@class="k-dropdown-wrap"]`)
-    cy.Click(`//li[text()="${TenureDuration}"]`)
+    cy.Click(`${locator}//tr[contains(@class, "k-master-row")]//td[text()="${columnValue}"]//following-sibling::td//span[@class="k-dropdownlist k-picker k-picker-md k-rounded-md k-picker-solid"]`)//following-sibling::td//span[@class="k-dropdown-wrap"]`)
+    cy.Click('(//span[text()="'+TenureDuration+'"])[1]', {timeout: 30000}) //cy.Click(`//span[text()="${TenureDuration}"]`)
 
     //(`${locator}//tr[contains(@class, "k-master-row")]//td[text()="${columnValue}"]//following-sibling::td//span[@class="k-dropdown-wrap"]`)})   , {matchCase}
 })

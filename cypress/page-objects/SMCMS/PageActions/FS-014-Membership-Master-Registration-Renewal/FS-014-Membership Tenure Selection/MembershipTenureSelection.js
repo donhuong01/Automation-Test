@@ -51,6 +51,42 @@ class MembershipTenureSelection{
     }
 
     /*****************************************************
+     * Method: dependentTenureSelection
+     * Description: Add Tenure Selection to Dependent Member
+     *
+     * @param {string} memberId Dependent Member ID
+     * @param {string} tenureSelection Tenure Selection
+     * @param {string} ColumnValue target column
+     *****************************************************/
+    dependentTenureSelection(ColumnValue, tenureSelection){
+
+        // Set Tenure Selection
+        if(tenureSelection !== undefined && ColumnValue !== undefined){
+
+            cy.TenureSelectionDependent(elems_MembershipTenureSelection.Dependent.TBL_DEPENDENT,
+             ColumnValue,  tenureSelection)
+        }
+    }
+
+    /*****************************************************
+     * Method: dependentTenureSelection
+     * Description: Add Tenure Selection to Dependent Member
+     *
+     * @param {string} memberId Dependent Member ID
+     * @param {string} tenureSelection Tenure Selection
+     * @param {string} ColumnValue target column
+     *****************************************************/
+    dependentTenureSelection2(ColumnValue, tenureSelection){
+
+        // Set Tenure Selection
+        if(tenureSelection !== undefined && ColumnValue !== undefined){
+
+            cy.TenureSelectionDependent2(elems_MembershipTenureSelection.Dependent.TBL_DEPENDENT,
+             ColumnValue,  tenureSelection)
+        }
+    }
+
+    /*****************************************************
      * Method: TenureSelectionRenewal   
      * Description: Add Tenure Selection to Principal Member
      *
@@ -134,19 +170,7 @@ class MembershipTenureSelection{
         )
     }
 
-    /*****************************************************
-     * Method: dependentTenureSelection
-     * Description: Add Tenure Selection to Dependent Member
-     *
-     * @param {string} memberId Dependent Member ID
-     * @param {string} tenureSelection Tenure Selection
-     * @param {string} ColumnValue target column
-     *****************************************************/
-     dependentTenureSelection(ColumnValue, tenureSelection){
-
-        cy.TenureSelection(elems_MembershipTenureSelection.Dependent.TBL_DEPENDENT,
-            ColumnValue,  tenureSelection)
-    }
+    
 
     /*****************************************************
      * Method: selectDependent
