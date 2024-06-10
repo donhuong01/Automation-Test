@@ -274,7 +274,7 @@ class Membership_Registration_Dependent{
             cy.Click(elems_MembershipRegistrationDependent.PersonalInformation.PCK_PRINCIPALID)
             cy.wait(5000)
             cy.EnterText('//div[@role="dialog"]//label/parent::div//input[@name="memberId"]', PrincipalID)
-            cy.Click('//button[text()="Search Filters"]')
+            cy.Click('//span[text()="Search Filters"]')
             cy.TickSpecificTableItem(PrincipalID)
             //cy.SelectTableItem2(elems_Picker.TBL_PICKERITEMS, 'Member ID', PrincipalID)
             cy.wait(5000)

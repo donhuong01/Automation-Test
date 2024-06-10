@@ -78,9 +78,9 @@ class LifeMembership {
         cy.wait(3000)
         cy.xpath(elems_PageHeader.BTN_SHOPPINGCART).click({force: true})
         cy.wait(8000)
-        cy.xpath('(//span[@class="k-input"])[1]') ////span[text()="Standard"]
-        cy.Click('(//span[@class="k-input"])[1]') ////span[text()="Standard"]
-         cy.xpath('//ul//li').contains('A-').click()
+        cy.xpath('(//span[@class="k-dropdownlist k-picker k-picker-md k-rounded-md k-picker-solid"])[1]') ////span[text()="Standard"]
+        cy.Click('(//span[@class="k-dropdownlist k-picker k-picker-md k-rounded-md k-picker-solid"])[1]') ////span[text()="Standard"]
+        cy.xpath('//ul//li').contains('A-').click()
       
       
         //   cy.xpath(elems_PageHeader.DRP_USERLINKS).click()

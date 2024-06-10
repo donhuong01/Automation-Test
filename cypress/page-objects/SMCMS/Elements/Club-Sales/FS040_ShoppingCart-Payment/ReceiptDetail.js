@@ -15,12 +15,12 @@ class elems_ReceiptDetail {
     static TBL_RECEIPTITEMCHECKBOX = '(//h3[text()="Receipt Items"]/ancestor::div//table)//td/input[1]'
     
 
-    static BTN_CLOSE = '//button[text()="Close"]'
-    static BTN_PRINT = '//button[text()="Print"]'
-    static BTN_CANCELLATION = '//button[text()="Cancellation"]'
-    static BTN_REFUND = '//button[text()="Refund"]'
-    static BTN_ADJUST = '//button[text()="Adjust"]'
-    static BTN_RESENDERECEIPT = '//button[text()="Resend E-Receipt"]'
+    static BTN_CLOSE = '//span[text()="Close"]'
+    static BTN_PRINT = '//span[text()="Print"]'
+    static BTN_CANCELLATION = '//span[text()="Cancellation"]'
+    static BTN_REFUND = '//span[text()="Refund"]'
+    static BTN_ADJUST = '//span[text()="Adjust"]'
+    static BTN_RESENDERECEIPT = '//span[text()="Resend E-Receipt"]'
 }
 
 export default elems_ReceiptDetail

@@ -4,10 +4,10 @@ class elems_BatchMembershipRegistrationListing {
     static DRP_BATCHTYPE = '//span[@id="drpBatchType"]'
     static TXT_BATCHNAME = '//input[@id="txtBatchName"]'
     static DRP_STATUS = '//span[@id="drpStatus"]'
-    static BTN_SEARCHFILTERS = '//button[text()="Search Filters"]'
+    static BTN_SEARCHFILTERS = '//span[text()="Search Filters"]'
     static TBL_BATCHMEMSHIPREGLISTING = '//h2[text()="Batch Membership Registration Listing"]/ancestor::div//table'
-    static BTN_CREATENEW = '//button[text()="Create New"]'
-    static BTN_DELETE = '//button[text()="Delete"]'
+    static BTN_CREATENEW = '//span[text()="Create New"]'
+    static BTN_DELETE = '//span[text()="Delete"]'
 }
 
 export default elems_BatchMembershipRegistrationListing

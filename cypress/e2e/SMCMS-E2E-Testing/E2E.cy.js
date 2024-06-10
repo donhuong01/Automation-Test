@@ -296,7 +296,7 @@ beforeEach(() => {
 // })
 
 
-describe('E2E Auto Testing:FS-014 Membership', () => {
+// describe('E2E Auto Testing:FS-014 Membership', () => {
 
 //  MembershipRegistration(CustomerNRICFull) // Quick Testing on Membership Registration
 //  MembershipPrincipalRegistration(CustomerNRICFull,DepCustomerNRICFull, Dep2CustomerNRICFull) // Full Testing on Membership Registration
@@ -309,31 +309,31 @@ describe('E2E Auto Testing:FS-014 Membership', () => {
 // MemberStatusReasonCode() // Needs to do in manual test since it may affect current data
 //  MassUpdateForMemberData() 
 // MembershipModuleSettings() // Needs to check settings data before running on UAT
- SFSMemberRegistion(CustomerNRICFull,DepCustomerNRICFull, Dep2CustomerNRICFull) //Add three NRIC's for Principal, Dependent Child, Dependent Spouse
+//  SFSMemberRegistion(CustomerNRICFull,DepCustomerNRICFull, Dep2CustomerNRICFull) //Add three NRIC's for Principal, Dependent Child, Dependent Spouse
 //  E2EMemberShipRenewal(CustomerNRICFull) //Add NRIC For Principal Registration
 
 
 // LifeMembershipManagment(CustomerNRICFull) //Add NRIC For Principal Registration
-  // BatchMembershipRegistration(
+//   BatchMembershipRegistration(
 
-  //   //Pass Info for Existing Member MemberID and LAST4DigitsNRIC
-  //   E2EData.BATCH_REGISTRATION.MEMBERID_FOR_EXISTING_MEMBER,
-  //   E2EData.BATCH_REGISTRATION.LAST4DIGITSNRIC_FOR_EXISTING_MEMBER,
+//     //Pass Info for Existing Member MemberID and LAST4DigitsNRIC
+//     E2EData.BATCH_REGISTRATION.MEMBERID_FOR_EXISTING_MEMBER,
+//     E2EData.BATCH_REGISTRATION.LAST4DIGITSNRIC_FOR_EXISTING_MEMBER,
 
-  //   //Pass informstion for Non-Member Name, DOB, LAST4DigitsNRIC and Full NRIC
-  //   E2EData.BATCH_REGISTRATION.MEMBER_NAME_FOR_NON_MEMBER,
-  //   E2EData.BATCH_REGISTRATION.DOB_FOR_NON_MEMBER,
-  //   E2EData.BATCH_REGISTRATION.LAST4DIGITSNRIC_FOR_NON_MEMBER,
-  //   CustomerNRICFull,
+//     //Pass informstion for Non-Member Name, DOB, LAST4DigitsNRIC and Full NRIC
+//     E2EData.BATCH_REGISTRATION.MEMBER_NAME_FOR_NON_MEMBER,
+//     E2EData.BATCH_REGISTRATION.DOB_FOR_NON_MEMBER,
+//     E2EData.BATCH_REGISTRATION.LAST4DIGITSNRIC_FOR_NON_MEMBER,
+//     CustomerNRICFull,
 
-  //   //NRIC for New Principal
-  //   CustomerNRICFull2, 
+//     //NRIC for New Principal
+//     CustomerNRICFull2, 
 
-  //   //NRIC for New Dependent and Dependent PrincipalID
-  //   DepCustomerNRICFull,
-  //   E2EData.BATCH_REGISTRATION.PRINCIPALID_FOR_NEW_DEPENDENT)
+//     //NRIC for New Dependent and Dependent PrincipalID
+//     DepCustomerNRICFull,
+//     E2EData.BATCH_REGISTRATION.PRINCIPALID_FOR_NEW_DEPENDENT)
 
-})
+// })
 
 
 
@@ -497,11 +497,11 @@ describe('E2E Auto Testing:FS-014 Membership', () => {
 // })
 
 
-// describe('E2E Auto Testing:FS-040 Receipt Management', ()=> {
+describe('E2E Auto Testing:FS-040 Receipt Management', ()=> {
 
-//     ReceiptManagement()
+    ReceiptManagement()
 
-// })
+})
 
 
 // describe('E2E Auto Testing:FS-042 Promotion', ()=> {

@@ -152,7 +152,7 @@ class BatchMembershipRegistrationListing {
      *
      * @param {string} TenureDuration Tenure Selection
      *****************************************************/
-     MembershipPrincipalTenureSelection(TenureDuration) {
+     MembershipPrincipalTenureSelection(TenureDuration, columnValue) {
 
           // Set Tenure Selection
           if (TenureDuration !== undefined) {
@@ -160,11 +160,11 @@ class BatchMembershipRegistrationListing {
                //     cy.TenureSelection(elems_MembershipTenureSelection.Principal.TBL_PRINCIPAL,
                //         ColumnValue,  tenureSelection)
                const locator = elems_MembershipTenureSelection.Principal.TBL_PRINCIPAL
-               cy.Click(`${locator}//tr[contains(@class, "k-master-row")]//td//following-sibling::td//span[@class="k-dropdown-wrap"]`)
-               cy.Click(`//li[text()="${TenureDuration}"]`)
+               cy.Click("//span[@class='k-dropdownlist k-picker k-picker-md k-rounded-md k-picker-solid']")
+               cy.Click(`//span[text()="${TenureDuration}"]`)
           }
 
-     }
+     } // //div[text()="Principal"]/parent::div//table//tr[contains(@class, "k-master-row")]//td[text()="A300006171"]//following-sibling::td//span[@class="k-dropdownlist k-picker k-picker-md k-rounded-md k-picker-solid"]
 
      /*****************************************************
      * Method: principalTenureSelection

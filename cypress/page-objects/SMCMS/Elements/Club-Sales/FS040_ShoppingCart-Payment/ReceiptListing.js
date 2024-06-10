@@ -8,12 +8,12 @@ class elems_ReceiptListing {
     static DATE_RECEIPTDATE_FROM = '//input[@id="dtpReceiptDateFrom"]'
     static DATE_RECEIPTDATE_TO = '//input[@id="dtpDateReceiptDateTo"]'
     static TXT_BATCHID = '//input[@id="txtBatchId"]'
-    static BTN_SEARCHFILTERS = '//button[text()="Search Filters"]'
-    static BTN_SEARCHFILTERSSELECTMEMID = '//input[@name="memberId"]/parent::div/parent::div/parent::div/parent::div//button'
+    static BTN_SEARCHFILTERS = '//span[text()="Search Filters"]'
+    static BTN_SEARCHFILTERSSELECTMEMID = '(//input[@name="memberId"]/parent::div/parent::div/parent::div/parent::div//button)[1]'
     static TBL_RECEIPTLISTING = '//h2[text()="Receipt Listing Form"]/ancestor::div//table'
     // static TBL_RECEIPTLISTING = '//h2[text()="Receipt Listing"]/ancestor::div//table'
-    static BTN_REFUND = '//button[text()="Refund"]'
-    static BTN_SELECT = '//button[text()="Select"]'
+    static BTN_REFUND = '//span[text()="Refund"]'
+    static BTN_SELECT = '//span[text()="Select"]'
 
 }
 

@@ -83,7 +83,7 @@ class Table {
         }
         // Selects first item if columnReference1 = FIRST and other references are undefined
         else if (columnReference1.toUpperCase() === 'FIRST' && rowReference1 === undefined && columnReference2 === undefined && rowReference2 === undefined) {
-            cy.xpath(locator + '//tbody/tr[1]/td[1]/input', { timeout: 30000 }).click()
+            cy.xpath(locator + '//tbody/tr[1]/td[1]/input', { timeout: 30000 }).click({ timeout: 30000 })
         }
         // Select Table Entry when 1 Column/Row References are supplied
         else if (columnReference1 !== undefined && rowReference1 !== undefined && columnReference2 === undefined && rowReference2 === undefined) {

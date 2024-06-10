@@ -136,7 +136,7 @@ class MembershipTenureSelection{
         // Set Tenure Selection
         if(tenureSelection !== undefined && ColumnValue !== undefined){
 
-            cy.TenureSelectionBatch(elems_MembershipTenureSelection.Dependent.TBL_DEPENDENT,
+            cy.TenureSelectionBatchDependent(elems_MembershipTenureSelection.Dependent.TBL_DEPENDENT,
                 ColumnValue,  tenureSelection)
         }
 

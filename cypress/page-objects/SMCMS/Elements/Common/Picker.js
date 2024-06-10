@@ -5,7 +5,7 @@ class elems_Picker {
     static BTN_SEARCHFILTERS = '//form[@id="formUserDialog"]//button[@class="k-button search-button"]'
     static TBL_PICKERITEMS = '//div[@role="dialog"]//table'
     static BTN_SELECT = '//div[@role="dialog"]//button[text()="Select"]'
-    static BTN_CANCEL = '//div[@role="dialog"]//button[text()="Cancel"]'
+    static BTN_CANCEL = '//div[@role="dialog"]//span[text()="Cancel"]'
     static TXT_LOGINEMAIL = '//input[@id="txtLoginName"]'
     static TXT_NAME = '//input[@name="userPicker_fullName"]'
     static BTN_FILTERS = '//div[text()="Select Location"]/parent::*/following-sibling::div[@class="k-window-content k-dialog-content"]//button'

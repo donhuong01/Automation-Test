@@ -63,6 +63,24 @@ Cypress.Commands.add('SelectDropDownItem', (locator, item) => {
 })
 
 /*****************************************************
+ * Command: SelectDropDownItem
+ * Description: Selects a List(Dropdown) Item
+ * @param {string} locator Element Locator
+ * @param {string} item Item Value in text
+ *****************************************************/
+Cypress.Commands.add('SelectDropDownItem2', (locator, item) => {
+    cy.log('------ Select Drop Down Item : ' + locator + ' ------')
+    cy.xpath(locator, { timeout: 30000 }).scrollIntoView()
+    cy.xpath(locator /*+ '//span[@class="k-icon k-i-arrow-s"]'*/,{ timeout: 30000 }).click({ timeout: 30000 })
+    cy.wait(1000)
+    // cy.xpath(locator).invoke('attr', 'aria-owns').then(value => {
+    //     cy.xpath('//ul[@id="' + value + '"]/li[text()="' + item + '"]').click()
+    // })
+
+    cy.xpath('(//span[text()="' + item + '"])[2]', { timeout: 30000 }).click({ force: true })
+})
+
+/*****************************************************
  * Command: TickRadioButton
  * Description: Ticks a radio button
  *
@@ -1398,7 +1416,7 @@ Cypress.Commands.add("EnterTime", (locator, Time) => {
 })
 
 /*****************************************************
- * Command: SelectTenureDuration
+ * Command: SelectTenure
  * Description: This function select tenure duration
  *
  * @author: Fshahzada
@@ -1461,6 +1479,23 @@ Cypress.Commands.add("TenureSelectionBatch", (locator, columnValue, TenureDurati
 
     cy.Click(`${locator}//tr[contains(@class, "k-master-row")]//td[text()="${columnValue}"]//following-sibling::td//span[@class="k-dropdownlist k-picker k-picker-md k-rounded-md k-picker-solid"]`)//following-sibling::td//span[@class="k-dropdown-wrap"]`)
     cy.Click('(//span[text()="'+TenureDuration+'"])[1]', {timeout: 30000}) //cy.Click(`//span[text()="${TenureDuration}"]`)
+
+    //(`${locator}//tr[contains(@class, "k-master-row")]//td[text()="${columnValue}"]//following-sibling::td//span[@class="k-dropdown-wrap"]`)})   , {matchCase}
+})
+
+/*****************************************************
+ * Command: SelectTenureDurationBatchDependent
+ * Description: This function select tenure duration
+ *
+ * @author: Fshahzada
+ * @param {string} locator table locator
+ * @param {string} columnValue  target value
+ * @param {string} TenureDuration Tenure duration
+ *****************************************************/
+Cypress.Commands.add("TenureSelectionBatchDependent", (locator, columnValue, TenureDuration) => {
+
+    cy.Click(`${locator}//tr[contains(@class, "k-master-row")]//td[text()="${columnValue}"]//following-sibling::td//span[@class="k-dropdownlist k-picker k-picker-md k-rounded-md k-picker-solid"]`)//following-sibling::td//span[@class="k-dropdown-wrap"]`)
+    cy.Click('(//span[text()="'+TenureDuration+'"])[2]', {timeout: 30000}) //cy.Click(`//span[text()="${TenureDuration}"]`)
 
     //(`${locator}//tr[contains(@class, "k-master-row")]//td[text()="${columnValue}"]//following-sibling::td//span[@class="k-dropdown-wrap"]`)})   , {matchCase}
 })
