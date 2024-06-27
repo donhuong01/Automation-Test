@@ -469,21 +469,21 @@ beforeEach(() => {
 
 // })
 
-// describe('E2E Auto Testing:FS-036 SRP', () => {
+describe('E2E Auto Testing:FS-036 SRP', () => {
 
 //   //Always Change the ItemCode, ItemDescription, and Category data before runnning
 
 //   SRPModuleSetting() //Check first the settings for UAT testing
-//   SAFRAPointsAdjustment(E2EData.MEMBERID_FOR_SAFRA_POINTS_ADJUSTMENT) //Provide Active member ID
-//   SAFRAPointsTransaction(E2EData.MEMBERID_FOR_SAFRA_POINTS_TRANSACTION) //Provide Active member ID
-//   SRPRedemptionCollection(E2EData.SRP_REDEMPTION_COLLECTION) //Provide Active member ID
-//   SRPRedemptionManagement(E2EData.SRP_REDEMPTION_MANAGEMENT) //Provide Active member ID
-//   ThirdPartyVendorManagement()
-//   EDCTerminalManagement()
-//   SRPRedemptionCatalogueManagement()
-//   SRPPromotionManagement(E2EData.MEMBERID_FOR_SRP_PROMOTION_MANAGEMENT, E2EData.MEMBERTYPE_FOR_SRP_PROMOTION_MANAGEMENT) //Provide Active member ID
+  // SAFRAPointsAdjustment(E2EData.MEMBERID_FOR_SAFRA_POINTS_ADJUSTMENT) //Provide Active member ID
+  // SAFRAPointsTransaction(E2EData.MEMBERID_FOR_SAFRA_POINTS_TRANSACTION) //Provide Active member ID
+  // SRPRedemptionCollection(E2EData.SRP_REDEMPTION_COLLECTION) //Provide Active member ID
+  // SRPRedemptionManagement(E2EData.SRP_REDEMPTION_MANAGEMENT) //Provide Active member ID
+  // ThirdPartyVendorManagement()
+  // EDCTerminalManagement()
+  // SRPRedemptionCatalogueManagement()
+  // SRPPromotionManagement(E2EData.MEMBERID_FOR_SRP_PROMOTION_MANAGEMENT, E2EData.MEMBERTYPE_FOR_SRP_PROMOTION_MANAGEMENT) //Provide Active member ID
 
-// })
+})
 
 
 // describe('E2E Auto Testing:FS-013 & 039: In-House Sale and Merchandise', ()=> {
@@ -497,11 +497,11 @@ beforeEach(() => {
 // })
 
 
-describe('E2E Auto Testing:FS-040 Receipt Management', ()=> {
+// describe('E2E Auto Testing:FS-040 Receipt Management', ()=> {
 
-    ReceiptManagement()
+//     ReceiptManagement()
 
-})
+// })
 
 
 // describe('E2E Auto Testing:FS-042 Promotion', ()=> {

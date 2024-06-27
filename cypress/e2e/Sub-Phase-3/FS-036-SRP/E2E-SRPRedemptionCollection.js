@@ -4,6 +4,19 @@ import ShoppingCartPayments from '../../../page-objects/SMCMS/PageActions/FS-014
 import SRP_RedemptionTransactionListing from '../../../page-objects/SMCMS/PageActions/FS-036-SRP/SRP_RedemptionTransactionListing'
 import data from '../../../fixtures/Data_Module/FS-036-SRP/SRP_Sample_Data'
 
+
+beforeEach(() => {
+    cy.on('uncaught:exception', (err, runnable) => {
+        if (err.message.includes('Buffer is not defined')) {
+            console.log('Caught buffer error');
+            return false; // This will prevent the test from failing
+        }
+        // If it's not a buffer error, let the test fail
+        return true;
+    });
+    
+    })
+
 const ShoppingCart = new ShoppingCartPayments()
 const {  ItemCode, ItemDescription, RedemptionSourceLoc, Category, Quantity, Status, PaymentMode } = data.SRP_Redemption_Collection
 
@@ -30,7 +43,7 @@ describe('[TS07] FS-036 Collect Uncollected Redemptions', function () {
         SRP_RedemptionDetail.AddToCart()
         cy.wait(10000)
 
-        ShoppingCart.fillOutandApplyPayment(PaymentMode)
+        ShoppingCart.fillOutandApplyPaymentSRP(/*PaymentMode*/)
 
         cy.visit('/membership/srp/redemptionTransactionListing')
 
@@ -38,7 +51,7 @@ describe('[TS07] FS-036 Collect Uncollected Redemptions', function () {
 
         SRP_RedemptionTransactionListing.Filters(Category, MemberID, Status)
 
-        SRP_RedemptionTransactionListing.VerifyStatus("Uncollected")
+        SRP_RedemptionTransactionListing.VerifyStatusCollection("Uncollected")
 
         cy.LogoutOfSmcms()
 

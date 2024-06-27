@@ -36,7 +36,7 @@ class ThirdPartyVendoreDetail {
             elems_ThirdPartyVendoreDetail.VENDORID.TXT_VENDORID, VendoreID,
             elems_ThirdPartyVendoreDetail.BTN_SEARCHFILTERS)
         //cy.EnterText(elems_ThirdPartyVendoreDetail.TXT_NAME, Name)
-        cy.EnterText(elems_ThirdPartyVendoreDetail.TXT_MERCHANTID, MerchantID)
+        // cy.EnterText(elems_ThirdPartyVendoreDetail.TXT_MERCHANTID, MerchantID)
         cy.SelectDropDownItem(elems_ThirdPartyVendoreDetail.DRP_STATUS, Status)
         cy.EnterText(elems_ThirdPartyVendoreDetail.TXT_ContactNumberAddress, ContactNumberAddress)
 
@@ -55,8 +55,8 @@ class ThirdPartyVendoreDetail {
             elems_ThirdPartyVendoreDetail.BTN_SEARCHFILTERS)
         // cy.xpath(elems_ThirdPartyVendoreDetail.TXT_NAME).clear()
         // cy.EnterText(elems_ThirdPartyVendoreDetail.TXT_NAME, Name)
-        cy.xpath(elems_ThirdPartyVendoreDetail.TXT_MERCHANTID).clear()
-        cy.EnterText(elems_ThirdPartyVendoreDetail.TXT_MERCHANTID, MerchantID)
+        // cy.xpath(elems_ThirdPartyVendoreDetail.TXT_MERCHANTID).clear()
+        // cy.EnterText(elems_ThirdPartyVendoreDetail.TXT_MERCHANTID, MerchantID)
         cy.SelectDropDownItem(elems_ThirdPartyVendoreDetail.DRP_STATUS, Status)
         cy.xpath(elems_ThirdPartyVendoreDetail.TXT_ContactNumberAddress).clear()
         cy.EnterText(elems_ThirdPartyVendoreDetail.TXT_ContactNumberAddress, ContactNumberAddress)

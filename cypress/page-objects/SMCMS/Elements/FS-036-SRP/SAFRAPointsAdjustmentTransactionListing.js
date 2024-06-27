@@ -3,7 +3,7 @@ class elems_SRPPointsTransaction {
 
     static PCK_MEMBERID = '//label[@for="pckMemberID"]//following-sibling::div//button'
     static TXT_MEMBERID = '//input[@name="memberId"]'
-    static BTN_SEARCHFILTER = '(//button[text()="Search Filters"])[1]'
+    static BTN_SEARCHFILTER = '(//span[text()="Search Filters"])[2]'
     static TXT_NAME = '//input[@id="txtName"]'
     static PCK_SOURCECHANNEL = '//label[@for="pckSourceChannelId"]//following-sibling::div//button'
     static DRP_TRANSACTIONTYPE = '//span[@id="drpTransactionType"]'
@@ -11,8 +11,8 @@ class elems_SRPPointsTransaction {
     static DATE_ISSUEDATETO = '//input[@id="dtpIssueDateTo"]'
     static DATE_EXPIRATIONDATEFROM = '//input[@id="dtpExprationDateFrom"]'
     static DATE_EXPIRATIONDATETO = '//input[@id="dtpExprationDateTo"]'
-    static BTN_SEARCHFILTERS = '//button[text()="Search Filters"]'
-    static TBL_MEMBERSAFRAPOINTSTRANSACTION = '//h2[text()="Member SAFRA Points Transaction Listing Form"]/parent::div/following-sibling::div//table'
+    static BTN_SEARCHFILTERS = '//span[text()="Search Filters"]'
+    static TBL_MEMBERSAFRAPOINTSTRANSACTION = '//h2[text()="Member SAFRAPOINTS Transaction Listing Form"]/parent::div/following-sibling::div//table'
 
 
 }

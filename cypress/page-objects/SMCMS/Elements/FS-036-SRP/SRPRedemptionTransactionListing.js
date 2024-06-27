@@ -1,8 +1,8 @@
 class elems_SRPREDEMPTIONTRANSACTIONLISTING {
 
 
-    static BTN_COLLECTGIFT = '//button[text()="Collect Gift"]'
-    static BTN_DOWNLOADREDEMPTIONLETTER = '//button[text()="Download Redemption Letter"]'
+    static BTN_COLLECTGIFT = '//span[text()="Collect Gift"]'
+    static BTN_DOWNLOADREDEMPTIONLETTER = '//span[text()="Download Redemption Letter"]'
     static DRP_CATEGORY = '//span[@id="drpCategory"]'
     static MEMBERID = {
 
@@ -16,8 +16,9 @@ class elems_SRPREDEMPTIONTRANSACTIONLISTING {
     static DATE_TRANSACTIONDATETO = '//input[@id="dtpTransactionDateTo"]'
     static DRP_STATUS = '//span[@id="drpRedemptionStatus"]'
 
-    static BTN_SEARCHFILTERS = '(//button[text()="Search Filters"])[1]'
+    static BTN_SEARCHFILTERS = '(//span[text()="Search Filters"])[1]'
     static TBL_SRPREDEMPTIONLIATING = '//h2[text()="SRP Redemption Transaction Listing"]/parent::div/following-sibling::div//table'
+    static TBL_SRPREDEMPTIONCOLLECTION = '//h2[text()="SRP Redemption Collection Listing"]/parent::div/following-sibling::div//table'
 
 
 }

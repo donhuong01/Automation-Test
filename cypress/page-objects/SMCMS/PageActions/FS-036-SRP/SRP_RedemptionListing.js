@@ -40,7 +40,7 @@ class SRP_RedemptionListing {
         cy.wait(3000)
         cy.VerifyElementText(elems_PageHeader.LBL_PAGETITLE, "Customer Check-In")
         cy.EnterText(elems_MemberListing.TXT_MEMBERID, MemberID)
-        cy.Click('//button[text()="Check In"]')
+        cy.Click('//span[text()="Check In"]')
         cy.wait(5000)
 
     }

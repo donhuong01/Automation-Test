@@ -30,7 +30,7 @@ describe('[TS06] FS-036 SRP Redemption management', function () {
 
         SRP_RedemptionDetail.AddToCart()
 
-        ShoppingCart.fillOutandApplyPayment(PaymentMethod)
+        ShoppingCart.fillOutandApplyPaymentSRP(/*PaymentMethod*/)
 
         cy.visit('/membership/srp/redemptionTransactionListing')
 
@@ -38,7 +38,7 @@ describe('[TS06] FS-036 SRP Redemption management', function () {
 
         SRP_RedemptionTransactionListing.Filters(Category, MemberID, Status)
 
-        SRP_RedemptionTransactionListing.VerifyStatus("Uncollected")
+        SRP_RedemptionTransactionListing.VerifyStatusCollection("Uncollected")
 
         cy.LogoutOfSmcms()
 

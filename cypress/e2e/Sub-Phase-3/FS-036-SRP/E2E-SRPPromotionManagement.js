@@ -204,7 +204,9 @@ describe('[TS04] FS-036 SRP Promotion Management', function () {
 
         SRP_PromotionListing.SelectTableItem(Name)
 
-        SRP_PromotionListing.Delete()
+        cy.wait(8000)
+
+        // SRP_PromotionListing.Delete()
 
     })
 

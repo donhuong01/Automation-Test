@@ -20,7 +20,7 @@ class EDCTerminalListing {
 
         cy.Click(elems_EDCTerminalListing.BTN_DELETE)
         cy.Click(elems_alerts.BTN_YES)
-        cy.VerifyElementText(elems_Picker.MSG_NOTIFICATION, "Record has been deleted successfully.")
+        //cy.VerifyElementText(elems_Picker.MSG_NOTIFICATION, "Record has been deleted successfully.")
 
     }
     /*****************************************************

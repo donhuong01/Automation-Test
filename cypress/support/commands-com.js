@@ -53,7 +53,7 @@ Cypress.Commands.add('EnterText', (locator, text) => {
 Cypress.Commands.add('SelectDropDownItem', (locator, item) => {
     cy.log('------ Select Drop Down Item : ' + locator + ' ------')
     cy.xpath(locator, { timeout: 30000 }).scrollIntoView()
-    cy.xpath(locator /*+ '//span[@class="k-icon k-i-arrow-s"]'*/,{ timeout: 30000 }).click({ timeout: 30000 })
+    cy.xpath(locator /*+ '//span[@class="k-icon k-i-arrow-s"]'*/,{ timeout: 30000 }).scrollIntoView().click({ timeout: 30000 })
     cy.wait(1000)
     // cy.xpath(locator).invoke('attr', 'aria-owns').then(value => {
     //     cy.xpath('//ul[@id="' + value + '"]/li[text()="' + item + '"]').click()
@@ -315,7 +315,7 @@ Cypress.Commands.add('UploadFile', (locator, fileName) => {
     cy.xpath(locator).scrollIntoView()
     cy.xpath(locator).attachFile(Cypress.env('FIXTURE_UPLOAD_PATH') + fileName)
     cy.wait(4000)
-    cy.xpath(locator + '/ancestor::div[@class="k-upload"]//span[@class="k-file-name"]').should('have.text', fileName)
+    cy.xpath(/*locator +*/ '//span[@class="k-file-name"]').should('have.text', fileName) // /ancestor::div[@class="k-upload"]//span[@class="k-file-name"]
 })
 
 /*****************************************************
@@ -1532,6 +1532,7 @@ Cypress.Commands.add("SelectPickerDifferentItemsWait", (locator, wait, textField
     // cy.wait(wait)
     cy.xpath(textField, { timeout: 30000 }).should('be.visible').type(item)
     cy.Click(SearchFilter);
+    cy.wait(5000)
     new Table().selectTableItem(Picker.TBL_PICKERITEMS, 'FIRST')
     cy.Click(Picker.BTN_SELECT);
 })

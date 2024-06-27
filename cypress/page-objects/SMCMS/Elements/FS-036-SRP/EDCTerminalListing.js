@@ -1,8 +1,8 @@
 class elems_EDCTerminalListing {
 
 
-    static BTN_CREATENEW = '//button[text()="Create New"]'
-    static BTN_DELETE = '//button[text()="Delete"]'
+    static BTN_CREATENEW = '//span[text()="Create New"]'
+    static BTN_DELETE = '//span[text()="Delete"]'
     
 
     static TXT_TERMINALID = '//input[@id="txtTerminalID"]'
@@ -16,12 +16,12 @@ class elems_EDCTerminalListing {
         DRP_HEADQUARTER : '//select[@name="isHeadQuarter"]',
         TXT_SITE : '//input[@name="site"]',
         
-        BTN_SEARCHFILTERS : '(//button[text()="Search Filters"])[1]',
-        BTN_SELECT : '//button[text()="Select"]'
+        BTN_SEARCHFILTERS : '(//span[text()="Search Filters"])[2]',
+        BTN_SELECT : '//span[text()="Select"]'
 
     }
 
-    static BTN_SEARCHFILTERS = '//button[text()="Search Filters"]'
+    static BTN_SEARCHFILTERS = '//span[text()="Search Filters"]'
     static TBL_EDCTERMINALLSITING = '//h2[text()="EDC Terminal Listing"]/parent::div/following-sibling::div//table'
 
 

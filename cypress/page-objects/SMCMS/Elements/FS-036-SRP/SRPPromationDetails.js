@@ -19,9 +19,9 @@ class elems_SRPPromationDetails {
         TXT_NAME: '(//input[@id="txtName"])[2]',
         DRP_TYPE: '//span[@id="drpType"]',
 
-        BTN_SEARCHFILTERS: '//button[text()="Search Filters"]',
-        BTN_SELECT: '//button[text()="Select"]',
-        BTN_CANCEL: '(//button[text()="Cancel"])[2]'
+        BTN_SEARCHFILTERS: '//span[text()="Search Filters"]',
+        BTN_SELECT: '//span[text()="Select"]',
+        BTN_CANCEL: '(//span[text()="Cancel"])[2]'
     }
 
     //EDC Terminal
@@ -31,9 +31,9 @@ class elems_SRPPromationDetails {
         TXT_NAME: '//input[@id="txtName"]',
         TXT_STORENAME: '//input[@id="txtStoreName"]',
 
-        BTN_SEARCHFILTERS: '//button[text()="Search Filters"]',
-        BTN_SELECT: '//button[text()="Select"]',
-        BTN_CANCEL: '(//button[text()="Cancel"])[2]'
+        BTN_SEARCHFILTERS: '//span[text()="Search Filters"]',
+        BTN_SELECT: '//span[text()="Select"]',
+        BTN_CANCEL: '(//span[text()="Cancel"])[2]'
     }
 
     //Members
@@ -42,9 +42,9 @@ class elems_SRPPromationDetails {
         TXT_MEMBERID: '//input[@id="txtMemberId"]',
         TXT_NAME: '(//input[@id="txtName"])[1]',
 
-        BTN_SEARCHFILTERS: '//button[text()="Search Filters"]',
-        BTN_SELECT: '//button[text()="Select"]',
-        BTN_CANCEL: '(//button[text()="Cancel"])[2]'
+        BTN_SEARCHFILTERS: '//span[text()="Search Filters"]',
+        BTN_SELECT: '//span[text()="Select"]',
+        BTN_CANCEL: '(//span[text()="Cancel"])[2]'
     }
 
     //Members
@@ -53,15 +53,15 @@ class elems_SRPPromationDetails {
         BTN_ADD: '(//h3[text()="Member Types"]//following::div//button)[1]',
         TXT_MEMBERTYPENAME: '(//input[@id="txtCode"])[1]',
 
-        BTN_SEARCHFILTERS: '//button[text()="Search Filters"]',
-        BTN_SELECT: '//button[text()="Select"]',
-        BTN_CANCEL: '(//button[text()="Cancel"])[2]'
+        BTN_SEARCHFILTERS: '//span[text()="Search Filters"]',
+        BTN_SELECT: '//span[text()="Select"]',
+        BTN_CANCEL: '(//span[text()="Cancel"])[2]'
 
     }
 
 
-    static BTN_SAVE = '//button[text()="Save"]'
-    static BTN_CANCEL = '//button[text()="Cancel"]'
+    static BTN_SAVE = '//span[text()="Save"]'
+    static BTN_CANCEL = '//span[text()="Cancel"]'
 
 }
 export default elems_SRPPromationDetails
