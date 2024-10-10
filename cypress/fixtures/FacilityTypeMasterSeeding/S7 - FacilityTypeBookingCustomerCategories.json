@@ -1,0 +1,162 @@
+[
+ {
+   "FacilityTypeId": 1,
+   "Customer Category": "Home Team NS "
+ },
+ {
+   "FacilityTypeId": 1,
+   "Customer Category": "NSRCC"
+ },
+ {
+   "FacilityTypeId": 1,
+   "Customer Category": "SAFRA Member "
+ },
+ {
+   "FacilityTypeId": 2,
+   "Customer Category": "Home Team NS "
+ },
+ {
+   "FacilityTypeId": 2,
+   "Customer Category": "NSRCC"
+ },
+ {
+   "FacilityTypeId": 2,
+   "Customer Category": "SAFRA Member "
+ },
+ {
+   "FacilityTypeId": 2,
+   "Customer Category": "Volunteer"
+ },
+ {
+   "FacilityTypeId": 2,
+   "Customer Category": "Guest"
+ },
+ {
+   "FacilityTypeId": 2,
+   "Customer Category": "Adult"
+ },
+ {
+   "FacilityTypeId": 2,
+   "Customer Category": "Child of Guest"
+ },
+ {
+   "FacilityTypeId": 2,
+   "Customer Category": "Corporate"
+ },
+ {
+   "FacilityTypeId": 2,
+   "Customer Category": "Non-Member"
+ },
+ {
+   "FacilityTypeId": 2,
+   "Customer Category": "Non-Profit Institutions"
+ },
+ {
+   "FacilityTypeId": 2,
+   "Customer Category": "Student"
+ },
+ {
+   "FacilityTypeId": 2,
+   "Customer Category": "Volunteer"
+ },
+ {
+   "FacilityTypeId": 3,
+   "Customer Category": "Home Team NS "
+ },
+ {
+   "FacilityTypeId": 3,
+   "Customer Category": "NSRCC"
+ },
+ {
+   "FacilityTypeId": 3,
+   "Customer Category": "SAFRA Member "
+ },
+ {
+   "FacilityTypeId": 3,
+   "Customer Category": "Volunteer"
+ },
+ {
+   "FacilityTypeId": 3,
+   "Customer Category": "Guest"
+ },
+ {
+   "FacilityTypeId": 3,
+   "Customer Category": "Adult"
+ },
+ {
+   "FacilityTypeId": 3,
+   "Customer Category": "Child of Guest"
+ },
+ {
+   "FacilityTypeId": 3,
+   "Customer Category": "Corporate"
+ },
+ {
+   "FacilityTypeId": 3,
+   "Customer Category": "Non-Member"
+ },
+ {
+   "FacilityTypeId": 3,
+   "Customer Category": "Non-Profit Institutions"
+ },
+ {
+   "FacilityTypeId": 3,
+   "Customer Category": "Student"
+ },
+ {
+   "FacilityTypeId": 3,
+   "Customer Category": "Volunteer"
+ },
+ {
+   "FacilityTypeId": 4,
+   "Customer Category": "Home Team NS "
+ },
+ {
+   "FacilityTypeId": 4,
+   "Customer Category": "NSRCC"
+ },
+ {
+   "FacilityTypeId": 4,
+   "Customer Category": "SAFRA Staff"
+ },
+ {
+   "FacilityTypeId": 4,
+   "Customer Category": "SAFRA Member "
+ },
+ {
+   "FacilityTypeId": 4,
+   "Customer Category": "Volunteer"
+ },
+ {
+   "FacilityTypeId": 5,
+   "Customer Category": "Home Team NS "
+ },
+ {
+   "FacilityTypeId": 5,
+   "Customer Category": "NSRCC"
+ },
+ {
+   "FacilityTypeId": 5,
+   "Customer Category": "SAFRA Member "
+ },
+ {
+   "FacilityTypeId": 5,
+   "Customer Category": "Volunteer"
+ },
+ {
+   "FacilityTypeId": 5,
+   "Customer Category": "Adult"
+ },
+ {
+   "FacilityTypeId": 5,
+   "Customer Category": "Non-Member"
+ },
+ {
+   "FacilityTypeId": 5,
+   "Customer Category": "Non-Profit Institutions"
+ },
+ {
+   "FacilityTypeId": 5,
+   "Customer Category": "Guest"
+ }
+]

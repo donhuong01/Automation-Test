@@ -39,7 +39,7 @@ class elems_MemberCard {
     static BTN_ACTIVATEPHYSICALCARD = '//button[text()="Activate Physical Card"]'
     static BTN_DEACTIVATEECARD = '//button[text()="Deactivate e-Card"]'
     static BTN_DEACTIVATEPHYSICALCARD = '//button[text()="Deactivate Physical Card"]'
-    static BTN_PRINTCARD = '//button[text()="Print Card"]'
+    static BTN_PRINTCARD = '//a[@class="link-title"]//button[@class="k-button"]'
 }
 
 export default elems_MemberCard

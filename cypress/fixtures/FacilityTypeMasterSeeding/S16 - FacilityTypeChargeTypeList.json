@@ -1,0 +1,42 @@
+[
+ {
+   "IGMainId": 1,
+   "ChargeTypeId": 1,
+   "Charge Name": "Booking Fee",
+   "Transaction Type": "Booking",
+   "Calculation Type": "Per Booking",
+   "Amount Type": "Fixed Value"
+ },
+ {
+   "IGMainId": 2,
+   "ChargeTypeId": 2,
+   "Charge Name": "Booking Fee",
+   "Transaction Type": "Booking",
+   "Calculation Type": "Per Booking",
+   "Amount Type": "Fixed Value"
+ },
+ {
+   "IGMainId": 3,
+   "ChargeTypeId": 3,
+   "Charge Name": "Booking Fee",
+   "Transaction Type": "Booking",
+   "Calculation Type": "Per Booking",
+   "Amount Type": "Fixed Value"
+ },
+ {
+   "IGMainId": 4,
+   "ChargeTypeId": 4,
+   "Charge Name": "Booking Fee",
+   "Transaction Type": "Booking",
+   "Calculation Type": "Per Booking",
+   "Amount Type": "Fixed Value"
+ },
+ {
+   "IGMainId": 4,
+   "ChargeTypeId": 4,
+   "Charge Name": "Booking Fee",
+   "Transaction Type": "Booking",
+   "Calculation Type": "Per Booking",
+   "Amount Type": "Fixed Value"
+ }
+]

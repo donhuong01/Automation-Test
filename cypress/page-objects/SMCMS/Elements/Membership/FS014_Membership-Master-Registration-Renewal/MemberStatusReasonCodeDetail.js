@@ -4,6 +4,7 @@ class elems_MemberStatusReasonCodeDetail{
     static BTN_CANCEL= '//button[text()="Cancel"]'
     static TXT_REASONCODE = '//input[@id="txtReasonCode"]'
     static TXT_REASONCODEERROR = '//div[@id="txtReasonCode_error"]'
+    static LBL_REASONCODE = '//label[@for="txtReasonCode"]'
     static DRP_MEMBERSTATUS = '//span[@id="drpMemberStatus"]'
     static DRP_MEMBERSTATUSERROR ='//div[@id="drpMemberStatus_error "]'
     static DRP_COMEBACK = '//span[@id="drpComeback"]'

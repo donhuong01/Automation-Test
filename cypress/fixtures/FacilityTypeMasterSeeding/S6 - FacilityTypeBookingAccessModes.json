@@ -1,0 +1,78 @@
+[
+ {
+   "FacilityTypeId": 1,
+   "Access Modes": "In-House"
+ },
+ {
+   "FacilityTypeId": 1,
+   "Access Modes": "Online Portal"
+ },
+ {
+   "FacilityTypeId": 1,
+   "Access Modes": "Mobile"
+ },
+ {
+   "FacilityTypeId": 2,
+   "Access Modes": "In-House"
+ },
+ {
+   "FacilityTypeId": 2,
+   "Access Modes": "Online Portal"
+ },
+ {
+   "FacilityTypeId": 2,
+   "Access Modes": "Mobile"
+ },
+ {
+   "FacilityTypeId": 2,
+   "Access Modes": "Tablet"
+ },
+ {
+   "FacilityTypeId": 3,
+   "Access Modes": "In-House"
+ },
+ {
+   "FacilityTypeId": 3,
+   "Access Modes": "Online Portal"
+ },
+ {
+   "FacilityTypeId": 3,
+   "Access Modes": "Mobile"
+ },
+ {
+   "FacilityTypeId": 3,
+   "Access Modes": "Tablet"
+ },
+ {
+   "FacilityTypeId": 4,
+   "Access Modes": "In-House"
+ },
+ {
+   "FacilityTypeId": 4,
+   "Access Modes": "Mobile"
+ },
+ {
+   "FacilityTypeId": 4,
+   "Access Modes": "Online Portal"
+ },
+ {
+   "FacilityTypeId": 4,
+   "Access Modes": "Tablet"
+ },
+ {
+   "FacilityTypeId": 5,
+   "Access Modes": "In-House"
+ },
+ {
+   "FacilityTypeId": 5,
+   "Access Modes": "Mobile"
+ },
+ {
+   "FacilityTypeId": 5,
+   "Access Modes": "Online Portal"
+ },
+ {
+   "FacilityTypeId": 5,
+   "Access Modes": "Tablet"
+ }
+]

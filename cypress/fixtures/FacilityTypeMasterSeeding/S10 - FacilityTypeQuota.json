@@ -1,0 +1,38 @@
+[
+ {
+   "FacilityTypeId": 2,
+   "Customer Category": "All Customer Category",
+   "Enable Quota (Peak)": false,
+   "Quota For (Peak)": "Per Month",
+   "Maximum Slot": {
+      "Hour (Peak)": 0,
+      "Hour (Non Peak)": 0,
+      "Hour (Super Peak)": null,
+      "Hour (General)": 2
+   },
+   "Enable Quota (Non Peak)": false,
+   "Quota For (Non Peak)": "Per Month",
+   "Enable Quota (Super Peak)": false,
+   "Quota For (Super Peak)": "Per Month",
+   "Enable Quota (General)": true,
+   "Quota For (General)": "Per Day"
+},
+ {
+   "FacilityTypeId": 3,
+   "Customer Category": "All Customer Category",
+   "Enable Quota (Peak)": false,
+   "Quota For (Peak)": "Per Month",
+   "Maximum Slot": {
+      "Hour (Peak)": 0,
+      "Hour (Non Peak)": 0,
+      "Hour (Super Peak)": null,
+      "Hour (General)": 2
+   },
+   "Enable Quota (Non Peak)": false,
+   "Quota For (Non Peak)": "Per Month",
+   "Enable Quota (Super Peak)": false,
+   "Quota For (Super Peak)": "Per Month",
+   "Enable Quota (General)": true,
+   "Quota For (General)": "Per Day"
+}
+]

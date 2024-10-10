@@ -3,6 +3,7 @@ class elems_MembershipRenewalAdviceSettingDetail{
     static BTN_SAVE = '//button[text()="Save"]'
     static BTN_CANCEL = '//button[text()="Cancel"]'
     static TXT_NAME = '//input[@id="txtName"]'
+    static BTN_CREATENEW = '//button[text()="Create New"]'
     static TXTAREA_DESCRIPTION = '//textarea[@id="txtDescription"]'
     static DRP_MEMBERCATEGORY = '//span[@id="drpMemberCategory"]'
     static DRP_GENDER = '//span[@id="drpGender"]'
@@ -14,10 +15,12 @@ class elems_MembershipRenewalAdviceSettingDetail{
     static PCK_DATEOFBIRTHTO = '//input[@id="dtpDateOfBirthTo"]'
     static DRP_MEMBERCARDTYPE = '//span[@id="drpMemberCardType"]'
     static CHK_EXCLUDEBADADDRESSFLAG = '//input[@id="checkExcludeBadAddressFlag"]'
-    static CHK_EXCLUDETERMINATEDINADVANCED = '//input[@id="checkExcludeTerminatedInAdvanced"]'
+    static CHK_EXCLUDETERMINATEDINADVANCED = '//input[@id="checkExcludeTerminatedInAdvance"]'
     static CHK_EXCLUDEREGISTRATIONINADVANCE = '//input[@id="checkExcludeRegistrationInAdvance"]'
     static TXT_POSTALCODE = '//input[@id="txtPostalCode"]'
-    static TXT_POSTALCODE = '//input[@id="txtZoneId"]'
+    static TXT_ZONEID = '//input[@id="txtZoneId"]'
     static DRP_MARITALSTATUS = '//span[@id="drpMaritalStatus"]'
+    static DRP_AUTODEDUCT = '//span[@id="drpAutoDeduction"]'
+    static TBL_MEMBERSHIPRENEWALADICE = '//h2[text()="Membership Renewal Advice Setting Listing"]/ancestor::div//table'
 }
 export default elems_MembershipRenewalAdviceSettingDetail
