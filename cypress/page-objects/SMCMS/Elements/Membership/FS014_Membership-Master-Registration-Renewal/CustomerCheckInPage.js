@@ -14,8 +14,6 @@ class elems_CustomerCheckInPage {
     static TXT_SCANECARD = '//input[@id="txtScanEcard"]'
     static TXT_SWIPECARD = '//input[@id="txtSwipeCard"]'
     static BTN_CHECKIN = '//button[text()="Check In"]'
-    static BTN_CREATNEW = '//button[text()="Create Customer"]'
-    static TBL_SELECTCUSTOMER = '//div[@class="k-widget k-grid"]//table'
 }
 
 export default elems_CustomerCheckInPage

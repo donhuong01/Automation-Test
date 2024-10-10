@@ -9,11 +9,6 @@ class elems_MassUpdateForMemberDataDetail {
     static BTN_VALIDATE = '//button[text()="Validate"]'
     static BTN_SUBMIT = '//button[text()="Submit"]'
     static BTN_CANCEL = '//button[text()="Cancel"]'
-
-    // Workflow Pending List form
-    static TXT_TASKID = '//input[@id="txtTaskId"]'
-    static TXT_WORKFLOWNAME = '//input[@id="txtWorkflowname"]'
-    static BTN_SEARCHFILTERS = '//button[text()="Search Filters"]'
 }
 
 export default elems_MassUpdateForMemberDataDetail

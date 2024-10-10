@@ -1,8 +1,6 @@
 class elems_DocumentTemplateDetail {
     
-    static TXT_TEMPLATENAME = '//input[@id="lblTemplateName"]'
-    static LBL_TEMPLATECODE = '//label[text()="Template Code"]/parent::div//label[@for="lblTemplateCode"]'
-    static TXT_TEMPLATECODE = '//input[@id="lblTemplateCode"]'
+    static LBL_TEMPLATENAME = '//label[text()="Template Name"]/parent::div//label[@for="lblTemplateName"]'
     static DRP_STATUS = '//span[@id="drpStatus"]'
     static TemplateDocument = {
         UPL_TEMPLATEDOCUMENT : '//input[@type="file"]',

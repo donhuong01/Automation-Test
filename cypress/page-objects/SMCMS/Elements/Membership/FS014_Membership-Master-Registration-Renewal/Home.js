@@ -1,7 +1,7 @@
 class elems_Home {
     static Home = {
         BTN_RECEIPT : '//p[text()="Receipt"]/ancestor::div[@class="Tiles_tile__3XQ5v"]',
-        BTN_SAFRAMEMBER : '//p[text()=SAFRA Member"]/ancestor::div[@class="Tiles_tile__5-49Q"]',
+        BTN_SAFRAMEMBER : '//p[text()="SAFRA Member"]/ancestor::div[@class="Tiles_tile__3XQ5v"]',
         BTN_SRP : '//p[text()="SRP"]/ancestor::div[@class="Tiles_tile__3XQ5v"]',
         BTN_FACILITY : '//p[text()="Facility"]/ancestor::div[@class="Tiles_tile__3XQ5v"]',
         BTN_MERCHANDISE : '//p[text()="Merchandise"]/ancestor::div[@class="Tiles_tile__3XQ5v"]',
@@ -71,7 +71,7 @@ class elems_Home {
     }
      static ENERGYONE = {
         BTN_MEMBERSHIPREGISTRATION : '//p[text()="Membership Registration"]/ancestor::div[@class="Tiles_tile__3XQ5v"]',
-        BTN_MEMBERSHIPRENEWAL:'//p[text()="Membership Renewal"]/ancestor::div[@class="Tiles_tile__3XQ5v"]',
+        BTN_MEMBERSHIPRENEWAL= '//p[text()="Membership Renewal"]/ancestor::div[@class="Tiles_tile__3XQ5v"]',
         BTN_MEMBERSHIPDEFERMENT : '//p[text()="Membership Deferment"]/ancestor::div[@class="Tiles_tile__3XQ5v"]',
         BTN_MEMBERSHIPREINSTATEMENT : '//p[text()="Membership Reinstatement"]/ancestor::div[@class="Tiles_tile__3XQ5v"]',
         BTN_MEMBERSHIPTERMINATION : '//p[text()="Membership Termination"]/ancestor::div[@class="Tiles_tile__3XQ5v"]'

@@ -1,4 +1,0 @@
-class elems_InterestGroupWaiverHistory {
-
-}
-export default elems_InterestGroupWaiverHistory

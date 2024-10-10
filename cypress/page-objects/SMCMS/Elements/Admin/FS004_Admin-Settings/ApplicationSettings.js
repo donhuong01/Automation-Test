@@ -1,23 +1,21 @@
 class elems_ApplicationSettings {
 
     static PasswordPolicyForOnlineAccount = {
-        TXT_MINIMUMPASSWORDLENGTH : '//input[@id="txtMinimumPasswordLength"]',
+        TXT_MINIMUMLENGTH : '//input[@id="txtMinimumLength"]',
         CHK_ENFORCESPECIALCHARACTER : '//input[@id="checkEnforceSpecialCharacter"]',
-        CHK_ENFORCECAPITALANDSMALLCHAR : '//input[@id="checkEnforceCapitalAndSmallCharacter"]',
-        CHK_ENFORCENUMBER : '//input[@id="checkEnforceNumber"]',
         TXT_ENFORCEPASSWORDHISTORY : '//input[@id="txtEnforcePasswordHistory"]',
-        TXT_MINPASSWORDAGE : '//input[@id="txtMinimumPasswordAge"]',
-        TXT_MAXPASSWORDAGE : '//input[@id="txtMaximumPasswordAge"]',
-        TXT_NUMOFINACTIVEDAYS : '//input[@id="txtinactiveDaysBeforeAccountLock"]'
+        TXT_MINPASSWORDAGE : '//input[@id="txtMinPasswordAge"]',
+        TXT_MAXPASSWORDAGE : '//input[@id="txtMaxPasswordAge"]',
+        TXT_NUMOFINACTIVEDAYS : '//input[@id="txtNumberOfInactiveDays"]'
     }
 
     static LoginPolicy = {
-        TXT_MAXFAILLOGINATTEMPTS : '//input[@id="txtMaximumFailedLoginAttempt"]'
+        TXT_MAXFAILLOGINATTEMPTS : '//input[@id="txtMaximumFailedLoginAttempts"]'
     }
 
     static ContentClauses = {
-        RICHTXT_MARKETINGCONSENT : '//label[text()="Marketing Consent"]/parent::div//span[@class="k-textbox-container"]',
-        RICHTXT_COMMUNICATIONCONSENT : '//label[text()="Communication Consent"]/parent::div//span[@class="k-textbox-container"]'
+        TXTAREA_MARKETINGCONSENT = '//textarea[@id="areaMarketingConsent"]',
+        TXTAREA_COMMUNICATIONCONSENT = '//textarea[@id="areaCommunicationConsent"]'
     }
 
     static BTN_SAVE = '//button[text()="Save"]'

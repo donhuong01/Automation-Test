@@ -7,7 +7,6 @@ class elems_MembershipSuspensionRequest {
     static LBL_MEMBERNAME = '//label[text()="Member Name"]/parent::div//label[@for="lblMemberName"]'
     static DATE_STARTDATE = '//input[@id="dtpStartDate"]'
     static DATE_ENDDATE = '//input[@id="dtpEndDate"]'
-    static DATE_EARLYRELEASEDATE = '//input[@id="dtpEarlyReleaseDate"]'
     static DRP_REASONCODE = '//span[@id="drpReasonCode"]'
     static TXTAREA_REMARK = '//textarea[@id="areaRemark"]'
     static LBL_STATUS = '//label[text()="Status"]/parent::div//label[@for="lblStatus"]'
@@ -18,7 +17,6 @@ class elems_MembershipSuspensionRequest {
 
     static BTN_SUBMIT = '//button[text()="Submit"]'
     static BTN_CANCEL = '//button[text()="Cancel"]'
-    
 }
 
 export default elems_MembershipSuspensionRequest
