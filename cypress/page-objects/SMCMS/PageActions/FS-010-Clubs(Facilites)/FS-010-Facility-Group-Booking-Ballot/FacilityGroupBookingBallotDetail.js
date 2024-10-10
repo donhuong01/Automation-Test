@@ -64,9 +64,9 @@ class FacilityGroupBookingBallotDetail {
         cy.Click(elems_PageHeader.BTN_SHOPPINGCART)
         cy.wait(8000)
         //cy.xpath(elems_PageHeader.DRP_USERLINKS).click()
-        cy.wait(15000)
-        cy.xpath('(//span[@class="k-input"])[1]')
-        cy.Click('(//span[@class="k-input"])[1]')
+        cy.wait(5000)
+        cy.xpath('//span[text()="Standard"]')
+        cy.Click('//span[text()="Standard"]')
          cy.xpath('//ul//li').contains('A-').click()//.should('contain.text', 'Standard').select('Standard')
         // cy.xpath(elems_PageHeader.DRP_USERLINKS).then(($select)=> {
 

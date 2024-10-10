@@ -8,7 +8,7 @@ const data = {
 
     //Accommodation Charge Rate Listing
     ACCOM_CHARGE_RATE:{
-        EXPECTEDPG: "Report Viewer - Accommodation Charge Rate", 
+        EXPECTEDPG: "Report Viewer - ReportAccommodation.AccommodationChargeRateTableListingReport", 
         TRANSAC_TYPE: 'Booking',
         CALC_TYPE: 'Per Booking',
         AMOUNT_TYPE: 'Fixed Value',
@@ -19,7 +19,7 @@ const data = {
 
     //Accomodation Listing
     ACCOM_LISTING: {
-        EXPECTEDPG: 'Report Viewer - Accommodation Listing',
+        EXPECTEDPG: 'Report Viewer - ReportAccommodation.AccommodationListing',
         ACCOM_TYPE_NAME: 'Accommodation Test 1',
         ACCOM_NAME: 'Accommodation Test 1',
         DATE_OF_ACTIVATION: '14-Mar-2023',
@@ -28,7 +28,7 @@ const data = {
 
     //Accomodation Occupancy Listing
     ACCOM_OCCUPANCY: {
-        EXPECTEDPG: 'Report Viewer - Accommodation Occupancy',
+        EXPECTEDPG: 'Report Viewer - ReportAccommodation.AccommodationOccupancy',
         ACCOM_TYPE_NAME: 'Accommodation Test 1',
         ACCOM_NAME: 'Accommodation Test 1',
         LOCATION: 'SAFRA Jurong'
@@ -36,36 +36,36 @@ const data = {
 
     //Accomodation Operating Period Listing
     ACCOM_OPERATING_PERIOD: {
-        EXPECTEDPG: 'Report Viewer - Operating Period',
+        EXPECTEDPG: 'Report Viewer - ReportAccommodation.OperatingPeriodListing',
         TYPE_OF_PEAK: 'Non-Peak',
         OPERATING_DAY: 'Monday'
     },
 
     //Accomodation Booking Listing
     ACCOM_BOOKING: {
-        EXPECTEDPG:'Report Viewer - Accommodation Booking',
+        EXPECTEDPG:'Report Viewer - ReportAccommodation.AccommodationBookingListing',
         ACCOM_NAME: 'Demo - Accmo 2023'
     },
 
     //Accomodation Reservation Listing
     ACCOM_RESERVATION: {
-        EXPECTEDPG:'Report Viewer - Accommodation Reservation',
+        EXPECTEDPG:'Report Viewer - ReportAccommodation.AccommodationReservationListing',
         ACCOM_NAME: 'Demo - Accmo 2023'
     },
 
     //Accomodation Booking Cancellation Listing
     ACCOM_BOOKING_CANCELLATION: {
-        EXPECTEDPG: 'Report Viewer - Accommodation Booking Cancellation'
+        EXPECTEDPG: 'Report Viewer - ReportAccommodation.AccommodationBookingCancellationListing'
     },
 
     //Accomodation Closure Listing
     ACCOM_CLOSURE: {
-        EXPECTEDPG: 'Report Viewer - Accommodation Closure'
+        EXPECTEDPG: 'Report Viewer - ReportAccommodation.AccommodationClosureListing'
     },
 
     //Accommodation Type Listing
     ACCOM_TYPE: {
-        EXPECTEDPG: 'Report Viewer - Accommodation Type',
+        EXPECTEDPG: 'Report Viewer - ReportAccommodation.AccommodationTypeListing',
         ACCOM_TYPE: 'Accomo2023',
         LIFE_STYLE: 'Enrichment',
         FABS_GROUP: 'Activities',

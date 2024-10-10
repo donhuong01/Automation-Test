@@ -49,7 +49,7 @@ const FacilityBookingManagement = () => {
             cy.visit('/membership/customerCheckin')
             cy.wait(5000)
             cy.Click(elems_CustomerCheckInPage.RBTN_NRIC)
-            cy.EnterDateCheckin(elems_CustomerCheckInPage.DATE_DATEOFBIRTH, Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB)
+            cy.EnterDate(elems_CustomerCheckInPage.DATE_DATEOFBIRTH, Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB)
             cy.EnterText(elems_CustomerCheckInPage.TXT_LAST4DIGITSNRIC, CustomerNRIC)
             cy.Click(elems_CustomerCheckInPage.BTN_CHECKIN)
             cy.wait(2000)
@@ -126,23 +126,23 @@ const FacilityBookingManagement = () => {
             // MemRegPrincipal.VerifyPageTitle('Membership Registration - Principal')
 
             MemRegPrincipal.SaveAndNextPrincipal()
-            cy.wait(5000)
+            cy.wait(8000)
             //#endregion
 
             //#region Tenure Selection
 
             MemTenureSelect.principalTenureSelection(PrincipalName, '10 Years')
-            cy.wait(5000)
+            cy.wait(8000)
 
             // Click on add to cart
             MemTenureSelect.addToCart()
-            cy.wait(5000)
+            cy.wait(8000)
 
             // Shopping cart and Payments
             ShoppingCart.fillOutandApplyPayment('CASH')
 
             // Wait for 3 minites
-            cy.wait(30000)
+            cy.wait(15000)
             //#endregion
 
             // })
@@ -170,6 +170,8 @@ const FacilityBookingManagement = () => {
             // Click Create New button
             FacilityBookingDetail.CreateNew()
 
+            cy.wait(4000)
+
             // Verify Page Title
             FacilityBookingDetail.verifyPageTitle('Facility Booking Details')
 
@@ -186,17 +188,12 @@ const FacilityBookingManagement = () => {
             FacilityBookingDetail.SelectSlot(slot)
 
             // add waiver
-            //FacilityBookingDetail.AddWaiver(ChargeType, Amount, Reason)
+            FacilityBookingDetail.AddWaiver(ChargeType, Amount, Reason)
 
             //Click Save
-            //FacilityBookingDetail.Save()
+            FacilityBookingDetail.Save()
 
-            cy.wait(30000)
-
-            // Click on add to cart
-            MemTenureSelect.addToCart()
-
-            cy.wait(8000)
+            cy.wait(10000)
 
             //add payment
             FacilityBookingDetail.fillOutandApplyPayment('CASH')
@@ -217,7 +214,7 @@ const FacilityBookingManagement = () => {
             //FacilityBookingDetail.SearchWithNRIC(CustomerNRIC)
 
             //Filter with nric
-            // FacilityBookingDetail.SearchWithCustomerName(PrincipalName) //Change Customer Name based on Member ID
+            FacilityBookingDetail.SearchWithCustomerName(CustomerNRICFull) //Change Customer Name based on Member ID
 
 
             // //verify facility booking

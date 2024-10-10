@@ -1,6 +1,6 @@
 class elems_SourceChannelDetail {
-    static BTN_SAVE = '//span[text()="Save"]'
-    static BTN_CANCEL = '//span[text()="Cancel"]'
+    static BTN_SAVE = '//button[text()="Save"]'
+    static BTN_CANCEL = '//button[text()="Cancel"]'
     static TXT_NAME = '//input[@id="txtName"]'
     static DRP_TYPE = '//span[@id="drpType"]'
     static DRP_GROUP = '//span[@id="drpGroup"]'
@@ -19,18 +19,18 @@ class elems_SourceChannelDetail {
     static TXT_DESCRIPTION = '//input[@id="txtDescription"]'
     static TXT_ROADSHOW = '//input[@id="txtRoadShowCode"]'
     static DRP_STATUS = '//span[@id="status"]'
-    static BTN_SEARCHFILTER = '//span[text()="Search Filters"]'
+    static BTN_SEARCHFILTER = '//button[text()="Search Filters"]'
     
     static ELIGIBLEPAYMENTMETHODLIST = {
         PCK_PAYMENTMETHOD : '//label[@for="pckPaymentMethod"]/parent::div//button',
-        BTN_ADDPAYMENTMETHOD : '//span[text()="Add Payment Method"]',
-        BTN_REMOVEPAYMENTMETHOD : '//span[text()="Remove Payment Method"]',
+        BTN_ADDPAYMENTMETHOD : '//button[text()="Add Payment Method"]',
+        BTN_REMOVEPAYMENTMETHOD : '//button[text()="Remove Payment Method"]',
         TBL_ELIGIBLEPAYMENTMETHODLIST : '//h3[text()="Eligible Payment Methods"]//following-sibling::div//table'
     }   
     static USERLIST = {
         PCK_USER : '//label[@for="pckUser"]/parent::div//button',
-        BTN_ADDUSER : '//span[text()="Add User"]',
-        BTN_REMOVEUSER: '//span[text()="Remove User"]',
+        BTN_ADDUSER : '//button[text()="Add User"]',
+        BTN_REMOVEUSER: '//button[text()="Remove User"]',
         TBL_USERLIST : '//h3[text()="Users"]//following-sibling::div//table'
     }
 }

@@ -1,8 +1,8 @@
 const { defineConfig } = require('cypress')
 
 module.exports = defineConfig({
-  projectId: 'po3wwi',
   e2e: {
+    experimentalModifyObstructiveThirdPartyCode: true,
     "projectId": "2qznzd",
     "chromeWebSecurity": false,
     "env": {

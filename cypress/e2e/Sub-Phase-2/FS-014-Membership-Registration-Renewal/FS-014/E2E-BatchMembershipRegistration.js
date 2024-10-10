@@ -99,7 +99,7 @@ describe('[TS13] Batch Membership Registration Details form', function () {
         BatchMembershipRegistrationDetail.AddMember()
 
         //Verify Page Title
-        BatchMembershipRegistrationListing.verifyPageTitle('Membership Registration - In Batch Registration')
+        BatchMembershipRegistrationListing.verifyPageTitle('Membership Registration Form - In Batch Registration')
 
         //Add Existing Member to the batch
         BatchMembershipRegistrationDetail.FillOutFormForExistingMember(IDExistingMember, NRICExistingMember)
@@ -182,13 +182,13 @@ describe('[TS13] Batch Membership Registration Details form', function () {
         BatchMembershipRegistrationDetail.AddMember()
 
         //Verify Page Title
-        BatchMembershipRegistrationListing.verifyPageTitle('Membership Registration - In Batch Registration')
+        BatchMembershipRegistrationListing.verifyPageTitle('Membership Registration Form - In Batch Registration')
 
         //Add Existing Member to the batch
         BatchMembershipRegistrationDetail.FillOutFormForNonMember(FullNRICNonMem, DateOfBirth)
 
         //Click Save And Next button
-        // BatchMembershipRegistrationDetail.Next()
+        BatchMembershipRegistrationDetail.Next()
 
         //Select Member Category
          BatchMembershipRegistrationDetail.SelectMemberCategory('Principal')
@@ -230,31 +230,31 @@ describe('[TS13] Batch Membership Registration Details form', function () {
             HomeNumber: data.memberregistrationprincipal.ContactInfo.HomeNumber,
             EmergencyContact: data.memberregistrationprincipal.ContactInfo.EmergencyContact,
             })
-        // MemRegPrincipal.verifyPreferredContactMode({
-        //     SelectAll: data.memberregistrationprincipal.ContactInfo.SelectAll,
-        //     Email: data.memberregistrationprincipal.ContactInfo.Email,
-        //     Mail: data.memberregistrationprincipal.ContactInfo.Mail,
-        //     SMS: data.memberregistrationprincipal.ContactInfo.SMS,
-        //     VoiceCall: data.memberregistrationprincipal.ContactInfo.VoiceCall,
-        //     PushNotification: data.memberregistrationprincipal.ContactInfo.PushNotification,
-        //     WhatsApp: data.memberregistrationprincipal.ContactInfo.WhatsApp,
-        //      })
-        // MemRegPrincipal.verifyConsentInformation({
-        //     MarketingConsent: data.memberregistrationprincipal.ContactInfo.MarketingConsent,
-        //     ServiceNotificationConsent: data.memberregistrationprincipal.ContactInfo.ServiceNotificationConsent,
-        //     TransactionalConsent: data.memberregistrationprincipal.ContactInfo.TransactionalConsent,
-        //     })
+        MemRegPrincipal.verifyPreferredContactMode({
+            SelectAll: data.memberregistrationprincipal.ContactInfo.SelectAll,
+            Email: data.memberregistrationprincipal.ContactInfo.Email,
+            Mail: data.memberregistrationprincipal.ContactInfo.Mail,
+            SMS: data.memberregistrationprincipal.ContactInfo.SMS,
+            VoiceCall: data.memberregistrationprincipal.ContactInfo.VoiceCall,
+            PushNotification: data.memberregistrationprincipal.ContactInfo.PushNotification,
+            WhatsApp: data.memberregistrationprincipal.ContactInfo.WhatsApp,
+             })
+        MemRegPrincipal.verifyConsentInformation({
+            MarketingConsent: data.memberregistrationprincipal.ContactInfo.MarketingConsent,
+            ServiceNotificationConsent: data.memberregistrationprincipal.ContactInfo.ServiceNotificationConsent,
+            TransactionalConsent: data.memberregistrationprincipal.ContactInfo.TransactionalConsent,
+            })
         
-        // MemRegPrincipal.verifySafraBrands({
-        //     energyOneGym: data.memberregistrationprincipal.InterestedAreaInformation.energyOneGym,
-        //     kidzAmazeSplshIndrPlayGrnd: data.memberregistrationprincipal.InterestedAreaInformation.kidzAmazeSplshIndrPlayGrnd,
-        //     finsSwimSchool: data.memberregistrationprincipal.InterestedAreaInformation.finsSwimSchool,
-        //     })
+        MemRegPrincipal.verifySafraBrands({
+            energyOneGym: data.memberregistrationprincipal.InterestedAreaInformation.energyOneGym,
+            kidzAmazeSplshIndrPlayGrnd: data.memberregistrationprincipal.InterestedAreaInformation.kidzAmazeSplshIndrPlayGrnd,
+            finsSwimSchool: data.memberregistrationprincipal.InterestedAreaInformation.finsSwimSchool,
+            })
 
 
             //Click Save And Next Button
             BatchMembershipRegistrationDetail.SaveAndNext()
-            cy.wait(5000)
+            cy.wait(15000)
             //Verify Page Title
             BatchMembershipRegistrationListing.verifyPageTitle('Member Tenure Selection - In Batch Registration')
              cy.wait(5000)
@@ -326,11 +326,11 @@ describe('[TS13] Batch Membership Registration Details form', function () {
         BatchMembershipRegistrationDetail.AddMember()
 
         //Verify Page Title
-        BatchMembershipRegistrationListing.verifyPageTitle('Membership Registration - In Batch Registration')
+        BatchMembershipRegistrationListing.verifyPageTitle('Membership Registration Form - In Batch Registration')
         
         //Add New member (Principal) to the batch
         BatchMembershipRegistrationDetail.NewMemberPrincipal()
-        cy.wait(5000) //wait for page to load
+        cy.wait(15000) //wait for page to load
 
         //Verify Page Title
         BatchMembershipRegistrationListing.verifyPageTitle('Membership Registration - Principal')
@@ -368,7 +368,7 @@ describe('[TS13] Batch Membership Registration Details form', function () {
         
         MemRegPrincipal.verifyContactInformation({
             Handphone: data.memberregistrationprincipal.ContactInfo.Handphone,
-            EmailAddress: data.memberregistrationprincipal.ContactInfo.EmailAddress2,
+            EmailAddress: data.memberregistrationprincipal.ContactInfo.EmailAddress,
             HomeNumber: data.memberregistrationprincipal.ContactInfo.HomeNumber,
             EmergencyContact: data.memberregistrationprincipal.ContactInfo.EmergencyContact,
             })
@@ -381,8 +381,7 @@ describe('[TS13] Batch Membership Registration Details form', function () {
             BatchMembershipRegistrationListing.verifyPageTitle('Member Tenure Selection - In Batch Registration')
              
             //Select Pricipal Tenure
-            //BatchMembershipRegistrationListing.principalTenureSelection('5 Years', BatchName)
-            MemTenureSelection.TenureSelectionBatchPri(BatchName, '5 Years')
+            BatchMembershipRegistrationListing.principalTenureSelection('5 Years', BatchName)
 
             //Click Save And Next button
             BatchMembershipRegistrationDetail.SaveAndNextTenure()
@@ -436,7 +435,7 @@ describe('[TS13] Batch Membership Registration Details form', function () {
         BatchMembershipRegistrationListing.createNew()
 
         //Wait for page to load
-        cy.wait(5000)
+        cy.wait(20000)
 
         //Verify Page Title
         BatchMembershipRegistrationListing.verifyPageTitle('Batch Membership Registration Detail Form')
@@ -461,7 +460,7 @@ describe('[TS13] Batch Membership Registration Details form', function () {
 
         //click on table entry
         BatchMembershipRegistrationListing.ClickOnNewlyCreatedItem()
-        cy.wait(5000) //wait for page to load
+        cy.wait(15000) //wait for page to load
 
         //Verify Page Title
         BatchMembershipRegistrationListing.verifyPageTitle('Batch Membership Registration Detail Form')
@@ -470,11 +469,11 @@ describe('[TS13] Batch Membership Registration Details form', function () {
         BatchMembershipRegistrationDetail.AddMember()
 
         //Verify Page Title
-        BatchMembershipRegistrationListing.verifyPageTitle('Membership Registration - In Batch Registration')
+        BatchMembershipRegistrationListing.verifyPageTitle('Membership Registration Form - In Batch Registration')
         
         //Add New member (Defendent) to the batch
         BatchMembershipRegistrationDetail.NewMemberDependent()
-        cy.wait(5000) //wait for page to load
+        cy.wait(15000) //wait for page to load
 
         //Verify Page Title
         BatchMembershipRegistrationListing.verifyPageTitle('Membership Registration - Dependent')
@@ -566,8 +565,8 @@ describe('[TS13] Batch Membership Registration Details form', function () {
          MemRegDependent.filloutIamInterestedIn({allEventsAndActivities,  allPeaksAndPromos, fitnessAndAdventure, childEnrichmentActivities,
              lifeLongLearning, leisureAndEntrtnmnt, foodAndBeverages, shoppingAndGroceries, travel, motoring, healthAndBeauty, safraPtsRewardsProgramme, })
          //filloutSafraNewsLetter
-             //const ensman = data.memregdependent.Safranewsletter.ensman
-         //MemRegDependent.filloutSafraNewsLetter({ensman})
+             const ensman = data.memregdependent.Safranewsletter.ensman
+         MemRegDependent.filloutSafraNewsLetter({ensman})
          
  
          //fillOutInterestGrpsAndMicroClubs
@@ -597,18 +596,18 @@ describe('[TS13] Batch Membership Registration Details form', function () {
         BatchMembershipRegistrationListing.verifyPageTitle('Member Tenure Selection - In Batch Registration')
         
         //Select Pricipal Tenure
-        MemTenureSelection.TenureSelectionBatchPri(NewDependentPrincipalID, '5 Years')
+        BatchMembershipRegistrationListing.principalTenureSelection('5 Years', TestUser)
 
         //Select Dependent
-        MemTenureSelection.TenureSelectionBatchDep(TestUser, '5 Years')
+        MemTenureSelection.dependentTenureSelection(TestUser, '5 Years')
 
-        //MemTenureSelection.selectDependent(TestUser)
+        MemTenureSelection.selectDependent(TestUser)
 
         //Click Save And Next button
         BatchMembershipRegistrationDetail.SaveAndNextTenure()
 
         // Shopping cart and Payments
-        ShoppingCartPayment.fillOutandApplyPaymentCompleteButton('I-Banking')
+        ShoppingCartPayment.fillOutandApplyPayment('I-Banking')
     
          
     })

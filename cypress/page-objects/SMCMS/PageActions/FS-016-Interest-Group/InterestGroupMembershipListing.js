@@ -179,7 +179,7 @@ class InterestGroupListing {
        *****************************************************/
     VerifyReasonCode(ReasonCode) {
 
-        cy.ValidateElementText('(//table//tbody//td)[10]', ReasonCode)
+        cy.ValidateElementText('(//table//tbody//td)[6]', ReasonCode)
 
     }
     /*****************************************************
@@ -196,8 +196,8 @@ class InterestGroupListing {
        *****************************************************/
     CheckFilterFunctionality(IGMian, IG, IGMembershipID, SAFRAMembershipID, Status, CustomerName) {
 
-        // cy.SelectPickerWithoutFields(elems_IGMemberListing.PCK_IGMAIN, IGMian)
-        // cy.SelectPickerWithoutFields(elems_IGMemberListing.PCK_INTERESTGROUP, IG)
+        cy.SelectPickerWithoutFields(elems_IGMemberListing.PCK_IGMAIN, IGMian)
+        cy.SelectPickerWithoutFields(elems_IGMemberListing.PCK_INTERESTGROUP, IG)
         cy.EnterText(elems_IGMemberListing.TXT_IGMEMBERSHIPID, IGMembershipID)
         cy.EnterText(elems_IGMemberListing.TXT_SAFRAMEMBERSHIPID, SAFRAMembershipID)
         cy.SelectDropDownItem(elems_IGMemberListing.DRP_STATUS, Status)

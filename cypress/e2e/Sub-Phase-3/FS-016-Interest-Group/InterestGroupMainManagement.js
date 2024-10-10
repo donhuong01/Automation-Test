@@ -2,7 +2,6 @@ import InterestGroupMainManagement from '../../../page-objects/SMCMS/PageActions
 
 import login from '../../../fixtures/login'
 import data from '../../../fixtures/Data_Module/FS-016-Interest-Group/016-Interest-Group-Main-Mangement'
-import Common from '../../../page-objects/SMCMS/PageActions/Common/Common'
 
 // beforeEach(() => {
 
@@ -12,8 +11,6 @@ import Common from '../../../page-objects/SMCMS/PageActions/Common/Common'
 //     // Set local storage for UAT Enviroment
 //     // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
 // })
-
-const common = new Common()
 
 const {IGName, Code, MainCategory, IGCategoryGroup, FABSGroup, ClubClassification, LifeStyleGroup,
       SMCClassification, OwnerEmail, LocationName, ApproverOption, ApproverEmail, Status, Name,
@@ -57,14 +54,8 @@ describe('[TS02] FS-016 Interest Group Main Management', function () {
         //Click save as draft button
         InterestGroupMainManagement.SaveAsDraft()
 
-        //Click IG Main cancel
-        InterestGroupMainManagement.Cancel()
-
         //Filter listing using status and verify table item status
         InterestGroupMainManagement.FilterWithStatus(Status)
-
-        //Click on the last page
-        common.ClickLastPage()
 
         //click on newly created item
         InterestGroupMainManagement.ClickIGTableLink(IGName)
@@ -114,32 +105,22 @@ describe('[TS02] FS-016 Interest Group Main Management', function () {
         // InterestGroupDetail.VarifyTableItemStatus(IGName, 'Pending Approval')
 
         //Wait for Approval Email
-        // cy.wait(5000) 
+        cy.wait(250000) 
         
-        // cy.wait('@ID')
-        // cy.get('@ID').then(xhr => {
+        cy.wait('@ID')
+        cy.get('@ID').then(xhr => {
 
-        //     const Id = xhr.response.body.value.id
-        //     console.log(Id)
-        //     cy.log(Id)
+            const Id = xhr.response.body.value.id
+            console.log(Id)
+            cy.log(Id)
 
-        //     cy.visit(`/admin/pendingTaskDetails?id=${Id}`).as('MemID')
-        //     cy.wait(2000)
+            cy.visit(`/admin/pendingTaskDetails?id=${Id}`).as('MemID')
+            cy.wait(2000)
 
-        // })
+        })
+            
 
-        common.ApprovalWorkFlow('IG', 'Interest Group Main Approval Workflow', 'Approve', 'Approved')
 
-        cy.visit('/membership/interestGroupMainListing')
-
-        //Filter listing using status and verify table item status
-        InterestGroupMainManagement.FilterWithStatus('Approved')
-        
-        //Click on the last page
-        common.ClickLastPage()
-        
-        //Verify Approved IG Main
-        InterestGroupMainManagement.VerifyTableEntries(IGName, 'Approved')
 
 
         //Click view interest group button

@@ -1,4 +1,4 @@
 const data = {
-    PromotionName: 'Promo-InH37506',
+    PromotionName: 'Promo 003',
 }
 export default data

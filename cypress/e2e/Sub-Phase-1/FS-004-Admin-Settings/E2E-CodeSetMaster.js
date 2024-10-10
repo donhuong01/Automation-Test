@@ -22,7 +22,7 @@ const CodeSetMaster = ()=> {
 
             // Naviagte to form
             cy.visit('/admin/codeSetMasterList')
-            // cy.wait(20000)
+            cy.wait(20000)
 
             // Click Create New button
             CodeSetMstList.createNew()
@@ -40,7 +40,7 @@ const CodeSetMaster = ()=> {
 
             // Naviagte to form
             cy.visit('/admin/codeSetMasterList')
-            // cy.wait(20000)
+            cy.wait(20000)
 
             // Filter listing
             CodeSetMstList.filterCodeSetMasterList(
@@ -57,7 +57,7 @@ const CodeSetMaster = ()=> {
 
             // Naviagte to form
             cy.visit('/admin/codeSetMasterList')
-            // cy.wait(20000)
+            cy.wait(20000)
 
             // Filter listing
             CodeSetMstList.filterCodeSetMasterList(
@@ -81,7 +81,7 @@ const CodeSetMaster = ()=> {
 
             // Click Save button
             CodeSetMstDtl.save()
-            // cy.wait(20000)
+            cy.wait(20000)
 
             // Filter listing
             CodeSetMstList.filterCodeSetMasterList(
@@ -92,12 +92,10 @@ const CodeSetMaster = ()=> {
             cy.wait(1000)
             // Select item to delete
             CodeSetMstList.selectCodeSetItem(data.CodeSetMasterListing.codeSetName)
-
-            cy.wait(7000)
             // CodeSetMstList.selectCodeSetItem('.123')
 
             // Click Delete button - MUST TICK ITEM CHECKBOX BEFORE DELETING
-            //CodeSetMstList.delete()
+            CodeSetMstList.delete()
         })
     })
 }

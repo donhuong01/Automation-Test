@@ -1,7 +1,7 @@
 class elems_SRPREDEMPTIONDETAIL {
 
     static BTN_ADDTOCART = '//button[@form="formSRPRedemptionDetail"]'
-    static BTN_CANCEL = '//span[text()="Cancel"]'
+    static BTN_CANCEL = '//button[text()="Cancel"]'
     static TXT_QUANTITY = '//input[@id="txtQuantity"]'
     static DATE_REDEMPTIONDATE = '//input[@id="dtpRedemptionDate"]'
 

@@ -144,57 +144,17 @@ class ShoppingCartPayments {
      *****************************************************/
     fillOutandApplyPayment(PaymentMode) {
 
-        cy.wait(3000)
+        cy.wait(5000)
         cy.SelectDropDownItem(elems_SMCMSShoppingCartAndPayment.Payments.DRP_PAYMENTMODE, PaymentMode)
 
         cy.xpath(elems_SMCMSShoppingCartAndPayment.Payments.LBL_REMAININGBALANCE).then($balance => {
 
             const blnc = $balance.text().trim() // 437.400
 
-            if(PaymentMode === "SRP"){
-                cy.xpath('//input[@id="txtNumberOfPoints"]').clear()
-                cy.xpath('//input[@id="txtNumberOfPoints"]').type(blnc)
-                
-            }
-            else {
             // const Amount = Math.floor(blnc)
             // console.log(Amount)
             cy.xpath(elems_SMCMSShoppingCartAndPayment.Payments.TXT_AMOUNT).clear()
             cy.xpath(elems_SMCMSShoppingCartAndPayment.Payments.TXT_AMOUNT).type(blnc)
-        }
-
-        })
-        cy.Click(elems_SMCMSShoppingCartAndPayment.Payments.BTN_APPLYPAYMENT)
-        cy.wait(3000)
-
-        cy.Click(elems_SMCMSShoppingCartAndPayment.Payments.BTN_PAYNOW)
-        cy.wait(8000)
-
-
-    }
-
-    /*****************************************************
-     * Method: Fill out Payment Mode Amount and Apply PAyment
-     * Description: Fill out Payment Mode
-     * @param {string} PaymentMode Payment Mode
-     *****************************************************/
-    fillOutandApplyPaymentSRP() {
-
-        cy.wait(3000)
-        cy.Click(elems_SMCMSShoppingCartAndPayment.Payments.DRP_PAYMENTMODE) 
-        cy.get('li:contains(SRP)')
-        .should('have.length', 2)
-        // grab the second match
-        .eq(1)
-        .should('have.text', 'SRP')
-        .click()
-
-        cy.xpath('(//td[@colspan="1"])[4]').then($balance => {
-
-            const blnc = $balance.text().trim() // 437.400
-
-                cy.xpath('//input[@id="txtNumberOfPoints"]').clear()
-                cy.xpath('//input[@id="txtNumberOfPoints"]').type(blnc)
 
         })
         cy.Click(elems_SMCMSShoppingCartAndPayment.Payments.BTN_APPLYPAYMENT)

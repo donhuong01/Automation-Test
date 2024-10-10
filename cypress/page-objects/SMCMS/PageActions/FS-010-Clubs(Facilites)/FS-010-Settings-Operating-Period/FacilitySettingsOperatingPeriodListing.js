@@ -22,9 +22,7 @@ class FacilitySettingsOperatingPeriodListing {
      *****************************************************/
 
     FilloutFilters(OperatingPeriodName, Status, RecordStatus) {
-
         if (OperatingPeriodName !== undefined) {
-            cy.get('.k-loading-image', { timeout: 30000 }).should('not.exist');
             cy.xpath(elems_FacilitySettingsOperatingPeriodListing.TXT_OPERATINGPERIODNAME).clear()
             cy.EnterText(elems_FacilitySettingsOperatingPeriodListing.TXT_OPERATINGPERIODNAME, OperatingPeriodName)
         }
@@ -84,7 +82,7 @@ class FacilitySettingsOperatingPeriodListing {
     ClickOn(ButtonName) {
 
         cy.Click(`//button[text()="${ButtonName}"]`)
-
+        
     }
 
     /*****************************************************
@@ -96,8 +94,8 @@ class FacilitySettingsOperatingPeriodListing {
     }
 
     /*****************************************************
-     * Method: Delete Confirmation button functionality
-     * Description: This function Verifies the delete confirmation "Yes" button functionality
+     * Method: Delete Confirmation button functionality     
+     * Description: This function Verifies the delete confirmation "Yes" button functionality 
      *****************************************************/
     DeleteItemYes() {
         cy.Click(elems_Alerts.BTN_YES)
@@ -105,8 +103,8 @@ class FacilitySettingsOperatingPeriodListing {
     }
 
     /*****************************************************
-    * Method: Delete Confirmation button functionality
-    * Description: This function Verifies the delete confirmation "Yes" button functionality
+    * Method: Delete Confirmation button functionality     
+    * Description: This function Verifies the delete confirmation "Yes" button functionality 
     *****************************************************/
     DeleteItemNo() {
         cy.Click(elems_Alerts.BTN_NO)

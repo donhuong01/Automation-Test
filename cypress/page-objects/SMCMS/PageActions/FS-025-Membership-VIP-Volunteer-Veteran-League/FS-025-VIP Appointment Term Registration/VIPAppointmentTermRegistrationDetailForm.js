@@ -37,25 +37,17 @@ class VIPAppointmentTermRegistrationDetailForm {
       //   'Member ID', MemberID   
       //   )
       //   cy.wait(2000)
-      // cy.Click(elems_VipAppointmentTermRegistrationDetail.PCK_MEMBERID)
-      // cy.wait(2000)
-      // cy.Click(elems_VipAppointmentTermRegistrationDetail.PCK_MEMBERID)
-      // //   cy.Click(elems_VipAppointmentTermRegistrationDetail.PCK_MEMBERID)
-      // cy.wait(5000)
-      // cy.EnterText(elems_VipAppointmentTermRegistrationDetail.TXT_MEMBERID, MemberID)
-      // cy.EnterText(elems_VipAppointmentTermRegistrationDetail.TXT_NAME, Name)
-      // cy.Click(elems_Picker.BTN_SEARCH)
+      cy.Click(elems_VipAppointmentTermRegistrationDetail.PCK_MEMBERID)
+      cy.wait(2000)
+      cy.Click(elems_VipAppointmentTermRegistrationDetail.PCK_MEMBERID)
+      //   cy.Click(elems_VipAppointmentTermRegistrationDetail.PCK_MEMBERID)
+      cy.wait(5000)
+      cy.EnterText(elems_VipAppointmentTermRegistrationDetail.TXT_MEMBERID, MemberID)
+      cy.EnterText(elems_VipAppointmentTermRegistrationDetail.TXT_NAME, Name)
+      cy.Click(elems_Picker.BTN_SEARCH)
 
-      // cy.SelectTableItem(elems_Picker.TBL_PICKERITEMS, 'Member ID', MemberID)
-
-      cy.SelectPickerFilter(
-         elems_VipAppointmentTermRegistrationDetail.PCK_MEMBERID,
-         elems_VipAppointmentTermRegistrationDetail.TXT_MEMBERID,
-         // elems_VolunteerAppointmentTermRegistrationListing.TXT_SELECTNAMEPOPUP,
-         MemberID,
-         elems_Picker.BTN_SEARCH
-     )
-      // cy.Click(elems_Picker.BTN_SELECT)
+      cy.SelectTableItem(elems_Picker.TBL_PICKERITEMS, 'Member ID', MemberID)
+      cy.Click(elems_Picker.BTN_SELECT)
 
       cy.ValidateElementText(elems_VipAppointmentTermRegistrationDetail.LBL_LAST4NRIC, VerifyNRIC)
       cy.SelectDropDownItem(elems_VipAppointmentTermRegistrationDetail.DRP_APPOINTMENTID, AppointmentID)

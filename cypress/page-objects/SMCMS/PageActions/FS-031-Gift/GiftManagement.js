@@ -4,19 +4,19 @@ import elems_Picker from '../../Elements/Common/Picker'
 
 class GiftManagement {
 
-    /*****************************************************
-     * Method: verify PageTitle
-     * Description: Verify Accommodation Type Listing Form
-     * @param {string} ExpectedPg
-      *****************************************************/
+  /*****************************************************
+   * Method: verify PageTitle
+   * Description: Verify Accommodation Type Listing Form
+   * @param {string} ExpectedPg 
+    *****************************************************/
     verifyPageTitle(ExpectedPg) {
         cy.ValidateElementText(elems_PageHeader.LBL_PAGETITLE, ExpectedPg)
 
-    }
+  }
 
-
+  
     /*****************************************************
-     * Method: FilterByItemCode
+     * Method: FilterByItemCode 
      * Description: This function will Filter By Item Code
      *  @param {string} ItemCode
      *****************************************************/
@@ -26,7 +26,7 @@ class GiftManagement {
 
     }
     /*****************************************************
-     * Method: FilterByItemDescription
+     * Method: FilterByItemDescription 
      * Description: This function will Filter By Item Description
      *  @param {string} Description
      *****************************************************/
@@ -36,7 +36,7 @@ class GiftManagement {
 
     }
     /*****************************************************
-     * Method: FilterByItemCode
+     * Method: FilterByItemCode 
      * Description: This function will Filter By Item Code
      *  @param {string} WareHouse
      *****************************************************/
@@ -51,38 +51,39 @@ class GiftManagement {
     }
 
     /*****************************************************
-     * Method: ClickOnSearhFilter
+     * Method: ClickOnSearhFilter 
      * Description: This function will click on search filter button
      *****************************************************/
-    ClickOnSearhFilter() {
+        ClickOnSearhFilter() {
 
-        cy.Click(elems_GiftManagement.ListingForm.BTN_SEARCHFILTERS, { timeout: 2000 });
-
-    }
+            cy.Click(elems_GiftManagement.ListingForm.BTN_SEARCHFILTERS)
+            cy.wait(2000)
+    
+        }
     /*****************************************************
-     * Method: VerifyTableEntry
+     * Method: VerifyTableEntry 
      * Description: This function will Verify table entry
      *  @param {string} Item
      *****************************************************/
-    VerifyTableEntry(Item) {
+        VerifyTableEntry(Item) {
 
-        cy.VerifyTableEntry(elems_GiftManagement.ListingForm.TBL_GIFTMANAGEMENTLISTING, "Item Code", Item)
-
-    }
+            cy.VerifyTableEntry(elems_GiftManagement.ListingForm.TBL_GIFTMANAGEMENTLISTING, "Item Code", Item)
+    
+        }
 
     /*****************************************************
-     * Method: ClickTableEntry
+     * Method: ClickTableEntry 
      * Description: This function will Click table entry
      *  @param {string} Item
      *****************************************************/
-    ClickTableEntry(Item) {
+        ClickTableEntry(Item) {
 
-        cy.ClickTableLinkItem(elems_GiftManagement.ListingForm.TBL_GIFTMANAGEMENTLISTING, "Item Code", Item)
-
-    }
-
+            cy.ClickTableLinkItem(elems_GiftManagement.ListingForm.TBL_GIFTMANAGEMENTLISTING, "Item Code", Item)
+    
+        }
+      
     /*****************************************************
-     * Method: FilloutGiftManagementDetailFrom
+     * Method: FilloutGiftManagementDetailFrom 
      * Description: This function will Fill out Gift Management Detail From
      * @param {string} RedemptionType
      * @param {string} PublishDateFrom
@@ -93,35 +94,19 @@ class GiftManagement {
      * @param {string} UploadFile
      * @param {string} Status
      *****************************************************/
-    FilloutGiftManagementDetailFrom(RedemptionType, PublishDateFrom, PublishDateTo, ExpiryCollection, Price, GiftCategory, UploadFile, Status) {
+    FilloutGiftManagementDetailFrom(RedemptionType, PublishDateFrom, PublishDateTo,ExpiryCollection, Price, GiftCategory, UploadFile, Status) {
 
-        function formatDate(date) {
-            var day = date.getDate();
-            var month = date.toLocaleString('default', { month: 'short' });
-            var year = date.getFullYear();
-            return `${day}-${month}-${year}`;
-        }
-
-        var today = new Date();
-        var formattedDate = formatDate(today);
-        console.log(formattedDate);
-
-        var future = new Date();
-        future.setDate(future.getDate() + 5); // Add 5 days to today
-        var futureFormattedDate = formatDate(future);
-        console.log(futureFormattedDate);
-
-        cy.SelectDropDownItem(elems_GiftManagement.DetailForm.DRP_REDEMPTIONTYPE, RedemptionType)
-        cy.EnterDate(elems_GiftManagement.DetailForm.DATE_PUBLISHDATEFROM, formattedDate)
-        cy.EnterDate(elems_GiftManagement.DetailForm.DATE_PUBLISHDATETO, futureFormattedDate)
-        cy.EnterText(elems_GiftManagement.DetailForm.TXT_EXPIRYCOLLECTION, ExpiryCollection)
-        cy.EnterText(elems_GiftManagement.DetailForm.TXT_PRICE, Price)
-        cy.SelectDropDownItem(elems_GiftManagement.DetailForm.DRP_GIFTCATEGORY, GiftCategory)
-        cy.UploadFile(elems_GiftManagement.DetailForm.UPLOADFILE, UploadFile)
-        cy.SelectDropDownItem(elems_GiftManagement.DetailForm.DRP_STATUS, Status)
+      cy.SelectDropDownItem(elems_GiftManagement.DetailForm.DRP_REDEMPTIONTYPE, RedemptionType)
+      cy.EnterDate(elems_GiftManagement.DetailForm.DATE_PUBLISHDATEFROM, PublishDateFrom)
+      cy.EnterDate(elems_GiftManagement.DetailForm.DATE_PUBLISHDATETO, PublishDateTo)
+      cy.EnterText(elems_GiftManagement.DetailForm.TXT_EXPIRYCOLLECTION, ExpiryCollection)
+      cy.EnterText(elems_GiftManagement.DetailForm.TXT_PRICE, Price)
+      cy.SelectDropDownItem(elems_GiftManagement.DetailForm.DRP_GIFTCATEGORY, GiftCategory)
+      cy.UploadFile(elems_GiftManagement.DetailForm.UPLOADFILE, UploadFile)
+      cy.SelectDropDownItem(elems_GiftManagement.DetailForm.DRP_STATUS, Status)
 
     }
-
+    
 
     /*****************************************************
      * Method: ImportFromProduct
@@ -142,7 +127,7 @@ class GiftManagement {
 
     }
     /*****************************************************
-     * Method: Cancel
+     * Method: Cancel 
      * Description: This function Click on Cancel button
      *****************************************************/
     Cancel() {
@@ -150,9 +135,9 @@ class GiftManagement {
         cy.Click(elems_GiftManagement.DetailForm.BTN_CANCEL)
 
     }
-
+   
     /*****************************************************
-     * Method: VerifyNotificationMessage
+     * Method: VerifyNotificationMessage 
      * Description: This function will verify notification msg
      *****************************************************/
     VerifyNotificationMessage(msg) {

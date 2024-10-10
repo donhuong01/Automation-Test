@@ -1,12 +1,12 @@
 const data = {
     MemberId: 'A300002195',
     CustomerName: 'Auto-User8335887137906',
-    E1GymMemMainSelection: 'QAE1MAIN2024',
-    E1GymMembershipSelection: 'QAE12024',
-    LocationSelection: 'SAFRA HQ',
+    E1GymMemMainSelection: 'Test E1 Main',
+    E1GymMembershipSelection: 'Test E1 Detail',
+    LocationSelection: 'All Locations',
     DependencyType: 'Principal',
     PreferredClubHouse: 'All Locations',
-    EffectiveDate: '11-Apr-2024',
-    Terms: '3'
+    EffectiveDate: '28-Mar-2023',
+    Terms: '18'
 }
 export default data

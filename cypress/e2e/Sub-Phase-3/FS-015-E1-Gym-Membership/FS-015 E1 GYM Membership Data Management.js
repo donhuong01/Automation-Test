@@ -22,7 +22,7 @@ describe('[TS01] FS-015 E1 GYM Membership Data Management ', function () {
     })
     it('[TC03] Filter with Customer Name', function () {
         cy.visit('/membership/e1GymMembershipList')
-        E1GymMembershipListing.FiterWithCustomerName('Auto-User7563895230')
+        E1GymMembershipListing.FiterWithCustomerName('Jack Frost')
 
     })
 

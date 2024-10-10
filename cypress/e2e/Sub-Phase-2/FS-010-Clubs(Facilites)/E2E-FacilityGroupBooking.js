@@ -38,9 +38,9 @@ describe('[TS-07] FS-010 Facility Group Booking', function () {
 
         FacilityGroupBookingDetail.VerifyPageTitle("Facility Group Booking Detail")
 
-        FacilityGroupBookingDetail.SelectFacilityType("Automation Testing 2024")
+        FacilityGroupBookingDetail.SelectFacilityType("Type 2023")
 
-        FacilityGroupBookingDetail.SelectLocationAndFacility("SAFRA HQ", "Automation Testing Facility 2024")
+        FacilityGroupBookingDetail.SelectLocationAndFacility("SAFRA Jurong", "Auto-Test 5066")
 
         FacilityGroupBookingDetail.SelectAvailableSlot("Available (09:00 am - 10:00 am)")
 
@@ -63,9 +63,9 @@ describe('[TS-07] FS-010 Facility Group Booking', function () {
 
         FacilityGroupBookingDetail.VerifyPageTitle("Facility Group Booking Detail")
 
-        FacilityGroupBookingDetail.SelectFacilityType("Automation Testing 2024")
+        FacilityGroupBookingDetail.SelectFacilityType("Type 2023")
 
-        FacilityGroupBookingDetail.SelectLocationAndFacility("SAFRA HQ", "Automation Testing Facility 2024")
+        FacilityGroupBookingDetail.SelectLocationAndFacility("SAFRA Jurong", "Auto-Test 5066")
 
         FacilityGroupBookingDetail.SelectAvailableSlot("Available (09:00 am - 10:00 am)")
 
@@ -88,9 +88,9 @@ describe('[TS-07] FS-010 Facility Group Booking', function () {
 
         FacilityGroupBookingDetail.VerifyPageTitle("Facility Group Booking Detail")
 
-        FacilityGroupBookingDetail.SelectFacilityType("Automation Testing 2024")
+        FacilityGroupBookingDetail.SelectFacilityType("Type 2023")
 
-        FacilityGroupBookingDetail.SelectLocationAndFacility("SAFRA HQ", "Automation Testing Facility 2024")
+        FacilityGroupBookingDetail.SelectLocationAndFacility("SAFRA Jurong", "Auto-Test 5066")
 
         FacilityGroupBookingDetail.SelectAvailableSlot("Available (09:00 am - 10:00 am)")
 

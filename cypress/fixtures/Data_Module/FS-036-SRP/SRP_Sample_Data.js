@@ -2,31 +2,31 @@ const data = {
 
     SRP_Redemption_Managment: {
         MemberID: "A300001959",
-        ItemCode: "SRP-2000003", // QA: SRP014 ; UAT: 006
-        ItemDescription: "$3 GONG CHA", // QA: SRP 014 ; UAT: SRP Voucher 006
-        Category: "Voucher", // QA: MemberShip Item ; UAT: Consignment Item
-        RedemptionSourceLoc: "SAFRA HQ",
-        Status: "Uncollected",
+        ItemCode: "SRP014", // QA: SRP014 ; UAT: 006
+        ItemDescription: "SRP 014", // QA: SRP 014 ; UAT: SRP Voucher 006
+        Category: "MemberShip Item", // QA: MemberShip Item ; UAT: Consignment Item
+        RedemptionSourceLoc: "SAFRA Jurong",
+        Status: "Pending Payment",
         Quantity: 1,
-        PaymentMethod: "SRP"
+        PaymentMethod: 'I-Banking'
     },
 
     SRP_Redemption_Collection: {
         MemberID: "A300002261",
-        ItemCode: "SRP-2000003", // QA: SRP014 ; UAT: SRP008
-        ItemDescription: "$3 GONG CHA", // QA: SRP 014 ; UAT: SRP Voucher 008
-        Category: "Voucher", // QA: MemberShip Item  ; UAT: Voucher
-        RedemptionSourceLoc: "SAFRA HQ",
-        Status: "Uncollected",
+        ItemCode: "SRP014", // QA: SRP014 ; UAT: SRP008
+        ItemDescription: "SRP 014", // QA: SRP 014 ; UAT: SRP Voucher 008
+        Category: "MemberShip Item", // QA: MemberShip Item  ; UAT: Voucher
+        RedemptionSourceLoc: "SAFRA Jurong",
+        Status: "Pending Payment",
         Quantity: 1,
-        PaymentMode: "SRP"
+        PaymentMode: 'I-Banking'
     },
 
     EDC_Terminal_Management: {
         Name: "EDC00345",
         Placement: "Trial",
         SourceChannel: "SAFRA Punggol",
-        ThirdPartyVendoreID: "VD002",
+        ThirdPartyVendoreID: "VD003",
         ItemGSTGroup: "ZERO",
         FabsGroup: "Activities",
         ClubClassification: "Fitness & Leisure",
@@ -82,11 +82,11 @@ const data = {
         PromoType: 'Birthday Month',
         Quantity: 2,
         ProductCategory: 'Gift',
-        ModuleType: 'All',
+        ModuleType: 'Membership',
         ExtraPointsType: 'Percentage',
         ExtraPercentage: 10,
-        ValidFrom: '15-Jun-2024',
-        ValidTo: '30-Jun-2024',
+        ValidFrom: '01-Apr-2023',
+        ValidTo: '30-Jun-2023',
         SourceChannel: 'SAFRA Jurong',
         EDCTerminal: 'TID00005',
         MemberID: 'A300002068',
@@ -100,7 +100,7 @@ const data = {
         Updated_PromoType: 'Birthday Month',
         Updated_Quantity: 2,
         Updated_ProductCategory: 'All Code',
-        Updated_ModuleType: 'All',
+        Updated_ModuleType: 'Membership',
         Updated_ExtraPointsType: 'Percentage',
         Updated_ExtraPercentage: 10,
         Updated_ValidFrom: '01-May-2023',
@@ -114,7 +114,7 @@ const data = {
     SRP_Redemption_Catalogue_Management: {
         ItemCode: "AAAAA",
         ItemDescription: "AAAAA",
-        Status: "New",
+        Status: "Active",
         Category: "Consignment Item",
         PublishStartDate: "29-Sep-2023",
         PublishEndDate: "01-Dec-2023",

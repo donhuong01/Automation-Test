@@ -37,7 +37,7 @@ class FacilityDetailForm {
         cy.SelectPickerDifferentItemsWait(
             elems_FacilityDetailFormDetailTab.DETAILSTAB.BTN_FACILITYTYPE, 3000,
             elems_FacilityDetailFormDetailTab.DETAILSTAB.TXT_FACILITYTYPEPOPUP,
-            FacilityType, '//div[text()="Select Facility Type"]/parent::*/following-sibling::div[@class="k-window-content k-dialog-content"]//button[text()="Search Filters"]')
+            FacilityType, '//div[text()="Select Facility Type"]/parent::*/following-sibling::div[@class="k-window-content k-dialog-content"]//button')
 
         cy.Click(elems_FacilityDetailFormDetailTab.DETAILSTAB.BTN_LOCATION)
         cy.SelectTableItem(elems_Picker.TBL_PICKERITEMS, 'Location Name', Location)
@@ -608,10 +608,10 @@ class FacilityDetailForm {
         cy.EnterDate(elems_FacilityDetailFormDetailTab.CHARGERATE.DATE_STARTDATE, StartDate)
         // cy.EnterText(elems_FacilityDetailFormDetailTab.CHARGERATE.PCK_LOCATION, )
 
-        // cy.Click(elems_FacilityDetailFormDetailTab.CHARGERATE.PCK_LOCATION)
-        // cy.EnterText(elems_FacilityDetailFormDetailTab.DETAILSTAB.TXT_LOCATIONPOPUP, Location)
-        // cy.SelectTableItem(elems_Picker.TBL_PICKERITEMS, 'Location Name', Location)
-        // cy.Click(elems_Picker.BTN_SELECT)
+        cy.Click(elems_FacilityDetailFormDetailTab.CHARGERATE.PCK_LOCATION)
+        cy.EnterText(elems_FacilityDetailFormDetailTab.DETAILSTAB.TXT_LOCATIONPOPUP, Location)
+        cy.SelectTableItem(elems_Picker.TBL_PICKERITEMS, 'Location Name', Location)
+        cy.Click(elems_Picker.BTN_SELECT)
 
         cy.EnterDate(elems_FacilityDetailFormDetailTab.CHARGERATE.DATE_ENDDATE, EndDate)
     }

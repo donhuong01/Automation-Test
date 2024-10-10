@@ -73,7 +73,7 @@ class IGMembershipDeferment {
     *****************************************************/
     VerifyDefermentStatus(ReasonCode) {
 
-        cy.ValidateElementText('(//table//tbody//td)[10]', ReasonCode)
+        cy.ValidateElementText('(//table//tbody//td)[6]', ReasonCode)
 
     }
 }

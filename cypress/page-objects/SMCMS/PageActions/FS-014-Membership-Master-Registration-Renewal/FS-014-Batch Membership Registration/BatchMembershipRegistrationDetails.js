@@ -36,7 +36,7 @@ class BatchMembershipRegistrationDetail {
     ) {
         cy.EnterText(elems_BatchMembershipRegistrationDetail.BatchInformation.TXT_BATCHNAME, BatchName)
         if (BatchType === "Membership") {
-            cy.SelectDropDownItem2(elems_BatchMembershipRegistrationDetail.BatchInformation.DRP_BATCHTYPE, BatchType)
+            cy.SelectDropDownItem(elems_BatchMembershipRegistrationDetail.BatchInformation.DRP_BATCHTYPE, BatchType)
             // cy.EnterText(elems_BatchMembershipRegistrationDetail.BatchInformation.TXT_RECTALKSESSIONID, RecTalkSessionID)
             cy.SelectDropDownItem(elems_BatchMembershipRegistrationDetail.BatchInformation.DRP_MEMSHIPREGTENURE, MemRegTenure)
             // cy.EnterText(elems_BatchMembershipRegistrationDetail.BatchInformation.TXT_PROMOTIONREGISTRATION, PromationReg)
@@ -173,9 +173,9 @@ class BatchMembershipRegistrationDetail {
      * @param {string} NIRC
     *****************************************************/
     FillOutFormForExistingMember(MemberId, NIRC) {
-        cy.TickRadioButton(elems_BatchMembershipRegistrationDetail.MemRegInBatchRegistration.CHK_NONMEMBER)
+        cy.TickRadioButton(elems_BatchMembershipRegistrationDetail.MemRegInBatchRegistration.CHK_EXISTINGMEMBER)
         cy.EnterText(elems_BatchMembershipRegistrationDetail.MemRegInBatchRegistration.TXT_MEMBERID, MemberId)
-        //cy.EnterText(elems_BatchMembershipRegistrationDetail.MemRegInBatchRegistration.TXT_NRIC, NIRC)
+        cy.EnterText(elems_BatchMembershipRegistrationDetail.MemRegInBatchRegistration.TXT_NRIC, NIRC)
     }
     /*****************************************************
      * Method: FillOutFormForNonMember
@@ -203,9 +203,7 @@ class BatchMembershipRegistrationDetail {
     *****************************************************/
     Next() {
         cy.Click(elems_BatchMembershipRegistrationDetail.BTN_NEXT)
-        // cy.Click(elems_BatchMembershipRegistrationDetail.SELECTMEMBERCATEPOPUP.RADIO_PRINCIPAL)
-        // cy.Click(elems_BatchMembershipRegistrationDetail.SELECTMEMBERCATEPOPUP.BTN_SELECT)
-        cy.wait(5000)
+        cy.wait(20000)
     }
     /*****************************************************
      * Method: ClickNewMemberPrincipal
@@ -246,7 +244,7 @@ class BatchMembershipRegistrationDetail {
     *****************************************************/
     AddApplicationDate(ApplicationDate) {
 
-        cy.EnterDateCheckin(elems_BatchMembershipRegistrationDetail.DATE_APPLICATIONDATE, ApplicationDate)
+        cy.SelectDate(elems_BatchMembershipRegistrationDetail.DATE_APPLICATIONDATE, ApplicationDate)
 
 
     }

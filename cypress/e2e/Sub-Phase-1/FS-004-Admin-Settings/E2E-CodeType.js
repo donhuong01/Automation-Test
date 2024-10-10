@@ -10,7 +10,7 @@ describe('[TS03] Code Type Management',function(){
 
         //visit the web
         cy.visit('/admin/codeTypeList')
-        //cy.wait(5000)
+        cy.wait(5000)
     
         //Verify page title
         CodeTypeListingForm.verifyPageTitle('Code Type Listing')
@@ -43,24 +43,23 @@ describe('[TS03] Code Type Management',function(){
         //Save the code type details form
         CodeTypeDetail.Save()
 
-        //cy.wait(2000) 
+        cy.wait(2000) 
 
     })
 
     it('[TC03] Verify deleting the newly created item in Code Type Listing', ()=> {
         //visit the web
         cy.visit('/admin/codeTypeList')
-        //cy.wait(7000)
+        cy.wait(7000)
 
         cy.visit('/admin/codeTypeList')
-        //cy.wait(5000)
+        cy.wait(5000)
         
         //Filter by code type
-        CodeTypeListingForm.codeSetMasterListingFilterbyCodeType(data.CodeTypeDetail.Name)
-        cy.wait(7000)
+        CodeTypeListingForm.codeSetMasterListingFilterbyCodeType(data.CodeTypeListing.codeType)
     
         //Click on delete button and verify delete notification in code type listing form
-        //CodeTypeListingForm.Delete(data.CodeTypeDetail.Name)
+        CodeTypeListingForm.Delete(data.CodeTypeListing.codeType)
     
     })
 })

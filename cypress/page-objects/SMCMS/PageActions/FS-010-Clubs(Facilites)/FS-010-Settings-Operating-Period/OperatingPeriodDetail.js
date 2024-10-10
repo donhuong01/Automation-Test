@@ -10,17 +10,17 @@ class OperatingPeriodDetail {
      *
      * @param {string} operatingPeriodName Operating Period Name
     *****************************************************/
-    filloutOperatingPeriodDetail(operatingPeriodName) {
+     filloutOperatingPeriodDetail(operatingPeriodName){
 
         // Enter Operating Period Name
-        if (operatingPeriodName !== undefined) {
+        if(operatingPeriodName !== undefined){
             // cy.xpath(elems_FacilityOperatingPeriodDetail.TXT_OPERATINGPERIODNAME).clear()
             cy.EnterText(elems_FacilityOperatingPeriodDetail.TXT_OPERATINGPERIODNAME, operatingPeriodName)
         }
-
+        
         // Error Handling
-        if (operatingPeriodName === undefined
-        ) {
+        if( operatingPeriodName === undefined 
+        ){
             throw new Error("OperatingPeriodDetail.filloutOperatingPeriodDetail Error!!.\
                             Please provide an argument.")
         }
@@ -32,8 +32,8 @@ class OperatingPeriodDetail {
      *
      * @param {string} operatingPeriodDetailTable Operating Period Detail Table Array
      *****************************************************/
-    verifyOperatingPeriodDetail(operatingPeriodDetailTable) {
-        operatingPeriodDetailTable.forEach(data => {
+     verifyOperatingPeriodDetail(operatingPeriodDetailTable){
+        operatingPeriodDetailTable.forEach( data => {
             cy.VerifyTableEntryPayment(
                 elems_FacilityOperatingPeriodDetail.TBL_SETTINGOPERATINGPERIODDETAILS,
                 'Operating Hours', data.operatingHours,
@@ -57,38 +57,37 @@ class OperatingPeriodDetail {
      * @param {string} startTime Start Time
      * @param {string} endTime End Time
      * @param {string} typeOfPeakPeriod Type Of Peak Period
-     * @param {string} isClosedForBooking Is Closed For Booking
+     * @param {string} isClosedForBooking Is Closed For Booking 
      * @param {string} ignoreRenderSlotLength Ignore Render Slot Length
     *****************************************************/
-    addOperatingHourRow1({ typeOfOperatingDay, startTime, endTime, typeOfPeakPeriod, isClosedForBooking, ignoreRenderSlotLength }) {
+     addOperatingHourRow1({typeOfOperatingDay, startTime, endTime, typeOfPeakPeriod, isClosedForBooking, ignoreRenderSlotLength}){
 
         // Click Operating Period Name
-        if (typeOfOperatingDay !== undefined) {
-            cy.ClickTablePlusButton(typeOfOperatingDay)
-
+        if(typeOfOperatingDay !== undefined){
+            cy.ClickTablePlusButton(typeOfOperatingDay)  
+            
             // Add Operating Hour Row
             cy.ValidateElementText(elems_Alerts.LBL_POPUPTITLE, typeOfOperatingDay)
             cy.Click(elems_FacilityOperatingPeriodDetail.OperatingPeriodModalDetail.BTN_ADDOPERATINGHOUR)
             // cy.wait(2000)
             // Select Start Time
-            if (startTime !== undefined) {
-                cy.log(`passed data ${startTime}`);
+            if(startTime !== undefined){
                 cy.SelectFirstDropdownInPopupTable(elems_FacilityOperatingPeriodDetail.OperatingPeriodModalDetail.TBL_TABLEMODAL + '//tbody', 2, startTime)
             }
 
             // Select End Time
-            if (endTime !== undefined) {
+            if(endTime !== undefined){
                 cy.SelectFirstDropdownInPopupTable(elems_FacilityOperatingPeriodDetail.OperatingPeriodModalDetail.TBL_TABLEMODAL + '//tbody', 3, endTime)
             }
 
             // Select Type of Peak Period
-            if (typeOfPeakPeriod !== undefined) {
-                cy.SelectFirstDropdownInPopupTable(elems_FacilityOperatingPeriodDetail.OperatingPeriodModalDetail.TBL_TABLEMODAL, 4, typeOfPeakPeriod)
+            if(typeOfPeakPeriod !== undefined){
+                cy.SelectFirstDropdownInPopupTable(elems_FacilityOperatingPeriodDetail.OperatingPeriodModalDetail.TBL_TABLEMODAL , 4, typeOfPeakPeriod)
             }
-
+            
 
             // Is Closed for Booking Checkbox
-            if (isClosedForBooking !== undefined) {
+            if(isClosedForBooking !== undefined){
                 cy.CheckboxInTable(
                     elems_FacilityOperatingPeriodDetail.OperatingPeriodModalDetail.TBL_TABLEMODAL,
                     1, 5, isClosedForBooking
@@ -96,27 +95,27 @@ class OperatingPeriodDetail {
             }
 
             // Ignore Render Slot Length Checkbox
-            if (ignoreRenderSlotLength !== undefined) {
+            if(ignoreRenderSlotLength !== undefined){
                 cy.CheckboxInTable(
                     elems_FacilityOperatingPeriodDetail.OperatingPeriodModalDetail.TBL_TABLEMODAL,
                     1, 6, ignoreRenderSlotLength
                 )
             }
 
-            if (startTime === undefined
+            if( startTime === undefined
                 && endTime === undefined
                 && typeOfPeakPeriod === undefined
                 && isClosedForBooking === undefined
                 && ignoreRenderSlotLength === undefined
-            ) {
-                throw new Error("OperatingPeriodDetail.addOperatingHourRow1 Error!!.\
+            ){
+                    throw new Error("OperatingPeriodDetail.addOperatingHourRow1 Error!!.\
                                     Please provide at least one argument.")
             }
         }
-
+        
         // Error Handling
-        if (typeOfOperatingDay === undefined
-        ) {
+        if( typeOfOperatingDay === undefined 
+        ){
             throw new Error("OperatingPeriodDetail.addOperatingHourRow1 Error!!.\
                             Please provide an argument.")
         }
@@ -130,14 +129,14 @@ class OperatingPeriodDetail {
      * @param {string} typeOfOperatingDay Type of Operating Day
      * @param {string} operatingHours Operating Hours Row Data Array
     *****************************************************/
-    addOperatingHours({ typeOfOperatingDay, operatingHours }) {
-
-        // Click Operating Period Name
-        if (typeOfOperatingDay !== undefined) {
-            cy.ClickTablePlusButton(typeOfOperatingDay)
+     addOperatingHours({typeOfOperatingDay, operatingHours}){ 
+        
+        // Click Operating Period Name 
+        if(typeOfOperatingDay !== undefined){
+            cy.ClickTablePlusButton(typeOfOperatingDay)  
 
             // Loop for dataset
-            operatingHours.forEach(data => {
+            operatingHours.forEach( data => {
 
                 // Add Operating Hour Row
                 // Add Operating Hour Row
@@ -145,54 +144,54 @@ class OperatingPeriodDetail {
                 cy.Click(elems_FacilityOperatingPeriodDetail.OperatingPeriodModalDetail.BTN_ADDOPERATINGHOUR)
 
                 // Select Start Time
-                if (data.startTime !== undefined) {
+                if(data.startTime !== undefined){
                     cy.SelectSingleDropdownInTable(elems_FacilityOperatingPeriodDetail.OperatingPeriodModalDetail.TBL_TABLEMODAL, data.row, 2, data.startTime)
                 }
 
                 // Select End Time
-                if (data.endTime !== undefined) {
+                if(data.endTime !== undefined){
                     cy.SelectSingleDropdownInTable(elems_FacilityOperatingPeriodDetail.OperatingPeriodModalDetail.TBL_TABLEMODAL, data.row, 3, data.endTime)
                 }
 
                 // Select Type of Peak Period
-                if (data.typeOfPeakPeriod !== undefined) {
+                if(data.typeOfPeakPeriod !== undefined){
                     cy.SelectSingleDropdownInTable(elems_FacilityOperatingPeriodDetail.OperatingPeriodModalDetail.TBL_TABLEMODAL, data.row, 4, data.typeOfPeakPeriod)
                 }
-
+                
 
                 // Is Closed for Booking Checkbox
-                if (data.isClosedForBooking !== undefined) {
+                if(data.isClosedForBooking !== undefined){
                     cy.CheckboxInTable(
-                        elems_FacilityOperatingPeriodDetail.OperatingPeriodModalDetail.TBL_TABLEMODAL, data.row, 5, data.isClosedForBooking
+                        elems_FacilityOperatingPeriodDetail.OperatingPeriodModalDetail.TBL_TABLEMODAL,data.row, 5, data.isClosedForBooking
                     )
                 }
 
                 // Ignore Render Slot Length Checkbox
-                if (data.ignoreRenderSlotLength !== undefined) {
+                if(data.ignoreRenderSlotLength !== undefined){
                     cy.CheckboxInTable(
                         elems_FacilityOperatingPeriodDetail.OperatingPeriodModalDetail.TBL_TABLEMODAL,
                         data.row, 6, data.ignoreRenderSlotLength
                     )
                 }
 
-                if (data.row === undefined
+                if( data.row === undefined
                     && data.startTime === undefined
                     && data.endTime === undefined
                     && data.typeOfPeakPeriod === undefined
                     && data.isClosedForBooking === undefined
                     && data.ignoreRenderSlotLength === undefined
-                ) {
-                    throw new Error("OperatingPeriodDetail.addOperatingHours Error!!.\
+                ){
+                        throw new Error("OperatingPeriodDetail.addOperatingHours Error!!.\
                                         Please provide at least one argument.")
                 }
             })
-
-            // Error Handling
-            if (typeOfOperatingDay === undefined
-            ) {
+    
+        // Error Handling
+        if( typeOfOperatingDay === undefined 
+            ){
                 throw new Error("OperatingPeriodDetail.verifyOperatingHour Error!!.\
                                 Please provide an argument.")
-            }
+            }   
         }
     }
 
@@ -200,7 +199,7 @@ class OperatingPeriodDetail {
      * Method: saveOperatingHour
      * Description: Save Operating Hour Popup Changes
     *****************************************************/
-    saveOperatingHour() {
+     saveOperatingHour(){
         cy.Click(elems_FacilityOperatingPeriodDetail.OperatingPeriodModalDetail.BTN_SAVE)
         cy.ValidateElementText(elems_PageHeader.LBL_PAGETITLE, 'Settings - Operating Period Details')
     }
@@ -209,7 +208,7 @@ class OperatingPeriodDetail {
      * Method: cancelOperatingHour
      * Description: Cancel Operating Hour Popup Changes
     *****************************************************/
-    cancelOperatingHour() {
+     cancelOperatingHour(){
         cy.Click(elems_FacilityOperatingPeriodDetail.OperatingPeriodModalDetail.BTN_CANCEL)
         cy.ValidateElementText(elems_PageHeader.LBL_PAGETITLE, 'Settings - Operating Period Details')
     }
@@ -221,14 +220,14 @@ class OperatingPeriodDetail {
      * @param {string} typeOfOperatingDay Type of Operating Day Popup
      * @param {string} operatingHoursTable Operating Hour Popup Table Array
      *****************************************************/
-    verifyOperatingHour({ typeOfOperatingDay, operatingHoursTable }) {
-
+     verifyOperatingHour({typeOfOperatingDay, operatingHoursTable}){
+        
         // Click Operating Period Name
-        if (typeOfOperatingDay !== undefined) {
-            cy.ClickTablePlusButton(typeOfOperatingDay)
-
+        if(typeOfOperatingDay !== undefined){
+            cy.ClickTablePlusButton(typeOfOperatingDay)  
+            
             // Loop for dataset
-            operatingHoursTable.forEach(data => {
+            operatingHoursTable.forEach( data => {
 
                 // Verify Start Time Value
                 cy.VerifyTableEntryShoppingCart(
@@ -243,7 +242,7 @@ class OperatingPeriodDetail {
                     'End Time', data.endTime,
                     'Start Time', data.startTime
                 )
-
+                
                 // Verify Type of Peak Period Value
                 cy.VerifyTableEntryShoppingCart(
                     elems_FacilityOperatingPeriodDetail.OperatingPeriodModalDetail.TBL_TABLEMODAL,
@@ -254,11 +253,11 @@ class OperatingPeriodDetail {
         }
 
         // Error Handling
-        if (typeOfOperatingDay === undefined
-        ) {
-            throw new Error("OperatingPeriodDetail.verifyOperatingHour Error!!.\
+        if( typeOfOperatingDay === undefined 
+            ){
+                throw new Error("OperatingPeriodDetail.verifyOperatingHour Error!!.\
                                 Please provide an argument.")
-        }
+            }
     }
 
     /*****************************************************
@@ -268,14 +267,14 @@ class OperatingPeriodDetail {
      * @param {string} typeOfOperatingDay Type of Operating Day item
      * @param {string} operatingHour Start Time of Item to be Removed
     *****************************************************/
-    removeOperatingHour({ typeOfOperatingDay, operatingHour }) {
-
+     removeOperatingHour({typeOfOperatingDay, operatingHour}){
+        
         // Click Operating Period Name
-        if (typeOfOperatingDay !== undefined) {
-            cy.ClickTablePlusButton(typeOfOperatingDay)
+        if(typeOfOperatingDay !== undefined){
+            cy.ClickTablePlusButton(typeOfOperatingDay)  
 
             // Remove Item from Listing
-            if (operatingHour !== undefined) {
+            if(operatingHour !== undefined){
                 cy.DeleteTableItem(
                     elems_FacilityOperatingPeriodDetail.OperatingPeriodModalDetail.TBL_TABLEMODAL,
                     'Start Time', operatingHour
@@ -283,15 +282,15 @@ class OperatingPeriodDetail {
             }
 
             // Error Handling
-            if (operatingHour === undefined
-            ) {
+            if(operatingHour === undefined 
+            ){
                 throw new Error("OperatingPeriodDetail.removeOperatingHour Error!!.\
                                 Please provide an argument.")
             }
-
-            // Error Handling
-            if (typeOfOperatingDay === undefined
-            ) {
+        
+        // Error Handling
+        if( typeOfOperatingDay === undefined 
+            ){
                 throw new Error("OperatingPeriodDetail.verifyOperatingHour Error!!.\
                                 Please provide an argument.")
             }
@@ -302,7 +301,7 @@ class OperatingPeriodDetail {
      * Method: submitForApproval
      * Description: Submit Operating Period Detail Form
     *****************************************************/
-    submitForApproval() {
+     submitForApproval(){
         cy.Click(elems_FacilityOperatingPeriodDetail.BTN_SUBMITFORAPPROVAL)
         cy.wait(3000)
         cy.ValidateElementText(elems_PageHeader.LBL_PAGETITLE, 'Settings - Operating Period Listing')
@@ -312,7 +311,7 @@ class OperatingPeriodDetail {
      * Method: saveAsDraft
      * Description: Save Operating Period Detail Form
     *****************************************************/
-    saveAsDraft() {
+     saveAsDraft(){
         cy.Click(elems_FacilityOperatingPeriodDetail.BTN_SAVEASDRAFT)
         cy.ValidateElementText(elems_PageHeader.LBL_PAGETITLE, 'Settings - Operating Period Listing')
     }
@@ -321,7 +320,7 @@ class OperatingPeriodDetail {
      * Method: cancel
      * Description: Cancel Operating Period Detail Form
     *****************************************************/
-    cancel() {
+     cancel(){
         cy.Click(elems_FacilityOperatingPeriodDetail.BTN_CANCEL)
         cy.wait(3000)
         cy.ValidateElementText(elems_PageHeader.LBL_PAGETITLE, 'Settings - Operating Period Listing')

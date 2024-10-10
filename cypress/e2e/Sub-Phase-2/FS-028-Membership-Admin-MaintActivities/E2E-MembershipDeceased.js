@@ -22,7 +22,7 @@ describe('[TS03] Membership Deceased Confirmation Popup', function () {
 
         // Navigate to Member Listing
         cy.visit('/membership/memberList')
-        cy.wait(5000)
+        cy.wait(10000)
 
         // Filter Member Listing for Active Members
         MemList.FilterByMemberID(MemberID)

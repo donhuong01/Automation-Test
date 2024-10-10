@@ -41,7 +41,6 @@ class elems_PromotionDetail {
         DRP_ITEMCATEGORY: '//span[@id="drpItemCategory"]',
         TXT_QUANTITY: '//input[@id="txtQuantity"]',
         DRP_BENEFITTYPE: '//span[@id="drpBenefitType"]',
-        RADIO_PERCENTAGE: '//label[text()="Percentage"]/preceding-sibling::input',
         RADIO_FIXEDPRICE: '//label[text()="Fixed Value"]/preceding-sibling::input',
         RADIO_ALL: '//input[@name="itemOption"]//following-sibling::label[text()="All"]',
         RADIO_SPECIFICITEM: '//input[@name="itemOption"]//following-sibling::label[text()="Specific Item"]',
@@ -49,8 +48,7 @@ class elems_PromotionDetail {
         BTN_SAVE: '//button[text()="Save"]',
         BTN_CANCEL: '//button[text()="Cancel"]',
         TAB_BENEFITITEM: '//button[text()="Benefit Item"]',
-        TXT_FIXEDDOLLAR: '//input[@id="numfixedValueAmountToDiscount"]', //input[@id="numFixedDollarValueToDiscount"] 
-        TXT_PERCENTAGE: '//input[@id="numPercentageAmountToDiscount"]',
+        TXT_FIXEDDOLLAR: '//input[@id="numFixedDollarValueToDiscount"]',
         TXT_FIXEDDOLLARTOCHARGETOCUSTOMER: '//input[@id="numFixedDollarRateToChargeToCustomer"]',
         TXT_APPICABLEFREEPERIODINMONTH: '//input[@id="numApplicableFreePeriodInMonth"]',
         PCK_GIFT: '//label[@for="pckGiftItem"]/following-sibling::div//button'
@@ -62,11 +60,11 @@ class elems_PromotionDetail {
         TAB_PROMOTIONCRIERIA: '//button[text()="Promotion Criteria"]',
         TXT_APPLICABLEAGERANGEFORCUSTOMERFROM: '//input[@id="numApplicableAgeRangeForCustomerFrom"]',
         TXT_APPLICABLEAGERANGEFORCUSTOMERTO: '//input[@id="numApplicableAgeRangeForCustomerTo"]',
-        BTN_ADDAPPLICABLECUSCATEG: '//h3[text()="Applicable Customer Categories"]/following-sibling::div//button[text()="Add Customer Category"]',
+        BTN_ADDAPPLICABLECUSCATEG: '//h3[text()="Applicable Customer Categories"]/following-sibling::div//button[text()="Add"]',
         TXT_CUSTOMERCATEGORYNAME: '//input[@id="txtCustomerCategoryName"]',
-        BTN_ADDAPPLICBLEMEMBERID: '//h3[text()="Applicable Member ID"]/following-sibling::div//button[text()="Add Member"]',
+        BTN_ADDAPPLICBLEMEMBERID: '//h3[text()="Applicable Member ID"]/following-sibling::div//button[text()="Add"]',
         TXT_MEMBERID: '//input[@id="txtMemberId"]',
-        BTN_ADDAPPLICABLESOURCECHANNEL: '//h3[text()="Applicable Source Channel"]/following-sibling::div//button[text()="Add Source Channel"]',
+        BTN_ADDAPPLICABLESOURCECHANNEL: '//h3[text()="Applicable Source Channel"]/following-sibling::div//button[text()="Add"]',
         TXT_SOURCECHANNELNAME: '//input[@id="txtName"]',
 
 

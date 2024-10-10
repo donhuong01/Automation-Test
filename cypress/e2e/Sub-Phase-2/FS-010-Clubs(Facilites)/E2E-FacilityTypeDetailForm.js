@@ -23,48 +23,48 @@ const FacilityTypeDetailFormManagement = (CalenderName, PeriodOfCalendar, Operat
             ClubClassification, SMCClassification } = data.CategorySection
 
 
-        // it('[TC01] FillOut Facility Type Detail form and click cancel button', function () {
+        it('[TC01] FillOut Facility Type Detail form and click cancel button', function () {
 
-        //     //Must login as an admin first
-        //     cy.visit('/facilities/facilityTypeDetail');
-        //     cy.wait(5000)
+            //Must login as an admin first
+            cy.visit('/facilities/facilityTypeDetail');
+            cy.wait(5000)
 
-        //     //FillOut Facility Type Information
-        //     FacilityTypeDetailForm.FacilityTypeInformation(FacilityName);
+            //FillOut Facility Type Information
+            FacilityTypeDetailForm.FacilityTypeInformation(FacilityName);
 
-        //     //Facility And Location Section
-        //     FacilityTypeDetailForm.AddLocationSection(Location);
+            //Facility And Location Section
+            FacilityTypeDetailForm.AddLocationSection(Location);
 
-        //     //Location Name
-        //     FacilityTypeDetailForm.RemoveLocation(Location);
+            //Location Name
+            FacilityTypeDetailForm.RemoveLocation(Location);
 
-        //     //Category Section
-        //     FacilityTypeDetailForm.FillOutCategorySection(Category, LifestyleGroup, FABSGroup,
-        //         ClubClassification, SMCClassification);
-        //     //Booking Restriction
-        //     FacilityTypeDetailForm.BookingRestrictions('check', 'check', 'check', 'check', 'E1MF SILVER LITE MEMBERSHIP Member', '2', '1');
+            //Category Section
+            FacilityTypeDetailForm.FillOutCategorySection(Category, LifestyleGroup, FABSGroup,
+                ClubClassification, SMCClassification);
+            //Booking Restriction
+            FacilityTypeDetailForm.BookingRestrictions('check', 'check', 'check', 'check', 'E1MF SILVER LITE MEMBERSHIP Member', '2', '1');
 
-        //     //Booking Section
-        //     FacilityTypeDetailForm.BookingSection('uncheck', 'RoadShow', 'All Customer Category', 'Fixed time slots booking', '30', '2');
+            //Booking Section
+            FacilityTypeDetailForm.BookingSection('uncheck', 'Online', 'All Customer Category', 'Fixed time slots booking', '2');
 
-        //     FacilityTypeDetailForm.BookingCheckboxes();
+            FacilityTypeDetailForm.BookingCheckboxes();
 
-        //     //Add Horizon
-        //     FacilityTypeDetailForm.AddHorizon(AccessMode, CustomerCategory)
+            //Add Horizon
+            FacilityTypeDetailForm.AddHorizon(AccessMode, CustomerCategory)
 
-        //     //Booking Timing Restriction
-        //     FacilityTypeDetailForm.BookingTimingRestriction();
+            //Booking Timing Restriction
+            FacilityTypeDetailForm.BookingTimingRestriction();
 
-        //     //Reservation
-        //     FacilityTypeDetailForm.Reservation();
+            //Reservation
+            FacilityTypeDetailForm.Reservation();
 
-        //     //Allow Extension
-        //     FacilityTypeDetailForm.Extension();
+            //Allow Extension
+            FacilityTypeDetailForm.Extension();
 
-        //     //Click Cancel button
-        //     FacilityTypeDetailForm.Cancel();
+            //Click Cancel button
+            FacilityTypeDetailForm.Cancel();
 
-        // });
+        });
 
 
         it('[TC02] FillOut Facility Type Detail form and click save button', function () {
@@ -82,29 +82,25 @@ const FacilityTypeDetailFormManagement = (CalenderName, PeriodOfCalendar, Operat
             //Category Section
             FacilityTypeDetailForm.FillOutCategorySection(Category, LifestyleGroup, FABSGroup,
                 ClubClassification, SMCClassification);
-            // Booking Restriction
-            FacilityTypeDetailForm.BookingRestrictions('check', 'check', 'check', 'check','All Customer Category' ,'2', '1');
+            //Booking Restriction
+            // FacilityTypeDetailForm.BookingRestrictions('check', 'check', 'check', 'check','All Customer Category' ,'2', '1');
 
             //Booking Section
-            FacilityTypeDetailForm.BookingSection('uncheck', 'Online Portal', 'All Customer Category', 'Fixed time slots booking', '30','2');
-            FacilityTypeDetailForm.UpdateBookingSection('RoadShow');
-            FacilityTypeDetailForm.UpdateBookingSection('In-House');
-            FacilityTypeDetailForm.UpdateBookingSection('Mobile');
-            FacilityTypeDetailForm.UpdateBookingSection('Tablet');
-           
-            FacilityTypeDetailForm.BookingCheckboxes();
-        
-            //Add Horizon
-            FacilityTypeDetailForm.AddHorizon( AccessMode, CustomerCategory )
+            FacilityTypeDetailForm.BookingSection('uncheck', 'Online', 'All Customer Category', 'Fixed time slots booking', '2');
 
-            // Booking Timing Restriction
-            FacilityTypeDetailForm.BookingTimingRestriction();
+            // FacilityTypeDetailForm.BookingCheckboxes();
+
+            //Add Horizon
+            // FacilityTypeDetailForm.AddHorizon( AccessMode, CustomerCategory )
+
+            //Booking Timing Restriction
+            // FacilityTypeDetailForm.BookingTimingRestriction();
 
             //Reservation
-            FacilityTypeDetailForm.Reservation();
+            // FacilityTypeDetailForm.Reservation();
 
             //Allow Extension
-            FacilityTypeDetailForm.Extension();
+            // FacilityTypeDetailForm.Extension();
 
             //Submit Form For Approval
             FacilityTypeDetailForm.Save()
@@ -162,7 +158,7 @@ const FacilityTypeDetailFormManagement = (CalenderName, PeriodOfCalendar, Operat
             FacilityTypeDetailForm.RemoveCalendar(CalenderName)
 
             //verify Notification Msg
-            FacilityTypeDetailForm.NotificationMsg('Item(s) removed successfully.')
+            FacilityTypeDetailForm.NotificationMsg('Item(s) removed.')
 
             //Add Calendar
             FacilityTypeDetailForm.AddCalendar(CalenderName)
@@ -214,13 +210,8 @@ const FacilityTypeDetailFormManagement = (CalenderName, PeriodOfCalendar, Operat
             //save charge rate details
             FacilityTypeDetailForm.Save()
 
-            //Click Form For Save As Draft
-            FacilityTypeDetailForm.SaveAsDraft()
-
-
-
             //verify page title
-            //FacilityTypeDetailForm.VerifyPageTitle('Facility Type Detail')
+            FacilityTypeDetailForm.VerifyPageTitle('Facility Type Detail')
 
         });
 
@@ -276,18 +267,17 @@ const FacilityTypeDetailFormManagement = (CalenderName, PeriodOfCalendar, Operat
 
         });
 
-        it('[TC06] Approval Workflow for Facility Type detail ', function () {
+        it('[TC06] Adding Product MappingApproval Workflow for Facility Type detail ', function () {
 
             //Must login as an admin first
             cy.visit('/admin/pendingTaskList');
-            cy.wait(5000)
+            cy.wait(20000)
 
             FacilityTypeDetailForm.ApprovalWorkFlow("F-FLT", "Facility Type Approval Workflow", "Approve", "Testing Finance Approval")
-            cy.wait(10000)
+            cy.wait(15000)
 
-            // FacilityTypeDetailForm.ApprovalWorkFlow("F-FLT", "Facility Type Approval Workflow", "Approve", "Testing Approval")
-            // cy.wait(10000)
-            
+            FacilityTypeDetailForm.ApprovalWorkFlow("F-FLT", "Facility Type Approval Workflow", "Approve", "Testing Approval")
+
             //Must login as an admin first
             cy.visit('/facilities/facilityTypeListing');
             cy.wait(5000)

@@ -23,15 +23,6 @@ class SRPRedemptionCatalogueDetail {
         cy.Click(elems_SRPREDEMPTIONCATALOGUEDETAIL.BTN_SAVE)
 
     }
-
-    /*****************************************************
-     * Method: Save 
-     * Description: This function click on Save button
-     *****************************************************/
-
-    Cancel() {
-        cy.Click(elems_SRPREDEMPTIONCATALOGUEDETAIL.BTN_CANCEL)
-    }
     /*****************************************************
      * Method: VerifyPageTitle 
      * Description: This function Verify Page Title 
@@ -92,16 +83,6 @@ class SRPRedemptionCatalogueDetail {
         cy.Click(elems_SRPREDEMPTIONCATALOGUEDETAIL.BTN_REMOVESOURCELOCATION)
 
     }
-
-
-    /*****************************************************
-     * Method: importPicture 
-     * Description: 
-     *****************************************************/
-    importPicture() {
-        cy.UploadFile('//input[@type="file"]', 'test_images.png')
-    }
-
     /*****************************************************
      * Method: SelectDeffrentSourceRedemptionTBLItem 
      * Description: 

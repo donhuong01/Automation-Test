@@ -1,8 +1,8 @@
 class elems_EDCTerminalDetail {
 
 
-    static BTN_SAVE = '//span[text()="Save"]'
-    static BTN_CANCEL = '//span[text()="Cancel"]'
+    static BTN_SAVE = '//button[text()="Save"]'
+    static BTN_CANCEL = '//button[text()="Cancel"]'
     static LBL_TERMINALID = '//label[@for="lblTerminalID"]'
 
     static TXT_TERMINALID = '//label[@for="lblTerminalID"]'
@@ -18,8 +18,8 @@ class elems_EDCTerminalDetail {
         DRP_HEADQUARTER: '//select[@name="isHeadQuarter"]',
         TXT_SITE: '//input[@name="site"]',
 
-        BTN_SEARCHFILTERS: '(//span[text()="Search Filters"])[1]',
-        BTN_SELECT: '//span[text()="Select"]'
+        BTN_SEARCHFILTERS: '(//button[text()="Search Filters"])[1]',
+        BTN_SELECT: '//button[text()="Select"]'
 
     }
 
@@ -31,8 +31,8 @@ class elems_EDCTerminalDetail {
         TXT_VENDORID: '//input[@name="vendorId"]',
         TXT_NAME: '(//input[@name="name"])[2]',
 
-        BTN_SEARCHFILTERS: '(//span[text()="Search Filters"])[1]',
-        BTN_SELECT: '//span[text()="Select"]'
+        BTN_SEARCHFILTERS: '(//button[text()="Search Filters"])[1]',
+        BTN_SELECT: '//button[text()="Select"]'
 
     }
 
@@ -45,8 +45,8 @@ class elems_EDCTerminalDetail {
         TXT_DESCRIPTION: '//input[@name="description"]',
         TXT_TAXCODEID: '//input[@name="taxCodeId"]',
 
-        BTN_SEARCHFILTERS: '(//span[text()="Search Filters"])[1]',
-        BTN_SELECT: '//span[text()="Select"]'
+        BTN_SEARCHFILTERS: '(//button[text()="Search Filters"])[1]',
+        BTN_SELECT: '//button[text()="Select"]'
 
     }
 
@@ -59,8 +59,8 @@ class elems_EDCTerminalDetail {
         TXT_ABBREVIATION: '//input[@id="txtAbbreviation"]',
         TXT_CODETYPE: '//input[@id="txtCodeType"]',
 
-        BTN_SEARCHFILTERS: '(//span[text()="Search Filters"])[1]',
-        BTN_SELECT: '//span[text()="Select"]'
+        BTN_SEARCHFILTERS: '(//button[text()="Search Filters"])[1]',
+        BTN_SELECT: '//button[text()="Select"]'
 
     }
 
@@ -73,8 +73,8 @@ class elems_EDCTerminalDetail {
         TXT_ABBREVIATION: '//input[@id="txtAbbreviation"]',
         TXT_CODETYPE: '//input[@id="txtCodeType"]',
 
-        BTN_SEARCHFILTERS: '(//span[text()="Search Filters"])[1]',
-        BTN_SELECT: '//span[text()="Select"]'
+        BTN_SEARCHFILTERS: '(//button[text()="Search Filters"])[1]',
+        BTN_SELECT: '//button[text()="Select"]'
 
     }
 
@@ -87,15 +87,15 @@ class elems_EDCTerminalDetail {
         TXT_ABBREVIATION: '//input[@id="txtAbbreviation"]',
         TXT_CODETYPE: '//input[@id="txtCodeType"]',
 
-        BTN_SEARCHFILTERS: '(//span[text()="Search Filters"])[1]',
-        BTN_SELECT: '//span[text()="Select"]'
+        BTN_SEARCHFILTERS: '(//button[text()="Search Filters"])[1]',
+        BTN_SELECT: '//button[text()="Select"]'
 
     }
 
     static LBL_THIRDPARTYVENDORNAME = '//label[@for="lblThirdPartyVendorName"]'
     static LBL_MERCHANTID = '//label[@for="lblMerchantID"]'
 
-    static BTN_SEARCHFILTERS = '//span[text()="Search Filters"]'
+    static BTN_SEARCHFILTERS = '//button[text()="Search Filters"]'
     static TBL_EDCTERMINALLSITING = '//h2[text()="EDC Terminal Listing"]/parent::div/following-sibling::div//table'
 
 

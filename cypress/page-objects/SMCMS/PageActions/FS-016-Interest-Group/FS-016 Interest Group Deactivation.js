@@ -26,7 +26,7 @@ class IGDeactivation {
         *****************************************************/
     FilloutDeactivationInfo(DeactivationDate, DeactivationReason) {
         cy.wait(3000)
-        cy.EnterDateCheckin(elems_IGDeactivation.DATE_DEACTIVATIONDATE, DeactivationDate)
+        cy.EnterDate(elems_IGDeactivation.DATE_DEACTIVATIONDATE, DeactivationDate)
         cy.EnterText(elems_IGDeactivation.TXT_REASON, DeactivationReason)
     }
 }

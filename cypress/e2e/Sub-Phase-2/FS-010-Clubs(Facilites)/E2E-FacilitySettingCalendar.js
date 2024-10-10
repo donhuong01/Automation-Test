@@ -36,7 +36,6 @@ const FacilitySettingsCalendar = () => {
 
             FacilitySettingsCalendarListingForm.CreateNew()
             FacilitySettingsCalendarDetailForm.EnterCalendarName(CalendarName)
-            FacilitySettingsCalendarDetailForm.AddHolidayDates(HolidayName1, HolidayDate1)
             FacilitySettingsCalendarDetailForm.SaveAsDraft()
             cy.wait(3000)
             FacilitySettingsCalendarListingForm.FillOutSettingCalendarForm(CalendarName, DraftStatus, RecordStatus)
@@ -82,15 +81,15 @@ const FacilitySettingsCalendar = () => {
 
             FacilitySettingsCalendarDetailForm.DeleteSelectedPeriod(PeriodName1)
 
-            FacilitySettingsCalendarDetailForm.VerifyNotificationMessage('Item(s) removed successfully.')
+            FacilitySettingsCalendarDetailForm.VerifyNotificationMessage('Item(s) removed.')
 
             //clear notification
-            cy.xpath('//div[@class="notification__message" and text()="Item(s) removed successfully."]', { timeout: 10000 }).click()
+            cy.xpath('//div[@class="notification__message" and text()="Item(s) removed."]', { timeout: 10000 }).click()
             FacilitySettingsCalendarDetailForm.DeleteSelectedPeriod(PeriodName1)
 
-            FacilitySettingsCalendarDetailForm.VerifyNotificationMessage('Item(s) removed successfully.')
+            FacilitySettingsCalendarDetailForm.VerifyNotificationMessage('Item(s) removed.')
             //clear notification
-            cy.xpath('//div[@class="notification__message" and text()="Item(s) removed successfully."]', { timeout: 10000 }).click()
+            cy.xpath('//div[@class="notification__message" and text()="Item(s) removed."]', { timeout: 10000 }).click()
 
             // FacilitySettingsCalendarDetailForm.AddPeriods(PeriodName2, PeriodStartDate2, PeriodEndDate2)
 

@@ -30,24 +30,24 @@ describe('[TS09] Membershp Module Setting',function(){
             ERenewalPrefixUrl : data.MembershipModuleSetting.RenewalAdvice.ERenewalPrefixUrl
         })
 
-        // // Fill Out SAFRA Family Scheme (SFS) Setting Section
-        // MemModuleSetting.fillOutSfsSetting({
-        //     SfsActivation : data.MembershipModuleSetting.SfsSetting.SfsActivation,
-        //     AdminFeeChargeItem : data.MembershipModuleSetting.SfsSetting.AdminFeeChargeItem,
-        //     NameFilter : data.MembershipModuleSetting.SfsSetting.AdminFeeChargeItemFilters.NameFilter, 
+        // Fill Out SAFRA Family Scheme (SFS) Setting Section
+        MemModuleSetting.fillOutSfsSetting({
+            SfsActivation : data.MembershipModuleSetting.SfsSetting.SfsActivation,
+            AdminFeeChargeItem : data.MembershipModuleSetting.SfsSetting.AdminFeeChargeItem,
+            NameFilter : data.MembershipModuleSetting.SfsSetting.AdminFeeChargeItemFilters.NameFilter, 
 
-        //     // COMMENTED OUT DUE TO KNOWN ISSUE
-        //     DescriptionFilter : data.MembershipModuleSetting.SfsSetting.AdminFeeChargeItemFilters.DescriptionFilter, 
-        //     CardTypeFilter : data.MembershipModuleSetting.SfsSetting.AdminFeeChargeItemFilters.CardTypeFilter, 
-        //     StatusFilter : data.MembershipModuleSetting.SfsSetting.AdminFeeChargeItemFilters.StatusFilter
-        // })
+            // COMMENTED OUT DUE TO KNOWN ISSUE
+            DescriptionFilter : data.MembershipModuleSetting.SfsSetting.AdminFeeChargeItemFilters.DescriptionFilter, 
+            CardTypeFilter : data.MembershipModuleSetting.SfsSetting.AdminFeeChargeItemFilters.CardTypeFilter, 
+            StatusFilter : data.MembershipModuleSetting.SfsSetting.AdminFeeChargeItemFilters.StatusFilter
+        })
 
-        // // Fill Out Refund/Excess Payment Section
-        // MemModuleSetting.fillOutRefundExcessPayment({
-        //     AutoRefundExcessPayment : data.MembershipModuleSetting.RefundExcessPayment.AutoRefundExcessPayment,
-        //     DefaultRefundModeFrontEnd : data.MembershipModuleSetting.RefundExcessPayment.DefaultRefundModeFrontEnd,
-        //     DefaultRefundModeAutoDeduction : data.MembershipModuleSetting.RefundExcessPayment.DefaultRefundModeAutoDeduction
-        // })
+        // Fill Out Refund/Excess Payment Section
+        MemModuleSetting.fillOutRefundExcessPayment({
+            AutoRefundExcessPayment : data.MembershipModuleSetting.RefundExcessPayment.AutoRefundExcessPayment,
+            DefaultRefundModeFrontEnd : data.MembershipModuleSetting.RefundExcessPayment.DefaultRefundModeFrontEnd,
+            DefaultRefundModeAutoDeduction : data.MembershipModuleSetting.RefundExcessPayment.DefaultRefundModeAutoDeduction
+        })
 
         // Save form
         MemModuleSetting.save() 
@@ -77,24 +77,24 @@ describe('[TS09] Membershp Module Setting',function(){
             ERenewalPrefixUrl : data.MembershipModuleSetting.RenewalAdvice.ERenewalPrefixUrl
         })
 
-        // // Fill Out SAFRA Family Scheme (SFS) Setting Section
-        // MemModuleSetting.fillOutSfsSetting({
-        //     SfsActivation : data.MembershipModuleSetting.SfsSetting.SfsActivation,
-        //     AdminFeeChargeItem : data.MembershipModuleSetting.SfsSetting.AdminFeeChargeItem,
-        //     NameFilter : data.MembershipModuleSetting.SfsSetting.AdminFeeChargeItemFilters.NameFilter, 
+        // Fill Out SAFRA Family Scheme (SFS) Setting Section
+        MemModuleSetting.fillOutSfsSetting({
+            SfsActivation : data.MembershipModuleSetting.SfsSetting.SfsActivation,
+            AdminFeeChargeItem : data.MembershipModuleSetting.SfsSetting.AdminFeeChargeItem,
+            NameFilter : data.MembershipModuleSetting.SfsSetting.AdminFeeChargeItemFilters.NameFilter, 
 
-        //     // COMMENTED OUT DUE TO KNOWN ISSUE
-        //     DescriptionFilter : data.MembershipModuleSetting.SfsSetting.AdminFeeChargeItemFilters.DescriptionFilter, 
-        //     CardTypeFilter : data.MembershipModuleSetting.SfsSetting.AdminFeeChargeItemFilters.CardTypeFilter, 
-        //     StatusFilter : data.MembershipModuleSetting.SfsSetting.AdminFeeChargeItemFilters.StatusFilter
-        // })
+            // COMMENTED OUT DUE TO KNOWN ISSUE
+            DescriptionFilter : data.MembershipModuleSetting.SfsSetting.AdminFeeChargeItemFilters.DescriptionFilter, 
+            CardTypeFilter : data.MembershipModuleSetting.SfsSetting.AdminFeeChargeItemFilters.CardTypeFilter, 
+            StatusFilter : data.MembershipModuleSetting.SfsSetting.AdminFeeChargeItemFilters.StatusFilter
+        })
 
-        // // Fill Out Refund/Excess Payment Section
-        // MemModuleSetting.fillOutRefundExcessPayment({
-        //     AutoRefundExcessPayment : data.MembershipModuleSetting.RefundExcessPayment.AutoRefundExcessPayment,
-        //     DefaultRefundModeFrontEnd : data.MembershipModuleSetting.RefundExcessPayment.DefaultRefundModeFrontEnd,
-        //     DefaultRefundModeAutoDeduction : data.MembershipModuleSetting.RefundExcessPayment.DefaultRefundModeAutoDeduction
-        // })
+        // Fill Out Refund/Excess Payment Section
+        MemModuleSetting.fillOutRefundExcessPayment({
+            AutoRefundExcessPayment : data.MembershipModuleSetting.RefundExcessPayment.AutoRefundExcessPayment,
+            DefaultRefundModeFrontEnd : data.MembershipModuleSetting.RefundExcessPayment.DefaultRefundModeFrontEnd,
+            DefaultRefundModeAutoDeduction : data.MembershipModuleSetting.RefundExcessPayment.DefaultRefundModeAutoDeduction
+        })
     
         // Click Cancel button
         MemModuleSetting.cancel()

@@ -8,14 +8,18 @@ import login from '../../../../fixtures/login'
 beforeEach(() => {
 
     // Set local storage for QA Enviroment
-    cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
+    // cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
 
     // Set local storage for UAT Enviroment
     // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
 
+    const username = Cypress.env('aad_username')
+    const password = Cypress.env('aad_password')
     //Select Channel
     cy.visit('/membership/customerCheckin')
+    cy.LoginMicrosoftAccount(username, password)
     cy.SelectPickerItem('//a[text()="Change"]', 'SAFRA HQ')
+
 })
 
 

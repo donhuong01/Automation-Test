@@ -13,7 +13,7 @@ class elems_E1GymMembershipListing {
    static BTN_SEARCHFILTERS = '//button[text()="Search Filters"]'
    static TBL_E1GYMMEMBERSHIPLISTING = '//div[@class="k-widget k-grid"]//table'
    static BTN_CANCEL = '//div[@class="page-title"]/following-sibling::div//button[text()="Cancel"]'
-   static TBL_TRANSACTIONHISTORY = '//h2[text()="Energy One Gym Membership Transaction History"]/parent::div/following-sibling::div//table'
+   static TBL_TRANSACTIONHISTORY = '//h2[text()="E1 Gym Membership Transaction History"]/parent::div/following-sibling::div//table'
 
 }
 export default elems_E1GymMembershipListing

@@ -37,31 +37,31 @@ describe('[TS06] Life Membership Management',function(){
         const CustomerNRIC = CustomerNRICFull.substr(CustomerNRICFull.length - 4);
 
         //Enable SFS
-        // cy.visit('/membership/moduleSettings')
-        // cy.wait(8000)
-
-        // MemModuleSettings.SFSActivate('CHECK')
-        // cy.wait(5000)
-
-
+        cy.visit('/membership/moduleSettings')
+        cy.wait(8000)
+        
+        MemModuleSettings.SFSActivate('CHECK')
+        cy.wait(5000)
+        
+                
         /////////////////////////////CUSTOMER CREATION////////////////////////////////////////
-
+            
             cy.visit('/membership/customerCheckin')
             cy.wait(5000)
             cy.Click(elems_CustomerCheckInPage.RBTN_NRIC)
-            cy.EnterDateCheckin(elems_CustomerCheckInPage.DATE_DATEOFBIRTH, Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB)
+            cy.EnterDate(elems_CustomerCheckInPage.DATE_DATEOFBIRTH, Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB)
             cy.EnterText(elems_CustomerCheckInPage.TXT_LAST4DIGITSNRIC, CustomerNRIC)
             cy.Click(elems_CustomerCheckInPage.BTN_CHECKIN)
             cy.wait(2000)
             cy.Click(elems_CustomerCheckInPage.BTN_CREATNEW)
-
+        
             CustomerCreation.fillOutRegistrationInfo({
                 name: PrincipalName,
-                // DOB: Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB,
+                DOB: Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB,
                 gender:Customerdata.CustomerCreationPrincipal.RegistrationInformation.gender,
                 /* profilePicture: "DP.png" */
             });
-
+        
             CustomerCreation.fillOutAddressInformation({
                 postalCode: Customerdata.CustomerCreationPrincipal.AddressInformation.postalCode,
                 address: Customerdata.CustomerCreationPrincipal.AddressInformation.address,
@@ -69,13 +69,13 @@ describe('[TS06] Life Membership Management',function(){
                 POBOx: Customerdata.CustomerCreationPrincipal.AddressInformation.POBOx,
                 myMailbox: Customerdata.CustomerCreationPrincipal.AddressInformation.myMailbox
             });
-
+        
             CustomerCreation.fillOutContactInformation({
-                handPhone: '83230126',
+                handPhone: '63230126',
                 emailAddress: PrincipalEmail,
                 emergencyContact: Customerdata.CustomerCreationPrincipal.ContactInformation.emergencyContact,
                 homeNumber: Customerdata.CustomerCreationPrincipal.ContactInformation.homeNumber,
-
+        
                 // Preferred Contact Mode
                 preferredContactModeSelectAll: Customerdata.CustomerCreationPrincipal.ContactInformation.preferredContactModeSelectAll,
                 preferredContactModeEmail: Customerdata.CustomerCreationPrincipal.ContactInformation.preferredContactModeEmail,
@@ -83,23 +83,23 @@ describe('[TS06] Life Membership Management',function(){
                 preferredContactModeSMS: Customerdata.CustomerCreationPrincipal.ContactInformation.preferredContactModeSMS,
                 preferredContactModeVoiceCall: Customerdata.CustomerCreationPrincipal.ContactInformation.preferredContactModeVoiceCall,
                 preferredContactModePushNotification: Customerdata.CustomerCreationPrincipal.ContactInformation.preferredContactModePushNotification,
-
+        
                 //Consent Information
                 consentInformationMarketing: Customerdata.CustomerCreationPrincipal.ContactInformation.consentInformationMarketing,
                 consentInformationServiceNotification: Customerdata.CustomerCreationPrincipal.ContactInformation.consentInformationServiceNotification,
                 consentInformationTransactional: Customerdata.CustomerCreationPrincipal.ContactInformation.consentInformationTransactional,
             });
-
-
+        
+        
             CustomerCreation.save();
             cy.wait(15000)
-
+        
         ///////////////////////////////PRINCIPAL REGISTRATION////////////////////////////////////////
-
+            
             cy.Click(elems_Landing.SAFRA_Member)
             cy.Click(elems_Landing.Membership_Registration)
             cy.wait(15000)
-
+        
             MemRegPrincipal.verifyPersonalInformation({
                 MemberCategory: data.memberregistrationprincipal.Personal_Info.MemberCategory,
                 NameOnNRIC: PrincipalName,
@@ -120,25 +120,23 @@ describe('[TS06] Life Membership Management',function(){
 
             LifeMembership.ClickLifeMembershipCheckBox()
 
-
+            
 
             MemRegPrincipal.SaveAndNextPrincipal()
             cy.wait(15000)
-
+        
             ///////////////////////////////////TENURE SELECTION////////////////////////////////////////////////////////////
-
-
+        
+        
             // Membership Tenure Selection
             MemTenureSelect.principalTenureSelection(PrincipalName,'5 Years')
-
+            
             //Click on Submit button
             LifeMembership.Submit()
 
             // Approval workflow
             LifeMembership.ApprovalWorkFlow('M-MER', 'Membership Exception Approval Workflow', 'Approve', 'Testing Remark')
 
-            //Wait and click Shopping Cart button
-            cy.wait(8000)
             LifeMembership.ShoppinCart()
 
             // Shopping cart and Payments
@@ -150,11 +148,11 @@ describe('[TS06] Life Membership Management',function(){
 
             //Logout
             // cy.LogoutOfSmcms()
-
-
+        
+   
         })
 
-
+  
 
 })
 

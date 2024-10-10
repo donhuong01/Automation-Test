@@ -58,7 +58,7 @@ class LifeMembership {
         cy.SelectDropDownItem(elems_PendingTaskDetail.DRP_APPROVALOUTCOME, Approval)
         
         //Remark
-        //cy.EnterText(elems_PendingTaskDetail.TXTAREA_REMARK, Remark)
+        cy.EnterText(elems_PendingTaskDetail.TXTAREA_REMARK, Remark)
 
         // Click on Save button
         cy.Click(elems_PendingTaskDetail.BTN_SUBMIT)
@@ -73,19 +73,12 @@ class LifeMembership {
      * Description: This function click on shopping cart icon
      *****************************************************/
       ShoppinCart() {
-        
-        cy.visit('/membership/customerLandingPage')
-        cy.wait(3000)
-        cy.xpath(elems_PageHeader.BTN_SHOPPINGCART).click({force: true})
+      
+        cy.Click(elems_PageHeader.BTN_SHOPPINGCART)
         cy.wait(8000)
-        cy.xpath('(//span[@class="k-dropdownlist k-picker k-picker-md k-rounded-md k-picker-solid"])[1]') ////span[text()="Standard"]
-        cy.Click('(//span[@class="k-dropdownlist k-picker k-picker-md k-rounded-md k-picker-solid"])[1]') ////span[text()="Standard"]
+        cy.xpath(elems_PageHeader.DRP_USERLINKS).click()
+        cy.wait(5000)
         cy.xpath('//ul//li').contains('A-').click()
-      
-      
-        //   cy.xpath(elems_PageHeader.DRP_USERLINKS).click()
-      //   cy.wait(5000)
-      //   cy.xpath('//ul//li').contains('A-').click()
 
       //   .should('contain.text', 'Standard').select('Standard')
       //   cy.xpath(elems_PageHeader.DRP_USERLINKS).then(($select)=> {
@@ -100,12 +93,12 @@ class LifeMembership {
       //   cy.wait(3000)
          // cy.select([0])
 
-      //   cy.xpath('//label[@for="lblMemberId"]').then( $MemID => {
+        cy.xpath('//label[@for="lblMemberId"]').then( $MemID => {
 
-      //   const MemberID = $MemID.text().trim()
-      //   console.log(MemberID)
+        const MemberID = $MemID.text().trim()
+        console.log(MemberID)
       
-      //   })
+        })
      }
 
    /*****************************************************
@@ -118,14 +111,14 @@ class LifeMembership {
             cy.wait(5000)
             cy.SelectDropDownItem(elems_SMCMSShoppingCartAndPayment.Payments.DRP_PAYMENTMODE, PaymentMode) 
             
-            // cy.xpath(elems_SMCMSShoppingCartAndPayment.Payments.LBL_REMAININGBALANCE).then($balance =>{
+            cy.xpath(elems_SMCMSShoppingCartAndPayment.Payments.LBL_REMAININGBALANCE).then($balance =>{
                 
-            //     const blnc = $balance.text().trim() 
+                const blnc = $balance.text().trim() 
 
-            //     console.log(blnc)
-            //     cy.xpath(elems_SMCMSShoppingCartAndPayment.Payments.TXT_AMOUNT).type(blnc)
+                console.log(blnc)
+                cy.xpath(elems_SMCMSShoppingCartAndPayment.Payments.TXT_AMOUNT).type(blnc)
 
-            // })
+            })
             cy.Click(elems_SMCMSShoppingCartAndPayment.Payments.BTN_APPLYPAYMENT) 
             cy.wait(3000)
 
@@ -149,8 +142,6 @@ class LifeMembership {
             cy.EnterText(elems_MemberListing.TXT_NRIC, NRIC)
 
             cy.Click(elems_MemberListing.BTN_SEARCHFILTER)
-
-            cy.wait(10000)
 
             cy.VerifyTableEntry(elems_MemberListing.TBL_MEMBERLISTING,
                "NRIC (Last 4 digits)", NRIC, "Name", Name)

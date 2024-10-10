@@ -25,8 +25,8 @@ class CustomerCheckInPage {
         // Checkin using NRIC
         else if (type === 'NRIC' && value1 !== undefined && value2 !== undefined) {
             cy.TickRadioButton(elems_CustomerCheckInPage.RBTN_NRIC)
+            cy.EnterDate(elems_CustomerCheckInPage.DATE_DATEOFBIRTH, value2)
             cy.EnterText(elems_CustomerCheckInPage.TXT_LAST4DIGITSNRIC, value1)
-            cy.EnterDateCheckin(elems_CustomerCheckInPage.DATE_DATEOFBIRTH, value2)
             cy.Click(elems_CustomerCheckInPage.BTN_CHECKIN)
             cy.wait(2000)
             cy.ValidateElementText(elems_PageHeader.LBL_PAGETITLE, expectedPage)

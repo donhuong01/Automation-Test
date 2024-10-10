@@ -1,27 +1,27 @@
 const Data = {
 
     IGMembershipListing: {
-        IGMian: 'IG Main QA Testing 1',
-        InterestGroup: 'Test IG Details - Main',
-        IGMembershipID: 'G1000000578',
-        SAFRAMembershipID: 'A300003718',
-        Status: 'InActive',
-        CustomerName: 'Test User 597',
-        ExpiryDateFrom: '02-Jan-2024',
-        ExpiryDateTo: '17-Mar-2024',
-        InitialJoinDate: '04-Apr-2024',
-        ExpiryDate: '28-May-2025',
-        MembershipStatusReason: 'Deferred'
+        IGMian: 'QA Test IG Main 1',
+        InterestGroup: 'IG Detail Test 1',
+        IGMembershipID: 'G1000000108',
+        SAFRAMembershipID: 'LD test 1',
+        Status: 'Active',
+        CustomerName: 'LD test 1',
+        ExpiryDateFrom: '05-Jun-2023',
+        ExpiryDateTo: '05-Dec-2024',
+        InitialJoinDate: '05-Jun-2023',
+        ExpiryDate: '05-Dec-2024',
+        MembershipStatusReason: 'New'
 
     },
     IGMembershipRegistration: {
         CustomerNRICFull: 'S6797328C',
         NRICLast4Digit: '328C',
-        IGMainSelectionBox: "IG Main QA Testing 1",
-        IGSelection: "Test IG Details - Term",
+        IGMainSelectionBox: "QA Test IG Main 1",
+        IGSelection: "IG Detail Test 1",
         IGLocationSelection: "All Locations",
-        MembershipTenure: "3",
-        EffectiveDate: "21-May-2024",
+        MembershipTenure: "5",
+        EffectiveDate: "26-May-2023",
         AgreeWithTermAndCondition: "CHECK",
         AgreeWithIndemnityWaiver: "CHECK",
 
@@ -41,7 +41,7 @@ const Data = {
         CalculatePayment: 'CHECK',
         Maintenace: 'Terminate',
         TerminatedBy: 'Customer',
-        TerminationDate: '31-May-2024',  //Must be the last day of the current month
+        TerminationDate: '30-Jun-2023',  //Must be the last day of the current month
         TerminationReason: 'Termination',
         CustomerName: 'Test User 46',
         Status: 'InActive',
@@ -77,7 +77,7 @@ const Data = {
 
     IGMembershipDeactivation: {
         IGName: 'SAFRA BITEZ331',
-        DeactivationDate: '04-Apr-2024',
+        DeactivationDate: '26-May-2023',
         DReason: 'Deactivate',
         Status: 'Deactivated'
     },

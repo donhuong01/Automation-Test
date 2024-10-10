@@ -10,7 +10,7 @@ const data = {
     MEM_LISTING_ADDRESS:{
         E1MAIN: 'Energy One Gym',
         E1: 'E1 Gym Silver',
-        EXPECTEDPG: "Report Viewer - Energy One Membership Address",
+        EXPECTEDPG: "Report Viewer - ReportE1.MembershipListingAddress",
         INITIAL_JOIN_DATE: '21-Nov-2022',
         EXPIRY_DATE_FROM: '01-Mar-2022',
         EXPIRY_DATE_TO: '31-Aug-2035'
@@ -20,7 +20,7 @@ const data = {
     MEM_LISTING:{
         E1MAIN: 'Energy One Gym',
         E1: 'E1 Gym Silver',
-        EXPECTEDPG: "Report Viewer - Energy One Membership Listing",
+        EXPECTEDPG: "Report Viewer - ReportE1.MembershipListing",
         INITIAL_JOIN_DATE: '21-Nov-2022',
         EXPIRY_DATE_FROM: '01-Mar-2022',
         EXPIRY_DATE_TO: '31-Aug-2035'
@@ -30,17 +30,17 @@ const data = {
     MEM_LISTING_EMAIL:{
         E1MAIN: 'Energy One Gym',
         E1: 'E1 Gym Silver',
-        EXPECTEDPG: "Report Viewer - Energy One Membership Email",
+        EXPECTEDPG: "Report Viewer - ReportE1.MembershipListingEmail",
         INITIAL_JOIN_DATE: '21-Nov-2022',
         EXPIRY_DATE_FROM: '01-Mar-2022',
-        EXPIRY_DATE_TO: '31-Aug-2035'
+        EXPIRY_DATE_TO: '31-Aug-2035    '
     },
 
     // E1 Membership Listing Mobile
     MEM_LISTING_MOBILE: {
         E1MAIN: 'Energy One Gym',
         E1: 'E1 Gym Silver',
-        EXPECTEDPG: "Report Viewer - Energy One Membership Registration Mobile",
+        EXPECTEDPG: "Report Viewer - ReportE1.MembershipRegistrationListingMobile",
         REGISTRATION_DATE_FROM: '21-Apr-2020',
         REGISTRATION_DATE_TO: '12-Dec-2050'     
     },
@@ -49,7 +49,7 @@ const data = {
     PAYING_LISTING: {
         E1MAIN: 'Energy One Gym',
         E1: 'E1 Gym Silver',
-        EXPECTEDPG: "Report Viewer - Energy One Membership Paying Listing",
+        EXPECTEDPG: "Report Viewer - ReportE1.MembershipPayingListing",
         START_DATE: '01-Aug-2020',
         END_DATE: '13-May-2050'
     },
@@ -58,7 +58,7 @@ const data = {
     PAYING_LISTING_EMAIL: {
         E1MAIN: 'Energy One Gym',
         E1: 'E1 Gym Silver',
-        EXPECTEDPG: "Report Viewer - Energy One Membership Paying Email Listing",
+        EXPECTEDPG: "Report Viewer - ReportE1.MembershipPayingListingEmail",
         START_DATE: '01-Aug-2020',
         END_DATE: '13-May-2050'
     },
@@ -67,7 +67,7 @@ const data = {
     PAYING_LISTING_MOBILE: {
         E1MAIN: 'Energy One Gym',
         E1: 'E1 Gym Silver',
-        EXPECTEDPG: "Report Viewer - Energy One Membership Paying Mobile Listing",
+        EXPECTEDPG: "Report Viewer - ReportE1.MembershipPayingListingMobile",
         START_DATE: '01-Aug-2020',
         END_DATE: '13-May-2050'
     },
@@ -76,7 +76,7 @@ const data = {
     REGISTRATION_LISTING: {
         E1MAIN: 'Energy One Gym',
         E1: 'E1 Gym Silver',
-        EXPECTEDPG: "Report Viewer - Energy One Membership Registration",
+        EXPECTEDPG: "Report Viewer - ReportE1.MembershipRegistrationListing",
         REGISTRATION_DATE_FROM: '01-Aug-2020',
         REGISTRATION_DATE_TO: '13-May-2050'
     },
@@ -85,7 +85,7 @@ const data = {
     REGISTRATION_LISTING_MOBILE: {
         E1MAIN: 'Energy One Gym',
         E1: 'E1 Gym Silver',
-        EXPECTEDPG: "Report Viewer - Energy One Membership Registration Mobile",
+        EXPECTEDPG: "Report Viewer - ReportE1.MembershipRegistrationListingMobile",
         REGISTRATION_DATE_FROM: '01-Aug-2020',
         REGISTRATION_DATE_TO: '13-May-2050'
     },
@@ -94,7 +94,7 @@ const data = {
     REINSTATEMENT_LISTING: {
         E1MAIN: 'Energy One Gym',
         E1: 'E1 Gym Silver',
-        EXPECTEDPG: "Report Viewer - Energy One Membership Reinstatement",
+        EXPECTEDPG: "Report Viewer - ReportE1.MembershipReinstatementListing",
         REINSTATEMENT_FROM_MONTH: '01-Jan-2020',
         REINSTATEMENT_TO_MONTH: '13-Dec-2050'
     },
@@ -103,7 +103,7 @@ const data = {
     RENEWAL_LISTING: {
         E1MAIN: 'Energy One Gym',
         E1: 'E1 Gym Silver',
-        EXPECTEDPG: "Report Viewer - Energy One Membership Renewal",
+        EXPECTEDPG: "Report Viewer - ReportE1.MembershipRenewalListing",
         RENEWAL_DATE_FROM: '01-Sep-2022',
         RENEWAL_DATE_TO: '04-Jul-2024'
     },
@@ -112,7 +112,7 @@ const data = {
     RENEWAL_LISTING_MOBILE: {
         E1MAIN: 'Energy One Gym',
         E1: 'E1 Gym Silver',
-        EXPECTEDPG: "Report Viewer - Energy One Membership Renewal Mobile",
+        EXPECTEDPG: "Report Viewer - ReportE1.MembershipRenewalListingMobile",
         RENEWAL_LISTING_DATE_FROM: '01-Sep-2022',
         RENEWAL_LISTING_DATE_TO: '04-Jul-2050'
     },
@@ -121,16 +121,7 @@ const data = {
     TERMINATION_LISTING: {
         E1MAIN: 'Energy One Gym',
         E1: 'E1 Gym Silver',
-        EXPECTEDPG: "Report Viewer - Energy One Membership Termination",
-        TERMINATION_DATE_FROM: '01-Oct-2019',
-        TERMINATION_DATE_TO: '04-Dec-2023'
-    },
-
-    // E1 Membership Deferment Listing 
-    DEFERMENT_LISTING: {
-        E1MAIN: 'Energy One Gym',
-        E1: 'E1 Gym Silver',
-        EXPECTEDPG: "Report Viewer - Energy One Membership Deferment",
+        EXPECTEDPG: "Report Viewer - ReportE1.MembershipTerminationListing",
         TERMINATION_DATE_FROM: '01-Oct-2019',
         TERMINATION_DATE_TO: '04-Dec-2023'
     },

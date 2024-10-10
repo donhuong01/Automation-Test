@@ -13,8 +13,7 @@ const data = {
         CalculationType: 'Per Item',
         AmountType: 'Fixed Value',
         CategoryName: 'All Customer Category',
-        ProductNumber: "In-House Sale Product without tax",
-        ProductNumber2: "Merchandise without Tax",
+        ProductNumber: "2 MCDONALD'S GIFT CERTIFICATE",
         Remarks: 'test',
         EarnSAFRAPoints: 'CHECK'
     },
@@ -22,9 +21,9 @@ const data = {
     InHouseSaleAndMerchandisePurchase: {
         MemberIdMerchandise: 'A300001148',
         MemberIdInHouse: 'A300001825',
-        ItemNameMerchandise: 'GST NOT APPLICABLE',
-        ItemNameInHouse: 'In House Sales Demo',
-        QuantitySetMerchandise: '1',
+        ItemNameMerchandise: 'Amazon Tablet',
+        ItemNameInHouse: 'Poster Amended',
+        QuantitySetMerchandise: '2',
         QuantitySetInhouse: '1',
     },
 

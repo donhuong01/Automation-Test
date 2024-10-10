@@ -5,79 +5,71 @@
 const data = {
 
 COLLECTED_REDEEMED:{
-    EXPECTEDPG: 'Report Viewer - Collected Redeemed Stock',
+    EXPECTEDPG: 'Report Viewer - ReportSRP.CollectedRedeemedStock',
 },
 
 EARNING_REDEEMING:{
-    EXPECTEDPG: 'Report Viewer - Earning And Redeeming',
+    EXPECTEDPG: 'Report Viewer - ReportSRP.EarningAndRedeeming',
 },
 
 EARNING_MONTHLY: {
-    EXPECTEDPG: 'Report Viewer - Earning Monthly',
+    EXPECTEDPG: 'Report Viewer - ReportSRP.EarningMonthly',
 },
 
 MEMBER_TOTAL_POINTS: {
-    EXPECTEDPG: 'Report Viewer - Total Points Detail Email',
+    EXPECTEDPG: 'Report Viewer - ReportSRP.MemberTotalPointsDetailEmail',
 },
 
 REEDEMING_MONTHLY: {
-    EXPECTEDPG: 'Report Viewer - Redeeming Monthly With Number Of Item',
+    EXPECTEDPG: 'Report Viewer - ReportSRP.RedeemingMonthlyWithNumberOfItem',
 },
 
 UNCOLLECTED_REDEEMED: {
-    EXPECTEDPG: 'Report Viewer - Uncollected Redeemed Stock',
+    EXPECTEDPG: 'Report Viewer - ReportSRP.UncollectedRedeemedStock',
 },
 
 VENDOR_WISE_DETAIL: {
-    EXPECTEDPG: 'Report Viewer - Vendor Wise Contributions And Redemptions Detail',
+    EXPECTEDPG: 'Report Viewer - ReportSRP.VendorWiseContributionsAndRedemptionsDetail',
 },
 
 VENDOR_WISE_DETAIL_BY_ISSUED: {
-    EXPECTEDPG: 'Report Viewer - Vendor Wise Contributions And Redemptions Detail By Issued Date',
+    EXPECTEDPG: 'Report Viewer - ReportSRP.VendorWiseContributionsAndRedemptionsDetailByIssuedDate',
 },
 
 MEMBER_SRP: {
-    EXPECTEDPG: 'Report Viewer - Spending And Redemption',
+    EXPECTEDPG: 'Report Viewer - ReportSRP.MemberSRPSpendingAndRedemption',
 },
 
 MEMBER_SRP_ADDRESS: {
-    EXPECTEDPG: 'Report Viewer - Spending And Redemption Address',
+    EXPECTEDPG: 'Report Viewer - ReportSRP.MemberSRPSpendingAndRedemptionAddress',
 },
 
 MEMBER_SRP_EMAIL: {
-    EXPECTEDPG: 'Report Viewer - Spending And Redemption Email',
+    EXPECTEDPG: 'Report Viewer - ReportSRP.MemberSRPSpendingAndRedemptionEmail',
 },
 
 MEMBER_SRP_MOBILE: {
-    EXPECTEDPG: 'Report Viewer - Spending And Redemption Mobile',
+    EXPECTEDPG: 'Report Viewer - ReportSRP.MemberSRPSpendingAndRedemptionMobile',
 },
 
 POINTS_ADJUSTMENT: {
-    EXPECTEDPG: 'Report Viewer - Point Adjustment',
+    EXPECTEDPG: 'Report Viewer - ReportSRP.PointAdjustment',
 },
 
 POINTS_DISTRIBUTION: {
-    EXPECTEDPG: 'Report Viewer - Point Distribution',
+    EXPECTEDPG: 'Report Viewer - ReportSRP.PointDistribution',
 },
 
 RECEIPT_REFUND: {
-    EXPECTEDPG: 'Report Viewer - Receipt Refund',
+    EXPECTEDPG: 'Report Viewer - ReportSRP.ReceiptRefund',
 },
 
 REINSTATEMENT: {
-    EXPECTEDPG: 'Report Viewer - Reinstatement',
+    EXPECTEDPG: 'Report Viewer - ReportSRP.Reinstatement',
 },
 
 UNCOLLECTED_EXPIRY: {
     EXPECTEDPG: 'Report Viewer - ReportSRP.UncollectedExpiryRedeemedStock',
-},
-
-MEMBER_TOTAL_POINTS_DETAIL: {
-    EXPECTEDPG: 'Report Viewer - ReportSRP.MemberTotalPointsDetail',
-},
-
-POINT_TRANSACTION: {
-    EXPECTEDPG: 'Report Viewer - ReportSRP.PointTransaction',
 },
 
 

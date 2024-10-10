@@ -1,8 +1,8 @@
 class elems_SRPPointsAdjustmentRequest {
 
 
-    static BTN_REQUEST = '//span[text()="Request"]'
-    static BTN_CANCEL = '//span[text()="Cancel"]'
+    static BTN_REQUEST = '//button[text()="Request"]'
+    static BTN_CANCEL = '//button[text()="Cancel"]'
     static LBL_REQUESTEDDATE = '//input[@id="dtpRequestedDate"]'
     static LBL_MEMBERID = '//label[@for="lblMemberID"]'
     static LBL_LAST4NRIC = '//label[@for="lblLast4NRICNo"]'
@@ -20,7 +20,7 @@ class elems_SRPPointsAdjustmentRequest {
     static LBL_CONVERTEDAMOUNT = ''
     static CHK_PROMOTION = '//input[@id="checkApplyPromotion"]'
     static CHK_TRANSACTIONDATE = '//input[@id="dtpTransactionDate"]'
-    static BTN_SEARCHFILTER = '(//span[text()="Search Filters"])'
+    static BTN_SEARCHFILTER = '(//button[text()="Search Filters"])'
 
 }
 export default elems_SRPPointsAdjustmentRequest

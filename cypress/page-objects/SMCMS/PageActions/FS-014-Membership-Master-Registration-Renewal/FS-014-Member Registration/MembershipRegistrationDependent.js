@@ -270,13 +270,10 @@ class Membership_Registration_Dependent{
     *****************************************************/     
      SelectPrincipalID(PrincipalID)
         {   
-            //cy.SelectPickerItem(elems_MembershipRegistrationDependent.PersonalInformation.PCK_PRINCIPALID, PrincipalID)
+
             cy.Click(elems_MembershipRegistrationDependent.PersonalInformation.PCK_PRINCIPALID)
             cy.wait(5000)
-            cy.EnterText('//div[@role="dialog"]//label/parent::div//input[@name="memberId"]', PrincipalID)
-            cy.Click('//span[text()="Search Filters"]')
-            cy.TickSpecificTableItem(PrincipalID)
-            //cy.SelectTableItem2(elems_Picker.TBL_PICKERITEMS, 'Member ID', PrincipalID)
+            cy.SelectTableItem2(elems_Picker.TBL_PICKERITEMS, 'Member ID', PrincipalID)
             cy.wait(5000)
             cy.Click(elems_Picker.BTN_SELECT)
 
@@ -722,10 +719,10 @@ class Membership_Registration_Dependent{
                 cy.TickCheckBox(elems_MembershipRegistrationDependent.InterestAreaInformation.InterestGroupsAndMicroClubs.CHK_SAFRAENTREPRENEURSCLUB, safraEntrpnrsClub)
             }
     
-            // // Set Fuse (Entertainment) Checkbox
-            // if(fuseEntrtnmnt !== undefined){
-            //     cy.TickCheckBox(elems_MembershipRegistrationDependent.InterestAreaInformation.InterestGroupsAndMicroClubs.CHK_FUSE, fuseEntrtnmnt)
-            // }
+            // Set Fuse (Entertainment) Checkbox
+            if(fuseEntrtnmnt !== undefined){
+                cy.TickCheckBox(elems_MembershipRegistrationDependent.InterestAreaInformation.InterestGroupsAndMicroClubs.CHK_FUSE, fuseEntrtnmnt)
+            }
     
             // Set SAFRA Golfing Section Checkbox
             if(safraGolfingSection !== undefined){
@@ -738,14 +735,14 @@ class Membership_Registration_Dependent{
             }
     
             // Set SAFRA Photographic Club Checkbox
-            // if(safraPhotoClub !== undefined){
-            //     cy.TickCheckBox(elems_MembershipRegistrationDependent.InterestAreaInformation.InterestGroupsAndMicroClubs.CHK_SAFRAPHOTOGRAPHICCLUB, safraPhotoClub)
-            // }
+            if(safraPhotoClub !== undefined){
+                cy.TickCheckBox(elems_MembershipRegistrationDependent.InterestAreaInformation.InterestGroupsAndMicroClubs.CHK_SAFRAPHOTOGRAPHICCLUB, safraPhotoClub)
+            }
     
             // Set SAFRA Running Club Checkbox
-            // if(safraRunningClub !== undefined){
-            //     cy.TickCheckBox(elems_MembershipRegistrationDependent.InterestAreaInformation.InterestGroupsAndMicroClubs.CHK_SAFRAPHOTOGRAPHICCLUB, safraRunningClub)
-            // }
+            if(safraRunningClub !== undefined){
+                cy.TickCheckBox(elems_MembershipRegistrationDependent.InterestAreaInformation.InterestGroupsAndMicroClubs.CHK_SAFRAPHOTOGRAPHICCLUB, safraRunningClub)
+            }
     
             // Set SAFRA Shooting Club Checkbox
             if(safraShootingClub !== undefined){

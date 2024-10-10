@@ -25,13 +25,10 @@ class E1GymMembershipModuleSetting {
         * Description: This function Fillout Membership Section
        ****************************************************/
     FilloutMembershipSection(GracePeriod, TerminateMemAfterExpiration, MinMembDeferPeriod, MinMemRejoinPeriod, WaiverProductItem) {
-        cy.xpath(elems_E1GymMembershipModuleSetting.TXT_GRACEPERIODFORSIGNUP).clear()
+
         cy.EnterText(elems_E1GymMembershipModuleSetting.TXT_GRACEPERIODFORSIGNUP, GracePeriod)
-        cy.xpath(elems_E1GymMembershipModuleSetting.TXT_TERMINATEMEMBERSHIPAFTEREXPIRATION).clear()
         cy.EnterText(elems_E1GymMembershipModuleSetting.TXT_TERMINATEMEMBERSHIPAFTEREXPIRATION, TerminateMemAfterExpiration)
-        cy.xpath(elems_E1GymMembershipModuleSetting.TXT_MINIMUMMEMBERSHIPDEFERMENT).clear()
         cy.EnterText(elems_E1GymMembershipModuleSetting.TXT_MINIMUMMEMBERSHIPDEFERMENT, MinMembDeferPeriod)
-        cy.xpath(elems_E1GymMembershipModuleSetting.TXT_MINIMUMMEMBERSHIPREJOIN).clear()
         cy.EnterText(elems_E1GymMembershipModuleSetting.TXT_MINIMUMMEMBERSHIPREJOIN, MinMemRejoinPeriod)
         // cy.SelectPickerDifferentItems(elems_E1GymMembershipModuleSetting.PCK_WAIVERPRODUCTITEM,
         //     elems_E1GymMembershipModuleSetting.TXT_PRODUCTNUMBER, WaiverProductItem)

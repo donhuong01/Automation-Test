@@ -16,7 +16,7 @@ import login from '../../../../fixtures/login'
 
 beforeEach(() => {
 
-    cy.intercept('GET', 'https://api.qa-smcms.safra.sg/v2/adminapi/membership/mass-update-member-data-requests')
+    cy.intercept('GET', 'https://api-uat-smcms.safra.sg/smcms/v2/adminapi/membership/mass-update-member-data-requests')
 })
 
 const MassUpdateForMemberData = ()=> {
@@ -29,7 +29,7 @@ const MassUpdateForMemberData = ()=> {
 
         it('[TC01] Create a Valid Mass Update For Member Data and and Reject Approval workflow', function () {
             
-            cy.intercept('POST', 'https://api.qa-smcms.safra.sg/v2/adminapi/membership/mass-update-member-data-requests').as('ID')
+            cy.intercept('POST', 'https://api-uat-smcms.safra.sg/smcms/v2/adminapi/membership/mass-update-member-data-requests').as('ID')
             // Navigate to form
             cy.visit('/membership/massUpdateMemberDataList')
             cy.wait(5000)
@@ -84,7 +84,7 @@ const MassUpdateForMemberData = ()=> {
         })
         it('[TC02] Create a Valid Mass Update For Member Data and Approve approval workflow', function () {
             
-            cy.intercept('POST', 'https://api.qa-smcms.safra.sg/v2/adminapi/membership/mass-update-member-data-requests').as('ID')
+            cy.intercept('POST', 'https://api-uat-smcms.safra.sg/smcms/v2/adminapi/membership/mass-update-member-data-requests').as('ID')
             
             // Navigate to form
             cy.visit('/membership/massUpdateMemberDataList')
@@ -141,7 +141,7 @@ const MassUpdateForMemberData = ()=> {
 
         it('[TC03] Create an Invalid Mass Update For Member Data', function () {
 
-            cy.intercept('POST', 'https://api.qa-smcms.safra.sg/v2/adminapi/membership/mass-update-member-data-requests').as('ID')
+            cy.intercept('POST', 'https://api-uat-smcms.safra.sg/smcms/v2/adminapi/membership/mass-update-member-data-requests').as('ID')
 
             // Navigate to form
             cy.visit('/membership/massUpdateMemberDataList')

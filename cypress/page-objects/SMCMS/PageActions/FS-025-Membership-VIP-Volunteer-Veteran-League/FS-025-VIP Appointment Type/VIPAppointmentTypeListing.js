@@ -36,12 +36,11 @@ class VIPAppointmentTypeListing{
 
     Delete(AppointmentID,Description)
     {
-        cy.TickSpecificTableItem(Description)
-        // cy.SelectTableItem(
-        //     elems_VIPAppointmentTypeListing.TBL_VIPAPPOINTMENTTYPELISTING,
-        //     'Appointment ID', AppointmentID,
-        //     'Description', Description
-        // )
+        cy.SelectTableItem(
+            elems_VIPAppointmentTypeListing.TBL_VIPAPPOINTMENTTYPELISTING,
+            'Appointment ID', AppointmentID,
+            'Description', Description
+        )
         cy.Click(elems_VIPAppointmentTypeListing.BTN_DELETE)
          
     }

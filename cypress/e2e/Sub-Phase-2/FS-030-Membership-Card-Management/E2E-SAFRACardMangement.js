@@ -9,11 +9,11 @@ import data from '../../../fixtures/Data_Module/FS-030-Membership-Card-Managemen
 
 
  
- const {MemberID, NRIC, Name, ECard, PhysicalCard, CardType, CardCategory, MemberCategory, Title} = data.SAFRACardGeneration
+ const {MemberID, NRIC, Name, ECard, PhysicalCard, CardType, CardCategory, MemberCategory} = data.SAFRACardGeneration
 
 const SAFRACardManagement = (MemberID, Name, NRIC, CardType) => {
 
-describe('[TS020] SAFRA Card Managment', function () {
+describe('[TS020] SAFRA Appointment Term Registration Managment', function () {
 
 
 
@@ -37,30 +37,15 @@ describe('[TS020] SAFRA Card Managment', function () {
     //Select Member Card Listing
     VIPMemberCard.SelectMemberCardNumber('Member ID', MemberID)
     
-   //  //Generate Card
-   //  VIPMemberCard.GenerateCard()
-
-   //  // Verify VIP Member Card Generation
-   //  VIPMemberCard.SAFRACardGeneration(MemberID, NRIC, Name, 'Registration', Title)
-
-   //  // Click on Generate button
-   //  VIPMemberCard.Generate()
-
-   //Select Member Card Listing
-   VIPMemberCard.SelectMemberCardNumber('Member ID', MemberID)
-    
     // Verify Card information
     VIPMemberCard.VerifyCardInformation(MemberID, Name, ECard, PhysicalCard, CardType, CardCategory)
 
 
     //Select Member Card Listing
     VIPMemberCard.SelectMemberCardNumber('Member ID', MemberID)
-
-   //  //Click on E-Card
-   //  VIPMemberCard.DeactivateECard()
     
-   //  //Click on E-Card
-   //  VIPMemberCard.ActivateECard()
+    //Click on E-Card
+    VIPMemberCard.ActivateECard()
 
     //Select Member Card Listing
     VIPMemberCard.SelectMemberCardNumber('Member ID', MemberID)
@@ -93,7 +78,7 @@ describe('[TS020] SAFRA Card Managment', function () {
     VIPMemberCard.SelectMemberCardNumber('Member ID', MemberID)
 
     // Verify Card information
-    VIPMemberCard.VerifyCardInformation(MemberID, Name, "Active", "Inactive", CardType, CardCategory)
+    VIPMemberCard.VerifyCardInformation(MemberID, Name, "Inactive", "Inactive", CardType, CardCategory)
 
     //Select Member Card Listing
     VIPMemberCard.SelectMemberCardNumber('Member ID', MemberID)

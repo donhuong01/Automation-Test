@@ -51,99 +51,6 @@ class MembershipTenureSelection{
     }
 
     /*****************************************************
-     * Method: dependentTenureSelection
-     * Description: Add Tenure Selection to Dependent Member
-     *
-     * @param {string} memberId Dependent Member ID
-     * @param {string} tenureSelection Tenure Selection
-     * @param {string} ColumnValue target column
-     *****************************************************/
-    dependentTenureSelection(ColumnValue, tenureSelection){
-
-        // Set Tenure Selection
-        if(tenureSelection !== undefined && ColumnValue !== undefined){
-
-            cy.TenureSelectionDependent(elems_MembershipTenureSelection.Dependent.TBL_DEPENDENT,
-             ColumnValue,  tenureSelection)
-        }
-    }
-
-    /*****************************************************
-     * Method: dependentTenureSelection
-     * Description: Add Tenure Selection to Dependent Member
-     *
-     * @param {string} memberId Dependent Member ID
-     * @param {string} tenureSelection Tenure Selection
-     * @param {string} ColumnValue target column
-     *****************************************************/
-    dependentTenureSelection2(ColumnValue, tenureSelection){
-
-        // Set Tenure Selection
-        if(tenureSelection !== undefined && ColumnValue !== undefined){
-
-            cy.TenureSelectionDependent2(elems_MembershipTenureSelection.Dependent.TBL_DEPENDENT,
-             ColumnValue,  tenureSelection)
-        }
-    }
-
-    /*****************************************************
-     * Method: TenureSelectionRenewal   
-     * Description: Add Tenure Selection to Principal Member
-     *
-     * @param {string} tenureSelection Tenure Selection
-     * @param {string} ColumnValue Column value
-     *****************************************************/
-    TenureSelectionRenewal(ColumnValue, tenureSelection){
-
-        // Set Tenure Selection
-        if(tenureSelection !== undefined && ColumnValue !== undefined){
-
-            cy.TenureSelectionBatch(elems_MembershipTenureSelection.Principal.TBL_PRINCIPAL,
-                ColumnValue,  tenureSelection)
-        }
-
-
-    }
-
-    /*****************************************************
-     * Method: TenureSelectionBatchPri   
-     * Description: Add Tenure Selection to Principal Member
-     *
-     * @param {string} tenureSelection Tenure Selection
-     * @param {string} ColumnValue Column value
-     *****************************************************/
-    TenureSelectionBatchPri(ColumnValue, tenureSelection){
-
-        // Set Tenure Selection
-        if(tenureSelection !== undefined && ColumnValue !== undefined){
-
-            cy.TenureSelectionBatch(elems_MembershipTenureSelection.Principal.TBL_PRINCIPAL,
-                ColumnValue,  tenureSelection)
-        }
-
-
-    }
-
-    /*****************************************************
-     * Method: TenureSelectionBatchDep   
-     * Description: Add Tenure Selection to Principal Member
-     *
-     * @param {string} tenureSelection Tenure Selection
-     * @param {string} ColumnValue Column value
-     *****************************************************/
-    TenureSelectionBatchDep(ColumnValue, tenureSelection){
-
-        // Set Tenure Selection
-        if(tenureSelection !== undefined && ColumnValue !== undefined){
-
-            cy.TenureSelectionBatchDependent(elems_MembershipTenureSelection.Dependent.TBL_DEPENDENT,
-                ColumnValue,  tenureSelection)
-        }
-
-
-    }
-
-    /*****************************************************
      * Method: verifyDependentList
      * Description: Verify Dependent List Item
      *
@@ -170,7 +77,19 @@ class MembershipTenureSelection{
         )
     }
 
-    
+    /*****************************************************
+     * Method: dependentTenureSelection
+     * Description: Add Tenure Selection to Dependent Member
+     *
+     * @param {string} memberId Dependent Member ID
+     * @param {string} tenureSelection Tenure Selection
+     * @param {string} ColumnValue target column
+     *****************************************************/
+     dependentTenureSelection(ColumnValue, tenureSelection){
+
+        cy.TenureSelection(elems_MembershipTenureSelection.Dependent.TBL_DEPENDENT,
+            ColumnValue,  tenureSelection)
+    }
 
     /*****************************************************
      * Method: selectDependent
@@ -221,7 +140,7 @@ class MembershipTenureSelection{
 
         // Click Add to Cart button
         cy.Click(elems_MembershipTenureSelection.BTN_ADDTOCART)
-        cy.wait(5000) // Change it to 15000 when in UAT
+        cy.wait(15000) // Change it to 15000 when in UAT
         // Verify Redirection Page
         cy.ValidateElementText(elems_PageHeader.LBL_PAGETITLE, 'Shopping Cart')
     }

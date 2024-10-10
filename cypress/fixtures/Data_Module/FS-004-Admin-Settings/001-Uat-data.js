@@ -92,7 +92,7 @@ const data = {
 
     // SMCMS User Listing
     clickLoginEmail: {
-        LoginEmail: 'EKyaw@synergyonline.com', //'fshahzada@synergyonline.com',
+        LoginEmail: 'EKyaw@synergyonline.com',
         Position: 'Accommodation Viewer',
         PositionList: 'Accommodation Viewer',
         Status: 'Active',
@@ -100,11 +100,11 @@ const data = {
         LastLoginDate: '03/07/2022 01:33:38'
     },
     enabledemail: {
-        LoginEmail: 'EKyaw@synergyonline.com',//'htran@synergyonline.com',
+        LoginEmail: 'htran@synergyonline.com',
         Status: 'Active'
     },
     disabledemail: {
-        LoginEmail: 'EKyaw@synergyonline.com',//'htran@synergyonline.com',
+        LoginEmail: 'htran@synergyonline.com',
         Status: 'Disabled'
 
     },
@@ -113,9 +113,9 @@ const data = {
 
     SMCMSUserDetail: {
         updatedRemark: 'Updated',
-        PositionDetail: 'Accommodation Viewer',
+        PositionDetail: 'CSO Facility IAWR - Toa Payoh',
     }
-    
+
 }
 
 export default data
