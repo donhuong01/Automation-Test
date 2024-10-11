@@ -7,9 +7,7 @@ describe("Interest Group Membership Registration", () => {
         const username = Cypress.env('aad_username')
         const password = Cypress.env('aad_password')
         const memberId = Cypress.env('member_id')
-        const nric = nricGenerator('T', '20')
         const timeout = parseInt(Cypress.env('timeout'))
-        const childNric = nricGenerator('T', '10')
 
         //Select Channel
         cy.visit('/membership/customerCheckin')
