@@ -25,6 +25,7 @@ module.exports = defineConfig({
     "baseUrl": "https://uat-smcms.safra.sg",
     "viewportWidth": 1520,
     "viewportHeight": 1420,
+    "defaultCommandTimeout": 10000,
     setupNodeEvents(on, config) {
       on('task', {
         /*****************************************************
