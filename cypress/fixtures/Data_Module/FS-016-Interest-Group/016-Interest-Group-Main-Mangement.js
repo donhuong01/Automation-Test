@@ -1,25 +1,25 @@
 const data = {
 
     IGMainNumber: '',
-    IGName: 'z-IG Main testing' + Math.floor(Math.random() * 1000),
+    IGName: 'IG Main testing' + Math.floor(Math.random() * 1000),
     Code: 'SMCMS06',
     MainCategory: 'TEST',
-    IGCategoryGroup: 'EDUCATIONAL/ENRICHMENT & CURRENT AFFAIRS',
+    IGCategoryGroup: 'INTEREST GROUP CATEGORY',
     FABSGroup: 'Contest',
     ClubClassification: 'Fitness & Leisure',
     LifeStyleGroup: 'Clubbing/Pubbing',
     SMCClassification: 'Fitness & Adventure-SMC',
-    OwnerEmail: 'htran@synergyonline.com',
+    OwnerEmail: 'rdacpano@synergyonline.com',
 
-    LocationName: 'SAFRA HQ',
+    LocationName: 'SAFRA Jurong',
 
     ApproverOption: 'PIC of the requestor',
     ApproverEmail: 'HTran@synergyonline.com',
     Status: 'Draft',
 
-    ChargeName: 'Registration Admin Fee',
-    TransactionType: 'Registration Admin',
-    CalculationType: 'Per Registration',
+    ChargeName: 'Registration Fee',
+    TransactionType: 'Registration',
+    CalculationType: 'Per Term',
     AmmountType: 'Fixed Value',
 
     CustomerCategoryName: 'Associate',
@@ -33,12 +33,12 @@ const data = {
     ReversalItemCode: 'IG Prod 001',
 
     IGDetail: {
-        IGName: "Auto-IG-Test" + Math.floor(Math.random() * 1000),
+        IGName: "SAFRA BITEZ" + Math.floor(Math.random() * 1000),
         Code: "SMCS01",
-        IGMain: "IG Main QA Testing 1",
+        IGMain: "Badminton Social Group",
         SubCatType: "BITEZ",
         PublishDate: "29-Sep-2022",
-        EndDate: "29-Nov-2050",
+        EndDate: "29-Nov-2022",
         MemType: "Main",
 
         //Registration

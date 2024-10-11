@@ -10,7 +10,7 @@ class CustomerCreation {
         }
 
         if (DOB !== undefined) {
-            cy.SelectDateIg(elems_CustomerCreation.RegistrantInformation.DATE_DATEOFBIRTH, DOB)
+            cy.SelectDate(elems_CustomerCreation.RegistrantInformation.DATE_DATEOFBIRTH, DOB)
         }
 
         if (gender !== undefined) {
@@ -46,10 +46,7 @@ class CustomerCreation {
     }
 
 
-    fillOutContactInformation({ handPhone, emailAddress, emergencyContact, homeNumber, preferredContactModeSelectAll, preferredContactModeEmail, 
-        preferredContactModeMail, preferredContactModeSMS, preferredContactModeVoiceCall, preferredContactModePushNotification, 
-        consentInformationMarketing, consentInformationServiceNotification, consentInformationTransactional, preferredContactModeWhatsApp }) {
-
+    fillOutContactInformation({ handPhone, emailAddress, emergencyContact, homeNumber, preferredContactModeSelectAll, preferredContactModeEmail, preferredContactModeMail, preferredContactModeSMS, preferredContactModeVoiceCall, preferredContactModePushNotification, consentInformationMarketing, consentInformationServiceNotification, consentInformationTransactional }) {
         if (handPhone !== undefined) {
             cy.EnterText(elems_CustomerCreation.ContactInformation.TXT_HANDPHONE, handPhone);
         }
@@ -85,10 +82,6 @@ class CustomerCreation {
         if (preferredContactModePushNotification !== undefined) {
             cy.TickCheckBox(elems_CustomerCreation.ContactInformation.PreferredContactMode.CHK_PUSHNOTIFICATION, preferredContactModePushNotification);
         }
-        if (preferredContactModeWhatsApp !== undefined) {
-            cy.TickCheckBox(elems_CustomerCreation.ContactInformation.PreferredContactMode.CHK_WHATSAPP, preferredContactModeWhatsApp);
-        }
-
 
         if (consentInformationMarketing !== undefined) {
             cy.TickCheckBox(elems_CustomerCreation.ContactInformation.ConsentInformation.CHK_MARKETINGCONSENT, consentInformationMarketing);
@@ -102,10 +95,7 @@ class CustomerCreation {
         }
     }
 
-    fillOutInterestAreaInformation({ clubChoa, clubJurong, clubPunggol, clubPayoh, clubFaber, clubTampines, clubYishun, brandEnergyOneGym, brandKidzAmaza, brandFINS, interestedAllEvents, interestedAllPeaks, interestedFitness, interestedLifelong, interestedLeisure, interestedTravel, interestedChild, interestedFood, interestedShopping, interestedMotoring, interestedHealth, interestedSAFRAPOINTS, SAFRANewsletter, groupAdventure, groupBitez, groupCommService, groupCompetitive, groupDigimedia, groupEntrep, groupFuse, groupGolf, groupMovie, groupPhotograph, groupRunning, groupShooting, groupSocialBadminton, groupTech, groupTravel }) {
-        if (clubChoa !== undefined) {
-            cy.TickCheckBox(elems_CustomerCreation.InterestAreaInformation.PreferredSafraClubs.CHK_SAFRACHOA, clubChoa)
-        }
+    fillOutInterestAreaInformation({ clubJurong, clubPunggol, clubPayoh, clubFaber, clubTampines, clubYishun, brandEnergyOneGym, brandKidzAmaza, brandFINS, interestedAllEvents, interestedAllPeaks, interestedFitness, interestedLifelong, interestedLeisure, interestedTravel, interestedChild, interestedFood, interestedShopping, interestedMotoring, interestedHealth, interestedSAFRAPOINTS, SAFRANewsletter, groupAdventure, groupBitez, groupCommService, groupCompetitive, groupDigimedia, groupEntrep, groupFuse, groupGolf, groupMovie, groupPhotograph, groupRunning, groupShooting, groupSocialBadminton, groupTech, groupTravel }) {
         if (clubJurong !== undefined) {
             cy.TickCheckBox(elems_CustomerCreation.InterestAreaInformation.PreferredSafraClubs.CHK_SAFRAJURONG, clubJurong)
         }
@@ -185,9 +175,9 @@ class CustomerCreation {
             cy.TickCheckBox(elems_CustomerCreation.InterestAreaInformation.IAmInterestedIn.CHK_SAFRAPOINTSREWARDPROGRAMME, interestedSAFRAPOINTS)
         }
 
-        // if (SAFRANewsletter !== undefined) {
-        //     cy.TickCheckBox('//input[@id="checkkEnsman"]', SAFRANewsletter)
-        // }
+        if (SAFRANewsletter !== undefined) {
+            cy.TickCheckBox(elems_CustomerCreation.InterestAreaInformation.SafraNewsletter.CHK_ENSMAN, SAFRANewsletter)
+        }
 
         if (groupAdventure !== undefined) {
             cy.TickCheckBox(elems_CustomerCreation.InterestAreaInformation.InterestGroupsAndMicroClubs.CHK_SAFRAADVENTURECLUB, groupAdventure)
@@ -224,9 +214,9 @@ class CustomerCreation {
             cy.TickCheckBox(elems_CustomerCreation.InterestAreaInformation.InterestGroupsAndMicroClubs.CHK_SAFRAMOVIEMAX, groupMovie)
         }
 
-        // if (groupPhotograph !== undefined) {
-        //     cy.TickCheckBox(elems_CustomerCreation.InterestAreaInformation.InterestGroupsAndMicroClubs.CHK_SAFRAPHOTOGRAPHICCLUB, groupPhotograph)
-        // }
+        if (groupPhotograph !== undefined) {
+            cy.TickCheckBox(elems_CustomerCreation.InterestAreaInformation.InterestGroupsAndMicroClubs.CHK_SAFRAPHOTOGRAPHICCLUB, groupPhotograph)
+        }
 
         if (groupRunning !== undefined) {
             cy.TickCheckBox(elems_CustomerCreation.InterestAreaInformation.InterestGroupsAndMicroClubs.CHK_SAFRARUNNINGCLUB, groupRunning)
@@ -251,7 +241,7 @@ class CustomerCreation {
 
     save() {
         cy.Click(elems_CustomerCreation.BTN_CREATENEW);
-        cy.wait(5000)
+        cy.wait(8000)
         cy.ValidateElementText(elems_PageHeader.LBL_PAGETITLE, "Customer Landing");
     }
 

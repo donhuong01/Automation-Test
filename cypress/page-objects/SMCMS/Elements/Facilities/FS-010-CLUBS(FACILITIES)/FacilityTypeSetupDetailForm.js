@@ -34,7 +34,7 @@ class elems_FacilityTypeSetupDetailForm {
         TXT_CUSTOMCATEGORYNAME: '//input[@id="txtCustomerCategoryName"]',
         TBL_CUTOMCATEGORY: '//h3[text()="Customer Category"]//following-sibling::div//table',
         CHK_ADDITIONALNRICGROUPNRIC: '//input[@id="chkNricRequiredGroupBooking"]',
-        NUM_NUMOFNRICBOOKINGGROUOP: '//input[@id="groupNumberofAdditionalNRIC"]',
+        NUM_NUMOFNRICBOOKINGGROUOP: '//input[@id="normalRequireCustomerCategory"]',
         CHK_CUSTOMCATEGORYGB: '//input[@id="groupRequireCustomerCategory"]',
         BTN_ADDCUSTOMERCATEGORYGB: '//h3[text()=" Customer Category"]//following-sibling::button[@class="k-button link-button"]',
         TBL_AddCUSTOMERCATEGORY: '//h3[text()="Customer Category"]//following-sibling::div//table',
@@ -59,7 +59,6 @@ class elems_FacilityTypeSetupDetailForm {
         BTN_ADDQUOTA: '//button[text()="Add Quota"]',
         DRP_TYPEOFTIMING: '//span[@id="drpTypeOfTiming"]',
         TXT_SLOTLENGTH: '//input[@id="txtOneSlotLengthInMinutes"]',
-        TXT_ONE_CUSTOMER_CAN: '//input[@id="txtMaxNumOfFacilitiesAllowedToBookAtSameTime"]',
 
         // Booking Timing Restrict
         NUM_NONPEAKMINSLOT: '//td[text()="Non Peak"]//following-sibling::td[1]',

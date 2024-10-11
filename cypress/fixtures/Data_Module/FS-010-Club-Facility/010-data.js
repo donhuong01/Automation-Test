@@ -17,32 +17,24 @@ const data = {
 
     },
     FacilityBookingDetails: {
-        FacilityType: 'Automation Testing 2024',//'Auto-Test 72',//'Facility  Type 2023',
-        slot: '12:00 pm - 12:30 pm',
+        FacilityType: 'Facility  Type 2023',
+        slot: 'Available (09:00 am - 10:00 am)',
         ChargeType: 'Charge Rate-2023',
         Amount: '2',
         Reason: 'Testing',
-        FacilityName: 'Automation Testing Facility 2024',
-        Location: 'SAFRA HQ',
+        FacilityName: 'Auto-Test 450',
+        Location: 'SAFRA Jurong',
     },
 
     FacilityGroupBookingDetails: {
-        FacilityType: 'Automation Testing 2024',
+        FacilityType: 'Facility  Type 2023',
         slot: '09:00 am - 10:00 am',
         slot2: '03:00 pm - 04:00 pm',
         ChargeType: 'Charge Rate-2023',
         Amount: '2',
         Reason: 'Testing',
-        FacilityName: 'Automation Testing Facility 2024',
-        Location: 'SAFRA HQ',
-           // FacilityType: 'Facility  Type 2023',
-        // slot: '09:00 am - 10:00 am',
-        // slot2: '03:00 pm - 04:00 pm',
-        // ChargeType: 'Charge Rate-2023',
-        // Amount: '2',
-        // Reason: 'Testing',
-        // FacilityName: 'Group Ballot 2023',
-        // Location: 'SAFRA Jurong',
+        FacilityName: 'Group Ballot 2023',
+        Location: 'SAFRA Jurong',
     },
 
     Period: {
@@ -59,7 +51,7 @@ const data = {
     // Operating Period Detail
     OperatingPeriodDetail: {
         operatingPeriodName: '1st Period 2022',
-        Status: 'Draft',
+        Status: 'Pending Approval',
         RecordStatus: 'Inactive',
 
         addOperatingHours: {
@@ -83,9 +75,9 @@ const data = {
                     ignoreRenderSlotLength: 'uncheck'
                 },
                 {
-                    startTime: '9:00 PM',
+                    startTime: '8:30 AM',
                     row: 3,
-                    endTime: '10:00 PM',
+                    endTime: '10:00 AM',
                     typeOfPeakPeriod: 'Super Holiday',
                     isClosedForBooking: 'uncheck',
                     ignoreRenderSlotLength: 'check'
@@ -128,20 +120,20 @@ const data = {
     },
 
     // Facility General Settings
-    FacilityBookingReminder: '1',
+    FacilityBookingReminder: 0,
     BookingEarn: 'check',
-    GroupBooking: 'check',
+    GroupBooking: 'uncheck',
     ReservationEarn: 'check',
 
-    NumOfPhotoGraphs: '2',
-    MaximumFileSize: '10000',
+    NumOfPhotoGraphs: '1',
+    MaximumFileSize: '1000',
 
     FormatAllowed: 'png',
     TransferButton: 'Transfer To',
 
     CancellationNotAllowedMonths: '1',
-    CancellationNotAllowedDays: '3',
-    DataBackUp: '30',
+    CancellationNotAllowedDays: '30',
+    DataBackUp: '0',
 
     ProductMappingTab: {
 
@@ -157,7 +149,7 @@ const data = {
                 FacilityName: 'Auto-Test ' + Math.floor(Math.random() * 10000),
                 ActivationDate: '18-Jan-2023',
                 UploadPhotos: 'Sample_Images.jpeg',
-                FacilityType: 'Facility Type 2024',
+                FacilityType: 'Facility  Type 2023',
                 Location: 'SAFRA Jurong',
                 FormatsAllowed: 'check',
                 ResourceName: 'Auto-Test-Resource ' + Math.floor(Math.random() * 1000),
@@ -214,9 +206,9 @@ const data = {
 
         ProductMappingTab: {
 
-            ProductNumber: 'FAC_20240419',
-            ProductName: 'Facility Product_with Tax',
-            SearchName: 'Facility Product_with Tax',
+            ProductNumber: 'PROD113',
+            ProductName: 'Product 3',
+            SearchName: 'Product 3',
         },
 
         AdditionalInfoTab: {
@@ -241,13 +233,13 @@ const data = {
         CalenderName: 'Calendar 2023',
         ChargeRateName: 'Testing CR',
         Location: 'SAFRA Jurong',
-        AccessMode: 'RoadShow',
+        AccessMode: 'Online',
         CustomerCategory: 'All Customer Category',
         Status: 'Pending Approval',
 
         //Charge Rate Tab
         StartDate: '09-Jan-2023',
-        EndDate: '30-Dec-2024',
+        EndDate: '30-Jun-2023',
         ChargeRateLocation: 'All Locations',
         ChargeTypeName: 'Booking Fee',
         Transaction: 'Booking',
@@ -255,7 +247,7 @@ const data = {
         Amount: 'Fixed Value',
         CategoryName: 'All Customer Category',
         CategoryNumber: '10',
-        ProductName: 'Facility Product_with Tax',
+        ProductName: 'Product 3',
 
     },
     CategorySection: {

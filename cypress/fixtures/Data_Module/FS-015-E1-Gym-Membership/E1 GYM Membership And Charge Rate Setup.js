@@ -1,31 +1,30 @@
 const data = {
 
-    Name: 'E1MF NSF NEW',//'z-Test E1 Main'+ Math.floor(Math.random() * 1000),
-    Code: 'E1MFNSF',
-    MainCategory: 'E1MF NSF NEW',
-    LocationName: 'SAFRA Mt Faber',
-    CustomerCategoryName: 'SAFRA Member',
-    
-    IGGroupCategoryGroup: 'SAFRA MEGAGYM',
-    FabsGroup: 'ENERGYONE One Gym',
-    ClubClassification: 'Fitness & Leisure',
-    LifeStyleGroup: 'Gym',
-    SMCClassification: 'Fitness & Adventure-SMC',
+    Name: 'E1 Main Test',
+    Code: 'EMT',
+    MainCategory: 'Sport',
+    IGGroupCategoryGroup: 'INTEREST GROUP CATEGORY',
+    FabsGroup: 'IG Activities',
+    ClubClassification: 'Food & Beverages',
+    LifeStyleGroup: 'Enrichment',
+    SMCClassification: 'Enrichment',
     OwnerEmail: 'HTran@synergyonline.com',
+    LocationName: 'SAFRA Jurong',
     ApproverOption: 'E1 Manager',
     ApproverEmail: 'HTran@synergyonline.com',
-    ChargeName: 'Admin Registration',
-    TransactionType: 'Registration Admin',
-    CalculationType: 'Per Registration',
+    ChargeName: 'Registration',
+    TransactionType: 'Registration',
+    CalculationType: 'Per Term',
     AmmountType: 'Fixed Value',
-    RegItemCode: 'SOL000005681', //SOL000005681 //SRP Prod 001
-    RenewalItemCode: 'SOL000005681',
-    DefermentItemCode: 'SOL000005681',
-    ReinstatementItemCode: 'SOL000005681',
-    TerminationItemCode: 'SOL000005681',
-    WaiverItemCode: 'SOL000005681',
-    ReversalItemCode: 'SOL000005681',
-    BussinessType: 'Energy One'
+    CustomerCategoryName: 'AS',
+    RegItemCode: 'SRP Prod 001',
+    RenewalItemCode: 'SRP Prod 001',
+    DefermentItemCode: 'SRP Prod 002',
+    ReinstatementItemCode: 'SRP Prod 004',
+    TerminationItemCode: 'SRP Prod 006',
+    WaiverItemCode: 'SRP Prod 002',
+    ReversalItemCode: 'SRP Prod 001',
+    BussinessType: 'Normal'
 
 }
 export default data

@@ -1,7 +1,6 @@
 import login from '../../../fixtures/login'
 import Common from '../../../page-objects/SMCMS/PageActions/Common/Common'
 import FacilityBookingListing from '../../../page-objects/SMCMS/PageActions/FS-010-Clubs(Facilites)/FS-010-Facility-Booking/Facility-Booking-Listing'
-import FacilityBookingExtension from '../../../page-objects/SMCMS/PageActions/FS-010-Clubs(Facilites)/FS-010-Facility-Booking-Extension/FacilityBookingExtension'
 
 beforeEach(() => {
 
@@ -9,7 +8,7 @@ beforeEach(() => {
     // cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
 
     // Set local storage for UAT Enviroment
-    cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
+    // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
 })
 
 const common = new Common()
@@ -21,30 +20,30 @@ describe('FS-010 Facility Booking Cancellation', function () {
 
     it('[TC01] Creating a Facility Booking Cancellation without Refund/Credit', function () {
 
-        common.Checkin('A300019774')
+        common.Checkin('A300002855')
 
         cy.visit('/facilities/bookingCancellationListing')
 
         // Verify page title
-        FacilityBookingExtension.VerifyPageTitle('Facility Booking Cancellation Listing')
+        FacilityBookingExtention.VerifyPageTitle('Facility Booking Extension Listing')
 
         // click create New button
-        FacilityBookingExtension.CreateNew()
+        FacilityBookingExtention.CreateNew()
 
         // Verify page title
-        FacilityBookingExtension.VerifyPageTitle('Facility Booking Cancellation Details')
+        FacilityBookingExtention.VerifyPageTitle('Facility Booking Extension Detail')
 
-        FacilityBookingExtension.SelectFacilityBookingCancel('TestUser 747')
+        FacilityBookingListing.SelectFacilityBooking('Waiver 711')
 
-        // FacilityBookingListing.ClickMaintenanceDrp('Cancel')
+        FacilityBookingListing.ClickMaintenanceDrp('Cancel')
 
-        FacilityBookingExtension.Submit2()
+        FacilityBookingListing.Submit()
 
         common.ApprovalWorkFlow('F-CAN', 'Facility Cancellation Approval Workflow', 'Approve', 'Approved')
 
         cy.visit('/facilities/bookingCancellationListing')
 
-        FacilityBookingListing.FilterWithCustomerName('TestUser 747')
+        FacilityBookingListing.FilterWithCustomerName('Waiver 711')
 
         FacilityBookingListing.VerifyStatus('Cancelled')
 

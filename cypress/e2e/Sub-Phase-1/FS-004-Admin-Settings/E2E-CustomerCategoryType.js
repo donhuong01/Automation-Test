@@ -74,10 +74,9 @@ it('[TC05] Delete the updated Item', () =>{
     // CustomCatTypeListing.VerifySuccessNotification()
     CustomCatTypeListing.SearchAndSelectCustomerCategory(UpdatedName)
     CustomCatTypeListing.Delete()
-    cy.wait(7000)
-    // CustomCatTypeListing.DeleteConfirmationPopup()
+    CustomCatTypeListing.DeleteConfirmationPopup()
 
-    // CustomCatTypeDetail.VerifyNotificationMsg('Record has been deleted successfully.')
+    CustomCatTypeDetail.VerifyNotificationMsg('Record has been deleted successfully.')
     })
  })
  }

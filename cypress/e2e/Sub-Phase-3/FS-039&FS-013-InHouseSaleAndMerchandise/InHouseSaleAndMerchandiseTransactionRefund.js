@@ -13,7 +13,7 @@ const InHouseSaleAndMerchandiseTransactionRefund = (MemberIdMerchandise, MemberI
 
 describe('FS-039 & FS-013 In-House Sale and Merchandise Transaction Refund', function () {
 
-    it.only('Create a Merchandise Transaction Refund Request', function () {
+    it('Create a Merchandise Transaction Refund Request', function () {
 
         common.Checkin(MemberIdMerchandise)
 
@@ -37,9 +37,8 @@ describe('FS-039 & FS-013 In-House Sale and Merchandise Transaction Refund', fun
         InHouseSaleAndMerchandisePurchaseTransaction.FillOutMerchandiseTransactionRefundRequest('Refund', 'PayNow')
 
         InHouseSaleAndMerchandisePurchaseTransaction.ClickOn("Submit")
-        cy.wait(10000)
         
-        common.ApprovalWorkFlow('MCD-REF', 'Merchandise Transaction Refund Approval Workflow', 'Approve', 'testing Merchandise Transaction Refud Approval Workflow')
+        common.ApprovalWorkFlow('MCD-REF', 'Merchandise Transaction Refund Approval Workflow', 'Approve', 'testing Merchandise Transaction Cancellation Approval Workflow')
 
         // InHouseSaleAndMerchandisePurchaseTransaction.ClickOn("Yes")
 
@@ -85,9 +84,8 @@ describe('FS-039 & FS-013 In-House Sale and Merchandise Transaction Refund', fun
         InHouseSaleAndMerchandisePurchaseTransaction.FillOutMerchandiseTransactionRefundRequest('Refund', 'PayNow')
 
         InHouseSaleAndMerchandisePurchaseTransaction.ClickOn("Submit")
-        cy.wait(10000)
         
-        common.ApprovalWorkFlow('MCD-REF', 'Merchandise Transaction Refund Approval Workflow', 'Approve', 'testing InHouse Transaction Refund Approval Workflow')
+        common.ApprovalWorkFlow('MCD-REF', 'Merchandise Transaction Refund Approval Workflow', 'Approve', 'testing Merchandise Transaction Cancellation Approval Workflow')
 
         // InHouseSaleAndMerchandisePurchaseTransaction.ClickOn("Yes")
 

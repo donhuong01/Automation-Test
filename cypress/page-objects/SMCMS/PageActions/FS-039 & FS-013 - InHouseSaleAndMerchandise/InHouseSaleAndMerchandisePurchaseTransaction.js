@@ -82,7 +82,7 @@ class InHouseSaleAndMerchandisePurchaseTransaction {
     FillOutMerchandiseTransactionAdjustmentItemList(ReasonCode) {
 
         cy.SelectDropDownItem(elems_InHouseSaleMerchandiseTransactionListing.InHouseSaleMerchandiseTransactionAdjustmentDetailRequest.DRP_REASONCODE ,ReasonCode)
-        // cy.Click(elems_InHouseSaleMerchandiseTransactionListing.InHouseSaleMerchandiseTransactionAdjustmentDetailRequest.TBL_MerchandiseTransactionAdjustmentItemListStatus)
+        cy.Click(elems_InHouseSaleMerchandiseTransactionListing.InHouseSaleMerchandiseTransactionAdjustmentDetailRequest.TBL_MerchandiseTransactionAdjustmentItemList)
 
     }
 
@@ -93,7 +93,7 @@ class InHouseSaleAndMerchandisePurchaseTransaction {
     FillOutMerchandiseTransactionCancellation(ReasonCode) {
 
         cy.SelectDropDownItem(elems_InHouseSaleMerchandiseTransactionListing.InHouseSaleMerchandiseTransactionAdjustmentDetailRequest.DRP_REASONCODE ,ReasonCode)
-        // cy.Click(elems_InHouseSaleMerchandiseTransactionListing.TBL_MerchandiseTransactionAdjustmentItemList)
+        cy.Click(elems_InHouseSaleMerchandiseTransactionListing.TBL_MerchandiseTransactionAdjustmentItemList)
 
     }
     /*****************************************************
@@ -116,7 +116,7 @@ class InHouseSaleAndMerchandisePurchaseTransaction {
             cy.SelectDropDownItem(elems_InHouseSaleMerchandiseTransactionListing.InHouseSaleMerchandiseTransactionRefundDetailRequest.DRP_REFUNDPAYMENTTYPE ,RefundPaymentType)
             cy.EnterText(elems_InHouseSaleMerchandiseTransactionListing.InHouseSaleMerchandiseTransactionRefundDetailRequest.TXT_MOBILENUMBER, '023145145')
         }
-        // cy.Click(elems_InHouseSaleMerchandiseTransactionListing.InHouseSaleMerchandiseTransactionRefundDetailRequest.TBL_MerchandiseTransactionRefundItemList)
+        cy.Click(elems_InHouseSaleMerchandiseTransactionListing.InHouseSaleMerchandiseTransactionRefundDetailRequest.TBL_MerchandiseTransactionRefundItemList)
 
     }
     /*****************************************************
@@ -159,7 +159,7 @@ class InHouseSaleAndMerchandisePurchaseTransaction {
         cy.wait(5000)
         cy.EnterText(elems_InHouseSaleMerchandiseTransactionListing.TXT_MEMBERID, MemberID)
         cy.wait(1000)
-        cy.Click(elems_InHouseSaleMerchandiseTransactionListing.BTN_SEARCHFILTERS2)
+        cy.Click(elems_InHouseSaleMerchandiseTransactionListing.BTN_SEARCHFILTERS)
         cy.SelectTableItem(elems_Picker.TBL_PICKERITEMS, "Member ID", MemberID)
         cy.Click(elems_Picker.BTN_SELECT)
         cy.Click(elems_InHouseSaleMerchandiseTransactionListing.BTN_SEARCHFILTERS)
@@ -170,11 +170,11 @@ class InHouseSaleAndMerchandisePurchaseTransaction {
            * Method: VerifyGeneralInfoLabels
            * Description: This function Validate label on InHouse sale purchase
            ***************************************************/
-        VerifyGeneralInfoLabels(PurchaseNumber, MemberID, ItemName) {
+    VerifyGeneralInfoLabels(PurchaseNumber, MemberID, ItemName) {
 
         cy.ValidateElementText(elems_InHouseSaleMerchandiseTransactionListing.InHouseSalePurchase.LBL_PURCHASENUMBER, PurchaseNumber)
         cy.ValidateElementText(elems_InHouseSaleMerchandiseTransactionListing.InHouseSalePurchase.LBL_CUSTOMERMEMBERID, MemberID)
-        //cy.ValidateElementText(elems_InHouseSaleMerchandiseTransactionListing.InHouseSalePurchase.LBL_SALEITEMNAME, ItemName)
+        cy.ValidateElementText(elems_InHouseSaleMerchandiseTransactionListing.InHouseSalePurchase.LBL_SALEITEMNAME, ItemName)
 
     }
     /*****************************************************

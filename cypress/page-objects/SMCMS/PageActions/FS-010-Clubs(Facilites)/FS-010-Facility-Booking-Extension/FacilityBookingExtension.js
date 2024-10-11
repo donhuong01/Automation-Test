@@ -41,26 +41,8 @@ class FacilityBookingExtension {
             CustomerName,
             elems_FacilityBookingExtension.FACILITYBOOKINGEXTENSIONDETAIL.BTN_FILTERBOOKING,
         )
-        // cy.wait(2000) PCK_FACILITYBOOKING2
+        // cy.wait(2000)
     }
-
-     /*****************************************************
-     * Method: SelectFacilityBooking
-     * Description: This function Select Facility Booking
-     * @param {string} CustomerName
-     *****************************************************/
-     SelectFacilityBookingCancel(CustomerName) {
-        cy.wait(1000)
-        cy.SelectPickerFilter(
-            elems_FacilityBookingExtension.FACILITYBOOKINGEXTENSIONDETAIL.PCK_FACILITYBOOKING2,
-            elems_FacilityBookingExtension.FACILITYBOOKINGEXTENSIONDETAIL.TXT_CUSTOMERNAME,
-            CustomerName,
-            elems_FacilityBookingExtension.FACILITYBOOKINGEXTENSIONDETAIL.BTN_FILTERBOOKING,
-        )
-        // cy.wait(2000) PCK_FACILITYBOOKING2
-    }
-
-    
     /*****************************************************
      * Method: AddWaiver
      * Description: This function add waiver 
@@ -108,15 +90,6 @@ class FacilityBookingExtension {
      *****************************************************/
     Submit() {
         cy.Click(elems_FacilityBookingExtension.FACILITYBOOKINGEXTENSIONDETAIL.BTN_SUBMIT)
-
-    }
-
-    /*****************************************************
-     * Method: Submit
-     * Description: This function Click on submit button
-     *****************************************************/
-    Submit2() {
-        cy.Click(elems_FacilityBookingExtension.FACILITYBOOKINGEXTENSIONDETAIL.BTN_SUBMIT2)
 
     }
 

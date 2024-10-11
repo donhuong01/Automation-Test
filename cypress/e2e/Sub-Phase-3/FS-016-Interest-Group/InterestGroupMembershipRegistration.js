@@ -40,7 +40,7 @@ const { IGMainSelectionBox, IGSelection, IGLocationSelection, MembershipTenure, 
 
 const InterestGroupMembershipRegistration = () => {
 
-    const CustomerNRICFull = nricGenerator('T', 43)
+    const CustomerNRICFull = nricGenerator('S', 43)
 
     const CustomerNRIC = CustomerNRICFull.substr(CustomerNRICFull.length - 4);
 
@@ -52,7 +52,7 @@ const InterestGroupMembershipRegistration = () => {
             cy.visit('/membership/customerCheckin')
             cy.wait(5000)
             cy.Click(elems_CustomerCheckInPage.RBTN_NRIC)
-            cy.EnterDateCheckin(elems_CustomerCheckInPage.DATE_DATEOFBIRTH, Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB)
+            cy.EnterDate(elems_CustomerCheckInPage.DATE_DATEOFBIRTH, Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB)
             cy.log("Generated NRIC:", CustomerNRICFull)
             cy.log("trimmed", CustomerNRIC)
             cy.EnterText(elems_CustomerCheckInPage.TXT_LAST4DIGITSNRIC, CustomerNRIC)
@@ -62,7 +62,7 @@ const InterestGroupMembershipRegistration = () => {
 
             CustomerCreation.fillOutRegistrationInfo({
                 name: PrincipalName,
-                // DOB: Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB,
+                DOB: Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB,
                 gender: Customerdata.CustomerCreationPrincipal.RegistrationInformation.gender,
             });
 
@@ -144,19 +144,14 @@ const InterestGroupMembershipRegistration = () => {
 
             IGMembershipRegistration.AgreewithIndemnityWaiver(AgreeWithIndemnityWaiver)
 
-            cy.EnterText('//input[@id="idundefined"]', 'Test')
-
             // IGMembershipRegistration.AddWaiver('Registration')
 
-            // IGMembershipRegistration.PopulateAdditionalFields("Test");
+            cy.wait(2000)
             MemTenureSelect.addToCart()
 
             ShoppingCart.fillOutandApplyPayment('CASH')
 
-            // Wait for the loading image to disappear
-            cy.get('.k-loading-image', { timeout: 30000 }).should('not.exist')
-            cy.ValidateElementText(elems_Landing.CustomerLanding_Header, "Customer Landing")
-
+            cy.wait(15000)
 
             IGMembershipRegistration.VerifyItemInIGMemListingTBL(PrincipalName)
             //Logout

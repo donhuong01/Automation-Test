@@ -47,7 +47,6 @@ class elems_CustomerCreation {
 
     static InterestAreaInformation = {
         PreferredSafraClubs : {
-            CHK_SAFRACHOA : '//input[@id="checkSafraChoaChuKung"]',
             CHK_SAFRAJURONG : '//input[@id="checkSafraJurong"]',
             CHK_SAFRAPUNGGOL : '//input[@id="checkSafraPunggol"]',
             CHK_SAFRATOAPAYOH : '//input[@id="checkSafraToaPayoh"]',
@@ -99,8 +98,8 @@ class elems_CustomerCreation {
             CHK_SAFRATRAVELCLUB : '//input[@id="checkTravelClub"]'
         }
     }
-    static BTN_CREATENEW = '//span[text()="Create New"]'
-    static BTN_CANCEL = '//span[text()="Cancel"]'
+    static BTN_CREATENEW = '//button[text()="Create New"]'
+    static BTN_CANCEL = '//button[text()="Cancel"]'
 }
 
 export default elems_CustomerCreation

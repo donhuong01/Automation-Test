@@ -15,40 +15,40 @@ class elems_BatchMembershipRegistrationDetail {
         //Batch Type Interest Group
 
         TXT_NAME: '//input[@name="name"]',
-        BTN_SEARCHFILTERS: "//span[text()='Search Filters']",
+        BTN_SEARCHFILTERS: "//button[text()='Search Filters']",
         PCK_IG: '//label[@for="pckInterestGroup"]/following-sibling::div//button',
         DATE_IGEFFECTIVEDATE: '//input[@id="pckInterestGroupMembershipEffectiveDate"]',
-        TXT_IGTERM: '//input[@id="InterestGroupMembershipTerm"]',//span[@title="Increase value"]',
+        TXT_IGTERM: '//span[@title="Increase value"]',
         PCK_IGLOCATION: '//label[@for="pckInterestGroupLocation"]//following-sibling::div//button',
         BTN_IGREGDEFAULTIG: '//button[@id="interestGroupAddDefaultIG"]',
         BTN_ADDIGREGISTRATION: '//button[@id="interestGroupAddIGRegistration"]',
-        BTN_REMOVEIGREGISTRAION: '//span[text()="Remove Interest Group Registration"]',
-        BTN_UPLOAD: '//span[text()="Upload"]',
+        BTN_REMOVEIGREGISTRAION: '//button[text()="Remove Interest Group Registration"]',
+        BTN_UPLOAD: '//button[text()="Upload"]',
         TBL_IGREGRENEWAL: '//div[@class="k-widget k-grid"]//table',
 
 
     }
 
     static MembershipRegistrationAndRenewalListing = {
-        BTN_ADDMEMBER: '//span[text()="Add Member"]',
+        BTN_ADDMEMBER: '//button[text()="Add Member"]',
         TBL_MEMSHIPREGANDRENEWALLIST: '//legend[text()="Membership Registration and Renewal Listing"]/ancestor::div//table'
     }
 
     static MemRegInBatchRegistration = {
-        BTN_NEWMEMBERPRINCIPAL: '//span[text()="New Member (Principal)"]',
-        BTN_NEWMEMBERDEPENDENT: '//span[text()="New Member (Dependent)"]',
+        BTN_NEWMEMBERPRINCIPAL: '//button[text()="New Member (Principal)"]',
+        BTN_NEWMEMBERDEPENDENT: '//button[text()="New Member (Dependent)"]',
         DRP_DEPENDENTTYPE: '//span[@id="drpDependentType"]',
         PCK_PRINCIPALID: '//label[text()="Principal ID"]/following-sibling::div//button',
         RADIO_BATCHREGISTRATION: '//input[@id="radioBatch"]',
         RADIO_INDIVIDUALREGISTRATION: '//input[@id="radioIndividual"]',
         LNK_GOTOLASTPAGE: '//a[@title="Go to the last page"]',
         TBL_MEMBERID: '//div[@class="k-widget k-grid"]//table',
-        BTN_SELECT: '//span[text()="Select"]',
-        BTN_NEXT: '//span[text()="Next"]',
-        BTN_CANCEL: '//span[text()="Cancel"]',
+        BTN_SELECT: '//button[text()="Select"]',
+        BTN_NEXT: '//button[text()="Next"]',
+        BTN_CANCEL: '//button[text()="Cancel"]',
 
         CHK_EXISTINGMEMBER: '//input[@id="radioExistingMember"]',
-        TXT_MEMBERID: '//input[@id="txtmemberID"]',
+        TXT_MEMBERID: '//input[@id="txtMemberId"]',
         TXT_NRIC: '//input[@id="txtNric"]',
 
         CHK_NONMEMBER: '//input[@id="radioNonMember"]',
@@ -62,17 +62,17 @@ class elems_BatchMembershipRegistrationDetail {
 
         RADIO_PRINCIPAL: '//input[@id="radioPrincipal"]',
         RADIO_DEPENDENT: '//input[@id="radioDependent"]',
-        BTN_SELECT: '//span[text()="Select"]',
-        BTN_CANCEL: '//span[text()="Cancel"]',
+        BTN_SELECT: '//button[text()="Select"]',
+        BTN_CANCEL: '//button[text()="Cancel"]',
     }
 
-    static BTN_SAVE = '//span[text()="Save"]'
-    static BTN_NEXT = '//span[text()="Next"]'
-    static BTN_SAVEANDNEXT = '//span[text()="Save and Next"]'
-    static BTN_SAVEANDNEXTTENURE = '//span[text()=" Save & Next"]'
-    static BTN_CANCEL = '//span[text()="Cancel"]'
-    static BTN_VALIDATEREGISTRATION = '//span[text()="Validate Registration"]'
-    static BTN_POSTREGISTRATION = '//span[text()="Post Registration"]'
+    static BTN_SAVE = '//button[text()="Save"]'
+    static BTN_NEXT = '//button[text()="Next"]'
+    static BTN_SAVEANDNEXT = '//button[text()="Save and Next"]'
+    static BTN_SAVEANDNEXTTENURE = '//button[text()=" Save & Next"]'
+    static BTN_CANCEL = '//button[text()="Cancel"]'
+    static BTN_VALIDATEREGISTRATION = '//button[text()="Validate Registration"]'
+    static BTN_POSTREGISTRATION = '//button[text()="Post Registration"]'
     static DATE_APPLICATIONDATE = '//input[@id="dtpApplicationDate"]'
 
 }

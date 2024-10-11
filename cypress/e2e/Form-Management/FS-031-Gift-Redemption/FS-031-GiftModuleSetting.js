@@ -22,7 +22,7 @@ describe('[TS02] FS-031 Gift Module Setting', function () {
 
     })
 
-    it('[TC02] To be able to test updating and then Saving gift module setting.g', function () {
+    it('[TC02] To be able to test updating and then cancelling gift module setting.g', function () {
 
 
         cy.visit('/membership/giftModuleSetting')

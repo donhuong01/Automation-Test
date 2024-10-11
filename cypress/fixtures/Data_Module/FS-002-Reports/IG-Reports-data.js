@@ -17,7 +17,7 @@ const data = {
         IGMAIN: 'Badminton Social Group',
         IG: 'BITEZ',
         IGMAINNUMBER: 'IG-RIS-100000012',
-        EXPECTEDPG_IGMAIN: 'Report Viewer - Interest Group Main',
+        EXPECTEDPG_IGMAIN: 'Report Viewer - ReportIG.InterestGroupMainListing',
     },
 
 
@@ -26,12 +26,12 @@ const data = {
         IGMAIN: 'Badminton Social Group',
         IG: 'Badminton Training.',
         DEACTIVATEDATE: '25-May-2023',
-        EXPECTEDPG_DEACTIVATION: 'Report Viewer - Interest Group Deactivation',
+        EXPECTEDPG_DEACTIVATION: 'Report Viewer - ReportIG.MembershipDeactivationListing',
     },
 
     //IG Deferment Summary
     IG_DEFERMENT:{
-            EXPECTEDPG_DEFERMENT: 'Report Viewer - Interest Group Membership Deferment',
+            EXPECTEDPG_DEFERMENT: 'Report Viewer - ReportIG.MembershipDefermentListing',
         IGMAIN: 'Badminton Social Group',
         IG: 'Badminton Training.',
         DEFERDATE_FROM: '01-Dec-2021',
@@ -40,7 +40,7 @@ const data = {
 
     //IG Deferment Summary
     IG_DEFER_SUMMARY:{
-        EXPECTEDPG_DEFERMENT_SUMMARY: 'Report Viewer - Interest Group Membership Deferment Summary',
+        EXPECTEDPG_DEFERMENT_SUMMARY: 'Report Viewer - ReportIG.MembershipDefermentSummaryListing',
     },
 
 
@@ -48,7 +48,7 @@ const data = {
     IG_RENEWAL:{
         IGMAIN: 'MOVIEMAX',
         IG: 'CINIPEX',
-        EXPECTEDPG_RENEWAL: 'Report Viewer - Interest Group Membership Renewal',
+        EXPECTEDPG_RENEWAL: 'Report Viewer - ReportIG.MembershipRenewalListing',
         RENEWAL_FROM: '30-Dec-2017',
         RENEWAL_TO: '31-Aug-2027',
     },
@@ -58,7 +58,7 @@ const data = {
     IG_MEM_LIST:{
         IGMAIN: 'Badminton Social Group',
         IG: 'Badminton Training.',
-        EXPECTEDPG_MEMBERLISTING: 'Report Viewer - Interest Group Membership Listing',
+        EXPECTEDPG_MEMBERLISTING: 'Report Viewer - ReportIG.MembershipListing',
         INITIAL_DATE:'18-Nov-2022',
         EXPIRY_DATE: '30-Dec-2030',
     },
@@ -68,7 +68,7 @@ const data = {
     IG_MEM_LIST_ADD:{
         IGMAIN: 'Badminton Social Group',
         IG: 'Badminton Training.',
-        EXPECTEDPG_MEMBERLISTING_ADDRESS: 'Report Viewer - Interest Group Membership Address',
+        EXPECTEDPG_MEMBERLISTING_ADDRESS: 'Report Viewer - ReportIG.MembershipListingAddress',
         INITIAL_DATE:'18-Nov-2022',
         EXPIRY_DATE: '30-Dec-2030',
     },
@@ -78,7 +78,7 @@ const data = {
     IG_MEM_LIST_EMAIL:{
         IGMAIN: 'Badminton Social Group',
         IG: 'Badminton Training.',
-        EXPECTEDPG_MEMBERLISTING_EMAIL: 'Report Viewer - Interest Group Membership Email',
+        EXPECTEDPG_MEMBERLISTING_EMAIL: 'Report Viewer - ReportIG.MembershipListingEmail',
         INITIAL_DATE:'18-Nov-2022',
         EXPIRY_DATE: '30-Dec-2030',
     },
@@ -87,7 +87,7 @@ const data = {
     IG_MEM_LIST_MOBILE:{
         IGMAIN: 'Badminton Social Group',
         IG: 'Badminton Training.',
-        EXPECTEDPG: 'Report Viewer - Interest Group Membership Mobile',
+        EXPECTEDPG: 'Report Viewer - ReportIG.MembershipListingMobile',
         INITIAL_DATE:'18-Nov-2022',
         EXPIRY_FROM: '01-Dec-2020',
         EXPIRY_TO: '30-Dec-2030'
@@ -97,7 +97,7 @@ const data = {
     IG_REGISTRATION:{
         IGMAIN: 'MOVIEMAX',
         IG: 'CINIPEX',
-        EXPECTEDPG_REGISTRATION: 'Report Viewer - Interest Group Membership Registration',
+        EXPECTEDPG_REGISTRATION: 'Report Viewer - ReportIG.MembershipRegistrationListing',
         REG_FROM:'01-Dec-2020',
         REG_TOL:'31-Aug-2027',
     },
@@ -105,13 +105,13 @@ const data = {
 
     //IG Termination Summary
     IG_TERMI_SUMAMRY:{
-        EXPECTEDPG_TERMINATION_SUMMARY: 'Report Viewer - Interest Group Membership Termination Summary',
+        EXPECTEDPG_TERMINATION_SUMMARY: 'Report Viewer - ReportIG.MembershipTerminationSummaryListing',
     },
 
 
     //IG Deferment Summary
     IG_DEFER_SUMAMRY:{
-        EXPECTEDPG_DEFERMENT_SUMMARY: 'Report Viewer - Interest Group Membership Deferment Summary',
+        EXPECTEDPG_DEFERMENT_SUMMARY: 'Report Viewer - ReportIG.MembershipDefermentSummaryListing',
     },
 
 
@@ -119,7 +119,7 @@ const data = {
     IG_TERMINATION: {
         IGMAIN: 'Badmintion Social Group',
         IG: 'Test IG Receipt',
-        EXPECTEDPG_TERMINATION: 'Report Viewer - Interest Group Membership Termination',
+        EXPECTEDPG_TERMINATION: 'Report Viewer - ReportIG.MembershipTerminationListing',
         TERMINATED_BY: 'Customer',
         TERMINATED_DATE: '07-Apr-2023',
     },
@@ -129,7 +129,7 @@ const data = {
     IG_WAIVER:{
         IGMAIN: 'MOVIEMAX',
         IG: 'CINIPEX',
-        EXPECTEDPG_WAIVER: 'Report Viewer - Interest Group Membership Waiver',
+        EXPECTEDPG_WAIVER: 'Report Viewer - ReportIG.MembershipWaiverListing',
         TERM_START_DATE: '01-Dec-2020',
         TERM_END_DATE: '01-Jan-2027',
     },
@@ -137,28 +137,30 @@ const data = {
 
     //IG Renewal Confirmation
     IG_RENEWAL_CONFIRM:{
-        EXPECTEDPG_RENEWAL_SUMMARY: 'Report Viewer - Interest Group Renewal Confirmation',
+        EXPECTEDPG_RENEWAL_SUMMARY: 'Report Viewer - ReportIG.RenewalConfirmation',
     },
+
+    //Update the Data here \|/
 
     //IG Member Listing
     IG_RENEW_REGIS:{
         IGMAIN: 'Badminton Social Group',
         IG: 'BITEZ',
-        EXPECTEDPG_REGISTRATIONORRENEWAL: 'Report Viewer - Interest Group Membership Registration Or Renewal',
+        EXPECTEDPG_REGISTRATIONORRENEWAL: 'Report Viewer - ReportIG.MembershipRegistrationOrRenewalListing',
         EXPIRY_FROM: '29-Dec-2020',
         EXPIRY_TO: '29-Dec-2026',
     },
     
     //IG MOVIEMAX Confirmation
     IG_MOVIEMAX:{
-        EXPECTEDPG_MOVIEMAX: 'Report Viewer - Interest Group Movie Max Promotion',
+        EXPECTEDPG_MOVIEMAX: 'Report Viewer - ReportIG.MovieMaxPromotion',
     },
 
     //IG Membership Registration Listing Receipt Date
     IG_REG_RECEIPT_DATE: {
         IGMAIN: 'Badminton Social Group',
         IG: 'BITEZ',
-        EXPECTEDPG: 'Report Viewer - Interest Group Membership Registration By Receipt Date',
+        EXPECTEDPG: 'Report Viewer - ReportIG.MembershipRegistrationByReceiptDate',
         START_DATE: '29-Dec-2020',
         END_DATE: '29-Dec-2026',
     },
@@ -167,7 +169,7 @@ const data = {
     IG_MEM_INTEREST_GROUP: {
         IG: 'BITEZ',
         CUSTOM_CATEG: 'All Customer Category',
-        EXPECTEDPG: 'Report Viewer - Membership Interest Group Listing',
+        EXPECTEDPG: 'Report Viewer - ReportIG.MembershipInterestGroupListing',
         BUSINESS_TYPE: 'Normal',
         STATUS: 'Approved',
         PUBLISHING_DATE: '29-Dec-2020',

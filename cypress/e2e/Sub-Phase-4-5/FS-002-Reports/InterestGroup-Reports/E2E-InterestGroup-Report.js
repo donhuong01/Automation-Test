@@ -8,7 +8,7 @@ const IG_Report = () => {
 
 describe("IG Reports Verification",function(){
 
-    it('Checking Access on on IG Main Listing', function(){
+    it('Checking functionallity and Verification on IG Main Listing', function(){
         IG_Reports.verifyIGMainReports
         (
            data.IG_MAIN.EXPECTEDPG_IGMAIN, 
@@ -17,7 +17,7 @@ describe("IG Reports Verification",function(){
         )
     })
 
-    it('Checking Access on on IG Deactivation Listing', function(){
+    it('Checking functionallity and Verification on IG Deactivation Listing', function(){
         IG_Reports.verifyIGDeactivationReports
         (
             data.IG_DEACTIVATE.EXPECTEDPG_DEACTIVATION, 
@@ -27,7 +27,7 @@ describe("IG Reports Verification",function(){
         )
     })
 
-    it('Checking Access on on IG Deferment', function(){
+    it('Checking functionallity and Verification on IG Deferment', function(){
         IG_Reports.verifyIGDefermentReports
         (
             data.IG_DEFERMENT.EXPECTEDPG_DEFERMENT,
@@ -38,14 +38,14 @@ describe("IG Reports Verification",function(){
         )
     })
 
-    it('Checking Access on on IG Deferment Summary', function(){
+    it('Checking functionallity and Verification on IG Deferment Summary', function(){
         IG_Reports.verifyIGDefermentSummary
         (
             data.IG_DEFER_SUMMARY.EXPECTEDPG_DEFERMENT_SUMMARY,     
         )
     })
 
-    it('Checking Access on on IG Renewal Listing', function(){
+    it('Checking functionallity and Verification on IG Renewal Listing', function(){
         IG_Reports.verifyIGRenewalListing
         (
             data.IG_RENEWAL.EXPECTEDPG_RENEWAL, 
@@ -56,7 +56,7 @@ describe("IG Reports Verification",function(){
         )
     })
 
-    it('Checking Access on on IG Membership Listing', function(){
+    it('Checking functionallity and Verification on IG Membership Listing', function(){
         IG_Reports.verifyIGmemberListing
         (
             data.IG_MEM_LIST.EXPECTEDPG_MEMBERLISTING, 
@@ -67,7 +67,7 @@ describe("IG Reports Verification",function(){
         )
     })
 
-    it('Checking Access on on IG Membership Listing Address', function(){
+    it('Checking functionallity and Verification on IG Membership Listing Address', function(){
         IG_Reports.verifyIGmemberListingAddress
         (
             data.IG_MEM_LIST_ADD.EXPECTEDPG_MEMBERLISTING_ADDRESS, 
@@ -78,7 +78,7 @@ describe("IG Reports Verification",function(){
         )
     })
 
-    it('Checking Access on on IG Membership Listing Email', function(){
+    it('Checking functionallity and Verification on IG Membership Listing Email', function(){
         IG_Reports.verifyIGmemberListingEmail
         (
             data.IG_MEM_LIST_EMAIL.EXPECTEDPG_MEMBERLISTING_EMAIL, 
@@ -89,7 +89,7 @@ describe("IG Reports Verification",function(){
         )
     })
 
-    it('Checking Access on on IG Membership Listing Mobile', function(){
+    it('Checking functionallity and Verification on IG Membership Listing Mobile', function(){
         IG_Reports.verifyIGmemberListingMobile
         (
             data.IG_MEM_LIST_MOBILE.EXPECTEDPG, 
@@ -101,7 +101,7 @@ describe("IG Reports Verification",function(){
         )
     })
 
-    it('Checking Access on on IG Membership Registration', function(){
+    it('Checking functionallity and Verification on IG Membership Registration', function(){
         IG_Reports.verifyIGmemberRegistration
         (
             data.IG_REGISTRATION.EXPECTEDPG_REGISTRATION, 
@@ -112,21 +112,21 @@ describe("IG Reports Verification",function(){
         )
     })
 
-    it('Checking Access on on IG Termination Summary', function(){
+    it('Checking functionallity and Verification on IG Termination Summary', function(){
         IG_Reports.verifyIGTerminationSummary
         (
             data.IG_TERMI_SUMAMRY.EXPECTEDPG_TERMINATION_SUMMARY     
         )
     })
 
-    it('Checking Access on on IG MOVIEMAX Summary', function(){
+    it('Checking functionallity and Verification on IG MOVIEMAX Summary', function(){
         IG_Reports.verifyIGMOVIEMAX 
         (
             data.IG_MOVIEMAX.EXPECTEDPG_MOVIEMAX     
         )
     })
 
-    it('Checking Access on on IG Termination Listing', function(){
+    it('Checking functionallity and Verification on IG Termination Listing', function(){
         IG_Reports.verifyIGTerminationListing
         (
             data.IG_TERMINATION.EXPECTEDPG_TERMINATION, 
@@ -137,7 +137,7 @@ describe("IG Reports Verification",function(){
         )
     })
 
-    it('Checking Access on on IG Waiver Listing', function(){
+    it('Checking functionallity and Verification on IG Waiver Listing', function(){
         IG_Reports.verifyIGWaiverListing
         (
             data.IG_WAIVER.EXPECTEDPG_WAIVER, 
@@ -148,14 +148,14 @@ describe("IG Reports Verification",function(){
         )
     })
     
-    it('Checking Access on on IG Renewal Summary', function(){
+    it('Checking functionallity and Verification on IG Renewal Summary', function(){
         IG_Reports.verifyIGRenewalConfirmation
         (
             data.IG_RENEWAL_CONFIRM.EXPECTEDPG_RENEWAL_SUMMARY     
         )
     })
 
-    it('Checking Access on on Registration or Renewal', function(){
+    it('Checking functionallity and Verification on Registration or Renewal', function(){
         IG_Reports.verifyIGRegistrationorRenewal
         (
             data.IG_RENEW_REGIS.EXPECTEDPG_REGISTRATIONORRENEWAL, 
@@ -166,7 +166,7 @@ describe("IG Reports Verification",function(){
         )    
     })
 
-    it('Checking Access on on Registration Listing Receipt Date', function(){
+    it('Checking functionallity and Verification on Registration Listing Receipt Date', function(){
         IG_Reports.verifyIGmemberRegistrationReceiptDate
         (
             data.IG_REG_RECEIPT_DATE.EXPECTEDPG, 
@@ -177,7 +177,7 @@ describe("IG Reports Verification",function(){
         )    
     })
 
-    it('Checking Access on on Membership Interest Group Listing', function(){
+    it('Checking functionallity and Verification on Membership Interest Group Listing', function(){
         IG_Reports.verifyIGmemberInterestGroupListing
         (
             data.IG_MEM_INTEREST_GROUP.EXPECTEDPG, 

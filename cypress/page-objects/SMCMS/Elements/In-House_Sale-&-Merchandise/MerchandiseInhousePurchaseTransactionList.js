@@ -8,7 +8,6 @@ class elems_InHouseSaleMerchandiseTransactionListing {
         static DATE_TRANSACTIONDATEFROM = '//input[@id="stpTransactionDateFrom"]'
         static DATE_TRANSACTIONDATETO = '//input[@id="stpTransactionDateTo"]'
         static BTN_SEARCHFILTERS = '(//button[text()="Search Filters"])[1]'
-        static BTN_SEARCHFILTERS2 = '(//button[text()="Search Filters"])[2]'
         static TBL_PURCHASETRANSACTIONLIST = '//h2[text()="Merchandise Purchase Transaction Listing"]/ancestor::div//table'
 
         static InHouseSalePurchase = {

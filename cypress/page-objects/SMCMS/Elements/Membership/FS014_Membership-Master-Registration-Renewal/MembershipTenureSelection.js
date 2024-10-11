@@ -5,13 +5,13 @@ class elems_MembershipTenureSelection {
     }
 
     static Dependent = {
-        TBL_DEPENDENT : '(//div[text()="Dependent"]/parent::div//table)[1]'
+        TBL_DEPENDENT : '//div[text()="Dependent"]/parent::div//table'
     }
 
-    static BTN_ADDTOCART = '//span[text()="Add to Cart"]'
-    static BTN_CANCEL = '//span[text()="Cancel"]'
-    static BTN_SAVEANDNEXT = '//span[text()=" Save & Next"]'
-    static BTN_SUBMIT = '//span[text()="Submit"]'
+    static BTN_ADDTOCART = '//button[text()="Add to Cart"]'
+    static BTN_CANCEL = '//button[text()="Cancel"]'
+    static BTN_SAVEANDNEXT = '//button[text()=" Save & Next"]'
+    static BTN_SUBMIT = '//button[text()="Submit"]'
     
 }
 

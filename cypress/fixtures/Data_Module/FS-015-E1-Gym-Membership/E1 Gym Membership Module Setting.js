@@ -1,10 +1,10 @@
 const data = {
 
-    GracePeriod: '31',
-    TerminateMemAfterExpiration: '31',
-    MinMembDeferPeriod: '730',
-    MinMemRejoinPeriod: '12',
-    WaiverProductItem: 'ASICS Towel'
+    GracePeriod: '19',
+    TerminateMemAfterExpiration: '24',
+    MinMembDeferPeriod: '4',
+    MinMemRejoinPeriod: '5',
+    WaiverProductItem: 'IG002'
 }
 
 export default data

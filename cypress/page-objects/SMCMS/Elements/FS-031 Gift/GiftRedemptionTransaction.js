@@ -1,28 +1,27 @@
 class elems_GiftRedemptionTransaction {
 
     static ListingForm = {
-        BTN_COLLECTGIFT: '//span[text()="Collect Gift"]',
-        BTN_CANCELGIFT: '//span[text()="Cancel Gift"]',
-        BTN_INSERTGIFT: '//span[text()="Insert Gift"]',
-        BTN_CHANGEGIFT: '//span[text()="Change Gift"]',
-        BTN_REFUNDGIFT: '//span[text()="Refund Gift"]',
-        BTN_BULKGIFTREDEMPTIONUPLOAD: '//span[text()="Bulk Gift Redemption Upload"]',
-        BTN_GENERATELETTER: '//span[text()="Generate Letter"]',
-        BTN_SENDLETTER: '//span[text()="Send Letter"]',
-        BTN_PRINT: '//span[text()="Print"]',
-        BTN_EXPORT: '//span[text()="Export"]',
+        BTN_COLLECTGIFT: '//button[text()="Collect Gift"]',
+        BTN_CANCELGIFT: '//button[text()="Cancel Gift"]',
+        BTN_INSERTGIFT: '//button[text()="Insert Gift"]',
+        BTN_CHANGEGIFT: '//button[text()="Change Gift"]',
+        BTN_REFUNDGIFT: '//button[text()="Refund Gift"]',
+        BTN_BULKGIFTREDEMPTIONUPLOAD: '//button[text()="Bulk Gift Redemption Upload"]',
+        BTN_GENERATELETTER: '//button[text()="Generate Letter"]',
+        BTN_SENDLETTER: '//button[text()="Send Letter"]',
+        BTN_PRINT: '//button[text()="Print"]',
+        BTN_EXPORT: '//button[text()="Export"]',
         PCK_MEMBERID: '//label[@for="pckMemberName"]/following-sibling::div//button',
         TXT_MEMBERID: '//input[@name="memberId"]',
         TXT_MEMBERNAME: '//input[@name="nameOnNRIC"]',
-        BTN_SEARCHFILTERMEMBER: '(//span[text()="Search Filters"])[2]',
-        //BTN_SEARCHFILTERMEMBER: '(//span[text()="Search Filters"])[2]',
+        BTN_SEARCHFILTERMEMBER: '(//button[text()="Search Filters"])[1]',
 
         TXT_REDEMPTIONLETTERNUMBER: '//input[@id="txtRedemptionLetterNumber"]',
         TXT_RECEIPTNUMBER: '//input[@id="txtReceiptNumber"]',
         TXT_BATCHID: '//input[@id="txtBatchId"]',
         DRP_STATUS: '//span[@id="drpStatus"]',
         TBL_GIFTREDMPTRANSACLISTING: '//h2[text()="Gift Redemption Transaction Listing"]/ancestor::div//table',
-        BTN_SEARCHFILTER: '//span[text()="Search Filters"]',
+        BTN_SEARCHFILTER: '//button[text()="Search Filters"]',
     }
 
     static DetailForm = {
@@ -31,11 +30,11 @@ class elems_GiftRedemptionTransaction {
     }
     static GiftInsertionForm = {
 
-        BTN_SUBMIT: '//span[text()="Submit"]',
-        BTN_CANCEL: '//span[text()="Cancel"]',
+        BTN_SUBMIT: '//button[text()="Submit"]',
+        BTN_CANCEL: '//button[text()="Cancel"]',
         PCK_MEMBERID: '//label[text()="Member ID"]/following-sibling::div//button',
-        TXT_MEMBERID: '//input[@id="pckMemberID"]   ',
-        BTN_SEARCHFILTER: '//span[text()="Search Filters"]',
+        TXT_MEMBERID: '//input[@name="memberId"]',
+        BTN_SEARCHFILTER: '//button[text()="Search Filters"]',
         PCK_GIFTITEM: '//label[text()="Gift Item"]/following-sibling::div//button',
         TXT_QUANTITY: '//input[@id="txtQuantity"]',
         TXT_REMARK: '//textarea[@id="areaRemark"]',
@@ -43,37 +42,37 @@ class elems_GiftRedemptionTransaction {
     }
     static GiftExchangeForm = {
 
-        BTN_EDIT: '//span[text()="Edit"]',
-        BTN_CHANGE: '//span[text()="Change"]',
-        BTN_CANCEL: '//span[text()="Cancel"]',
+        BTN_EDIT: '//button[text()="Edit"]',
+        BTN_CHANGE: '//button[text()="Change"]',
+        BTN_CANCEL: '//button[text()="Cancel"]',
         PCK_ITEMNAME: '//label[text()="Item Name"]/following-sibling::div//button',
         TXT_MEMBERID: '//input[@name="memberId"]',
         PCK_GIFTITEM: '//label[text()="Gift Item"]/following-sibling::div//button',
         TXT_QUANTITY: '//input[@id="txtQuantity"]',
         TXT_REASAON: '//textarea[@id="areaReason"]',
-        TBL_ITEMLIST: '(//div[@class="k-grid k-grid-md"]//table//input)[1]',
+        TBL_ITEMLIST: '(//div[@class="k-widget k-grid"]//table//input)[1]',
 
     }
 
     static GiftRefundForm = {
 
-        BTN_SUBMIT: '//span[text()="Submit"]',
-        BTN_CANCEL: '//span[text()="Cancel"]',
+        BTN_SUBMIT: '//button[text()="Submit"]',
+        BTN_CANCEL: '//button[text()="Cancel"]',
         TXT_REMARK: '//textarea[@id="areaRemarks"]',
 
     }
 
     static GiftCanellationForm = {
 
-        BTN_SUBMIT: '//span[text()="Submit"]',
-        BTN_CANCEL: '//span[text()="Cancel"]',
+        BTN_SUBMIT: '//button[text()="Submit"]',
+        BTN_CANCEL: '//button[text()="Cancel"]',
         TXT_REMARK: '//textarea[@id="areaRemarks"]',
 
     }
     static GiftCollectionForm = {
 
-        BTN_COLLECT: '//span[text()="Collect"]',
-        BTN_CANCEL: '//span[text()="Cancel"]',
+        BTN_COLLECT: '//button[text()="Collect"]',
+        BTN_CANCEL: '//button[text()="Cancel"]',
         TXT_REMARK: '//textarea[@id="remark"]',
 
     }

@@ -101,7 +101,7 @@ class IGMembershipRegistration {
 
     /*****************************************************
     * Method: MembershipStatusReason
-    * Description: This function Verify Membership Status Reason
+    * Description: This function Verify Membership Status Reason 
     *****************************************************/
 
     MembershipStatusReason(Reason) {
@@ -193,20 +193,12 @@ class IGMembershipRegistration {
 
         cy.Click(elems_IGMembershipRegistration.BTN_ADDWIAVER)
         cy.SelectDropDownItem(elems_IGMembershipRegistration.DRP_CHARGETYPE, ChargeType)
-        cy.EnterText(elems_IGMembershipRegistration.TXT_AMOUNT, '1')
+        cy.EnterText(elems_IGMembershipRegistration.TXT_AMOUNT, '10')
         cy.EnterText(elems_IGMembershipRegistration.TXT_REASON, 'Waive')
         cy.Click(elems_IGMembershipRegistration.BTN_CONFIRM)
     }
 
-    /*****************************************************
-   * Method: Fill out Additional Fields
-   * Description: Fill out Additional Fields
-  *****************************************************/
-    PopulateAdditionalFields(TextAreaText) {
 
-        cy.EnterText(elems_IGMembershipRegistration.TXT_ADDITIONALFIELDS, TextAreaText)
-
-    }
 
 }
 export default new IGMembershipRegistration

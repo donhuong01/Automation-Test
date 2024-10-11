@@ -52,32 +52,14 @@ Cypress.Commands.add('EnterText', (locator, text) => {
  *****************************************************/
 Cypress.Commands.add('SelectDropDownItem', (locator, item) => {
     cy.log('------ Select Drop Down Item : ' + locator + ' ------')
-    cy.xpath(locator, { timeout: 30000 }).scrollIntoView()
-    cy.xpath(locator /*+ '//span[@class="k-icon k-i-arrow-s"]'*/,{ timeout: 30000 }).scrollIntoView().click({ timeout: 30000 })
+    cy.xpath(locator, {timeout: 30000}).scrollIntoView()
+    cy.xpath(locator + '//span[@class="k-icon k-i-arrow-s"]').click()
     cy.wait(1000)
     // cy.xpath(locator).invoke('attr', 'aria-owns').then(value => {
     //     cy.xpath('//ul[@id="' + value + '"]/li[text()="' + item + '"]').click()
     // })
 
-    cy.xpath('(//span[text()="' + item + '"])[1]', { timeout: 30000 }).click({ force: true })
-})
-
-/*****************************************************
- * Command: SelectDropDownItem
- * Description: Selects a List(Dropdown) Item
- * @param {string} locator Element Locator
- * @param {string} item Item Value in text
- *****************************************************/
-Cypress.Commands.add('SelectDropDownItem2', (locator, item) => {
-    cy.log('------ Select Drop Down Item : ' + locator + ' ------')
-    cy.xpath(locator, { timeout: 30000 }).scrollIntoView()
-    cy.xpath(locator /*+ '//span[@class="k-icon k-i-arrow-s"]'*/,{ timeout: 30000 }).click({ timeout: 30000 })
-    cy.wait(1000)
-    // cy.xpath(locator).invoke('attr', 'aria-owns').then(value => {
-    //     cy.xpath('//ul[@id="' + value + '"]/li[text()="' + item + '"]').click()
-    // })
-
-    cy.xpath('(//span[text()="' + item + '"])[2]', { timeout: 30000 }).click({ force: true })
+    cy.xpath('//li[text()="' + item + '"]', { timeout: 10000 }).click({ force: true })
 })
 
 /*****************************************************
@@ -117,56 +99,6 @@ Cypress.Commands.add('TickCheckBox', (locator, value) => {
 })
 
 /*****************************************************
- * Command: VerifyTickCheckBox
- * Description: Checks of Unchecks a check box
- *
- * @param {string} locator Element Locator
- * @param {binary} expectedvalue Value: true=Checked
- *                                      false=Unchecked
- *****************************************************/
-Cypress.Commands.add('VerifyTickCheckBox', (locator, expectedvalue) => {
-    cy.log('------ Checks Checkbox : ' + locator + ' ------' + expectedvalue)
-
-    cy.xpath(locator).scrollIntoView().should('exist')
-
-    if (expectedvalue == 'check') {
-        cy.xpath(locator).should('be.checked')
-    }
-    else {
-        cy.xpath(locator).should('not.be.checked')
-    }
-    // else {
-    //     throw new Error("cy.TickCheckBox error on 'value' argument./n\
-    //                         Accepted 'value' values: UNCHECK")
-    // }
-
-    //     if (expectedvalue !== 'check') {
-    //         // Verify that the checkbox is checked
-    //         cy.xpath(locator).should('be.checked');
-
-    //     }
-
-    //     else if (expectedvalue !== 'uncheck'){
-    //         // Verify that the checkbox is unchecked
-    //         cy.xpath(locator).should('not.be.checked');
-    //   }
-
-    // Conditionally verify based on the state of the checkbox
-    // if (expectedvalue == "CHECK") {
-    //   // Verify that the checkbox is checked
-    //   cy.wrap($checkbox).should('be.checked');
-    // } else {
-    //   // Verify that the checkbox is unchecked
-    //   cy.wrap($checkbox).should('not.be.checked');
-    // }
-
-
-
-})
-
-
-
-/*****************************************************
  * Command: ValidateElementText
  * Description: Validate element text value by supplying
  * an expected text value
@@ -193,15 +125,14 @@ Cypress.Commands.add('ValidateElementText', (locator, expectedText) => {
  *****************************************************/
 Cypress.Commands.add('VerifyTableEntry', (locator, targetColumn, expectedValue, columnReference1, rowReference1) => {
     cy.log('------ Verify Table Entry : ' + locator + ' ------')
-    cy.xpath(locator, { timeout: 30000 }).first().scrollIntoView({ timeout: 30000 })
-    new Table().verifyTableEntry(locator, targetColumn, expectedValue, columnReference1, rowReference1), { timeout: 30000 }
+    cy.xpath(locator).first().scrollIntoView()
+    new Table().verifyTableEntry(locator, targetColumn, expectedValue, columnReference1, rowReference1)
 })
 
 
 Cypress.Commands.add('VerifyFilterEntryInTable', (locator, targetColumn, expectedValue, columnReference1, rowReference1) => {
     cy.log('------ Verify Table Entry : ' + locator + ' ------')
-    cy.xpath(locator, { timeout: 30000 }).scrollIntoView({ timeout: 30000 })
-    cy.wait(6000)
+    cy.xpath(locator).scrollIntoView()
     new Table().selectTableItem(locator, targetColumn, expectedValue, 'FIRST')
 })
 
@@ -238,39 +169,6 @@ Cypress.Commands.add('SelectTableItem2', (locator, columnReference1, rowReferenc
 })
 
 /*****************************************************
- * Command: TickSpecificTableItem
- * Description: Tick Specific Item on Table
- * Author: RDacpano
- *
- * @param {string} Value Value of the specific item
- *****************************************************/
-Cypress.Commands.add('TickSpecificTableItem', (Value) => {
-    cy.log('------ Tick Specific Table Item : ' + Value + ' ------')
-    cy.contains('td', Value,{ timeout: 30000 })
-        .scrollIntoView()
-        .siblings()
-        .first()
-        .click({ timeout: 30000 })
-
-})
-
-/*****************************************************
- * Command: ValidateLastElement
- * Description: Validate Last Specific Item on Table
- * Author: RDacpano
- *
- * @param {string} Value Value of the specific item
- *****************************************************/
-Cypress.Commands.add('ValidateLastElement', (Value) => {
-    cy.log('------ Validate Last Table Item : ' + Value + ' ------')
-    cy.contains('td', Value,{ timeout: 30000 })
-        .scrollIntoView()
-        .siblings()
-        .last()
-})
-
-
-/*****************************************************
  * Command: ClickTableLink
  * Description: Clicks a link on a table
  *
@@ -299,7 +197,7 @@ Cypress.Commands.add('ClickTableLink', (locator, targetColumn, textValue, column
 Cypress.Commands.add('ClickTableLinkItem', (locator, targetColumn, textValue, columnReference1, rowReference1) => {
     cy.log('------ Click Table Link : ' + locator + ' ------')
     // cy.xpath(locator).scrollIntoView()
-    new Table().clickTableLinkItem(locator, targetColumn, textValue, columnReference1, rowReference1,{ timeout: 30000 })
+    new Table().clickTableLinkItem(locator, targetColumn, textValue, columnReference1, rowReference1)
 })
 
 /*****************************************************
@@ -315,7 +213,7 @@ Cypress.Commands.add('UploadFile', (locator, fileName) => {
     cy.xpath(locator).scrollIntoView()
     cy.xpath(locator).attachFile(Cypress.env('FIXTURE_UPLOAD_PATH') + fileName)
     cy.wait(4000)
-    cy.xpath(/*locator +*/ '//span[@class="k-file-name"]').should('have.text', fileName) // /ancestor::div[@class="k-upload"]//span[@class="k-file-name"]
+    cy.xpath(locator + '/ancestor::div[@class="k-widget k-upload"]//span[@class="k-file-name"]').should('have.text', fileName)
 })
 
 /*****************************************************
@@ -430,7 +328,7 @@ Cypress.Commands.add("VerifyElementText", (locator, expectedValue) => {
     cy.log('------ VerifyElementText : ' + locator + ' ------');
 
     // Verify Element from <div> <span> <button> <label> <p> <a>
-    cy.xpath(locator, { timeout: 30000 }).invoke('text').then((elementValue) => {
+    cy.xpath(locator).invoke('text').then((elementValue) => {
         if (elementValue.length <= 0) {
             //Element value is not found.
             verifyInputFieldText();
@@ -618,7 +516,7 @@ Cypress.Commands.add("IncreaseFieldValue", (locator, increaseAmount) => {
     cy.log('------ IncreaseFieldValue : ' + locator + ' ------');
 
     for (let increaseClickCount = 0; increaseClickCount < increaseAmount; increaseClickCount++) {
-        cy.xpath(locator + '/parent::span//span//button[@aria-label="Increase value"]').click() ///parent::span//span[@aria-label="Increase value"]
+        cy.xpath(locator + '/parent::span//span[@aria-label="Increase value"]').click()
     }
 })
 
@@ -649,10 +547,10 @@ Cypress.Commands.add("DecreaseFieldValue", (locator, decreaseAmount) => {
 Cypress.Commands.add("SelectBtnDropdownItem", (locator, item) => {
     cy.log('------ SelectBtnDropdownItem : ' + locator + ' ------')
     cy.xpath(locator).scrollIntoView()
-    cy.xpath(locator).click() //k-widget k-split-button k-button-group k-state-focused
-    //cy.xpath(locator + "/ancestor::div[@class='k-split-button k-button-group k-rounded-md']/button[@class='k-button k-button-md k-button-solid k-button-solid-base k-rounded-md k-icon-button k-split-button-arrow']", {timeout: 30000}).invoke('attr', 'aria-owns').then(value => { 
-        cy.xpath('//span[@id="' + value + '"]/span[text()="' + item + '"]').click(); 
-    //});
+    cy.xpath(locator).click()
+    cy.xpath(locator + "/ancestor::div[@class='k-widget k-split-button k-button-group k-state-focused']/button").invoke('attr', 'aria-owns').then(value => {
+        cy.xpath('//ul[@id="' + value + '"]/li[text()="' + item + '"]').click();
+    });
 })
 
 /*****************************************************
@@ -909,7 +807,7 @@ Cypress.Commands.add('SaveUserInfoInLocalStorageForUAT', (AuthenticatedUser, Act
  * @param {string} ActiveLocation Active Location Name and ID
  * @param {string} SafraClient Safra Client Token ID
  *****************************************************/
-Cypress.Commands.add('SaveUserInfoInLocalStorageForUATR', (AuthenticatedUser, ActiveLocation, SafraClient) => {
+Cypress.Commands.add('SaveUserInfoInLocalStorageForUAT', (AuthenticatedUser, ActiveLocation, SafraClient) => {
 
     cy.log('------ Save User ID, Location and Safra Client ID in Local Storage ------')
 
@@ -1009,10 +907,9 @@ Cypress.Commands.add('EnterTextInTable', (locator, rowRef, colRef, Text) => {
  *****************************************************/
 Cypress.Commands.add('SelectFirstDropdownInPopupTable', (locator, colref, Value) => {
 
-    cy.xpath(locator + `//tr//td[${colref}]` + '//span[@class="k-icon k-i-arrow-s"]', { timeout: 30000 }).click()
-    cy.log(`Selecting ${Value}`)
-    cy.xpath(`//li[text()="${Value}"]`, { timeout: 4000 }).click()
-    cy.wait(2000);
+    cy.xpath(locator + `//tr//td[${colref}]` + '//span[@class="k-icon k-i-arrow-s"]').click()
+    cy.wait(3000)
+    cy.xpath(`//li[text()="${Value}"]`).click()
 
 })
 
@@ -1041,41 +938,6 @@ Cypress.Commands.add('CheckboxInTable', (locator, rowRef, colRef, value) => {
 })
 
 /*****************************************************
-* Command: EnterTransactionDate
-* Description: Type Date in the Date Picker
-*
-* @author: rdacpano
-* @param {string} locator Element locator (xpath)
-* @param {string} Date example date "10-Mar-2019 9:08:00"
-*****************************************************/
-Cypress.Commands.add("EnterTransactionDate", (locator, Date) => {
-    var datearr = Date.split('-')
-    var DD = datearr[0]
-    var MMM = datearr[1]
-    var YYYY = datearr[2]
-    var HOUR = datearr[3]
-    var MINUTE = datearr[4]
-    var SECOND = datearr[5]
-
-    // cy.log(DD)
-    // cy.log(Month)
-    // cy.log(Year)
-
-    cy.xpath(locator, { timeout: 10000 }).eq(0).clear({ force: true })
-        .type(DD).wait(2000)
-        .type('{rightArrow}').wait(2000)
-        .type(MMM).wait(2000)
-        .type('{rightArrow}').wait(2000)
-        .type(YYYY).wait(2000)
-        .type('{rightArrow}').wait(2000)
-        .type(HOUR).wait(2000)
-        .type('{rightArrow}').wait(2000)
-        .type(MINUTE).wait(2000)
-        .type('{rightArrow}').wait(2000)
-        .type(SECOND).wait(2000)
-})
-
-/*****************************************************
 * Command: EnterDate
 * Description: Type Date in the Date Picker
 *
@@ -1094,42 +956,12 @@ Cypress.Commands.add("EnterDate", (locator, Date) => {
     // cy.log(Year)
 
     cy.xpath(locator, { timeout: 10000 }).eq(0).clear({ force: true })
-        .type(DD, { timeout: 2000 })
-        .type('{rightArrow}', { timeout: 2000 })
-        .type(MMM, { timeout: 2000 })
-        .type('{rightArrow}', { timeout: 2000 })
-        .type(YYYY, { timeout: 2000 })
+        .type(DD).wait(2000)
+        .type('{rightArrow}').wait(2000)
+        .type(MMM).wait(2000)
+        .type('{rightArrow}').wait(2000)
+        .type(YYYY).wait(2000)
 })
-
-/*****************************************************
-* Command: EnterDateCheckin
-* Description: Type Date in the Date Picker
-*
-* @author: mfaisal
-* @param {string} locator Element locator (xpath)
-* @param {string} Date example date "10-Mar-2019"
-*****************************************************/
-Cypress.Commands.add("EnterDateCheckin", (locator, Date) => {
-    var datearr = Date.split('-')
-    var DD = datearr[0]
-    var MMM = datearr[1]
-    var YYYY = datearr[2]
-
-    // cy.log(DD)
-    // cy.log(Month)
-    // cy.log(Year)
-
-    cy.xpath(locator, { timeout: 10000 }).eq(0).click().clear({ force: true })
-        .type('{leftArrow}').wait(500)
-        .type('{leftArrow}').wait(500)
-        .type(DD).wait(500)
-        .type('{rightArrow}').wait(500)
-        .type(MMM).wait(500)
-        .type('{rightArrow}').wait(500)
-        .type(YYYY).wait(500)
-})
-
-
 
 /*****************************************************
 * Command: EnterDateSuspension
@@ -1150,13 +982,13 @@ Cypress.Commands.add("EnterDateSuspension", (locator, Date) => {
     // cy.log(Year)
 
     cy.xpath(locator).eq(0).clear({ force: true })
-        .type('{rightArrow}', { timeout: 2000 })
-        .type('{rightArrow}', { timeout: 2000 })
-        .type(YYYY, { timeout: 2000 })
-        .type('{leftArrow}', { timeout: 2000 })
-        .type(MMM, { timeout: 2000 })
-        .type('{leftArrow}', { timeout: 2000 })
-        .type(DD, { timeout: 2000 })
+        .type('{rightArrow}').wait(2000)
+        .type('{rightArrow}').wait(2000)
+        .type(YYYY).wait(2000)
+        .type('{leftArrow}').wait(2000)
+        .type(MMM).wait(2000)
+        .type('{leftArrow}').wait(2000)
+        .type(DD).wait(2000)
 
 })
 
@@ -1351,13 +1183,13 @@ Cypress.Commands.add('ClickTableDropDownButton', (locator, targetColumn, textVal
  *****************************************************/
 Cypress.Commands.add("SelectPickerFilter", (locator, textField, item, searchButton) => {
     cy.log('------ SelectPickerFilter : ' + locator + ' ------')
-    cy.xpath(locator, { timeout: 30000 }).scrollIntoView({ timeout: 30000 })
+    cy.xpath(locator, { timeout: 30000 }).scrollIntoView()
     cy.xpath(locator, { timeout: 30000 }).click()
     cy.xpath(textField).type(item)
-    cy.Click(searchButton,{ timeout: 30000 })
-    //cy.wait(3000)
+    cy.Click(searchButton)
+    cy.wait(3000)
     new Table().selectTableItem(Picker.TBL_PICKERITEMS, 'FIRST')
-    cy.Click(Picker.BTN_SELECT, { timeout: 30000 });
+    cy.Click(Picker.BTN_SELECT);
 })
 
 /*****************************************************
@@ -1416,7 +1248,7 @@ Cypress.Commands.add("EnterTime", (locator, Time) => {
 })
 
 /*****************************************************
- * Command: SelectTenure
+ * Command: SelectTenureDuration
  * Description: This function select tenure duration
  *
  * @author: Fshahzada
@@ -1426,48 +1258,14 @@ Cypress.Commands.add("EnterTime", (locator, Time) => {
  *****************************************************/
 Cypress.Commands.add("TenureSelection", (locator, columnValue, TenureDuration) => {
 
-    cy.Click(`${locator}//tr[contains(@class, "k-master-row")]//td[text()="${columnValue.toUpperCase()}"]//following-sibling::td//span[@class="k-dropdownlist k-picker k-picker-md k-rounded-md k-picker-solid"]`)
-    cy.Click(`//span[text()="${TenureDuration}"]`, {timeout: 30000}) ////(//span[text()="'+TenureDuration+'"])[1]
+    cy.Click(`${locator}//tr[contains(@class, "k-master-row")]//td[text()="${columnValue.toUpperCase()}"]//following-sibling::td//span[@class="k-dropdown-wrap"]`)
+    cy.Click(`//li[text()="${TenureDuration}"]`)
 
     //(`${locator}//tr[contains(@class, "k-master-row")]//td[text()="${columnValue}"]//following-sibling::td//span[@class="k-dropdown-wrap"]`)})   , {matchCase}
 })
 
 /*****************************************************
- * Command: SelectTenureDependent
- * Description: This function select tenure duration
- *
- * @author: Fshahzada
- * @param {string} locator table locator
- * @param {string} columnValue  target value
- * @param {string} TenureDuration Tenure duration
- *****************************************************/
-Cypress.Commands.add("TenureSelectionDependent", (locator, columnValue, TenureDuration) => {
-
-    cy.Click(`${locator}//tr[contains(@class, "k-master-row")]//td[text()="${columnValue.toUpperCase()}"]//following-sibling::td//span[@class="k-dropdownlist k-picker k-picker-md k-rounded-md k-picker-solid"]`)
-    cy.Click(`(//span[text()="${TenureDuration}"])[2]`, {timeout: 30000}) ////(//span[text()="'+TenureDuration+'"])[1]
-
-    //(`${locator}//tr[contains(@class, "k-master-row")]//td[text()="${columnValue}"]//following-sibling::td//span[@class="k-dropdown-wrap"]`)})   , {matchCase}
-})
-
-/*****************************************************
- * Command: SelectTenureDependent
- * Description: This function select tenure duration
- *
- * @author: Fshahzada
- * @param {string} locator table locator
- * @param {string} columnValue  target value
- * @param {string} TenureDuration Tenure duration
- *****************************************************/
-Cypress.Commands.add("TenureSelectionDependent2", (locator, columnValue, TenureDuration) => {
-
-    cy.Click(`${locator}//tr[contains(@class, "k-master-row")]//td[text()="${columnValue.toUpperCase()}"]//following-sibling::td//span[@class="k-dropdownlist k-picker k-picker-md k-rounded-md k-picker-solid"]`)
-    cy.Click(`(//span[text()="${TenureDuration}"])[3]`, {timeout: 30000}) ////(//span[text()="'+TenureDuration+'"])[1]
-
-    //(`${locator}//tr[contains(@class, "k-master-row")]//td[text()="${columnValue}"]//following-sibling::td//span[@class="k-dropdown-wrap"]`)})   , {matchCase}
-})
-
-/*****************************************************
- * Command: SelectTenureDurationBatch
+ * Command: SelectTenureDuration
  * Description: This function select tenure duration
  *
  * @author: Fshahzada
@@ -1477,31 +1275,14 @@ Cypress.Commands.add("TenureSelectionDependent2", (locator, columnValue, TenureD
  *****************************************************/
 Cypress.Commands.add("TenureSelectionBatch", (locator, columnValue, TenureDuration) => {
 
-    cy.Click(`${locator}//tr[contains(@class, "k-master-row")]//td[text()="${columnValue}"]//following-sibling::td//span[@class="k-dropdownlist k-picker k-picker-md k-rounded-md k-picker-solid"]`)//following-sibling::td//span[@class="k-dropdown-wrap"]`)
-    cy.Click('(//span[text()="'+TenureDuration+'"])[1]', {timeout: 30000}) //cy.Click(`//span[text()="${TenureDuration}"]`)
+    cy.Click(`${locator}//tr[contains(@class, "k-master-row")]//td[text()="${columnValue}"]//following-sibling::td//span[@class="k-dropdown-wrap"]`)
+    cy.Click(`//li[text()="${TenureDuration}"]`)
 
     //(`${locator}//tr[contains(@class, "k-master-row")]//td[text()="${columnValue}"]//following-sibling::td//span[@class="k-dropdown-wrap"]`)})   , {matchCase}
 })
 
 /*****************************************************
- * Command: SelectTenureDurationBatchDependent
- * Description: This function select tenure duration
- *
- * @author: Fshahzada
- * @param {string} locator table locator
- * @param {string} columnValue  target value
- * @param {string} TenureDuration Tenure duration
- *****************************************************/
-Cypress.Commands.add("TenureSelectionBatchDependent", (locator, columnValue, TenureDuration) => {
-
-    cy.Click(`${locator}//tr[contains(@class, "k-master-row")]//td[text()="${columnValue}"]//following-sibling::td//span[@class="k-dropdownlist k-picker k-picker-md k-rounded-md k-picker-solid"]`)//following-sibling::td//span[@class="k-dropdown-wrap"]`)
-    cy.Click('(//span[text()="'+TenureDuration+'"])[2]', {timeout: 30000}) //cy.Click(`//span[text()="${TenureDuration}"]`)
-
-    //(`${locator}//tr[contains(@class, "k-master-row")]//td[text()="${columnValue}"]//following-sibling::td//span[@class="k-dropdown-wrap"]`)})   , {matchCase}
-})
-
-/*****************************************************
- * Command: SelectMenuInTable
+ * Command: AddOperatingHour
  * Description: This function add operating hour
  * @param {string} tableLocator // Table locator
  * @param {string} rowRef // Row reference
@@ -1510,8 +1291,8 @@ Cypress.Commands.add("TenureSelectionBatchDependent", (locator, columnValue, Ten
  *****************************************************/
 Cypress.Commands.add('SelectMenuInTable', (tableLocator, rowRef, tdata, Value) => {
 
-    cy.xpath(tableLocator + `//tr[${rowRef}]//td[${tdata}]` + '//span[@class="k-dropdownlist k-picker k-picker-md k-rounded-md k-picker-solid"]').click()
-    cy.xpath(`//span[text()="${Value}"]`).click()
+    cy.xpath(tableLocator + `//tr[${rowRef}]//td[${tdata}]` + '//span[@class="k-icon k-i-arrow-s"]').click()
+    cy.xpath(`//li[text()="${Value}"]`).click()
 
 })
 
@@ -1532,7 +1313,6 @@ Cypress.Commands.add("SelectPickerDifferentItemsWait", (locator, wait, textField
     // cy.wait(wait)
     cy.xpath(textField, { timeout: 30000 }).should('be.visible').type(item)
     cy.Click(SearchFilter);
-    cy.wait(5000)
     new Table().selectTableItem(Picker.TBL_PICKERITEMS, 'FIRST')
     cy.Click(Picker.BTN_SELECT);
 })
@@ -1611,52 +1391,39 @@ Cypress.Commands.add('VerifyTableEntryWaiver', (locator, targetColumn, expectedV
 
 
 /*****************************************************
- * Command: SelectDate
- * Description: Select date from date picker
- *
- * @author: jricohermoso
- * @param {string} locator Element locator (xpath)
- * @param {string} date Date input, values should comply to the form date field's format "20-Jan-2021"
- *****************************************************/
-Cypress.Commands.add("SelectDateIg", (locator, date) => {
+* Command: LoginMicrosoftAccount
+* @param {string} username username
+* @param {string} password password
+****************************************************/
+Cypress.Commands.add('LoginMicrosoftAccount', (username, password) => {
+    cy.origin(
+        'login.microsoftonline.com',
+        {
+          args: {
+            username,
+          },
+        },
+        ({ username }) => {
+          cy.get('input[type="email"]').type(username, {
+            log: false,
+          })
+          cy.get('input[type="submit"]').click()
+        }
+      )
 
-    let monthArray = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-
-    let day = date.split("-")[0];
-
-    if (day[0] == 0) {
-        let removeZero = day.substring(1);
-        day = removeZero;
+    cy.origin(
+    'login.microsoftonline.com',
+    {
+        args: {
+        password,
+        },
+    },
+    ({ password }) => {
+        cy.get('input[type="password"]').type(password, {
+            log: false,
+          })
+        cy.get('input[type="submit"]').click()
+        cy.get('#idBtn_Back').click()
     }
-
-    let month = date.split("-")[1];
-    let monthFull = monthArray.filter((dateList => dateList.startsWith(month)));
-    let year = date.split("-")[2];
-
-    cy.log('------ SelectDate : ' + locator + ' ------');
-    cy.xpath(locator, { timeout: 1000 }).click();
-    cy.xpath(locator).scrollIntoView();
-    cy.get("button.k-calendar-title").click({ force: true });
-    cy.get(".k-calendar-navigation .k-content.k-calendar-content.k-scrollable")//.scrollTo('top');
-    cy.wait(1000);
-    let scrollY = 0;
-    let scroller = 0;
-    let searchYear = () => {
-        cy.get(".k-calendar-navigation .k-content.k-calendar-content.k-scrollable").scrollTo(0, scrollY);
-        cy.wait(1000);
-        cy.xpath("count(//ul/li/span[text()='" + year + "'])").then($count => {
-            scroller = $count;
-            if (scroller > 0) {
-                cy.xpath("//ul/li/span[text()='" + year + "']").click({ force: true });
-
-            } else {
-                scrollY += 300;
-                searchYear();
-            }
-
-        });
-    }
-    searchYear();
-    cy.get("td[title='" + year + " " + month + "'] span.k-link").click({ force: true });
-    cy.get("td[title*='" + monthFull + " " + day + ", " + year + "'] span.k-link").click({ force: true });
+    )
 })

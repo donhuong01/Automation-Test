@@ -47,8 +47,6 @@ describe('[TS01] FS-016 Interest Group Membership Reinstatement', function () {
 
         InterestGroupMembershipReinstatement.ReinstatementInfo(TermStartDate)
 
-        cy.wait(5000)
-
         InterestGroupMembershipReinstatement.AddToCart()
 
         ShoppingCart.fillOutandApplyPayment('CASH')

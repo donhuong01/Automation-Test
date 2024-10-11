@@ -21,8 +21,7 @@ class SRP_PromotionListing {
     Delete() {
 
         cy.Click(elems_SRPPromationListing.BTN_DELETE)
-        cy.wait(5000)
-        //cy.Click(elems_Alerts.BTN_YES)
+        cy.Click(elems_Alerts.BTN_YES)
 
     }
 

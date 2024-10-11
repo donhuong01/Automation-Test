@@ -6,46 +6,34 @@ const data = {
 
     //FS-014
     BAD_ADDRESS:{
-        EXPECTEDPG: 'Report Viewer - Bad Address Members',
+        EXPECTEDPG: 'Report Viewer - ReportMembership.BadAddressMembers',
     },
 
     DOCUMENTARY_PROOF_OPERATIONAL: {
-        EXPECTEDPG: 'Report Viewer - Documentary Proof Operational',   
+        EXPECTEDPG: 'Report Viewer - ReportMembership.DocumentaryProofOperational',   
     },
 
     DOCUMENTARY_PROOF_VERIFIED: {
-        EXPECTEDPG: 'Report Viewer - Documentary Proof Verified',
+        EXPECTEDPG: 'Report Viewer - ReportMembership.DocumentaryProofVerified',
         DOCU_PROOF: '',
         START_DATE: '',
         END_DATE: ''
     },
 
     MEMBERSHIP_FIGURE: {
-        EXPECTEDPG: 'Report Viewer - Membership Figures',
-    },
-
-    MEMBERSHIP_TRANSACTION: {
-        EXPECTEDPG: 'Report Viewer - ReportMembership.MembershipTransaction',
-    },
-
-    MEMBERSHIP_REVENUE: {
-        EXPECTEDPG: 'Report Viewer - Membership Revenue',
-    },
-
-    MEMBERSHIP_RENEWAL: {
-        EXPECTEDPG: 'Report Viewer - ReportMembership.MembershipRenewal',
+        EXPECTEDPG: 'Report Viewer - ReportMembership.MembershipFigure',
     },
 
     //FS-025
     VIP_APPOINTMENT: {
-        EXPECTEDPG: 'Report Viewer - VIP Appointment Term',
+        EXPECTEDPG: 'Report Viewer - ReportMembership.VIPAppointmentTerm',
         EXPIRYFROM: '',
         EXPIRYTO: ''
     },
 
     //FS-034
     CUSTOMER_MARKTING: {
-        EXPECTEDPG: 'Report Viewer - Customer Marketing Profile',
+        EXPECTEDPG: 'Report Viewer - ReportMembership.CustomerMarketingProfile',
         CONSENT: '',
         MEMBERSHIP: '',
         CONTACTMODE: '',
@@ -60,11 +48,11 @@ const data = {
 
     //FS-032
     LUCKYDRAW_TRACKING: {
-        EXPECTEDPG: 'Report Viewer - Lucky Draw Tracking',
+        EXPECTEDPG: 'Report Viewer - ReportMembership.LuckyDrawTracking',
     },
 
     LUCKYDRAW_WINNER: {
-        EXPECTEDPG: 'Report Viewer - Lucky Draw Winner',
+        EXPECTEDPG: 'Report Viewer - ReportMembership.LuckyDrawWinner',
     },
 
     //FS-026

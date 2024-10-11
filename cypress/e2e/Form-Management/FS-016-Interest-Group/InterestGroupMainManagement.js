@@ -25,7 +25,7 @@ describe('[TS02] FS-016 Interest Group Main Management', function () {
     
     it('[TC01] Creating New Interest Group Main', function () {
 
-        cy.intercept('PUT', 'https://api.qa-smcms.safra.sg/v2/adminapi/interest-group/interest-group-mains/charge-rate').as('ID')
+        cy.intercept('PUT', 'https://api-uat-smcms.safra.sg/smcms/v2/adminapi/interest-group/interest-group-mains/charge-rate').as('ID')
         cy.visit('/membership/interestGroupMainListing')
         cy.wait(2000)
 

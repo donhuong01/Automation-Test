@@ -78,9 +78,6 @@ describe('[TS16] Bad Address Update', function () {
              // Navigate to Form
              cy.visit('/membership/badAddressUpdateList')
              cy.wait(3000)
-
-             cy.Click('//span[@class="k-icon k-svg-icon k-svg-i-caret-alt-to-right k-button-icon"]')
-             cy.wait(5000)
         
              //click on item
              BadAddUpdList.ClickAndUpdateBadAddress()
@@ -88,18 +85,15 @@ describe('[TS16] Bad Address Update', function () {
              //Upload file
              BadAddressDtl.filloutBadAddressUpdateDetail({
 
-                uploadFile : 'bad-address-test.xlsx',
+                uploadFile : 'Automation Test Forms.xlsx',
                 
             })
 
             // Validate Form
             BadAddressDtl.validate()
 
-            cy.Click('//span[@class="k-icon k-svg-icon k-svg-i-caret-alt-to-right k-button-icon"]')
-            cy.wait(5000)
-
             // Verify Listing
-            BadAddUpdList.verifyBadAddressUpdateList('Validation Failed')
+            BadAddUpdList.verifyBadAddressUpdateList('Validation Failed', 'BA-BR-1000038')
             
          })
 })

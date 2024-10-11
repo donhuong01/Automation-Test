@@ -70,9 +70,7 @@ describe('FS-039 & FS-013 In-House Sale and Merchandise Purchase', function () {
 
         InHouseSaleAndMerchandiseItemPurchase.SelectItemName(ItemNameInHouse)
 
-        InHouseSaleAndMerchandiseItemPurchase.EnterQuantityOfSetsInHouse(QuantitySetInhouse)
-
-        cy.EnterDate('//input[@id="dtpTransactionDate"]', '31-May-2024 14:29:30')
+        InHouseSaleAndMerchandiseItemPurchase.EnterQuantityOfSetsMerchandise(QuantitySetInhouse)
 
         InHouseSaleAndMerchandiseItemPurchase.AddToCart()
 
@@ -82,7 +80,7 @@ describe('FS-039 & FS-013 In-House Sale and Merchandise Purchase', function () {
 
         cy.visit('/sales/inhouseSaleAndMerchandisePurchaseTransactionListing').wait(3000)
 
-        InHouseSaleAndMerchandisePurchaseTransaction.SelectItemType('InHouse')
+        InHouseSaleAndMerchandisePurchaseTransaction.SelectItemType('In-House')
 
         InHouseSaleAndMerchandisePurchaseTransaction.FilterWithMemberId(MemberIdInHouse)
 
@@ -127,7 +125,7 @@ describe('FS-039 & FS-013 In-House Sale and Merchandise Purchase', function () {
 
         cy.visit('/sales/inhouseSaleAndMerchandisePurchaseDetail').wait(4000)
 
-        InHouseSaleAndMerchandiseItemPurchase.SelectItemType('InHouse')
+        InHouseSaleAndMerchandiseItemPurchase.SelectItemType('In-House')
 
         InHouseSaleAndMerchandiseItemPurchase.SelectItemName(ItemNameInHouse)
 
@@ -135,9 +133,7 @@ describe('FS-039 & FS-013 In-House Sale and Merchandise Purchase', function () {
 
         InHouseSaleAndMerchandiseItemPurchase.SelectItemName(ItemNameInHouse)
 
-        InHouseSaleAndMerchandiseItemPurchase.EnterQuantityOfSetsInHouse(QuantitySetInhouse)
-        
-        cy.EnterDate('//input[@id="dtpTransactionDate"]', '31-May-2024 14:29:30')
+        InHouseSaleAndMerchandiseItemPurchase.EnterQuantityOfSetsMerchandise(QuantitySetInhouse)
 
         InHouseSaleAndMerchandiseItemPurchase.Cancel()
 

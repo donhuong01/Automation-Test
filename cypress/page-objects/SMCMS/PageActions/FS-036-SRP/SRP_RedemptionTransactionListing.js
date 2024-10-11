@@ -27,14 +27,12 @@ class SRP_RedemptionTransactionListing {
         *****************************************************/
     Filters(Category, MemberID, Status) {
 
-        // cy.SelectDropDownItem(elems_SRPREDEMPTIONTRANSACTIONLISTING.DRP_CATEGORY, Category)
-        cy.xpath('//input[@id="pckMemberId"]').clear()
-        cy.EnterText('//input[@id="pckMemberId"]', MemberID)
-        // cy.SelectPickerDifferentItemsWait(elems_SRPREDEMPTIONTRANSACTIONLISTING.MEMBERID.PCK_MEMBERID, 2000,
-        //     elems_SRPREDEMPTIONTRANSACTIONLISTING.MEMBERID.TXT_MEMBERID, MemberID,
-        //     elems_SRPREDEMPTIONTRANSACTIONLISTING.BTN_SEARCHFILTERS)
-        //     cy.wait(4000)
-        cy.SelectDropDownItem(elems_SRPREDEMPTIONTRANSACTIONLISTING.DRP_STATUS, Status)
+        cy.SelectDropDownItem(elems_SRPREDEMPTIONTRANSACTIONLISTING.DRP_CATEGORY, Category)
+        cy.SelectPickerDifferentItemsWait(elems_SRPREDEMPTIONTRANSACTIONLISTING.MEMBERID.PCK_MEMBERID, 2000,
+            elems_SRPREDEMPTIONTRANSACTIONLISTING.MEMBERID.TXT_MEMBERID, MemberID,
+            elems_SRPREDEMPTIONTRANSACTIONLISTING.BTN_SEARCHFILTERS)
+            cy.wait(4000)
+        // cy.SelectDropDownItem(elems_SRPREDEMPTIONTRANSACTIONLISTING.DRP_STATUS, Status)
         cy.Click(elems_SRPREDEMPTIONTRANSACTIONLISTING.BTN_SEARCHFILTERS)
         cy.wait(4000)
 
@@ -58,18 +56,6 @@ class SRP_RedemptionTransactionListing {
         cy.VerifyTableEntry(elems_SRPREDEMPTIONTRANSACTIONLISTING.TBL_SRPREDEMPTIONLIATING, 'Status', Status)
 
     }
-
-    /*****************************************************
-        * Method: SelectItem
-        * Description
-        *****************************************************/
-    VerifyStatusCollection(Status) {
-
-        cy.VerifyTableEntry(elems_SRPREDEMPTIONTRANSACTIONLISTING.TBL_SRPREDEMPTIONCOLLECTION, 'Status', Status)
-
-    }
-
-    //
     
     /*****************************************************
         * Method: ClickOnReceiptNumber

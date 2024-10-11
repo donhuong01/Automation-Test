@@ -286,7 +286,7 @@ describe('Batch Membership Waiver Request management',function(){
         const WaiverPeriod = dataWaiver.Waiver.WaiverPeriod
         const EndDate = dataWaiver.Waiver.EndDate   
 
-        cy.intercept('POST', 'https://api.qa-smcms.safra.sg/v2/adminapi/membership/batch-membership-waiver-requests').as('ID')
+        cy.intercept('POST', 'https://api-uat-smcms.safra.sg/smcms/v2/adminapi/membership/batch-membership-waiver-requests').as('ID')
         cy.wait(10000)
         cy.visit('/membership/memberList?pageNumber=1&pageSize=20')  //Visit web page for member listing 
 

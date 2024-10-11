@@ -5,10 +5,10 @@ const data = [
         MemberId: 'A300000303',            // Non-Existing Member 
         BatchName: 'Test Batch' + Math.floor(Math.random() * 100),
         BatchType: 'Interest Group',
-        InterestGroup: 'Test IG Details - Main',
-        InterestGroupMain: 'IG Main QA Testing 1',
-        EffectiveDate: '23-May-2024',
-        IGMembershipTerm: '3',              // Provide Manimum term
+        InterestGroup: 'IG Detail Test 1',
+        InterestGroupMain: 'QA Test IG Main 1',
+        EffectiveDate: '07-Jun-2023',
+        IGMembershipTerm: 6,              // Provide Manimum term
         InterestGroupLocation: 'All Locations',
     },
 

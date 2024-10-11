@@ -16,7 +16,7 @@ const InHouseSaleAndMerchandiseTransactionAdjustment = (MemberIdMerchandise, Mem
 
 describe('FS-039 & FS-013 In-House Sale and Merchandise Transaction Adjustment', function () {
 
-    it('Create a Merchandise Transaction Adjustment Request', function () {
+    it.only('Create a Merchandise Transaction Adjustment Request', function () {
 
         common.Checkin(MemberIdMerchandise)
 
@@ -33,18 +33,15 @@ describe('FS-039 & FS-013 In-House Sale and Merchandise Transaction Adjustment',
         InHouseSaleAndMerchandisePurchaseTransaction.ClickOnReceiptItemCheckBox(MemberIdMerchandise)
 
         InHouseSaleAndMerchandisePurchaseTransaction.ClickOn("Adjust")
-        cy.wait(10000)
+        cy.wait(15000)
 
         InHouseSaleAndMerchandisePurchaseTransaction.VerifyMemberInfoInAdjustment(MemberIdMerchandise)
 
         InHouseSaleAndMerchandisePurchaseTransaction.FillOutMerchandiseTransactionAdjustmentItemList('Adjustment')
 
-        cy.xpath("//button[text()='Submit']").click()
-        cy.wait(10000)
-        
-        //InHouseSaleAndMerchandisePurchaseTransaction.ClickOn("Submit")
+        InHouseSaleAndMerchandisePurchaseTransaction.ClickOn("Submit")
 
-        common.ApprovalWorkFlow('MCD-ADJ', 'Merchandise Transaction Adjustment Approval Workflow', 'Approve', 'testing Merchandise Transaction Adjustment')
+        common.ApprovalWorkFlow('MCD-ADJ', 'Inhouse Sale Transaction Adjustment Approval Workflow', 'Approve', 'testing In-House Transaction Adjustment')
 
         cy.visit('/sales/inhouseSaleAndMerchandisePurchaseTransactionListing').wait(4000)
 
@@ -60,7 +57,7 @@ describe('FS-039 & FS-013 In-House Sale and Merchandise Transaction Adjustment',
 
     })
 
-    it.only('Create In-House Transaction Adjustment Request', function () {
+    it('Create In-House Transaction Adjustment Request', function () {
 
         common.Checkin(MemberIdInHouse)
 
@@ -83,12 +80,9 @@ describe('FS-039 & FS-013 In-House Sale and Merchandise Transaction Adjustment',
 
         InHouseSaleAndMerchandisePurchaseTransaction.FillOutMerchandiseTransactionAdjustmentItemList('Adjustment')
 
-        cy.xpath("//button[text()='Submit']").click()
-        cy.wait(10000)
-        
-        //InHouseSaleAndMerchandisePurchaseTransaction.ClickOn("Submit")
+        InHouseSaleAndMerchandisePurchaseTransaction.ClickOn("Submit")
 
-        common.ApprovalWorkFlow('SALE-ADJ', 'Inhouse Sale Transaction Adjustment Approval Workflow', 'Approve', 'testing In-House Transaction Adjustment' )
+        common.ApprovalWorkFlow('SALE-ADJ', 'Merchandise Transaction Adjustment Approval Workflow', 'Approve', 'testing Merchandise Transaction Adjustment')
 
         cy.visit('/sales/inhouseSaleAndMerchandisePurchaseTransactionListing').wait(4000)
 

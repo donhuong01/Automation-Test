@@ -8,7 +8,6 @@ class elems_Landing {
     static Membership_Deferment = '//div[@class="page-title"]/following-sibling::div//p[text()="Membership Deferment"]'
     static Membership_Renewal = '//div[@class="page-title"]/following-sibling::div//p[text()="Membership Renewal"]'
     static Receipt = '//div[@class="page-title"]/following-sibling::div//p[text()="Receipt"]'
-    static CustomerLanding_Header = "//h2[normalize-space()='Customer Landing']"
 }
 
 export default elems_Landing

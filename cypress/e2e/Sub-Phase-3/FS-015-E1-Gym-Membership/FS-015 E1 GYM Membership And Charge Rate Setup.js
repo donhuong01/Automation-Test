@@ -5,7 +5,7 @@ import data from '../../../fixtures/Data_Module/FS-015-E1-Gym-Membership/E1 GYM 
 
 const common = new Common()
 
-const E1GYMMainSetup = () => {
+const E1GYMMembershipAndChargeRateSetup = () => {
 const {
 
     Name,
@@ -46,24 +46,18 @@ describe('[TS01] FS-015 E1 GYM Membership And Charge Rate Setup ', function () {
 
         InterestGroupMainListing.CreateNew()
 
-        InterestGroupMain.FilloutE1MainInformation(Name, Code, MainCategory, IGGroupCategoryGroup, FabsGroup,
+        InterestGroupMain.FilloutIGMainInformation(Name, Code, MainCategory, IGGroupCategoryGroup, FabsGroup,
             ClubClassification, LifeStyleGroup, SMCClassification, OwnerEmail)
 
         InterestGroupMain.AddLocation(LocationName)
 
-        //InterestGroupMain.AddApproverOption(ApproverOption, ApproverEmail)
+        InterestGroupMain.AddApproverOption(ApproverOption, ApproverEmail)
 
         InterestGroupMain.SaveAsDraft()
 
-        // InterestGroupMainListing.FilterValueByStatus(Name, BussinessType, 'Draft')
+        InterestGroupMainListing.FilterValueByStatus(Name, BussinessType, 'Draft')
 
-        // InterestGroupMainListing.ClickTableLink(Name)
-
-        //Click charge rate tab
-        InterestGroupMain.ClickChargeRateTab()
-
-        //Click add charge type
-        InterestGroupMain.ClickAddChargeType()
+        InterestGroupMainListing.ClickTableLink(Name)
 
         InterestGroupMain.FilloutChargeTypeFields(ChargeName, TransactionType, CalculationType, AmmountType)
 
@@ -78,20 +72,13 @@ describe('[TS01] FS-015 E1 GYM Membership And Charge Rate Setup ', function () {
 
         cy.visit('/membership/interestGroupMainListing')
 
-        InterestGroupMain.FilterWithStatus('Approved')
+        InterestGroupMainListing.FilterValueByStatus(Name, BussinessType, 'Approved')
 
-        // common.ClickLastPage()
+        InterestGroupMainListing.Delete()
 
-        // InterestGroupMain.VerifyTableEntries(Name, 'Approved')
-
-        // InterestGroupMainListing.FilterValueByStatus(Name, BussinessType, 'Approved')
-
-        // InterestGroupMainListing.Delete()
-
-        
     })
 
 });
 
 }
-export default E1GYMMainSetup//E1GYMMembershipAndChargeRateSetup
+export default E1GYMMembershipAndChargeRateSetup

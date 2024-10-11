@@ -24,11 +24,11 @@ describe('[TS03] Batch Membership Termination Management', function () {
 
 
         ////Enable SFS
-        // cy.visit('/membership/moduleSettings')
-        // cy.wait(5000)
+        cy.visit('/membership/moduleSettings')
+        cy.wait(5000)
         
-        // MemModuleSettings.SFSActivate('CHECK')
-        // cy.wait(2000)
+        MemModuleSettings.SFSActivate('CHECK')
+        cy.wait(2000)
         
 
         cy.visit('/membership/memberList')
@@ -37,21 +37,14 @@ describe('[TS03] Batch Membership Termination Management', function () {
         cy.wait(5000)
         cy.xpath(elems_MemberListing.DRP_STATUSREASONCODE)
         cy.SelectDropDownItem(elems_MemberListing.DRP_STATUS,'Active')
-        cy.SelectDropDownItem(elems_MemberListing.DRP_STATUSREASONCODE,'New')
-        cy.SelectDropDownItem(elems_MemberListing.DRP_SFSSTATUS,'Active')
         cy.Click(elems_MemberListing.BTN_SEARCHFILTER)
 
         cy.wait(3000)
 
         // Select Members to Terminate
-        cy.TickSpecificTableItem(Member1)
-        cy.TickSpecificTableItem(Member2)
-        cy.TickSpecificTableItem(Member3)
-
-        // Select Members to Terminate
-        // cy.SelectTableItem(elems_MemberListing.TBL_MEMBERLISTING,'Member ID', Member1)
-        // cy.SelectTableItem(elems_MemberListing.TBL_MEMBERLISTING,'Member ID', Member2)
-        // cy.SelectTableItem(elems_MemberListing.TBL_MEMBERLISTING,'Member ID', Member3)
+        cy.SelectTableItem(elems_MemberListing.TBL_MEMBERLISTING,'Member ID', Member1)
+        cy.SelectTableItem(elems_MemberListing.TBL_MEMBERLISTING,'Member ID', Member2)
+        cy.SelectTableItem(elems_MemberListing.TBL_MEMBERLISTING,'Member ID', Member3)
 
         // Select Terminate Option
         cy.SelectDropDownItem(elems_MemberListing.BTNDRP_MAINTENANCE,'Terminate')
@@ -64,8 +57,6 @@ describe('[TS03] Batch Membership Termination Management', function () {
 
         // Terminate Members
         BatchMemTermConfirm.yes()
-
-        cy.wait(7000)
 
         // Do Not Terminate Members
         // BatchMemTermConfirm.no()

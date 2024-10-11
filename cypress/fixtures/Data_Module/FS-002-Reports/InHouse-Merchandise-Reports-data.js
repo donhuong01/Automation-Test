@@ -84,12 +84,12 @@ const data = {
 
      //Counter Receipt Collection
      COUNTER_RECEIPT: {
-        EXPECTEDPG: 'Report Viewer - Counter Receipt Collection',
+        EXPECTEDPG: 'Report Viewer - ReportSale.CounterReceiptCollection',
     },
 
     //InHouse Revenue Sale
     INHOUSE_REVENUE_SALE: {
-        EXPECTEDPG: 'Report Viewer - Inhouse Revenue Sale',
+        EXPECTEDPG: 'Report Viewer - ReportSale.InhouseRevenueSale',
         INHOUSE_ITEM: 'Game Card',
         RECEIPT_STATUS: 'None',
         TRANSACT_DATE_FROM: '01-Apr-2020',
@@ -98,7 +98,7 @@ const data = {
 
     //InHouse Revenue Sale Email
     INHOUSE_REVENUE_SALE_EMAIL: {
-        EXPECTEDPG: 'Report Viewer - Inhouse Revenue Sale Email',
+        EXPECTEDPG: 'Report Viewer - ReportSale.InhouseRevenueSaleEmail',
         INHOUSE_ITEM: 'Game Card',
         RECEIPT_STATUS: 'None',
         TRANSACT_DATE_FROM: '01-Apr-2020',
@@ -107,7 +107,7 @@ const data = {
 
     //InHouse Revenue Sale 
     INHOUSE_REVENUE_SALE_MOBILE: {
-        EXPECTEDPG: 'Report Viewer - Inhouse Revenue Sale Mobile',
+        EXPECTEDPG: 'Report Viewer - ReportSale.InhouseRevenueSaleMobile',
         INHOUSE_ITEM: 'Game Card',
         RECEIPT_STATUS: 'None',
         TRANSACT_DATE_FROM: '01-Apr-2020',
@@ -116,7 +116,7 @@ const data = {
 
     //Merchandise Revenue Sale
     MERCHANDISE_REVENUE_SALE: {
-        EXPECTEDPG: 'Report Viewer - Merchandise Revenue Sale',
+        EXPECTEDPG: 'Report Viewer - ReportSale.MerchandiseRevenueSale',
         MERCHANDISE_ITEM: 'Amazon Tablet',
         RECEIPT_STATUS: 'None',
         TRANSACT_DATE_FROM: '01-Apr-2020',
@@ -125,7 +125,7 @@ const data = {
 
     //Merchandise Revenue Sale By Period
     MERCHANDISE_REVENUE_SALE_BY_PERIOD: {
-        EXPECTEDPG: 'Report Viewer - Merchandise Revenue Sale By Period',
+        EXPECTEDPG: 'Report Viewer - ReportSale.MerchandiseRevenueSaleByPeriod',
         MERCHANDISE_ITEM: 'Amazon Tablet',
         RECEIPT_STATUS: 'None',
         TRANSACT_DATE_FROM: '01-Apr-2020',
@@ -134,7 +134,7 @@ const data = {
 
     //Merchandise Revenue Sale By Total Payment Collected
     MERCHANDISE_REVENUE_SALE_BY_TOTAL: {
-        EXPECTEDPG: 'Report Viewer - Merchandise Revenue Sale By Total Payment Collected',
+        EXPECTEDPG: 'Report Viewer - ReportSale.MerchandiseRevenueSaleByTotalPaymentCollected',
         MERCHANDISE_ITEM: 'Amazon Tablet',
         RECEIPT_STATUS: 'None',
         TRANSACT_DATE_FROM: '01-Apr-2020',
@@ -143,7 +143,7 @@ const data = {
 
     //Merchandise Revenue Sale Item
     MERCHANDISE_REVENUE_SALE_ITEM: {
-        EXPECTEDPG: 'Report Viewer - Merchandise Revenue Sale Item',
+        EXPECTEDPG: 'Report Viewer - ReportSale.MerchandiseRevenueSaleItem',
         MERCHANDISE_ITEM: 'Amazon Tablet',
         RECEIPT_STATUS: 'None',
         TRANSACT_DATE_FROM: '01-Apr-2020',

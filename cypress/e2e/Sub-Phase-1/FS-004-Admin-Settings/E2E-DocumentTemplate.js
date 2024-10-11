@@ -92,15 +92,12 @@ const DocumentTemplate = ()=> {
             // Navigate to Listing Form
             cy.visit('/admin/documentTemplateList')
             cy.wait(3000)
-
-            // Fill out the filters
-            DocTempList.fillOutFilters(data.DocumentTemplateListing.templateItem, "Active")
         
             // Tick Item checkbox
             DocTempList.selectTemplate(data.DocumentTemplateListing.templateItem)
 
             // Click Delete button
-            //DocTempList.delete()
+            DocTempList.delete()
         })
     })
 }

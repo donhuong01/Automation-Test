@@ -12,10 +12,10 @@ const common = new Common()
 beforeEach(() => {
 
     // Set local storage for QA Enviroment
-    // cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
+    cy.SaveUserInfoInLocalStorage(login.authenticated_user, login.active_location, login.safra_client)
 
     // Set local storage for UAT Enviroment
-    cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
+    // cy.SaveUserInfoInLocalStorageForUAT(login.authenticated_user_uat, login.active_location_uat, login.safra_client_uat)
 })
 
 
@@ -28,7 +28,7 @@ Promodata.forEach(each => {
         BenefitType, FixedDollarRate, AgeRangFrom, AgeRangTo, CustomerCateg, ApplicableMemberID,
         ApplicableSourceChannel, Approval, BundlePromotion, location, FacilityType, FacilitySetup, BookingSlot } = each
 
-    describe('SP4-FS042_TS01 Facility Promotion Setup and Management', function () {
+    describe('SP4-FS042_TS01 Promotion Setup and Management', function () {
 
         it(`[TC01] Creating New ${BasicType} Promotion for ${ItemCate} On ${PromotionType}`, function () {
 
@@ -55,39 +55,31 @@ Promodata.forEach(each => {
 
             PromotionDetail.PromotionTypeTab(PromotionType, StartDate, EndDate)
 
-            PromotionDetail.SaveAsDraft()
+            // PromotionDetail.SaveAsDraft()
 
-            PromotionListing.FilterByPromotionName(PromotionTitle)
+            // PromotionListing.FilterByPromotionName(PromotionTitle)
 
-            PromotionListing.ClickSearchFilter()
+            // PromotionListing.ClickSearchFilter()
 
-            PromotionListing.ClickTableLink()
+            // PromotionListing.ClickTableLink()
 
             //Benifit Item Tab
             PromotionDetail.ClickOnTab('Benefit Item')
 
             PromotionDetail.BenefitItemTab(ItemCate, Quantity, BenefitType, FixedDollarRate, BundlePromotion)
 
-            PromotionDetail.SaveAsDraft()
+            // PromotionDetail.SaveAsDraft()
 
-            PromotionListing.FilterByPromotionName(PromotionTitle)
+            // PromotionListing.FilterByPromotionName(PromotionTitle)
 
-            PromotionListing.ClickSearchFilter()
+            // PromotionListing.ClickSearchFilter()
 
-            PromotionListing.ClickTableLink()
+            // PromotionListing.ClickTableLink()
 
             //Promotion Criteria
             PromotionDetail.ClickOnTab('Promotion Criteria')
 
             PromotionDetail.PromotionCriteria(AgeRangFrom, AgeRangTo, CustomerCateg, ApplicableMemberID, ApplicableSourceChannel)
-
-            PromotionDetail.SaveAsDraft()
-
-            PromotionListing.FilterByPromotionName(PromotionTitle)
-
-            PromotionListing.ClickSearchFilter()
-
-            PromotionListing.ClickTableLink()
 
             PromotionDetail.Submit()
 
@@ -122,32 +114,27 @@ Promodata.forEach(each => {
             FacilityBookingDetail.CreateNew()
 
             //Filout Facility Booking detail form
-            FacilityBookingDetail.CreateNewFaciltyBooking(FacilityType, location, FacilitySetup)
+            FacilityBookingDetail.CreateNewFaciltyBooking(FacilityType, location)
 
             //select facility name
-            //FacilityBookingDetail.SelectFacilities(FacilitySetup)
+            FacilityBookingDetail.SelectFacilities(FacilitySetup)
 
             // select slot
             FacilityBookingDetail.SelectSlot(BookingSlot)
 
             cy.wait(5000)
             //Click Save
-            //FacilityBookingDetail.Save()
-            FacilityBookingDetail.AddtoCart()
+            FacilityBookingDetail.Save()
 
             if (BasicType === 'Promo Code') {
 
                 common.ApplyPromoCode(PromoCode)
                 cy.wait(2000)
-                //common.VerifyPromoNotification('Apply promotion successful')
+                common.VerifyPromoNotification('Apply promotion successful')
 
             } else {
 
-                //cy.log('to verify if the standard promotion is applied')
                 cy.log('to verify if the standard promotion is applied')
-                cy.xpath('(//div[@class="page-title"]//following-sibling::div//table//tbody//td//a)[1]',{timeout: 30000}).click({ force: true })
-                cy.SelectDropDownItem('//span[@id="txtStandardPromotion"]', PromotionTitle)
-                cy.Click('//button[text()="Select"]')
 
             }
 

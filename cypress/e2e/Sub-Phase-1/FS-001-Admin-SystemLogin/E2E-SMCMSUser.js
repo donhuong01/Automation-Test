@@ -22,7 +22,7 @@ const SMCMSUser = () => {
             cy.visit('/admin/smcmsUserList?pageNumber=1&pageSize=20')
 
             // FilOut Filter Form
-            SMCMSUserList.FilloutFilters({ LoginEmail, /*Position,*/ Status })
+            SMCMSUserList.FilloutFilters({ LoginEmail, Position, Status })
 
             // Click on Search Filter button
             SMCMSUserList.SearchFiters()

@@ -27,7 +27,7 @@ Promodata.forEach(each => {
         BenefitType, FixedDollarRate, AgeRangFrom, AgeRangTo, CustomerCateg, ApplicableMemberID,
         ApplicableSourceChannel, Approval, BundlePromotion } = each
 
-    describe('SP4-FS042_TS01 InHouse and Merchandise Promotion Setup and Management', function () {
+    describe('SP4-FS042_TS01 Promotion Setup and Management', function () {
 
         it(`[TC01] Creating New ${BasicType} Promotion for ${ItemCate} On ${PromotionType}`, function () {
 
@@ -54,45 +54,37 @@ Promodata.forEach(each => {
 
             PromotionDetail.PromotionTypeTab(PromotionType, StartDate, EndDate)
 
-            PromotionDetail.SaveAsDraft()
+            // PromotionDetail.SaveAsDraft()
 
-            PromotionListing.FilterByPromotionName(PromotionTitle)
+            // PromotionListing.FilterByPromotionName(PromotionTitle)
 
-            PromotionListing.ClickSearchFilter()
+            // PromotionListing.ClickSearchFilter()
 
-            PromotionListing.ClickTableLink()
+            // PromotionListing.ClickTableLink()
 
             //Benifit Item Tab
             PromotionDetail.ClickOnTab('Benefit Item')
 
             PromotionDetail.BenefitItemTab(ItemCate, Quantity, BenefitType, FixedDollarRate, BundlePromotion)
 
-            PromotionDetail.SaveAsDraft()
+            // PromotionDetail.SaveAsDraft()
 
-            PromotionListing.FilterByPromotionName(PromotionTitle)
+            // PromotionListing.FilterByPromotionName(PromotionTitle)
 
-            PromotionListing.ClickSearchFilter()
+            // PromotionListing.ClickSearchFilter()
 
-            PromotionListing.ClickTableLink()
+            // PromotionListing.ClickTableLink()
 
             //Promotion Criteria
             PromotionDetail.ClickOnTab('Promotion Criteria')
 
             PromotionDetail.PromotionCriteria(AgeRangFrom, AgeRangTo, CustomerCateg, ApplicableMemberID, ApplicableSourceChannel)
 
-            PromotionDetail.SaveAsDraft()
-
-            PromotionListing.FilterByPromotionName(PromotionTitle)
-
-            PromotionListing.ClickSearchFilter()
-
-            PromotionListing.ClickTableLink()
-
             PromotionDetail.Submit()
 
             common.ApprovalWorkFlow('PMO', 'Promotion Approval Workflow', Approval, 'test')
 
-            cy.visit('/club/promotionListing').wait(3000)
+            cy.visit('/club/promotionListing').wait(8000)
 
             PromotionListing.FilterByPromotionName(PromotionTitle)
 
@@ -121,9 +113,7 @@ Promodata.forEach(each => {
 
                     InHouseSaleAndMerchandiseItemPurchase.EnterQuantityOfSetsMerchandise('1')
 
-                    InHouseSaleAndMerchandiseItemPurchase.SelectItemName('GST NOT APPLICABLE')
-
-                    //InHouseSaleAndMerchandiseItemPurchase.EnterTransactionDate('26-04-2024 09:08:00')
+                    InHouseSaleAndMerchandiseItemPurchase.SelectItemName('Amazon Tablet')
 
                 } else {
 
@@ -131,29 +121,24 @@ Promodata.forEach(each => {
 
                     InHouseSaleAndMerchandiseItemPurchase.EnterQuantityOfSetsInHouse('1')
 
-                    InHouseSaleAndMerchandiseItemPurchase.SelectItemName('GST NOT APPLICABLE - IH') // Game Card - QA   
-
-                    InHouseSaleAndMerchandiseItemPurchase.EnterTransactionDate('26-04-2024 09:08:00')
+                    InHouseSaleAndMerchandiseItemPurchase.SelectItemName('Game Card')
                 }
 
                 InHouseSaleAndMerchandiseItemPurchase.AddToCart()
 
-                cy.wait(5000)
+                cy.wait(25000)
 
                 if (BasicType === 'Promo Code') {
 
                     common.ApplyPromoCode(PromoCode)
 
-                    //common.VerifyPromoNotification('Apply promotion successful')
+                    common.VerifyPromoNotification('Apply promotion successful')
 
                 } else {
 
-                    // cy.xpath('//h3[text()="Shopping Cart Items"]/following-sibling::div//table//a').should('be.visible')
-                    // cy.log('Standard Promotion is Applied.')
-                    cy.log('to verify if the standard promotion is applied')
-                    cy.xpath('(//div[@class="page-title"]//following-sibling::div//table//tbody//td//a)[1]',{timeout: 30000}).click({ force: true })
-                    cy.SelectDropDownItem('//span[@id="txtStandardPromotion"]', PromotionTitle)
-                    cy.Click('//button[text()="Select"]')
+                    cy.xpath('//h3[text()="Shopping Cart Items"]/following-sibling::div//table//a').should('be.visible')
+                    cy.log('Standard Promotion is Applied.')
+
                 }
 
                 common.fillOutandApplyPayment('CASH')

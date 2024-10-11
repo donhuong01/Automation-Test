@@ -110,17 +110,17 @@ class SRP_PromotionListing {
                 new Table().selectTableItem(Picker.TBL_PICKERITEMS, 'FIRST')
                 cy.xpath(Picker.BTN_SELECT).first().click();
             }
-            // if(VendorID !== undefined){
-            //     cy.Click(elems_SRPPointsAdjustmentRequest.PCK_VENDORID)
-            //     cy.EnterText(elems_SRPPointsAdjustmentRequest.TXT_VENDORID, VendorID)
-            //     // cy.SelectPickerDifferentItems(elems_SRPPointsAdjustmentRequest.PCK_VENDORID,
-            //     //     elems_SRPPointsAdjustmentRequest.TXT_VENDORID, VendorID)
-            //     cy.Click(elems_SRPPointsAdjustmentRequest.BTN_SEARCHFILTER);
+            if(VendorID !== undefined){
+                cy.Click(elems_SRPPointsAdjustmentRequest.PCK_VENDORID)
+                cy.EnterText(elems_SRPPointsAdjustmentRequest.TXT_VENDORID, VendorID)
+                // cy.SelectPickerDifferentItems(elems_SRPPointsAdjustmentRequest.PCK_VENDORID,
+                //     elems_SRPPointsAdjustmentRequest.TXT_VENDORID, VendorID)
+                cy.Click(elems_SRPPointsAdjustmentRequest.BTN_SEARCHFILTER);
 
-            //     new Table().selectTableItem(Picker.TBL_PICKERITEMS, 'FIRST')
-            //     cy.xpath(Picker.BTN_SELECT).first().click();
-            // }
-            // if(EDCTerminal !== undefined){
+                new Table().selectTableItem(Picker.TBL_PICKERITEMS, 'FIRST')
+                cy.xpath(Picker.BTN_SELECT).first().click();
+            }
+            if(EDCTerminal !== undefined){
                 // cy.Click(elems_SRPPointsAdjustmentRequest.PCK_EDCTERMINALID)
                 // cy.EnterText(elems_SRPPointsAdjustmentRequest.TXT_TERMINALID, EDCTerminal)
                 // // cy.SelectPickerDifferentItems(elems_SRPPointsAdjustmentRequest.PCK_EDCTERMINALID,
@@ -129,7 +129,7 @@ class SRP_PromotionListing {
 
                 // new Table().selectTableItem(Picker.TBL_PICKERITEMS, 'FIRST')
                 // cy.xpath(Picker.BTN_SELECT).first().click();
-            // }
+            }
             if(Type !== undefined){
                 cy.SelectDropDownItem(elems_SRPPointsAdjustmentRequest.DRP_TYPE, Type)
             }

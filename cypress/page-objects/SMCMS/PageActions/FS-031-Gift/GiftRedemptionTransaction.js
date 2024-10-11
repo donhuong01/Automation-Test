@@ -55,7 +55,7 @@ class GiftRedemptionTransaction {
      *****************************************************/
     ClickTableLink() {
 
-        cy.Click('(//div[@class="k-grid k-grid-md"]//table//a)[1]')
+        cy.Click('(//div[@class="k-widget k-grid"]//table//a)[1]')
         cy.wait(2000)
 
     }

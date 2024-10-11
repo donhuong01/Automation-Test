@@ -31,13 +31,13 @@ describe('[TS02] FS-031 Gift Redemption Management', function () {
 
         GiftRedemptionManagement.FilterWithMemberID(MemberID)
 
-        GiftRedemptionManagement.FilterWithStatus("Uncollected") //Pending Redemption Letter Generation
+        GiftRedemptionManagement.FilterWithStatus("Pending Redemption Letter Generation")
 
         GiftRedemptionManagement.ClickOnsearchFilter()
 
         GiftRedemptionManagement.ClickTableLink()
 
-        GiftRedemptionManagement.VerifyStatusInDetail("Uncollected") //Pending Redemption Letter Generation
+        GiftRedemptionManagement.VerifyStatusInDetail("Pending Redemption Letter Generation")
 
         GiftRedemptionManagement.Cancel()
 
@@ -46,32 +46,32 @@ describe('[TS02] FS-031 Gift Redemption Management', function () {
     })
 
 
-    // it('[TC02] To be able to test Generate Letter', function () {
+    it('[TC02] To be able to test Generate Letter', function () {
 
 
-    //     cy.visit('/membership/giftRedemptionTransactionListing')
-    //     cy.wait(8000)
+        cy.visit('/membership/giftRedemptionTransactionListing')
+        cy.wait(8000)
 
-    //     GiftRedemptionManagement.FilterWithMemberID(MemberID)
+        GiftRedemptionManagement.FilterWithMemberID(MemberID)
 
-    //     GiftRedemptionManagement.FilterWithStatus("Pending Redemption Letter Generation")
+        GiftRedemptionManagement.FilterWithStatus("Pending Redemption Letter Generation")
 
-    //     GiftRedemptionManagement.ClickOnsearchFilter()
+        GiftRedemptionManagement.ClickOnsearchFilter()
 
-    //     GiftRedemptionManagement.SelectTableFirstItem()
+        GiftRedemptionManagement.SelectTableFirstItem()
 
-    //     GiftRedemptionManagement.GenerateLetter()
+        GiftRedemptionManagement.GenerateLetter()
 
-    //     GiftRedemptionManagement.FilterWithMemberID(MemberID)
+        GiftRedemptionManagement.FilterWithMemberID(MemberID)
 
-    //     GiftRedemptionManagement.FilterWithStatus("Uncollected")
+        GiftRedemptionManagement.FilterWithStatus("Uncollected")
 
-    //     GiftRedemptionManagement.ClickOnsearchFilter()
+        GiftRedemptionManagement.ClickOnsearchFilter()
 
-    //     GiftRedemptionManagement.ClickTableLink()
+        GiftRedemptionManagement.ClickTableLink()
 
-    //     GiftRedemptionManagement.VerifyStatusInDetail("Uncollected")
-    // })
+        GiftRedemptionManagement.VerifyStatusInDetail("Uncollected")
+    })
 
     it('[TC03] To be able to test exchanging gift/bulk exchanging gift', function () {
 
@@ -87,7 +87,7 @@ describe('[TS02] FS-031 Gift Redemption Management', function () {
 
         GiftRedemptionManagement.SelectTableFirstItem()
 
-        GiftRedemptionManagement.GiftExchange("Gift Certificate test 1","1","Testing Gift Insertion flow")
+        GiftRedemptionManagement.GiftExchange("$1 MCDONALD’S GIFT CERTIFICATE","1","Testing Gift Insertion flow")
 
         GiftRedemptionManagement.FilterWithMemberID(MemberID)
 

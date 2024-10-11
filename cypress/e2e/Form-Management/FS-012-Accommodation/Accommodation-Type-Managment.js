@@ -10,7 +10,7 @@ const common = new Common()
 const { AccTypeName, LifeStyleGroup, FABSGroup, ClubClassification, SMCClassification, AccessMode, CustomerCateName, CustomerCateg,
     EnableHorizone, NewBookingStartDate, ButWithinMonth, ButWithinDays, CustomerAllowdMonth, CustomerAllowdDays, EnableSlotNo, MaxNoOFAccommodation,
     AllowReservation, SendNotification, PermitTemplateCode, AuthorisationPermit, CalendarName,OperatingPeriodName, ChargeRateName, StartDate, location, EndDate,
-    TransactionType, CalculationType, AmountType, BookingAdminFeeProduct, ReservationAdminFeeProduct, CancellationAdminFeeProduct, NonPeakEnableQouta, NonPeakQoutaFor, NonPeakMaximumSlotHour } = data.AccommodationType
+    TransactionType, CalculationType, AmountType, BookingAdminFeeProduct, ReservationAdminFeeProduct, CancellationAdminFeeProduct } = data.AccommodationType
 
 const AccommodationTypeManagement = ()=> {
 
@@ -36,8 +36,6 @@ describe('FS-012 Accommodation Type Management', function () {
 
         AccommodationTypeDetail.FilloutHorizon(AccessMode, CustomerCateg, EnableHorizone, NewBookingStartDate,
             ButWithinMonth, ButWithinDays, CustomerAllowdMonth, CustomerAllowdDays)
-
-        AccommodationTypeDetail.FilloutQuota(CustomerCateg, NonPeakEnableQouta, NonPeakQoutaFor, NonPeakMaximumSlotHour);
 
         AccommodationTypeDetail.FillOutSlotConfiguration(EnableSlotNo, MaxNoOFAccommodation, AllowReservation, SendNotification)
 
@@ -92,13 +90,13 @@ describe('FS-012 Accommodation Type Management', function () {
 
         AccommodationTypeDetail.ClickProductMappingTab()
 
-        AccommodationTypeDetail.ProductMappingTab(BookingAdminFeeProduct, /*ReservationAdminFeeProduct,*/ CancellationAdminFeeProduct)
+        AccommodationTypeDetail.ProductMappingTab(BookingAdminFeeProduct, ReservationAdminFeeProduct, CancellationAdminFeeProduct)
 
         //Approval Workflow
         AccommodationTypeDetail.SubmitForApproval()
 
-        // common.ApprovalWorkFlow('A-AMT', 'Accommodation Type Approval Workflow', 'Approve', 'Testing Finance Approval Accommodation Type Approval Workflow')
-        // cy.wait(5000)
+        common.ApprovalWorkFlow('A-AMT', 'Accommodation Type Approval Workflow', 'Approve', 'Testing Finance Approval Accommodation Type Approval Workflow')
+        cy.wait(5000)
 
         
         common.ApprovalWorkFlow('A-AMT', 'Accommodation Type Approval Workflow', 'Approve', 'Testing Approval workflow for Accommodation Type Approval Workflow')

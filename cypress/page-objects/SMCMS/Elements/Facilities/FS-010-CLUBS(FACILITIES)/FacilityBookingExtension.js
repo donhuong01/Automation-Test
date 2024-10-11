@@ -26,15 +26,13 @@ class elems_FacilityBookingExtension {
 
   static FACILITYBOOKINGEXTENSIONDETAIL = {
     BTN_SUBMIT: '//button[@form="formBookingExtension"]',
-    BTN_SUBMIT2: '//button[text()="Submit"]',
     BTN_CANCEL: '//button[text()="Cancel"]',
     PCK_FACILITYBOOKING: '//h3[text()="Extension Information"]/following-sibling::div//input/following-sibling::button',
-    PCK_FACILITYBOOKING2: '//label[@for="facilityBooking"]/following-sibling::div//input/following-sibling::button',
     TXT_BOOKINGNO: '//input[@name="bookingNumber"]',
     TXT_CUSTOMERNAME: '//input[@name="customerName"]',
     LBL_CUSTOMERCATEGORY: '//label[@for="lblCustomerCategory"]',
     TBL_RESOURCES: '//h3[text()="Resources"]/following-sibling::div//table',
-    BTN_FILTERBOOKING: '//input[@name="customerName"]/parent::div/parent::div/parent::div/following-sibling::div//button[text()="Search Filters"]',
+    BTN_FILTERBOOKING: '//input[@name="customerName"]/parent::div/parent::div/parent::div/following-sibling::div//button',
     BTN_ADDWAIVEROFF: '//button[text()="Add Waiver Off"]',
     DRP_CHARGETYPE: '//span[@id="drpChargeType"]',
     TXT_AMOUNT: '//input[@id="txtAmount"]',

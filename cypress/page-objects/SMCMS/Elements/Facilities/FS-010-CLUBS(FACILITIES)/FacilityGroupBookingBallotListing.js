@@ -6,7 +6,7 @@ class elems_FacilityGroupBookingBallotListing{
     
     BTN_CREATENEW = '//button[text()="Create New"]'
     BTN_SEARCHFILTER = '//button[text()="Search Filters"]'
-    BTN_FACILITYSEARCHFILTER = '(//button[text()="Search Filters"])[2]'
+    BTN_FACILITYSEARCHFILTER = '(//button[text()="Search Filters"])[1]'
 
     DATE_STARTFROM = '//input[@id="dtpStartDateFrom"]'
     DATE_STARTTO = '//input[@id="dtpStartDateTo"]'

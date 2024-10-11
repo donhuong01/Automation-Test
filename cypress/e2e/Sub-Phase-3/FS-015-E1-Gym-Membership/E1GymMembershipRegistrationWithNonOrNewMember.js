@@ -17,14 +17,13 @@ const MemTenureSelect = new MembershipTenureSelection()
 const ShoppingCart = new ShoppingCartPayments()
 const CustomerCreation = new CustomerCreationPage()
 
-const E1GYMMembershipRegistrationWithNonMember = (NRICFull2)=> {
+const E1GYMMembershipRegistrationWithNonMember = ()=> {
 
 Data.forEach(each => {
 
     const { NRICFull, E1GymMemMainSelection, E1GymMembershipSelection, LocationSelection, DependencyType, category, PreferredClubHouse, EffectiveDate, Terms, AddWaiver } = each
 
     const NRICLast4Digit = NRICFull.substr(NRICFull.length - 4);
-    const NRICLast4Digit2 = NRICFull2.substr(NRICFull2.length - 4);
 
     describe('FS-015 E1 GYM Membership Registration', function () {
         const Gender = 'Male'
@@ -35,15 +34,15 @@ Data.forEach(each => {
 
             cy.visit('/membership/customerCheckin').wait(5000)
             cy.Click(elems_CustomerCheckInPage.RBTN_NRIC)
-            cy.EnterDateCheckin(elems_CustomerCheckInPage.DATE_DATEOFBIRTH, DOB)
-            cy.EnterText(elems_CustomerCheckInPage.TXT_LAST4DIGITSNRIC, NRICLast4Digit2)
+            cy.EnterDate(elems_CustomerCheckInPage.DATE_DATEOFBIRTH, DOB)
+            cy.EnterText(elems_CustomerCheckInPage.TXT_LAST4DIGITSNRIC, NRICLast4Digit)
             cy.Click(elems_CustomerCheckInPage.BTN_CHECKIN)
             cy.wait(2000)
             cy.Click(elems_CustomerCheckInPage.BTN_CREATNEW)
 
             CustomerCreation.fillOutRegistrationInfo({
                 name: CustomerName,
-                // DOB: DOB,
+                DOB: DOB,
                 gender: Gender,
             });
 
@@ -58,13 +57,13 @@ Data.forEach(each => {
             CustomerCreation.fillOutContactInformation({
                 handPhone: Customerdata.CustomerCreationPrincipal.ContactInformation.handPhone,
                 emailAddress: "test" + Math.floor(Math.random() * 100000) + "@test.com",
-                // emergencyContact: Customerdata.CustomerCreationPrincipal.ContactInformation.emergencyContact,
-                // homeNumber: Customerdata.CustomerCreationPrincipal.ContactInformation.homeNumber,
+                emergencyContact: Customerdata.CustomerCreationPrincipal.ContactInformation.emergencyContact,
+                homeNumber: Customerdata.CustomerCreationPrincipal.ContactInformation.homeNumber,
 
             });
 
             CustomerCreation.save();
-            cy.wait(5000)
+            cy.wait(50000)
 
             // cy.Click(elems_Landing.SAFRA_Member)
             // cy.Click(elems_Landing.Membership_Registration)

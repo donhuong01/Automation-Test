@@ -146,12 +146,10 @@ const SMCMSPostion = () => {
             posList.Delete(UpdatedPositionName)
 
             //Click Yes button
-            // posList.DeleteConfirmYes()
+            posList.DeleteConfirmYes()
 
-            cy.wait(5000)
-
-            // //Verify Success message
-            // PositionDetail.VerifyNotificationMsg('Record has been deleted successfully.')
+            //Verify Success message
+            PositionDetail.VerifyNotificationMsg('Record has been deleted successfully.')
 
         })
 

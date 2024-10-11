@@ -32,7 +32,7 @@ const commons = new Commons()
 
 const UserID = Math.floor(Math.random() * 1000 )
 const UserID2 = Math.floor(Math.random() * 1000 )
-const WiverName = "TestWaiver"
+const WiverName = "Waiver "
 
 const PrincipalName = WiverName + UserID
 const PrincipalEmail = /*Customerdata.CustomerCreationPrincipal.ContactInformation.emailAddress + UserID*/ PrincipalName + "@test.com"
@@ -72,7 +72,7 @@ describe('Batch Membership Waiver Request management',function(){
             cy.visit('/membership/customerCheckin')
             cy.wait(5000)
             cy.Click(elems_CustomerCheckInPage.RBTN_NRIC)
-            cy.EnterDateCheckin(elems_CustomerCheckInPage.DATE_DATEOFBIRTH, Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB)
+            cy.EnterDate(elems_CustomerCheckInPage.DATE_DATEOFBIRTH, Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB)
             cy.EnterText(elems_CustomerCheckInPage.TXT_LAST4DIGITSNRIC, CustomerNRIC)
             cy.Click(elems_CustomerCheckInPage.BTN_CHECKIN)
             cy.wait(2000)
@@ -179,7 +179,7 @@ describe('Batch Membership Waiver Request management',function(){
             cy.visit('/membership/customerCheckin')
             cy.wait(5000)
             cy.Click(elems_CustomerCheckInPage.RBTN_NRIC)
-            cy.EnterDateCheckin(elems_CustomerCheckInPage.DATE_DATEOFBIRTH, Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB)
+            cy.EnterDate(elems_CustomerCheckInPage.DATE_DATEOFBIRTH, Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB)
             cy.EnterText(elems_CustomerCheckInPage.TXT_LAST4DIGITSNRIC, CustomerNRIC2)
             cy.Click(elems_CustomerCheckInPage.BTN_CHECKIN)
             cy.wait(2000)
@@ -289,21 +289,18 @@ describe('Batch Membership Waiver Request management',function(){
         const WaiverPeriod = dataWaiver.Waiver.WaiverPeriod
         const EndDate = dataWaiver.Waiver.EndDate   
 
-        cy.intercept('POST', 'https://api.qa-smcms.safra.sg/v2/adminapi/membership/batch-membership-waiver-requests').as('ID')
+        cy.intercept('POST', 'https://api-uat-smcms.safra.sg/smcms/v2/adminapi/membership/batch-membership-waiver-requests').as('ID')
         
         cy.visit('/membership/memberList?pageNumber=1&pageSize=20')  //Visit web page for member listing 
 
         Waiver.FilterbyName(WiverName)
-        cy.wait(15000)
+        cy.wait(5000)
         // Waiver.ClickOnRightEndArrowInMemListing()
 
-        cy.TickSpecificTableItem(PrincipalName)
-        cy.TickSpecificTableItem(PrincipalName2)
-
-        // Waiver.VerifyMemberInListing(PrincipalName)
-        // Waiver.SelectTableLinkItem(PrincipalName)
-        // Waiver.VerifyMemberInListing(PrincipalName2)
-        // Waiver.SelectTableLinkItem(PrincipalName2)
+        Waiver.VerifyMemberInListing(PrincipalName)
+        Waiver.SelectTableLinkItem(PrincipalName)
+        Waiver.VerifyMemberInListing(PrincipalName2)
+        Waiver.SelectTableLinkItem(PrincipalName2)
 
         
         cy.SelectBtnDropdownItem(elems_MemberListing.BTNDRP_MAINTENANCE,'Waiver') 

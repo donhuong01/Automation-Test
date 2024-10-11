@@ -68,9 +68,8 @@ class MembershipRenewAdviseSettingDetail{
         //Validate Member Type Code
         if (MemberTypeCode !== undefined)
         {
-            // cy.xpath(elems_MembershipRenewalAdviceSettingDetail.LST_MEMBERTYPECODE).clear()
-            // cy.EnterText(elems_MembershipRenewalAdviceSettingDetail.LST_MEMBERTYPECODE,MemberTypeCode)
-            cy.SelectPickerItem(elems_MembershipRenewalAdviceSettingDetail.PCK_MEMBERTYPECODE, MemberTypeCode)
+            cy.xpath(elems_MembershipRenewalAdviceSettingDetail.LST_MEMBERTYPECODE).clear()
+            cy.EnterText(elems_MembershipRenewalAdviceSettingDetail.LST_MEMBERTYPECODE,MemberTypeCode)
         }
         //Validate Member Card Type 
         if (MemberStatusReason !== undefined)

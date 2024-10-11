@@ -48,7 +48,7 @@ describe('[TS01] Membership Expulsion Confirmation PopUp and Reinstatement Manag
             cy.visit('/membership/customerCheckin')
             cy.wait(5000)
             cy.Click(elems_CustomerCheckInPage.RBTN_NRIC)
-            cy.EnterDateCheckin(elems_CustomerCheckInPage.DATE_DATEOFBIRTH, Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB)
+            cy.EnterDate(elems_CustomerCheckInPage.DATE_DATEOFBIRTH, Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB)
             cy.EnterText(elems_CustomerCheckInPage.TXT_LAST4DIGITSNRIC, CustomerNRIC)
             cy.Click(elems_CustomerCheckInPage.BTN_CHECKIN)
             cy.wait(2000)
@@ -56,7 +56,7 @@ describe('[TS01] Membership Expulsion Confirmation PopUp and Reinstatement Manag
         
             CustomerCreation.fillOutRegistrationInfo({
                 name: PrincipalName,
-                // DOB: Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB,
+                DOB: Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB,
                 gender:Customerdata.CustomerCreationPrincipal.RegistrationInformation.gender,
                 /* profilePicture: "DP.png" */
             });
@@ -70,10 +70,10 @@ describe('[TS01] Membership Expulsion Confirmation PopUp and Reinstatement Manag
             });
          
             CustomerCreation.fillOutContactInformation({
-                handPhone: '865812' + Math.floor(Math.random() * 1000),
+                handPhone: '56582' + Math.floor(Math.random() * 1000),
                 emailAddress: PrincipalEmail,
-                // emergencyContact: Customerdata.CustomerCreationPrincipal.ContactInformation.emergencyContact,
-                // homeNumber: '56582' + Math.floor(Math.random() * 1000),
+                emergencyContact: Customerdata.CustomerCreationPrincipal.ContactInformation.emergencyContact,
+                homeNumber: '56582' + Math.floor(Math.random() * 1000),
         
                 // Preferred Contact Mode
                 preferredContactModeSelectAll: Customerdata.CustomerCreationPrincipal.ContactInformation.preferredContactModeSelectAll,

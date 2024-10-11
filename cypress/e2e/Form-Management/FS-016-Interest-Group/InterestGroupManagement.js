@@ -29,7 +29,7 @@ describe('[TS02] FS-016 Interest Group Management', function () {
 
     it('[TC01] Creating New Interest Group and click cancel button', function () {
 
-        cy.intercept('POST', 'https://api.qa-smcms.safra.sg/v2/adminapi/interest-group/interest-groups/membership-tag').as('ID')
+        cy.intercept('POST', 'https://api-uat-smcms.safra.sg/smcms/v2/adminapi/interest-group/interest-groups/membership-tag').as('ID')
 
         cy.visit('/membership/interestGroupListing')
         cy.wait(2000)
@@ -117,7 +117,7 @@ describe('[TS02] FS-016 Interest Group Management', function () {
         InterestGroupDetail.FilloutMembershipTerm(termLength, termLengthType, onlineDisplayTerm, minRegTerm,
             minRenewalTerm, minRangeForBypassTerm, minRangeForBypassTerm, maxRangeForBypassTerm)
 
-        cy.intercept('POST', 'https://api.qa-smcms.safra.sg/v2/adminapi/interest-group/interest-groups/membership-tag').as('ID')
+        cy.intercept('POST', 'https://api-uat-smcms.safra.sg/smcms/v2/adminapi/interest-group/interest-groups/membership-tag').as('ID')
 
         // Click Submit Button
         InterestGroupDetail.Submit()

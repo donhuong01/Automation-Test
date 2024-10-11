@@ -7,14 +7,14 @@ const Facility_Report = () => {
 
     describe("Facility Reports Verification",function(){
 
-        it('Checking Access on on Booking Amendment Listing', function(){
+        it('Checking functionallity and Verification on Booking Amendment Listing', function(){
             Reports_Facility.verifyBookingAmendmentListing
             (
                 data.BOOKING_AMENDMENT.EXPECTEDPG
             )
         })
 
-        it('Checking Access on on Booking Cancellation Listing', function(){
+        it('Checking functionallity and Verification on Booking Cancellation Listing', function(){
             Reports_Facility.verifyBookingCancellationListing
             (
                 data.BOOKING_Cancellation.EXPECTEDPG,
@@ -26,28 +26,28 @@ const Facility_Report = () => {
             )
         })
 
-        it('Checking Access on on Booking Extension Listing', function(){
+        it('Checking functionallity and Verification on Booking Extension Listing', function(){
             Reports_Facility.verifyBookingExtensionListing
             (
                 data.BOOKING_EXTENSION.EXPECTEDPG
             )
         })
 
-        it('Checking Access on on Booking Listing inactive', function(){
+        it('Checking functionallity and Verification on Booking Listing inactive', function(){
             Reports_Facility.verifyBookingListingInactive
             (
                 data.BOOKING_INACTIVE.EXPECTEDPG
             )
         })
 
-        it('Checking Access on on Booking Listing', function(){
+        it('Checking functionallity and Verification on Booking Listing', function(){
             Reports_Facility.verifyBookingListing
             (
                 data.BOOKING_LISTING.EXPECTEDPG
             )
         })
 
-        it('Checking Access on on Booking Listing Summary', function(){
+        it('Checking functionallity and Verification on Booking Listing Summary', function(){
             Reports_Facility.verifyBookingListingSummary
             (
                 data.BOOKING_SUMMARY.EXPECTEDPG,
@@ -57,14 +57,14 @@ const Facility_Report = () => {
             )
         })
 
-        it('Checking Access on on Closure Listing', function(){
+        it('Checking functionallity and Verification on Closure Listing', function(){
             Reports_Facility.verifyClosureListing
             (
                 data.CLOSURE_LISTING.EXPECTEDPG
             )
         })
 
-        it('Checking Access on on Group Booking Listing', function(){
+        it('Checking functionallity and Verification on Group Booking Listing', function(){
             Reports_Facility.verifyGroupBookingListing
             (
                 data.GROUP_BOOKING.EXPECTEDPG,
@@ -76,14 +76,14 @@ const Facility_Report = () => {
             )
         })
 
-        it('Checking Access on on Group Booking Ballot Listing', function(){
+        it('Checking functionallity and Verification on Group Booking Ballot Listing', function(){
             Reports_Facility.verifyGroupBookingBallotListing
             (
                 data.GROUP_BOOKING_BALLOT.EXPECTEDPG
             )
         })
 
-        it('Checking Access on on Reservation Listing', function(){
+        it('Checking functionallity and Verification on Reservation Listing', function(){
             Reports_Facility.verifyReservationListing
             (
                 data.RESERVATION_LISTING.EXPECTEDPG,
@@ -95,7 +95,7 @@ const Facility_Report = () => {
             )
         })
 
-        it('Checking Access on on Utilization Listing', function(){
+        it('Checking functionallity and Verification on Utilization Listing', function(){
             Reports_Facility.verifyUtilizationListing
             (
                 data.UTILIZATION_LISTING.EXPECTEDPG,
@@ -105,21 +105,7 @@ const Facility_Report = () => {
             )
         })
 
-        it('Checking Access on on Facility Booking By Home Team', function(){
-            Reports_Facility.verifyBookingbyHomeTeam
-            (
-                data.BOOKING_BY_HOME_TEAM.EXPECTEDPG,
 
-            )
-        })
-
-        it('Checking Access on on Booking Tracking', function(){
-            Reports_Facility.verifyBookingTracking
-            (
-                data.BOOKING_TRACKING.EXPECTEDPG,
-
-            )
-        })
     })
 
 

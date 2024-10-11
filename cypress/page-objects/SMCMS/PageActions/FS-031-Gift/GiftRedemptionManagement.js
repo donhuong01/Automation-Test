@@ -69,7 +69,7 @@ class GiftRedemptionManagement {
      *****************************************************/
     ClickTableLink() {
 
-        cy.Click('(//div[@class="k-grid k-grid-md"]//table//a)[1]')
+        cy.Click('(//div[@class="k-widget k-grid"]//table//a)[1]')
         cy.wait(2000)
 
     }
@@ -212,11 +212,11 @@ class GiftRedemptionManagement {
 
         cy.Click(elems_GiftRedemptionTransaction.ListingForm.BTN_INSERTGIFT)
         cy.wait(2000)
-        //cy.Click(elems_GiftRedemptionTransaction.GiftInsertionForm.PCK_MEMBERID)
+        cy.Click(elems_GiftRedemptionTransaction.GiftInsertionForm.PCK_MEMBERID)
         cy.EnterText(elems_GiftRedemptionTransaction.GiftInsertionForm.TXT_MEMBERID, MemberID)
-        // cy.Click(elems_GiftRedemptionTransaction.GiftInsertionForm.BTN_SEARCHFILTER)
-        // cy.SelectTableItem(elems_Picker.TBL_PICKERITEMS, "Member ID", MemberID)
-        // cy.Click(elems_Picker.BTN_SELECT)
+        cy.Click(elems_GiftRedemptionTransaction.GiftInsertionForm.BTN_SEARCHFILTER)
+        cy.SelectTableItem(elems_Picker.TBL_PICKERITEMS, "Member ID", MemberID)
+        cy.Click(elems_Picker.BTN_SELECT)
 
         cy.Click(elems_GiftRedemptionTransaction.GiftInsertionForm.PCK_GIFTITEM)
         cy.SelectTableItem(elems_Picker.TBL_PICKERITEMS, "Gift Name", GiftItem)

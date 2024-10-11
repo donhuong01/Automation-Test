@@ -26,7 +26,7 @@ class InterestGroupMembershipConversion {
        *****************************************************/
     ConversionInformation(ConversionReason) {
 
-        cy.xpath('//label[@for="lblInterestGroup"]',{timeeout: 30000}).then($IG => {
+        cy.xpath('//label[@for="lblInterestGroup"]').then($IG => {
 
             const Dest = $IG.text().trim()
 
@@ -37,7 +37,7 @@ class InterestGroupMembershipConversion {
             // if (DestinationIG === 'BITEZ') {
             //     cy.SelectTableItem(elems_IGMembershipConversion.TBL_SELECTDESTINATIONIG, 'Name', "BITEX")
             // } else {
-                cy.TickSpecificTableItem("Test IG Details - Main")
+                cy.SelectTableItem(elems_IGMembershipConversion.TBL_SELECTDESTINATIONIG, 'Name', "BITEZ")
             // }
     
             cy.Click(elems_IGMembershipConversion.BTN_SELECT)

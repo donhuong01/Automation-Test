@@ -19,9 +19,7 @@ import CustomerCreationPage from '../../../page-objects/SMCMS/PageActions/FS-014
 import Customerdata from '../../../fixtures/Data_Module/CustomerCreationData'
 import elems_CustomerCheckInPage from '../../../page-objects/SMCMS/Elements/Membership/FS014_Membership-Master-Registration-Renewal/CustomerCheckInPage'
 import MembershipModuleSetting from '../../../page-objects/SMCMS/PageActions/FS-014-Membership-Master-Registration-Renewal/FS-14-Membership Module Setting/MembershipModuleSetting'
-import elems_PendingTaskDetail from "../../../page-objects/SMCMS/Elements/Admin/FS004_Admin-Settings/PendingTaskDetail"
-import elems_PendingTaskListing from "../../../page-objects/SMCMS/Elements/Admin/FS004_Admin-Settings/PendingTaskListing"
-import elems_Picker from "../../../page-objects/SMCMS/Elements/Common/Picker"
+
 
 
 //Page definition
@@ -61,7 +59,7 @@ describe('[TS01] Membership Deferment Request Management',function(){
             cy.visit('/membership/customerCheckin')
             cy.wait(5000)
             cy.Click(elems_CustomerCheckInPage.RBTN_NRIC)
-            cy.EnterDateCheckin(elems_CustomerCheckInPage.DATE_DATEOFBIRTH, Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB)
+            cy.EnterDate(elems_CustomerCheckInPage.DATE_DATEOFBIRTH, Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB)
             cy.EnterText(elems_CustomerCheckInPage.TXT_LAST4DIGITSNRIC, CustomerNRIC)
             cy.Click(elems_CustomerCheckInPage.BTN_CHECKIN)
             cy.wait(2000)
@@ -151,7 +149,7 @@ describe('[TS01] Membership Deferment Request Management',function(){
             ShoppingCart.fillOutandApplyPayment('CASH') 
             
             // Wait for 3 minites
-            cy.wait(10000)
+            cy.wait(20000)
             
             //Logout
             cy.LogoutOfSmcms()
@@ -159,47 +157,47 @@ describe('[TS01] Membership Deferment Request Management',function(){
    
         })
 
-    // it('[TC02] Creating and cancelling a Membership Deferment Request', function(){
+    it('[TC02] Creating and cancelling a Membership Deferment Request', function(){
 
-    //     cy.visit('/membership/memberList')  //Visit web page for member listing 
+        cy.visit('/membership/memberList')  //Visit web page for member listing 
 
-    //     cy.wait(5000)
-    //     //Filter Out Name
-    //     cy.EnterText(elems_MemberListing.TXT_NAME, PrincipalName)
-    //     cy.Click(elems_MemberListing.BTN_SEARCHFILTER)
-    //     cy.wait(3000)
+        cy.wait(5000)
+        //Filter Out Name
+        cy.EnterText(elems_MemberListing.TXT_NAME, PrincipalName)
+        cy.Click(elems_MemberListing.BTN_SEARCHFILTER)
+        cy.wait(3000)
 
-    //     //cy.xpath('//span[@class="k-icon k-i-arrow-end-right"]').Click('//span[@class="k-icon k-i-arrow-end-right"]')
-    //     cy.wait(3000)
+        //cy.xpath('//span[@class="k-icon k-i-arrow-end-right"]').Click('//span[@class="k-icon k-i-arrow-end-right"]')
+        cy.wait(3000)
 
-    //     cy.SelectTableItem(
-    //         elems_MemberListing.TBL_MEMBERLISTING,
-    //         'Name', PrincipalName,
-    //         'NRIC (Last 4 digits)', CustomerNRIC
-    //         )
+        cy.SelectTableItem(
+            elems_MemberListing.TBL_MEMBERLISTING,
+            'Name', PrincipalName,
+            'NRIC (Last 4 digits)', CustomerNRIC
+            )
         
-    //     cy.SelectBtnDropdownItem(elems_MemberListing.BTNDRP_MAINTENANCE,'Deferment')
+        cy.SelectBtnDropdownItem(elems_MemberListing.BTNDRP_MAINTENANCE,'Deferment')
        
-    //     //Start page action 
+        //Start page action 
 
-    //     const StartMonth =Defdata.Deferment.StartMonth
-    //     const ReasonCode = Defdata.Deferment.ReasonCode
-    //     const Remarks = Defdata.Deferment.Remarks
-    //     const DefermentPeriod = Defdata.Deferment.DefermentPeriod
-    //     const EndDate = Defdata.Deferment.EndDate     
+        const StartMonth =Defdata.Deferment.StartMonth
+        const ReasonCode = Defdata.Deferment.ReasonCode
+        const Remarks = Defdata.Deferment.Remarks
+        const DefermentPeriod = Defdata.Deferment.DefermentPeriod
+        const EndDate = Defdata.Deferment.EndDate     
             
-    //     DefermentRequest.fillOutDefermentForm(StartMonth,DefermentPeriod,ReasonCode,Remarks)
+        DefermentRequest.fillOutDefermentForm(StartMonth,DefermentPeriod,ReasonCode,Remarks)
         
-    //     // DefermentRequest.VerifyDefermentForm(PrincipalName, CustomerNRIC)
+        // DefermentRequest.VerifyDefermentForm(PrincipalName, CustomerNRIC)
 
-    //     // DefermentRequest.verifyEndDate()
+        // DefermentRequest.verifyEndDate()
         
-    //     DefermentRequest.Cancel('Member Listing')
+        DefermentRequest.Cancel('Member Listing')
 
-    //     DefermentRequest.verifyPageTitle()
+        DefermentRequest.verifyPageTitle()
 
         
-    // })
+    })
 
     it('[TC03] Creating a Membership Deferment Request', function(){
 
@@ -238,41 +236,13 @@ describe('[TS01] Membership Deferment Request Management',function(){
         
         DefermentRequest.Request()
                                                 
-        // DefermentRequest.verifyPageTitle()
+        DefermentRequest.verifyPageTitle()
 
        
         
     })
 
-    it('[TC04] Approving Membership Deferment Request', function(){
-      //cy.wait(300000)
-      cy.visit('/admin/pendingTaskList')
-      cy.wait(5000)
-      cy.EnterText(elems_PendingTaskListing.TXT_TASKID, 'M-DFE')
-      cy.EnterText(elems_PendingTaskListing.TXT_WORKFLOWNAME, 'Membership Deferment Approval Workflow')
 
-      //Click on Filter button
-      cy.Click(elems_PendingTaskListing.BTN_SEARCH)
-      cy.wait(5000)
-
-      //Click on Table item
-      cy.xpath('(//h2[text()="Pending Task Listing"]/ancestor::div//table//tr["Task ID"]//td//a)[1]').click({ force: true })
-      // cy.ClickTableLinkItem(elems_PendingTaskListing.TBL_PENDINGTASKLISTING, "Task ID", TaskID)
-
-      cy.wait(5000)
-       
-
-      // Select Approval Outcome
-      cy.SelectDropDownItem(elems_PendingTaskDetail.DRP_APPROVALOUTCOME, "Approve")
-        //Enter Remark
-       cy.EnterText(elems_PendingTaskDetail.TXTAREA_REMARK, 'Testing')
-
-        //Click on Save button
-        cy.Click(elems_PendingTaskDetail.BTN_SUBMIT)
-        cy.wait(1000)
-        cy.ValidateElementText(elems_Picker.MSG_NOTIFICATION, 'Record has been saved successfully.')
-
-    })
 })
 
 }

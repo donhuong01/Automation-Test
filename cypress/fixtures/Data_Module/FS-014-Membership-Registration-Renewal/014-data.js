@@ -5,33 +5,31 @@ const data = {
     checkin_expectedPg: "Customer Check-In",
     meminfo_expectedPg: 'Member Information',
 
-    
-
     checkin_memberID: {
         type: 'MEMBERID',
-        value1: 'A300008703'//QA - A300005639 //UAT - A300008703 
+        value1: 'A300002700'
     },
     checkin_NRIC: {
         type: 'NRIC',
-        value1: '539E',//QA - 980Z //UAT - 628A
-        value2: '21-Jun-1983',//QA - 18-Aug-1980 //UAT - 17-Aug-1980
+        value1: '912B',
+        value2: '06-Jul-1980',
     },
     checkin_email: {
         type: 'EMAIL',
-        value1: 'Auto-User3091177306@test.com', //QA - Auto-User2225941520@test.com //UAT - Auto-User3091177306@test.com
+        value1: 'TestuserQA83@test.com', //A300002657
     },
     checkin_mobile: {
         type: 'MOBILENUMBER',
-        value1: '88888826',//QA
-        value2: 'A300005639'// QA - A300005639 //UAT - A300008703
+        value1: '1122-3344',
+        value2: 'A300002700'
     },
     checkin_scancard: {
         type: 'SCANECARD',
-        value1: 'A300008703_3DA4F788839DE16D26F7865886038183AECEF073A605371439FCA067A95E8F15',//QA
+        value1: 'A300002700_3DA4F788839DE16D26F7865886038183AECEF073A605371439FCA067A95E8F15',
     },
     checkin_swipecard: {
         type: 'SWIPECARD',
-        value1: '%A8008980001869402^LEE CHOON CHIEH ^2508^A300008703^019801221000000?;8008980001869402=2508201000005500011?',//QA
+        value1: '%A8008980001869402^LEE CHOON CHIEH ^2508^A300002700^019801221000000?;8008980001869402=2508201000005500011?',
     },
 
     //Membership Tenure Selection
@@ -97,9 +95,9 @@ const data = {
         Code: 'ITZY' + + Math.floor(Math.random() * 10000 * 50),
         Description: 'Sample Description',
         MembershipType: 'OD',
-        ServiceStatus: 'VETERAN',
+        ServiceStatus: 'SAFVC Active',
         Rank: 'C2D',
-        MinYears: '3',
+        MinYears: '2',
         MaxYears: '5',
         MaxCapYears: '8',
         Remark: 'Sample Data',
@@ -167,13 +165,13 @@ const data = {
             Gender: 'Male',
             DateofBirth: '01-Jan-1982',
             Age: '41',
-            NSStatus: 'SAF NSMan',//'SAF Regular/DXO',
+            NSStatus: 'SAF Regular DXO',
             NSRank: 'Officer',
-            MemberType: 'OD',
+            MemberType: 'AS',
             Nationality: 'Singaporean/PR',
             MaritalStatus: 'Married',
             CardType: 'SAFRA Classic Card',
-            InterestinDBSCard: 'N/A',
+            InterestinDBSCard: 'SAFRA DBS Credit Card',
             ProfilePicture: 'test_images.png'
         },
 
@@ -186,8 +184,7 @@ const data = {
         },
         ContactInfo: {
             Handphone: '87126534',
-            EmailAddress: Math.floor(Math.random() * 100000 * 50) + '@autotest.com',
-            EmailAddress2: Math.floor(Math.random() * 1000100 * 50) + '@autotest.com',
+            EmailAddress: 'auto' + Math.floor(Math.random() * 10000 * 50) + '@test.com',
             HomeNumber: '62347722',
             EmergencyContact: '8658 5894',
             //Preferred COntact Mode
@@ -294,7 +291,7 @@ const data = {
         },
         ContactInfo: {
             Handphone: '87126534',
-            EmailAddress: 'Testusers' + Math.floor(Math.random() * 100000 * 3) + '@synergyonline.com',
+            EmailAddress: 'Testuser' + Math.floor(Math.random() * 100000 * 2) + '@synergyonline.com',
             HomeNumber: '63231234',
             EmergencyContact: '87627612',
             //Preferred COntact Mode
@@ -493,7 +490,7 @@ const data = {
     BadAddressUpdateDetail: {
 
         batchId: '-',
-        uploadFile: 'bad-address-update.xlsx',
+        uploadFile: 'bad-address-test.xlsx',
         status: '-'
     },
 
@@ -531,30 +528,30 @@ const data = {
     MembershipModuleSetting: {
 
         DocumentaryProofSetting: {
-            MaximumAllowedFile: '9,000',
+            MaximumAllowedFile: '999996',
             AutoDeleteCheckBox: 'check',
-            FirstNotification: '20',
-            SecondNotification: '50',
-            ThirdNotification: '80',
-            FinalNotification: '100',
-            TerminationAfterApplicationDate: '150',
-            DocumentaryProofUpload: 'www.safra.sg'
+            FirstNotification: '1',
+            SecondNotification: '2',
+            ThirdNotification: '3',
+            FinalNotification: '4',
+            TerminationAfterApplicationDate: '27',
+            DocumentaryProofUpload: 'link 2022'
         },
 
 
         RenewalAdvice: {
             EnableRenewalAdvice: 'check',
             MonthsBeforeSendingRenewal: '3',
-            ERenewalPrefixUrl: 'https://ptwebresponsive.safra.sg/dt/erenewal'
+            ERenewalPrefixUrl: 'prefix 2022'
         },
 
         SfsSetting: {
             SfsActivation: 'check',
-            AdminFeeChargeItem: '5 YRS CC',
+            AdminFeeChargeItem: '10 YRS SC',
 
             AdminFeeChargeItemFilters: {
-                NameFilter: '5 YRS SC',
-                DescriptionFilter: '5 YRS SC',
+                NameFilter: '10 YRS SC',
+                DescriptionFilter: '10 YRS SC',
                 CardTypeFilter: 'SAFRA Classic Card',
                 StatusFilter: 'Active'
             }
@@ -873,7 +870,7 @@ const data = {
 
     CustomerCreationPrincipal: {
         RegistrationInformation: {
-            name: 'TestUser ',
+            name: 'Test User ',
             DOB: '18-Aug-1980',
             gender: 'Male'
         },
@@ -892,12 +889,11 @@ const data = {
             homeNumber2: "67419445",
 
             preferredContactModeSelectAll: 'check',
-            preferredContactModeEmail: 'check',
-            preferredContactModeMail: 'check',
-            preferredContactModeSMS: 'check',
-            preferredContactModeVoiceCall: 'check',
-            preferredContactModePushNotification: 'check',
-            preferredContactModeWhatsApp: 'check',
+            preferredContactModeEmail: 'uncheck',
+            preferredContactModeMail: 'uncheck',
+            preferredContactModeSMS: 'uncheck',
+            preferredContactModeVoiceCall: 'uncheck',
+            preferredContactModePushNotification: 'uncheck',
 
             //Consent Information
             consentInformationMarketing: 'check',
@@ -907,8 +903,7 @@ const data = {
         },
         InterestAreaInformation: {
             //Preferred SAFRA clubs
-            clubChoa: 'check',
-            clubFaber: 'uncheck',
+            clubFaber: 'check',
             clubPayoh: 'uncheck',
             clubTampines: 'uncheck',
             clubYishun: 'uncheck',
@@ -954,7 +949,6 @@ const data = {
             groupTech: 'check',
             groupTravel: 'uncheck'
         }
-       
     },
 
     CustomerCreationDependentChild: {
@@ -971,14 +965,14 @@ const data = {
             MaritalStatus: 'Single',
             CardType: 'SAFRA Classic Card',
             InterestinDBSCard: 'N/A',
-            AllowtoRedeemSAFRAPoints: 'check',
+            AllowtoRedeemSAFRAPoints: 'uncheck',
             //ProfilePicture: 'test_images.png'
         },
         ContactInformation: {
             handPhone: '85 658 5896',
             emailAddress: 'testuser',
             emergencyContact: "85 658 5893",
-            homeNumber: "62112342",
+            homeNumber: "82112342",
 
             preferredContactModeSelectAll: 'check',
             preferredContactModeEmail: 'uncheck',
@@ -1057,7 +1051,7 @@ const data = {
             MaritalStatus: 'Married',
             CardType: 'SAFRA Classic Card',
             InterestinDBSCard: 'N/A',
-            AllowtoRedeemSAFRAPoints: 'check',
+            AllowtoRedeemSAFRAPoints: 'uncheck',
         },
         AddressInformation: {
             postalCode: '569933',
@@ -1067,11 +1061,11 @@ const data = {
             myMailbox: "SGPost"
         },
         ContactInformation: {
-            handPhone: '8658 5896',
+            handPhone: '+65 658 5896',
             emailAddress: 'testuser',
-            emergencyContact: "8658 5893",
+            emergencyContact: "+65 658 5893",
             conentInformationServiceNotification: 'check',
-            homeNumber: "6223 2323",
+            homeNumber: "12232323",
 
             preferredContactModeSelectAll: 'check',
             preferredContactModeEmail: 'uncheck',

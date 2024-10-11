@@ -66,8 +66,7 @@ it('[TC03] Verify Newly created item in the listing form', function () {
 
         VolunteerListing.verifyPageTitle('Volunteer Committee Listing')
 
-        cy.TickSpecificTableItem(committeeCode)
-        //VolunteerListing.SelectTableEntry('Committee Code', committeeCode)
+        VolunteerListing.SelectTableEntry('Committee Code', committeeCode)
 
         VolunteerListing.delete()
         

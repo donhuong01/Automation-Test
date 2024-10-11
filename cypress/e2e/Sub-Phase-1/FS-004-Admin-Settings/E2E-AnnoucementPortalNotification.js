@@ -135,10 +135,10 @@ describe('[TS17] Announcement Portal Notification Detail', function () {
         AnnouncePortNotifList.selectItem(Updatedtitle)
 
         //Table table entry
-        // AnnouncePortNotifList.delete()
+        AnnouncePortNotifList.delete()
 
         //Record deleted succesffull
-        // AnnouncePortalNotifDtl.VerifyNotificationMsg('Record has been deleted successfully.')
+        AnnouncePortalNotifDtl.VerifyNotificationMsg('Record has been deleted successfully.')
 
 
     })

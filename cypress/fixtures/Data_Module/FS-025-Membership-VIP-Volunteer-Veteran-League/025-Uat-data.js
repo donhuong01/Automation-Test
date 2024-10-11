@@ -19,7 +19,7 @@ volunteerAppointmentDetail:
 
     
     AppointmentID: 'ACC_YS_ADVSR',
-    AppointmentCode: 'MGR-001',
+    AppointmentCode: 'CAPTN',
     CommitteeCode: 'BAC_TP',
     Point: 7,
     ClubHouseStore: 'SAFRA HQ',
@@ -39,9 +39,9 @@ VIPAppointmentTypeDetail:{
 VolAppointmentTermRegistration: {
 
     AppointmentID:'ACC_YS_CHAIR',
-    Last4NRICNO:'449F', //UAT - 703I //QA -695G
-    MemberID:'A300006422',//UAT - A300002856, //QA - A300005574
-    MemberName:'Test User 588H', // UAT - TestuserQA92 //QA - Test User 695G
+    Last4NRICNO:'703I',
+    MemberID:'A300002856',//'A300000160',
+    MemberName:'TestuserQA92',
     AppointmentTypeID:'ACC_YS_CHAIR',
     Type:'Terminated',
     StartDate:'15-Nov-2013',
@@ -51,22 +51,22 @@ VolAppointmentTermRegistration: {
 // VIP Appointment Term Registration Detail
 VIPAppointmentTermRegDetail: {
 
-    MemberID:'A300006494',
-    Name:'	Test User 460D',//'Test User 1',
-    NRIC:'460D',//'451C',
-    AppointmentID:'HM-001',//'BOG-002',
-    Type:'HM',//'VIP 1',
-    StartDate:'08-Feb-2024',
+    MemberID:'A300002856',
+    Name:'TestuserQA92',//'Test User 1',
+    NRIC:'703I',//'451C',
+    AppointmentID:'BOG-002',
+    Type:'VIP 1',
+    StartDate:'08-Feb-2023',
     EndDate:'09-Oct-2024',
 
     //Updated data
-    UpdatedMemberID:'A300006508',
-    UpdatedName:'Test User 397Z',
-    UpdatedNRIC:'397Z',
-    UpdatedAppointmentID:'DC-001',
-    UpdatedType:'VIP 1',
-    UpdatedStartDate:'16-Nov-2024',
-    UpdatedEndDate:'18-Dec-2024',
+    UpdatedMemberID:'A300002857',
+    UpdatedName:'TestuserQA93',
+    UpdatedNRIC:'484C',
+    UpdatedAppointmentID:'HM-001',
+    UpdatedType:'HM',
+    UpdatedStartDate:'16-Nov-2022',
+    UpdatedEndDate:'18-May-2024',
 },
 
 

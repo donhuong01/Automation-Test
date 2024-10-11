@@ -21,19 +21,11 @@ describe('[TS01] FS-015 E1 GYM Membership Reinsatement', function () {
 
         E1GymMembershipReinstatement.ReinstatementInfo(data.TermStartDate)
 
-        if(cy.xpath('//button[text()="Add to Cart"]')){
-            E1GymMembershipReinstatement.AddToCart()
-            common.fillOutandApplyPayment('CASH')
-            cy.wait(5000)
-        }else {
-            E1GymMembershipReinstatement.Submit()
-        }
+        E1GymMembershipReinstatement.Submit()
 
-        common.ApprovalWorkFlow('E1-RIS', 'Energy One Reinstatement Approval WorkFlow', 'Approve', 'test')
+        common.fillOutandApplyPayment('CASH')
 
         cy.visit('/membership/e1GymMembershipList').wait(5000)
-
-        E1GymMembershipListing.FilterSAFRAMembershipID(MemberID)
 
         E1GymMembershipListing.StatusMemberID(MemberID, 'Active')
 

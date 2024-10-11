@@ -23,7 +23,7 @@ const { ECard, PhysicalCard, CardType, CardCategory, MemberCategory, CardStatus}
 
 const VolunteerCardManagement = (MemberID, MemberName, Last4NRICNO, CardType) => {
 
-describe('[TS020] Volunteer Card Managment', function () {
+describe('[TS020] Volunteer Appointment Term Registration Managment', function () {
 
 
 
@@ -82,12 +82,9 @@ describe('[TS020] Volunteer Card Managment', function () {
    
        // //Select Member Card Listing
        VolunteerCards.SelectMemberCardNumber('Member ID', MemberID)
-        
-    //    //Click on Deactivate E-Card
-    //    VolunteerCards.DeactivateECard()
-
-    //    //Click on E-Card
-    //    VolunteerCards.ActivateECard()
+       
+       // //Click on E-Card
+       VolunteerCards.ActivateECard()
    
        // //Select Member Card Listing
        VolunteerCards.SelectMemberCardNumber('Member ID', MemberID)

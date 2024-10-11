@@ -36,14 +36,15 @@ class BadAddressUpdateListing {
      * @param {string} Status 
      * @param {string} MemberId 
      *****************************************************/
-     verifyBadAddressUpdateList(Status){
+     verifyBadAddressUpdateList(Status, BatchId){
 
         //badAddressUpdateList.forEach( data => {
-            // cy.VerifyTableEntry(
-            //     elems_BadAddressUpdateListing.TBL_BADADDRESSUPDATELISTING,
-            //     'Status', Status,
-            // )
-        cy.ValidateLastElement(Status)
+            cy.VerifyTableEntry(
+                elems_BadAddressUpdateListing.TBL_BADADDRESSUPDATELISTING,
+                'Batch ID', BatchId,
+                'Status', Status,
+
+            )
        // })
     }
 
@@ -86,7 +87,7 @@ class BadAddressUpdateListing {
      *****************************************************/
     ClickAndUpdateBadAddress(){
 
-        cy.xpath(elems_BadAddressUpdateListing.TBL_BADADDRESSUPDATELISTING).last().click({force: true})
+        cy.xpath(elems_BadAddressUpdateListing.TBL_BADADDRESSUPDATELISTING).first().click()
     }
 }
 

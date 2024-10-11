@@ -24,50 +24,50 @@ const MemModuleSettings = new MembershipModuleSetting()
 
 const UserID = Math.floor(Math.random() * 100000)
 
-const PrincipalName = Customerdata.CustomerCreationPrincipal.RegistrationInformation.name + UserID // "Test OD 05"//
-const PrincipalEmail = Customerdata.CustomerCreationPrincipal.ContactInformation.emailAddress //PrincipalName.replace(/\s/g, '') +"@test.com"//"safraonlineuser009@gmail.com"//
+const PrincipalName = "LD Test 011" //Customerdata.CustomerCreationPrincipal.RegistrationInformation.name + UserID //
+const PrincipalEmail = PrincipalName+"@test.com" //Customerdata.CustomerCreationPrincipal.ContactInformation.emailAddress //"safraonlineuser009@gmail.com"//
 // const CustomerNRIC = '415D'
 // const CustomerNRICFull = 'S0309415D'
 
 const MembershipRegistration = (CustomerNRICFull) => {
 
 
-    describe('[TS01] Membership Registration Management', function () {
+describe('[TS01] Membership Registration Management',function(){
 
 
-        const LAST4NRIC = CustomerNRICFull.substr(CustomerNRICFull.length - 4);
+    const LAST4NRIC = CustomerNRICFull.substr(CustomerNRICFull.length - 4);
 
-        it('[TC01] Membership Creation and Principal Registration', function () {
+    it('[TC01] Membership Creation and Principal Registration', function () {
 
+        
 
-
-            ///////////////////////////////CUSTOMER CREATION////////////////////////////////////////
-
-            // //Enable SFS
-            // cy.visit('/membership/moduleSettings')
-            // cy.wait(2000)
-            // cy.SelectPickerItem('//a[text()="Change"]', 'SAFRA Jurong')
-            // cy.wait(5000)
-
-            // MemModuleSettings.SFSActivate('CHECK')
-            // cy.wait(5000)
-
-            cy.visit('/membership/customerCheckin', { timeout: 30000 })
-
+        ///////////////////////////////CUSTOMER CREATION////////////////////////////////////////
+        
+            //Enable SFS
+            cy.visit('/membership/moduleSettings')
+            cy.wait(2000)
+            cy.SelectPickerItem('//a[text()="Change"]', 'SAFRA Jurong')
+            cy.wait(5000)
+            
+            MemModuleSettings.SFSActivate('CHECK')
+            cy.wait(5000)
+            
+            cy.visit('/membership/customerCheckin')
+            cy.wait(5000)
             cy.Click(elems_CustomerCheckInPage.RBTN_NRIC)
-            cy.EnterDateSuspension(elems_CustomerCheckInPage.DATE_DATEOFBIRTH, Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB)
+            cy.EnterDate(elems_CustomerCheckInPage.DATE_DATEOFBIRTH, Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB)
             cy.EnterText(elems_CustomerCheckInPage.TXT_LAST4DIGITSNRIC, LAST4NRIC)
-            cy.Click(elems_CustomerCheckInPage.BTN_CHECKIN, { timeout: 30000 })
-
-            cy.Click(elems_CustomerCheckInPage.BTN_CREATNEW, { timeout: 30000 })
-
+            cy.Click(elems_CustomerCheckInPage.BTN_CHECKIN)
+            cy.wait(2000)
+            cy.Click(elems_CustomerCheckInPage.BTN_CREATNEW)
+        
             CustomerCreation.fillOutRegistrationInfo({
                 name: PrincipalName,
                 // DOB: Customerdata.CustomerCreationPrincipal.RegistrationInformation.DOB,
-                gender: Customerdata.CustomerCreationPrincipal.RegistrationInformation.gender,
+                gender:Customerdata.CustomerCreationPrincipal.RegistrationInformation.gender,
                 /* profilePicture: "DP.png" */
             });
-
+        
             CustomerCreation.fillOutAddressInformation({
                 postalCode: Customerdata.CustomerCreationPrincipal.AddressInformation.postalCode,
                 address: Customerdata.CustomerCreationPrincipal.AddressInformation.address,
@@ -75,13 +75,13 @@ const MembershipRegistration = (CustomerNRICFull) => {
                 POBOx: Customerdata.CustomerCreationPrincipal.AddressInformation.POBOx,
                 myMailbox: Customerdata.CustomerCreationPrincipal.AddressInformation.myMailbox
             });
-
+        
             CustomerCreation.fillOutContactInformation({
                 handPhone: '86585896',
                 emailAddress: PrincipalEmail,
                 // emergencyContact: Customerdata.CustomerCreationPrincipal.ContactInformation.emergencyContact,
                 // homeNumber: '56585896',
-
+        
                 // Preferred Contact Mode
                 preferredContactModeSelectAll: Customerdata.CustomerCreationPrincipal.ContactInformation.preferredContactModeSelectAll,
                 // preferredContactModeEmail: Customerdata.CustomerCreationPrincipal.ContactInformation.preferredContactModeEmail,
@@ -89,21 +89,22 @@ const MembershipRegistration = (CustomerNRICFull) => {
                 // preferredContactModeSMS: Customerdata.CustomerCreationPrincipal.ContactInformation.preferredContactModeSMS,
                 // preferredContactModeVoiceCall: Customerdata.CustomerCreationPrincipal.ContactInformation.preferredContactModeVoiceCall,
                 // preferredContactModePushNotification: Customerdata.CustomerCreationPrincipal.ContactInformation.preferredContactModePushNotification,
-
+        
                 // //Consent Information
                 // consentInformationMarketing: Customerdata.CustomerCreationPrincipal.ContactInformation.consentInformationMarketing,
                 // consentInformationServiceNotification: Customerdata.CustomerCreationPrincipal.ContactInformation.consentInformationServiceNotification,
                 // consentInformationTransactional: Customerdata.CustomerCreationPrincipal.ContactInformation.consentInformationTransactional,
             });
-
-
+        
+        
             CustomerCreation.save();
-
-            ///////////////////////////////PRINCIPAL REGISTRATION////////////////////////////////////////
+        
+        ///////////////////////////////PRINCIPAL REGISTRATION////////////////////////////////////////
+            cy.wait(5000)
             cy.Click(elems_Landing.SAFRA_Member)
             cy.Click(elems_Landing.Membership_Registration)
-            cy.wait(3000)
-
+            cy.wait(20000)
+        
             MemRegPrincipal.verifyPersonalInformation({
                 MemberCategory: data.memberregistrationprincipal.Personal_Info.MemberCategory,
                 // NameOnNRIC: PrincipalName,
@@ -120,45 +121,45 @@ const MembershipRegistration = (CustomerNRICFull) => {
                 CardType: data.memberregistrationprincipal.Personal_Info.CardType,
                 InterestinDBSCard: data.memberregistrationprincipal.Personal_Info.InterestinDBSCard,
                 // ProfilePicture: data.memberregistrationprincipal.Personal_Info.ProfilePicture
-            })
+                })
+            
 
-
-
+        
             // MemRegPrincipal.SaveAndNext()
             // cy.wait(10000)
             // MemRegPrincipal.VerifyPageTitle('Membership Registration - Principal')
-
+            
             MemRegPrincipal.SaveAndNextPrincipal()
             //cy.wait(15000) //QA
-            cy.wait(3000) //UAT
+            cy.wait(8000) //UAT 
             ///////////////////////////////////TENURE SELECTION////////////////////////////////////////////////////////////
-
-
+        
+        
             // Membership Tenure Selection
-            MemTenureSelect.principalTenureSelection(PrincipalName, '2 Years')
+            MemTenureSelect.principalTenureSelection(PrincipalName,'5 Years')
             // cy.wait(30000)
 
             // Click on add to cart
             MemTenureSelect.addToCart()
-
-
+            
+        
             // Shopping cart and Payments
             ShoppingCart.fillOutandApplyPayment('CSO-CASH')
-
+            
             // Wait for 3 minites
             //cy.wait(25000) //QA
             cy.wait(5000)   //UAT
 
             //Verify New Created Member Reason Code
             MembershipRenewal.VerifyMemberStatus(PrincipalName, LAST4NRIC, 'New')
-
-            // Logout
-            cy.LogoutOfSmcms()
-
+            
+            //Logout
+            // cy.LogoutOfSmcms()
+   
         })
 
+    
 
-
-    })
+})
 }
-export default MembershipRegistration;
+export default MembershipRegistration ;

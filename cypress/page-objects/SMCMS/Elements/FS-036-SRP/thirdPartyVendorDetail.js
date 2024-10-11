@@ -1,8 +1,8 @@
 class elems_ThirdPartyVendoreDetail {
 
 
-    static BTN_SAVE = '//span[text()="Save"]'
-    static BTN_CANCEL = '//span[text()="Cancel"]'
+    static BTN_SAVE = '//button[text()="Save"]'
+    static BTN_CANCEL = '//button[text()="Cancel"]'
 
     static VENDORID = {
 
@@ -16,9 +16,9 @@ class elems_ThirdPartyVendoreDetail {
     static TXT_NAME = '//input[@id="txtName"]'
     static TXT_MERCHANTID = '//input[@id="txtMerchantID"]'
     static DRP_STATUS = '//span[@id="drpStatus"]'
-    static TXT_ContactNumberAddress = '//textarea[@id="txtContactNumberAddress"]'
+    static TXT_ContactNumberAddress = '//input[@id="txtContactNumberAddress"]'
 
-    static BTN_SEARCHFILTERS = '//span[text()="Search Filters"]'
+    static BTN_SEARCHFILTERS = '//button[text()="Search Filters"]'
     static TBL_THIRDOARTYVENDORLSITING = '//h2[text()="Third Party Vendor Detail"]/parent::div/following-sibling::div//table'
 
 

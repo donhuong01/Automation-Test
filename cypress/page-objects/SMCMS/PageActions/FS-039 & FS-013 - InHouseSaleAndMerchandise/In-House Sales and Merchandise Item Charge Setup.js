@@ -84,9 +84,7 @@ class InHouseSaleAndMerchandiseItemChargeSetup {
             elems_InHouseSaleAndMerchandiseItemChargeSetup.CUSTOMERCATEGORY.TXT_CUSTOMERCATEGORYNAME, CategoryName,
             elems_InHouseSaleAndMerchandiseItemChargeSetup.CUSTOMERCATEGORY.BTN_SEARCHFILTERS)
 
-        cy.EnterText('(//h3[text()="Customer Category"]/following-sibling::div//table//input)[1]', '7')
-        cy.EnterText('(//h3[text()="Customer Category"]/following-sibling::div//table//input)[2]', '5')
-        cy.EnterText('(//h3[text()="Customer Category"]/following-sibling::div//table//input)[3]', '10')
+        cy.EnterText('//h3[text()="Customer Category"]/following-sibling::div//table//input', '5')
 
     }
 

@@ -80,11 +80,11 @@ class InterestGroupDetail {
 
         cy.EnterText(elems_InterestGroupDetail.TabInterestGroup.TXT_NAME, Name)
         cy.EnterText(elems_InterestGroupDetail.TabInterestGroup.TXT_CODE, Code)
-        // cy.Click(elems_InterestGroupDetail.TabInterestGroup.PCK_IGMAIN)
-        // cy.wait(2000)
-        // cy.SelectTableItem(elems_Picker.TBL_PICKERITEMS, 'Name', IGMain)
-        // cy.Click(elems_Picker.BTN_SELECT)
-        cy.SelectPickerItem(elems_InterestGroupDetail.TabInterestGroup.PCK_IGMAIN, IGMain)
+        cy.Click(elems_InterestGroupDetail.TabInterestGroup.PCK_IGMAIN)
+        cy.wait(2000)
+        cy.SelectTableItem(elems_Picker.TBL_PICKERITEMS, 'Name', IGMain)
+        cy.Click(elems_Picker.BTN_SELECT)
+        // // cy.SelectPickerItem(elems_InterestGroupDetail.TabInterestGroup.PCK_IGMAIN, IGMain)
         cy.EnterText(elems_InterestGroupDetail.TabInterestGroup.TXT_SUBCATEGORYTYPE, SubcategoryType)
         cy.EnterDate(elems_InterestGroupDetail.TabInterestGroup.DATE_PUBLISHINGDATE, PublishingDate)
         cy.EnterDate(elems_InterestGroupDetail.TabInterestGroup.DATE_ENDDATE, EndDate)
@@ -115,7 +115,7 @@ class InterestGroupDetail {
         cy.TickCheckBox(elems_InterestGroupDetail.TabInterestGroup.CHK_ISAGEREQUIRD, IsAgeRequired)
         cy.TickCheckBox(elems_InterestGroupDetail.TabInterestGroup.CHK_ISIGMEMBERECARD, IsIGeCardApplicable)
         cy.TickCheckBox(elems_InterestGroupDetail.TabInterestGroup.CHK_ISALLOWUSERVIEWDETAIL, IsAllowUserView)
-        // cy.TickCheckBox(elems_InterestGroupDetail.TabInterestGroup.CHK_ISALLOWFLOATINGANIVERSARY, IsAllowFloating)
+        cy.TickCheckBox(elems_InterestGroupDetail.TabInterestGroup.CHK_ISALLOWFLOATINGANIVERSARY, IsAllowFloating)
 
 
 
@@ -178,9 +178,6 @@ class InterestGroupDetail {
         cy.SelectPickerDifferentItemsWait(elems_InterestGroupDetail.TabInterestGroup.CUSTOMERCATEGORY.BTN_ADDCUSTOMERCATEGORY, 5000,
             elems_InterestGroupDetail.TabInterestGroup.CUSTOMERCATEGORY.TXT_CUTOMERCATEGNAME, CustomerCategName,
             elems_InterestGroupDetail.TabInterestGroup.CUSTOMERCATEGORY.BTN_SEARCHFILTER)
-        cy.TickCheckBox('(//h3[text()="Customer Category Access Mode List"]/following-sibling::div//input)[1]', 'CHECK')
-        cy.TickCheckBox('(//h3[text()="Customer Category Access Mode List"]/following-sibling::div//input)[2]', 'CHECK')
-
     }
     /*****************************************************
      * Method: AddLocation
@@ -247,23 +244,6 @@ class InterestGroupDetail {
     }
 
     /*****************************************************
-     * Method: FilloutCargeType2
-     * Description:This function fillout charge type
-     * @param {string} ChargeName
-     * @param {string} TransactionType
-     * @param {string} CalculationType
-     * @param {string} AmountType
-    ****************************************************/
-    FilloutCargeType2(ChargeName, TransactionType, CalculationType, AmountType) {
-        cy.Click(elems_InterestGroupDetail.TabChargeRate.BTN_ADDCHARGETYPE)
-        cy.EnterText(elems_InterestGroupDetail.TabChargeRate.TXT_CHARGENAME2, ChargeName)
-        cy.SelectDropDownItem(elems_InterestGroupDetail.TabChargeRate.DRP_TRANSACTIONTYPE2, TransactionType)
-        cy.SelectDropDownItem(elems_InterestGroupDetail.TabChargeRate.DRP_CALCULATIONTYPE2, CalculationType)
-        cy.SelectDropDownItem(elems_InterestGroupDetail.TabChargeRate.DRP_AMOUNTTYPE2, AmountType)
-
-    }
-
-    /*****************************************************
      * Method: ChargeRateCustomerCategory
      * Description:This function add charge rate customer category
      * @param {string} CustomerCategoryName
@@ -273,8 +253,7 @@ class InterestGroupDetail {
         cy.SelectPickerDifferentItemsWait(elems_InterestGroupDetail.TabChargeRate.BTN_ADDCUSTOMERCATEGORY, 5000,
             elems_InterestGroupDetail.TabChargeRate.TXT_CUSTOMERCATEGORYNAME, CustomerCategoryName,
             elems_InterestGroupDetail.TabInterestGroup.CUSTOMERCATEGORY.BTN_SEARCHFILTER)
-        cy.EnterText(elems_InterestGroupDetail.TabChargeRate.TXT_CUSTOMERCATEGORY, '97.2')
-        cy.EnterText(elems_InterestGroupDetail.TabChargeRate.TXT_CUSTOMERCATEGORY2, '97.2')
+        cy.EnterText(elems_InterestGroupDetail.TabChargeRate.TXT_CUSTOMERCATEGORY, '5')
 
     }
     /*****************************************************
@@ -290,21 +269,21 @@ class InterestGroupDetail {
         cy.SelectPickerDifferentItemsWait(elems_InterestGroupDetail.TabChargeRate.PCK_RENEWALITEMCODE, 2000,
             elems_InterestGroupDetail.TabChargeRate.TXT_PRODUCTNAME, ProductName,
             elems_InterestGroupDetail.TabChargeRate.BTN_SEARCHFILTER)
-        // cy.SelectPickerDifferentItemsWait(elems_InterestGroupDetail.TabChargeRate.PCK_DEFERMENTITEMCODE, 2000,
-        //     elems_InterestGroupDetail.TabChargeRate.TXT_PRODUCTNAME, ProductName,
-        //     elems_InterestGroupDetail.TabChargeRate.BTN_SEARCHFILTER)
-        // cy.SelectPickerDifferentItemsWait(elems_InterestGroupDetail.TabChargeRate.PCK_REINSTATEMENTCODE, 2000,
-        //     elems_InterestGroupDetail.TabChargeRate.TXT_PRODUCTNAME, ProductName,
-        //     elems_InterestGroupDetail.TabChargeRate.BTN_SEARCHFILTER)
-        // cy.SelectPickerDifferentItemsWait(elems_InterestGroupDetail.TabChargeRate.PCK_TERMINATIONCODE, 2000,
-        //     elems_InterestGroupDetail.TabChargeRate.TXT_PRODUCTNAME, ProductName,
-        //     elems_InterestGroupDetail.TabChargeRate.BTN_SEARCHFILTER)
-        // cy.SelectPickerDifferentItemsWait(elems_InterestGroupDetail.TabChargeRate.PCK_WAIVERITEMCODE, 2000,
-        //     elems_InterestGroupDetail.TabChargeRate.TXT_PRODUCTNAME, ProductName,
-        //     elems_InterestGroupDetail.TabChargeRate.BTN_SEARCHFILTER)
-        // cy.SelectPickerDifferentItemsWait(elems_InterestGroupDetail.TabChargeRate.PCK_REVERSALCODE, 2000,
-        //     elems_InterestGroupDetail.TabChargeRate.TXT_PRODUCTNAME, ProductName,
-        //     elems_InterestGroupDetail.TabChargeRate.BTN_SEARCHFILTER)
+        cy.SelectPickerDifferentItemsWait(elems_InterestGroupDetail.TabChargeRate.PCK_DEFERMENTITEMCODE, 2000,
+            elems_InterestGroupDetail.TabChargeRate.TXT_PRODUCTNAME, ProductName,
+            elems_InterestGroupDetail.TabChargeRate.BTN_SEARCHFILTER)
+        cy.SelectPickerDifferentItemsWait(elems_InterestGroupDetail.TabChargeRate.PCK_REINSTATEMENTCODE, 2000,
+            elems_InterestGroupDetail.TabChargeRate.TXT_PRODUCTNAME, ProductName,
+            elems_InterestGroupDetail.TabChargeRate.BTN_SEARCHFILTER)
+        cy.SelectPickerDifferentItemsWait(elems_InterestGroupDetail.TabChargeRate.PCK_TERMINATIONCODE, 2000,
+            elems_InterestGroupDetail.TabChargeRate.TXT_PRODUCTNAME, ProductName,
+            elems_InterestGroupDetail.TabChargeRate.BTN_SEARCHFILTER)
+        cy.SelectPickerDifferentItemsWait(elems_InterestGroupDetail.TabChargeRate.PCK_WAIVERITEMCODE, 2000,
+            elems_InterestGroupDetail.TabChargeRate.TXT_PRODUCTNAME, ProductName,
+            elems_InterestGroupDetail.TabChargeRate.BTN_SEARCHFILTER)
+        cy.SelectPickerDifferentItemsWait(elems_InterestGroupDetail.TabChargeRate.PCK_REVERSALCODE, 2000,
+            elems_InterestGroupDetail.TabChargeRate.TXT_PRODUCTNAME, ProductName,
+            elems_InterestGroupDetail.TabChargeRate.BTN_SEARCHFILTER)
     }
 
 
