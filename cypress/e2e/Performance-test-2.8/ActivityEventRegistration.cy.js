@@ -96,5 +96,6 @@ describe("Activity/Event Registration", () => {
     // Check that the URL ends with /membership/customerLandingPage
     cy.url().should('include', '/membership/customerLandingPage');
 
+    cy.contains("Apply payment successful").should('be.visible');
   })
 })
