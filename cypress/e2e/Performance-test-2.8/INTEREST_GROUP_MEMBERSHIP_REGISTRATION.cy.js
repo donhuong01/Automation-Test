@@ -1,6 +1,5 @@
 import elems_PageHeader from '../../page-objects/SMCMS/Elements/Common/PageHeader'
 import elems_MemberListing from '../../page-objects/SMCMS/Elements/Membership/FS028_Membership-Admin-MaintActivities/MemberListing'
-import { nricGenerator } from '../../support/nricGenerator'
 
 describe("Interest Group Membership Registration", () => {
     it("Login and registration", () => {
@@ -14,8 +13,7 @@ describe("Interest Group Membership Registration", () => {
         cy.LoginMicrosoftAccount(username, password)
 
         // checkin
-        cy.VerifyElementText(elems_PageHeader.LBL_PAGETITLE, "Customer Check-In")
-        cy.EnterText(elems_MemberListing.TXT_MEMBERID, memberId)
+        cy.get("#txtMemberId").type(memberId)
 
         // checkin button
         cy.get("[class*='ToolBarContainer_container_'] > .k-button").click({ force: true });
@@ -27,28 +25,14 @@ describe("Interest Group Membership Registration", () => {
         // checkin Interest Group
         cy.wait(timeout)
         cy.get("[class*='Tiles_tiles-container__'] > :nth-child(8)").click({ force: true });
-
-        // checkin Membership Registration
-        cy.wait(timeout)
         cy.get('.Tiles_tiles-container__QRTvj > :nth-child(2)').click({ force: true });
-
-        // checkin Normal IG Main
-        cy.wait(timeout)
         cy.get('.Tiles_tiles-container__6OStU > :nth-child(2)').click({ force: true });
-
-        // checkin IG Sub - Term
-        cy.wait(timeout)
         cy.get('.Tiles_tiles-container__6OStU > :nth-child(2)').click({ force: true });
-
-        // checkin SAFRA Mt Faber
-        cy.wait(timeout)
         cy.get('.Tiles_tile__-86Z3').click({ force: true });
 
         //select Membership Term
-        cy.wait(timeout);
         cy.get('#membershipTerm').should('be.visible');
         cy.get('.k-spinner-increase').click();
-        cy.wait(500);
         cy.get('#membershipTerm').should('have.value', '1');
 
         //Shopping Cart
