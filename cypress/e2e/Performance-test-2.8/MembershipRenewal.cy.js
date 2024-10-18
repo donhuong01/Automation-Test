@@ -16,8 +16,8 @@ describe("Membership Renewal", ()=>{
     	cy.contains('span[class="k-button-text"]', 'Continue').click({force: true})
     	cy.get('.k-appbar-section').first().click();
 
-    	cy.get(".Tiles_tile__OtDuX > p").contains("SAFRA Member").click({force: true})
-    	cy.get(".Tiles_tile__OtDuX > p").contains("Membership Renewal").click({force: true})
+    	cy.get("[class*='Tiles_tile'] > p").contains("SAFRA Member").click({force: true})
+    	cy.get("[class*='Tiles_tile'] > p").contains("Membership Renewal").click({force: true})
 
     	cy.get(".k-dropdownlist").first().find("button").click({force: true})
     	cy.get(".k-animation-container > div").contains("1 Year").click()
