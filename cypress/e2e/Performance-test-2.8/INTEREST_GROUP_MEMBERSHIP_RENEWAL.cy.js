@@ -51,7 +51,7 @@ describe("Interest Group Membership Renewal", () => {
          .click({force: true});
  
          cy.wait(timeout)
-         cy.get('.ToolBarContainer_container__d6yTc > .row > :nth-child(1) > :nth-child(1)').click({force: true});
+         cy.get("[class*='ToolBarContainer_container__'] > .row > :nth-child(1) > :nth-child(1)").click({ force: true });
  
          cy.contains("Cart has been checked out successfully.").should('be.visible')
  
