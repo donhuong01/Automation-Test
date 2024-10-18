@@ -1,5 +1,3 @@
-import elems_PageHeader from '../../page-objects/SMCMS/Elements/Common/PageHeader'
-import elems_MemberListing from '../../page-objects/SMCMS/Elements/Membership/FS028_Membership-Admin-MaintActivities/MemberListing'
 import { nricGenerator } from '../../support/nricGenerator'
 
 describe("Membership registration and renewal", ()=>{
@@ -10,20 +8,46 @@ describe("Membership registration and renewal", ()=>{
     const nric = nricGenerator('T', '20')
     const timeout = parseInt(Cypress.env('timeout'))
     const childNric = nricGenerator('T', '10')
+    const number6Digits = Math.floor(100000 + Math.random() * 900000).toString()
+    const handPhone = "88"+ number6Digits;
+    const email = memberId + "@safra.sg"
+    const postalCode = number6Digits
 
     //Select Channel
     cy.visit('/membership/customerCheckin')
     cy.LoginMicrosoftAccount(username, password)
 
     // checkin
-    cy.VerifyElementText(elems_PageHeader.LBL_PAGETITLE, "Customer Check-In")
-    cy.EnterText(elems_MemberListing.TXT_MEMBERID, memberId)
+    cy.get("#txtMemberId").type(memberId)
 
     // checkin button
     cy.get("[class*='ToolBarContainer_container_'] > .k-button").click({ force: true });
 
     // navigate then click continue button
     cy.wait(timeout)
+    cy.get('#txtEmail')
+      .invoke('val')
+      .then(text => {
+        if(text=='') {
+          cy.get('#txtEmail').type(email)
+        }
+      })
+
+    cy.get('#txtHandphone')
+      .invoke('val')
+      .then(text => {
+        if(text=='') {
+          cy.get('#txtHandphone').type(handPhone)
+        }
+      })
+
+    cy.get('#txtPostalCode')
+      .invoke('val')
+      .then(text => {
+        if(text=='') {
+          cy.get('#txtPostalCode').type(postalCode)
+        }
+      })
     cy.get('.secondary-button').click({force: true})
 
     // click safra member
