@@ -25,9 +25,9 @@ describe("Interest Group Membership Registration", () => {
         // checkin Interest Group
         cy.wait(timeout)
         cy.get("[class*='Tiles_tiles-container__'] > :nth-child(8)").click({ force: true });
-        cy.get('.Tiles_tiles-container__QRTvj > :nth-child(2)').click({ force: true });
-        cy.get('.Tiles_tiles-container__6OStU > :nth-child(2)').click({ force: true });
-        cy.get('.Tiles_tiles-container__6OStU > :nth-child(2)').click({ force: true });
+        cy.get("[class*='Tiles_tiles-container__'] > :nth-child(2)").click({ force: true });
+        cy.get("[class*='Tiles_tiles-container__'] > :nth-child(2)").click({ force: true });
+        cy.get("[class*='Tiles_tiles-container__'] > :nth-child(2)").click({ force: true });
         cy.get('.Tiles_tile__-86Z3').click({ force: true });
 
         //select Membership Term
